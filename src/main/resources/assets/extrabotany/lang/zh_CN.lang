@@ -1,0 +1,59 @@
+# KNOWLEDGE
+botania.knowledge.extra=&3额外&7的知识
+
+#ITEMS
+# -BASIC
+item.prismaticshard.name=彩虹碎片
+item.gaiaessence.name=盖亚精华
+item.blankcard.name=白卡
+item.astralforce.name=星光之力
+
+# LEXICON ENTRIES
+# -GENERATING
+# -- CANDYFLOWER
+botania.entry.candyflower=糖果花
+botania.page.candyflower0=
+botania.page.candyflower1=
+botania.page.candyflower2=泛滥的爱.
+botania.page.candyflower3=
+
+# -- BLUEENCHANTRESS
+botania.entry.blueenchantress=蓝色妖姬
+botania.page.blueenchantress0=
+botania.page.blueenchantress1=
+botania.page.blueenchantress2=忧郁的一天.
+botania.page.blueenchantress3=
+
+# -- SUNSHINELILY
+botania.entry.sunshinelily=日耀百合
+botania.page.sunshinelily0=
+botania.page.sunshinelily1=
+botania.page.sunshinelily2=光与热.
+
+# -- MOONLIGHTLILY
+botania.entry.moonlightlily=月光百合
+botania.page.moonlightlily0=
+botania.page.moonlightlily1=
+botania.page.moonlightlily2=愚者的播种.
+
+#FLOWER NAMES
+# - GENERATING
+tile.botania:flower.candyflower.name=糖果花
+tile.botania:flower.candyflower.reference=最甜蜜的爱
+botania.tagline.candyflower=甜食控
+
+tile.botania:flower.blueenchantress.name=蓝色妖姬
+tile.botania:flower.blueenchantress.reference=蓝色爱好者
+botania.tagline.blueenchantress=源自源质的魔力
+
+tile.botania:flower.candyflower.name=糖果花
+tile.botania:flower.candyflower.reference=最甜蜜的爱
+botania.tagline.candyflower=甜食爱好者
+
+tile.botania:flower.sunshinelily.name=日耀百合
+tile.botania:flower.sunshinelily.reference=May the light heal and enlighten you
+botania.tagline.sunshinelily=太阳骑士
+
+tile.botania:flower.moonlightlily.name=月光百合
+tile.botania:flower.moonlightlily.reference=May you find all you have lost
+botania.tagline.moonlightlily=月亮祭司

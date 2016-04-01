@@ -1,0 +1,55 @@
+# KNOWLEDGE
+botania.knowledge.extra=&3Extra&7 Knowledge
+
+#ITEMS
+# -BASIC
+item.prismaticshard.name=Prismatic Shard
+item.gaiaessence.name=Gaia Essence
+item.blankcard.name=Blank Card
+item.astralforce.name=Astral Force
+
+# LEXICON ENTRIES
+# -GENERATING
+# -- CANDYFLOWER
+botania.entry.candyflower=Candy Flower
+botania.page.candyflower0=
+botania.page.candyflower1=
+botania.page.candyflower2=Overflowing love.
+botania.page.candyflower3=
+
+# -- BLUEENCHANTRESS
+botania.entry.blueenchantress=Blue Enchantress
+botania.page.blueenchantress0=
+botania.page.blueenchantress1=
+botania.page.blueenchantress2=A blue day.
+botania.page.blueenchantress3=
+
+# -- SUNSHINELILY
+botania.entry.sunshinelily=Sunshine Lily
+botania.page.sunshinelily0=
+botania.page.sunshinelily1=
+botania.page.sunshinelily2=Heat and heal.
+
+# -- MOONLIGHTLILY
+botania.entry.moonlightlily=Moonlight Lily
+botania.page.moonlightlily0=
+botania.page.moonlightlily1=
+botania.page.moonlightlily2=Sowing of the Fool.
+
+#FLOWER NAMES
+# - GENERATING
+tile.botania:flower.candyflower.name=Candy Flower
+tile.botania:flower.candyflower.reference=The Sweetest love
+botania.tagline.candyflower=Sweets lover
+
+tile.botania:flower.blueenchantress.name=Blue Enchantress
+tile.botania:flower.blueenchantress.reference=Crazy in blue
+botania.tagline.blueenchantress=Mana from the essence
+
+tile.botania:flower.sunshinelily.name=Sunshine Lily
+tile.botania:flower.sunshinelily.reference=May the light heal and enlighten you
+botania.tagline.sunshinelily=The Knight of the Sun
+
+tile.botania:flower.moonlightlily.name=Moonlight Lily
+tile.botania:flower.moonlightlily.reference=May you find all you have lost
+botania.tagline.moonlightlily=The Priestess of the Moon
