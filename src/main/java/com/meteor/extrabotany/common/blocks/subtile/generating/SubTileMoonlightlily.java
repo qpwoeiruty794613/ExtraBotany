@@ -4,7 +4,8 @@ import com.meteor.extrabotany.common.lexicon.LexiconModData;
 
 import vazkii.botania.api.lexicon.LexiconEntry;
 import vazkii.botania.common.block.subtile.generating.SubTileNightshade;
-import vazkii.botania.common.lexicon.LexiconData;
+
+
 
 public class SubTileMoonlightlily extends SubTileNightshade{
 	

@@ -1,7 +1,5 @@
 package com.meteor.extrabotany.common.blocks;
 
-import net.minecraft.block.Block;
-
 import com.meteor.extrabotany.common.ExtraBotany;
 import com.meteor.extrabotany.common.blocks.subtile.generating.SubTileBlueenchantress;
 import com.meteor.extrabotany.common.blocks.subtile.generating.SubTileCandyflower;
@@ -10,7 +8,9 @@ import com.meteor.extrabotany.common.blocks.subtile.generating.SubTileSunshineli
 import com.meteor.extrabotany.common.lib.LibBlockName;
 
 import vazkii.botania.api.BotaniaAPI;
-import vazkii.botania.api.subtile.SubTileEntity;
+import net.minecraft.block.Block;
+
+
 
 public class ModBlocks {
 	

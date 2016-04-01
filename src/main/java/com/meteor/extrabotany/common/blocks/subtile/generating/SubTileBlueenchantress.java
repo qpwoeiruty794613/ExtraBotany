@@ -1,33 +1,15 @@
 package com.meteor.extrabotany.common.blocks.subtile.generating;
 
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
-
+import net.minecraft.block.material.Material;
 import am2.AMCore;
-import am2.blocks.liquid.BlockLiquidEssence;
 
 import com.meteor.extrabotany.common.lexicon.LexiconModData;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
-import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.init.Blocks;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemBlock;
-import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.world.World;
-import net.minecraftforge.common.util.ForgeDirection;
-import net.minecraftforge.fluids.Fluid;
 import vazkii.botania.api.lexicon.LexiconEntry;
-import vazkii.botania.api.subtile.RadiusDescriptor;
 import vazkii.botania.common.Botania;
 import vazkii.botania.common.block.subtile.generating.SubTileHydroangeas;
-import vazkii.botania.common.block.subtile.generating.SubTilePassiveGenerating;
-import vazkii.botania.common.core.helper.ItemNBTHelper;
-import vazkii.botania.common.lexicon.LexiconData;
-import vazkii.botania.common.lib.LibMisc;
+
+
 
 public class SubTileBlueenchantress extends SubTileHydroangeas{
 
