@@ -12,28 +12,25 @@ item.astralforce.name=Astral Force
 # -GENERATING
 # -- CANDYFLOWER
 botania.entry.candyflower=Candy Flower
-botania.page.candyflower0=
-botania.page.candyflower1=
+botania.page.candyflower0=Desserts are things &1Candy Flower&0 loves best in the world! It will be pleased if you give sweets to it. Because of the happiness and satisfaction from the process of tasting them, the &1Candy Flower&0 can produce quite a little &4Mana&0. &1Biscuits&0, &1sugar&0, &1cakes&0 are its favourite. And of course, it loves food made by &4Aunt Pam&0 as well. The more delicious food is, the more &4Mana&0 the &1Candy Flower&0 will produce.
+botania.page.candyflower1=And it's important to note that when it eats up a dessert, it has a small chance to produce a &1Crystal of Love&0.
 botania.page.candyflower2=Overflowing love.
-botania.page.candyflower3=
 
 # -- BLUEENCHANTRESS
 botania.entry.blueenchantress=Blue Enchantress
-botania.page.blueenchantress0=
-botania.page.blueenchantress1=
-botania.page.blueenchantress2=A blue day.
-botania.page.blueenchantress3=
+botania.page.blueenchantress0=The &1Blue Enchantress&0 is like a &1Thermalily&0 or a &1Hydroangeas&0, can consumes &1liquid essence&0 and produce a very large ammount of &4Mana&0. It don't need to cool down, so this may be a great choice for a botanist.
+botania.page.blueenchantress1=A blue day.
 
 # -- SUNSHINELILY
 botania.entry.sunshinelily=Sunshine Lily
-botania.page.sunshinelily0=
-botania.page.sunshinelily1=
+botania.page.sunshinelily0=It has the same ability as the &1Daybloom&0, can transfer sunlight into &4Mana&0, but has higher efficiency. The process seems slow, however, about a few of these can be considerably efficient.
+botania.page.sunshinelily1=&1Sunshine Lily&0 has a stronger vitality, so it will not decay. As a result, its crafting recipe is much more expensive. But it worth, doesn't it? As a Passive Flowers, it still suffers diminishing returns from having any adjacent.
 botania.page.sunshinelily2=Heat and heal.
 
 # -- MOONLIGHTLILY
 botania.entry.moonlightlily=Moonlight Lily
-botania.page.moonlightlily0=
-botania.page.moonlightlily1=
+botania.page.moonlightlily0=This is the dark side of the &1Sunshine Lily&0, can transfer moonlight into &4Mana&0. It has the same efficiency as &1Sunshine Lily&0. And certainly, the process seems slow as well.
+botania.page.moonlightlily1=&1Moonlight Lily&0 also has a stronger vitality, this means it won't decay. As a result, its crafting recipe is more expensive, too. Of course, as a Passive Flowers, it still suffers diminishing returns from having any adjacent.
 botania.page.moonlightlily2=Sowing of the Fool.
 
 #FLOWER NAMES

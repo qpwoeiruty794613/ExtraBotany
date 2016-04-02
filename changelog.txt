@@ -1,3 +1,11 @@
+16/4/2
+Blue Enchantress will no longer consume water
+Add new knowledge type
+Add recipes for flowers
+Add recipes for Blank Card
+Update zh_CN.lang
+Update en_US.lang
+
 16/4/1
 Add Sunshine Lily and Moonlight Lily.
 First clean up.

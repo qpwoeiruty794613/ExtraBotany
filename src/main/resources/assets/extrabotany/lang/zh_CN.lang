@@ -12,28 +12,25 @@ item.astralforce.name=星光之力
 # -GENERATING
 # -- CANDYFLOWER
 botania.entry.candyflower=糖果花
-botania.page.candyflower0=
-botania.page.candyflower1=
+botania.page.candyflower0=甜品是&1糖果花&0在世界中最 喜欢的东西了 ,它非常乐意 接受你给的&1甜食&0.细细品味 甜品的过程中的那种幸福感 与满足感,能让&1糖果花&0产出 不少的&4魔力&0.而&1饼干&0,&1糖&0, &1蛋糕&0等都是它的最爱.当然 ,例如&4潘马斯婶婶&0所亲手做的 甜品,&1糖果花&0也非常地喜欢 .同时,越丰盛越美味的甜品 ,它产出的&4魔力&0也就越多.
+botania.page.candyflower1=与此同时值得注意的是,它 每吃掉一个甜品,都有很小 几率产出一个&1爱的结晶&0.
 botania.page.candyflower2=泛滥的爱.
-botania.page.candyflower3=
 
 # -- BLUEENCHANTRESS
 botania.entry.blueenchantress=蓝色妖姬
-botania.page.blueenchantress0=
-botania.page.blueenchantress1=
-botania.page.blueenchantress2=忧郁的一天.
-botania.page.blueenchantress3=
+botania.page.blueenchantress0=&1蓝色妖姬&0类似&1炽玫瑰&0与&1水绣 球&0,能吸收&1液态源质&0并转化 为大量&4魔力&0,并且速度很快 ,而且无须冷却.因此是一 朵效率非常高的产能花,想 必能成为植物魔法师的一个 不错的选择.
+botania.page.blueenchantress1=忧郁的一天.
 
 # -- SUNSHINELILY
 botania.entry.sunshinelily=日耀百合
-botania.page.sunshinelily0=
-botania.page.sunshinelily1=
+botania.page.sunshinelily0=拥有着和&1太阳花&0一样的能力 ,能将阳光转化为&4魔力&0,但 是比起它有着更高的&4魔力&0产 出.但过程仍然显得十分缓 慢,不过只要几朵就能有可 观的效率了.
+botania.page.sunshinelily1=&1日耀百合&0拥有着更强大的生 命力,因此不会枯萎.作为 对价,它所需要的材料也就 显得更加昂贵,但很值得, 不是吗?但作为被动产能, 它依旧会因为周围的个体而 降低效率.
 botania.page.sunshinelily2=光与热.
 
 # -- MOONLIGHTLILY
 botania.entry.moonlightlily=月光百合
-botania.page.moonlightlily0=
-botania.page.moonlightlily1=
+botania.page.moonlightlily0=它是&1日耀百合&0的另一面,能 够在黑夜中将月光转化为&4魔 力&0.它的效率也不比&1日耀百 合&0低,当然产出&4魔力&0的过程 也十分缓慢.
+botania.page.moonlightlily1=&1月光百合&0也同样拥有着强大 的生命力.作为对价,所需 要的材料也较为昂贵.同时 作为被动产能,它依旧会因 周围的个体而降低效率.
 botania.page.moonlightlily2=愚者的播种.
 
 #FLOWER NAMES
@@ -51,9 +48,9 @@ tile.botania:flower.candyflower.reference=最甜蜜的爱
 botania.tagline.candyflower=甜食爱好者
 
 tile.botania:flower.sunshinelily.name=日耀百合
-tile.botania:flower.sunshinelily.reference=May the light heal and enlighten you
+tile.botania:flower.sunshinelily.reference=愿光芒能治愈并指引你
 botania.tagline.sunshinelily=太阳骑士
 
 tile.botania:flower.moonlightlily.name=月光百合
-tile.botania:flower.moonlightlily.reference=May you find all you have lost
+tile.botania:flower.moonlightlily.reference=愿你能找到所有失去的东西
 botania.tagline.moonlightlily=月亮祭司

@@ -33,4 +33,9 @@ public class SubTileMoonlightlily extends SubTileNightshade{
   	public LexiconEntry getEntry() {
   		return LexiconModData.moonlightlily;
   	}
+ 	
+	@Override
+	public int getColor() {
+		return 0x8D15E1;
+	}
 }

@@ -93,7 +93,7 @@ public class SubTileCandyflower extends SubTileGenerating{
 
 	@Override
 	public int getColor() {
-		return 0x785000;
+		return 0x8BA500;
 	}
 
 	@Override

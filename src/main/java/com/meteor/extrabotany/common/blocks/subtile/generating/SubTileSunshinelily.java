@@ -33,6 +33,11 @@ public class SubTileSunshinelily extends SubTileDaybloom{
   	public LexiconEntry getEntry() {
   		return LexiconModData.sunshinelily;
   	}
+ 	
+	@Override
+	public int getColor() {
+		return 0xE19823;
+	}
   	
 }
 

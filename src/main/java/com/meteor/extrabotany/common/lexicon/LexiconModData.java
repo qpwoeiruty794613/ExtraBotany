@@ -28,13 +28,13 @@ public class LexiconModData {
 	
 	public static void init() {
 		candyflower = new ALexiconEntry(LibLexiconName.GFLOWER_CANDYFLOWER, BotaniaAPI.categoryGenerationFlowers);
-		candyflower.setLexiconPages(new PageText("0"), new PageText("1"), new PageText("3"),
+		candyflower.setLexiconPages(new PageText("0"), new PageText("1"),
 				new PagePetalRecipe("2", ModPetalRecipe.candyflowerRecipe));
 		candyflower.setIcon(ItemBlockSpecialFlower.ofType(LibBlockName.CANDY_FLOWER));
 		
 		blueenchantress = new BLexiconEntry(LibLexiconName.GFLOWER_BLUEENCHANTRESS, BotaniaAPI.categoryGenerationFlowers);
-		blueenchantress.setLexiconPages(new PageText("0"), new PageText("1"), new PageText("3"),
-				new PagePetalRecipe("2", ModPetalRecipe.blueenchantressRecipe));
+		blueenchantress.setLexiconPages(new PageText("0"),
+				new PagePetalRecipe("1", ModPetalRecipe.blueenchantressRecipe));
 		blueenchantress.setIcon(ItemBlockSpecialFlower.ofType(LibBlockName.BLUE_ENCHANTRESS));
 		
 		sunshinelily = new ELexiconEntry(LibLexiconName.GFLOWER_SUNSHINELILY, BotaniaAPI.categoryGenerationFlowers);
