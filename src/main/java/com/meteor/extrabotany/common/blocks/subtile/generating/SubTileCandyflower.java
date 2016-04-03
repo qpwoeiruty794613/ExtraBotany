@@ -88,7 +88,7 @@ public class SubTileCandyflower extends SubTileGenerating{
 
 	@Override
 	public int getValueForPassiveGeneration() {
-		return 4;
+		return 5;
 	}
 
 	@Override
@@ -127,6 +127,6 @@ public class SubTileCandyflower extends SubTileGenerating{
 
 	@Override
 	public int getDelayBetweenPassiveGeneration() {
-		return 2;
+		return 1;
 	}
 }

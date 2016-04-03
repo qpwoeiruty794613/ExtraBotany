@@ -7,6 +7,12 @@ item.prismaticshard.name=Prismatic Shard
 item.gaiaessence.name=Gaia Essence
 item.blankcard.name=Blank Card
 item.astralforce.name=Astral Force
+item.petalred.name=Red Petal of Lycorisradiata
+item.petalgreen.name=Green Petal of Lycorisradiata
+item.petalpurple.name=Purple Petal of Lycorisradiata
+
+# -ADVANCED
+item.botania:gaiaTablet.name=Gaia Tablet
 
 # LEXICON ENTRIES
 # -GENERATING
@@ -32,6 +38,9 @@ botania.entry.moonlightlily=Moonlight Lily
 botania.page.moonlightlily0=This is the dark side of the &1Sunshine Lily&0, can transfer moonlight into &4Mana&0. It has the same efficiency as &1Sunshine Lily&0. And certainly, the process seems slow as well.
 botania.page.moonlightlily1=&1Moonlight Lily&0 also has a stronger vitality, this means it won't decay. As a result, its crafting recipe is more expensive, too. Of course, as a Passive Flowers, it still suffers diminishing returns from having any adjacent.
 botania.page.moonlightlily2=Sowing of the Fool.
+
+# --INFINITYMANA
+botania.entry.infinitymana=Infinite Mana
 
 #FLOWER NAMES
 # - GENERATING

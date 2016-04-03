@@ -1,12 +1,28 @@
 package com.meteor.extrabotany.common;
 
+import java.util.ArrayList;
+
+import org.apache.commons.lang3.ArrayUtils;
+
 import net.minecraft.util.EnumChatFormatting;
+import net.minecraft.world.biome.BiomeGenBase;
+import net.minecraftforge.common.BiomeDictionary;
+import net.minecraftforge.common.BiomeDictionary.Type;
 import vazkii.botania.api.BotaniaAPI;
 import vazkii.botania.api.lexicon.KnowledgeType;
 
+import com.meteor.extrabotany.client.proxy.ClientProxy;
+import com.meteor.extrabotany.client.render.entity.RenderLycorisradiataGreen;
+import com.meteor.extrabotany.client.render.entity.RenderLycorisradiataPurple;
+import com.meteor.extrabotany.client.render.entity.RenderLycorisradiataRed;
+import com.meteor.extrabotany.common.entity.EntityLycorisradiata;
+import com.meteor.extrabotany.common.entity.EntityLycorisradiataGreen;
+import com.meteor.extrabotany.common.entity.EntityLycorisradiataPurple;
+import com.meteor.extrabotany.common.entity.EntityLycorisradiataRed;
 import com.meteor.extrabotany.common.lib.LibReference;
 import com.meteor.extrabotany.common.proxy.CommonProxy;
 
+import cpw.mods.fml.client.registry.RenderingRegistry;
 import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -47,9 +63,10 @@ public class ExtraBotany {
 	@EventHandler
 	public void Init(FMLInitializationEvent event)
 	{
-	
-		
-	
+		proxy.init(event);
+		RenderingRegistry.registerEntityRenderingHandler(EntityLycorisradiataRed.class, new RenderLycorisradiataRed());
+		RenderingRegistry.registerEntityRenderingHandler(EntityLycorisradiataGreen.class, new RenderLycorisradiataGreen());
+		RenderingRegistry.registerEntityRenderingHandler(EntityLycorisradiataPurple.class, new RenderLycorisradiataPurple());
 	}
 	
 	@EventHandler

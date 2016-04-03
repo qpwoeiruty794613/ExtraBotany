@@ -15,6 +15,7 @@ import vazkii.botania.common.crafting.ModPetalRecipes;
 import vazkii.botania.common.item.block.ItemBlockSpecialFlower;
 import vazkii.botania.common.lexicon.ALexiconEntry;
 import vazkii.botania.common.lexicon.BLexiconEntry;
+import vazkii.botania.common.lexicon.DLexiconEntry;
 import vazkii.botania.common.lexicon.page.PagePetalRecipe;
 import vazkii.botania.common.lexicon.page.PageText;
 
@@ -24,6 +25,8 @@ public class LexiconModData {
 	public static LexiconEntry blueenchantress;
 	public static LexiconEntry sunshinelily;
 	public static LexiconEntry moonlightlily;
+	
+	public static LexiconEntry infinitymana;
 	
 	
 	public static void init() {
@@ -46,5 +49,9 @@ public class LexiconModData {
 		moonlightlily.setLexiconPages(new PageText("0"), new PageText("1"),
 				new PagePetalRecipe("2", ModPetalRecipe.moonlightlilyRecipe));
 		moonlightlily.setIcon(ItemBlockSpecialFlower.ofType(LibBlockName.MOONLIGHT_LILY));
+		
+		
+		infinitymana = new DLexiconEntry(LibLexiconName.D_INFINITYMANA, BotaniaAPI.categoryBasics);
+		infinitymana.setIcon(new ItemStack(vazkii.botania.common.block.ModBlocks.pool));
 	}
 }

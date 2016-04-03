@@ -6,5 +6,6 @@ public class LibLexiconName {
 	public static final String GFLOWER_BLUEENCHANTRESS = "blueenchantress";
 	public static final String GFLOWER_SUNSHINELILY = "sunshinelily";
 	public static final String GFLOWER_MOONLIGHTLILY = "moonlightlily";
+	public static final String D_INFINITYMANA = "infinitymana";
 	
 }

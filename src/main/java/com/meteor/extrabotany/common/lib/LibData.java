@@ -30,8 +30,8 @@ public class LibData {
         else
         {
             Item item = stack.getItem();
-            if (item == Items.cookie) return 12;
-            if (item == Items.sugar) return 16;
+            if (item == Items.cookie) return 16;
+            if (item == Items.sugar) return 12;
             if (item == Items.cake) return 256;
             if(ExtraBotany.candycraftLoaded = true){
             	if (item == CandyCraft.ChewingGum) return 20;

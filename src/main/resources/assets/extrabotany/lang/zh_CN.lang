@@ -7,6 +7,12 @@ item.prismaticshard.name=彩虹碎片
 item.gaiaessence.name=盖亚精华
 item.blankcard.name=白卡
 item.astralforce.name=星光之力
+item.petalred.name=红色彼岸花瓣
+item.petalgreen.name=绿色彼岸花瓣
+item.petalpurple.name=紫色彼岸花瓣
+
+# -ADVANCED
+item.botania:gaiaTablet.name=盖亚石板
 
 # LEXICON ENTRIES
 # -GENERATING
@@ -32,6 +38,9 @@ botania.entry.moonlightlily=月光百合
 botania.page.moonlightlily0=它是&1日耀百合&0的另一面,能 够在黑夜中将月光转化为&4魔 力&0.它的效率也不比&1日耀百 合&0低,当然产出&4魔力&0的过程 也十分缓慢.
 botania.page.moonlightlily1=&1月光百合&0也同样拥有着强大 的生命力.作为对价,所需 要的材料也较为昂贵.同时 作为被动产能,它依旧会因 周围的个体而降低效率.
 botania.page.moonlightlily2=愚者的播种.
+
+# --INFINITYMANA
+botania.entry.infinitymana=无限魔力
 
 #FLOWER NAMES
 # - GENERATING

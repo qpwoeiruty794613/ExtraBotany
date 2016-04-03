@@ -9,6 +9,6 @@ public class LibReference {
 	public static final String DEPENDENCIES = "required-after:Botania";
 	
 	public static final String PROXY_COMMON = "com.meteor.extrabotany.common.proxy.CommonProxy";
-	public static final String PROXY_CLIENT = "com.meteor.extrabotany.common.proxy.ClientProxy";
+	public static final String PROXY_CLIENT = "com.meteor.extrabotany.client.proxy.ClientProxy";
 	
 }
