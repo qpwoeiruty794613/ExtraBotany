@@ -10,11 +10,11 @@ public class EntityLycorisradiataPurple extends EntityLycorisradiata{
 		super(world);
 	}
 	
-	protected void dropFewItems(boolean p_70628_1_, int p_70628_2_)
+	protected void dropFewItems(boolean wasRecentlyHit, int lootingModifier)
     {
-        if (p_70628_1_)
+        if (wasRecentlyHit)
         {
-            int j = this.rand.nextInt(2 + p_70628_2_);
+            int j = this.rand.nextInt(2);
 
             for (int k = 0; k < j; ++k)
             {
@@ -24,5 +24,4 @@ public class EntityLycorisradiataPurple extends EntityLycorisradiata{
             }
         }
     }
-
 }

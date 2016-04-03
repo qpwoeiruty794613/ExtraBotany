@@ -5,8 +5,6 @@ import com.meteor.extrabotany.common.lexicon.LexiconModData;
 import vazkii.botania.api.lexicon.LexiconEntry;
 import vazkii.botania.common.block.subtile.generating.SubTileNightshade;
 
-
-
 public class SubTileMoonlightlily extends SubTileNightshade{
 	
 	@Override

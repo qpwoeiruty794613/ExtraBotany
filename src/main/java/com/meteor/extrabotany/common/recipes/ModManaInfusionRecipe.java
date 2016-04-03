@@ -16,5 +16,4 @@ public class ModManaInfusionRecipe {
 		blankCardRecipe = BotaniaAPI.registerManaInfusionRecipe(new ItemStack(ModItems.blankcard), new ItemStack(Items.paper), 5000);
 
 	}
-
 }

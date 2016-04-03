@@ -24,7 +24,6 @@ public class CommonProxy {
 		ModPetalRecipe.init();
 		ModManaInfusionRecipe.init();
 		LexiconModData.init();
-
 	}
 	
 	public void init(FMLInitializationEvent event) {

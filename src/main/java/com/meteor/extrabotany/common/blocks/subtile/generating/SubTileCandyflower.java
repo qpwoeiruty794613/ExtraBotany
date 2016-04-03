@@ -15,19 +15,13 @@ import vazkii.botania.api.subtile.RadiusDescriptor;
 import vazkii.botania.api.subtile.SubTileGenerating;
 import vazkii.botania.common.block.ModBlocks;
 
-
-
 public class SubTileCandyflower extends SubTileGenerating{
 	private static final String TAG_BURN_TIME = "burnTime";
 	private static final int FUEL_CAP = 32000;
 	private static final int RANGE = 3;
-
-
-
+	
 	int burnTime = 0;
 	
-
-
 	@Override
 	public void onUpdate() {
 		super.onUpdate();
@@ -62,8 +56,6 @@ public class SubTileCandyflower extends SubTileGenerating{
 						            item.worldObj.spawnParticle("largesmoke", item.posX, item.posY + 0.1, item.posZ, 0.0D, 0.0D, 0.0D);
 						            item.worldObj.spawnParticle("flame", item.posX, item.posY, item.posZ, 0.0D, 0.0D, 0.0D);
 								}
-
-
 								break;
 							}
 						}

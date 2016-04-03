@@ -28,14 +28,10 @@ public class ModItems {
 		petal_red = new ItemMods(LibItemName.PETALRED);
 		petal_green = new ItemMods(LibItemName.PETALGREEN);
 		petal_purple = new ItemMods(LibItemName.PETALPURPLE);
-		
-
-		
+	
 		OreDictionary.registerOre(LibOreDictName.GAIA_ESSENCE, new ItemStack(gaiaessence));
 		OreDictionary.registerOre(LibOreDictName.PRISMATIC_SHARD, new ItemStack(prismaticshard));
 		OreDictionary.registerOre(LibOreDictName.BLANK_CARD, new ItemStack(blankcard));
 		OreDictionary.registerOre(LibOreDictName.ASTRAL_FORCE, new ItemStack(astralforce));
 	}
-	
-
 }

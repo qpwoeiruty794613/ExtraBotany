@@ -10,8 +10,6 @@ import com.meteor.extrabotany.common.lib.LibBlockName;
 import vazkii.botania.api.BotaniaAPI;
 import net.minecraft.block.Block;
 
-
-
 public class ModBlocks {
 	
 	public static Block specialFlower;
@@ -29,6 +27,4 @@ public class ModBlocks {
 		BotaniaAPI.registerSubTile(LibBlockName.BLUE_ENCHANTRESS, SubTileBlueenchantress.class);
 		}
 	}
-	
-
 }

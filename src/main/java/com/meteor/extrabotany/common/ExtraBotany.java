@@ -32,9 +32,6 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 
-
-
-
 @Mod(modid = LibReference.MOD_ID, name = LibReference.MOD_NAME, version = LibReference.VERSION, dependencies = LibReference.DEPENDENCIES)
 public class ExtraBotany {
 	@Instance(LibReference.MOD_ID)
@@ -48,7 +45,6 @@ public class ExtraBotany {
 	
 	public static KnowledgeType extraKnowledge;
 
-	
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event)
 	{
@@ -74,6 +70,5 @@ public class ExtraBotany {
 	{
 
 	}
-	
 
 }

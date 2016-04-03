@@ -28,7 +28,6 @@ public class LexiconModData {
 	
 	public static LexiconEntry infinitymana;
 	
-	
 	public static void init() {
 		candyflower = new ALexiconEntry(LibLexiconName.GFLOWER_CANDYFLOWER, BotaniaAPI.categoryGenerationFlowers);
 		candyflower.setLexiconPages(new PageText("0"), new PageText("1"),
@@ -49,7 +48,6 @@ public class LexiconModData {
 		moonlightlily.setLexiconPages(new PageText("0"), new PageText("1"),
 				new PagePetalRecipe("2", ModPetalRecipe.moonlightlilyRecipe));
 		moonlightlily.setIcon(ItemBlockSpecialFlower.ofType(LibBlockName.MOONLIGHT_LILY));
-		
 		
 		infinitymana = new DLexiconEntry(LibLexiconName.D_INFINITYMANA, BotaniaAPI.categoryBasics);
 		infinitymana.setIcon(new ItemStack(vazkii.botania.common.block.ModBlocks.pool));

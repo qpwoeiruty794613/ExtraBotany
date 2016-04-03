@@ -12,5 +12,4 @@ public class ELexiconEntry extends BLexiconEntry{
 		super(unlocalizedName, category);
 		setKnowledgeType(ExtraBotany.extraKnowledge);
 	}
-
 }

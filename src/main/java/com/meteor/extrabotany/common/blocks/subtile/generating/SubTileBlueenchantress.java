@@ -23,8 +23,6 @@ import vazkii.botania.common.block.subtile.generating.SubTilePassiveGenerating;
 import vazkii.botania.common.core.helper.ItemNBTHelper;
 import vazkii.botania.common.lib.LibMisc;
 
-
-
 public class SubTileBlueenchantress extends SubTilePassiveGenerating{
 	private static final String TAG_BURN_TIME = "burnTime";
 	private static final String TAG_COOLDOWN = "cooldown";
@@ -180,5 +178,4 @@ public class SubTileBlueenchantress extends SubTilePassiveGenerating{
 	public int getColor() {
 		return 0x0479CC;
 	}
-
 }

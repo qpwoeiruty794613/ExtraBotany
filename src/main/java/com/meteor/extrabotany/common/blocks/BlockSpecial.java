@@ -7,9 +7,6 @@ import com.meteor.extrabotany.common.lib.LibBlockName;
 import vazkii.botania.api.BotaniaAPI;
 import vazkii.botania.common.block.BlockSpecialFlower;
 
-
-
-
 public class BlockSpecial extends BlockSpecialFlower {
 		static {
 			BotaniaAPI.subtilesForCreativeMenu.addAll(Arrays.asList(new String[] {			
@@ -19,7 +16,5 @@ public class BlockSpecial extends BlockSpecialFlower {
 					LibBlockName.SUNSHINE_LILY,
 					LibBlockName.MOONLIGHT_LILY
 			}));
-		}
-		
-		
+		}		
 }

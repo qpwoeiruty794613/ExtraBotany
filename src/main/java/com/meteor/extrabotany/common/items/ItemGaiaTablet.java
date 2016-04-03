@@ -21,13 +21,10 @@ import net.minecraft.util.IIcon;
 import net.minecraft.util.StatCollector;
 import net.minecraft.world.World;
 
-
 public class ItemGaiaTablet extends ItemMod implements IManaItem, ICreativeManaProvider, IManaTooltipDisplay {
 	
 	//copied from ItemManaTablet
 	IIcon[] icons;
-	
-	
 	
 	//just change here
 	private static final int MAX_MANA = 2000000;

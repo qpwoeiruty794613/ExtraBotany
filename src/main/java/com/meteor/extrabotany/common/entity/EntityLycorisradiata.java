@@ -19,11 +19,6 @@ import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 
 public class EntityLycorisradiata extends EntityMob{
-	
-	
-	
-
-
 	public EntityLycorisradiata(World world) {
 		super(world);
 	    setSize(0.6F, 1.8F);
@@ -77,7 +72,4 @@ public class EntityLycorisradiata extends EntityMob{
     protected String getDeathSound() {
         return "dig.grass";
     }
-    
-
-
 }

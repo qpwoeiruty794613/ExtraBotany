@@ -5,8 +5,6 @@ import com.meteor.extrabotany.common.lexicon.LexiconModData;
 import vazkii.botania.api.lexicon.LexiconEntry;
 import vazkii.botania.common.block.subtile.generating.SubTileDaybloom;
 
-
-
 public class SubTileSunshinelily extends SubTileDaybloom{
 	
 	@Override
@@ -37,7 +35,6 @@ public class SubTileSunshinelily extends SubTileDaybloom{
 	@Override
 	public int getColor() {
 		return 0xE19823;
-	}
-  	
+	}  	
 }
 
