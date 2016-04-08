@@ -1,14 +1,14 @@
 [
 {
-  "modid": "examplemod",
-  "name": "Example Mod",
-  "description": "Example placeholder mod.",
+  "modid": "ExtraBotany",
+  "name": "ExtraBotany",
+  "description": "An Addon for Botania.",
   "version": "${version}",
   "mcversion": "${mcversion}",
   "url": "",
   "updateUrl": "",
-  "authorList": ["ExampleDude"],
-  "credits": "The Forge and FML guys, for making this example",
+  "authorList": ["Meteor"],
+  "credits": "",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []

@@ -1,7 +1,13 @@
 # KNOWLEDGE
 botania.knowledge.extra=&3额外&7的知识
 
+# ITEMGROUP
+itemGroup.ExtraBotany=额外植物学
+
 #ITEMS
+# -ARMORSET
+botania.armorset.armorrelic.name=古神之力
+
 # -BASIC
 item.prismaticshard.name=彩虹碎片
 item.gaiaessence.name=盖亚精华
@@ -11,8 +17,31 @@ item.petalred.name=红色彼岸花瓣
 item.petalgreen.name=绿色彼岸花瓣
 item.petalpurple.name=紫色彼岸花瓣
 
+# -SPAWNCARDS
+item.ExtraBotany.SpawnCardLycorisdiataRed.name=红色彼岸花之卡
+item.ExtraBotany.SpawnLycorisRed.desc=生成一朵红色彼岸花
+item.ExtraBotany.SpawnCardLycorisdiataGreen.name=绿色彼岸花之卡
+item.ExtraBotany.SpawnLycorisGreen.desc=生成一朵绿色彼岸花
+item.ExtraBotany.SpawnCardLycorisdiataPurple.name=紫色彼岸花之卡
+item.ExtraBotany.SpawnLycorisPurple.desc=生成一朵紫色彼岸花
+item.ExtraBotany.SpawnCardLycorisdiataRandom.name=随机彼岸花之卡
+item.ExtraBotany.SpawnLycorisRandom.desc=随机生成一朵彼岸花
+
 # -ADVANCED
 item.botania:gaiaTablet.name=盖亚石板
+
+# -DICE
+item.botania:dice20.name=D20
+item.emptydice.name=空骰子
+botaniamisc.uselessDiceRoll=骰子停在了%s上,接着就变回了空骰子.
+
+# -RELIC
+item.botania:excaliber.name=§6王者圣剑
+item.botania:excaliberfake.name==王者之剑
+item.botania:vhandgun_double.name=V制式手炮
+item.botania:vpowerbattleaxe.name=V制式动力战斧
+item.botania:vrangerboots.name=V制式游侠靴
+item.botania:hestiachastity.name=赫斯提亚的贞洁
 
 # LEXICON ENTRIES
 # -GENERATING
@@ -39,6 +68,10 @@ botania.page.moonlightlily0=它是&1日耀百合&0的另一面,能 够在黑夜�
 botania.page.moonlightlily1=&1月光百合&0也同样拥有着强大 的生命力.作为对价,所需 要的材料也较为昂贵.同时 作为被动产能,它依旧会因 周围的个体而降低效率.
 botania.page.moonlightlily2=愚者的播种.
 
+# -RELICS
+
+
+# -OTHERS
 # --INFINITYMANA
 botania.entry.infinitymana=无限魔力
 
@@ -63,3 +96,6 @@ botania.tagline.sunshinelily=太阳骑士
 tile.botania:flower.moonlightlily.name=月光百合
 tile.botania:flower.moonlightlily.reference=愿你能找到所有失去的东西
 botania.tagline.moonlightlily=月亮祭司
+
+tile.botania:flower.artifaconia.name=古遗莲
+tile.botania:flower.artifaconia.reference=禁忌的秘密

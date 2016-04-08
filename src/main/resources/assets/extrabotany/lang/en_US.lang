@@ -1,7 +1,13 @@
 # KNOWLEDGE
 botania.knowledge.extra=&3Extra&7 Knowledge
 
+# ITEMGROUP
+itemGroup.ExtraBotany=ExtraBotany
+
 #ITEMS
+# -ARMORSET
+botania.armorset.armorrelic.name=Strength of Old Gods
+
 # -BASIC
 item.prismaticshard.name=Prismatic Shard
 item.gaiaessence.name=Gaia Essence
@@ -11,8 +17,31 @@ item.petalred.name=Red Petal of Lycorisradiata
 item.petalgreen.name=Green Petal of Lycorisradiata
 item.petalpurple.name=Purple Petal of Lycorisradiata
 
+# -SPAWNCARDS
+item.ExtraBotany.SpawnCardLycorisdiataRed.name=Cards of Red Lycorisdiata
+item.ExtraBotany.SpawnLycorisRed.desc=Spawn a Red Lycorisdiata
+item.ExtraBotany.SpawnCardLycorisdiataGreen.name=Cards of Green Lycorisdiata
+item.ExtraBotany.SpawnLycorisGreen.desc=Spawn a Green Lycorisdiata
+item.ExtraBotany.SpawnCardLycorisdiataPurple.name=Cards of Purple Lycorisdiata
+item.ExtraBotany.SpawnLycorisPurple.desc=Spawn a Purple Lycorisdiata
+item.ExtraBotany.SpawnCardLycorisdiataRandom.name=Cards of Random Lycorisdiata
+item.ExtraBotany.SpawnLycorisRandom.desc=Spawn a Random Lycorisdiata
+
 # -ADVANCED
 item.botania:gaiaTablet.name=Gaia Tablet
+
+# -DICE
+item.botania:dice20.name=D20
+item.emptydice.name=Empty Dice
+botaniamisc.uselessDiceRoll=The dice lands on a %s, it seemed to be transfered to an empty dice afterward.
+
+# -RELIC
+item.botania:excaliber.name=§6Excaliber
+item.botania:excaliberfake.name=Excaliber
+item.botania:vhandgun_double.name=Handguns of Valkyrie
+item.botania:vpowerbattleaxe.name=Powered Battleaxe of Valkyrie
+item.botania:vrangerboots.name=Ranger Boots of Valkrie
+item.botania:hestiachastity.name=Chastity of Hestia
 
 # LEXICON ENTRIES
 # -GENERATING
@@ -59,3 +88,6 @@ botania.tagline.sunshinelily=The Knight of the Sun
 tile.botania:flower.moonlightlily.name=Moonlight Lily
 tile.botania:flower.moonlightlily.reference=May you find all you have lost
 botania.tagline.moonlightlily=The Priestess of the Moon
+
+tile.botania:flower.artifaconia.name=Artifaconia
+tile.botania:flower.artifaconia.reference=The Forbidden Secret

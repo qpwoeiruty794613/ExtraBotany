@@ -4,6 +4,9 @@ import java.util.ArrayList;
 
 import org.apache.commons.lang3.ArrayUtils;
 
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemMonsterPlacer;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraftforge.common.BiomeDictionary;
@@ -19,6 +22,7 @@ import com.meteor.extrabotany.common.entity.EntityLycorisradiata;
 import com.meteor.extrabotany.common.entity.EntityLycorisradiataGreen;
 import com.meteor.extrabotany.common.entity.EntityLycorisradiataPurple;
 import com.meteor.extrabotany.common.entity.EntityLycorisradiataRed;
+import com.meteor.extrabotany.common.items.ModItems;
 import com.meteor.extrabotany.common.lib.LibReference;
 import com.meteor.extrabotany.common.proxy.CommonProxy;
 
@@ -44,6 +48,13 @@ public class ExtraBotany {
 	public static boolean candycraftLoaded = false;
 	
 	public static KnowledgeType extraKnowledge;
+	
+	public static final CreativeTabs tabExtraBotany = new CreativeTabs(LibReference.MOD_NAME) {
+		@Override
+        public Item getTabIconItem() {
+                return ModItems.dice20;
+            }
+		};
 
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event)
@@ -60,6 +71,7 @@ public class ExtraBotany {
 	public void Init(FMLInitializationEvent event)
 	{
 		proxy.init(event);
+		
 		RenderingRegistry.registerEntityRenderingHandler(EntityLycorisradiataRed.class, new RenderLycorisradiataRed());
 		RenderingRegistry.registerEntityRenderingHandler(EntityLycorisradiataGreen.class, new RenderLycorisradiataGreen());
 		RenderingRegistry.registerEntityRenderingHandler(EntityLycorisradiataPurple.class, new RenderLycorisradiataPurple());

@@ -1,5 +1,6 @@
 package com.meteor.extrabotany.common.items;
 
+import com.meteor.extrabotany.common.ExtraBotany;
 import com.meteor.extrabotany.common.lib.LibReference;
 
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -12,7 +13,7 @@ public class ItemMods extends Item{
 	public ItemMods(String name){
 		this
 		.setUnlocalizedName(name)
-		.setCreativeTab(CreativeTabs.tabMaterials)
+		.setCreativeTab(ExtraBotany.tabExtraBotany)
 		.setMaxStackSize(64)
 		.setTextureName(LibReference.MOD_ID + ":" + name);
 		this.name = name;

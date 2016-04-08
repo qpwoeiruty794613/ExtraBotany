@@ -1,6 +1,7 @@
 package com.meteor.extrabotany.common.blocks;
 
 import com.meteor.extrabotany.common.ExtraBotany;
+import com.meteor.extrabotany.common.blocks.subtile.functional.SubTileArtifaconia;
 import com.meteor.extrabotany.common.blocks.subtile.generating.SubTileBlueenchantress;
 import com.meteor.extrabotany.common.blocks.subtile.generating.SubTileCandyflower;
 import com.meteor.extrabotany.common.blocks.subtile.generating.SubTileMoonlightlily;
@@ -26,5 +27,7 @@ public class ModBlocks {
 		if(ExtraBotany.arsmagicaLoaded = true){
 		BotaniaAPI.registerSubTile(LibBlockName.BLUE_ENCHANTRESS, SubTileBlueenchantress.class);
 		}
+		
+		BotaniaAPI.registerSubTile(LibBlockName.ARTIFACONIA, SubTileArtifaconia.class);
 	}
 }

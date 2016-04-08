@@ -14,7 +14,10 @@ public class BlockSpecial extends BlockSpecialFlower {
 					LibBlockName.CANDY_FLOWER,
 					LibBlockName.BLUE_ENCHANTRESS,
 					LibBlockName.SUNSHINE_LILY,
-					LibBlockName.MOONLIGHT_LILY
+					LibBlockName.MOONLIGHT_LILY,
+					
+					// Functional
+					LibBlockName.ARTIFACONIA
 			}));
 		}		
 }
