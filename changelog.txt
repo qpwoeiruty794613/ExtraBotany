@@ -1,3 +1,6 @@
+16/4/9
+Add the way to unlock Extra Knowledge
+
 16/4/8
 Add new Relics.(WIP)
 Add Artifaconia

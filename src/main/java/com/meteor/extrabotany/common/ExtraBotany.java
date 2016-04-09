@@ -61,7 +61,7 @@ public class ExtraBotany {
 	{
 		arsmagicaLoaded = Loader.isModLoaded("Ars Magica 2");
 		candycraftLoaded = Loader.isModLoaded("CandyCraft");
-		extraKnowledge = BotaniaAPI.registerKnowledgeType("extra", EnumChatFormatting.DARK_AQUA, true);
+		extraKnowledge = BotaniaAPI.registerKnowledgeType("extra", EnumChatFormatting.DARK_AQUA, false);
 		proxy.preInit(event);
 	}
 	

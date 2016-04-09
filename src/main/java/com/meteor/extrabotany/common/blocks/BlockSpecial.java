@@ -2,6 +2,7 @@ package com.meteor.extrabotany.common.blocks;
 
 import java.util.Arrays;
 
+import com.meteor.extrabotany.common.ExtraBotany;
 import com.meteor.extrabotany.common.lib.LibBlockName;
 
 import vazkii.botania.api.BotaniaAPI;
@@ -19,5 +20,5 @@ public class BlockSpecial extends BlockSpecialFlower {
 					// Functional
 					LibBlockName.ARTIFACONIA
 			}));
-		}		
+		}	
 }

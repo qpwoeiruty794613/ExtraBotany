@@ -8,7 +8,8 @@ import cpw.mods.fml.common.FMLCommonHandler;
 
 public class ModEvents {
 	public static void init() {
-
+		MinecraftForge.EVENT_BUS.register(new EventKnowledgeTypeUnlock());
+	    FMLCommonHandler.instance().bus().register(new EventKnowledgeTypeUnlock());
 
 	}
 }
