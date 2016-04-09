@@ -1,5 +1,8 @@
 16/4/9
 Add the way to unlock Extra Knowledge
+New Potion Effects: Fast Particle Sorting and Slow Particle Sorting
+New Relic: Maxwell's Demon
+Sorted CreativeTab
 
 16/4/8
 Add new Relics.(WIP)

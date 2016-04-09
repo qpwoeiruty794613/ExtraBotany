@@ -49,12 +49,7 @@ public class ExtraBotany {
 	
 	public static KnowledgeType extraKnowledge;
 	
-	public static final CreativeTabs tabExtraBotany = new CreativeTabs(LibReference.MOD_NAME) {
-		@Override
-        public Item getTabIconItem() {
-                return ModItems.dice20;
-            }
-		};
+	public static final ExtraBotanyCreativeTab tabExtraBotany = new ExtraBotanyCreativeTab(); 
 
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event)

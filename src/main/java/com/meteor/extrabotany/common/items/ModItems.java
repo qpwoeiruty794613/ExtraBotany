@@ -9,6 +9,7 @@ import com.meteor.extrabotany.common.items.relic.ItemDice20;
 import com.meteor.extrabotany.common.items.relic.ItemExcaliber;
 import com.meteor.extrabotany.common.items.relic.ItemExcaliberFake;
 import com.meteor.extrabotany.common.items.relic.ItemHestiaChastity;
+import com.meteor.extrabotany.common.items.relic.ItemMaxwellDemon;
 import com.meteor.extrabotany.common.items.relic.ItemVHandgun;
 import com.meteor.extrabotany.common.items.relic.ItemVPowerBattleaxe;
 import com.meteor.extrabotany.common.items.relic.ItemVRangerBoots;
@@ -41,8 +42,13 @@ public class ModItems {
 	public static Item lycorisred;
 	public static Item lycorisrandom;
 	public static Item hestiachastity;
+	public static Item maxwelldemon;
+	
+	public static Item itemtest;
 	
 	public static void init() {
+		itemtest = new ItemTest("test");
+		
 		prismaticshard = new ItemMods(LibItemName.PRISMATICSHARD);
 		blankcard = new ItemMods(LibItemName.BLANKCARD);
 		gaiaessence = new ItemMods(LibItemName.GAIAESSENCE);
@@ -52,16 +58,16 @@ public class ModItems {
 		petal_purple = new ItemMods(LibItemName.PETALPURPLE);
 		empty_dice = new ItemMods(LibItemName.EMPTYDICE);
 		
-
-		excaliber = new ItemExcaliber().setCreativeTab(ExtraBotany.tabExtraBotany);
-		excaliberfake = new ItemExcaliberFake().setCreativeTab(ExtraBotany.tabExtraBotany);
-		vpowerbattleaxe = new ItemVPowerBattleaxe().setCreativeTab(ExtraBotany.tabExtraBotany);
-		vhandgun = new ItemVHandgun().setCreativeTab(ExtraBotany.tabExtraBotany);
-		vrangerboots = new ItemVRangerBoots(3, LibItemName.VRANGERBOOTS).setCreativeTab(ExtraBotany.tabExtraBotany);
-		dice20 = new ItemDice20().setCreativeTab(ExtraBotany.tabExtraBotany);
-		hestiachastity = new ItemHestiaChastity(LibItemName.HESTIACHASTITY).setCreativeTab(ExtraBotany.tabExtraBotany);
+		maxwelldemon = new ItemMaxwellDemon();
+		excaliber = new ItemExcaliber();
+		excaliberfake = new ItemExcaliberFake();
+		vpowerbattleaxe = new ItemVPowerBattleaxe();
+		vhandgun = new ItemVHandgun();
+		vrangerboots = new ItemVRangerBoots(3, LibItemName.VRANGERBOOTS);
+		dice20 = new ItemDice20();
+		hestiachastity = new ItemHestiaChastity(LibItemName.HESTIACHASTITY);
 		
-		gaiatablet = new ItemGaiaTablet().setCreativeTab(ExtraBotany.tabExtraBotany);
+		gaiatablet = new ItemGaiaTablet();
 		
 		lycorisgreen = new ItemSpawnCardLycorisGreen(LibEntityName.LYCORISGREEN);
 		lycorisred = new ItemSpawnCardLycorisRed(LibEntityName.LYCORISRED);

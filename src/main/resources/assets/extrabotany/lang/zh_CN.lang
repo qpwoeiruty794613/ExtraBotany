@@ -2,8 +2,12 @@
 botania.knowledge.extra=&3额外&7的知识
 botaniamisc.knowledgeUnlock=白卡闪耀着异样的光芒,你手中的手册被注入了神秘的力量.
 
-# ITEMGROUP
+#ITEMGROUP
 itemGroup.ExtraBotany=额外植物学
+
+#POTIONEFFECTS
+potion.fastparticlesorting=快速粒子排序
+potion.slowparticlesorting=慢速粒子排序
 
 #ITEMS
 # -ARMORSET
@@ -38,11 +42,16 @@ botaniamisc.uselessDiceRoll=骰子停在了%s上,接着就变回了空骰子.
 
 # -RELIC
 item.botania:excaliber.name=§6王者圣剑
-item.botania:excaliberfake.name==王者之剑
+item.botania:excaliberfake.name=王者之剑
 item.botania:vhandgun_double.name=V制式手炮
 item.botania:vpowerbattleaxe.name=V制式动力战斧
 item.botania:vrangerboots.name=V制式游侠靴
 item.botania:hestiachastity.name=赫斯提亚的贞洁
+item.botania:maxwelldemon.name=麦克斯韦的妖精
+
+# -FOR DEVELOPER
+item.test.name=测试道具
+item.test.desc=仅作测试
 
 # LEXICON ENTRIES
 # -GENERATING

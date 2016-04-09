@@ -37,4 +37,5 @@ public class LibItemName {
 	public static final String VHANDGUN = "vhandgun_double";
 	public static final String VRANGERBOOTS = "vrangerboots";
 	public static final String HESTIACHASTITY = "hestiachastity";
+	public static final String MAXWELLDEMON = "maxwelldemon";
 }

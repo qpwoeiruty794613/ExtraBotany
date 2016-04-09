@@ -10,6 +10,7 @@ public class ModEvents {
 	public static void init() {
 		MinecraftForge.EVENT_BUS.register(new EventKnowledgeTypeUnlock());
 	    FMLCommonHandler.instance().bus().register(new EventKnowledgeTypeUnlock());
-
+		MinecraftForge.EVENT_BUS.register(new EventHighDamageResistance());
+	    FMLCommonHandler.instance().bus().register(new EventHighDamageResistance());
 	}
 }

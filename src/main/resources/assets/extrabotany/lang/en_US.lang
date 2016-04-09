@@ -2,8 +2,12 @@
 botania.knowledge.extra=&3Extra&7 Knowledge
 botaniamisc.knowledgeUnlock=The Blank Card is unusually shining, the Lexicon which you are holding is injected with a mystery energy.
 
-# ITEMGROUP
+#ITEMGROUP
 itemGroup.ExtraBotany=ExtraBotany
+
+#POTIONEFFECTS
+potion.fastparticlesorting=Fast Particle Sorting
+potion.slowparticlesorting=Slow Particle Sorting
 
 #ITEMS
 # -ARMORSET
@@ -43,6 +47,11 @@ item.botania:vhandgun_double.name=Handguns of Valkyrie
 item.botania:vpowerbattleaxe.name=Powered Battleaxe of Valkyrie
 item.botania:vrangerboots.name=Ranger Boots of Valkrie
 item.botania:hestiachastity.name=Chastity of Hestia
+item.botania:maxwelldemon.name=Maxwell's Demon
+
+# -FOR DEVELOPER
+item.test.name=Test Item
+item.test.desc=ONLY FOR DEVELOPER
 
 # LEXICON ENTRIES
 # -GENERATING
