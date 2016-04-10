@@ -5,6 +5,8 @@ import com.meteor.extrabotany.common.entity.EntityLycorisradiata;
 import com.meteor.extrabotany.common.entity.EntityLycorisradiataGreen;
 import com.meteor.extrabotany.common.entity.EntityLycorisradiataPurple;
 import com.meteor.extrabotany.common.entity.EntityLycorisradiataRed;
+import com.meteor.extrabotany.common.items.relic.ItemAphroditeGrace;
+import com.meteor.extrabotany.common.items.relic.ItemAthenaBless;
 import com.meteor.extrabotany.common.items.relic.ItemDice20;
 import com.meteor.extrabotany.common.items.relic.ItemExcaliber;
 import com.meteor.extrabotany.common.items.relic.ItemExcaliberFake;
@@ -43,6 +45,8 @@ public class ModItems {
 	public static Item lycorisrandom;
 	public static Item hestiachastity;
 	public static Item maxwelldemon;
+	public static Item athenabless;
+	public static Item aphroditegrace;
 	
 	public static Item itemtest;
 	
@@ -58,6 +62,7 @@ public class ModItems {
 		petal_purple = new ItemMods(LibItemName.PETALPURPLE);
 		empty_dice = new ItemMods(LibItemName.EMPTYDICE);
 		
+		athenabless = new ItemAthenaBless();
 		maxwelldemon = new ItemMaxwellDemon();
 		excaliber = new ItemExcaliber();
 		excaliberfake = new ItemExcaliberFake();
@@ -66,6 +71,7 @@ public class ModItems {
 		vrangerboots = new ItemVRangerBoots(3, LibItemName.VRANGERBOOTS);
 		dice20 = new ItemDice20();
 		hestiachastity = new ItemHestiaChastity(LibItemName.HESTIACHASTITY);
+		aphroditegrace = new ItemAphroditeGrace(LibItemName.APHRODITEGRACE);
 		
 		gaiatablet = new ItemGaiaTablet();
 		

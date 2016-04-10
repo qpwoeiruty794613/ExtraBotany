@@ -1,7 +1,11 @@
+16/4/10
+New Relics:Aphrodite's Grace and Athena's Bless
+New Achievements.
+
 16/4/9
 Add the way to unlock Extra Knowledge
 New Potion Effects: Fast Particle Sorting and Slow Particle Sorting
-New Relic: Maxwell's Demon
+A New Relic: Maxwell's Demon
 Sorted CreativeTab
 
 16/4/8

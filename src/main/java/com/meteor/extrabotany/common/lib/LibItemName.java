@@ -38,4 +38,6 @@ public class LibItemName {
 	public static final String VRANGERBOOTS = "vrangerboots";
 	public static final String HESTIACHASTITY = "hestiachastity";
 	public static final String MAXWELLDEMON = "maxwelldemon";
+	public static final String ATHENABLESS = "athenabless";
+	public static final String APHRODITEGRACE = "aphroditegrace";
 }

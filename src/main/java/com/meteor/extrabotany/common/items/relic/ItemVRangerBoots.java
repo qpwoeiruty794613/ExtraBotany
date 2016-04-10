@@ -30,11 +30,6 @@ public class ItemVRangerBoots extends ItemRelicArmorSet{
 	}
 	
 	@Override
-	public String getArmorTextureAfterInk(ItemStack stack, int slot) {
-		return LibReference.MODEL_RELIC;
-	}
-	
-	@Override
 	public Multimap getItemAttributeModifiers() {
 		Multimap multimap = HashMultimap.create();
 		multimap.put(SharedMonsterAttributes.movementSpeed.getAttributeUnlocalizedName(), new AttributeModifier(field_111210_e, "Armor modifier", 0.6, 1));

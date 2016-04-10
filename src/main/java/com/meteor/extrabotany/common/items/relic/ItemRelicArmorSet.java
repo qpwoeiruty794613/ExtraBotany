@@ -90,7 +90,7 @@ public class ItemRelicArmorSet extends ItemManasteelArmor implements IRelic{
 		switch(i) {
 		case 0: return stack.getItem() == com.meteor.extrabotany.common.items.ModItems.hestiachastity;
 		case 1: return stack.getItem() == ModItems.terrasteelChest;
-		case 2: return stack.getItem() == ModItems.terrasteelLegs;
+		case 2: return stack.getItem() == com.meteor.extrabotany.common.items.ModItems.aphroditegrace;
 		case 3: return stack.getItem() == com.meteor.extrabotany.common.items.ModItems.vrangerboots;
 		}
 

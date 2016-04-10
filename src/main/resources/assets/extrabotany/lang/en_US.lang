@@ -41,13 +41,15 @@ item.emptydice.name=Empty Dice
 botaniamisc.uselessDiceRoll=The dice lands on a %s, it seemed to be transfered to an empty dice afterward.
 
 # -RELIC
-item.botania:excaliber.name=§6Excaliber
+item.botania:excaliber.name=Excaliber
 item.botania:excaliberfake.name=Excaliber
 item.botania:vhandgun_double.name=Handguns of Valkyrie
 item.botania:vpowerbattleaxe.name=Powered Battleaxe of Valkyrie
 item.botania:vrangerboots.name=Ranger Boots of Valkrie
 item.botania:hestiachastity.name=Chastity of Hestia
 item.botania:maxwelldemon.name=Maxwell's Demon
+item.botania:athenabless.name=Athena's Bless
+item.botania:aphroditegrace.name=Aphrodite's Grace
 
 # -FOR DEVELOPER
 item.test.name=Test Item
@@ -81,6 +83,57 @@ botania.page.moonlightlily2=Sowing of the Fool.
 # --INFINITYMANA
 botania.entry.infinitymana=Infinite Mana
 
+# -RELICS
+# --HESTIACHASTITY
+botania.entry.hestiachastity=Chastity of Hestia
+botania.tagline.hestiachastity=Adamant and Indomitable
+botania.page.hestiachastity0=
+
+# --MAXWELLDEMON
+botania.entry.maxwelldemon=Maxwell's Demon
+botania.tagline.maxwelldemon=Perpetual Motion Machine!?
+botania.page.maxwelldemon0=
+
+# --ATHENABLESS
+botania.entry.athenabless=Athena's Bless
+botania.tagline.athenabless=A Blessing of Wisdom.
+botania.page.athenabless0=
+
+# --APHRODITEGRACE
+botania.entry.aphroditegrace=Aphrodite's Grace
+botania.tagline.aphroditegrace=Escape from Agony.
+botania.page.aphroditegrace0=
+
+# --DICE20
+botania.entry.dice20=D20
+botania.tagline.dice20=Roll the Relics.
+botania.page.dice200=
+
+# --EXCALIBER
+botania.entry.excaliber=Excaliber
+botania.tagline.excaliber=Victory and Vow.
+botania.page.excaliber0=
+
+# --EXCALIBERFAKE
+botania.entry.excaliberfake=Excaliber
+botania.tagline.excaliberfake=Dying Light.
+botania.page.excaliberfake0=
+
+# --VPOWERBATTLEAXE
+botania.entry.vpowerbattleaxe=Powered Battleaxe of Valkyrie
+botania.tagline.vpowerbattleaxe=The 300!
+botania.page.vpowerbattleaxe0=
+
+# --VRANGERBOOTS
+botania.entry.vrangerboots=Ranger Boots of Valkrie
+botania.tagline.vrangerboots=Faster Moving.
+botania.page.vrangerboots0=
+
+# --VHANDGUN
+botania.entry.vhandgun=Handguns of Valkyrie
+botania.tagline.vhandgun=Shoot with mana.
+botania.page.vhandgun0=
+
 #FLOWER NAMES
 # - GENERATING
 tile.botania:flower.candyflower.name=Candy Flower
@@ -101,3 +154,26 @@ botania.tagline.moonlightlily=The Priestess of the Moon
 
 tile.botania:flower.artifaconia.name=Artifaconia
 tile.botania:flower.artifaconia.reference=The Forbidden Secret
+
+#ACHIEVEMENTS
+# -RELICS
+achievement.botania:aphroditegrace=
+achievement.botania:aphroditegrace.desc=
+achievement.botania:dice20=
+achievement.botania:dice20.desc=
+achievement.botania:athenabless=
+achievement.botania:athenabless.desc=
+achievement.botania:excaliber=
+achievement.botania:excaliber.desc=
+achievement.botania:excaliberfake=
+achievement.botania:excaliberfake.desc=
+achievement.botania:hestiachastity=
+achievement.botania:hestiachastity.desc=
+achievement.botania:maxwelldemon=
+achievement.botania:maxwelldemon.desc=
+achievement.botania:vpowerbattleaxe=
+achievement.botania:vpowerbattleaxe.desc=
+achievement.botania:vrangerboots=
+achievement.botania:vrangerboots.desc=
+achievement.botania:vhandgun=
+achievement.botania:vhandgun.desc=
