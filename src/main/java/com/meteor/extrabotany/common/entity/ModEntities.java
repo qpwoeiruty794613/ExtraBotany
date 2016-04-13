@@ -14,7 +14,8 @@ public class ModEntities {
 		EntityRegistry.registerModEntity(EntityLycorisradiataRed.class, "Lycorisradiata_Red", id++, ExtraBotany.instance, 64, 10, true);
 		EntityRegistry.registerModEntity(EntityLycorisradiataGreen.class, "Lycorisradiata_Green", id++, ExtraBotany.instance, 64, 10, true);
 		EntityRegistry.registerModEntity(EntityLycorisradiataPurple.class, "Lycorisradiata_Purple", id++, ExtraBotany.instance, 64, 10, true);
-
+		EntityRegistry.registerModEntity(EntityTeleportPearl.class, "pearl_teleport", id++, ExtraBotany.instance, 64, 10, true);
+		
 		EntityRegistry.addSpawn(EntityLycorisradiataRed.class, 30, 1, 3, EnumCreatureType.monster, BiomeGenBase.forest);
 		EntityRegistry.addSpawn(EntityLycorisradiataGreen.class, 30, 1, 3, EnumCreatureType.monster, BiomeGenBase.plains);
 		EntityRegistry.addSpawn(EntityLycorisradiataPurple.class, 30, 1, 3, EnumCreatureType.monster, BiomeGenBase.desert);

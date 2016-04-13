@@ -29,6 +29,7 @@ public class LibItemName {
 
 	//Advanced
 	public static final String GAIATABLET = "gaiaTablet";
+	public static final String TELEPORTPEARL = "teleportpearl";
 	
 	//Relic
 	public static final String EXCALIBER = "excaliber";
@@ -40,4 +41,6 @@ public class LibItemName {
 	public static final String MAXWELLDEMON = "maxwelldemon";
 	public static final String ATHENABLESS = "athenabless";
 	public static final String APHRODITEGRACE = "aphroditegrace";
+	public static final String CRONUSPHANTOM = "cronusphantom";
+	public static final String HERMESTRAVELCLOTHING = "hermestravelclothing";
 }

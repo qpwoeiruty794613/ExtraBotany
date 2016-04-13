@@ -1,3 +1,8 @@
+16/4/13
+NEW Relics:Phantom of Cronus and Hermes Travel Clothing
+NEW Item:Teleport Pearl,it won't be consumed if you wear the Hermes Travel Clothing.
+NEW PotionEffect:Residual Pain
+
 16/4/10
 New Relics:Aphrodite's Grace and Athena's Bless
 New Achievements.

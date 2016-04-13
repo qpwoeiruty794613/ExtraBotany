@@ -40,9 +40,9 @@ public class ItemDice20 extends ItemRelic{
 				new ItemStack(ModItems.hestiachastity),
 				new ItemStack(ModItems.maxwelldemon),
 				new ItemStack(ModItems.vrangerboots),
-				new ItemStack(ModItems.excaliberfake),
-				new ItemStack(ModItems.excaliberfake),
-				new ItemStack(ModItems.excaliberfake),
+				new ItemStack(ModItems.cronusphantom),
+				new ItemStack(ModItems.aphroditegrace),
+				new ItemStack(ModItems.hermestravelclothing),
 				new ItemStack(ModItems.excaliberfake),
 				new ItemStack(ModItems.excaliberfake),
 				new ItemStack(ModItems.empty_dice)

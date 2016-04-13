@@ -8,6 +8,9 @@ itemGroup.ExtraBotany=额外植物学
 #POTIONEFFECTS
 potion.fastparticlesorting=快速粒子归类
 potion.slowparticlesorting=慢速粒子排序
+potion.residualpain=痛觉残留
+potion.fastparticlesorting.postfix=快速粒子归类药水
+potion.residualpain.postfix=痛觉残留药水
 
 #ITEMS
 # -ARMORSET
@@ -34,6 +37,7 @@ item.ExtraBotany.SpawnLycorisRandom.desc=随机生成一朵彼岸花
 
 # -ADVANCED
 item.botania:gaiaTablet.name=盖亚石板
+item.teleportpearl.name=传送珍珠
 
 # -DICE
 item.botania:dice20.name=D20
@@ -50,6 +54,8 @@ item.botania:hestiachastity.name=赫斯提亚的贞洁
 item.botania:maxwelldemon.name=麦克斯韦的妖精
 item.botania:athenabless.name=雅典娜的庇佑
 item.botania:aphroditegrace.name=阿佛洛狄忒的恩宠
+item.botania:cronusphantom.name=克洛诺斯的幻影
+item.botania:hermestravelclothing.name=赫尔墨斯的旅行衣
 
 # -FOR DEVELOPER
 item.test.name=测试道具
@@ -107,7 +113,7 @@ botania.page.aphroditegrace0=爱与美之神,司管人间一切 爱情的女神�
 
 # --DICE20
 botania.entry.dice20=D20
-botania.tagline.dice20=掷出的遗物.
+botania.tagline.dice20=命运一掷.
 botania.page.dice200=拥有着二十面的命运骰子, 搭载着18件传说中的遗物, 能将其中的魔力转化为一件 &4遗物&0.
 
 # --EXCALIBER
@@ -162,23 +168,23 @@ tile.botania:flower.artifaconia.reference=禁忌的秘密
 
 #ACHIEVEMENTS
 # -RELICS
-achievement.botania:aphroditegrace=
-achievement.botania:aphroditegrace.desc=
-achievement.botania:dice20=
-achievement.botania:dice20.desc=
-achievement.botania:athenabless=
-achievement.botania:athenabless.desc=
-achievement.botania:excaliber=
-achievement.botania:excaliber.desc=
-achievement.botania:excaliberfake=
-achievement.botania:excaliberfake.desc=
-achievement.botania:hestiachastity=
-achievement.botania:hestiachastity.desc=
-achievement.botania:maxwelldemon=
-achievement.botania:maxwelldemon.desc=
-achievement.botania:vpowerbattleaxe=
-achievement.botania:vpowerbattleaxe.desc=
-achievement.botania:vrangerboots=
-achievement.botania:vrangerboots.desc=
-achievement.botania:vhandgun=
-achievement.botania:vhandgun.desc=
+achievement.botania:aphroditegrace=Love & Peace
+achievement.botania:aphroditegrace.desc=获得战利品:阿佛洛狄忒的恩宠
+achievement.botania:dice20=Reroll you destiny
+achievement.botania:dice20.desc=获得D20!
+achievement.botania:athenabless=白金ディスコ
+achievement.botania:athenabless.desc=获得战利品:雅典娜的庇佑
+//achievement.botania:excaliber=圣光照耀众生
+//achievement.botania:excaliber.desc=获得王者圣剑!
+achievement.botania:excaliberfake=信仰圣光吧
+achievement.botania:excaliberfake.desc=获得战利品:王者之剑
+achievement.botania:hestiachastity=破灭之光
+achievement.botania:hestiachastity.desc=获得战利品:赫斯提亚的贞洁
+achievement.botania:maxwelldemon=第二类永动机!?
+achievement.botania:maxwelldemon.desc=获得战利品:麦克斯韦的妖精
+achievement.botania:vpowerbattleaxe=Tell Your World
+achievement.botania:vpowerbattleaxe.desc=获得战利品:V制式动力战斧
+achievement.botania:vrangerboots=悪ノ召使
+achievement.botania:vrangerboots.desc=获得战利品:V制式游侠靴
+achievement.botania:vhandgun=悪ノ娘
+achievement.botania:vhandgun.desc=获得战利品:V制式手炮

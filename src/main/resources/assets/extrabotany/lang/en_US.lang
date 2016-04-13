@@ -8,6 +8,9 @@ itemGroup.ExtraBotany=ExtraBotany
 #POTIONEFFECTS
 potion.fastparticlesorting=Fast Particle Sorting
 potion.slowparticlesorting=Slow Particle Sorting
+potion.residualpain=Residual Pain
+potion.fastparticlesorting.postfix=Potion of Fast Particle Sorting 
+potion.residualpain.postfix=Potion of Residual Pain
 
 #ITEMS
 # -ARMORSET
@@ -34,6 +37,7 @@ item.ExtraBotany.SpawnLycorisRandom.desc=Spawn a Random Lycorisdiata
 
 # -ADVANCED
 item.botania:gaiaTablet.name=Gaia Tablet
+item.teleportpearl.name=Teleport Pearl
 
 # -DICE
 item.botania:dice20.name=D20
@@ -45,11 +49,13 @@ item.botania:excaliber.name=Excaliber
 item.botania:excaliberfake.name=Excaliber
 item.botania:vhandgun_double.name=Handguns of Valkyrie
 item.botania:vpowerbattleaxe.name=Powered Battleaxe of Valkyrie
-item.botania:vrangerboots.name=Ranger Boots of Valkrie
+item.botania:vrangerboots.name=Ranger Boots of Valkyrie
 item.botania:hestiachastity.name=Chastity of Hestia
 item.botania:maxwelldemon.name=Maxwell's Demon
 item.botania:athenabless.name=Athena's Bless
 item.botania:aphroditegrace.name=Aphrodite's Grace
+item.botania:cronusphantom.name=Phantom of Cronus
+item.botania:hermestravelclothing.name=Hermes's Travel Clothing
 
 # -FOR DEVELOPER
 item.test.name=Test Item
@@ -106,7 +112,7 @@ botania.page.aphroditegrace0=
 
 # --DICE20
 botania.entry.dice20=D20
-botania.tagline.dice20=Roll the Relics.
+botania.tagline.dice20=Reroll your Destiny.
 botania.page.dice200=
 
 # --EXCALIBER
@@ -125,7 +131,7 @@ botania.tagline.vpowerbattleaxe=The 300!
 botania.page.vpowerbattleaxe0=
 
 # --VRANGERBOOTS
-botania.entry.vrangerboots=Ranger Boots of Valkrie
+botania.entry.vrangerboots=Ranger Boots of Valkyrie
 botania.tagline.vrangerboots=Faster Moving.
 botania.page.vrangerboots0=
 
@@ -157,23 +163,23 @@ tile.botania:flower.artifaconia.reference=The Forbidden Secret
 
 #ACHIEVEMENTS
 # -RELICS
-achievement.botania:aphroditegrace=
-achievement.botania:aphroditegrace.desc=
-achievement.botania:dice20=
-achievement.botania:dice20.desc=
-achievement.botania:athenabless=
-achievement.botania:athenabless.desc=
-achievement.botania:excaliber=
-achievement.botania:excaliber.desc=
-achievement.botania:excaliberfake=
-achievement.botania:excaliberfake.desc=
-achievement.botania:hestiachastity=
-achievement.botania:hestiachastity.desc=
-achievement.botania:maxwelldemon=
-achievement.botania:maxwelldemon.desc=
-achievement.botania:vpowerbattleaxe=
-achievement.botania:vpowerbattleaxe.desc=
-achievement.botania:vrangerboots=
-achievement.botania:vrangerboots.desc=
-achievement.botania:vhandgun=
-achievement.botania:vhandgun.desc=
+achievement.botania:aphroditegrace=Love & Peace
+achievement.botania:aphroditegrace.desc=Be rewarded the Aphrodite's Grace for a heroic feat
+achievement.botania:dice20=Reroll you destiny
+achievement.botania:dice20.desc=Get the D20!
+achievement.botania:athenabless=白金ディスコ
+achievement.botania:athenabless.desc=Be rewarded the Athena's Bless for a heroic feat
+//achievement.botania:excaliber=The Light does not Discriminate
+//achievement.botania:excaliber.desc=Get the Excaliber!
+achievement.botania:excaliberfake=Put Your Faith in the Light
+achievement.botania:excaliberfake.desc=Be rewarded Excaliber for a heroic feat
+achievement.botania:hestiachastity=Light of Ruin
+achievement.botania:hestiachastity.desc=Be rewarded Chastity of Hestia for a heroic feat
+achievement.botania:maxwelldemon=Perpetual Motion Machine of the Second Category!?
+achievement.botania:maxwelldemon.desc=Be rewarded Maxwell's Demon for a heroic feat
+achievement.botania:vpowerbattleaxe=Tell Your World
+achievement.botania:vpowerbattleaxe.desc=Be rewarded Powered Battleaxe of Valkyrie for a heroic feat
+achievement.botania:vrangerboots=悪ノ召使
+achievement.botania:vrangerboots.desc=Be rewarded Ranger Boots of Valkyrie for a heroic feat
+achievement.botania:vhandgun=悪ノ娘
+achievement.botania:vhandgun.desc=Be rewarded Handguns of Valkyrie for a heroic feat

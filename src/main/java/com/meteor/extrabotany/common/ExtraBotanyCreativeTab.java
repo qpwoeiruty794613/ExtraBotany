@@ -33,16 +33,20 @@ public class ExtraBotanyCreativeTab extends CreativeTabs{
 		this.list = list;
 		//Mana Using Item
 		addItem(ModItems.gaiatablet);
+		addItem(ModItems.teleportpearl);
 		//Relics
 		addItem(ModItems.dice20);
+		addItem(ModItems.hestiachastity);
+		addItem(ModItems.hermestravelclothing);
+		addItem(ModItems.aphroditegrace);
+		addItem(ModItems.vrangerboots);
+		addItem(ModItems.maxwelldemon);
 		addItem(ModItems.excaliber);
 		addItem(ModItems.excaliberfake);
-		addItem(ModItems.hestiachastity);
-		addItem(ModItems.maxwelldemon);
 		addItem(ModItems.vhandgun);
 		addItem(ModItems.vpowerbattleaxe);
-		addItem(ModItems.vrangerboots);
 		addItem(ModItems.athenabless);
+		addItem(ModItems.cronusphantom);
 		//Test
 		addItem(ModItems.itemtest);
 		//Basic

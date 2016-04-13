@@ -20,7 +20,7 @@ public class EventHighDamageResistance {
 	        }
 	        EntityPlayer player = (EntityPlayer) event.entity;
 	        if(player.isPotionActive(ModPotionEffect.slowparticlesorting)){
-	        	if(event.ammount >= (float) (player.getMaxHealth()*0.2/(1+ModPotionEffect.slowparticlesorting.getEffectiveness()*0.1)) && event.ammount <= (float)(player.getMaxHealth()*3*(1+ModPotionEffect.slowparticlesorting.getEffectiveness()*0.1))){
+	        	if(event.ammount >= (float) (player.getMaxHealth()*0.2) && event.ammount <= (float)(player.getMaxHealth()*3)){
 	        		event.ammount = (float) (player.getMaxHealth()*0.2);
 	        	}
 	        }

@@ -5,11 +5,13 @@ import java.util.UUID;
 
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
+import com.meteor.extrabotany.client.model.ModelRelicArmor;
 import com.meteor.extrabotany.common.lib.LibReference;
 
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.client.model.ModelBiped;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.attributes.AttributeModifier;
 import net.minecraft.entity.player.EntityPlayer;
@@ -44,7 +46,7 @@ public class ItemRelicArmorSet extends ItemManasteelArmor implements IRelic{
 	@Override
 	@SideOnly(Side.CLIENT)
 	public ModelBiped provideArmorModelForSlot(ItemStack stack, int slot) {
-		models[slot] = new ModelArmorTerrasteel(slot);
+		models[slot] = new ModelRelicArmor(slot);
 		return models[slot];
 	}
 
@@ -73,8 +75,8 @@ public class ItemRelicArmorSet extends ItemManasteelArmor implements IRelic{
 		if(armorset == null)
 			armorset = new ItemStack[] {
 				new ItemStack(com.meteor.extrabotany.common.items.ModItems.hestiachastity),
-				new ItemStack(ModItems.terrasteelChest),
-				new ItemStack(ModItems.terrasteelLegs),
+				new ItemStack(com.meteor.extrabotany.common.items.ModItems.hermestravelclothing),
+				new ItemStack(com.meteor.extrabotany.common.items.ModItems.aphroditegrace),
 				new ItemStack(com.meteor.extrabotany.common.items.ModItems.vrangerboots)
 		};
 
@@ -89,7 +91,7 @@ public class ItemRelicArmorSet extends ItemManasteelArmor implements IRelic{
 
 		switch(i) {
 		case 0: return stack.getItem() == com.meteor.extrabotany.common.items.ModItems.hestiachastity;
-		case 1: return stack.getItem() == ModItems.terrasteelChest;
+		case 1: return stack.getItem() == com.meteor.extrabotany.common.items.ModItems.hermestravelclothing;
 		case 2: return stack.getItem() == com.meteor.extrabotany.common.items.ModItems.aphroditegrace;
 		case 3: return stack.getItem() == com.meteor.extrabotany.common.items.ModItems.vrangerboots;
 		}
@@ -216,6 +218,10 @@ public class ItemRelicArmorSet extends ItemManasteelArmor implements IRelic{
 	@Override
 	public EnumRarity getRarity(ItemStack p_77613_1_) {
 		return BotaniaAPI.rarityRelic;
+	}
+
+	public void onWornTick(ItemStack stack, EntityLivingBase player) {
+		
 	}
 
 }

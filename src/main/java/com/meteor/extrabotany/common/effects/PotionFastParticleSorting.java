@@ -7,7 +7,7 @@ import net.minecraft.util.ResourceLocation;
 public class PotionFastParticleSorting extends PotionEffectMods{
 
 	public PotionFastParticleSorting(String name, ResourceLocation icon) {
-		super(name, icon);
+		super(name, false, icon);
 	}
 	
 	private static final String __OBFID = "CL_00001525";

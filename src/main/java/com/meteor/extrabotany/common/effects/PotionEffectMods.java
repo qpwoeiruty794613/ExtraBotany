@@ -35,21 +35,22 @@ public class PotionEffectMods extends Potion{
 		init();
 	}
 	
-	public PotionEffectMods(String name, ResourceLocation icon) {
+	public PotionEffectMods(String name, Boolean isbadEffect, ResourceLocation icon) {
 		super(nextID++, false, 0);
 		this.setPotionName(name);
 		this.mIcon = icon;
 
 	}
-	
+
 	@Override
 	public void performEffect(EntityLivingBase entity, int level) { 
-		
+
 	}
 
 	@Override
 	public boolean isReady(int duration, int level)
 	{
+
 		return true;
 	}
 	

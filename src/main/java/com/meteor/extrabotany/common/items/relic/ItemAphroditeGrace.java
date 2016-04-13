@@ -40,7 +40,7 @@ public class ItemAphroditeGrace extends ItemRelicArmorSet{
 			EntityPlayer player = (EntityPlayer) event.entityLiving;
 			for(ItemStack stack : player.inventory.armorInventory) {
 	            if(stack != null && stack.getItem() instanceof ItemAphroditeGrace) {
-	            	if(event.ammount >= 6.0F){
+	            	if(event.ammount >= 4.0F){
 	            		player.setAbsorptionAmount(player.getAbsorptionAmount() + 2.0F);
 
 	            		Collection<PotionEffect> potions = player.getActivePotionEffects();

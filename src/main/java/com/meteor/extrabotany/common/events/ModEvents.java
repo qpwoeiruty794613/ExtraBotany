@@ -12,5 +12,6 @@ public class ModEvents {
 	    FMLCommonHandler.instance().bus().register(new EventKnowledgeTypeUnlock());
 		MinecraftForge.EVENT_BUS.register(new EventHighDamageResistance());
 	    FMLCommonHandler.instance().bus().register(new EventHighDamageResistance());
+	    
 	}
 }

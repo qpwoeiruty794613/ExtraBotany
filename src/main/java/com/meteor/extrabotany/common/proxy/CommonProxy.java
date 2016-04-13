@@ -14,7 +14,8 @@ import vazkii.botania.common.core.handler.InternalMethodHandler;
 
 
 
-import com.meteor.extrabotany.achievement.ModAchievement;
+
+import com.meteor.extrabotany.common.achievement.ModAchievement;
 import com.meteor.extrabotany.common.blocks.ModBlocks;
 import com.meteor.extrabotany.common.effects.ModPotionEffect;
 import com.meteor.extrabotany.common.effects.PotionEffectMods;
