@@ -2,6 +2,8 @@
 NEW Relics:Phantom of Cronus and Hermes Travel Clothing
 NEW Item:Teleport Pearl,it won't be consumed if you wear the Hermes Travel Clothing.
 NEW PotionEffect:Residual Pain
+Fix: The Player will no longer be safe if he wears a relic that isn't belong to him.
+Fix: The Player will no longer be able to use a relic that isn't belong to him.
 
 16/4/10
 New Relics:Aphrodite's Grace and Athena's Bless

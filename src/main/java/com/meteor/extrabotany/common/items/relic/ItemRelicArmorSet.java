@@ -3,6 +3,8 @@ package com.meteor.extrabotany.common.items.relic;
 import java.util.List;
 import java.util.UUID;
 
+import org.lwjgl.input.Keyboard;
+
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
 import com.meteor.extrabotany.client.model.ModelRelicArmor;
@@ -17,11 +19,15 @@ import net.minecraft.entity.ai.attributes.AttributeModifier;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.ItemStack;
+import net.minecraft.potion.Potion;
+import net.minecraft.potion.PotionEffect;
 import net.minecraft.stats.Achievement;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.StatCollector;
 import net.minecraft.world.World;
+import cpw.mods.fml.common.eventhandler.SubscribeEvent;
+import cpw.mods.fml.common.gameevent.TickEvent;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import vazkii.botania.api.BotaniaAPI;
@@ -159,6 +165,17 @@ public class ItemRelicArmorSet extends ItemManasteelArmor implements IRelic{
 	public static String getSoulbindUsernameS(ItemStack stack) {
 		return ItemNBTHelper.getString(stack, TAG_SOULBIND, "");
 	}
+	
+    @SubscribeEvent
+    public void TickEvent(TickEvent.PlayerTickEvent event) {
+    	 EntityPlayer player = (EntityPlayer) event.player;
+	        for(ItemStack stack : player.inventory.armorInventory) {
+	            if(stack != null && stack.getItem() instanceof ItemRelicArmorSet) {
+	            	if(!ItemRelic.isRightPlayer(player, stack))
+	            		player.attackEntityFrom(damageSource(), 2);
+	            }
+	        }
+    }
 
 	public static void updateRelic(ItemStack stack, EntityPlayer player) {
 		if(stack == null || !(stack.getItem() instanceof IRelic))

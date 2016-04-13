@@ -34,9 +34,11 @@ public class ItemVHandgun extends ItemRelic implements ILensEffect{
 	
 	@Override
 	public ItemStack onItemRightClick(ItemStack par1ItemStack, World par2World, EntityPlayer par3EntityPlayer) {
+		if(ItemRelic.isRightPlayer(par3EntityPlayer, par1ItemStack)){
 		EntityManaBurst burst = getBurst(par3EntityPlayer, par1ItemStack);
 		par2World.spawnEntityInWorld(burst);
 		par2World.playSoundAtEntity(par3EntityPlayer, "botania:terraBlade", 0.4F, 1.4F);
+		}
 		return par1ItemStack;
 	}
 

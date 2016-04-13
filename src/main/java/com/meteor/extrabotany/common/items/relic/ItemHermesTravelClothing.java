@@ -33,6 +33,7 @@ import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.TickEvent;
 import vazkii.botania.api.mana.IManaUsingItem;
 import vazkii.botania.api.mana.ManaItemHandler;
+import vazkii.botania.common.item.relic.ItemRelic;
 
 public class ItemHermesTravelClothing extends ItemRelicArmorSet implements IManaUsingItem{
 	public ItemHermesTravelClothing(String name) {
@@ -56,9 +57,11 @@ public class ItemHermesTravelClothing extends ItemRelicArmorSet implements IMana
 	        EntityPlayer player = (EntityPlayer) event.entity;
 	        for(ItemStack stack : player.inventory.armorInventory) {
 	            if(stack != null && stack.getItem() instanceof ItemHermesTravelClothing) {
+	            	if(ItemRelic.isRightPlayer(player, stack)){
 	            	int rand = new Random().nextInt(3);
 	            	if(rand == 2 && ManaItemHandler.requestManaExact(stack, player, 100, true)){
 	            		event.setCanceled(true);
+	            		}
 	            	}
 	            }
 	        }
@@ -69,6 +72,7 @@ public class ItemHermesTravelClothing extends ItemRelicArmorSet implements IMana
     	 EntityPlayer player = (EntityPlayer) event.entity;
 	        for(ItemStack stack : player.inventory.armorInventory) {
 	            if(stack != null && stack.getItem() instanceof ItemHermesTravelClothing) {
+	            	if(ItemRelic.isRightPlayer(player, stack))
 	            	if (Keyboard.isKeyDown(Keyboard.KEY_M)) {
 	            		event.setCanceled(true);
 	            	}
@@ -82,6 +86,7 @@ public class ItemHermesTravelClothing extends ItemRelicArmorSet implements IMana
 	        for(ItemStack stack : player.inventory.armorInventory) {
 	            if(stack != null && stack.getItem() instanceof ItemHermesTravelClothing) {
 	            	if (Keyboard.isKeyDown(Keyboard.KEY_M)) {
+	            		if(ItemRelic.isRightPlayer(player, stack))
 	            		player.addPotionEffect(new PotionEffect(Potion.invisibility.getId(), 10, 0));
 	            	}
 	            }
@@ -95,6 +100,7 @@ public class ItemHermesTravelClothing extends ItemRelicArmorSet implements IMana
 	        for(ItemStack stack : player.inventory.armorInventory) {
 	            if(stack != null && stack.getItem() instanceof ItemHermesTravelClothing) {
 	            	if(player.isPotionActive(Potion.invisibility.getId()))
+	            		if(ItemRelic.isRightPlayer(player, stack))
 	            		event.setCanceled(true);
 	            }
 	        }

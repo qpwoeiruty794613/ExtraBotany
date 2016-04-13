@@ -104,8 +104,10 @@ public class ItemHestiaChastity extends ItemRelicArmorSet implements IManaDiscou
 			EntityPlayer player = (EntityPlayer) event.entityLiving;
 			for(ItemStack stack : player.inventory.armorInventory) {
 	            if(stack != null && stack.getItem() instanceof ItemHestiaChastity) {
+	            	if(ItemRelic.isRightPlayer(player, stack)){
 	    			EntityManaBurst burst = getBurst(player, stack);
 					player.worldObj.spawnEntityInWorld(burst);	
+					}
 	            }
 			}
 	}

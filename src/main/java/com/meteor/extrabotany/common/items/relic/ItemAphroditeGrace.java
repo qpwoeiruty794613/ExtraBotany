@@ -23,6 +23,7 @@ import vazkii.botania.api.mana.ILensEffect;
 import vazkii.botania.api.mana.IManaDiscountArmor;
 import vazkii.botania.api.mana.IManaGivingItem;
 import vazkii.botania.common.entity.EntityManaBurst;
+import vazkii.botania.common.item.relic.ItemRelic;
 
 public class ItemAphroditeGrace extends ItemRelicArmorSet{
 	public ItemAphroditeGrace(String name) {
@@ -40,6 +41,7 @@ public class ItemAphroditeGrace extends ItemRelicArmorSet{
 			EntityPlayer player = (EntityPlayer) event.entityLiving;
 			for(ItemStack stack : player.inventory.armorInventory) {
 	            if(stack != null && stack.getItem() instanceof ItemAphroditeGrace) {
+	            	if(ItemRelic.isRightPlayer(player, stack))
 	            	if(event.ammount >= 4.0F){
 	            		player.setAbsorptionAmount(player.getAbsorptionAmount() + 2.0F);
 
