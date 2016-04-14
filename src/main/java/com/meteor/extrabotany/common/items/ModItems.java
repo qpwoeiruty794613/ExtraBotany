@@ -52,6 +52,7 @@ public class ModItems {
 	public static Item cronusphantom;
 	public static Item hermestravelclothing;
 	public static Item teleportpearl;
+	public static Item gaiaquartz;
 	
 	public static Item itemtest;
 	
@@ -66,6 +67,7 @@ public class ModItems {
 		petal_green = new ItemMods(LibItemName.PETALGREEN);
 		petal_purple = new ItemMods(LibItemName.PETALPURPLE);
 		empty_dice = new ItemMods(LibItemName.EMPTYDICE);
+		gaiaquartz = new ItemMods(LibItemName.GAIAQUARTZ);
 		
 		cronusphantom = new ItemCronusPhantom(LibItemName.CRONUSPHANTOM);
 		athenabless = new ItemAthenaBless();

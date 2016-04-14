@@ -12,11 +12,17 @@ potion.residualpain=痛觉残留
 potion.fastparticlesorting.postfix=快速粒子归类药水
 potion.residualpain.postfix=痛觉残留药水
 
+#BLOCKS
+# -BASIC
+tile.gaiatotemhead.name=盖亚图腾顶部
+tile.gaiatotembase.name=盖亚图腾
+
 #ITEMS
 # -ARMORSET
 botania.armorset.armorrelic.name=古神之力
 
 # -BASIC
+item.gaiaquartz.name=盖亚石英
 item.prismaticshard.name=彩虹碎片
 item.gaiaessence.name=盖亚精华
 item.blankcard.name=白卡

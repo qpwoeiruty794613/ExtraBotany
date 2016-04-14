@@ -8,4 +8,7 @@ public class LibBlockName {
 	public static final String MOONLIGHT_LILY = "moonlightlily";
 	public static final String ARTIFACONIA = "artifaconia";
 	
+	public static final String GAIATOTEMHEAD = "gaiatotemhead";
+	public static final String GAIATOTEMBASE = "gaiatotembase";
+	
 }

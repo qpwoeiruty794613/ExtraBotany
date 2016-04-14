@@ -12,11 +12,17 @@ potion.residualpain=Residual Pain
 potion.fastparticlesorting.postfix=Potion of Fast Particle Sorting 
 potion.residualpain.postfix=Potion of Residual Pain
 
+#BLOCKS
+# -BASIC
+tile.gaiatotemhead.name=Totem Head of Gaia
+tile.gaiatotembase.name=Totem of Gaia
+
 #ITEMS
 # -ARMORSET
 botania.armorset.armorrelic.name=Strength of Old Gods
 
 # -BASIC
+item.gaiaquartz.name=Quartz of Gaia
 item.prismaticshard.name=Prismatic Shard
 item.gaiaessence.name=Gaia Essence
 item.blankcard.name=Blank Card

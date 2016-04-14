@@ -12,6 +12,7 @@ public class LibItemName {
 	public static final String PETALGREEN = "petalgreen";
 	public static final String PETALPURPLE = "petalpurple";
 	public static final String LYCORISPLACER = "lycorisradiataplacer";
+	public static final String GAIAQUARTZ = "gaiaquartz";
 	
 	//Dice
 	public static final String EMPTYDICE = "emptydice";

@@ -2,6 +2,7 @@ package com.meteor.extrabotany.common;
 
 import java.util.List;
 
+import com.meteor.extrabotany.common.blocks.ModBlocks;
 import com.meteor.extrabotany.common.items.ModItems;
 import com.meteor.extrabotany.common.lib.LibReference;
 
@@ -50,6 +51,7 @@ public class ExtraBotanyCreativeTab extends CreativeTabs{
 		//Test
 		addItem(ModItems.itemtest);
 		//Basic
+		addItem(ModItems.gaiaquartz);
 		addItem(ModItems.astralforce);
 		addItem(ModItems.blankcard);
 		addItem(ModItems.empty_dice);
@@ -63,6 +65,10 @@ public class ExtraBotanyCreativeTab extends CreativeTabs{
 		addItem(ModItems.lycorispurple);
 		addItem(ModItems.lycorisred);
 		addItem(ModItems.lycorisrandom);
+		
+		//Blocks
+		addBlock(ModBlocks.gaiatotem);
+		addBlock(ModBlocks.gaiatotembase);
 
 	}
 	

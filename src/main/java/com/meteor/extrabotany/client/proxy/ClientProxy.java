@@ -1,8 +1,5 @@
 package com.meteor.extrabotany.client.proxy;
 
-import com.meteor.extrabotany.client.render.entity.RenderLycorisradiataRed;
-import com.meteor.extrabotany.common.entity.EntityLycorisradiata;
-import com.meteor.extrabotany.common.entity.EntityLycorisradiataRed;
 import com.meteor.extrabotany.common.proxy.CommonProxy;
 
 import cpw.mods.fml.client.registry.RenderingRegistry;

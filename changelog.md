@@ -1,3 +1,7 @@
+16/4/14<br>
+NEW Blocks:Totem Head of Gaia and Totem of Gaia (Textures are WIP).<br>
+NEW Item:Quartz of Gaia.<br>
+
 16/4/13<br>
 NEW Relics:Phantom of Cronus and Hermes Travel Clothing.<br>
 NEW Item:Teleport Pearl,it won't be consumed if you wear the Hermes Travel Clothing.<br>
