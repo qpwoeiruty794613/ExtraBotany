@@ -8,6 +8,8 @@ import com.meteor.extrabotany.client.render.entity.RenderLycorisradiataGreen;
 import com.meteor.extrabotany.client.render.entity.RenderLycorisradiataPurple;
 import com.meteor.extrabotany.client.render.entity.RenderLycorisradiataRed;
 import com.meteor.extrabotany.client.render.entity.RenderTeleportPearl;
+import com.meteor.extrabotany.client.render.tile.RenderTileRelicPlate;
+import com.meteor.extrabotany.common.blocks.tile.TileRelicPlate;
 import com.meteor.extrabotany.common.entity.EntityLycorisradiataGreen;
 import com.meteor.extrabotany.common.entity.EntityLycorisradiataPurple;
 import com.meteor.extrabotany.common.entity.EntityLycorisradiataRed;
@@ -15,6 +17,7 @@ import com.meteor.extrabotany.common.entity.EntityTeleportPearl;
 import com.meteor.extrabotany.common.lib.LibReference;
 import com.meteor.extrabotany.common.proxy.CommonProxy;
 
+import cpw.mods.fml.client.registry.ClientRegistry;
 import cpw.mods.fml.client.registry.RenderingRegistry;
 import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.Mod;
@@ -55,11 +58,6 @@ public class ExtraBotany {
 	public void Init(FMLInitializationEvent event)
 	{
 		proxy.init(event);
-		
-		RenderingRegistry.registerEntityRenderingHandler(EntityLycorisradiataRed.class, new RenderLycorisradiataRed());
-		RenderingRegistry.registerEntityRenderingHandler(EntityLycorisradiataGreen.class, new RenderLycorisradiataGreen());
-		RenderingRegistry.registerEntityRenderingHandler(EntityLycorisradiataPurple.class, new RenderLycorisradiataPurple());
-		RenderingRegistry.registerEntityRenderingHandler(EntityTeleportPearl.class, new RenderTeleportPearl(1.0F));
 	}
 	
 	@EventHandler

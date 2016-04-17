@@ -6,9 +6,10 @@ public class LibBlockName {
 	public static final String BLUE_ENCHANTRESS = "blueenchantress";
 	public static final String SUNSHINE_LILY = "sunshinelily";
 	public static final String MOONLIGHT_LILY = "moonlightlily";
-	public static final String ARTIFACONIA = "artifaconia";
 	
-	public static final String GAIATOTEMHEAD = "gaiatotemhead";
-	public static final String GAIATOTEMBASE = "gaiatotembase";
+	public static final String RELICPLATE = "relicplate";
+	
+	public static final String GAIAQUARTZ = "blockgaiaquartz";
+	public static final String ELVENQUARTZ = "blockelvenquartz";
 	
 }

@@ -6,6 +6,7 @@ public class LibReference {
 	
 	public static final String MOD_ID = "ExtraBotany";
 	public static final String MOD_NAME = MOD_ID;
+	public static final String PREFIX_MOD = "extrabotany:";
 	public static final String BUILD = "GRADLE:BUILD";
 	public static final String VERSION = "GRADLE:VERSION-" + BUILD;
 	public static final String DEPENDENCIES = "required-after:Botania";

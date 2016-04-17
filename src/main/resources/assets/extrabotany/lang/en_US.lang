@@ -14,15 +14,20 @@ potion.residualpain.postfix=Potion of Residual Pain
 
 #BLOCKS
 # -BASIC
-tile.gaiatotemhead.name=Totem Head of Gaia
-tile.gaiatotembase.name=Totem of Gaia
+tile.blockelvenquartz.name=Block of Elementium Quartz
+tile.botania:quartzStairsElven.name=Elementium Quartz Stairs
+tile.botania:blockelvenquartz0Slab.name=Elementium Quartz Slab
+tile.blockgaiaquartz.name=Block of Gaia Quartz
+tile.botania:quartzStairsGaia.name=Gaia Quartz Stairs
+tile.botania:blockgaiaquartz0Slab.name=Gaia Quartz Slab
 
 #ITEMS
 # -ARMORSET
 botania.armorset.armorrelic.name=Strength of Old Gods
 
 # -BASIC
-item.gaiaquartz.name=Quartz of Gaia
+item.elvenquartz.name=Elementium Quartz
+item.gaiaquartz.name=Gaia Quartz
 item.prismaticshard.name=Prismatic Shard
 item.gaiaessence.name=Gaia Essence
 item.blankcard.name=Blank Card
@@ -48,7 +53,7 @@ item.teleportpearl.name=Teleport Pearl
 # -DICE
 item.botania:dice20.name=D20
 item.emptydice.name=Empty Dice
-botaniamisc.uselessDiceRoll=The dice lands on a %s, it seemed to be transfered to an empty dice afterward.
+botaniamisc.uselessDiceRoll=The dice lands on a %s, it seemed to be transfered to a strange item afterward.
 
 # -RELIC
 item.botania:excaliber.name=Excaliber

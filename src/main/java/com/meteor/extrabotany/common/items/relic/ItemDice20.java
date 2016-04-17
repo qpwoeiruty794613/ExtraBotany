@@ -6,6 +6,7 @@ import java.util.List;
 import com.meteor.extrabotany.common.items.ModItems;
 import com.meteor.extrabotany.common.lib.LibItemName;
 
+import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.init.Items;
@@ -27,31 +28,31 @@ public class ItemDice20 extends ItemRelic{
 		super(LibItemName.DICE20);
 		relicStacks = new ItemStack[] {
 				new ItemStack(ModItems.vhandgun),
-				new ItemStack(ModItems.vpowerbattleaxe),
-				new ItemStack(vazkii.botania.common.item.ModItems.infiniteFruit),
+				new ItemStack(ModItems.vpowerbattleaxe),//
+				new ItemStack(vazkii.botania.common.item.ModItems.infiniteFruit),//
 				new ItemStack(ModItems.excaliberfake),
-				new ItemStack(vazkii.botania.common.item.ModItems.kingKey),
-				new ItemStack(ModItems.empty_dice),
-				new ItemStack(vazkii.botania.common.item.ModItems.flugelEye),
-				new ItemStack(vazkii.botania.common.item.ModItems.thorRing),
-				new ItemStack(vazkii.botania.common.item.ModItems.lokiRing),
-				new ItemStack(vazkii.botania.common.item.ModItems.odinRing),
-				new ItemStack(ModItems.athenabless),
+				new ItemStack(vazkii.botania.common.item.ModItems.kingKey),//
+				new ItemStack(ModItems.astralforce),//
+				new ItemStack(vazkii.botania.common.item.ModItems.flugelEye),//
+				new ItemStack(vazkii.botania.common.item.ModItems.thorRing),//
+				new ItemStack(vazkii.botania.common.item.ModItems.lokiRing),//
+				new ItemStack(vazkii.botania.common.item.ModItems.odinRing),//
+				new ItemStack(ModItems.athenabless),//
 				new ItemStack(ModItems.hestiachastity),
-				new ItemStack(ModItems.maxwelldemon),
+				new ItemStack(ModItems.maxwelldemon),//
 				new ItemStack(ModItems.vrangerboots),
-				new ItemStack(ModItems.cronusphantom),
+				new ItemStack(ModItems.cronusphantom),//
 				new ItemStack(ModItems.aphroditegrace),
 				new ItemStack(ModItems.hermestravelclothing),
-				new ItemStack(ModItems.excaliberfake),
-				new ItemStack(ModItems.excaliberfake),
-				new ItemStack(ModItems.empty_dice)
+				new ItemStack(ModItems.hestiachastity),//
+				new ItemStack(ModItems.hestiachastity),
+				new ItemStack(ModItems.astralforce),//
 
 		};
 	}
 
 	private static final int[] SIDES_FOR_MOON_PHASES = new int[] {
-		-1, 0, 1, 2, -1, 2, 3, 4
+		0, 0, 0, 0, 1, 0, 0, 0
 	};
 	
 	@Override
@@ -70,10 +71,12 @@ public class ItemDice20 extends ItemRelic{
 			
 			if(relic + 1 == 6 || relic + 1 == 20) {
 				player.addChatMessage(new ChatComponentTranslation("botaniamisc.uselessDiceRoll", relic + 1).setChatStyle(new ChatStyle().setColor(EnumChatFormatting.DARK_GREEN)));
-				return relicStacks[relic].copy();
+				world.spawnEntityInWorld(new EntityItem(world, player.posX, player.posY, player.posZ, relicStacks[relic].copy()));
+				return new ItemStack(ModItems.empty_dice).copy();
 			}else{
 				player.addChatMessage(new ChatComponentTranslation("botaniamisc.diceRoll", relic + 1).setChatStyle(new ChatStyle().setColor(EnumChatFormatting.DARK_GREEN)));
-				return relicStacks[relic].copy();
+				world.spawnEntityInWorld(new EntityItem(world, player.posX, player.posY, player.posZ, relicStacks[relic].copy()));
+				return new ItemStack(ModItems.empty_dice).copy();
 			}
 		}
 

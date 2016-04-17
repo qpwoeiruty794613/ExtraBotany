@@ -53,12 +53,13 @@ public class ModItems {
 	public static Item hermestravelclothing;
 	public static Item teleportpearl;
 	public static Item gaiaquartz;
+	public static Item elvenquartz;
 	
 	public static Item itemtest;
 	
 	public static void init() {
-		itemtest = new ItemTest("test");
-		
+		itemtest = new ItemTest("test");	
+
 		prismaticshard = new ItemMods(LibItemName.PRISMATICSHARD);
 		blankcard = new ItemMods(LibItemName.BLANKCARD);
 		gaiaessence = new ItemMods(LibItemName.GAIAESSENCE);
@@ -68,6 +69,7 @@ public class ModItems {
 		petal_purple = new ItemMods(LibItemName.PETALPURPLE);
 		empty_dice = new ItemMods(LibItemName.EMPTYDICE);
 		gaiaquartz = new ItemMods(LibItemName.GAIAQUARTZ);
+		elvenquartz = new ItemMods(LibItemName.ELVENQUARTZ);
 		
 		cronusphantom = new ItemCronusPhantom(LibItemName.CRONUSPHANTOM);
 		athenabless = new ItemAthenaBless();

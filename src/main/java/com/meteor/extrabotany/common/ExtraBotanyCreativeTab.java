@@ -51,7 +51,6 @@ public class ExtraBotanyCreativeTab extends CreativeTabs{
 		//Test
 		addItem(ModItems.itemtest);
 		//Basic
-		addItem(ModItems.gaiaquartz);
 		addItem(ModItems.astralforce);
 		addItem(ModItems.blankcard);
 		addItem(ModItems.empty_dice);
@@ -67,8 +66,14 @@ public class ExtraBotanyCreativeTab extends CreativeTabs{
 		addItem(ModItems.lycorisrandom);
 		
 		//Blocks
-		addBlock(ModBlocks.gaiatotem);
-		addBlock(ModBlocks.gaiatotembase);
+		addItem(ModItems.gaiaquartz);
+		addBlock(ModBlocks.gaiaquartz);
+		addBlock(ModBlocks.gaiaquartzstairs);
+		addBlock(ModBlocks.gaiaquartzslab);
+		addItem(ModItems.elvenquartz);
+		addBlock(ModBlocks.elvenquartz);
+		addBlock(ModBlocks.elvenquartzstairs);
+		addBlock(ModBlocks.elvenquartzslab);
 
 	}
 	

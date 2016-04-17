@@ -13,9 +13,7 @@ public class ModRecipe {
 
 	
 	public static void init(){
-		GameRegistry.addShapedRecipe(new ItemStack(ModItems.gaiaquartz, 8), new Object[] {"AAA","ABA","AAA", 'A', new ItemStack(vazkii.botania.common.item.ModItems.quartz, 1, 1), 'B', ModItems.gaiaessence});
-		GameRegistry.addShapedRecipe(new ItemStack(ModBlocks.gaiatotembase), new Object[] {"AA","AA", 'A', ModItems.gaiaquartz});
-		GameRegistry.addShapedRecipe(new ItemStack(ModBlocks.gaiatotembase, 2), new Object[] {"A","A", 'A', ModBlocks.gaiatotem});
-		GameRegistry.addShapedRecipe(new ItemStack(ModBlocks.gaiatotem, 2), new Object[] {"A","A", 'A', ModBlocks.gaiatotembase});
+		GameRegistry.addShapedRecipe(new ItemStack(ModItems.gaiaquartz, 8), 
+				new Object[] {"AAA","ABA","AAA", 'A', new ItemStack(vazkii.botania.common.item.ModItems.quartz, 1, 1), 'B', ModItems.gaiaessence});
 	}
 }

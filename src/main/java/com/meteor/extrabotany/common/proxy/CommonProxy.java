@@ -15,8 +15,10 @@ import vazkii.botania.common.core.handler.InternalMethodHandler;
 
 
 
+
 import com.meteor.extrabotany.common.achievement.ModAchievement;
 import com.meteor.extrabotany.common.blocks.ModBlocks;
+import com.meteor.extrabotany.common.blocks.ModMutilBlocks;
 import com.meteor.extrabotany.common.effects.ModPotionEffect;
 import com.meteor.extrabotany.common.effects.PotionEffectMods;
 import com.meteor.extrabotany.common.entity.EntityLycorisradiata;
@@ -42,6 +44,7 @@ public class CommonProxy {
 		ModEntities.init();
 		ModPetalRecipe.init();
 		ModRecipe.init();
+		ModMutilBlocks.init();
 		ModAchievement.init();
 		ModManaInfusionRecipe.init();
 		ModPotionEffect.init();

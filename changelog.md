@@ -1,6 +1,12 @@
+16/4/17<br>
+REMOVE Gaia Totem.<br>
+NEW Item:Elementium Quartz.<br>
+NEW Blocks:A set of Blocks of Elementium Quartz and a set of Blocks of Gaia Quartz.<br>
+NEW MutilBlock: Ritual of Old Gods(WIP).<br>
+
 16/4/14<br>
 NEW Blocks:Totem Head of Gaia and Totem of Gaia (Textures are WIP).<br>
-NEW Item:Quartz of Gaia.<br>
+NEW Item:Gaia Quartz.<br>
 
 16/4/13<br>
 NEW Relics:Phantom of Cronus and Hermes Travel Clothing.<br>

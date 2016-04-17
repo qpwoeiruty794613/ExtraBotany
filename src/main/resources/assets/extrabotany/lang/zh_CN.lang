@@ -14,14 +14,19 @@ potion.residualpain.postfix=痛觉残留药水
 
 #BLOCKS
 # -BASIC
-tile.gaiatotemhead.name=盖亚图腾顶部
-tile.gaiatotembase.name=盖亚图腾
+tile.blockelvenquartz.name=源质石英块
+tile.botania:quartzStairsElven.name=源质石英楼梯
+tile.botania:blockelvenquartz0Slab.name=源质石英台阶
+tile.blockgaiaquartz.name=盖亚石英块
+tile.botania:quartzStairsGaia.name=盖亚石英楼梯
+tile.botania:blockgaiaquartz0Slab.name=盖亚石英台阶
 
 #ITEMS
 # -ARMORSET
 botania.armorset.armorrelic.name=古神之力
 
 # -BASIC
+item.elvenquartz.name=源质石英
 item.gaiaquartz.name=盖亚石英
 item.prismaticshard.name=彩虹碎片
 item.gaiaessence.name=盖亚精华
@@ -48,7 +53,7 @@ item.teleportpearl.name=传送珍珠
 # -DICE
 item.botania:dice20.name=D20
 item.emptydice.name=空骰子
-botaniamisc.uselessDiceRoll=骰子停在了%s上,接着就变回了空骰子.
+botaniamisc.uselessDiceRoll=骰子停在了%s上,接着变成了奇怪的东西.
 
 # -RELIC
 item.botania:excaliber.name=王者圣剑

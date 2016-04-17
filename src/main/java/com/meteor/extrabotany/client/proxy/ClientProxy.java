@@ -1,7 +1,18 @@
 package com.meteor.extrabotany.client.proxy;
 
+import com.meteor.extrabotany.client.render.entity.RenderLycorisradiataGreen;
+import com.meteor.extrabotany.client.render.entity.RenderLycorisradiataPurple;
+import com.meteor.extrabotany.client.render.entity.RenderLycorisradiataRed;
+import com.meteor.extrabotany.client.render.entity.RenderTeleportPearl;
+import com.meteor.extrabotany.client.render.tile.RenderTileRelicPlate;
+import com.meteor.extrabotany.common.blocks.tile.TileRelicPlate;
+import com.meteor.extrabotany.common.entity.EntityLycorisradiataGreen;
+import com.meteor.extrabotany.common.entity.EntityLycorisradiataPurple;
+import com.meteor.extrabotany.common.entity.EntityLycorisradiataRed;
+import com.meteor.extrabotany.common.entity.EntityTeleportPearl;
 import com.meteor.extrabotany.common.proxy.CommonProxy;
 
+import cpw.mods.fml.client.registry.ClientRegistry;
 import cpw.mods.fml.client.registry.RenderingRegistry;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
@@ -16,6 +27,15 @@ public class ClientProxy extends CommonProxy{
 	@Override
 	public void init(FMLInitializationEvent event) {
 		super.init(event);
+		initRenderers();
+	}
+	
+	private void initRenderers() {
+		ClientRegistry.bindTileEntitySpecialRenderer(TileRelicPlate.class, new RenderTileRelicPlate());
+		RenderingRegistry.registerEntityRenderingHandler(EntityLycorisradiataRed.class, new RenderLycorisradiataRed());
+		RenderingRegistry.registerEntityRenderingHandler(EntityLycorisradiataGreen.class, new RenderLycorisradiataGreen());
+		RenderingRegistry.registerEntityRenderingHandler(EntityLycorisradiataPurple.class, new RenderLycorisradiataPurple());
+		RenderingRegistry.registerEntityRenderingHandler(EntityTeleportPearl.class, new RenderTeleportPearl(1.0F));
 	}
 	
 	@Override
