@@ -44,11 +44,11 @@ public class CommonProxy {
 		ModEntities.init();
 		ModPetalRecipe.init();
 		ModRecipe.init();
-		ModMutilBlocks.init();
 		ModAchievement.init();
 		ModManaInfusionRecipe.init();
 		ModPotionEffect.init();
 		LexiconModData.init();
+		ModMutilBlocks.init();
 	}
 	
 	public void init(FMLInitializationEvent event) {

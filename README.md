@@ -22,12 +22,7 @@ Botania Addon WIP
   * Basics(60% Finshed)
  * Entities:
   * Boss(0% Finished):
-    * Gaia III
-  * Mobs(0% Finshed):
-    * Spirit of Sunstone
-    * Spirit of Moonstone
-    * Gaia's Minion
-    * Spirit of Gaia<br>
+    * Gaia III<br>
    
 ###Changelog
 [Click Here](https://github.com/ExtraMeteorP/ExtraBotany/blob/master/changelog.md) 

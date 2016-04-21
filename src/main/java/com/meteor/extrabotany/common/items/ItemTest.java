@@ -3,6 +3,9 @@ package com.meteor.extrabotany.common.items;
 import java.util.List;
 
 import com.meteor.extrabotany.common.effects.ModPotionEffect;
+import com.meteor.extrabotany.common.entity.EntityGaiaIII;
+import com.meteor.extrabotany.common.entity.EntityLycorisradiataGreen;
+import com.meteor.extrabotany.common.entity.EntityLycorisradiataRed;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
@@ -17,10 +20,10 @@ public class ItemTest extends ItemMods{
 		super(name);
 	}
 	
+	
+	
 	@Override
 	public ItemStack onItemRightClick(ItemStack par1ItemStack, World par2World, EntityPlayer par3EntityPlayer) {
-		par3EntityPlayer.removePotionEffect(ModPotionEffect.slowparticlesorting.getId());
-		par3EntityPlayer.addPotionEffect(new PotionEffect(ModPotionEffect.residualpain.getId(), 10000, 8));
 		return par1ItemStack;
 	}
 	

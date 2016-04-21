@@ -7,6 +7,9 @@ public class LibBlockName {
 	public static final String SUNSHINE_LILY = "sunshinelily";
 	public static final String MOONLIGHT_LILY = "moonlightlily";
 	
+	public static final String GAIAPOOL = "gaiapool";
+	public static final String AUTOMATICALPOOL = "automaticalpool";
+	
 	public static final String RELICPLATE = "relicplate";
 	
 	public static final String GAIAQUARTZ = "blockgaiaquartz";

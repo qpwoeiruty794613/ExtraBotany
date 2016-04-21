@@ -3,8 +3,8 @@ package com.meteor.extrabotany.common.lib;
 import java.util.List;
 
 import com.google.common.collect.Lists;
+import com.meteor.extrabotany.api.IDataHandler;
 import com.meteor.extrabotany.common.ExtraBotany;
-import com.meteor.extrabotany.common.handler.IDataHandler;
 import com.valentin4311.candycraftmod.CandyCraft;
 
 import net.minecraft.block.Block;

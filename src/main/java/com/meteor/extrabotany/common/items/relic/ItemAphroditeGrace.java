@@ -12,6 +12,8 @@ import net.minecraft.util.StatCollector;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 
+import com.meteor.extrabotany.api.IShieldHandler;
+import com.meteor.extrabotany.common.handler.ShieldHandler;
 import com.meteor.extrabotany.common.lib.LibItemName;
 
 import cpw.mods.fml.common.FMLCommonHandler;
@@ -25,7 +27,7 @@ import vazkii.botania.api.mana.IManaGivingItem;
 import vazkii.botania.common.entity.EntityManaBurst;
 import vazkii.botania.common.item.relic.ItemRelic;
 
-public class ItemAphroditeGrace extends ItemRelicArmorSet{
+public class ItemAphroditeGrace extends ItemRelicArmorSet implements IShieldHandler{
 	public ItemAphroditeGrace(String name) {
 		super(2, LibItemName.APHRODITEGRACE);
 		MinecraftForge.EVENT_BUS.register(this);
@@ -42,8 +44,12 @@ public class ItemAphroditeGrace extends ItemRelicArmorSet{
 			for(ItemStack stack : player.inventory.armorInventory) {
 	            if(stack != null && stack.getItem() instanceof ItemAphroditeGrace) {
 	            	if(ItemRelic.isRightPlayer(player, stack))
-	            	if(event.ammount >= 4.0F){
-	            		player.setAbsorptionAmount(player.getAbsorptionAmount() + 2.0F);
+	            	if(event.ammount >= 6.0F){
+	            		
+	            		if(getShieldAmount(player) + event.ammount/2 <= player.getMaxHealth())
+	            		setShieldAmount(getShieldAmount(player) + event.ammount/2, player);
+	            		else if(getShieldAmount(player) + event.ammount/2 > player.getMaxHealth())
+	            		setShieldAmount(player.getMaxHealth(), player);
 
 	            		Collection<PotionEffect> potions = player.getActivePotionEffects();
 	            		
@@ -58,6 +64,17 @@ public class ItemAphroditeGrace extends ItemRelicArmorSet{
 	            }
 			}
 		}
+	}
+	
+	@Override
+	public float setShieldAmount(float shield, EntityPlayer player) {
+		ShieldHandler.currentShield = shield;
+		return shield;
+	}
+
+	@Override
+	public float getShieldAmount(EntityPlayer player) {
+		return ShieldHandler.currentShield;
 	}
 
 }

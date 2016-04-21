@@ -6,7 +6,7 @@ import net.minecraft.block.Block;
 import net.minecraft.item.ItemStack;
 
 import com.google.common.collect.Lists;
-import com.meteor.extrabotany.common.handler.IDataHandler;
+import com.meteor.extrabotany.api.IDataHandler;
 
 public class LibRegistry {
 private static List<IDataHandler> fuelHandlers = Lists.newArrayList();

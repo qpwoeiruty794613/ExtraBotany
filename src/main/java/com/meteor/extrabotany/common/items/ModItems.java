@@ -54,6 +54,7 @@ public class ModItems {
 	public static Item teleportpearl;
 	public static Item gaiaquartz;
 	public static Item elvenquartz;
+	public static Item gaianecklacebroken;
 	
 	public static Item itemtest;
 	
@@ -70,6 +71,7 @@ public class ModItems {
 		empty_dice = new ItemMods(LibItemName.EMPTYDICE);
 		gaiaquartz = new ItemMods(LibItemName.GAIAQUARTZ);
 		elvenquartz = new ItemMods(LibItemName.ELVENQUARTZ);
+		gaianecklacebroken = new ItemMods(LibItemName.GAIANECKLACEBROKEN);
 		
 		cronusphantom = new ItemCronusPhantom(LibItemName.CRONUSPHANTOM);
 		athenabless = new ItemAthenaBless();

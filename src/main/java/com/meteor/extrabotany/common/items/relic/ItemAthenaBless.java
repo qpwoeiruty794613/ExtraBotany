@@ -8,6 +8,7 @@ import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.attributes.AttributeModifier;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NBTTagCompound;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.living.LivingAttackEvent;
 import baubles.api.BaubleType;
@@ -16,7 +17,10 @@ import baubles.common.lib.PlayerHandler;
 
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
+import com.meteor.extrabotany.api.IShieldHandler;
 import com.meteor.extrabotany.common.events.EventKnowledgeTypeUnlock;
+import com.meteor.extrabotany.common.events.EventShield;
+import com.meteor.extrabotany.common.handler.ShieldHandler;
 import com.meteor.extrabotany.common.items.ModItems;
 import com.meteor.extrabotany.common.lib.LibItemName;
 
@@ -25,9 +29,9 @@ import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import vazkii.botania.common.item.relic.ItemRelic;
 import vazkii.botania.common.item.relic.ItemRelicBauble;
 
-public class ItemAthenaBless extends ItemRelicBauble{
+public class ItemAthenaBless extends ItemRelicBauble implements IShieldHandler{
 	public static List<String> damageNegations = new ArrayList();
-	
+
 	public ItemAthenaBless(){
 		super(LibItemName.ATHENABLESS);
 		MinecraftForge.EVENT_BUS.register(this);
@@ -51,11 +55,11 @@ public class ItemAthenaBless extends ItemRelicBauble{
 			EntityPlayer player = (EntityPlayer) event.source.getSourceOfDamage();
 			if(getAthenaBless(player) != null)
 				if(ItemRelic.isRightPlayer(player, getAthenaBless(player)))
-				if(player.getAbsorptionAmount() < player.getMaxHealth()){
-					if(player.getAbsorptionAmount()+event.ammount/5 > player.getMaxHealth()){
-						player.setAbsorptionAmount(player.getMaxHealth());
+				if(getShieldAmount(player) < player.getMaxHealth()){
+					if(getShieldAmount(player)+event.ammount/5 > player.getMaxHealth()){
+						setShieldAmount(player.getMaxHealth(), player);
 					}else{
-						player.setAbsorptionAmount(player.getAbsorptionAmount() + event.ammount/5);
+						setShieldAmount(getShieldAmount(player) + event.ammount/5, player);
 					}
 				}
 			}
@@ -78,4 +82,14 @@ public class ItemAthenaBless extends ItemRelicBauble{
 		return stack != null && (stack.getItem() == ModItems.athenabless);
 	}
 
+	@Override
+	public float setShieldAmount(float shield, EntityPlayer player) {
+		ShieldHandler.currentShield = shield;
+		return shield;
+	}
+
+	@Override
+	public float getShieldAmount(EntityPlayer player) {
+		return ShieldHandler.currentShield;
+	}
 }

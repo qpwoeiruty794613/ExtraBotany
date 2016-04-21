@@ -32,6 +32,7 @@ public class LibItemName {
 	//Advanced
 	public static final String GAIATABLET = "gaiaTablet";
 	public static final String TELEPORTPEARL = "teleportpearl";
+	public static final String GAIANECKLACEBROKEN = "gaianecklacebroken";
 	
 	//Relic
 	public static final String EXCALIBER = "excaliber";

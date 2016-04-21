@@ -1,11 +1,16 @@
 package com.meteor.extrabotany.client.proxy;
 
+import net.minecraftforge.common.MinecraftForge;
+import vazkii.botania.client.render.entity.RenderDoppleganger;
+
+import com.meteor.extrabotany.client.render.RenderShield;
 import com.meteor.extrabotany.client.render.entity.RenderLycorisradiataGreen;
 import com.meteor.extrabotany.client.render.entity.RenderLycorisradiataPurple;
 import com.meteor.extrabotany.client.render.entity.RenderLycorisradiataRed;
 import com.meteor.extrabotany.client.render.entity.RenderTeleportPearl;
 import com.meteor.extrabotany.client.render.tile.RenderTileRelicPlate;
 import com.meteor.extrabotany.common.blocks.tile.TileRelicPlate;
+import com.meteor.extrabotany.common.entity.EntityGaiaIII;
 import com.meteor.extrabotany.common.entity.EntityLycorisradiataGreen;
 import com.meteor.extrabotany.common.entity.EntityLycorisradiataPurple;
 import com.meteor.extrabotany.common.entity.EntityLycorisradiataRed;
@@ -14,6 +19,7 @@ import com.meteor.extrabotany.common.proxy.CommonProxy;
 
 import cpw.mods.fml.client.registry.ClientRegistry;
 import cpw.mods.fml.client.registry.RenderingRegistry;
+import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
@@ -27,6 +33,8 @@ public class ClientProxy extends CommonProxy{
 	@Override
 	public void init(FMLInitializationEvent event) {
 		super.init(event);
+		MinecraftForge.EVENT_BUS.register(new RenderShield());
+	    FMLCommonHandler.instance().bus().register(new RenderShield());	
 		initRenderers();
 	}
 	

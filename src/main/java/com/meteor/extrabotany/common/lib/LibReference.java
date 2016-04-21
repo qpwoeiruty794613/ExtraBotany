@@ -20,4 +20,6 @@ public class LibReference {
 	public static final ResourceLocation POTION_SLOWPARTICLESORTING = new ResourceLocation("extrabotany","textures/icons/slowparticlesorting.png");
 	public static final ResourceLocation POTION_FASTPARTICLESORTING = new ResourceLocation("extrabotany","textures/icons/fastparticlesorting.png");
 	public static final ResourceLocation POTION_RESIDUALPAIN = new ResourceLocation("extrabotany","textures/icons/residualpain.png");
+	public static final ResourceLocation MODEL_POOLGAIA = new ResourceLocation("extrabotany","textures/models/poolgaia.png");
+	public static final ResourceLocation BAR_SHIELD = new ResourceLocation("extrabotany","textures/gui/shieldHud.png");
 }

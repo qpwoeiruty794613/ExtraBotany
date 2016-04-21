@@ -44,6 +44,7 @@ public class ModRelicPlateRecipe {
 		ItemStack item1 = null;
 		ItemStack item2 = null;
 		ItemStack item3 = null;
+		
 		for(EntityItem item : items) {
 			ItemStack stack = item.getEntityItem();
 			if(stack.stackSize != 1)
@@ -59,4 +60,5 @@ public class ModRelicPlateRecipe {
 
 		return item1 != null && item2 != null && item3 != null;
 	}
+
 }

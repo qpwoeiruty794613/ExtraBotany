@@ -40,7 +40,6 @@ public class ModBlocks {
 	public static void init() {
 		relicplate = new BlockRelicPlate();
 		specialFlower = new BlockSpecial();
-		
 		//Gaia Quartz
 		gaiaquartz = new BlockMods(Material.iron, LibBlockName.GAIAQUARTZ);
 		gaiaquartzslab = new BlockGaiaQuartzSlab(false);
