@@ -14,6 +14,10 @@ public class LibReference {
 	public static final String PROXY_COMMON = "com.meteor.extrabotany.common.proxy.CommonProxy";
 	public static final String PROXY_CLIENT = "com.meteor.extrabotany.client.proxy.ClientProxy";
 	
+	public static final String CATEGORY_CLIENT = "client";
+	public static final String CATEGORY_COMMON = "common";
+	public static final String PREFIX_CONFIG = "config.ExtraBotany.";
+	
 	public static final String MODEL_HESTIACHASTITY = "extrabotany:textures/models/armor/armorrelic.png";
 	public static final String MODEL_RELIC = "extrabotany:textures/models/armor/armorrelic0.png";
 	

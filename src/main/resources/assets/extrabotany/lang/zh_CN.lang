@@ -199,3 +199,13 @@ achievement.botania:vrangerboots=悪ノ召使
 achievement.botania:vrangerboots.desc=获得战利品:V制式游侠靴
 achievement.botania:vhandgun=悪ノ娘
 achievement.botania:vhandgun.desc=获得战利品:V制式手炮
+
+#CONFIG
+# -COMMON
+config.ExtraBotany.efficiencySunshinelily.desc=日耀百合的产能效率.
+config.ExtraBotany.efficiencyMoonlightlily.desc=月光百合的产能效率.
+config.ExtraBotany.efficiencyBlueenchantress.desc=蓝色妖姬的产能效率.
+config.ExtraBotany.efficiencyCandyflower.desc=糖果花的产能效率.
+
+# -CLIENT
+config.ExtraBotany.shieldBarHeight.desc=护盾值显示在魔力条下方. 如果你调整了魔力条的位置,你可以修改这个参数.

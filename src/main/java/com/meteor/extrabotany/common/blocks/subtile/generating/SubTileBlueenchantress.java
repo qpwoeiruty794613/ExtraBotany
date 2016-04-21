@@ -14,6 +14,7 @@ import net.minecraft.world.World;
 import net.minecraftforge.common.util.ForgeDirection;
 import am2.AMCore;
 
+import com.meteor.extrabotany.common.handler.ConfigHandler;
 import com.meteor.extrabotany.common.lexicon.LexiconModData;
 
 import vazkii.botania.api.lexicon.LexiconEntry;
@@ -124,7 +125,7 @@ public class SubTileBlueenchantress extends SubTilePassiveGenerating{
 
 	@Override
 	public int getValueForPassiveGeneration() {
-		return 100;
+		return ConfigHandler.efficiencyBlueenchantress;
 	}
 
 	@Override

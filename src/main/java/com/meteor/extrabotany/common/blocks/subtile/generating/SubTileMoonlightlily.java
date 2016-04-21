@@ -1,5 +1,6 @@
 package com.meteor.extrabotany.common.blocks.subtile.generating;
 
+import com.meteor.extrabotany.common.handler.ConfigHandler;
 import com.meteor.extrabotany.common.lexicon.LexiconModData;
 
 import vazkii.botania.api.lexicon.LexiconEntry;
@@ -14,7 +15,7 @@ public class SubTileMoonlightlily extends SubTileNightshade{
 	
   	@Override
 	public int getValueForPassiveGeneration() {
-		return 3;
+		return ConfigHandler.efficiencyMoonlightlily;
 	}
   	
   	@Override

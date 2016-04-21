@@ -14,11 +14,11 @@ import vazkii.botania.client.core.handler.ItemsRemainingRenderHandler;
 import vazkii.botania.client.core.helper.RenderHelper;
 import vazkii.botania.client.lib.LibResources;
 import vazkii.botania.common.block.tile.mana.TilePool;
-import vazkii.botania.common.core.handler.ConfigHandler;
 import vazkii.botania.common.item.ModItems;
 import baubles.common.lib.PlayerHandler;
 
 import com.meteor.extrabotany.api.IShieldHandler;
+import com.meteor.extrabotany.common.handler.ConfigHandler;
 import com.meteor.extrabotany.common.handler.ShieldHandler;
 import com.meteor.extrabotany.common.lib.LibReference;
 
@@ -73,7 +73,7 @@ public class RenderShield implements IShieldHandler{
 		Minecraft mc = Minecraft.getMinecraft();
 		int width = 182;
 		int x = res.getScaledWidth() / 2 - width / 2;
-		int y = res.getScaledHeight() - ConfigHandler.manaBarHeight + 2;
+		int y = res.getScaledHeight() - ConfigHandler.shieldBarHeight + 2;
 
 		if(!hasCreative) {
 			if(maxShield == 0)

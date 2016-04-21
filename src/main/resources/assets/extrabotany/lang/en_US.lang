@@ -194,3 +194,13 @@ achievement.botania:vrangerboots=悪ノ召使
 achievement.botania:vrangerboots.desc=Be rewarded Ranger Boots of Valkyrie for a heroic feat
 achievement.botania:vhandgun=悪ノ娘
 achievement.botania:vhandgun.desc=Be rewarded Handguns of Valkyrie for a heroic feat
+
+#CONFIG
+# -COMMON
+config.ExtraBotany.efficiencySunshinelily.desc=The efficiency of Sunshine Lily.
+config.ExtraBotany.efficiencyMoonlightlily.desc=The efficiency of Moonlight Lily.
+config.ExtraBotany.efficiencyBlueenchantress.desc=The efficiency of Blue Enchantress.
+config.ExtraBotany.efficiencyCandyflower.desc=The efficiency of Candy Flower.
+
+# -CLIENT
+config.ExtraBotany.shieldBarHeight.desc=The height of the shield display bar is under the mana display bar. You can change this if you have changed where the mana display bar is.

@@ -16,6 +16,7 @@ import vazkii.botania.common.core.handler.InternalMethodHandler;
 
 
 
+
 import com.meteor.extrabotany.common.achievement.ModAchievement;
 import com.meteor.extrabotany.common.blocks.ModBlocks;
 import com.meteor.extrabotany.common.blocks.ModMutilBlocks;
@@ -24,6 +25,7 @@ import com.meteor.extrabotany.common.effects.PotionEffectMods;
 import com.meteor.extrabotany.common.entity.EntityLycorisradiata;
 import com.meteor.extrabotany.common.entity.ModEntities;
 import com.meteor.extrabotany.common.events.ModEvents;
+import com.meteor.extrabotany.common.handler.ConfigHandler;
 import com.meteor.extrabotany.common.items.ModItems;
 import com.meteor.extrabotany.common.lexicon.LexiconModData;
 import com.meteor.extrabotany.common.recipes.ModManaInfusionRecipe;
@@ -39,6 +41,7 @@ public class CommonProxy {
 	
 	public void preInit(FMLPreInitializationEvent event) {
 		BotaniaAPI.internalHandler = new InternalMethodHandler();
+		new ConfigHandler(event);
 		ModBlocks.init();
 		ModItems.init();
 		ModEntities.init();
