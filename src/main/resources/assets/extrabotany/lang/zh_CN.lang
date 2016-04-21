@@ -200,6 +200,14 @@ achievement.botania:vrangerboots.desc=获得战利品:V制式游侠靴
 achievement.botania:vhandgun=悪ノ娘
 achievement.botania:vhandgun.desc=获得战利品:V制式手炮
 
+#COMMANDS
+commands.ExtraBotany.getShieldAmount.desc=/getShieldAmount [玩家]
+commands.ExtraBotany.getShieldAmount.success=玩家 %1$s 现在持有护盾值为 %2$s .
+commands.ExtraBotany.setShieldAmount.desc=/setShieldAmount [玩家] [数值]
+commands.ExtraBotany.setShieldAmount.success=设置成功! 玩家 %1$s 现在持有护盾值为 %2$s .
+commands.ExtraBotany.addShieldAmount.desc=/addShieldAmount [玩家] [数值]
+commands.ExtraBotany.addShieldAmount.success=添加成功! 玩家 %1$s 现在持有护盾值为 %2$s .
+
 #CONFIG
 # -COMMON
 config.ExtraBotany.efficiencySunshinelily.desc=日耀百合的产能效率.

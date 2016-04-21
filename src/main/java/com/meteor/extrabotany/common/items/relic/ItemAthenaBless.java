@@ -20,6 +20,7 @@ import com.google.common.collect.Multimap;
 import com.meteor.extrabotany.api.IShieldHandler;
 import com.meteor.extrabotany.common.events.EventKnowledgeTypeUnlock;
 import com.meteor.extrabotany.common.events.EventShield;
+import com.meteor.extrabotany.common.handler.ConfigHandler;
 import com.meteor.extrabotany.common.handler.ShieldHandler;
 import com.meteor.extrabotany.common.items.ModItems;
 import com.meteor.extrabotany.common.lib.LibItemName;
@@ -55,15 +56,10 @@ public class ItemAthenaBless extends ItemRelicBauble implements IShieldHandler{
 			EntityPlayer player = (EntityPlayer) event.source.getSourceOfDamage();
 			if(getAthenaBless(player) != null)
 				if(ItemRelic.isRightPlayer(player, getAthenaBless(player)))
-				if(getShieldAmount(player) < player.getMaxHealth()){
-					if(getShieldAmount(player)+event.ammount/5 > player.getMaxHealth()){
-						setShieldAmount(player.getMaxHealth(), player);
-					}else{
-						setShieldAmount(getShieldAmount(player) + event.ammount/5, player);
-					}
+					addShieldAmount(event.ammount/5, player);
 				}
-			}
 	}
+	
 	
 
 	@Override
@@ -84,12 +80,29 @@ public class ItemAthenaBless extends ItemRelicBauble implements IShieldHandler{
 
 	@Override
 	public float setShieldAmount(float shield, EntityPlayer player) {
-		ShieldHandler.currentShield = shield;
+		if(shield <= getMaxShieldAmount(player))
+			ShieldHandler.currentShield = shield;
+		else if(shield > getMaxShieldAmount(player))
+			ShieldHandler.currentShield = getMaxShieldAmount(player);
 		return shield;
 	}
 
 	@Override
 	public float getShieldAmount(EntityPlayer player) {
 		return ShieldHandler.currentShield;
+	}
+	
+	@Override
+	public float addShieldAmount(float shield, EntityPlayer player) {
+		if(getShieldAmount(player) + shield <= getMaxShieldAmount(player))
+			ShieldHandler.currentShield = getShieldAmount(player) + shield;
+		else if(getShieldAmount(player) + shield > getMaxShieldAmount(player))
+			ShieldHandler.currentShield = getMaxShieldAmount(player);
+		return shield;
+	}
+
+	@Override
+	public float getMaxShieldAmount(EntityPlayer player) {
+		return player.getMaxHealth() + ConfigHandler.extraShieldAmount;
 	}
 }

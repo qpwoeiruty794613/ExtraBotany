@@ -1,6 +1,7 @@
 16/4/21<br>
 Shield System is done.<br>
 Config is done.<br>
+New Commands for Shield System.<br>
 
 16/4/17<br>
 REMOVE Gaia Totem.<br>

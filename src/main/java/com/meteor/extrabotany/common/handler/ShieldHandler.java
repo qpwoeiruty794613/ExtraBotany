@@ -13,13 +13,30 @@ public class ShieldHandler implements IShieldHandler, IExtendedEntityProperties{
 
 	@Override
 	public float setShieldAmount(float shield, EntityPlayer player) {
+		if(shield <= getMaxShieldAmount(player))
 		this.currentShield = shield;
+		else if(shield > getMaxShieldAmount(player))
+		this.currentShield = getMaxShieldAmount(player);
 		return shield;
 	}
 
 	@Override
 	public float getShieldAmount(EntityPlayer player) {
 		return this.currentShield;
+	}
+	
+	@Override
+	public float addShieldAmount(float shield, EntityPlayer player) {
+		if(getShieldAmount(player) + shield <= getMaxShieldAmount(player))
+		this.currentShield = getShieldAmount(player) + shield;
+		else if(getShieldAmount(player) + shield > getMaxShieldAmount(player))
+		this.currentShield = getMaxShieldAmount(player);
+		return shield;
+	}
+
+	@Override
+	public float getMaxShieldAmount(EntityPlayer player) {
+		return player.getMaxHealth() + ConfigHandler.extraShieldAmount;
 	}
 
 	public final static String EXT_PROP_NAME = "Shield";

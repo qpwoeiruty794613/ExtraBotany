@@ -10,6 +10,7 @@ import com.meteor.extrabotany.client.render.entity.RenderLycorisradiataRed;
 import com.meteor.extrabotany.client.render.entity.RenderTeleportPearl;
 import com.meteor.extrabotany.client.render.tile.RenderTileRelicPlate;
 import com.meteor.extrabotany.common.blocks.tile.TileRelicPlate;
+import com.meteor.extrabotany.common.commands.CommandGetShieldAmount;
 import com.meteor.extrabotany.common.entity.EntityLycorisradiataGreen;
 import com.meteor.extrabotany.common.entity.EntityLycorisradiataPurple;
 import com.meteor.extrabotany.common.entity.EntityLycorisradiataRed;
@@ -27,6 +28,7 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.event.FMLServerStartingEvent;
 
 @Mod(modid = LibReference.MOD_ID, name = LibReference.MOD_NAME, version = LibReference.VERSION, dependencies = LibReference.DEPENDENCIES)
 public class ExtraBotany {
@@ -65,5 +67,11 @@ public class ExtraBotany {
 	{
 
 	}
+	
+	@EventHandler
+    public void serverStarting(FMLServerStartingEvent event)
+    {
+    	proxy.serverStarting(event);
+    }
 
 }

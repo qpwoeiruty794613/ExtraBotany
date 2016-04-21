@@ -195,6 +195,14 @@ achievement.botania:vrangerboots.desc=Be rewarded Ranger Boots of Valkyrie for a
 achievement.botania:vhandgun=悪ノ娘
 achievement.botania:vhandgun.desc=Be rewarded Handguns of Valkyrie for a heroic feat
 
+#COMMANDS
+commands.ExtraBotany.getShieldAmount.desc=/getShieldAmount [player]
+commands.ExtraBotany.getShieldAmount.success=Player %1$s now has shield %2$s .
+commands.ExtraBotany.setShieldAmount.desc=/setShieldAmount [玩家] [数值]
+commands.ExtraBotany.setShieldAmount.success=Successful! Player %1$s now has shield %2$s .
+commands.ExtraBotany.addShieldAmount.desc=/addShieldAmount [玩家] [数值]
+commands.ExtraBotany.addShieldAmount.success=Successful! Player %1$s now has shield %2$s .
+
 #CONFIG
 # -COMMON
 config.ExtraBotany.efficiencySunshinelily.desc=The efficiency of Sunshine Lily.

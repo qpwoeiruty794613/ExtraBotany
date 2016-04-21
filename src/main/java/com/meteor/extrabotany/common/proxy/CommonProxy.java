@@ -7,19 +7,11 @@ import vazkii.botania.api.BotaniaAPI;
 import vazkii.botania.common.core.handler.InternalMethodHandler;
 
 
-
-
-
-
-
-
-
-
-
-
 import com.meteor.extrabotany.common.achievement.ModAchievement;
 import com.meteor.extrabotany.common.blocks.ModBlocks;
 import com.meteor.extrabotany.common.blocks.ModMutilBlocks;
+import com.meteor.extrabotany.common.commands.CommandGetShieldAmount;
+import com.meteor.extrabotany.common.commands.ModCommands;
 import com.meteor.extrabotany.common.effects.ModPotionEffect;
 import com.meteor.extrabotany.common.effects.PotionEffectMods;
 import com.meteor.extrabotany.common.entity.EntityLycorisradiata;
@@ -36,6 +28,7 @@ import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.event.FMLServerStartingEvent;
 
 public class CommonProxy {
 	
@@ -61,4 +54,9 @@ public class CommonProxy {
 	public void postInit(FMLPostInitializationEvent event) {
 		
 	}
+	
+    public void serverStarting(FMLServerStartingEvent event)
+    {
+    	new ModCommands(event);
+    }
 }
