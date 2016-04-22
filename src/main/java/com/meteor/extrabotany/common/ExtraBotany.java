@@ -1,5 +1,8 @@
 package com.meteor.extrabotany.common;
 
+import java.util.LinkedHashSet;
+import java.util.Set;
+
 import net.minecraft.util.EnumChatFormatting;
 import vazkii.botania.api.BotaniaAPI;
 import vazkii.botania.api.lexicon.KnowledgeType;
@@ -44,6 +47,11 @@ public class ExtraBotany {
 	public static KnowledgeType extraKnowledge;
 	
 	public static final ExtraBotanyCreativeTab tabExtraBotany = new ExtraBotanyCreativeTab(); 
+	public static Set<String> subtilesForCreativeMenu = new LinkedHashSet();
+	
+	public static void addSubTileToCreativeMenu(String key) {
+		subtilesForCreativeMenu.add(key);
+	}
 
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event)

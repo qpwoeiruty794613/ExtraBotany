@@ -20,17 +20,30 @@ public class ModPetalRecipe {
 	public static final String manaPowder = LibOreDict.MANA_POWDER;
 	public static final String gaiaEssence = LibOreDictName.GAIA_ESSENCE;
 	public static final String blankCard = LibOreDictName.BLANK_CARD;
+	public static final String quartzGaia = LibOreDictName.QUARTZ_GAIA;
+	public static final String quartzElementium = LibOreDictName.QUARTZ_ELEMENTIUM;
+	public static final String petalRed = LibOreDictName.LYCORIS_RED;
+	public static final String petalGreen = LibOreDictName.LYCORIS_GREEN;
+	public static final String petalPurple = LibOreDictName.LYCORIS_PURPLE;
+	public static final String shard = LibOreDictName.PRISMATIC_SHARD;
 	
 	public static RecipePetals blueenchantressRecipe;
 	public static RecipePetals candyflowerRecipe;
 	public static RecipePetals moonlightlilyRecipe;
 	public static RecipePetals sunshinelilyRecipe;
 	
+	public static RecipePetals necrofleurRecipe;
+	public static RecipePetals numerondandelifeRecipe;
+	public static RecipePetals woodieniaRecipe;
+	
 	public static void init() {
 		blueenchantressRecipe = BotaniaAPI.registerPetalRecipe(ItemBlockSpecialFlower.ofType(LibBlockName.BLUE_ENCHANTRESS), blue, blue, blue, blue, cyan, gaiaEssence, manaPowder, runeWater);
 		candyflowerRecipe = BotaniaAPI.registerPetalRecipe(ItemBlockSpecialFlower.ofType(LibBlockName.CANDY_FLOWER), red, orange, yellow, blue, green, purple, manaPowder, pixieDust);
 		sunshinelilyRecipe = BotaniaAPI.registerPetalRecipe(ItemBlockSpecialFlower.ofType(LibBlockName.SUNSHINE_LILY), orange, orange, orange, yellow, blankCard, manaPowder, runeGreed, pixieDust);
 		moonlightlilyRecipe = BotaniaAPI.registerPetalRecipe(ItemBlockSpecialFlower.ofType(LibBlockName.MOONLIGHT_LILY), purple, purple, purple, gray, blankCard, manaPowder, runeGreed, pixieDust);
-
+		
+		necrofleurRecipe = BotaniaAPI.registerPetalRecipe(ItemBlockSpecialFlower.ofType(LibBlockName.NECRO_FLUER), purple, purple, magenta, magenta, blankCard, quartzElementium, manaPowder, redstoneRoot);
+		numerondandelifeRecipe = BotaniaAPI.registerPetalRecipe(ItemBlockSpecialFlower.ofType(LibBlockName.NUMERON_DANDELIFE), petalGreen, petalGreen, petalRed, blankCard, shard, runeMana, redstoneRoot);
+		woodieniaRecipe = BotaniaAPI.registerPetalRecipe(ItemBlockSpecialFlower.ofType(LibBlockName.WOODIENIA), brown, brown, brown, gray, blankCard, quartzElementium, manaPowder, redstoneRoot);
 	}
 }

@@ -97,6 +97,22 @@ botania.page.moonlightlily0=它是&1日耀百合&0的另一面,能 够在黑夜�
 botania.page.moonlightlily1=&1月光百合&0也同样拥有着强大 的生命力.作为对价,所需 要的材料也较为昂贵.同时 作为被动产能,它依旧会因 周围的个体而降低效率.
 botania.page.moonlightlily2=愚者的播种.
 
+# -FUNCTIONAL
+# --NECROFLEUR
+botania.entry.necrofleur=死之花
+botania.page.necrofleur0=
+botania.page.necrofleur1=
+
+# --NUMERONDANDELIFE
+botania.entry.numerondandelife=源命英
+botania.page.numerondandelife0=站在&1源命英&0的旁边,你将会 非常快速地获得&1护盾值&0,并 且它会移除你身上的&1debuff&0. 但也请注意,&1源命英&0必须放 置在&4X轴&0和&4Z轴&0都是&46的倍数&0 的地方,否则它会罢工.
+botania.page.numerondandelife1=请遵循基本法.
+
+# --WOODIENIA
+botania.entry.woodienia=伐木花
+botania.page.woodienia0=即是你给&1伐木花&0非常少量的 &4魔力&0,它也能非常迅速地砍 伐周围的&1原木&0并将它们以掉 落物形式出现.
+botania.page.woodienia1=每天一棵树,烦恼不再有.
+
 # -OTHERS
 # --INFINITYMANA
 botania.entry.infinitymana=无限魔力
@@ -119,7 +135,7 @@ botania.page.athenabless0=乌云与雷电的主宰者,智慧 女神&4雅典娜&0
 
 # --APHRODITEGRACE
 botania.entry.aphroditegrace=阿佛洛狄忒的恩宠
-botania.tagline.aphroditegrace=脱离苦痛.
+botania.tagline.aphroditegrace=远离苦痛.
 botania.page.aphroditegrace0=爱与美之神,司管人间一切 爱情的女神的象征.这件从 泡沫中诞生的遗物,能将所 受到的伤害按一定比例转化 为护盾值,并清除自身的负 面状态.但从泡沫中诞生的 遗物啊,最终还将回到泡沫 中.
 
 # --DICE20
@@ -153,7 +169,7 @@ botania.tagline.vhandgun=魔力射击.
 botania.page.vhandgun0=继承了&1王者圣剑&0的部分能力 ,能够非常快速地射出魔力 光束自动追踪并打击敌人.
 
 #FLOWER NAMES
-# - GENERATING
+# -GENERATING
 tile.botania:flower.candyflower.name=糖果花
 tile.botania:flower.candyflower.reference=最甜蜜的爱
 botania.tagline.candyflower=甜食控
@@ -176,6 +192,20 @@ botania.tagline.moonlightlily=月亮祭司
 
 tile.botania:flower.artifaconia.name=古遗莲
 tile.botania:flower.artifaconia.reference=禁忌的秘密
+botania.tagline.artifaconia=你为什么会这么熟练
+
+# -FUNCTIONAL
+tile.botania:flower.numerondandelife.name=源命英
+tile.botania:flower.numerondandelife.reference=Too young, Too simple, Sometimes naive.
+botania.tagline.numerondandelife=I am Angry
+
+tile.botania:flower.necrofleur.name=死之花
+tile.botania:flower.necrofleur.reference=死亡是唯一的解药
+botania.tagline.necrofleur=我的死亡笔记
+
+tile.botania:flower.woodienia.name=伐木花
+tile.botania:flower.woodienia.reference=满月的诅咒
+botania.tagline.woodienia=没有比砍伐更有趣的事情了
 
 #ACHIEVEMENTS
 # -RELICS
@@ -200,6 +230,9 @@ achievement.botania:vrangerboots.desc=获得战利品:V制式游侠靴
 achievement.botania:vhandgun=悪ノ娘
 achievement.botania:vhandgun.desc=获得战利品:V制式手炮
 
+#ENCHANTMENT
+enchantment.gaiablessing=盖亚祝福
+
 #COMMANDS
 commands.ExtraBotany.getShieldAmount.desc=/getShieldAmount [玩家]
 commands.ExtraBotany.getShieldAmount.success=玩家 %1$s 现在持有护盾值为 %2$s .
@@ -210,6 +243,8 @@ commands.ExtraBotany.addShieldAmount.success=添加成功! 玩家 %1$s 现在持
 
 #CONFIG
 # -COMMON
+config.ExtraBotany.extraShieldAmount.desc=额外的护盾上限.
+config.ExtraBotany.ench.desc=附魔ID.
 config.ExtraBotany.efficiencySunshinelily.desc=日耀百合的产能效率.
 config.ExtraBotany.efficiencyMoonlightlily.desc=月光百合的产能效率.
 config.ExtraBotany.efficiencyBlueenchantress.desc=蓝色妖姬的产能效率.

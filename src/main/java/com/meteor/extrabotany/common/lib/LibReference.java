@@ -9,13 +9,14 @@ public class LibReference {
 	public static final String PREFIX_MOD = "extrabotany:";
 	public static final String BUILD = "GRADLE:BUILD";
 	public static final String VERSION = "GRADLE:VERSION-" + BUILD;
-	public static final String DEPENDENCIES = "required-after:Botania";
+	public static final String DEPENDENCIES = "required-after:Botania;after:Baubles";
 	
 	public static final String PROXY_COMMON = "com.meteor.extrabotany.common.proxy.CommonProxy";
 	public static final String PROXY_CLIENT = "com.meteor.extrabotany.client.proxy.ClientProxy";
 	
 	public static final String CATEGORY_CLIENT = "client";
 	public static final String CATEGORY_COMMON = "common";
+	public static final String CATEGORY_ID = "ids";
 	public static final String PREFIX_CONFIG = "config.ExtraBotany.";
 	
 	public static final String MODEL_HESTIACHASTITY = "extrabotany:textures/models/armor/armorrelic.png";

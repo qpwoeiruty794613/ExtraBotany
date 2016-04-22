@@ -15,6 +15,8 @@ public class ConfigHandler {
 	public static int efficiencyBlueenchantress;
 	public static int efficiencyCandyflower;
 	
+	public static int enchGaiaBlessing;
+	
 	public static int extraShieldAmount;
 
 	public ConfigHandler(FMLPreInitializationEvent event)
@@ -27,6 +29,7 @@ public class ConfigHandler {
 
 	private static void registerConfig()
 	{	
+		enchGaiaBlessing = config.get(LibReference.CATEGORY_ID, "enchGaiaBlessing", 203, StatCollector.translateToLocal(LibReference.PREFIX_CONFIG + "ench.desc")).getInt();
 		extraShieldAmount = config.get(LibReference.CATEGORY_COMMON, "extraShieldAmount", 0, StatCollector.translateToLocal(LibReference.PREFIX_CONFIG + "extraShieldAmount.desc")).getInt();
 		efficiencySunshinelily = config.get(LibReference.CATEGORY_COMMON, "efficiencySunshinelily", 3, StatCollector.translateToLocal(LibReference.PREFIX_CONFIG + "efficiencySunshinelily.desc")).getInt();
 		efficiencyMoonlightlily = config.get(LibReference.CATEGORY_COMMON, "efficiencyMoonlightlily", 3, StatCollector.translateToLocal(LibReference.PREFIX_CONFIG + "efficiencyMoonlightlily.desc")).getInt();

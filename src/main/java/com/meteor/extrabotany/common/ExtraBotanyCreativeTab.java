@@ -2,8 +2,11 @@ package com.meteor.extrabotany.common;
 
 import java.util.List;
 
+import vazkii.botania.common.item.block.ItemBlockSpecialFlower;
+
 import com.meteor.extrabotany.common.blocks.ModBlocks;
 import com.meteor.extrabotany.common.items.ModItems;
+import com.meteor.extrabotany.common.lib.LibBlockName;
 import com.meteor.extrabotany.common.lib.LibReference;
 
 import net.minecraft.block.Block;
@@ -20,7 +23,7 @@ public class ExtraBotanyCreativeTab extends CreativeTabs{
 	
 	@Override
 	public ItemStack getIconItemStack() {
-		return new ItemStack(ModItems.excaliber);
+		return ItemBlockSpecialFlower.ofType(LibBlockName.NUMERON_DANDELIFE);
 	}
 
 	@Override
@@ -28,10 +31,11 @@ public class ExtraBotanyCreativeTab extends CreativeTabs{
 		return getIconItemStack().getItem();
 	}
 	
-
 	@Override
 	public void displayAllReleventItems(List list) {
 		this.list = list;
+		//Flowers
+		addBlock(ModBlocks.specialFlower);
 		//Mana Using Item
 		addItem(ModItems.gaiatablet);
 		addItem(ModItems.teleportpearl);
@@ -63,8 +67,7 @@ public class ExtraBotanyCreativeTab extends CreativeTabs{
 		addItem(ModItems.lycorisgreen);
 		addItem(ModItems.lycorispurple);
 		addItem(ModItems.lycorisred);
-		addItem(ModItems.lycorisrandom);
-		
+		addItem(ModItems.lycorisrandom);		
 		//Blocks
 		addItem(ModItems.gaiaquartz);
 		addBlock(ModBlocks.gaiaquartz);

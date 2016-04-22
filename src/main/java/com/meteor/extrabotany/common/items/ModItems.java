@@ -98,6 +98,11 @@ public class ModItems {
 		OreDictionary.registerOre(LibOreDictName.PRISMATIC_SHARD, new ItemStack(prismaticshard));
 		OreDictionary.registerOre(LibOreDictName.BLANK_CARD, new ItemStack(blankcard));
 		OreDictionary.registerOre(LibOreDictName.ASTRAL_FORCE, new ItemStack(astralforce));
+		OreDictionary.registerOre(LibOreDictName.LYCORIS_GREEN, new ItemStack(petal_green));
+		OreDictionary.registerOre(LibOreDictName.LYCORIS_PURPLE, new ItemStack(petal_purple));
+		OreDictionary.registerOre(LibOreDictName.LYCORIS_RED, new ItemStack(petal_red));
+		OreDictionary.registerOre(LibOreDictName.QUARTZ_ELEMENTIUM, new ItemStack(elvenquartz));
+		OreDictionary.registerOre(LibOreDictName.QUARTZ_GAIA, new ItemStack(gaiaquartz));
 	}
 
 }

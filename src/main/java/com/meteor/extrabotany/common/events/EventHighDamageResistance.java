@@ -24,8 +24,7 @@ public class EventHighDamageResistance {
 	        		event.ammount = (float) (player.getMaxHealth()*0.2);
 	        	}
 	        }
-	        
-	            
+	                 
 	}
 }
 
