@@ -7,6 +7,7 @@ import java.util.List;
 import com.meteor.extrabotany.api.IShieldHandler;
 import com.meteor.extrabotany.common.handler.ConfigHandler;
 import com.meteor.extrabotany.common.handler.ShieldHandler;
+import com.meteor.extrabotany.common.lexicon.LexiconModData;
 
 import cpw.mods.fml.relauncher.ReflectionHelper;
 import net.minecraft.entity.Entity;
@@ -24,6 +25,7 @@ import net.minecraft.util.ChatComponentTranslation;
 import net.minecraft.util.ChatStyle;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.world.World;
+import vazkii.botania.api.lexicon.LexiconEntry;
 import vazkii.botania.api.subtile.RadiusDescriptor;
 import vazkii.botania.api.subtile.SubTileFunctional;
 import vazkii.botania.common.Botania;
@@ -38,6 +40,11 @@ public class SubTileNumeronDandelife extends SubTileFunctional implements IShiel
 	@Override
 	public int getColor() {
 		return 0x07C527;
+	}
+	
+	@Override
+	public LexiconEntry getEntry() {
+		return LexiconModData.numerondandelife;
 	}
 	
 	@Override

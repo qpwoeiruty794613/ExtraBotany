@@ -27,8 +27,6 @@ public class LibItemName {
 	
 	//Armor
 	
-
-
 	//Advanced
 	public static final String GAIATABLET = "gaiaTablet";
 	public static final String TELEPORTPEARL = "teleportpearl";

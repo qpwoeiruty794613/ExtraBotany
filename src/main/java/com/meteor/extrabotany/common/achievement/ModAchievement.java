@@ -13,7 +13,6 @@ import net.minecraft.stats.Achievement;
 import net.minecraftforge.common.AchievementPage;
 
 public class ModAchievement {
-	
 	//Relics
 	public static Achievement Relic_aphroditegrace;
 	public static Achievement Relic_dice20;

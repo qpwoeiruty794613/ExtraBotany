@@ -36,7 +36,7 @@ import vazkii.botania.api.mana.ManaItemHandler;
 import vazkii.botania.common.item.relic.ItemRelic;
 
 public class ItemHermesTravelClothing extends ItemRelicArmorSet implements IManaUsingItem{
-	public ItemHermesTravelClothing(String name) {
+	public ItemHermesTravelClothing(int type, String name) {
 		super(1, LibItemName.HERMESTRAVELCLOTHING);
 		MinecraftForge.EVENT_BUS.register(this);
 	    FMLCommonHandler.instance().bus().register(this);

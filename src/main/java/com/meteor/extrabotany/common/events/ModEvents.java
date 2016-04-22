@@ -1,9 +1,5 @@
 package com.meteor.extrabotany.common.events;
 
-import com.meteor.extrabotany.client.render.RenderShield;
-import com.meteor.extrabotany.common.items.relic.ItemHestiaChastity;
-import com.meteor.extrabotany.common.lib.LibItemName;
-
 import net.minecraftforge.common.MinecraftForge;
 import cpw.mods.fml.common.FMLCommonHandler;
 

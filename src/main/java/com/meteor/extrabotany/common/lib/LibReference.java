@@ -2,8 +2,7 @@ package com.meteor.extrabotany.common.lib;
 
 import net.minecraft.util.ResourceLocation;
 
-public class LibReference {
-	
+public class LibReference {	
 	public static final String MOD_ID = "ExtraBotany";
 	public static final String MOD_NAME = MOD_ID;
 	public static final String PREFIX_MOD = "extrabotany:";

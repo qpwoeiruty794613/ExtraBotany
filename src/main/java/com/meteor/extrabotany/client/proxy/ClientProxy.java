@@ -1,7 +1,6 @@
 package com.meteor.extrabotany.client.proxy;
 
 import net.minecraftforge.common.MinecraftForge;
-import vazkii.botania.client.render.entity.RenderDoppleganger;
 
 import com.meteor.extrabotany.client.render.RenderShield;
 import com.meteor.extrabotany.client.render.entity.RenderLycorisradiataGreen;
@@ -10,7 +9,6 @@ import com.meteor.extrabotany.client.render.entity.RenderLycorisradiataRed;
 import com.meteor.extrabotany.client.render.entity.RenderTeleportPearl;
 import com.meteor.extrabotany.client.render.tile.RenderTileRelicPlate;
 import com.meteor.extrabotany.common.blocks.tile.TileRelicPlate;
-import com.meteor.extrabotany.common.entity.EntityGaiaIII;
 import com.meteor.extrabotany.common.entity.EntityLycorisradiataGreen;
 import com.meteor.extrabotany.common.entity.EntityLycorisradiataPurple;
 import com.meteor.extrabotany.common.entity.EntityLycorisradiataRed;
@@ -33,21 +31,22 @@ public class ClientProxy extends CommonProxy{
 	@Override
 	public void init(FMLInitializationEvent event) {
 		super.init(event);
-		MinecraftForge.EVENT_BUS.register(new RenderShield());
-	    FMLCommonHandler.instance().bus().register(new RenderShield());	
 		initRenderers();
-	}
-	
-	private void initRenderers() {
-		ClientRegistry.bindTileEntitySpecialRenderer(TileRelicPlate.class, new RenderTileRelicPlate());
-		RenderingRegistry.registerEntityRenderingHandler(EntityLycorisradiataRed.class, new RenderLycorisradiataRed());
-		RenderingRegistry.registerEntityRenderingHandler(EntityLycorisradiataGreen.class, new RenderLycorisradiataGreen());
-		RenderingRegistry.registerEntityRenderingHandler(EntityLycorisradiataPurple.class, new RenderLycorisradiataPurple());
-		RenderingRegistry.registerEntityRenderingHandler(EntityTeleportPearl.class, new RenderTeleportPearl(1.0F));
 	}
 	
 	@Override
 	public void postInit(FMLPostInitializationEvent event) {
 		super.postInit(event);
 	}
+	
+	private void initRenderers() {
+		MinecraftForge.EVENT_BUS.register(new RenderShield());
+	    FMLCommonHandler.instance().bus().register(new RenderShield());	
+		ClientRegistry.bindTileEntitySpecialRenderer(TileRelicPlate.class, new RenderTileRelicPlate());
+		RenderingRegistry.registerEntityRenderingHandler(EntityLycorisradiataRed.class, new RenderLycorisradiataRed());
+		RenderingRegistry.registerEntityRenderingHandler(EntityLycorisradiataGreen.class, new RenderLycorisradiataGreen());
+		RenderingRegistry.registerEntityRenderingHandler(EntityLycorisradiataPurple.class, new RenderLycorisradiataPurple());
+		RenderingRegistry.registerEntityRenderingHandler(EntityTeleportPearl.class, new RenderTeleportPearl(1.0F));
+	}
+
 }

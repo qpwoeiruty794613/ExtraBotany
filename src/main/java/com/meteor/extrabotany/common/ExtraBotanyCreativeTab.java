@@ -3,16 +3,15 @@ package com.meteor.extrabotany.common;
 import java.util.List;
 
 import vazkii.botania.common.item.block.ItemBlockSpecialFlower;
+import net.minecraft.block.Block;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 
 import com.meteor.extrabotany.common.blocks.ModBlocks;
 import com.meteor.extrabotany.common.items.ModItems;
 import com.meteor.extrabotany.common.lib.LibBlockName;
 import com.meteor.extrabotany.common.lib.LibReference;
-
-import net.minecraft.block.Block;
-import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
 
 public class ExtraBotanyCreativeTab extends CreativeTabs{
 	List list;
@@ -77,7 +76,6 @@ public class ExtraBotanyCreativeTab extends CreativeTabs{
 		addBlock(ModBlocks.elvenquartz);
 		addBlock(ModBlocks.elvenquartzstairs);
 		addBlock(ModBlocks.elvenquartzslab);
-
 	}
 	
 	private void addItem(Item item) {

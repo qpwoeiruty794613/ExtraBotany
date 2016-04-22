@@ -8,8 +8,6 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumAction;
 import net.minecraft.item.ItemStack;
 
-
-
 public class ModelRelicArmor extends ModelBiped {
 
 	public ModelRenderer helm;

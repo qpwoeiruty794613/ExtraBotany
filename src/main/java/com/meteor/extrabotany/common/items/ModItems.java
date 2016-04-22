@@ -82,9 +82,9 @@ public class ModItems {
 		vhandgun = new ItemVHandgun();
 		vrangerboots = new ItemVRangerBoots(3, LibItemName.VRANGERBOOTS);
 		dice20 = new ItemDice20();
-		hestiachastity = new ItemHestiaChastity(LibItemName.HESTIACHASTITY);
-		aphroditegrace = new ItemAphroditeGrace(LibItemName.APHRODITEGRACE);
-		hermestravelclothing = new ItemHermesTravelClothing(LibItemName.HERMESTRAVELCLOTHING);
+		hestiachastity = new ItemHestiaChastity(0, LibItemName.HESTIACHASTITY);
+		aphroditegrace = new ItemAphroditeGrace(2, LibItemName.APHRODITEGRACE);
+		hermestravelclothing = new ItemHermesTravelClothing(1, LibItemName.HERMESTRAVELCLOTHING);
 		
 		gaiatablet = new ItemGaiaTablet();
 		teleportpearl = new ItemTeleportPearl(LibItemName.TELEPORTPEARL);

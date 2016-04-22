@@ -11,6 +11,7 @@ import com.meteor.extrabotany.common.blocks.subtile.functional.SubTileWoodienia;
 import com.meteor.extrabotany.common.blocks.subtile.generating.SubTileBlueenchantress;
 import com.meteor.extrabotany.common.blocks.subtile.generating.SubTileCandyflower;
 import com.meteor.extrabotany.common.blocks.subtile.generating.SubTileMoonlightlily;
+import com.meteor.extrabotany.common.blocks.subtile.generating.SubTileOmniviolet;
 import com.meteor.extrabotany.common.blocks.subtile.generating.SubTileSunshinelily;
 import com.meteor.extrabotany.common.blocks.tile.TileRelicPlate;
 import com.meteor.extrabotany.common.lib.LibBlockName;
@@ -65,6 +66,7 @@ public class ModBlocks {
 	}
 	
 	private static void initTileEntities() {
+		BotaniaAPI.registerSubTile(LibBlockName.OMNIVIOLET, SubTileOmniviolet.class);
 		BotaniaAPI.registerSubTile(LibBlockName.WOODIENIA, SubTileWoodienia.class);
 		BotaniaAPI.registerSubTile(LibBlockName.NECRO_FLUER, SubTileNecrofluer.class);
 		BotaniaAPI.registerSubTile(LibBlockName.NUMERON_DANDELIFE, SubTileNumeronDandelife.class);

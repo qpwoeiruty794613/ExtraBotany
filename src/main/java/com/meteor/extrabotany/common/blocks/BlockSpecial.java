@@ -15,25 +15,25 @@ import vazkii.botania.common.block.BlockSpecialFlower;
 import vazkii.botania.common.item.block.ItemBlockSpecialFlower;
 
 public class BlockSpecial extends BlockSpecialFlower {
-		static {
-			ExtraBotany.subtilesForCreativeMenu.addAll(Arrays.asList(new String[] {			
-					// Generating
-					LibBlockName.CANDY_FLOWER,
-					LibBlockName.BLUE_ENCHANTRESS,
-					LibBlockName.SUNSHINE_LILY,
-					LibBlockName.MOONLIGHT_LILY,
-					//Functional
-					LibBlockName.NUMERON_DANDELIFE,
-					LibBlockName.NECRO_FLUER,
-					LibBlockName.WOODIENIA,
-			
-			}));
-		}	
+	static {
+		ExtraBotany.subtilesForCreativeMenu.addAll(Arrays.asList(new String[] {			
+			// Generating
+			LibBlockName.CANDY_FLOWER,
+			LibBlockName.BLUE_ENCHANTRESS,
+			LibBlockName.SUNSHINE_LILY,
+			LibBlockName.MOONLIGHT_LILY,
+			LibBlockName.OMNIVIOLET,
+			//Functional
+			LibBlockName.NUMERON_DANDELIFE,
+			LibBlockName.NECRO_FLUER,
+			LibBlockName.WOODIENIA,	
+		}));
+	}	
 		
-		@Override
-		public void getSubBlocks(Item par1, CreativeTabs par2CreativeTabs, List par3List) {
-			for(String s : ExtraBotany.subtilesForCreativeMenu) {
-				par3List.add(ItemBlockSpecialFlower.ofType(s));
-			}
+	@Override
+	public void getSubBlocks(Item par1, CreativeTabs par2CreativeTabs, List par3List) {
+		for(String s : ExtraBotany.subtilesForCreativeMenu) {
+			par3List.add(ItemBlockSpecialFlower.ofType(s));
 		}
+	}
 }

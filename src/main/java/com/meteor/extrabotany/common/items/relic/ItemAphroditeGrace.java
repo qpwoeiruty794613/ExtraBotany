@@ -29,7 +29,7 @@ import vazkii.botania.common.entity.EntityManaBurst;
 import vazkii.botania.common.item.relic.ItemRelic;
 
 public class ItemAphroditeGrace extends ItemRelicArmorSet implements IShieldHandler{
-	public ItemAphroditeGrace(String name) {
+	public ItemAphroditeGrace(int type, String name) {
 		super(2, LibItemName.APHRODITEGRACE);
 		MinecraftForge.EVENT_BUS.register(this);
 	    FMLCommonHandler.instance().bus().register(this);

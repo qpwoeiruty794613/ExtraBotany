@@ -19,5 +19,4 @@ public class BlockMods extends Block{
 	public String getName() {
         return name;
     }
-
 }

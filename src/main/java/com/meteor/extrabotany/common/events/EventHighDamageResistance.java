@@ -1,16 +1,12 @@
 package com.meteor.extrabotany.common.events;
 
+import com.meteor.extrabotany.common.effects.ModPotionEffect;
+
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
-import net.minecraft.item.ItemStack;
-import net.minecraft.potion.PotionEffect;
-import net.minecraftforge.event.entity.living.LivingFallEvent;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
-
-import com.meteor.extrabotany.common.effects.ModPotionEffect;
-import com.meteor.extrabotany.common.items.relic.ItemVRangerBoots;
-
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
+
 
 public class EventHighDamageResistance {
 	@SubscribeEvent

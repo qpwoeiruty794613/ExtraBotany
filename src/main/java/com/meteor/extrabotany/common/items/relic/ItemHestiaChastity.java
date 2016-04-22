@@ -81,7 +81,7 @@ public class ItemHestiaChastity extends ItemRelicArmorSet implements IManaDiscou
 	
 	private static final String TAG_ANCIENT_WILL = "AncientWill";
 	static IIcon willIcon;
-	public ItemHestiaChastity(String name) {
+	public ItemHestiaChastity(int type, String name) {
 		super(0, LibItemName.HESTIACHASTITY);
 		MinecraftForge.EVENT_BUS.register(this);
 	    FMLCommonHandler.instance().bus().register(this);

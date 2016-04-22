@@ -1,14 +1,15 @@
 package com.meteor.extrabotany.common.blocks;
 
 import com.meteor.extrabotany.common.blocks.tile.TileRelicPlate;
+import com.meteor.extrabotany.common.entity.EntityGaiaIII;
 
 import vazkii.botania.api.lexicon.multiblock.MultiblockSet;
 
 public class ModMutilBlocks {
 	
-	public static MultiblockSet artifaconia;
+	public static MultiblockSet relicPlate;
 	
 	public static void init() {
-		artifaconia = TileRelicPlate.makeMultiblockSet();
+		relicPlate = TileRelicPlate.makeMultiblockSet();
 	}
 }

@@ -7,22 +7,9 @@ import net.minecraft.util.EnumChatFormatting;
 import vazkii.botania.api.BotaniaAPI;
 import vazkii.botania.api.lexicon.KnowledgeType;
 
-import com.meteor.extrabotany.client.render.entity.RenderLycorisradiataGreen;
-import com.meteor.extrabotany.client.render.entity.RenderLycorisradiataPurple;
-import com.meteor.extrabotany.client.render.entity.RenderLycorisradiataRed;
-import com.meteor.extrabotany.client.render.entity.RenderTeleportPearl;
-import com.meteor.extrabotany.client.render.tile.RenderTileRelicPlate;
-import com.meteor.extrabotany.common.blocks.tile.TileRelicPlate;
-import com.meteor.extrabotany.common.commands.CommandGetShieldAmount;
-import com.meteor.extrabotany.common.entity.EntityLycorisradiataGreen;
-import com.meteor.extrabotany.common.entity.EntityLycorisradiataPurple;
-import com.meteor.extrabotany.common.entity.EntityLycorisradiataRed;
-import com.meteor.extrabotany.common.entity.EntityTeleportPearl;
 import com.meteor.extrabotany.common.lib.LibReference;
 import com.meteor.extrabotany.common.proxy.CommonProxy;
 
-import cpw.mods.fml.client.registry.ClientRegistry;
-import cpw.mods.fml.client.registry.RenderingRegistry;
 import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;

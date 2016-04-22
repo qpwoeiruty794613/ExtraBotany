@@ -1,52 +1,25 @@
 package com.meteor.extrabotany.client.render;
 
 import java.awt.Color;
-import java.util.Random;
 
 import org.lwjgl.opengl.GL11;
 
-import vazkii.botania.api.lexicon.ILexicon;
-import vazkii.botania.api.mana.IManaItem;
-import vazkii.botania.api.mana.IManaUsingItem;
-import vazkii.botania.api.wand.IWandHUD;
-import vazkii.botania.client.core.handler.BossBarHandler;
-import vazkii.botania.client.core.handler.ItemsRemainingRenderHandler;
 import vazkii.botania.client.core.helper.RenderHelper;
-import vazkii.botania.client.lib.LibResources;
-import vazkii.botania.common.block.tile.mana.TilePool;
-import vazkii.botania.common.item.ModItems;
-import baubles.common.lib.PlayerHandler;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.ScaledResolution;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.profiler.Profiler;
+import net.minecraft.util.MovingObjectPosition;
+import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.client.event.RenderGameOverlayEvent;
+import net.minecraftforge.client.event.RenderGameOverlayEvent.ElementType;
 
 import com.meteor.extrabotany.api.IShieldHandler;
 import com.meteor.extrabotany.common.handler.ConfigHandler;
 import com.meteor.extrabotany.common.handler.ShieldHandler;
 import com.meteor.extrabotany.common.lib.LibReference;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.gui.Gui;
-import net.minecraft.client.gui.ScaledResolution;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.entity.SharedMonsterAttributes;
-import net.minecraft.entity.ai.attributes.IAttributeInstance;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.inventory.IInventory;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.potion.Potion;
-import net.minecraft.profiler.Profiler;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.FoodStats;
-import net.minecraft.util.MathHelper;
-import net.minecraft.util.MovingObjectPosition;
-import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.client.event.RenderGameOverlayEvent;
-import net.minecraftforge.client.event.RenderGameOverlayEvent.ElementType;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 
 public class RenderShield implements IShieldHandler{
 	public static final ResourceLocation shieldBar = LibReference.BAR_SHIELD;

@@ -60,4 +60,18 @@ public class LibData {
 		}
 	
     }
+    
+    public static int getBookBurnTime(ItemStack stack){
+    	if (stack == null)
+        {
+            return 0;
+        }
+        else
+        {	
+        	Item item = stack.getItem();
+        	if (item == Items.book) return 25;
+        	if (item == Items.written_book) return 35;
+        }
+    	return LibRegistry.getFuelValue(stack);	
+    }
 }
