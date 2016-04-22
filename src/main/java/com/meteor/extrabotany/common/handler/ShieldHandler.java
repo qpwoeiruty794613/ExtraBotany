@@ -36,17 +36,20 @@ public class ShieldHandler implements IShieldHandler, IExtendedEntityProperties{
 
 	@Override
 	public float getMaxShieldAmount(EntityPlayer player) {
-		return player.getMaxHealth() + ConfigHandler.extraShieldAmount;
+		this.maxShield = player.getMaxHealth() + ConfigHandler.extraShieldAmount;
+		return this.maxShield;
 	}
 
 	public final static String EXT_PROP_NAME = "Shield";
 	private final EntityPlayer player;
 	public static float currentShield = 0F;
+	public static float maxShield = 0F;
 
 	public ShieldHandler(EntityPlayer player)
 	{
 	this.player = player;
 	this.currentShield = 0F;
+	this.maxShield = 0F;
 	}
 
 	public static final void register(EntityPlayer player)
@@ -65,6 +68,7 @@ public class ShieldHandler implements IShieldHandler, IExtendedEntityProperties{
 	NBTTagCompound properties = new NBTTagCompound();
 
 	properties.setInteger("CurrentShield", (int) this.currentShield);
+	properties.setInteger("MaxShield", (int) this.maxShield);
 	compound.setTag(EXT_PROP_NAME, properties);
 	}
 
@@ -73,7 +77,7 @@ public class ShieldHandler implements IShieldHandler, IExtendedEntityProperties{
 	{
 	NBTTagCompound properties = (NBTTagCompound) compound.getTag(EXT_PROP_NAME);
 	this.currentShield = properties.getInteger("CurrentShield");
-	System.out.println("[TUT PROPS] Mana from NBT: " + this.currentShield);
+	this.maxShield = properties.getInteger("MaxShield");
 	}
 
 	@Override
