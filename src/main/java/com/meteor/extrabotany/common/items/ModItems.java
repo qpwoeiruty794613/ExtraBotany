@@ -55,6 +55,7 @@ public class ModItems {
 	public static Item gaiaquartz;
 	public static Item elvenquartz;
 	public static Item gaianecklacebroken;
+	public static Item dog;
 	
 	public static Item itemtest;
 	
@@ -72,6 +73,8 @@ public class ModItems {
 		gaiaquartz = new ItemMods(LibItemName.GAIAQUARTZ);
 		elvenquartz = new ItemMods(LibItemName.ELVENQUARTZ);
 		gaianecklacebroken = new ItemMods(LibItemName.GAIANECKLACEBROKEN);
+		
+		dog = new ItemBaubleDog();
 		
 		cronusphantom = new ItemCronusPhantom(LibItemName.CRONUSPHANTOM);
 		athenabless = new ItemAthenaBless();

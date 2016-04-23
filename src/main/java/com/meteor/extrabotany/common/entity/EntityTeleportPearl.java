@@ -14,7 +14,6 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class EntityTeleportPearl extends EntityThrowable
 {
-    private static final String __OBFID = "CL_00001725";
 
     public EntityTeleportPearl(World world)
     {
@@ -31,10 +30,7 @@ public class EntityTeleportPearl extends EntityThrowable
     {
         super(world, posX, posY, posZ);
     }
-
-    /**
-     * Called when this EntityThrowable hits a block or entity.
-     */
+    
     protected void onImpact(MovingObjectPosition object)
     {
         if (object.entityHit != null)

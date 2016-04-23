@@ -1,3 +1,7 @@
+16/4/23<br>
+NEW cosmetic Baubles.<br>
+NEW Generating Flowers:Omni Violet.<br>
+
 16/4/22<br>
 NEW Functional Flowers:Necrofleur, NumeronDandelife and Woodienia.<br>
 WOW shield render.<br>

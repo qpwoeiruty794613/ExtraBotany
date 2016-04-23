@@ -18,6 +18,8 @@ public class ConfigHandler {
 	public static int enchGaiaBlessing;
 	
 	public static int extraShieldAmount;
+	
+	public static boolean disableShieldRender;
 
 	public ConfigHandler(FMLPreInitializationEvent event)
 	{
@@ -36,5 +38,6 @@ public class ConfigHandler {
 		efficiencyBlueenchantress = config.get(LibReference.CATEGORY_COMMON, "efficiencyBlueenchantress", 100, StatCollector.translateToLocal(LibReference.PREFIX_CONFIG + "efficiencyBlueenchantress.desc")).getInt();
 		efficiencyCandyflower = config.get(LibReference.CATEGORY_COMMON, "efficiencyCandyflower", 5, StatCollector.translateToLocal(LibReference.PREFIX_CONFIG + "efficiencyCandyflower.desc")).getInt();
 		shieldBarHeight = config.get(LibReference.CATEGORY_CLIENT, "shieldBarHeight", 29, StatCollector.translateToLocal(LibReference.PREFIX_CONFIG + "shieldBarHeight.desc")).getInt();
+		disableShieldRender = config.get(LibReference.CATEGORY_CLIENT, "disableShieldRender", false, StatCollector.translateToLocal(LibReference.PREFIX_CONFIG + "disableShieldRender.desc")).getBoolean();
 	}
 }

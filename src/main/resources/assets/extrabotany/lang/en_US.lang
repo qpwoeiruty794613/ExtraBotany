@@ -49,6 +49,10 @@ item.ExtraBotany.SpawnLycorisRandom.desc=Spawn a Random Lycorisdiata
 # -ADVANCED
 item.botania:gaiaTablet.name=Gaia Tablet
 item.teleportpearl.name=Teleport Pearl
+item.botania:dog0.name=Annoying Dog
+item.botania:dog1.name=P90
+item.botania:dog2.name=Annoying Dog
+item.botania:dog3.name=Annoying Dog
 
 # -DICE
 item.botania:dice20.name=D20
@@ -186,9 +190,9 @@ tile.botania:flower.moonlightlily.name=Moonlight Lily
 tile.botania:flower.moonlightlily.reference=May you find all you have lost
 botania.tagline.moonlightlily=The Priestess of the Moon
 
-tile.botania:flower.artifaconia.name=Artifaconia
-tile.botania:flower.artifaconia.reference=The Forbidden Secret
-botania.tagline.artifaconia=Why are you so Experienced
+tile.botania:flower.omniviolet.name=Omni Violet
+tile.botania:flower.omniviolet.reference=Need not to know
+botania.tagline.omniviolet=Eye of Providence
 
 # -FUNCTIONAL
 tile.botania:flower.numerondandelife.name=Numeron Dandelife
@@ -202,6 +206,10 @@ botania.tagline.necrofleur=My Death Note
 tile.botania:flower.woodienia.name=Woodienia
 tile.botania:flower.woodienia.reference=Curse of the Full Moon
 botania.tagline.woodienia=Nothing is more interesting than felling trees
+
+tile.botania:flower.artifaconia.name=Artifaconia
+tile.botania:flower.artifaconia.reference=The Forbidden Secret
+botania.tagline.artifaconia=Why are you so Experienced
 
 #ACHIEVEMENTS
 # -RELICS

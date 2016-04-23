@@ -102,10 +102,11 @@ public class RenderShield implements IShieldHandler{
 		Tessellator tes = Tessellator.instance;
 		ShaderHelper.useShader(ShaderHelper.halo);
 		tes.startDrawingQuads();
-		tes.addVertexWithUV(-1.5, 0, -1.5, 0, 0);
-		tes.addVertexWithUV(-1.5, 0, 1.5, 0, 1);
-		tes.addVertexWithUV(1.5, 0, 1.5, 1, 1);
-		tes.addVertexWithUV(1.5, 0, -1.5, 1, 0);
+		tes.setColorRGBA_F(0.0F, 0.0F, 0.0F, 0.5F);
+		tes.addVertexWithUV(-0.85, 0, -0.85, 0, 0);
+		tes.addVertexWithUV(-0.85, 0, 0.85, 0, 1);
+		tes.addVertexWithUV(0.85, 0, 0.85, 1, 1);
+		tes.addVertexWithUV(0.85, 0, -0.85, 1, 0);
 		tes.draw();
 		ShaderHelper.releaseShader();
 		

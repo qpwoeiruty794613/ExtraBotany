@@ -46,13 +46,12 @@ public class EventShield implements IShieldHandler{
 	@SideOnly(Side.CLIENT)
 	public void renderShield(RenderPlayerEvent event, RenderType type){
 		EntityPlayer player = event.entityPlayer;
-		if(getShieldAmount(player) > 0F){	
+		if(getShieldAmount(player) > 0F && ConfigHandler.disableShieldRender == false){	
 			GL11.glPushMatrix();
 			GL11.glColor4f(1F, 1F, 1F, 1F);
 			RenderShield.renderShield(player, event.partialRenderTick);
 			GL11.glPopMatrix();
 		}
-		
 	}
 	
 	@SubscribeEvent

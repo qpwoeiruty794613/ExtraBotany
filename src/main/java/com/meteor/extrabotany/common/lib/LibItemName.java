@@ -26,6 +26,7 @@ public class LibItemName {
 	public static final String DICE20 = "dice20";
 	
 	//Armor
+	public static final String BAUBLEDOG = "dog";
 	
 	//Advanced
 	public static final String GAIATABLET = "gaiaTablet";

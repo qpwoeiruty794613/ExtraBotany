@@ -49,6 +49,10 @@ item.ExtraBotany.SpawnLycorisRandom.desc=随机生成一朵彼岸花
 # -ADVANCED
 item.botania:gaiaTablet.name=盖亚石板
 item.teleportpearl.name=传送珍珠
+item.botania:dog0.name=波动狗
+item.botania:dog1.name=P90
+item.botania:dog2.name=波动狗
+item.botania:dog3.name=波动狗
 
 # -DICE
 item.botania:dice20.name=D20
@@ -190,9 +194,9 @@ tile.botania:flower.moonlightlily.name=月光百合
 tile.botania:flower.moonlightlily.reference=愿你能找到所有失去的东西
 botania.tagline.moonlightlily=月亮祭司
 
-tile.botania:flower.artifaconia.name=古遗莲
-tile.botania:flower.artifaconia.reference=禁忌的秘密
-botania.tagline.artifaconia=你为什么会这么熟练
+tile.botania:flower.omniviolet.name=全知槿
+tile.botania:flower.omniviolet.reference=Need not to know
+botania.tagline.omniviolet=普罗维登斯之眼
 
 # -FUNCTIONAL
 tile.botania:flower.numerondandelife.name=源命英
@@ -206,6 +210,10 @@ botania.tagline.necrofleur=我的死亡笔记
 tile.botania:flower.woodienia.name=伐木花
 tile.botania:flower.woodienia.reference=满月的诅咒
 botania.tagline.woodienia=没有比砍伐更有趣的事情了
+
+tile.botania:flower.artifaconia.name=古遗莲
+tile.botania:flower.artifaconia.reference=禁忌的秘密
+botania.tagline.artifaconia=你为什么会这么熟练
 
 #ACHIEVEMENTS
 # -RELICS
