@@ -27,6 +27,7 @@ public class BlockSpecial extends BlockSpecialFlower {
 			LibBlockName.NUMERON_DANDELIFE,
 			LibBlockName.NECRO_FLUER,
 			LibBlockName.WOODIENIA,	
+			LibBlockName.VOLATILILY,
 		}));
 	}	
 		

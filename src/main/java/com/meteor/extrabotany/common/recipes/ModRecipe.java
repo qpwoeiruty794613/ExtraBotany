@@ -17,6 +17,9 @@ import cpw.mods.fml.common.registry.GameRegistry;
 public class ModRecipe {
 	
 	public static void init(){
+		ModManaInfusionRecipe.init();
+		ModPetalRecipe.init();
+		
 		GameRegistry.addShapedRecipe(new ItemStack(ModItems.teleportpearl, 16), 
 				new Object[] {"AAA","ABA","AAA", 'A', new ItemStack(vazkii.botania.common.item.ModItems.manaBottle), 'B', Items.ender_pearl});
 		//For Basics

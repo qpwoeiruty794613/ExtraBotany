@@ -216,6 +216,10 @@ tile.botania:flower.artifaconia.name=古遗莲
 tile.botania:flower.artifaconia.reference=禁忌的秘密
 botania.tagline.artifaconia=你为什么会这么熟练
 
+tile.botania:flower.volatilily.name=波动百合
+tile.botania:flower.volatilily.reference=我的内心毫无波动,甚至还想笑
+botania.tagline.volatilily=它非常喜欢钓鱼
+
 #ACHIEVEMENTS
 # -RELICS
 achievement.botania:aphroditegrace=Love & Peace

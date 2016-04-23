@@ -212,6 +212,10 @@ tile.botania:flower.artifaconia.name=Artifaconia
 tile.botania:flower.artifaconia.reference=The Forbidden Secret
 botania.tagline.artifaconia=Why are you so Experienced
 
+tile.botania:flower.volatilily.name=Volatilily
+tile.botania:flower.volatilily.reference=It's the little white Toby Fox dog from Undertale
+botania.tagline.volatilily=It's keen on fishing
+
 #ACHIEVEMENTS
 # -RELICS
 achievement.botania:aphroditegrace=Love & Peace

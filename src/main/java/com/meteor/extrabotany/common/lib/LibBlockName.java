@@ -10,6 +10,7 @@ public class LibBlockName {
 	public static final String NUMERON_DANDELIFE =  "numerondandelife";
 	public static final String NECRO_FLUER = "necrofleur";
 	public static final String WOODIENIA = "woodienia";
+	public static final String VOLATILILY = "volatilily";
 	
 	public static final String RELICPLATE = "relicplate";
 	

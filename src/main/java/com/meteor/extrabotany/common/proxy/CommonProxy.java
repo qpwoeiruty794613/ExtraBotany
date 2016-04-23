@@ -28,10 +28,8 @@ public class CommonProxy {
 		ModItems.init();
 		ModEnchantment.init();
 		ModEntities.init();
-		ModPetalRecipe.init();
 		ModRecipe.init();
 		ModAchievement.init();
-		ModManaInfusionRecipe.init();
 		ModPotionEffect.init();
 		LexiconModData.init();
 		ModMutilBlocks.init();
