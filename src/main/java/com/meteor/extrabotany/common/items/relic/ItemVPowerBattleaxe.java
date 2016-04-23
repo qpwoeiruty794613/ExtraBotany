@@ -48,8 +48,10 @@ public class ItemVPowerBattleaxe extends ItemRelic implements IManaUsingItem{
 	
 	@Override
 	public ItemStack onItemRightClick(ItemStack par1ItemStack, World par2World, EntityPlayer par3EntityPlayer) {
+		if(ItemRelic.isRightPlayer(par3EntityPlayer, par1ItemStack)){
 		par3EntityPlayer.setItemInUse(par1ItemStack, getMaxItemUseDuration(par1ItemStack));
 		setCharging(par1ItemStack, true);
+		}
 		return par1ItemStack;
 	}
 

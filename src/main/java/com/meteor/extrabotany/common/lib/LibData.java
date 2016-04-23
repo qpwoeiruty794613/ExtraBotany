@@ -3,8 +3,8 @@ package com.meteor.extrabotany.common.lib;
 import java.util.List;
 
 import com.google.common.collect.Lists;
+import com.meteor.extrabotany.api.IDataHandler;
 import com.meteor.extrabotany.common.ExtraBotany;
-import com.meteor.extrabotany.common.handler.IDataHandler;
 import com.valentin4311.candycraftmod.CandyCraft;
 
 import net.minecraft.block.Block;
@@ -59,5 +59,19 @@ public class LibData {
 			return LibRegistry.getFuelValue(stack);		
 		}
 	
+    }
+    
+    public static int getBookBurnTime(ItemStack stack){
+    	if (stack == null)
+        {
+            return 0;
+        }
+        else
+        {	
+        	Item item = stack.getItem();
+        	if (item == Items.book) return 25;
+        	if (item == Items.written_book) return 35;
+        }
+    	return LibRegistry.getFuelValue(stack);	
     }
 }

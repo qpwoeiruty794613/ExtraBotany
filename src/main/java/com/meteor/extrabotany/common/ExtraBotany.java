@@ -1,32 +1,15 @@
 package com.meteor.extrabotany.common;
 
-import java.util.ArrayList;
+import java.util.LinkedHashSet;
+import java.util.Set;
 
-import org.apache.commons.lang3.ArrayUtils;
-
-import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemMonsterPlacer;
 import net.minecraft.util.EnumChatFormatting;
-import net.minecraft.world.biome.BiomeGenBase;
-import net.minecraftforge.common.BiomeDictionary;
-import net.minecraftforge.common.BiomeDictionary.Type;
 import vazkii.botania.api.BotaniaAPI;
 import vazkii.botania.api.lexicon.KnowledgeType;
 
-import com.meteor.extrabotany.client.proxy.ClientProxy;
-import com.meteor.extrabotany.client.render.entity.RenderLycorisradiataGreen;
-import com.meteor.extrabotany.client.render.entity.RenderLycorisradiataPurple;
-import com.meteor.extrabotany.client.render.entity.RenderLycorisradiataRed;
-import com.meteor.extrabotany.common.entity.EntityLycorisradiata;
-import com.meteor.extrabotany.common.entity.EntityLycorisradiataGreen;
-import com.meteor.extrabotany.common.entity.EntityLycorisradiataPurple;
-import com.meteor.extrabotany.common.entity.EntityLycorisradiataRed;
-import com.meteor.extrabotany.common.items.ModItems;
 import com.meteor.extrabotany.common.lib.LibReference;
 import com.meteor.extrabotany.common.proxy.CommonProxy;
 
-import cpw.mods.fml.client.registry.RenderingRegistry;
 import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -35,6 +18,7 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.event.FMLServerStartingEvent;
 
 @Mod(modid = LibReference.MOD_ID, name = LibReference.MOD_NAME, version = LibReference.VERSION, dependencies = LibReference.DEPENDENCIES)
 public class ExtraBotany {
@@ -49,12 +33,12 @@ public class ExtraBotany {
 	
 	public static KnowledgeType extraKnowledge;
 	
-	public static final CreativeTabs tabExtraBotany = new CreativeTabs(LibReference.MOD_NAME) {
-		@Override
-        public Item getTabIconItem() {
-                return ModItems.dice20;
-            }
-		};
+	public static final ExtraBotanyCreativeTab tabExtraBotany = new ExtraBotanyCreativeTab(); 
+	public static Set<String> subtilesForCreativeMenu = new LinkedHashSet();
+	
+	public static void addSubTileToCreativeMenu(String key) {
+		subtilesForCreativeMenu.add(key);
+	}
 
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event)
@@ -71,10 +55,6 @@ public class ExtraBotany {
 	public void Init(FMLInitializationEvent event)
 	{
 		proxy.init(event);
-		
-		RenderingRegistry.registerEntityRenderingHandler(EntityLycorisradiataRed.class, new RenderLycorisradiataRed());
-		RenderingRegistry.registerEntityRenderingHandler(EntityLycorisradiataGreen.class, new RenderLycorisradiataGreen());
-		RenderingRegistry.registerEntityRenderingHandler(EntityLycorisradiataPurple.class, new RenderLycorisradiataPurple());
 	}
 	
 	@EventHandler
@@ -82,5 +62,11 @@ public class ExtraBotany {
 	{
 
 	}
+	
+	@EventHandler
+    public void serverStarting(FMLServerStartingEvent event)
+    {
+    	proxy.serverStarting(event);
+    }
 
 }

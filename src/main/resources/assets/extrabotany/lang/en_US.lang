@@ -2,14 +2,32 @@
 botania.knowledge.extra=&3Extra&7 Knowledge
 botaniamisc.knowledgeUnlock=The Blank Card is unusually shining, the Lexicon which you are holding is injected with a mystery energy.
 
-# ITEMGROUP
+#ITEMGROUP
 itemGroup.ExtraBotany=ExtraBotany
+
+#POTIONEFFECTS
+potion.fastparticlesorting=Fast Particle Sorting
+potion.slowparticlesorting=Slow Particle Sorting
+potion.residualpain=Residual Pain
+potion.fastparticlesorting.postfix=Potion of Fast Particle Sorting 
+potion.residualpain.postfix=Potion of Residual Pain
+
+#BLOCKS
+# -BASIC
+tile.blockelvenquartz.name=Block of Elementium Quartz
+tile.botania:quartzStairsElven.name=Elementium Quartz Stairs
+tile.botania:blockelvenquartz0Slab.name=Elementium Quartz Slab
+tile.blockgaiaquartz.name=Block of Gaia Quartz
+tile.botania:quartzStairsGaia.name=Gaia Quartz Stairs
+tile.botania:blockgaiaquartz0Slab.name=Gaia Quartz Slab
 
 #ITEMS
 # -ARMORSET
 botania.armorset.armorrelic.name=Strength of Old Gods
 
 # -BASIC
+item.elvenquartz.name=Elementium Quartz
+item.gaiaquartz.name=Gaia Quartz
 item.prismaticshard.name=Prismatic Shard
 item.gaiaessence.name=Gaia Essence
 item.blankcard.name=Blank Card
@@ -17,6 +35,7 @@ item.astralforce.name=Astral Force
 item.petalred.name=Red Petal of Lycorisradiata
 item.petalgreen.name=Green Petal of Lycorisradiata
 item.petalpurple.name=Purple Petal of Lycorisradiata
+item.goldstring.name=Golden Infused String
 
 # -SPAWNCARDS
 item.ExtraBotany.SpawnCardLycorisdiataRed.name=Cards of Red Lycorisdiata
@@ -30,19 +49,33 @@ item.ExtraBotany.SpawnLycorisRandom.desc=Spawn a Random Lycorisdiata
 
 # -ADVANCED
 item.botania:gaiaTablet.name=Gaia Tablet
+item.teleportpearl.name=Teleport Pearl
+item.botania:dog0.name=Annoying Dog
+item.botania:dog1.name=P90
+item.botania:dog2.name=Annoying Dog
+item.botania:dog3.name=Annoying Dog
 
 # -DICE
 item.botania:dice20.name=D20
 item.emptydice.name=Empty Dice
-botaniamisc.uselessDiceRoll=The dice lands on a %s, it seemed to be transfered to an empty dice afterward.
+botaniamisc.uselessDiceRoll=The dice lands on a %s, it seemed to be transfered to a strange item afterward.
 
 # -RELIC
-item.botania:excaliber.name=§6Excaliber
+item.botania:excaliber.name=Excaliber
 item.botania:excaliberfake.name=Excaliber
 item.botania:vhandgun_double.name=Handguns of Valkyrie
 item.botania:vpowerbattleaxe.name=Powered Battleaxe of Valkyrie
-item.botania:vrangerboots.name=Ranger Boots of Valkrie
+item.botania:vrangerboots.name=Ranger Boots of Valkyrie
 item.botania:hestiachastity.name=Chastity of Hestia
+item.botania:maxwelldemon.name=Maxwell's Demon
+item.botania:athenabless.name=Athena's Bless
+item.botania:aphroditegrace.name=Aphrodite's Grace
+item.botania:cronusphantom.name=Phantom of Cronus
+item.botania:hermestravelclothing.name=Hermes's Travel Clothing
+
+# -FOR DEVELOPER
+item.test.name=Test Item
+item.test.desc=ONLY FOR DEVELOPER
 
 # LEXICON ENTRIES
 # -GENERATING
@@ -69,11 +102,79 @@ botania.page.moonlightlily0=This is the dark side of the &1Sunshine Lily&0, can 
 botania.page.moonlightlily1=&1Moonlight Lily&0 also has a stronger vitality, this means it won't decay. As a result, its crafting recipe is more expensive, too. Of course, as a Passive Flowers, it still suffers diminishing returns from having any adjacent.
 botania.page.moonlightlily2=Sowing of the Fool.
 
+# -FUNCTIONAL
+# --NECROFLEUR
+botania.entry.necrofleur=Necrofleur
+botania.page.necrofleur0=
+botania.page.necrofleur1=
+
+# --NUMERONDANDELIFE
+botania.entry.numerondandelife=Numeron Dandelife
+botania.page.numerondandelife0=Standing next to the &1Numeron Dandelife&0, you will gain &1Shield&0 at a high speed and it will also remove &1Bad Effects&0 that you have. But notice, &1Numeron Dandelife&0 should be placed in a place that its &4x-coordinate&0 and &4z-coordinate&0 are the &4Multiple of 6&0, or it won't work.
+botania.page.numerondandelife1=Please obey the basic law.
+
+# --WOODIENIA
+botania.entry.woodienia=Woodienia
+botania.page.woodienia0=&1Woodienia&0 can quickly break nearby &1Wood&0 blocks and drop them as items if you give it just a small amount of &4Mana&0. 
+botania.page.woodienia1=One tree a day keeps the mess away.
+
+# -OTHERS
 # --INFINITYMANA
 botania.entry.infinitymana=Infinite Mana
 
+# -RELICS
+# --HESTIACHASTITY
+botania.entry.hestiachastity=Chastity of Hestia
+botania.tagline.hestiachastity=Adamant and Indomitable
+botania.page.hestiachastity0=
+
+# --MAXWELLDEMON
+botania.entry.maxwelldemon=Maxwell's Demon
+botania.tagline.maxwelldemon=Perpetual Motion Machine!?
+botania.page.maxwelldemon0=
+
+# --ATHENABLESS
+botania.entry.athenabless=Athena's Bless
+botania.tagline.athenabless=A Blessing of Wisdom.
+botania.page.athenabless0=
+
+# --APHRODITEGRACE
+botania.entry.aphroditegrace=Aphrodite's Grace
+botania.tagline.aphroditegrace=Escape from Agony.
+botania.page.aphroditegrace0=
+
+# --DICE20
+botania.entry.dice20=D20
+botania.tagline.dice20=Reroll your Destiny.
+botania.page.dice200=
+
+# --EXCALIBER
+botania.entry.excaliber=Excaliber
+botania.tagline.excaliber=Victory and Vow.
+botania.page.excaliber0=
+
+# --EXCALIBERFAKE
+botania.entry.excaliberfake=Excaliber
+botania.tagline.excaliberfake=Dying Light.
+botania.page.excaliberfake0=
+
+# --VPOWERBATTLEAXE
+botania.entry.vpowerbattleaxe=Powered Battleaxe of Valkyrie
+botania.tagline.vpowerbattleaxe=The 300!
+botania.page.vpowerbattleaxe0=
+
+# --VRANGERBOOTS
+botania.entry.vrangerboots=Ranger Boots of Valkyrie
+botania.tagline.vrangerboots=Faster Moving.
+botania.page.vrangerboots0=
+
+# --VHANDGUN
+botania.entry.vhandgun=Handguns of Valkyrie
+botania.tagline.vhandgun=Shoot with mana.
+botania.page.vhandgun0=
+
 #FLOWER NAMES
-# - GENERATING
+# -GENERATING
 tile.botania:flower.candyflower.name=Candy Flower
 tile.botania:flower.candyflower.reference=The Sweetest love
 botania.tagline.candyflower=Sweets lover
@@ -90,5 +191,73 @@ tile.botania:flower.moonlightlily.name=Moonlight Lily
 tile.botania:flower.moonlightlily.reference=May you find all you have lost
 botania.tagline.moonlightlily=The Priestess of the Moon
 
+tile.botania:flower.omniviolet.name=Omni Violet
+tile.botania:flower.omniviolet.reference=Need not to know
+botania.tagline.omniviolet=Eye of Providence
+
+# -FUNCTIONAL
+tile.botania:flower.numerondandelife.name=Numeron Dandelife
+tile.botania:flower.numerondandelife.reference=Too young, Too simple, Sometimes naive
+botania.tagline.numerondandelife=I am Angry
+
+tile.botania:flower.necrofleur.name=Necrofleur
+tile.botania:flower.necrofleur.reference=The only cure is Dying
+botania.tagline.necrofleur=My Death Note
+
+tile.botania:flower.woodienia.name=Woodienia
+tile.botania:flower.woodienia.reference=Curse of the Full Moon
+botania.tagline.woodienia=Nothing is more interesting than felling trees
+
 tile.botania:flower.artifaconia.name=Artifaconia
 tile.botania:flower.artifaconia.reference=The Forbidden Secret
+botania.tagline.artifaconia=Why are you so Experienced
+
+tile.botania:flower.volatilily.name=Volatilily
+tile.botania:flower.volatilily.reference=It's the little white Toby Fox dog from Undertale
+botania.tagline.volatilily=It's keen on fishing
+
+#ACHIEVEMENTS
+# -RELICS
+achievement.botania:aphroditegrace=Love & Peace
+achievement.botania:aphroditegrace.desc=Be rewarded the Aphrodite's Grace for a heroic feat
+achievement.botania:dice20=Reroll you destiny
+achievement.botania:dice20.desc=Get the D20!
+achievement.botania:athenabless=白金ディスコ
+achievement.botania:athenabless.desc=Be rewarded the Athena's Bless for a heroic feat
+//achievement.botania:excaliber=The Light does not Discriminate
+//achievement.botania:excaliber.desc=Get the Excaliber!
+achievement.botania:excaliberfake=Put Your Faith in the Light
+achievement.botania:excaliberfake.desc=Be rewarded Excaliber for a heroic feat
+achievement.botania:hestiachastity=Light of Ruin
+achievement.botania:hestiachastity.desc=Be rewarded Chastity of Hestia for a heroic feat
+achievement.botania:maxwelldemon=Perpetual Motion Machine of the Second Category!?
+achievement.botania:maxwelldemon.desc=Be rewarded Maxwell's Demon for a heroic feat
+achievement.botania:vpowerbattleaxe=Tell Your World
+achievement.botania:vpowerbattleaxe.desc=Be rewarded Powered Battleaxe of Valkyrie for a heroic feat
+achievement.botania:vrangerboots=悪ノ召使
+achievement.botania:vrangerboots.desc=Be rewarded Ranger Boots of Valkyrie for a heroic feat
+achievement.botania:vhandgun=悪ノ娘
+achievement.botania:vhandgun.desc=Be rewarded Handguns of Valkyrie for a heroic feat
+
+#ENCHANTMENT
+enchantment.gaiablessing=Gaia's Blessing
+
+#COMMANDS
+commands.ExtraBotany.getShieldAmount.desc=/getShieldAmount [player]
+commands.ExtraBotany.getShieldAmount.success=Player %1$s now has shield %2$s .
+commands.ExtraBotany.setShieldAmount.desc=/setShieldAmount [玩家] [数值]
+commands.ExtraBotany.setShieldAmount.success=Successful! Player %1$s now has shield %2$s .
+commands.ExtraBotany.addShieldAmount.desc=/addShieldAmount [玩家] [数值]
+commands.ExtraBotany.addShieldAmount.success=Successful! Player %1$s now has shield %2$s .
+
+#CONFIG
+# -COMMON
+config.ExtraBotany.extraShieldAmount.desc=The Amount of Extra shield bar.
+config.ExtraBotany.ench.desc=ID of Enchantment.
+config.ExtraBotany.efficiencySunshinelily.desc=The efficiency of Sunshine Lily.
+config.ExtraBotany.efficiencyMoonlightlily.desc=The efficiency of Moonlight Lily.
+config.ExtraBotany.efficiencyBlueenchantress.desc=The efficiency of Blue Enchantress.
+config.ExtraBotany.efficiencyCandyflower.desc=The efficiency of Candy Flower.
+
+# -CLIENT
+config.ExtraBotany.shieldBarHeight.desc=The height of the shield display bar is under the mana display bar. You can change this if you have changed where the mana display bar is.

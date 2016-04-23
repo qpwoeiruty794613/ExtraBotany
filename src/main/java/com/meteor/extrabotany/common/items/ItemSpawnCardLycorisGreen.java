@@ -3,6 +3,7 @@ package com.meteor.extrabotany.common.items;
 import java.util.List;
 
 import com.meteor.extrabotany.common.ExtraBotany;
+import com.meteor.extrabotany.common.entity.EntityGaiaIII;
 import com.meteor.extrabotany.common.entity.EntityLycorisradiataGreen;
 
 import cpw.mods.fml.common.registry.GameRegistry;

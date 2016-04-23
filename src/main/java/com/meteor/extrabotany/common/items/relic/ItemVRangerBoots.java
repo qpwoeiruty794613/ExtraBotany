@@ -1,6 +1,7 @@
 package com.meteor.extrabotany.common.items.relic;
 
 import vazkii.botania.common.core.handler.ConfigHandler;
+import vazkii.botania.common.item.relic.ItemRelic;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.attributes.AttributeModifier;
@@ -30,11 +31,6 @@ public class ItemVRangerBoots extends ItemRelicArmorSet{
 	}
 	
 	@Override
-	public String getArmorTextureAfterInk(ItemStack stack, int slot) {
-		return LibReference.MODEL_RELIC;
-	}
-	
-	@Override
 	public Multimap getItemAttributeModifiers() {
 		Multimap multimap = HashMultimap.create();
 		multimap.put(SharedMonsterAttributes.movementSpeed.getAttributeUnlocalizedName(), new AttributeModifier(field_111210_e, "Armor modifier", 0.6, 1));
@@ -49,6 +45,7 @@ public class ItemVRangerBoots extends ItemRelicArmorSet{
 		        EntityPlayer player = (EntityPlayer) event.entity;
 		        for(ItemStack stack : player.inventory.armorInventory) {
 		            if(stack != null && stack.getItem() instanceof ItemVRangerBoots) {
+		            	if(ItemRelic.isRightPlayer(player, stack))
 		            	if((int)event.distance >=10)
 		            		stack.damageItem((int)event.distance, player);
 		                
@@ -63,7 +60,9 @@ public class ItemVRangerBoots extends ItemRelicArmorSet{
 			        EntityPlayer player = (EntityPlayer) event.entity;
 			        for(ItemStack stack : player.inventory.armorInventory) {
 			            if(stack != null && stack.getItem() instanceof ItemVRangerBoots) {
-			            	if(player.isUsingItem())event.entity.motionY *=2;
+			            	if(ItemRelic.isRightPlayer(player, stack))
+			            	if(player.isUsingItem())
+			            		event.entity.motionY *=2;
 			            	
 			            	event.entity.motionY *=1.2;
 			     
@@ -79,6 +78,7 @@ public class ItemVRangerBoots extends ItemRelicArmorSet{
 			        for(ItemStack stack : player.inventory.armorInventory) {
 			            if(stack != null && stack.getItem() instanceof ItemVRangerBoots) {
 			            	 if (event.player.isAirBorne&& event.player.isSneaking()){
+			            		 if(ItemRelic.isRightPlayer(player, stack))
 			            		 event.player.motionY = -0.2;
 			            		 event.player.motionX *= 1.05;
 			            		 event.player.motionZ *= 1.05;

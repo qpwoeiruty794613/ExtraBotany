@@ -2,14 +2,32 @@
 botania.knowledge.extra=&3额外&7的知识
 botaniamisc.knowledgeUnlock=白卡闪耀着异样的光芒,你手中的手册被注入了神秘的力量.
 
-# ITEMGROUP
+#ITEMGROUP
 itemGroup.ExtraBotany=额外植物学
+
+#POTIONEFFECTS
+potion.fastparticlesorting=快速粒子归类
+potion.slowparticlesorting=慢速粒子排序
+potion.residualpain=痛觉残留
+potion.fastparticlesorting.postfix=快速粒子归类药水
+potion.residualpain.postfix=痛觉残留药水
+
+#BLOCKS
+# -BASIC
+tile.blockelvenquartz.name=源质石英块
+tile.botania:quartzStairsElven.name=源质石英楼梯
+tile.botania:blockelvenquartz0Slab.name=源质石英台阶
+tile.blockgaiaquartz.name=盖亚石英块
+tile.botania:quartzStairsGaia.name=盖亚石英楼梯
+tile.botania:blockgaiaquartz0Slab.name=盖亚石英台阶
 
 #ITEMS
 # -ARMORSET
 botania.armorset.armorrelic.name=古神之力
 
 # -BASIC
+item.elvenquartz.name=源质石英
+item.gaiaquartz.name=盖亚石英
 item.prismaticshard.name=彩虹碎片
 item.gaiaessence.name=盖亚精华
 item.blankcard.name=白卡
@@ -17,6 +35,7 @@ item.astralforce.name=星光之力
 item.petalred.name=红色彼岸花瓣
 item.petalgreen.name=绿色彼岸花瓣
 item.petalpurple.name=紫色彼岸花瓣
+item.goldstring.name=注魔金线
 
 # -SPAWNCARDS
 item.ExtraBotany.SpawnCardLycorisdiataRed.name=红色彼岸花之卡
@@ -30,19 +49,33 @@ item.ExtraBotany.SpawnLycorisRandom.desc=随机生成一朵彼岸花
 
 # -ADVANCED
 item.botania:gaiaTablet.name=盖亚石板
+item.teleportpearl.name=传送珍珠
+item.botania:dog0.name=波动狗
+item.botania:dog1.name=P90
+item.botania:dog2.name=波动狗
+item.botania:dog3.name=波动狗
 
 # -DICE
 item.botania:dice20.name=D20
 item.emptydice.name=空骰子
-botaniamisc.uselessDiceRoll=骰子停在了%s上,接着就变回了空骰子.
+botaniamisc.uselessDiceRoll=骰子停在了%s上,接着变成了奇怪的东西.
 
 # -RELIC
-item.botania:excaliber.name=§6王者圣剑
-item.botania:excaliberfake.name==王者之剑
+item.botania:excaliber.name=王者圣剑
+item.botania:excaliberfake.name=王者之剑
 item.botania:vhandgun_double.name=V制式手炮
 item.botania:vpowerbattleaxe.name=V制式动力战斧
 item.botania:vrangerboots.name=V制式游侠靴
 item.botania:hestiachastity.name=赫斯提亚的贞洁
+item.botania:maxwelldemon.name=麦克斯韦的妖精
+item.botania:athenabless.name=雅典娜的庇佑
+item.botania:aphroditegrace.name=阿佛洛狄忒的恩宠
+item.botania:cronusphantom.name=克洛诺斯的幻影
+item.botania:hermestravelclothing.name=赫尔墨斯的旅行衣
+
+# -FOR DEVELOPER
+item.test.name=测试道具
+item.test.desc=仅作测试
 
 # LEXICON ENTRIES
 # -GENERATING
@@ -69,15 +102,79 @@ botania.page.moonlightlily0=它是&1日耀百合&0的另一面,能 够在黑夜�
 botania.page.moonlightlily1=&1月光百合&0也同样拥有着强大 的生命力.作为对价,所需 要的材料也较为昂贵.同时 作为被动产能,它依旧会因 周围的个体而降低效率.
 botania.page.moonlightlily2=愚者的播种.
 
-# -RELICS
+# -FUNCTIONAL
+# --NECROFLEUR
+botania.entry.necrofleur=死之花
+botania.page.necrofleur0=
+botania.page.necrofleur1=
 
+# --NUMERONDANDELIFE
+botania.entry.numerondandelife=源命英
+botania.page.numerondandelife0=站在&1源命英&0的旁边,你将会 非常快速地获得&1护盾值&0,并 且它会移除你身上的&1debuff&0. 但也请注意,&1源命英&0必须放 置在&4X轴&0和&4Z轴&0都是&46的倍数&0 的地方,否则它会罢工.
+botania.page.numerondandelife1=请遵循基本法.
+
+# --WOODIENIA
+botania.entry.woodienia=伐木花
+botania.page.woodienia0=即是你给&1伐木花&0非常少量的 &4魔力&0,它也能非常迅速地砍 伐周围的&1原木&0并将它们以掉 落物形式出现.
+botania.page.woodienia1=每天一棵树,烦恼不再有.
 
 # -OTHERS
 # --INFINITYMANA
 botania.entry.infinitymana=无限魔力
 
+# -RELICS
+# --HESTIACHASTITY
+botania.entry.hestiachastity=赫斯提亚的贞洁
+botania.tagline.hestiachastity=坚毅不屈.
+botania.page.hestiachastity0=&1赫斯提亚的贞洁&0是女灶神&4赫 斯提亚&0,这样一位贞洁无暇 的女子的象征.当装备有&1赫 斯提亚的贞洁&0,受到伤害时 能召唤洁白的魔力风暴, 追踪周围的敌人并向其发动进 攻.
+
+# --MAXWELLDEMON
+botania.entry.maxwelldemon=麦克斯韦的妖精
+botania.tagline.maxwelldemon=第一类永动机!?
+botania.page.maxwelldemon0=&4麦克斯韦&0诙谐的假定一种" 妖",能够按照某种秩序和 规则把作随机热运动的微粒 分配到一定的相格里.而&1麦 克斯韦的妖精&0就是这样一种 饮料.每次食用后,&4慢速粒 子排序&0能为你吸收掉绝大部 分的伤害,而&4快速粒子归类&0 能使你的挖掘效率得到大大 提升.并且当你没有护盾时 能得到一定护盾值.
+
+# --ATHENABLESS
+botania.entry.athenabless=雅典娜的庇佑
+botania.tagline.athenabless=智慧的祝福.
+botania.page.athenabless0=乌云与雷电的主宰者,智慧 女神&4雅典娜&0的遗物.&1雅典娜 的庇佑&0能帮你承受来自遗物 的惩罚,并且能把你所造成 的伤害按照一定比例转化为 护盾值.
+
+# --APHRODITEGRACE
+botania.entry.aphroditegrace=阿佛洛狄忒的恩宠
+botania.tagline.aphroditegrace=远离苦痛.
+botania.page.aphroditegrace0=爱与美之神,司管人间一切 爱情的女神的象征.这件从 泡沫中诞生的遗物,能将所 受到的伤害按一定比例转化 为护盾值,并清除自身的负 面状态.但从泡沫中诞生的 遗物啊,最终还将回到泡沫 中.
+
+# --DICE20
+botania.entry.dice20=D20
+botania.tagline.dice20=命运一掷.
+botania.page.dice200=拥有着二十面的命运骰子, 搭载着18件传说中的遗物, 能将其中的魔力转化为一件 &4遗物&0.
+
+# --EXCALIBER
+botania.entry.excaliber=王者圣剑
+botania.tagline.excaliber=胜利与誓约.
+botania.page.excaliber0=&1王者圣剑&0继承了所有原本失 去的能力,并迸发出了更加 强大的新能力.现在的&1王者 圣剑&0除了拥有着挥舞时召唤 魔力光束自动追踪并打击敌 人,持有时能够得到速度加 成,还能右键召唤出巴比伦 武器进行AOE打击.
+
+# --EXCALIBERFAKE
+botania.entry.excaliberfake=王者之剑
+botania.tagline.excaliberfake=消失的光芒.
+botania.page.excaliberfake0=&1王者圣剑&0的光芒四散,其光 泽逐渐消褪,最终变成了黯 淡的&1王者之剑&0.但幸运的是 ,其四散的能力被其他一些 遗物所吸收,或许终有一日 &1王者之剑&0还能重现辉煌.
+
+# --VPOWERBATTLEAXE
+botania.entry.vpowerbattleaxe=V制式动力战斧
+botania.tagline.vpowerbattleaxe=The 300!
+botania.page.vpowerbattleaxe0=继承了&1王者圣剑&0的部分能力 ,拥有着超高的打击能力, 右键能召唤出巴比伦武器. 但因为其重量大,持有时速 度会减缓.
+
+# --VRANGERBOOTS
+botania.entry.vrangerboots=V制式游侠靴
+botania.tagline.vrangerboots=迅捷如风.
+botania.page.vrangerboots0=装备后&1V制式游侠靴&0移动速 度能够大大提升,跳跃力也 有所增加,并且能够免疫来 自掉落的伤害.同时按住&4ctrl&0 时能够进行一次大跳,按住 &4shift&0时能够在空中滑行.
+
+# --VHANDGUN
+botania.entry.vhandgun=V制式手炮
+botania.tagline.vhandgun=魔力射击.
+botania.page.vhandgun0=继承了&1王者圣剑&0的部分能力 ,能够非常快速地射出魔力 光束自动追踪并打击敌人.
+
 #FLOWER NAMES
-# - GENERATING
+# -GENERATING
 tile.botania:flower.candyflower.name=糖果花
 tile.botania:flower.candyflower.reference=最甜蜜的爱
 botania.tagline.candyflower=甜食控
@@ -98,5 +195,73 @@ tile.botania:flower.moonlightlily.name=月光百合
 tile.botania:flower.moonlightlily.reference=愿你能找到所有失去的东西
 botania.tagline.moonlightlily=月亮祭司
 
+tile.botania:flower.omniviolet.name=全知槿
+tile.botania:flower.omniviolet.reference=Need not to know
+botania.tagline.omniviolet=普罗维登斯之眼
+
+# -FUNCTIONAL
+tile.botania:flower.numerondandelife.name=源命英
+tile.botania:flower.numerondandelife.reference=Too young, Too simple, Sometimes naive.
+botania.tagline.numerondandelife=I am Angry
+
+tile.botania:flower.necrofleur.name=死之花
+tile.botania:flower.necrofleur.reference=死亡是唯一的解药
+botania.tagline.necrofleur=我的死亡笔记
+
+tile.botania:flower.woodienia.name=伐木花
+tile.botania:flower.woodienia.reference=满月的诅咒
+botania.tagline.woodienia=没有比砍伐更有趣的事情了
+
 tile.botania:flower.artifaconia.name=古遗莲
 tile.botania:flower.artifaconia.reference=禁忌的秘密
+botania.tagline.artifaconia=你为什么会这么熟练
+
+tile.botania:flower.volatilily.name=波动百合
+tile.botania:flower.volatilily.reference=我的内心毫无波动,甚至还想笑
+botania.tagline.volatilily=它非常喜欢钓鱼
+
+#ACHIEVEMENTS
+# -RELICS
+achievement.botania:aphroditegrace=Love & Peace
+achievement.botania:aphroditegrace.desc=获得战利品:阿佛洛狄忒的恩宠
+achievement.botania:dice20=Reroll you destiny
+achievement.botania:dice20.desc=获得D20!
+achievement.botania:athenabless=白金ディスコ
+achievement.botania:athenabless.desc=获得战利品:雅典娜的庇佑
+//achievement.botania:excaliber=圣光照耀众生
+//achievement.botania:excaliber.desc=获得王者圣剑!
+achievement.botania:excaliberfake=信仰圣光吧
+achievement.botania:excaliberfake.desc=获得战利品:王者之剑
+achievement.botania:hestiachastity=破灭之光
+achievement.botania:hestiachastity.desc=获得战利品:赫斯提亚的贞洁
+achievement.botania:maxwelldemon=第二类永动机!?
+achievement.botania:maxwelldemon.desc=获得战利品:麦克斯韦的妖精
+achievement.botania:vpowerbattleaxe=Tell Your World
+achievement.botania:vpowerbattleaxe.desc=获得战利品:V制式动力战斧
+achievement.botania:vrangerboots=悪ノ召使
+achievement.botania:vrangerboots.desc=获得战利品:V制式游侠靴
+achievement.botania:vhandgun=悪ノ娘
+achievement.botania:vhandgun.desc=获得战利品:V制式手炮
+
+#ENCHANTMENT
+enchantment.gaiablessing=盖亚祝福
+
+#COMMANDS
+commands.ExtraBotany.getShieldAmount.desc=/getShieldAmount [玩家]
+commands.ExtraBotany.getShieldAmount.success=玩家 %1$s 现在持有护盾值为 %2$s .
+commands.ExtraBotany.setShieldAmount.desc=/setShieldAmount [玩家] [数值]
+commands.ExtraBotany.setShieldAmount.success=设置成功! 玩家 %1$s 现在持有护盾值为 %2$s .
+commands.ExtraBotany.addShieldAmount.desc=/addShieldAmount [玩家] [数值]
+commands.ExtraBotany.addShieldAmount.success=添加成功! 玩家 %1$s 现在持有护盾值为 %2$s .
+
+#CONFIG
+# -COMMON
+config.ExtraBotany.extraShieldAmount.desc=额外的护盾上限.
+config.ExtraBotany.ench.desc=附魔ID.
+config.ExtraBotany.efficiencySunshinelily.desc=日耀百合的产能效率.
+config.ExtraBotany.efficiencyMoonlightlily.desc=月光百合的产能效率.
+config.ExtraBotany.efficiencyBlueenchantress.desc=蓝色妖姬的产能效率.
+config.ExtraBotany.efficiencyCandyflower.desc=糖果花的产能效率.
+
+# -CLIENT
+config.ExtraBotany.shieldBarHeight.desc=护盾值显示在魔力条下方. 如果你调整了魔力条的位置,你可以修改这个参数.

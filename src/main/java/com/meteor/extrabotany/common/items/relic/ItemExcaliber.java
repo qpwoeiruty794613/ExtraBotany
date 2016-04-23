@@ -60,6 +60,12 @@ public class ItemExcaliber extends ItemManasteelSword implements IRelic, ILensEf
 	public ItemExcaliber() {
 		super(toolMaterial, LibItemName.EXCALIBER);
 	}
+	
+	@Override
+	public EnumRarity getRarity(ItemStack p_77613_1_) {
+		return BotaniaAPI.rarityRelic;
+	}
+	
 	@Override
 	public void onUpdate(ItemStack par1ItemStack, World par2World, Entity par3Entity, int par4, boolean par5) {
 		if(par3Entity instanceof EntityPlayer) {

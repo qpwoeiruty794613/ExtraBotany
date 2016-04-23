@@ -1,5 +1,6 @@
 package com.meteor.extrabotany.common.items.relic;
 
+import java.util.Collection;
 import java.util.List;
 
 import org.lwjgl.opengl.GL11;
@@ -12,6 +13,7 @@ import com.meteor.extrabotany.common.lib.LibReference;
 
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
+import cpw.mods.fml.relauncher.ReflectionHelper;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.client.Minecraft;
@@ -73,13 +75,13 @@ import vazkii.botania.common.item.equipment.armor.terrasteel.ItemTerrasteelHelm;
 import vazkii.botania.common.item.relic.ItemRelic;
 import vazkii.botania.common.item.relic.ItemRelicBauble;
 
-public class ItemHestiaChastity extends ItemRelicArmorSet implements IManaDiscountArmor, IAncientWillContainer, IManaGivingItem, IRelic,ILensEffect{
+public class ItemHestiaChastity extends ItemRelicArmorSet implements IManaDiscountArmor, IAncientWillContainer, IManaGivingItem, ILensEffect{
 	private static final String TAG_ATTACKER_USERNAME = "attackerUsername";
 	private static final String TAG_HOME_ID = "homeID";
 	
 	private static final String TAG_ANCIENT_WILL = "AncientWill";
 	static IIcon willIcon;
-	public ItemHestiaChastity(String name) {
+	public ItemHestiaChastity(int type, String name) {
 		super(0, LibItemName.HESTIACHASTITY);
 		MinecraftForge.EVENT_BUS.register(this);
 	    FMLCommonHandler.instance().bus().register(this);
@@ -102,8 +104,10 @@ public class ItemHestiaChastity extends ItemRelicArmorSet implements IManaDiscou
 			EntityPlayer player = (EntityPlayer) event.entityLiving;
 			for(ItemStack stack : player.inventory.armorInventory) {
 	            if(stack != null && stack.getItem() instanceof ItemHestiaChastity) {
+	            	if(ItemRelic.isRightPlayer(player, stack)){
 	    			EntityManaBurst burst = getBurst(player, stack);
 					player.worldObj.spawnEntityInWorld(burst);	
+					}
 	            }
 			}
 	}
@@ -173,10 +177,12 @@ public class ItemHestiaChastity extends ItemRelicArmorSet implements IManaDiscou
 					float damage = 4F;
 					if(!burst.isFake() && !entity.worldObj.isRemote) {
 						EntityPlayer player = living.worldObj.getPlayerEntityByName(attacker);
+
 						living.attackEntityFrom(player == null ? DamageSource.magic : DamageSource.causePlayerDamage(player), damage);
 						entity.setDead();
 						break;
 					}
+					
 				}
 			}
 		}

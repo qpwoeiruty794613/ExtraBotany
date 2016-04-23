@@ -3,23 +3,31 @@ package com.meteor.extrabotany.common.items.relic;
 import java.util.List;
 import java.util.UUID;
 
+import org.lwjgl.input.Keyboard;
+
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
+import com.meteor.extrabotany.client.model.ModelRelicArmor;
 import com.meteor.extrabotany.common.lib.LibReference;
 
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.client.model.ModelBiped;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.attributes.AttributeModifier;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.ItemStack;
+import net.minecraft.potion.Potion;
+import net.minecraft.potion.PotionEffect;
 import net.minecraft.stats.Achievement;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.StatCollector;
 import net.minecraft.world.World;
+import cpw.mods.fml.common.eventhandler.SubscribeEvent;
+import cpw.mods.fml.common.gameevent.TickEvent;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import vazkii.botania.api.BotaniaAPI;
@@ -44,7 +52,7 @@ public class ItemRelicArmorSet extends ItemManasteelArmor implements IRelic{
 	@Override
 	@SideOnly(Side.CLIENT)
 	public ModelBiped provideArmorModelForSlot(ItemStack stack, int slot) {
-		models[slot] = new ModelArmorTerrasteel(slot);
+		models[slot] = new ModelRelicArmor(slot);
 		return models[slot];
 	}
 
@@ -73,8 +81,8 @@ public class ItemRelicArmorSet extends ItemManasteelArmor implements IRelic{
 		if(armorset == null)
 			armorset = new ItemStack[] {
 				new ItemStack(com.meteor.extrabotany.common.items.ModItems.hestiachastity),
-				new ItemStack(ModItems.terrasteelChest),
-				new ItemStack(ModItems.terrasteelLegs),
+				new ItemStack(com.meteor.extrabotany.common.items.ModItems.hermestravelclothing),
+				new ItemStack(com.meteor.extrabotany.common.items.ModItems.aphroditegrace),
 				new ItemStack(com.meteor.extrabotany.common.items.ModItems.vrangerboots)
 		};
 
@@ -89,8 +97,8 @@ public class ItemRelicArmorSet extends ItemManasteelArmor implements IRelic{
 
 		switch(i) {
 		case 0: return stack.getItem() == com.meteor.extrabotany.common.items.ModItems.hestiachastity;
-		case 1: return stack.getItem() == ModItems.terrasteelChest;
-		case 2: return stack.getItem() == ModItems.terrasteelLegs;
+		case 1: return stack.getItem() == com.meteor.extrabotany.common.items.ModItems.hermestravelclothing;
+		case 2: return stack.getItem() == com.meteor.extrabotany.common.items.ModItems.aphroditegrace;
 		case 3: return stack.getItem() == com.meteor.extrabotany.common.items.ModItems.vrangerboots;
 		}
 
@@ -157,6 +165,17 @@ public class ItemRelicArmorSet extends ItemManasteelArmor implements IRelic{
 	public static String getSoulbindUsernameS(ItemStack stack) {
 		return ItemNBTHelper.getString(stack, TAG_SOULBIND, "");
 	}
+	
+    @SubscribeEvent
+    public void TickEvent(TickEvent.PlayerTickEvent event) {
+    	 EntityPlayer player = (EntityPlayer) event.player;
+	        for(ItemStack stack : player.inventory.armorInventory) {
+	            if(stack != null && stack.getItem() instanceof ItemRelicArmorSet) {
+	            	if(!ItemRelic.isRightPlayer(player, stack))
+	            		player.attackEntityFrom(damageSource(), 2);
+	            }
+	        }
+    }
 
 	public static void updateRelic(ItemStack stack, EntityPlayer player) {
 		if(stack == null || !(stack.getItem() instanceof IRelic))
@@ -216,6 +235,10 @@ public class ItemRelicArmorSet extends ItemManasteelArmor implements IRelic{
 	@Override
 	public EnumRarity getRarity(ItemStack p_77613_1_) {
 		return BotaniaAPI.rarityRelic;
+	}
+
+	public void onWornTick(ItemStack stack, EntityLivingBase player) {
+		
 	}
 
 }

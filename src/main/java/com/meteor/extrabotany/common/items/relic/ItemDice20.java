@@ -6,6 +6,7 @@ import java.util.List;
 import com.meteor.extrabotany.common.items.ModItems;
 import com.meteor.extrabotany.common.lib.LibItemName;
 
+import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.init.Items;
@@ -26,32 +27,32 @@ public class ItemDice20 extends ItemRelic{
 	public ItemDice20() {
 		super(LibItemName.DICE20);
 		relicStacks = new ItemStack[] {
-				new ItemStack(ModItems.vhandgun),
-				new ItemStack(ModItems.vpowerbattleaxe),
-				new ItemStack(vazkii.botania.common.item.ModItems.infiniteFruit),
-				new ItemStack(ModItems.excaliberfake),
-				new ItemStack(vazkii.botania.common.item.ModItems.kingKey),
-				new ItemStack(ModItems.empty_dice),
-				new ItemStack(vazkii.botania.common.item.ModItems.flugelEye),
-				new ItemStack(vazkii.botania.common.item.ModItems.thorRing),
-				new ItemStack(vazkii.botania.common.item.ModItems.lokiRing),
-				new ItemStack(vazkii.botania.common.item.ModItems.odinRing),
-				new ItemStack(ModItems.excaliberfake),
-				new ItemStack(ModItems.excaliberfake),
-				new ItemStack(ModItems.excaliberfake),
-				new ItemStack(ModItems.excaliberfake),
-				new ItemStack(ModItems.excaliberfake),
-				new ItemStack(ModItems.excaliberfake),
-				new ItemStack(ModItems.excaliberfake),
-				new ItemStack(ModItems.excaliberfake),
-				new ItemStack(ModItems.excaliberfake),
-				new ItemStack(ModItems.empty_dice)
+				new ItemStack(ModItems.vhandgun),//1
+				new ItemStack(ModItems.vpowerbattleaxe),//2
+				new ItemStack(vazkii.botania.common.item.ModItems.infiniteFruit),//3
+				new ItemStack(ModItems.excaliberfake),//4
+				new ItemStack(vazkii.botania.common.item.ModItems.kingKey),//5
+				new ItemStack(ModItems.material,1,3),//6
+				new ItemStack(vazkii.botania.common.item.ModItems.flugelEye),//7
+				new ItemStack(vazkii.botania.common.item.ModItems.thorRing),//8
+				new ItemStack(vazkii.botania.common.item.ModItems.lokiRing),//9
+				new ItemStack(vazkii.botania.common.item.ModItems.odinRing),//10
+				new ItemStack(ModItems.athenabless),//11
+				new ItemStack(ModItems.hestiachastity),//12
+				new ItemStack(ModItems.maxwelldemon),//13
+				new ItemStack(ModItems.vrangerboots),//14
+				new ItemStack(ModItems.cronusphantom),//15
+				new ItemStack(ModItems.aphroditegrace),//16
+				new ItemStack(ModItems.hermestravelclothing),//17
+				new ItemStack(ModItems.maxwelldemon),//
+				new ItemStack(ModItems.maxwelldemon),
+				new ItemStack(ModItems.material,1,3),//
 
 		};
 	}
 
 	private static final int[] SIDES_FOR_MOON_PHASES = new int[] {
-		-1, 0, 1, 2, -1, 2, 3, 4
+		0, 0, 0, 0, 0, 0, 0, 0
 	};
 	
 	@Override
@@ -68,10 +69,21 @@ public class ItemDice20 extends ItemRelic{
 					relic = possible.get(world.rand.nextInt(possible.size()));
 			world.playSoundAtEntity(player, "random.bow", 0.5F, 0.4F / (world.rand.nextFloat() * 0.4F + 0.8F));
 			
-			if(relic + 1 == 6 || relic + 1 == 20) {
+			if(relic == 5 || relic == 19) {
 				player.addChatMessage(new ChatComponentTranslation("botaniamisc.uselessDiceRoll", relic + 1).setChatStyle(new ChatStyle().setColor(EnumChatFormatting.DARK_GREEN)));
 				return relicStacks[relic].copy();
-			}else{
+			}else if(relic == 11){
+				player.addChatMessage(new ChatComponentTranslation("botaniamisc.diceRoll", relic + 1).setChatStyle(new ChatStyle().setColor(EnumChatFormatting.DARK_GREEN)));
+				return new ItemStack(ModItems.hestiachastity);
+			}else if(relic == 15){
+				player.addChatMessage(new ChatComponentTranslation("botaniamisc.diceRoll", relic + 1).setChatStyle(new ChatStyle().setColor(EnumChatFormatting.DARK_GREEN)));
+				return new ItemStack(ModItems.aphroditegrace);
+			} else if(relic == 16){
+				player.addChatMessage(new ChatComponentTranslation("botaniamisc.diceRoll", relic + 1).setChatStyle(new ChatStyle().setColor(EnumChatFormatting.DARK_GREEN)));
+				return new ItemStack(ModItems.hermestravelclothing);
+			} 
+			else
+			{	
 				player.addChatMessage(new ChatComponentTranslation("botaniamisc.diceRoll", relic + 1).setChatStyle(new ChatStyle().setColor(EnumChatFormatting.DARK_GREEN)));
 				return relicStacks[relic].copy();
 			}

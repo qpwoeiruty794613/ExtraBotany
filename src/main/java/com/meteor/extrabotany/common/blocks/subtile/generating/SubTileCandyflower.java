@@ -2,6 +2,7 @@ package com.meteor.extrabotany.common.blocks.subtile.generating;
 
 import java.util.List;
 
+import com.meteor.extrabotany.common.handler.ConfigHandler;
 import com.meteor.extrabotany.common.lexicon.LexiconModData;
 import com.meteor.extrabotany.common.lib.LibData;
 
@@ -80,7 +81,7 @@ public class SubTileCandyflower extends SubTileGenerating{
 
 	@Override
 	public int getValueForPassiveGeneration() {
-		return 5;
+		return ConfigHandler.efficiencyCandyflower;
 	}
 
 	@Override
