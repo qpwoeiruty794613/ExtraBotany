@@ -35,6 +35,7 @@ item.astralforce.name=Astral Force
 item.petalred.name=Red Petal of Lycorisradiata
 item.petalgreen.name=Green Petal of Lycorisradiata
 item.petalpurple.name=Purple Petal of Lycorisradiata
+item.goldstring.name=Golden Infused String
 
 # -SPAWNCARDS
 item.ExtraBotany.SpawnCardLycorisdiataRed.name=Cards of Red Lycorisdiata

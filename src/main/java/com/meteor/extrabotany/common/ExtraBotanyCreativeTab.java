@@ -54,25 +54,16 @@ public class ExtraBotanyCreativeTab extends CreativeTabs{
 		//Test
 		addItem(ModItems.itemtest);
 		//Basic
-		addItem(ModItems.astralforce);
-		addItem(ModItems.blankcard);
-		addItem(ModItems.empty_dice);
-		addItem(ModItems.gaiaessence);
-		addItem(ModItems.prismaticshard);
-		addItem(ModItems.petal_green);
-		addItem(ModItems.petal_purple);
-		addItem(ModItems.petal_red);
+		addItem(ModItems.material);
 		//Spawn Card
 		addItem(ModItems.lycorisgreen);
 		addItem(ModItems.lycorispurple);
 		addItem(ModItems.lycorisred);
 		addItem(ModItems.lycorisrandom);		
 		//Blocks
-		addItem(ModItems.gaiaquartz);
 		addBlock(ModBlocks.gaiaquartz);
 		addBlock(ModBlocks.gaiaquartzstairs);
 		addBlock(ModBlocks.gaiaquartzslab);
-		addItem(ModItems.elvenquartz);
 		addBlock(ModBlocks.elvenquartz);
 		addBlock(ModBlocks.elvenquartzstairs);
 		addBlock(ModBlocks.elvenquartzslab);

@@ -2,6 +2,7 @@ package com.meteor.extrabotany.common.entity;
 
 import com.meteor.extrabotany.common.items.ModItems;
 
+import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
 public class EntityLycorisradiataRed extends EntityLycorisradiata{
@@ -18,9 +19,9 @@ public class EntityLycorisradiataRed extends EntityLycorisradiata{
 
             for (int k = 0; k < j; ++k)
             {
-                this.dropItem(ModItems.petal_red, this.rand.nextInt(3));
-                this.dropItem(ModItems.petal_green, this.rand.nextInt(2));
-                this.dropItem(ModItems.petal_purple, this.rand.nextInt(2));
+                this.dropItem(new ItemStack(ModItems.material, 1, 4).getItem(), this.rand.nextInt(3));
+                this.dropItem(new ItemStack(ModItems.material, 1, 5).getItem(), this.rand.nextInt(2));
+                this.dropItem(new ItemStack(ModItems.material, 1, 6).getItem(), this.rand.nextInt(2));
             }
         }
     }

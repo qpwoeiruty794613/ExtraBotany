@@ -32,7 +32,7 @@ public class ItemDice20 extends ItemRelic{
 				new ItemStack(vazkii.botania.common.item.ModItems.infiniteFruit),//3
 				new ItemStack(ModItems.excaliberfake),//4
 				new ItemStack(vazkii.botania.common.item.ModItems.kingKey),//5
-				new ItemStack(ModItems.astralforce),//6
+				new ItemStack(ModItems.material,1,3),//6
 				new ItemStack(vazkii.botania.common.item.ModItems.flugelEye),//7
 				new ItemStack(vazkii.botania.common.item.ModItems.thorRing),//8
 				new ItemStack(vazkii.botania.common.item.ModItems.lokiRing),//9
@@ -46,7 +46,7 @@ public class ItemDice20 extends ItemRelic{
 				new ItemStack(ModItems.hermestravelclothing),//17
 				new ItemStack(ModItems.maxwelldemon),//
 				new ItemStack(ModItems.maxwelldemon),
-				new ItemStack(ModItems.astralforce),//
+				new ItemStack(ModItems.material,1,3),//
 
 		};
 	}

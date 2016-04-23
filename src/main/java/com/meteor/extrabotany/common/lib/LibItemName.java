@@ -4,19 +4,10 @@ import net.minecraft.item.Item;
 
 public class LibItemName {
 	//Basic
-	public static final String PRISMATICSHARD = "prismaticshard";
-	public static final String BLANKCARD = "blankcard";
-	public static final String GAIAESSENCE = "gaiaessence";
-	public static final String ASTRALFORCE = "astralforce";
-	public static final String PETALRED = "petalred";
-	public static final String PETALGREEN = "petalgreen";
-	public static final String PETALPURPLE = "petalpurple";
 	public static final String LYCORISPLACER = "lycorisradiataplacer";
-	public static final String GAIAQUARTZ = "gaiaquartz";
-	public static final String ELVENQUARTZ = "elvenquartz";
+	public static final String MATERIAL = "material";
 	
 	//Dice
-	public static final String EMPTYDICE = "emptydice";
 	public static final String DICE4 = "dice4";
 	public static final String DICE6 = "dice6";
 	public static final String DICE7 = "dice7";
@@ -45,4 +36,18 @@ public class LibItemName {
 	public static final String APHRODITEGRACE = "aphroditegrace";
 	public static final String CRONUSPHANTOM = "cronusphantom";
 	public static final String HERMESTRAVELCLOTHING = "hermestravelclothing";
+	
+	public static final String[] MATERIAL_NAMES = new String[] {
+		"prismaticshard",//0
+		"blankcard",//1
+		"gaiaessence",//2
+		"astralforce",//3
+		"petalred",//4
+		"petalgreen",//5
+		"petalpurple",//6
+		"gaiaquartz",//7
+		"elvenquartz",//8
+		"goldstring",//9
+		"emptydice"//10
+	};
 }

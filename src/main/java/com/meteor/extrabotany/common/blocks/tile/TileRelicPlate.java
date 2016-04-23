@@ -82,7 +82,7 @@ public class TileRelicPlate extends TileMod implements ISparkAttachable {
 					for(EntityItem otherItem : items)
 						if(otherItem != item)
 							otherItem.setDead();
-						else if(ModRelicPlateRecipe.craft1(items))item.setEntityItemStack(new ItemStack(com.meteor.extrabotany.common.items.ModItems.astralforce));
+						else if(ModRelicPlateRecipe.craft1(items))item.setEntityItemStack(new ItemStack(com.meteor.extrabotany.common.items.ModItems.material,1,3));
 						else if(ModRelicPlateRecipe.craft2(items))item.setEntityItemStack(new ItemStack(com.meteor.extrabotany.common.items.ModItems.dice20));
 					item.worldObj.playSoundAtEntity(item, "botania:terrasteelCraft", 1F, 1F);
 					mana = 0;

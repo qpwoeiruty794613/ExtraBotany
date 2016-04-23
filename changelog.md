@@ -1,6 +1,8 @@
 16/4/23<br>
 NEW cosmetic Baubles.<br>
 NEW Generating Flowers:Omni Violet.<br>
+Add Golden Infused String.<br>
+Add Recipes.<br>
 
 16/4/22<br>
 NEW Functional Flowers:Necrofleur, NumeronDandelife and Woodienia.<br>

@@ -1,4 +1,4 @@
-package com.meteor.extrabotany.common.items;
+package com.meteor.extrabotany.common.items.equipment;
 
 import java.util.List;
 

@@ -24,11 +24,11 @@ public class ModRelicPlateRecipe {
 			ItemStack stack = item.getEntityItem();
 			if(stack.stackSize != 1)
 				return false;
-			if(stack.getItem() == ModItems.blankcard)
+			if(stack == new ItemStack(ModItems.material,1,1))
 				item1 = stack;
-			else if(stack.getItem() == ModItems.gaiaquartz)
+			else if(stack == new ItemStack(ModItems.material,1,7))
 				item2 = stack;
-			else if(stack.getItem() == ModItems.gaiaessence)
+			else if(stack == new ItemStack(ModItems.material,1,2))
 				item3 = stack;
 			else return false;
 		}
@@ -51,9 +51,9 @@ public class ModRelicPlateRecipe {
 				return false;
 			if(stack.getItem() instanceof IRelic)
 				item1 = stack;
-			else if(stack.getItem() == ModItems.empty_dice)
+			else if(stack == new ItemStack(ModItems.material,1,10))
 				item2 = stack;
-			else if(stack.getItem() == ModItems.gaiaessence)
+			else if(stack == new ItemStack(ModItems.material,1,2))
 				item3 = stack;
 			else return false;
 		}

@@ -5,6 +5,7 @@ import com.meteor.extrabotany.common.entity.EntityLycorisradiata;
 import com.meteor.extrabotany.common.entity.EntityLycorisradiataGreen;
 import com.meteor.extrabotany.common.entity.EntityLycorisradiataPurple;
 import com.meteor.extrabotany.common.entity.EntityLycorisradiataRed;
+import com.meteor.extrabotany.common.items.equipment.ItemBaubleDog;
 import com.meteor.extrabotany.common.items.relic.ItemAphroditeGrace;
 import com.meteor.extrabotany.common.items.relic.ItemAthenaBless;
 import com.meteor.extrabotany.common.items.relic.ItemCronusPhantom;
@@ -26,15 +27,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.OreDictionary;
 
 public class ModItems {
-	public static Item prismaticshard;
-	public static Item blankcard;
-	public static Item gaiaessence;
-	public static Item astralforce;
 	public static Item gaiatablet;
-	public static Item petal_red;
-	public static Item petal_green;
-	public static Item petal_purple;
-	public static Item empty_dice;
 	public static Item dice20;
 	public static Item excaliber;
 	public static Item excaliberfake;
@@ -52,28 +45,18 @@ public class ModItems {
 	public static Item cronusphantom;
 	public static Item hermestravelclothing;
 	public static Item teleportpearl;
-	public static Item gaiaquartz;
-	public static Item elvenquartz;
 	public static Item gaianecklacebroken;
 	public static Item dog;
 	
 	public static Item itemtest;
+	public static Item material;
 	
 	public static void init() {
 		itemtest = new ItemTest("test");	
 
-		prismaticshard = new ItemMods(LibItemName.PRISMATICSHARD);
-		blankcard = new ItemMods(LibItemName.BLANKCARD);
-		gaiaessence = new ItemMods(LibItemName.GAIAESSENCE);
-		astralforce = new ItemMods(LibItemName.ASTRALFORCE);
-		petal_red = new ItemMods(LibItemName.PETALRED);
-		petal_green = new ItemMods(LibItemName.PETALGREEN);
-		petal_purple = new ItemMods(LibItemName.PETALPURPLE);
-		empty_dice = new ItemMods(LibItemName.EMPTYDICE);
-		gaiaquartz = new ItemMods(LibItemName.GAIAQUARTZ);
-		elvenquartz = new ItemMods(LibItemName.ELVENQUARTZ);
+		material = new ItemMaterial(LibItemName.MATERIAL);
 		gaianecklacebroken = new ItemMods(LibItemName.GAIANECKLACEBROKEN);
-		
+				
 		dog = new ItemBaubleDog();
 		
 		cronusphantom = new ItemCronusPhantom(LibItemName.CRONUSPHANTOM);
@@ -96,16 +79,19 @@ public class ModItems {
 		lycorisred = new ItemSpawnCardLycorisRed(LibEntityName.LYCORISRED);
 		lycorispurple = new ItemSpawnCardLycorisPurple(LibEntityName.LYCORISPURPLE);
 		lycorisrandom = new ItemSpawnCardLycorisRandom("lycorisrandom");
-	
-		OreDictionary.registerOre(LibOreDictName.GAIA_ESSENCE, new ItemStack(gaiaessence));
-		OreDictionary.registerOre(LibOreDictName.PRISMATIC_SHARD, new ItemStack(prismaticshard));
-		OreDictionary.registerOre(LibOreDictName.BLANK_CARD, new ItemStack(blankcard));
-		OreDictionary.registerOre(LibOreDictName.ASTRAL_FORCE, new ItemStack(astralforce));
-		OreDictionary.registerOre(LibOreDictName.LYCORIS_GREEN, new ItemStack(petal_green));
-		OreDictionary.registerOre(LibOreDictName.LYCORIS_PURPLE, new ItemStack(petal_purple));
-		OreDictionary.registerOre(LibOreDictName.LYCORIS_RED, new ItemStack(petal_red));
-		OreDictionary.registerOre(LibOreDictName.QUARTZ_ELEMENTIUM, new ItemStack(elvenquartz));
-		OreDictionary.registerOre(LibOreDictName.QUARTZ_GAIA, new ItemStack(gaiaquartz));
+		
+		//OreDict
+		OreDictionary.registerOre(LibOreDictName.PRISMATIC_SHARD, new ItemStack(material, 1, 0));
+		OreDictionary.registerOre(LibOreDictName.BLANK_CARD, new ItemStack(material, 1, 1));
+		OreDictionary.registerOre(LibOreDictName.GAIA_ESSENCE, new ItemStack(material, 1, 2));
+		OreDictionary.registerOre(LibOreDictName.ASTRAL_FORCE, new ItemStack(material, 1, 3));
+		OreDictionary.registerOre(LibOreDictName.LYCORIS_RED, new ItemStack(material, 1, 4));
+		OreDictionary.registerOre(LibOreDictName.LYCORIS_GREEN, new ItemStack(material, 1, 5));
+		OreDictionary.registerOre(LibOreDictName.LYCORIS_PURPLE, new ItemStack(material, 1, 6));
+		OreDictionary.registerOre(LibOreDictName.QUARTZ_GAIA, new ItemStack(material, 1, 7));
+		OreDictionary.registerOre(LibOreDictName.QUARTZ_ELEMENTIUM, new ItemStack(material, 1, 8));
+		OreDictionary.registerOre(LibOreDictName.STRING_GOLD, new ItemStack(material, 1, 9));
+		OreDictionary.registerOre(LibOreDictName.DICE_EMPTY, new ItemStack(material, 1, 10));
 	}
 
 }

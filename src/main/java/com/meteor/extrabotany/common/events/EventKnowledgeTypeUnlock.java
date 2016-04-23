@@ -19,7 +19,7 @@ public class EventKnowledgeTypeUnlock implements ILexicon{
 	public void onItemPickedUp(ItemPickupEvent event) {
 			ItemStack stack = event.pickedUp.getEntityItem();
 			EntityPlayer player = (EntityPlayer) event.player;
-            if(stack != null && stack.getItem() == ModItems.blankcard){
+            if(stack != null && stack == new ItemStack(ModItems.material, 1, 1)){
             	ItemStack stack1 = event.player.getHeldItem();
 	            	if(stack1 != null && stack1.getItem() == vazkii.botania.common.item.ModItems.lexicon){
 	      	 	        ILexicon l = (ILexicon) stack1.getItem();
