@@ -2,8 +2,8 @@ package com.meteor.extrabotany.client.render.tile;
 
 import org.lwjgl.opengl.GL11;
 
-import com.meteor.extrabotany.common.blocks.BlockRelicPlate;
-import com.meteor.extrabotany.common.blocks.tile.TileRelicPlate;
+import com.meteor.extrabotany.common.block.BlockRelicPlate;
+import com.meteor.extrabotany.common.block.tile.TileRelicPlate;
 
 import vazkii.botania.client.core.handler.ClientTickHandler;
 import vazkii.botania.client.core.helper.ShaderHelper;

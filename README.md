@@ -10,15 +10,15 @@ Botania Addon WIP
     * Kratos's Barbarity
   * Basics(Completed)
  * Blocks:
-  * Flowers(20% Finished):
+  * Flowers(30% Finished):
     * NecroFleur(Done)
-    * GeminiOrchid
+    * GeminiOrchid(Done)
     * NumeronBalsam
     * NumeronDandelife(Done)
     * DiplopBamboo
     * Judas' Vow
     * Shiny Lilac
-    * OmniViolet
+    * OmniViolet(Done)
   * Basics(60% Finshed)
  * Entities:
   * Boss(0% Finished):

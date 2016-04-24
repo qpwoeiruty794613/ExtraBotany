@@ -2,7 +2,7 @@ package com.meteor.extrabotany.common.entity;
 
 import java.util.List;
 
-import com.meteor.extrabotany.common.effects.ModPotionEffect;
+import com.meteor.extrabotany.common.effect.ModPotionEffect;
 
 import vazkii.botania.common.Botania;
 import net.minecraft.entity.Entity;

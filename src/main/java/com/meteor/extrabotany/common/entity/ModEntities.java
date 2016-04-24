@@ -4,7 +4,7 @@ package com.meteor.extrabotany.common.entity;
 
 import vazkii.botania.common.lib.LibEntityNames;
 
-import com.meteor.extrabotany.common.ExtraBotany;
+import com.meteor.extrabotany.ExtraBotany;
 import com.meteor.extrabotany.common.lib.LibEntityName;
 
 import cpw.mods.fml.common.registry.EntityRegistry;

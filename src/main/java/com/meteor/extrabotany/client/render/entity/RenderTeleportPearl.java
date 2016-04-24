@@ -11,7 +11,7 @@ import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL12;
 
 import com.meteor.extrabotany.common.entity.EntityTeleportPearl;
-import com.meteor.extrabotany.common.items.ModItems;
+import com.meteor.extrabotany.common.item.ModItems;
 
 public class RenderTeleportPearl extends Render{
 	 private float amount;

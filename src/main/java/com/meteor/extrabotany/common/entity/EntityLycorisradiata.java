@@ -3,7 +3,7 @@ package com.meteor.extrabotany.common.entity;
 import java.util.Set;
 
 import com.google.common.collect.Sets;
-import com.meteor.extrabotany.common.items.ModItems;
+import com.meteor.extrabotany.common.item.ModItems;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;

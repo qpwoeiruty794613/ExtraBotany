@@ -1,7 +1,7 @@
 package com.meteor.extrabotany.common.handler;
 
 import com.meteor.extrabotany.api.IShieldHandler;
-import com.meteor.extrabotany.common.events.EventShield;
+import com.meteor.extrabotany.common.event.EventShield;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;

@@ -4,7 +4,7 @@ import vazkii.botania.api.mana.IManaDiscountArmor;
 import vazkii.botania.common.entity.EntityDoppleganger;
 
 import com.meteor.extrabotany.common.handler.ConfigHandler;
-import com.meteor.extrabotany.common.items.relic.ItemVRangerBoots;
+import com.meteor.extrabotany.common.item.relic.ItemVRangerBoots;
 import com.meteor.extrabotany.common.lib.LibReference;
 
 import cpw.mods.fml.common.FMLCommonHandler;

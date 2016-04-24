@@ -1,3 +1,9 @@
+16/4/24<br>
+Rename packages names.<br>
+Resort packages.<br>
+Add new Generating Flower:Gemini Orchid.<br>
+New api.<br>
+
 16/4/23<br>
 NEW cosmetic Baubles.<br>
 NEW Generating Flower:Omni Violet.<br>

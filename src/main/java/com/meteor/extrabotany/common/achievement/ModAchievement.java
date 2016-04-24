@@ -1,6 +1,6 @@
 package com.meteor.extrabotany.common.achievement;
 
-import com.meteor.extrabotany.common.items.ModItems;
+import com.meteor.extrabotany.common.item.ModItems;
 import com.meteor.extrabotany.common.lib.LibAchievementName;
 import com.meteor.extrabotany.common.lib.LibReference;
 
