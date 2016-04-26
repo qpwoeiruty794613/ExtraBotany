@@ -1,7 +1,8 @@
-package com.meteor.extrabotany.common.item;
+package com.meteor.extrabotany.common.item.basic;
 
 import java.util.List;
 
+import com.meteor.extrabotany.common.item.ItemMods;
 import com.meteor.extrabotany.common.lib.LibItemName;
 
 import vazkii.botania.client.core.helper.IconHelper;

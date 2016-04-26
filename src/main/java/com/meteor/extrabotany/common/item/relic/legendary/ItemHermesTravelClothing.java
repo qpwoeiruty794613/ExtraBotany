@@ -1,4 +1,4 @@
-package com.meteor.extrabotany.common.item.relic;
+package com.meteor.extrabotany.common.item.relic.legendary;
 
 import java.awt.Button;
 import java.util.Random;

@@ -3,7 +3,7 @@ package com.meteor.extrabotany.common.effect;
 import vazkii.botania.common.item.relic.ItemRelic;
 
 import com.meteor.extrabotany.common.event.EventHighDamageResistance;
-import com.meteor.extrabotany.common.item.relic.ItemCronusPhantom;
+import com.meteor.extrabotany.common.item.relic.legendary.ItemCronusPhantom;
 
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;

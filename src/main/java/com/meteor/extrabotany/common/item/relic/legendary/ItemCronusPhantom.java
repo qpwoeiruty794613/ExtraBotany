@@ -1,4 +1,4 @@
-package com.meteor.extrabotany.common.item.relic;
+package com.meteor.extrabotany.common.item.relic.legendary;
 
 import com.meteor.extrabotany.common.effect.ModPotionEffect;
 import com.meteor.extrabotany.common.item.ModItems;

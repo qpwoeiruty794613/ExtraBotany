@@ -15,7 +15,7 @@ public class ItemRender {
 		HugeItemRenderer hugeItemRenderer = new HugeItemRenderer(mc.gameSettings, mc.getTextureManager());
 		MinecraftForgeClient.registerItemRenderer(ModItems.excaliber, hugeItemRenderer);
 		MinecraftForgeClient.registerItemRenderer(ModItems.excaliberfake, hugeItemRenderer);
-		new HugeItemIcon(ModItems.excaliber.getIconFromDamage(0), 0.3125F, 0.1875F);
-		new HugeItemIcon(ModItems.excaliberfake.getIconFromDamage(0), 0.3125F, 0.1875F);
+		new HugeItemIcon(ModItems.excaliber.getIconFromDamage(0), 1.2F, 0.6F);
+		new HugeItemIcon(ModItems.excaliberfake.getIconFromDamage(0), 1.2F, 0.6F);
 	}
 }

@@ -69,6 +69,8 @@ public class ExtraBotanyCreativeTab extends CreativeTabs{
 		addBlock(ModBlocks.elvenquartzslab);
 		//Baubles
 		addItem(ModItems.dog);
+		//Bullets
+		addItem(ModItems.bullet);
 	}
 	
 	private void addItem(Item item) {

@@ -1,4 +1,4 @@
-package com.meteor.extrabotany.common.item.relic;
+package com.meteor.extrabotany.common.item.relic.legendary;
 
 import vazkii.botania.common.core.handler.ConfigHandler;
 import vazkii.botania.common.item.relic.ItemRelic;

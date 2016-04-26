@@ -11,5 +11,7 @@ public class ModEvents {
 	    FMLCommonHandler.instance().bus().register(new EventHighDamageResistance());
 		MinecraftForge.EVENT_BUS.register(new EventShield());
 	    FMLCommonHandler.instance().bus().register(new EventShield());	     
+		MinecraftForge.EVENT_BUS.register(new EventBulletGold());
+	    FMLCommonHandler.instance().bus().register(new EventBulletGold());	
 	}
 }

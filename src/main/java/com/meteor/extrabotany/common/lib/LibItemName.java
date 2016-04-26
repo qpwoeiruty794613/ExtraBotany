@@ -6,6 +6,7 @@ public class LibItemName {
 	//Basic
 	public static final String LYCORISPLACER = "lycorisradiataplacer";
 	public static final String MATERIAL = "material";
+	public static final String BULLET = "bullet";
 	
 	//Dice
 	public static final String DICE4 = "dice4";
@@ -37,6 +38,8 @@ public class LibItemName {
 	public static final String CRONUSPHANTOM = "cronusphantom";
 	public static final String HERMESTRAVELCLOTHING = "hermestravelclothing";
 	
+	public static final String SNOWBALLLAUNCHER = "snowballlauncher";
+	
 	public static final String[] MATERIAL_NAMES = new String[] {
 		"prismaticshard",//0
 		"blankcard",//1
@@ -49,5 +52,14 @@ public class LibItemName {
 		"elvenquartz",//8
 		"goldstring",//9
 		"emptydice"//10
+	};
+	
+	public static final String[] BULLET_NAMES = new String[] {
+		"bulletexploding",
+		"bulletgold",
+		"bullethighvelocity",
+		"bulletmeteor",
+		"bulletmusket",
+		"bulletsilver",
 	};
 }

@@ -1,4 +1,4 @@
-package com.meteor.extrabotany.common.item.relic;
+package com.meteor.extrabotany.common.item.relic.legendary;
 
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.player.EntityPlayer;
