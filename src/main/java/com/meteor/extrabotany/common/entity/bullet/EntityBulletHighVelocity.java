@@ -1,5 +1,6 @@
 package com.meteor.extrabotany.common.entity.bullet;
 
+import vazkii.botania.common.Botania;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.entity.EntityLivingBase;
@@ -13,9 +14,9 @@ public class EntityBulletHighVelocity extends EntityBullet{
 	public EntityBulletHighVelocity(World world)
 	{
 	    super(world);
-	    this.setDamage(7F);
+	    this.setDamage(7F);    
 	}
-
+	
 	public EntityBulletHighVelocity(World world, EntityLivingBase entity)
 	{
 	    super(world, entity);

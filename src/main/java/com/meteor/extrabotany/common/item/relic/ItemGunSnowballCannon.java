@@ -11,9 +11,9 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 import vazkii.botania.common.item.relic.ItemRelic;
 
-public class ItemSnowballLauncher extends ItemRelic{
+public class ItemGunSnowballCannon extends ItemRelic{
 
-	public ItemSnowballLauncher(String name) {
+	public ItemGunSnowballCannon(String name) {
 		super(name);
 	}
 	

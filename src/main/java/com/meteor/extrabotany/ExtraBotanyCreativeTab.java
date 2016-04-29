@@ -71,6 +71,13 @@ public class ExtraBotanyCreativeTab extends CreativeTabs{
 		addItem(ModItems.dog);
 		//Bullets
 		addItem(ModItems.bullet);
+		//Weapons
+		addItem(ModItems.gunphoenixblaster);
+		addItem(ModItems.guntacticalshotgun);
+		addItem(ModItems.gunboomstick);
+		addItem(ModItems.gunflintlock);
+		addItem(ModItems.gunpistol);
+		addItem(ModItems.gunshotgun);
 	}
 	
 	private void addItem(Item item) {
@@ -85,4 +92,5 @@ public class ExtraBotanyCreativeTab extends CreativeTabs{
 	private void addStack(ItemStack stack) {
 		list.add(stack);
 	}
+
 }

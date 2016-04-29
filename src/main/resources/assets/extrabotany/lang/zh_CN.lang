@@ -51,7 +51,7 @@ item.ExtraBotany.SpawnLycorisRandom.desc=随机生成一朵彼岸花
 item.botania:gaiaTablet.name=盖亚石板
 item.teleportpearl.name=传送珍珠
 item.botania:dog0.name=波动狗
-item.botania:dog1.name=P90
+item.botania:dog1.name=波动狗
 item.botania:dog2.name=波动狗
 item.botania:dog3.name=波动狗
 
@@ -72,6 +72,22 @@ item.botania:athenabless.name=雅典娜的庇佑
 item.botania:aphroditegrace.name=阿佛洛狄忒的恩宠
 item.botania:cronusphantom.name=克洛诺斯的幻影
 item.botania:hermestravelclothing.name=赫尔墨斯的旅行衣
+
+# -WEAPON
+item.phoenixblaster.name=凤凰冲击波
+item.tacticalshotgun.name=战术猎枪
+item.boomstick.name=Boomstick
+item.flintlock.name=燧发枪
+item.shotgun.name=猎枪
+item.pistol.name=手枪
+
+# —BULLET
+item.bulletexploding.name=高爆弹
+item.bulletgold.name=金弹
+item.bullethighvelocity.name=高速弹
+item.bulletmeteor.name=陨星弹
+item.bulletmusket.name=枪弹
+item.bulletsilver.name=银弹
 
 # -FOR DEVELOPER
 item.test.name=测试道具
@@ -201,12 +217,12 @@ botania.tagline.omniviolet=普罗维登斯之眼
 
 # -FUNCTIONAL
 tile.botania:flower.numerondandelife.name=源命英
-tile.botania:flower.numerondandelife.reference=Too young, Too simple, Sometimes naive.
+tile.botania:flower.numerondandelife.reference=Too young, Too simple
 botania.tagline.numerondandelife=I am Angry
 
 tile.botania:flower.necrofleur.name=死之花
 tile.botania:flower.necrofleur.reference=死亡是唯一的解药
-botania.tagline.necrofleur=我的死亡笔记
+botania.tagline.necrofleur=我会为你的死亡哀悼
 
 tile.botania:flower.woodienia.name=伐木花
 tile.botania:flower.woodienia.reference=满月的诅咒

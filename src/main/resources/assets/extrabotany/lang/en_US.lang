@@ -51,7 +51,7 @@ item.ExtraBotany.SpawnLycorisRandom.desc=Spawn a Random Lycorisdiata
 item.botania:gaiaTablet.name=Gaia Tablet
 item.teleportpearl.name=Teleport Pearl
 item.botania:dog0.name=Annoying Dog
-item.botania:dog1.name=P90
+item.botania:dog1.name=Annoying Dog
 item.botania:dog2.name=Annoying Dog
 item.botania:dog3.name=Annoying Dog
 
@@ -72,6 +72,22 @@ item.botania:athenabless.name=Athena's Bless
 item.botania:aphroditegrace.name=Aphrodite's Grace
 item.botania:cronusphantom.name=Phantom of Cronus
 item.botania:hermestravelclothing.name=Hermes's Travel Clothing
+
+# -WEAPON
+item.phoenixblaster.name=Phoenix Blaster
+item.tacticalshotgun.name=Tactical ShotgunS
+item.boomstick.name=Boomstick
+item.flintlock.name=Flintlock
+item.shotgun.name=Shotgun
+item.pistol.name=Pistol
+
+# —BULLET
+item.bulletexploding.name=Exploding Bullet
+item.bulletgold.name=Golden Bullet
+item.bullethighvelocity.name=High Velocity Bullet
+item.bulletmeteor.name=Meteor Shot
+item.bulletmusket.name=Musket Ball
+item.bulletsilver.name=Silver Bullet
 
 # -FOR DEVELOPER
 item.test.name=Test Item
@@ -197,12 +213,12 @@ botania.tagline.omniviolet=Eye of Providence
 
 # -FUNCTIONAL
 tile.botania:flower.numerondandelife.name=Numeron Dandelife
-tile.botania:flower.numerondandelife.reference=Too young, Too simple, Sometimes naive
+tile.botania:flower.numerondandelife.reference=Too young, Too simple
 botania.tagline.numerondandelife=I am Angry
 
 tile.botania:flower.necrofleur.name=Necrofleur
 tile.botania:flower.necrofleur.reference=The only cure is Dying
-botania.tagline.necrofleur=My Death Note
+botania.tagline.necrofleur=I will mourn your death
 
 tile.botania:flower.woodienia.name=Woodienia
 tile.botania:flower.woodienia.reference=Curse of the Full Moon

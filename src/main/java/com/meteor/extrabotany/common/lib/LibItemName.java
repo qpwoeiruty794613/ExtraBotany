@@ -39,6 +39,12 @@ public class LibItemName {
 	public static final String HERMESTRAVELCLOTHING = "hermestravelclothing";
 	
 	public static final String SNOWBALLLAUNCHER = "snowballlauncher";
+	public static final String PHOENIXBLASTER = "phoenixblaster";
+	public static final String TACTICALSHOTGUN = "tacticalshotgun";
+	public static final String BOOMSTICK = "boomstick";
+	public static final String FLINTLOCK = "flintlock";
+	public static final String PISTOL = "pistol";
+	public static final String SHOTGUN = "shotgun";
 	
 	public static final String[] MATERIAL_NAMES = new String[] {
 		"prismaticshard",//0

@@ -1,5 +1,6 @@
 package com.meteor.extrabotany.common.entity.bullet;
 
+import vazkii.botania.common.Botania;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.util.DamageSource;
@@ -17,6 +18,7 @@ public class EntityBulletExploding extends EntityBullet{
 	public EntityBulletExploding(World world, EntityLivingBase entity)
 	{
 	    super(world, entity);
+	    
 	}
 
 	public EntityBulletExploding(World world, double x, double y, double z)
@@ -36,6 +38,8 @@ public class EntityBulletExploding extends EntityBullet{
         if (object.entityHit != null)
         {
         	object.entityHit.attackEntityFrom(DamageSource.causeThrownDamage(this, this.getThrower()), this.damage);
+        	if(this.isBurning())
+        		object.entityHit.setFire(5);
             if(this.canExplode)
             	this.worldObj.createExplosion(this, this.posX, this.posY, this.posZ, this.explosionPower, this.canDestroy);
         }

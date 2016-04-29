@@ -27,13 +27,13 @@ public class ModEntities {
 		EntityRegistry.registerModEntity(EntityTeleportPearl.class, LibEntityName.TELEPORTPERAL, id++, ExtraBotany.instance, 64, 10, true);
 		EntityRegistry.registerModEntity(EntityGaiaIII.class, "gaia3", id++, ExtraBotany.instance, 64, 3, true);
 		
-		EntityRegistry.registerModEntity(EntityBulletExploding.class, LibEntityName.BULLETEXPLODING, id++, ExtraBotany.instance, 64, 3, true);
-		EntityRegistry.registerModEntity(EntityBulletGold.class, LibEntityName.BULLETGOLD, id++, ExtraBotany.instance, 64, 3, true);
-		EntityRegistry.registerModEntity(EntityBulletHighVelocity.class, LibEntityName.BULLETHIGHVELOCITY, id++, ExtraBotany.instance, 64, 3, true);
-		EntityRegistry.registerModEntity(EntityBulletMeteor.class, LibEntityName.BULLETMETEOR, id++, ExtraBotany.instance, 64, 3, true);
-		EntityRegistry.registerModEntity(EntityBulletMusket.class, LibEntityName.BULLETMUSKET, id++, ExtraBotany.instance, 64, 3, true);
-		EntityRegistry.registerModEntity(EntityBulletSilver.class, LibEntityName.BULLETSILVER, id++, ExtraBotany.instance, 64, 3, true);
-		EntityRegistry.registerModEntity(EntityBulletSnowball.class, LibEntityName.BULLETSNOWBALL, id++, ExtraBotany.instance, 64, 3, true);
+		EntityRegistry.registerModEntity(EntityBulletExploding.class, LibEntityName.BULLETEXPLODING, id++, ExtraBotany.instance, 256, 3, true);
+		EntityRegistry.registerModEntity(EntityBulletGold.class, LibEntityName.BULLETGOLD, id++, ExtraBotany.instance, 256, 3, true);
+		EntityRegistry.registerModEntity(EntityBulletHighVelocity.class, LibEntityName.BULLETHIGHVELOCITY, id++, ExtraBotany.instance, 256, 3, true);
+		EntityRegistry.registerModEntity(EntityBulletMeteor.class, LibEntityName.BULLETMETEOR, id++, ExtraBotany.instance, 256, 3, true);
+		EntityRegistry.registerModEntity(EntityBulletMusket.class, LibEntityName.BULLETMUSKET, id++, ExtraBotany.instance, 256, 3, true);
+		EntityRegistry.registerModEntity(EntityBulletSilver.class, LibEntityName.BULLETSILVER, id++, ExtraBotany.instance, 256, 3, true);
+		EntityRegistry.registerModEntity(EntityBulletSnowball.class, LibEntityName.BULLETSNOWBALL, id++, ExtraBotany.instance, 256, 3, true);
 		
 		EntityRegistry.registerModEntity(EntityMagicLandmineII.class, "landmine", id++, ExtraBotany.instance, 128, 40, false);
 		EntityRegistry.addSpawn(EntityLycorisradiataRed.class, 30, 1, 3, EnumCreatureType.monster, BiomeGenBase.forest);

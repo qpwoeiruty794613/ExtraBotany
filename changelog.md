@@ -1,3 +1,6 @@
+16/4/29<br>
+Add 6 kinds of Guns.<br>
+
 16/4/26<br>
 Add Snowball Cannon.<br>
 Add bullets.<br>

@@ -72,7 +72,7 @@ public class EntityBullet extends EntityThrowable
           this.lastTickPosY = this.posY;
           this.lastTickPosZ = this.posZ;
           super.onUpdate();
-
+          
           if (this.throwableShake > 0)
           {
               --this.throwableShake;
@@ -103,8 +103,13 @@ public class EntityBullet extends EntityThrowable
           {
               ++this.ticksInAir;
           }
-      	if(this.ticksInAir % 1 == 0){
-      		Botania.proxy.sparkleFX(this.worldObj, this.posX, this.posY, this.posZ, 1.99F, 0.97F, 0.20F, 1F, 10);
+          
+          if(this.ticksInAir % 1 == 0){
+        	  Botania.proxy.sparkleFX(this.worldObj, this.posX, this.posY, this.posZ, 2.44F, 2.44F, 1.26F, 1F, 10); 
+          }
+
+      	if(this.ticksInAir >= 800){
+      		this.setDead();
       		}
           Vec3 vec3 = Vec3.createVectorHelper(this.posX, this.posY, this.posZ);
           Vec3 vec31 = Vec3.createVectorHelper(this.posX + this.motionX, this.posY + this.motionY, this.posZ + this.motionZ);
@@ -219,7 +224,9 @@ public class EntityBullet extends EntityThrowable
     {
         if (object.entityHit != null)
         {	
-        		object.entityHit.attackEntityFrom(DamageSource.causeThrownDamage(this, this.getThrower()), this.damage);
+        	object.entityHit.attackEntityFrom(DamageSource.causeThrownDamage(this, this.getThrower()), this.damage);
+        	if(this.isBurning())
+        		object.entityHit.setFire(5);
         }
 
         for (int i = 0; i < 8; ++i)

@@ -9,7 +9,9 @@ import com.meteor.extrabotany.common.entity.EntityLycorisradiataRed;
 import com.meteor.extrabotany.common.item.basic.ItemBullet;
 import com.meteor.extrabotany.common.item.basic.ItemMaterial;
 import com.meteor.extrabotany.common.item.equipment.ItemBaubleDog;
-import com.meteor.extrabotany.common.item.relic.ItemSnowballLauncher;
+import com.meteor.extrabotany.common.item.relic.ItemGunPhoenixBlaster;
+import com.meteor.extrabotany.common.item.relic.ItemGunSnowballCannon;
+import com.meteor.extrabotany.common.item.relic.ItemGunTacticalShotgun;
 import com.meteor.extrabotany.common.item.relic.legendary.ItemAphroditeGrace;
 import com.meteor.extrabotany.common.item.relic.legendary.ItemAthenaBless;
 import com.meteor.extrabotany.common.item.relic.legendary.ItemCronusPhantom;
@@ -22,6 +24,10 @@ import com.meteor.extrabotany.common.item.relic.legendary.ItemMaxwellDemon;
 import com.meteor.extrabotany.common.item.relic.legendary.ItemVHandgun;
 import com.meteor.extrabotany.common.item.relic.legendary.ItemVPowerBattleaxe;
 import com.meteor.extrabotany.common.item.relic.legendary.ItemVRangerBoots;
+import com.meteor.extrabotany.common.item.weapon.ItemGunBoomstick;
+import com.meteor.extrabotany.common.item.weapon.ItemGunFlintlock;
+import com.meteor.extrabotany.common.item.weapon.ItemGunPistol;
+import com.meteor.extrabotany.common.item.weapon.ItemGunShotgun;
 import com.meteor.extrabotany.common.lib.LibEntityName;
 import com.meteor.extrabotany.common.lib.LibItemName;
 import com.meteor.extrabotany.common.lib.LibOreDictName;
@@ -51,19 +57,29 @@ public class ModItems {
 	public static Item teleportpearl;
 	public static Item gaianecklacebroken;
 	public static Item dog;
-	public static Item snowballlauncher;
 	
 	public static Item itemtest;
 	public static Item material;
 	public static Item bullet;
 	
-	public static Item a,b;
+	public static Item gunphoenixblaster;
+	public static Item guntacticalshotgun;
+	public static Item snowballlauncher;
+	public static Item gunboomstick;
+	public static Item gunflintlock;
+	public static Item gunshotgun;
+	public static Item gunpistol;
 	
 	public static void init() {
 		itemtest = new ItemTest("test");
 		
-		a = new ItemTestGun1("1");
-		b = new ItemTestGun2("2");
+		gunphoenixblaster = new ItemGunPhoenixBlaster(LibItemName.PHOENIXBLASTER);
+		guntacticalshotgun = new ItemGunTacticalShotgun(LibItemName.TACTICALSHOTGUN);
+		snowballlauncher = new ItemGunSnowballCannon(LibItemName.SNOWBALLLAUNCHER);
+		gunboomstick = new ItemGunBoomstick(LibItemName.BOOMSTICK);
+		gunflintlock = new ItemGunFlintlock(LibItemName.FLINTLOCK);
+		gunshotgun = new ItemGunShotgun(LibItemName.SHOTGUN);
+		gunpistol = new ItemGunPistol(LibItemName.PISTOL);
 
 		material = new ItemMaterial(LibItemName.MATERIAL);
 		bullet = new ItemBullet(LibItemName.BULLET);
@@ -83,8 +99,6 @@ public class ModItems {
 		hestiachastity = new ItemHestiaChastity(0, LibItemName.HESTIACHASTITY);
 		aphroditegrace = new ItemAphroditeGrace(2, LibItemName.APHRODITEGRACE);
 		hermestravelclothing = new ItemHermesTravelClothing(1, LibItemName.HERMESTRAVELCLOTHING);
-		
-		snowballlauncher = new ItemSnowballLauncher(LibItemName.SNOWBALLLAUNCHER);
 		
 		gaiatablet = new ItemGaiaTablet();
 		teleportpearl = new ItemTeleportPearl(LibItemName.TELEPORTPEARL);
