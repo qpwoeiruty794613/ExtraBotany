@@ -26,11 +26,17 @@ public class LexiconModData {
 	public static LexiconEntry blueenchantress;
 	public static LexiconEntry sunshinelily;
 	public static LexiconEntry moonlightlily;
+	public static LexiconEntry geminiorchid;
+	public static LexiconEntry ominiviolet;
 	//Functional
 	public static LexiconEntry necrofleur;
 	public static LexiconEntry numerondandelife;
 	public static LexiconEntry woodienia;
-	//For fun
+	public static LexiconEntry icebirdium;
+	public static LexiconEntry numeronbalsam;
+	public static LexiconEntry volatilily;
+	public static LexiconEntry judasvow;
+	//Fun
 	public static LexiconEntry infinitymana;
 	//Relics
 	public static LexiconEntry hestiachastity;
@@ -43,6 +49,15 @@ public class LexiconModData {
 	public static LexiconEntry vpowerbattleaxe;
 	public static LexiconEntry vhandgun;
 	public static LexiconEntry vrangerboots;
+	public static LexiconEntry cronusphantom;
+	public static LexiconEntry hermestravelclothing;
+	public static LexiconEntry phoenixblaster;
+	public static LexiconEntry snowballcannon;
+	public static LexiconEntry tacticalshotgun;
+	//Cosmetic
+	public static LexiconEntry cosmetic;
+	//Basic
+	public static LexiconEntry blankcard;
 	
 	public static void init() {
 		//Generating
@@ -65,6 +80,16 @@ public class LexiconModData {
 		moonlightlily.setLexiconPages(new PageText("0"), new PageText("1"),
 				new PagePetalRecipe("2", ModPetalRecipe.moonlightlilyRecipe));
 		moonlightlily.setIcon(ItemBlockSpecialFlower.ofType(LibBlockName.MOONLIGHT_LILY));
+		
+		ominiviolet = new ELexiconEntry(LibLexiconName.GFLOWER_OMINIVIOLET, BotaniaAPI.categoryGenerationFlowers);
+		ominiviolet.setLexiconPages(new PageText("0"),
+				new PagePetalRecipe("1", ModPetalRecipe.ominivioletRecipe));
+		ominiviolet.setIcon(ItemBlockSpecialFlower.ofType(LibBlockName.OMNIVIOLET));
+		
+		geminiorchid = new ELexiconEntry(LibLexiconName.GFLOWER_GEMINIORCHID, BotaniaAPI.categoryGenerationFlowers);
+		geminiorchid.setLexiconPages(new PageText("0"),
+				new PagePetalRecipe("1", ModPetalRecipe.geminiorchidRecipe));
+		geminiorchid.setIcon(ItemBlockSpecialFlower.ofType(LibBlockName.GEMINIORCHID));
 		//Functional
 		necrofleur = new ELexiconEntry(LibLexiconName.FFLOWER_NECROFLEUR, BotaniaAPI.categoryFunctionalFlowers);
 		necrofleur.setLexiconPages(new PageText("0"),
@@ -75,6 +100,26 @@ public class LexiconModData {
 		numerondandelife.setLexiconPages(new PageText("0"),
 				new PagePetalRecipe("1", ModPetalRecipe.numerondandelifeRecipe));
 		numerondandelife.setIcon(ItemBlockSpecialFlower.ofType(LibBlockName.NUMERON_DANDELIFE));
+		
+		icebirdium = new ELexiconEntry(LibLexiconName.FFLOWER_ICEBIRDIUM, BotaniaAPI.categoryFunctionalFlowers);
+		icebirdium.setLexiconPages(new PageText("0"),
+				new PagePetalRecipe("1", ModPetalRecipe.icebirdiumRecipe));
+		icebirdium.setIcon(ItemBlockSpecialFlower.ofType(LibBlockName.ICEBIRDIUM));
+		
+		judasvow = new ELexiconEntry(LibLexiconName.FFLOWER_JUDASVOW, BotaniaAPI.categoryFunctionalFlowers);
+		judasvow.setLexiconPages(new PageText("0"),
+				new PagePetalRecipe("1", ModPetalRecipe.judasvowRecipe));
+		judasvow.setIcon(ItemBlockSpecialFlower.ofType(LibBlockName.JUDASVOW));
+		
+		volatilily = new ELexiconEntry(LibLexiconName.FFLOWER_VOLATILILY, BotaniaAPI.categoryFunctionalFlowers);
+		volatilily.setLexiconPages(new PageText("0"),
+				new PagePetalRecipe("1", ModPetalRecipe.volatililyRecipe));
+		volatilily.setIcon(ItemBlockSpecialFlower.ofType(LibBlockName.VOLATILILY));
+		
+		numeronbalsam = new ELexiconEntry(LibLexiconName.FFLOWER_NUMERONBALSAM, BotaniaAPI.categoryFunctionalFlowers);
+		numeronbalsam.setLexiconPages(new PageText("0"),
+				new PagePetalRecipe("1", ModPetalRecipe.numeronbalsamRecipe));
+		numeronbalsam.setIcon(ItemBlockSpecialFlower.ofType(LibBlockName.NUMERON_BALSAM));
 		
 		woodienia = new ELexiconEntry(LibLexiconName.FFLOWER_WOODIENIA, BotaniaAPI.categoryFunctionalFlowers);
 		woodienia.setLexiconPages(new PageText("0"),

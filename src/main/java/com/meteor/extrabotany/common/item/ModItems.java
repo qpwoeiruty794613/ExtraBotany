@@ -109,6 +109,10 @@ public class ModItems {
 		lycorisrandom = new ItemSpawnCardLycorisRandom("lycorisrandom");
 		
 		//OreDict
+		OreDictionary.registerOre(LibOreDictName.DOG, new ItemStack(dog, 1, 0));
+		OreDictionary.registerOre(LibOreDictName.DOG, new ItemStack(dog, 1, 1));
+		OreDictionary.registerOre(LibOreDictName.DOG, new ItemStack(dog, 1, 2));
+		OreDictionary.registerOre(LibOreDictName.DOG, new ItemStack(dog, 1, 3));
 		OreDictionary.registerOre(LibOreDictName.PRISMATIC_SHARD, new ItemStack(material, 1, 0));
 		OreDictionary.registerOre(LibOreDictName.BLANK_CARD, new ItemStack(material, 1, 1));
 		OreDictionary.registerOre(LibOreDictName.GAIA_ESSENCE, new ItemStack(material, 1, 2));

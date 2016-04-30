@@ -123,6 +123,11 @@ botania.entry.geminiorchid=Gemini Orchid
 botania.page.geminiorchid0=
 botania.page.geminiorchid1=
 
+# -- OMINIVIOLET
+botania.entry.ominiviolet=Omini Violet
+botania.page.ominiviolet0=
+botania.page.ominiviolet1=
+
 # -FUNCTIONAL
 # --NECROFLEUR
 botania.entry.necrofleur=Necrofleur
@@ -140,19 +145,24 @@ botania.page.woodienia0=&1Woodienia&0 can quickly break nearby &1Wood&0 blocks a
 botania.page.woodienia1=One tree a day keeps the mess away.
 
 # --ICEBIRDIUM
-botania.entry.icebirdium=
+botania.entry.icebirdium=Ice Birdium
 botania.page.icebirdium0=
 botania.page.icebirdium1=
 
 # --NUMERONBALSAM
-botania.entry.numeronbalsam=
+botania.entry.numeronbalsam=Numeron Balsam
 botania.page.numeronbalsam0=
 botania.page.numeronbalsam1=
 
 # --JUDASVOW
-botania.entry.judasvow=
+botania.entry.judasvow=Judas' Vow
 botania.page.judasvow0=
 botania.page.judasvow1=
+
+# --VOLATILILY
+botania.entry.volatilily=Volatilily
+botania.page.volatilily0=
+botania.page.volatilily1=
 
 # -OTHERS
 # --INFINITYMANA
@@ -229,7 +239,7 @@ botania.tagline.moonlightlily=The Priestess of the Moon
 
 tile.botania:flower.omniviolet.name=Omni Violet
 tile.botania:flower.omniviolet.reference=Need not to know
-botania.tagline.omniviolet=Eye of Providence
+botania.tagline.ominiviolet=Eye of Providence
 
 tile.botania:flower.geminiorchid.name=Gemini Orchid
 tile.botania:flower.geminiorchid.reference=

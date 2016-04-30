@@ -123,6 +123,11 @@ botania.entry.geminiorchid=双子兰
 botania.page.geminiorchid0=
 botania.page.geminiorchid1=
 
+# -- OMINIVIOLET
+botania.entry.ominiviolet=全知槿
+botania.page.ominiviolet0=
+botania.page.ominiviolet1=
+
 # -FUNCTIONAL
 # --NECROFLEUR
 botania.entry.necrofleur=死之花
@@ -140,19 +145,24 @@ botania.page.woodienia0=即是你给&1伐木花&0非常少量的 &4魔力&0,它�
 botania.page.woodienia1=每天一棵树,烦恼不再有.
 
 # --ICEBIRDIUM
-botania.entry.icebirdium=
+botania.entry.icebirdium=Ice Birdium
 botania.page.icebirdium0=
 botania.page.icebirdium1=
 
 # --NUMERONBALSAM
-botania.entry.numeronbalsam=
+botania.entry.numeronbalsam=Numeron Balsam
 botania.page.numeronbalsam0=
 botania.page.numeronbalsam1=
 
 # --JUDASVOW
-botania.entry.judasvow=
+botania.entry.judasvow=Judas' vow
 botania.page.judasvow0=
 botania.page.judasvow1=
+
+# --VOLATILILY
+botania.entry.volatilily=Volatilily
+botania.page.volatilily0=
+botania.page.volatilily1=
 
 # -OTHERS
 # --INFINITYMANA
@@ -211,10 +221,6 @@ botania.page.vhandgun0=
 
 #FLOWER NAMES
 # -GENERATING
-tile.botania:flower.candyflower.name=糖果花
-tile.botania:flower.candyflower.reference=最甜蜜的爱
-botania.tagline.candyflower=甜食控
-
 tile.botania:flower.blueenchantress.name=蓝色妖姬
 tile.botania:flower.blueenchantress.reference=蓝色爱好者
 botania.tagline.blueenchantress=源自源质的魔力
@@ -233,7 +239,7 @@ botania.tagline.moonlightlily=月亮祭司
 
 tile.botania:flower.omniviolet.name=全知槿
 tile.botania:flower.omniviolet.reference=Need not to know
-botania.tagline.omniviolet=普罗维登斯之眼
+botania.tagline.ominiviolet=普罗维登斯之眼
 
 tile.botania:flower.geminiorchid.name=双子兰
 tile.botania:flower.geminiorchid.reference=
