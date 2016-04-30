@@ -19,8 +19,7 @@ public class EventHighDamageResistance {
 	        	if(event.ammount >= (float) (player.getMaxHealth()*0.2) && event.ammount <= (float)(player.getMaxHealth()*3)){
 	        		event.ammount = (float) (player.getMaxHealth()*0.2);
 	        	}
-	        }
-	                 
+	        }              
 	}
 }
 

@@ -42,7 +42,7 @@ public class SubTileWoodienia extends SubTileFunctional{
 						Block block = world.getBlock(chunkx, chunky, chunkz);
 						int meta = world.getBlockMetadata(chunkx, chunky, chunkz);
 						if(block instanceof BlockLog) {
-							mana--;
+							mana -= 5;
 							world.func_147480_a(chunkx, chunky, chunkz, true);
 							Botania.proxy.sparkleFX(world, chunkx + 0.5F, chunky, chunkz + 0.5F, 1.99F, 0.97F, 0.20F, 4F, 10);
 							return;

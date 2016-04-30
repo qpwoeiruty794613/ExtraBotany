@@ -12,6 +12,7 @@ import com.meteor.extrabotany.client.render.RenderShield;
 import com.meteor.extrabotany.client.render.entity.RenderLycorisradiataGreen;
 import com.meteor.extrabotany.client.render.entity.RenderLycorisradiataPurple;
 import com.meteor.extrabotany.client.render.entity.RenderLycorisradiataRed;
+import com.meteor.extrabotany.client.render.entity.RenderSpear;
 import com.meteor.extrabotany.client.render.entity.RenderTeleportPearl;
 import com.meteor.extrabotany.client.render.tile.RenderTileRelicPlate;
 import com.meteor.extrabotany.common.CommonProxy;
@@ -19,6 +20,7 @@ import com.meteor.extrabotany.common.block.tile.TileRelicPlate;
 import com.meteor.extrabotany.common.entity.EntityLycorisradiataGreen;
 import com.meteor.extrabotany.common.entity.EntityLycorisradiataPurple;
 import com.meteor.extrabotany.common.entity.EntityLycorisradiataRed;
+import com.meteor.extrabotany.common.entity.EntitySpear;
 import com.meteor.extrabotany.common.entity.EntityTeleportPearl;
 import com.meteor.extrabotany.common.entity.bullet.EntityBulletExploding;
 import com.meteor.extrabotany.common.entity.bullet.EntityBulletGold;
@@ -60,6 +62,7 @@ public class ClientProxy extends CommonProxy{
 		MinecraftForge.EVENT_BUS.register(new RenderShield());
 	    FMLCommonHandler.instance().bus().register(new RenderShield());	
 		ClientRegistry.bindTileEntitySpecialRenderer(TileRelicPlate.class, new RenderTileRelicPlate());
+		
 		RenderingRegistry.registerEntityRenderingHandler(EntityBulletExploding.class, new RenderSnowball(ModItems.itemtest));
 		RenderingRegistry.registerEntityRenderingHandler(EntityBulletGold.class, new RenderSnowball(ModItems.itemtest));
 		RenderingRegistry.registerEntityRenderingHandler(EntityBulletHighVelocity.class, new RenderSnowball(ModItems.itemtest));
@@ -67,6 +70,7 @@ public class ClientProxy extends CommonProxy{
 		RenderingRegistry.registerEntityRenderingHandler(EntityBulletSilver.class, new RenderSnowball(ModItems.itemtest));
 		RenderingRegistry.registerEntityRenderingHandler(EntityBulletMusket.class, new RenderSnowball(ModItems.itemtest));
 		
+		RenderingRegistry.registerEntityRenderingHandler(EntitySpear.class, new RenderSpear());
 		RenderingRegistry.registerEntityRenderingHandler(EntityBulletSnowball.class, new RenderSnowball(Items.snowball));
 		RenderingRegistry.registerEntityRenderingHandler(EntityLycorisradiataRed.class, new RenderLycorisradiataRed());
 		RenderingRegistry.registerEntityRenderingHandler(EntityLycorisradiataGreen.class, new RenderLycorisradiataGreen());

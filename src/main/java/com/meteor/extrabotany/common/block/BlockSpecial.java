@@ -29,6 +29,9 @@ public class BlockSpecial extends BlockSpecialFlower {
 			LibBlockName.NECRO_FLUER,
 			LibBlockName.WOODIENIA,	
 			LibBlockName.VOLATILILY,
+			LibBlockName.ICEBIRDIUM,
+			LibBlockName.NUMERON_BALSAM,
+			LibBlockName.JUDASVOW,
 		}));
 	}	
 		

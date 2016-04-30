@@ -70,22 +70,11 @@ public class SubTileNumeronDandelife extends SubTileFunctional implements IShiel
 			
 				if(mana > 1 && getShieldAmount(player) < getMaxShieldAmount(player)){
 					if(ticksExisted % DELAY == 0){
-						mana -= 30;
+						mana -= 20;
 						addShieldAmount(3F, player);
 						}
 					}
-				
-				Collection<PotionEffect> potions = player.getActivePotionEffects();
-				boolean flag = false;
-        		for (PotionEffect potion : potions) {
-					int id = potion.getPotionID();
-					if (ReflectionHelper.getPrivateValue(Potion.class, Potion.potionTypes[id], new String[]{"isBadEffect", "field_76418_K", "J"})) {
-						player.removePotionEffect(id);
-						flag = true;
-					}
-					break;
-        		}
-				
+
 			}
 		
 	}

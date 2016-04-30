@@ -5,6 +5,7 @@ import com.meteor.extrabotany.common.block.ModBlocks;
 import com.meteor.extrabotany.common.block.ModMutilBlocks;
 import com.meteor.extrabotany.common.command.ModCommands;
 import com.meteor.extrabotany.common.effect.ModPotionEffect;
+import com.meteor.extrabotany.common.effect.PotionEffectMods;
 import com.meteor.extrabotany.common.enchantment.ModEnchantment;
 import com.meteor.extrabotany.common.entity.ModEntities;
 import com.meteor.extrabotany.common.event.ModEvents;
@@ -30,7 +31,7 @@ public class CommonProxy {
 		ModEntities.init();
 		ModRecipe.init();
 		ModAchievement.init();
-		ModPotionEffect.init();
+		PotionEffectMods.init();
 		LexiconModData.init();
 		ModMutilBlocks.init();
 	}

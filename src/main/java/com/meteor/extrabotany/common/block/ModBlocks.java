@@ -5,8 +5,11 @@ import com.meteor.extrabotany.common.block.decor.BlockElvenQuartzSlab;
 import com.meteor.extrabotany.common.block.decor.BlockElvenQuartzStairs;
 import com.meteor.extrabotany.common.block.decor.BlockGaiaQuartzSlab;
 import com.meteor.extrabotany.common.block.decor.BlockGaiaQuartzStairs;
+import com.meteor.extrabotany.common.block.subtile.SubTileJudasvow;
+import com.meteor.extrabotany.common.block.subtile.functional.SubTileIcebirdium;
 import com.meteor.extrabotany.common.block.subtile.functional.SubTileNecrofluer;
 import com.meteor.extrabotany.common.block.subtile.functional.SubTileNumeronDandelife;
+import com.meteor.extrabotany.common.block.subtile.functional.SubTileNumeronbalsam;
 import com.meteor.extrabotany.common.block.subtile.functional.SubTileVolatilily;
 import com.meteor.extrabotany.common.block.subtile.functional.SubTileWoodienia;
 import com.meteor.extrabotany.common.block.subtile.generating.SubTileBlueenchantress;
@@ -68,6 +71,9 @@ public class ModBlocks {
 	}
 	
 	private static void initTileEntities() {
+		BotaniaAPI.registerSubTile(LibBlockName.JUDASVOW, SubTileJudasvow.class);
+		BotaniaAPI.registerSubTile(LibBlockName.ICEBIRDIUM, SubTileIcebirdium.class);
+		BotaniaAPI.registerSubTile(LibBlockName.NUMERON_BALSAM, SubTileNumeronbalsam.class);
 		BotaniaAPI.registerSubTile(LibBlockName.VOLATILILY, SubTileVolatilily.class);
 		BotaniaAPI.registerSubTile(LibBlockName.OMNIVIOLET, SubTileOmniviolet.class);
 		BotaniaAPI.registerSubTile(LibBlockName.WOODIENIA, SubTileWoodienia.class);

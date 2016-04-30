@@ -1,3 +1,6 @@
+16/4/30<br>
+Add new Functional Flowers:IceBirdium, Judas' vow and NumeronBalsam.<br>
+
 16/4/29<br>
 Add 6 kinds of Guns.<br>
 

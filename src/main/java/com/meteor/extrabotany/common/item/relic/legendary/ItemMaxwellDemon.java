@@ -44,10 +44,8 @@ public class ItemMaxwellDemon extends ItemRelic implements IManaUsingItem{
 	public void onUsingTick(ItemStack stack, EntityPlayer player, int count) {
 		super.onUsingTick(stack, player, count);
 
-		if(ManaItemHandler.requestManaExact(stack, player, 800, true)) {
+		if(ManaItemHandler.requestManaExact(stack, player, 400, true)) {
 			if(count % 5 == 0)
-
-
 			if(count == 5)
 				if(player.canEat(false))
 					ReflectionHelper.setPrivateValue(EntityPlayer.class, player, 20, LibObfuscation.ITEM_IN_USE_COUNT);

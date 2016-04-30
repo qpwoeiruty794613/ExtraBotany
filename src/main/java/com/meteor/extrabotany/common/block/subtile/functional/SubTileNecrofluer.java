@@ -71,8 +71,8 @@ public class SubTileNecrofluer extends SubTileFunctional{
 					if(ticksExisted % DELAY == 0){
 						EntityLiving l = (EntityLiving) living;
 							l.attackEntityFrom(ItemRelic.damageSource(), 5F);
-							l.addPotionEffect(new PotionEffect(Potion.moveSlowdown.getId(), 40 , 2));
-							l.addPotionEffect(new PotionEffect(Potion.blindness.getId(), 40 , 2));
+							l.addPotionEffect(new PotionEffect(Potion.moveSlowdown.id, 40 , 2));
+							l.addPotionEffect(new PotionEffect(Potion.blindness.id, 40 , 2));
 							mana -= 40;
 						}
 					}

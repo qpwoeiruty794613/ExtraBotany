@@ -32,7 +32,7 @@ public class PotionEffectMods extends Potion{
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		init();
+		ModPotionEffect.init();
 	}
 	
 	public PotionEffectMods(String name, Boolean isbadEffect, ResourceLocation icon) {
