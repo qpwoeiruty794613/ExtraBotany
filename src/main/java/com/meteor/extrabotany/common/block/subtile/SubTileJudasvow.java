@@ -34,7 +34,7 @@ public class SubTileJudasvow extends SubTileFunctional implements IManaUsingItem
 	
 	private static final String TAG_ATTACKER_USERNAME = "attackerUsername";
 	private static final String TAG_HOME_ID = "homeID";
-	
+	private static final int RANGE = 4;
 	@Override
 	public void onUpdate() {
 		super.onUpdate();	

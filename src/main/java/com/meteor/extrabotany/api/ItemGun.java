@@ -29,10 +29,7 @@ public class ItemGun extends ItemMods{
 
 	public ItemGun(String name) {
 		super(name);
-	}
-	
-	public float getDamageBuff(){
-		return 0;
+		this.setMaxStackSize(1);
 	}
 	
 	@Override
