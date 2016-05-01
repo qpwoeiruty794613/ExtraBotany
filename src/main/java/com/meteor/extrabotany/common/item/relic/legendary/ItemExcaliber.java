@@ -5,6 +5,7 @@ import java.util.Random;
 
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
+import com.meteor.extrabotany.common.entity.EntityItemUnbreakable;
 import com.meteor.extrabotany.common.lib.LibItemName;
 
 import java.util.List;
@@ -14,12 +15,14 @@ import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.attributes.AttributeModifier;
 import net.minecraft.entity.boss.IBossDisplayData;
+import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.monster.IMob;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.projectile.EntityThrowable;
 import net.minecraft.item.EnumAction;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.server.MinecraftServer;
@@ -61,6 +64,23 @@ public class ItemExcaliber extends ItemManasteelSword implements IRelic, ILensEf
 	@Override
 	public EnumRarity getRarity(ItemStack p_77613_1_) {
 		return BotaniaAPI.rarityRelic;
+	}
+	
+	@Override
+	public boolean hasCustomEntity(ItemStack stack) {
+		return true;
+	}
+
+	@Override
+	public Entity createEntity(World world, Entity location, ItemStack itemstack) {
+		EntityItem entity = new EntityItemUnbreakable(world, location.posX, location.posY, location.posZ, itemstack);
+		if(location instanceof EntityItem) {
+		    entity.delayBeforeCanPickup = 40;
+		}
+		entity.motionX = location.motionX;
+		entity.motionY = location.motionY;
+		entity.motionZ = location.motionZ;
+		return entity;
 	}
 	
 	@Override

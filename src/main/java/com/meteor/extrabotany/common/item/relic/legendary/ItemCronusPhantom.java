@@ -1,15 +1,19 @@
 package com.meteor.extrabotany.common.item.relic.legendary;
 
 import com.meteor.extrabotany.common.effect.ModPotionEffect;
+import com.meteor.extrabotany.common.entity.EntityItemUnbreakable;
 import com.meteor.extrabotany.common.item.ModItems;
 
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.monster.EntityMob;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.PotionEffect;
+import net.minecraft.world.World;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.living.LivingAttackEvent;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
@@ -23,6 +27,23 @@ public class ItemCronusPhantom extends ItemRelicBauble{
 
 	public ItemCronusPhantom(String name) {
 		super(name);
+	}
+	
+	@Override
+	public boolean hasCustomEntity(ItemStack stack) {
+		return true;
+	}
+
+	@Override
+	public Entity createEntity(World world, Entity location, ItemStack itemstack) {
+		EntityItem entity = new EntityItemUnbreakable(world, location.posX, location.posY, location.posZ, itemstack);
+		if(location instanceof EntityItem) {
+		    entity.delayBeforeCanPickup = 40;
+		}
+		entity.motionX = location.motionX;
+		entity.motionY = location.motionY;
+		entity.motionZ = location.motionZ;
+		return entity;
 	}
 
 	@Override

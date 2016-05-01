@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.meteor.extrabotany.common.item.ModItems;
+import com.meteor.extrabotany.common.item.relic.ItemRelicAdv;
 import com.meteor.extrabotany.common.lib.LibItemName;
 
 import net.minecraft.entity.item.EntityItem;
@@ -20,7 +21,7 @@ import net.minecraft.world.World;
 import vazkii.botania.api.item.IRelic;
 import vazkii.botania.common.item.relic.ItemRelic;
 
-public class ItemDice20 extends ItemRelic{
+public class ItemDice20 extends ItemRelicAdv{
 	
 	public static ItemStack[] relicStacks;
 	

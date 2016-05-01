@@ -29,7 +29,6 @@ public class EntityItemUnbreakable extends EntityItem {
 	   if(source.getDamageType().equals(DamageSource.outOfWorld.damageType)) {
 	     return true;
 	   }
-	    // prevent any damage besides out of world
 	    return false;
 	 }
 }

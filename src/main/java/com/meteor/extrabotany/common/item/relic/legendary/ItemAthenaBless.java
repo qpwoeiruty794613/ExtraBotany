@@ -9,12 +9,15 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.OpenGlHelper;
 import net.minecraft.client.renderer.Tessellator;
 import net.minecraft.client.renderer.texture.TextureMap;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.attributes.AttributeModifier;
+import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.world.World;
 import net.minecraftforge.client.event.RenderPlayerEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.living.LivingAttackEvent;
@@ -25,6 +28,7 @@ import baubles.common.lib.PlayerHandler;
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
 import com.meteor.extrabotany.api.IShieldHandler;
+import com.meteor.extrabotany.common.entity.EntityItemUnbreakable;
 import com.meteor.extrabotany.common.event.EventKnowledgeTypeUnlock;
 import com.meteor.extrabotany.common.event.EventShield;
 import com.meteor.extrabotany.common.handler.ConfigHandler;
@@ -51,6 +55,23 @@ public class ItemAthenaBless extends ItemRelicBauble implements IShieldHandler{
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLCommonHandler.instance().bus().register(this);
 		damageNegations.add(ItemRelic.damageSource().getDamageType());
+	}
+	
+	@Override
+	public boolean hasCustomEntity(ItemStack stack) {
+		return true;
+	}
+
+	@Override
+	public Entity createEntity(World world, Entity location, ItemStack itemstack) {
+		EntityItem entity = new EntityItemUnbreakable(world, location.posX, location.posY, location.posZ, itemstack);
+		if(location instanceof EntityItem) {
+		    entity.delayBeforeCanPickup = 40;
+		}
+		entity.motionX = location.motionX;
+		entity.motionY = location.motionY;
+		entity.motionZ = location.motionZ;
+		return entity;
 	}
 	
 	@SubscribeEvent

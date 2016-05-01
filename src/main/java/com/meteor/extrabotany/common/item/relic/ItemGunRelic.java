@@ -4,9 +4,11 @@ import java.util.List;
 
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.stats.Achievement;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.EnumChatFormatting;
@@ -18,6 +20,7 @@ import vazkii.botania.common.core.helper.ItemNBTHelper;
 import vazkii.botania.common.item.ModItems;
 
 import com.meteor.extrabotany.api.ItemGun;
+import com.meteor.extrabotany.common.entity.EntityItemUnbreakable;
 
 public class ItemGunRelic extends ItemGun implements IRelic{
 	
@@ -26,6 +29,23 @@ public class ItemGunRelic extends ItemGun implements IRelic{
 	
 	public ItemGunRelic(String name) {
 		super(name);
+	}
+	
+	@Override
+	public boolean hasCustomEntity(ItemStack stack) {
+		return true;
+	}
+
+	@Override
+	public Entity createEntity(World world, Entity location, ItemStack itemstack) {
+		EntityItem entity = new EntityItemUnbreakable(world, location.posX, location.posY, location.posZ, itemstack);
+		if(location instanceof EntityItem) {
+		    entity.delayBeforeCanPickup = 40;
+		}
+		entity.motionX = location.motionX;
+		entity.motionY = location.motionY;
+		entity.motionZ = location.motionZ;
+		return entity;
 	}
 	
 	@Override

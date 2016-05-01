@@ -14,6 +14,7 @@ import net.minecraft.util.DamageSource;
 import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
 
+import com.meteor.extrabotany.common.item.relic.ItemRelicAdv;
 import com.meteor.extrabotany.common.lib.LibItemName;
 
 import vazkii.botania.api.internal.IManaBurst;
@@ -25,7 +26,7 @@ import vazkii.botania.common.core.helper.Vector3;
 import vazkii.botania.common.entity.EntityManaBurst;
 import vazkii.botania.common.item.relic.ItemRelic;
 
-public class ItemVHandgun extends ItemRelic implements ILensEffect{
+public class ItemVHandgun extends ItemRelicAdv implements ILensEffect{
 	private static final String TAG_ATTACKER_USERNAME = "attackerUsername";
 	private static final String TAG_HOME_ID = "homeID";
 	public ItemVHandgun(){

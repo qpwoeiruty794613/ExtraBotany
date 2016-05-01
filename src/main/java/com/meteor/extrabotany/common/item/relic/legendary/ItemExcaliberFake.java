@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
+import com.meteor.extrabotany.common.item.relic.ItemRelicAdv;
 import com.meteor.extrabotany.common.lib.LibItemName;
 
 import net.minecraft.entity.Entity;
@@ -22,7 +23,7 @@ import vazkii.botania.common.entity.EntityManaBurst;
 import vazkii.botania.common.item.equipment.tool.manasteel.ItemManasteelSword;
 import vazkii.botania.common.item.relic.ItemRelic;
 
-public class ItemExcaliberFake extends ItemRelic{
+public class ItemExcaliberFake extends ItemRelicAdv{
 	public static ToolMaterial toolMaterial = EnumHelper.addToolMaterial("B_EXCALIBER", 3, -1, 6.2F, 6F, 40);
 	public ItemExcaliberFake() {
 		super(LibItemName.EXCALIBERFAKE);

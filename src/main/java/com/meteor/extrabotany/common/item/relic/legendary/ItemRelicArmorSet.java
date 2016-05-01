@@ -8,6 +8,7 @@ import org.lwjgl.input.Keyboard;
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
 import com.meteor.extrabotany.client.model.ModelRelicArmor;
+import com.meteor.extrabotany.common.entity.EntityItemUnbreakable;
 import com.meteor.extrabotany.common.lib.LibReference;
 
 import net.minecraft.client.gui.GuiScreen;
@@ -16,6 +17,7 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.attributes.AttributeModifier;
+import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.ItemStack;
@@ -44,6 +46,23 @@ public class ItemRelicArmorSet extends ItemManasteelArmor implements IRelic{
 	private static final String TAG_SOULBIND = "soulbind";
 
 	Achievement achievement;
+	
+	@Override
+	public boolean hasCustomEntity(ItemStack stack) {
+		return true;
+	}
+
+	@Override
+	public Entity createEntity(World world, Entity location, ItemStack itemstack) {
+		EntityItem entity = new EntityItemUnbreakable(world, location.posX, location.posY, location.posZ, itemstack);
+		if(location instanceof EntityItem) {
+		    entity.delayBeforeCanPickup = 40;
+		}
+		entity.motionX = location.motionX;
+		entity.motionY = location.motionY;
+		entity.motionZ = location.motionZ;
+		return entity;
+	}
 	
 	public ItemRelicArmorSet(int type, String name) {
 		super(type, name, BotaniaAPI.terrasteelArmorMaterial);

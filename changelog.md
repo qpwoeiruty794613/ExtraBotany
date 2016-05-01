@@ -1,5 +1,6 @@
 16/5/1<br>
-Lexicon Update.
+Lexicon Update.<br>
+Relics are now unbreakable.<br>
 
 16/4/30<br>
 Add new Functional Flowers:IceBirdium, Judas' vow and NumeronBalsam.<br>

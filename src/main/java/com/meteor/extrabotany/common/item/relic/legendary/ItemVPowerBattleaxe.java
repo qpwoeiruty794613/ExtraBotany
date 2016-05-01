@@ -5,6 +5,7 @@ import java.util.Random;
 
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
+import com.meteor.extrabotany.common.item.relic.ItemRelicAdv;
 import com.meteor.extrabotany.common.lib.LibItemName;
 
 import net.minecraft.entity.Entity;
@@ -28,7 +29,7 @@ import vazkii.botania.common.entity.EntityBabylonWeapon;
 import vazkii.botania.common.item.equipment.tool.manasteel.ItemManasteelSword;
 import vazkii.botania.common.item.relic.ItemRelic;
 
-public class ItemVPowerBattleaxe extends ItemRelic implements IManaUsingItem{
+public class ItemVPowerBattleaxe extends ItemRelicAdv implements IManaUsingItem{
 	public static ToolMaterial toolMaterial = EnumHelper.addToolMaterial("B_VPOWERBATTLEAXE", 3, -1, 6.2F, 6F, 40);
 	private static final String TAG_WEAPONS_SPAWNED = "weaponsSpawned";
 	private static final String TAG_CHARGING = "charging";
