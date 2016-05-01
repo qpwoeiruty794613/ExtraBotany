@@ -1,4 +1,5 @@
 # KNOWLEDGE
+category.Botania:extra=Extra Botany
 botania.knowledge.extra=&3Extra&7 Knowledge
 botaniamisc.knowledgeUnlock=The Blank Card is unusually shining, the Lexicon which you are holding is injected with a mystery energy.
 
@@ -75,7 +76,7 @@ item.botania:hermestravelclothing.name=Hermes's Travel Clothing
 
 # -WEAPON
 item.phoenixblaster.name=Phoenix Blaster
-item.tacticalshotgun.name=Tactical ShotgunS
+item.tacticalshotgun.name=Tactical Shotgun
 item.boomstick.name=Boomstick
 item.flintlock.name=Flintlock
 item.shotgun.name=Shotgun
@@ -94,6 +95,39 @@ item.test.name=Test Item
 item.test.desc=ONLY FOR DEVELOPER
 
 # LEXICON ENTRIES
+# -BASIC
+botania.entry.blankcard=Blank Card
+botania.tagline.blankcard=
+botania.page.blankcard0=
+botania.page.blankcard1=
+
+botania.entry.cosmetic=Cosmetic Baubles
+botania.tagline.cosmetic=
+botania.page.cosmetic0=
+botania.page.cosmetic1=
+botania.page.cosmetic2=
+botania.page.cosmetic3=
+botania.page.cosmetic4=
+
+botania.entry.prismaticshard=Prismatic Shard
+botania.tagline.prismaticshard=
+botania.page.prismaticshard0=
+
+botania.entry.goldstring=Golden Infused String
+botania.tagline.goldstring=
+botania.page.goldstring0=
+botania.page.goldstring1=
+
+botania.entry.petal=Lycorisdiata
+botania.tagline.petal=
+botania.page.petal0=
+
+botania.entry.quartz=Elementium Quartz & Gaia Quartz
+botania.tagline.quartz=
+botania.page.quartz0=
+botania.page.quartz1=
+botania.page.quartz2=
+
 # -GENERATING
 # -- CANDYFLOWER
 botania.entry.candyflower=Candy Flower

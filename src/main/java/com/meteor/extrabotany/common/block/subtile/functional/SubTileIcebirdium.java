@@ -34,7 +34,7 @@ public class SubTileIcebirdium extends SubTileFunctional{
 		
 	@Override
 	public LexiconEntry getEntry() {
-		return LexiconModData.woodienia;
+		return LexiconModData.icebirdium;
 	}
 		
 	@Override

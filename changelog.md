@@ -1,3 +1,6 @@
+16/5/1<br>
+Lexicon Update.
+
 16/4/30<br>
 Add new Functional Flowers:IceBirdium, Judas' vow and NumeronBalsam.<br>
 

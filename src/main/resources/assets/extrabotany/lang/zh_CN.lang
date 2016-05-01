@@ -1,4 +1,5 @@
 # KNOWLEDGE
+category.Botania:extra=额外植物学
 botania.knowledge.extra=&3额外&7的知识
 botaniamisc.knowledgeUnlock=白卡闪耀着异样的光芒,你手中的手册被注入了神秘的力量.
 
@@ -94,6 +95,39 @@ item.test.name=测试道具
 item.test.desc=仅作测试
 
 # LEXICON ENTRIES
+# -BASIC
+botania.entry.blankcard=白卡
+botania.tagline.blankcard=
+botania.page.blankcard0=
+botania.page.blankcard1=
+
+botania.entry.cosmetic=装饰饰品
+botania.tagline.cosmetic=
+botania.page.cosmetic0=
+botania.page.cosmetic1=
+botania.page.cosmetic2=
+botania.page.cosmetic3=
+botania.page.cosmetic4=
+
+botania.entry.prismaticshard=彩虹碎片
+botania.tagline.prismaticshard=
+botania.page.prismaticshard0=
+
+botania.entry.goldstring=注魔金线
+botania.tagline.goldstring=
+botania.page.goldstring0=
+botania.page.goldstring1=
+
+botania.entry.petal=彼岸花
+botania.tagline.petal=
+botania.page.petal0=
+
+botania.entry.quartz=源质石英&盖亚石英
+botania.tagline.quartz=
+botania.page.quartz0=
+botania.page.quartz1=
+botania.page.quartz2=
+
 # -GENERATING
 # -- CANDYFLOWER
 botania.entry.candyflower=糖果花

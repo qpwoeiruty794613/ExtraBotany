@@ -3,6 +3,7 @@ package com.meteor.extrabotany.common.block.subtile;
 import java.util.List;
 
 import com.meteor.extrabotany.common.entity.EntitySpear;
+import com.meteor.extrabotany.common.lexicon.LexiconModData;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
@@ -19,6 +20,7 @@ import net.minecraft.util.MathHelper;
 import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
 import vazkii.botania.api.internal.IManaBurst;
+import vazkii.botania.api.lexicon.LexiconEntry;
 import vazkii.botania.api.mana.BurstProperties;
 import vazkii.botania.api.mana.ILensEffect;
 import vazkii.botania.api.mana.IManaUsingItem;
@@ -31,10 +33,14 @@ import vazkii.botania.common.entity.EntityBabylonWeapon;
 import vazkii.botania.common.entity.EntityManaBurst;
 
 public class SubTileJudasvow extends SubTileFunctional implements IManaUsingItem{
-	
-	private static final String TAG_ATTACKER_USERNAME = "attackerUsername";
-	private static final String TAG_HOME_ID = "homeID";
+
 	private static final int RANGE = 4;
+	
+	@Override
+	public int getColor() {
+		return 0xF5EC3D;
+	}
+	
 	@Override
 	public void onUpdate() {
 		super.onUpdate();	
@@ -72,6 +78,11 @@ public class SubTileJudasvow extends SubTileFunctional implements IManaUsingItem
 				}
 			}
 		}
+	}
+	
+	@Override
+	public LexiconEntry getEntry() {
+		return LexiconModData.judasvow;
 	}
 
 	@Override

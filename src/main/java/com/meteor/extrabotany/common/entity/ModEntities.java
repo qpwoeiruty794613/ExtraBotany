@@ -27,6 +27,8 @@ public class ModEntities {
 		EntityRegistry.registerModEntity(EntityTeleportPearl.class, LibEntityName.TELEPORTPERAL, id++, ExtraBotany.instance, 64, 10, true);
 		EntityRegistry.registerModEntity(EntityGaiaIII.class, "gaia3", id++, ExtraBotany.instance, 64, 3, true);
 		
+		EntityRegistry.registerModEntity(EntityItemUnbreakable.class, "itemunbreakable", id++, ExtraBotany.instance, 256, 3, true);
+		
 		EntityRegistry.registerModEntity(EntityBulletExploding.class, LibEntityName.BULLETEXPLODING, id++, ExtraBotany.instance, 256, 3, true);
 		EntityRegistry.registerModEntity(EntityBulletGold.class, LibEntityName.BULLETGOLD, id++, ExtraBotany.instance, 256, 3, true);
 		EntityRegistry.registerModEntity(EntityBulletHighVelocity.class, LibEntityName.BULLETHIGHVELOCITY, id++, ExtraBotany.instance, 256, 3, true);

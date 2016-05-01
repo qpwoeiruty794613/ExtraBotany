@@ -1,22 +1,31 @@
 package com.meteor.extrabotany.common.lexicon;
 
+import java.util.Random;
+
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.StatCollector;
 
 import com.meteor.extrabotany.common.block.ModBlocks;
 import com.meteor.extrabotany.common.item.ModItems;
 import com.meteor.extrabotany.common.lib.LibBlockName;
 import com.meteor.extrabotany.common.lib.LibLexiconName;
+import com.meteor.extrabotany.common.lib.LibReference;
+import com.meteor.extrabotany.common.recipe.ModManaInfusionRecipe;
 import com.meteor.extrabotany.common.recipe.ModPetalRecipe;
+import com.meteor.extrabotany.common.recipe.ModRecipe;
 
 import vazkii.botania.api.BotaniaAPI;
+import vazkii.botania.api.lexicon.LexiconCategory;
 import vazkii.botania.api.lexicon.LexiconEntry;
 import vazkii.botania.common.crafting.ModPetalRecipes;
 import vazkii.botania.common.item.block.ItemBlockSpecialFlower;
 import vazkii.botania.common.lexicon.ALexiconEntry;
 import vazkii.botania.common.lexicon.BLexiconEntry;
 import vazkii.botania.common.lexicon.DLexiconEntry;
+import vazkii.botania.common.lexicon.page.PageCraftingRecipe;
+import vazkii.botania.common.lexicon.page.PageManaInfusionRecipe;
 import vazkii.botania.common.lexicon.page.PagePetalRecipe;
 import vazkii.botania.common.lexicon.page.PageText;
 
@@ -58,8 +67,75 @@ public class LexiconModData {
 	public static LexiconEntry cosmetic;
 	//Basic
 	public static LexiconEntry blankcard;
+	public static LexiconEntry shard;
+	public static LexiconEntry petal;
+	public static LexiconEntry goldstring;
+	public static LexiconEntry astralforce;
+	public static LexiconEntry quartz;
+	//Gun
+	public static LexiconEntry gunbase;
+	public static LexiconEntry gunphoenixblaster;
+	public static LexiconEntry gunsnowballcannon;
+	public static LexiconEntry guntacticalshotgun;
+	public static LexiconEntry gunbullet;
+	//Category
+	public static LexiconCategory categoryExtra;
 	
 	public static void init() {
+		categoryExtra = new LexiconCategory(StatCollector.translateToLocal("category.Botania:extra"));
+		categoryExtra.setIcon(LibReference.EXTRA);
+		categoryExtra.setPriority(0);
+		BotaniaAPI.addCategory(categoryExtra);	
+		//Basic
+		blankcard = new BLexiconEntry(LibLexiconName.BA_BLANKCARD, categoryExtra);
+		blankcard.setLexiconPages(new PageText("0"), 
+				new PageManaInfusionRecipe("1", ModManaInfusionRecipe.blankCardRecipe));
+		blankcard.setIcon(new ItemStack(ModItems.material, 1, 1));
+		shard = new BLexiconEntry(LibLexiconName.BA_PRISMATICSHARD, categoryExtra);
+		shard.setLexiconPages(new PageText("0"));
+		shard.setIcon(new ItemStack(ModItems.material));
+		petal = new BLexiconEntry(LibLexiconName.BA_PETAL, categoryExtra);
+		petal.setLexiconPages(new PageText("0"));
+		petal.setIcon(new ItemStack(ModItems.lycorisrandom));
+		goldstring = new ELexiconEntry(LibLexiconName.BA_GOLDSTRING, categoryExtra);
+		goldstring.setLexiconPages(new PageText("0"), 
+				new PageCraftingRecipe("1", ModRecipe.goldString));
+		goldstring.setIcon(new ItemStack(ModItems.material,1,9));
+		quartz = new ELexiconEntry(LibLexiconName.BA_QUARTZ, categoryExtra);
+		quartz.setLexiconPages(new PageText("0"), 
+				new PageCraftingRecipe("1", ModRecipe.elvenQuartz), 
+				new PageCraftingRecipe("2", ModRecipe.gaiaQuartz));
+		quartz.setIcon(new ItemStack(ModItems.material,1,7));
+		//Gun
+		gunbase = new BLexiconEntry(LibLexiconName.G_GUNBASE, categoryExtra);
+		gunbase.setLexiconPages(new PageText("0"),
+				new PageText("1"));
+		gunbase.setIcon(new ItemStack(ModItems.gunboomstick));
+		gunphoenixblaster = new ELexiconEntry(LibLexiconName.G_GUNPHOENIXBLASTER, categoryExtra);
+		gunphoenixblaster.setLexiconPages(new PageText("0"));
+		gunphoenixblaster.setIcon(new ItemStack(ModItems.gunphoenixblaster));
+		gunsnowballcannon = new ELexiconEntry(LibLexiconName.G_GUNSNOWBALLCANNON, categoryExtra);
+		gunsnowballcannon.setLexiconPages(new PageText("0"));
+		gunsnowballcannon.setIcon(new ItemStack(ModItems.snowballlauncher));
+		guntacticalshotgun = new ELexiconEntry(LibLexiconName.G_GUNTACTICALSHOTGUN, categoryExtra);
+		guntacticalshotgun.setLexiconPages(new PageText("0"));
+		guntacticalshotgun.setIcon(new ItemStack(ModItems.guntacticalshotgun));
+		gunbullet = new BLexiconEntry(LibLexiconName.G_GUNBULLET, categoryExtra);
+		gunbullet.setLexiconPages(new PageText("0"),
+				new PageCraftingRecipe("1", ModRecipe.bullet0),
+				new PageCraftingRecipe("2", ModRecipe.bullet1),
+				new PageCraftingRecipe("3", ModRecipe.bullet2),
+				new PageCraftingRecipe("4", ModRecipe.bullet3),
+				new PageCraftingRecipe("5", ModRecipe.bullet4));
+		gunbullet.setIcon(new ItemStack(ModItems.bullet,1,4));
+		//Bauble
+		cosmetic = new ELexiconEntry(LibLexiconName.B_COSMETIC, categoryExtra);
+		cosmetic.setLexiconPages(new PageText("0"), 
+				new PageCraftingRecipe("1", ModRecipe.baubleDog0), 
+				new PageCraftingRecipe("2", ModRecipe.baubleDog1), 
+				new PageCraftingRecipe("3", ModRecipe.baubleDog2), 
+				new PageCraftingRecipe("4", ModRecipe.baubleDog3));
+		cosmetic.setIcon(new ItemStack(ModItems.dog, 1, 0));
 		//Generating
 		candyflower = new ELexiconEntry(LibLexiconName.GFLOWER_CANDYFLOWER, BotaniaAPI.categoryGenerationFlowers);
 		candyflower.setLexiconPages(new PageText("0"), new PageText("1"),
@@ -126,7 +202,7 @@ public class LexiconModData {
 				new PagePetalRecipe("1", ModPetalRecipe.woodieniaRecipe));
 		woodienia.setIcon(ItemBlockSpecialFlower.ofType(LibBlockName.WOODIENIA));
 		//For Fun
-		infinitymana = new DLexiconEntry(LibLexiconName.D_INFINITYMANA, BotaniaAPI.categoryBasics);
+		infinitymana = new DLexiconEntry(LibLexiconName.D_INFINITYMANA, categoryExtra);
 		infinitymana.setIcon(new ItemStack(vazkii.botania.common.block.ModBlocks.pool));
 		//Relics
 		hestiachastity = new ELexiconEntry(LibLexiconName.R_HESTIACHASTITY, BotaniaAPI.categoryAlfhomancy);

@@ -63,4 +63,9 @@ public class SubTileGeminiorchid extends SubTileGenerating{
 	public int getColor() {
 		return 0xEFD139;
 	}
+	
+	@Override
+	public LexiconEntry getEntry() {
+		return LexiconModData.geminiorchid;
+	}
 }

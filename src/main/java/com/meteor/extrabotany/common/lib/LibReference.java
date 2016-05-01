@@ -28,4 +28,5 @@ public class LibReference {
 	public static final ResourceLocation BAR_SHIELD = new ResourceLocation("extrabotany","textures/gui/shieldHud.png");
 	public static final ResourceLocation SHIELD = new ResourceLocation("extrabotany","textures/icons/shield.png");
 	public static final ResourceLocation ATHENA = new ResourceLocation("extrabotany","textures/icons/athena.png");
+	public static final ResourceLocation EXTRA = new ResourceLocation("extrabotany","textures/icons/extra.png");
 }

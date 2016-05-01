@@ -38,4 +38,15 @@ public class LibLexiconName {
 	public static final String B_COSMETIC = "cosmetic";
 	//Basic
 	public static final String BA_BLANKCARD = "blankcard";
+	public static final String BA_PRISMATICSHARD = "prismaticshard";
+	public static final String BA_PETAL = "petal";
+	public static final String BA_ASTRALFORCE = "astralforce";
+	public static final String BA_QUARTZ = "quartz";
+	public static final String BA_GOLDSTRING = "goldstring";
+	//Gun
+	public static final String G_GUNBASE = "gunbase";
+	public static final String G_GUNTACTICALSHOTGUN = "tacticalshotgun";
+	public static final String G_GUNPHOENIXBLASTER = "phoenixblaster";
+	public static final String G_GUNSNOWBALLCANNON = "snowballcannon";
+	public static final String G_GUNBULLET = "bullet";
 }

@@ -5,6 +5,8 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
+import com.meteor.extrabotany.common.lexicon.LexiconModData;
+
 import net.minecraft.entity.item.EntityFireworkRocket;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.projectile.EntityFishHook;
@@ -75,6 +77,11 @@ public class SubTileVolatilily extends SubTileFunctional{
 	@Override
 	public int getMaxMana() {
 		return COST;
+	}
+	
+	@Override
+	public LexiconEntry getEntry() {
+		return LexiconModData.volatilily;
 	}
 
 	@Override

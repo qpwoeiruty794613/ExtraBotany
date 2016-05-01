@@ -39,7 +39,7 @@ public class SubTileNumeronbalsam extends SubTileFunctional{
 		
 	@Override
 	public LexiconEntry getEntry() {
-		return LexiconModData.numerondandelife;
+		return LexiconModData.numeronbalsam;
 	}
 		
 	@Override

@@ -1,6 +1,7 @@
 package com.meteor.extrabotany.client;
 
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.entity.RenderItem;
 import net.minecraft.client.renderer.entity.RenderSnowball;
 import net.minecraft.init.Items;
 import net.minecraftforge.client.MinecraftForgeClient;
@@ -17,6 +18,7 @@ import com.meteor.extrabotany.client.render.entity.RenderTeleportPearl;
 import com.meteor.extrabotany.client.render.tile.RenderTileRelicPlate;
 import com.meteor.extrabotany.common.CommonProxy;
 import com.meteor.extrabotany.common.block.tile.TileRelicPlate;
+import com.meteor.extrabotany.common.entity.EntityItemUnbreakable;
 import com.meteor.extrabotany.common.entity.EntityLycorisradiataGreen;
 import com.meteor.extrabotany.common.entity.EntityLycorisradiataPurple;
 import com.meteor.extrabotany.common.entity.EntityLycorisradiataRed;
@@ -62,6 +64,8 @@ public class ClientProxy extends CommonProxy{
 		MinecraftForge.EVENT_BUS.register(new RenderShield());
 	    FMLCommonHandler.instance().bus().register(new RenderShield());	
 		ClientRegistry.bindTileEntitySpecialRenderer(TileRelicPlate.class, new RenderTileRelicPlate());
+		
+		RenderingRegistry.registerEntityRenderingHandler(EntityItemUnbreakable.class, new RenderItem());
 		
 		RenderingRegistry.registerEntityRenderingHandler(EntityBulletExploding.class, new RenderSnowball(ModItems.itemtest));
 		RenderingRegistry.registerEntityRenderingHandler(EntityBulletGold.class, new RenderSnowball(ModItems.itemtest));

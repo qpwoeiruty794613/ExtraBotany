@@ -32,6 +32,11 @@ public class SubTileOmniviolet extends SubTileGenerating{
 	int burnTime = 0;
 	
 	@Override
+	public LexiconEntry getEntry() {
+		return LexiconModData.ominiviolet;
+	}
+	
+	@Override
 	public void onUpdate() {
 		super.onUpdate();
 
@@ -114,7 +119,7 @@ public class SubTileOmniviolet extends SubTileGenerating{
 
 	@Override
 	public int getColor() {
-		return 0x8BA500;
+		return 0x93099A;
 	}
 
 	@Override
