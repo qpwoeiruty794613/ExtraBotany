@@ -15,6 +15,7 @@ import com.meteor.extrabotany.common.item.relic.ItemGunTacticalShotgun;
 import com.meteor.extrabotany.common.item.relic.legendary.ItemAphroditeGrace;
 import com.meteor.extrabotany.common.item.relic.legendary.ItemAthenaBless;
 import com.meteor.extrabotany.common.item.relic.legendary.ItemCronusPhantom;
+import com.meteor.extrabotany.common.item.relic.legendary.ItemCthulhuEye;
 import com.meteor.extrabotany.common.item.relic.legendary.ItemDice20;
 import com.meteor.extrabotany.common.item.relic.legendary.ItemExcaliber;
 import com.meteor.extrabotany.common.item.relic.legendary.ItemExcaliberFake;
@@ -54,6 +55,7 @@ public class ModItems {
 	public static Item aphroditegrace;
 	public static Item cronusphantom;
 	public static Item hermestravelclothing;
+	public static Item cthulhueye;
 	public static Item teleportpearl;
 	public static Item gaianecklacebroken;
 	public static Item dog;
@@ -87,6 +89,7 @@ public class ModItems {
 				
 		dog = new ItemBaubleDog();
 		
+		cthulhueye = new ItemCthulhuEye();
 		cronusphantom = new ItemCronusPhantom(LibItemName.CRONUSPHANTOM);
 		athenabless = new ItemAthenaBless();
 		maxwelldemon = new ItemMaxwellDemon();

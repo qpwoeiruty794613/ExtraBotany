@@ -50,6 +50,18 @@ public class ItemHermesTravelClothing extends ItemRelicArmorSet implements IMana
 		return multimap;
 	}
 	
+	public static boolean hasHermesTravelClothing(EntityPlayer player){
+		boolean bool = false;
+		for(ItemStack stack : player.inventory.armorInventory) {
+            if(stack != null && stack.getItem() instanceof ItemHermesTravelClothing) {
+            	if(ItemRelic.isRightPlayer(player, stack)){
+            		bool = true;
+            		}else bool = false;
+            	}	
+		}
+		return bool;
+	}
+	
 	@SubscribeEvent
 	 public void PlayerHurtEvent(LivingHurtEvent event) { 
 	        if(!(event.entity instanceof EntityPlayerMP)) {

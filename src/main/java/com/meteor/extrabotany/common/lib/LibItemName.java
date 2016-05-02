@@ -37,6 +37,7 @@ public class LibItemName {
 	public static final String APHRODITEGRACE = "aphroditegrace";
 	public static final String CRONUSPHANTOM = "cronusphantom";
 	public static final String HERMESTRAVELCLOTHING = "hermestravelclothing";
+	public static final String CTHULHUEYE = "cthulhueye";
 	
 	public static final String SNOWBALLLAUNCHER = "snowballlauncher";
 	public static final String PHOENIXBLASTER = "phoenixblaster";

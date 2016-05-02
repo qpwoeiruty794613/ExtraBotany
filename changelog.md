@@ -1,3 +1,7 @@
+16/5/2<br>
+Add new Functional Flower:Artifaconia.<br>
+Add new Relic:Eye of Cthulhu.<br>
+
 16/5/1<br>
 Lexicon Update.<br>
 Relics are now unbreakable.<br>

@@ -51,6 +51,7 @@ public class ExtraBotanyCreativeTab extends CreativeTabs{
 		addItem(ModItems.vpowerbattleaxe);
 		addItem(ModItems.athenabless);
 		addItem(ModItems.cronusphantom);
+		addItem(ModItems.cthulhueye);
 		//Test
 		addItem(ModItems.itemtest);
 		//Basic
@@ -74,6 +75,7 @@ public class ExtraBotanyCreativeTab extends CreativeTabs{
 		//Weapons
 		addItem(ModItems.gunphoenixblaster);
 		addItem(ModItems.guntacticalshotgun);
+		addItem(ModItems.snowballlauncher);
 		addItem(ModItems.gunboomstick);
 		addItem(ModItems.gunflintlock);
 		addItem(ModItems.gunpistol);

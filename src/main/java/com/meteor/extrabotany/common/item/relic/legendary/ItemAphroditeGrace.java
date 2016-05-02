@@ -64,6 +64,18 @@ public class ItemAphroditeGrace extends ItemRelicArmorSet implements IShieldHand
 		}
 	}
 	
+	public static boolean hasAphroditeGrace(EntityPlayer player){
+		boolean bool = false;
+		for(ItemStack stack : player.inventory.armorInventory) {
+            if(stack != null && stack.getItem() instanceof ItemAphroditeGrace) {
+            	if(ItemRelic.isRightPlayer(player, stack)){
+            		bool = true;
+            		}else bool = false;
+            	}	
+		}
+		return bool;
+	}
+	
 	@Override
 	public float setShieldAmount(float shield, EntityPlayer player) {
 		if(shield <= getMaxShieldAmount(player))
