@@ -32,6 +32,7 @@ public class BlockSpecial extends BlockSpecialFlower {
 			LibBlockName.ICEBIRDIUM,
 			LibBlockName.NUMERON_BALSAM,
 			LibBlockName.JUDASVOW,
+			LibBlockName.ARTIFACONIA,
 		}));
 	}	
 		

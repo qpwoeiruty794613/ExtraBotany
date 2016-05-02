@@ -6,6 +6,7 @@ import com.meteor.extrabotany.common.block.decor.BlockElvenQuartzStairs;
 import com.meteor.extrabotany.common.block.decor.BlockGaiaQuartzSlab;
 import com.meteor.extrabotany.common.block.decor.BlockGaiaQuartzStairs;
 import com.meteor.extrabotany.common.block.subtile.SubTileJudasvow;
+import com.meteor.extrabotany.common.block.subtile.functional.SubTileArtifaconia;
 import com.meteor.extrabotany.common.block.subtile.functional.SubTileIcebirdium;
 import com.meteor.extrabotany.common.block.subtile.functional.SubTileNecrofluer;
 import com.meteor.extrabotany.common.block.subtile.functional.SubTileNumeronDandelife;
@@ -71,6 +72,7 @@ public class ModBlocks {
 	}
 	
 	private static void initTileEntities() {
+		BotaniaAPI.registerSubTile(LibBlockName.ARTIFACONIA, SubTileArtifaconia.class);
 		BotaniaAPI.registerSubTile(LibBlockName.JUDASVOW, SubTileJudasvow.class);
 		BotaniaAPI.registerSubTile(LibBlockName.ICEBIRDIUM, SubTileIcebirdium.class);
 		BotaniaAPI.registerSubTile(LibBlockName.NUMERON_BALSAM, SubTileNumeronbalsam.class);
