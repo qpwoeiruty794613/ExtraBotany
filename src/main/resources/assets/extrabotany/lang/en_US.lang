@@ -73,6 +73,7 @@ item.botania:athenabless.name=Athena's Bless
 item.botania:aphroditegrace.name=Aphrodite's Grace
 item.botania:cronusphantom.name=Phantom of Cronus
 item.botania:hermestravelclothing.name=Hermes's Travel Clothing
+item.botania:cthulhueye.name=Eye of Cthulhu
 
 # -WEAPON
 item.phoenixblaster.name=Phoenix Blaster
@@ -81,6 +82,7 @@ item.boomstick.name=Boomstick
 item.flintlock.name=Flintlock
 item.shotgun.name=Shotgun
 item.pistol.name=Pistol
+item.botania:snowballlauncher.name=Snowball Cannon
 
 # —BULLET
 item.bulletexploding.name=Exploding Bullet
@@ -96,11 +98,13 @@ item.test.desc=ONLY FOR DEVELOPER
 
 # LEXICON ENTRIES
 # -BASIC
+# --BLANKCARD
 botania.entry.blankcard=Blank Card
 botania.tagline.blankcard=
 botania.page.blankcard0=
 botania.page.blankcard1=
 
+# --COSMETIC
 botania.entry.cosmetic=Cosmetic Baubles
 botania.tagline.cosmetic=
 botania.page.cosmetic0=
@@ -109,33 +113,69 @@ botania.page.cosmetic2=
 botania.page.cosmetic3=
 botania.page.cosmetic4=
 
+# --PRISMATICSHARD
 botania.entry.prismaticshard=Prismatic Shard
 botania.tagline.prismaticshard=
 botania.page.prismaticshard0=
 
+# --GOLDSTRING
 botania.entry.goldstring=Golden Infused String
 botania.tagline.goldstring=
 botania.page.goldstring0=
 botania.page.goldstring1=
 
+# --PETAL
 botania.entry.petal=Lycorisdiata
 botania.tagline.petal=
 botania.page.petal0=
 
+# --QUARTZ
 botania.entry.quartz=Elementium Quartz & Gaia Quartz
 botania.tagline.quartz=
 botania.page.quartz0=
 botania.page.quartz1=
 botania.page.quartz2=
 
+# -WEAPON
+# --BULLET
+botania.entry.bullet=Various Bullets
+botania.tagline.bullet=
+botania.page.bullet0=
+botania.page.bullet1=
+botania.page.bullet2=
+botania.page.bullet3=
+botania.page.bullet4=
+botania.page.bullet5=
+
+# --BASICGUN
+botania.entry.gunbase=Basic Guns
+botania.tagline.gunbase=
+botania.page.gunbase0=
+botania.page.gunbase1=
+
+# --PHOENIXBLASTER
+botania.entry.phoenixblaster=Phoenix Blaster
+botania.tagline.phoenixblaster=
+botania.page.phoenixblaster0=
+
+# --TACTICALSHOTGUN
+botania.entry.tacticalshotgun=Tactical Shotgun
+botania.tagline.tacticalshotgun=
+botania.page.tacticalshotgun0=
+
+# --SNOWBALLCANNON
+botania.entry.snowballcannon=Snowball Cannon
+botania.tagline.snowballcannon=
+botania.page.snowballcannon0=
+
 # -GENERATING
-# -- CANDYFLOWER
+# --CANDYFLOWER
 botania.entry.candyflower=Candy Flower
 botania.page.candyflower0=Desserts are things &1Candy Flower&0 loves best in the world! It will be pleased if you give sweets to it. Because of the happiness and satisfaction from the process of tasting them, the &1Candy Flower&0 can produce quite a little &4Mana&0. &1Biscuits&0, &1sugar&0, &1cakes&0 are its favourite. And of course, it loves food made by &4Aunt Pam&0 as well. The more delicious food is, the more &4Mana&0 the &1Candy Flower&0 will produce.
 botania.page.candyflower1=And it's important to note that when it eats up a dessert, it has a small chance to produce a &1Crystal of Love&0.
 botania.page.candyflower2=Overflowing love.
 
-# -- BLUEENCHANTRESS
+# --BLUEENCHANTRESS
 botania.entry.blueenchantress=Blue Enchantress
 botania.page.blueenchantress0=The &1Blue Enchantress&0 is like a &1Thermalily&0 or a &1Hydroangeas&0, can consumes &1liquid essence&0 and produce a very large ammount of &4Mana&0. It don't need to cool down, so this may be a great choice for a botanist.
 botania.page.blueenchantress1=A blue day.
@@ -146,18 +186,18 @@ botania.page.sunshinelily0=It has the same ability as the &1Daybloom&0, can tran
 botania.page.sunshinelily1=&1Sunshine Lily&0 has a stronger vitality, so it will not decay. As a result, its crafting recipe is much more expensive. But it worth, doesn't it? As a Passive Flowers, it still suffers diminishing returns from having any adjacent.
 botania.page.sunshinelily2=Heat and heal.
 
-# -- MOONLIGHTLILY
+# --MOONLIGHTLILY
 botania.entry.moonlightlily=Moonlight Lily
 botania.page.moonlightlily0=This is the dark side of the &1Sunshine Lily&0, can transfer moonlight into &4Mana&0. It has the same efficiency as &1Sunshine Lily&0. And certainly, the process seems slow as well.
 botania.page.moonlightlily1=&1Moonlight Lily&0 also has a stronger vitality, this means it won't decay. As a result, its crafting recipe is more expensive, too. Of course, as a Passive Flowers, it still suffers diminishing returns from having any adjacent.
 botania.page.moonlightlily2=Sowing of the Fool.
 
-# -- GEMINIORCHID
+# --GEMINIORCHID
 botania.entry.geminiorchid=Gemini Orchid
 botania.page.geminiorchid0=
 botania.page.geminiorchid1=
 
-# -- OMINIVIOLET
+# --OMINIVIOLET
 botania.entry.ominiviolet=Omini Violet
 botania.page.ominiviolet0=
 botania.page.ominiviolet1=
@@ -170,7 +210,7 @@ botania.page.necrofleur1=
 
 # --NUMERONDANDELIFE
 botania.entry.numerondandelife=Numeron Dandelife
-botania.page.numerondandelife0=Standing next to the &1Numeron Dandelife&0, you will gain &1Shield&0 at a high speed and it will also remove &1Bad Effects&0 that you have. But notice, &1Numeron Dandelife&0 should be placed in a place that its &4x-coordinate&0 and &4z-coordinate&0 are the &4Multiple of 6&0, or it won't work.
+botania.page.numerondandelife0=Standing next to the &1Numeron Dandelife&0, you will gain &1Shield&0 at a high speed. But notice, &1Numeron Dandelife&0 should be placed in a place that its &4x-coordinate&0 and &4z-coordinate&0 are the &4Multiple of 6&0, or it won't work.
 botania.page.numerondandelife1=Please obey the basic law.
 
 # --WOODIENIA
@@ -180,8 +220,8 @@ botania.page.woodienia1=One tree a day keeps the mess away.
 
 # --ICEBIRDIUM
 botania.entry.icebirdium=Ice Birdium
-botania.page.icebirdium0=
-botania.page.icebirdium1=
+botania.page.icebirdium0=&1Ice Birdium&0 can turn nearby &1water block&0 into &1ice&0, and its cold draught will also make close-by living things slow down. But unfortunately, it is not wise enough to recognize you.
+botania.page.icebirdium1=The day after tomorrow.
 
 # --NUMERONBALSAM
 botania.entry.numeronbalsam=Numeron Balsam
@@ -195,8 +235,8 @@ botania.page.judasvow1=
 
 # --VOLATILILY
 botania.entry.volatilily=Volatilily
-botania.page.volatilily0=
-botania.page.volatilily1=
+botania.page.volatilily0=By placing it above the pool, Volatilily will start to fish. Its products can be different kinds of fishes, awful rubbishes, mystery treasures and so on. Provide a redstone signal can stop it from working.
+botania.page.volatilily1=You can't judge a book by its cover.
 
 # -OTHERS
 # --INFINITYMANA
@@ -276,7 +316,7 @@ tile.botania:flower.omniviolet.reference=Need not to know
 botania.tagline.ominiviolet=Eye of Providence
 
 tile.botania:flower.geminiorchid.name=Gemini Orchid
-tile.botania:flower.geminiorchid.reference=
+tile.botania:flower.geminiorchid.reference=Another...?
 botania.tagline.geminiorchid=
 
 # -FUNCTIONAL
@@ -294,23 +334,23 @@ botania.tagline.woodienia=Woodie's Lucky Iron Axe
 
 tile.botania:flower.artifaconia.name=Artifaconia
 tile.botania:flower.artifaconia.reference=The Forbidden Secret
-botania.tagline.artifaconia=Why are you so Experienced
+botania.tagline.artifaconia=Night at the Museum
 
 tile.botania:flower.volatilily.name=Volatilily
 tile.botania:flower.volatilily.reference=It's the little white Toby Fox dog from Undertale
 botania.tagline.volatilily=Freedom is always for the volunteers
 
 tile.botania:flower.icebirdium.name=Ice Birdium
-tile.botania:flower.icebirdium.reference=
-botania.tagline.icebirdium=
+tile.botania:flower.icebirdium.reference=Do you want to build a snowman?
+botania.tagline.icebirdium=Why are you so Experienced
 
 tile.botania:flower.numeronbalsam.name=Numeron Balsam
-tile.botania:flower.numeronbalsam.reference=
-botania.tagline.numeronbalsam=
+tile.botania:flower.numeronbalsam.reference=By fire be purged
+botania.tagline.numeronbalsam=My hammer burns with holy fire
 
 tile.botania:flower.judasvow.name=Judas' Vow
-tile.botania:flower.judasvow.reference=
-botania.tagline.judasvow=
+tile.botania:flower.judasvow.reference=My pleasure
+botania.tagline.judasvow=For justice
 
 #ACHIEVEMENTS
 # -RELICS

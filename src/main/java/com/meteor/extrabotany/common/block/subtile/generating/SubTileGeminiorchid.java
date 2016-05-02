@@ -45,7 +45,7 @@ public class SubTileGeminiorchid extends SubTileGenerating{
 					bD = LibData.getBlockTemperture(supertile.getWorldObj().getBlock(supertile.xCoord - 1, supertile.yCoord, supertile.zCoord - 1));
 					temA = Math.min(Math.min(bA, bB), Math.min(bC, bD));
 					temB = Math.max(Math.max(bA, bB), Math.max(bC, bD));
-					mana +=	(int) ((temB - temA)/500 + supertile.getWorldObj().rand.nextInt(4));
+					mana +=	(int) ((temB - temA)/1000 * ConfigHandler.efficiencyGeminiorchid + supertile.getWorldObj().rand.nextInt(4));
 				}
 		}
 	

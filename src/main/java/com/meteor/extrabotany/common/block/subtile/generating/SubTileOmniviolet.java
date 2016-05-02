@@ -114,7 +114,7 @@ public class SubTileOmniviolet extends SubTileGenerating{
 
 	@Override
 	public int getValueForPassiveGeneration() {
-		return 20;
+		return ConfigHandler.efficiencyOminiviolet;
 	}
 
 	@Override
