@@ -4,6 +4,9 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.entity.RenderItem;
 import net.minecraft.client.renderer.entity.RenderSnowball;
 import net.minecraft.init.Items;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemRecord;
+import net.minecraft.world.World;
 import net.minecraftforge.client.MinecraftForgeClient;
 import net.minecraftforge.common.MinecraftForge;
 
@@ -80,6 +83,17 @@ public class ClientProxy extends CommonProxy{
 		RenderingRegistry.registerEntityRenderingHandler(EntityLycorisradiataGreen.class, new RenderLycorisradiataGreen());
 		RenderingRegistry.registerEntityRenderingHandler(EntityLycorisradiataPurple.class, new RenderLycorisradiataPurple());
 		RenderingRegistry.registerEntityRenderingHandler(EntityTeleportPearl.class, new RenderTeleportPearl(1.0F));
+	}
+	
+    @Override
+	public void playRecordClientSided(World world, int x, int y, int z, ItemRecord record) {
+		Minecraft mc = Minecraft.getMinecraft();
+		if(record == null)
+			world.playAuxSFXAtEntity(null, 1005, x, y, z, 0);
+		else {
+			world.playAuxSFXAtEntity(null, 1005, x, y, z, Item.getIdFromItem(record));
+			mc.ingameGUI.setRecordPlayingMessage(record.getRecordNameLocal());
+		}
 	}
 
 }

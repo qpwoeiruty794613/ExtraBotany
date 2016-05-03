@@ -18,6 +18,7 @@ import com.meteor.extrabotany.common.entity.bullet.EntityBulletMeteor;
 import com.meteor.extrabotany.common.entity.bullet.EntityBulletMusket;
 import com.meteor.extrabotany.common.entity.bullet.EntityBulletSilver;
 import com.meteor.extrabotany.common.entity.bullet.EntityBulletSnowball;
+import com.meteor.extrabotany.common.handler.MathHandler;
 import com.meteor.extrabotany.common.item.ItemMods;
 import com.meteor.extrabotany.common.item.ModItems;
 
@@ -63,7 +64,7 @@ public class ItemGun extends ItemMods{
 			f = 2;	
 		else f = 0;
 		int bullet;
-		bullet = Math.max(Math.max(Math.max(a, b), c), Math.max(Math.max(d, e), f));
+		bullet = Math.max(MathHandler.max(a, b, c), MathHandler.max(d, e, f));
 		return bullet;
 	}
 	

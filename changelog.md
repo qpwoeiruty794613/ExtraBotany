@@ -1,3 +1,6 @@
+16/5/3<br>
+Add new records.<br>
+
 16/5/2<br>
 Add new Functional Flower:Artifaconia.<br>
 Add new Relic:Eye of Cthulhu.<br>

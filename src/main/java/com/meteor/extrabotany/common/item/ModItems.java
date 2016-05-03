@@ -1,5 +1,7 @@
 package com.meteor.extrabotany.common.item;
 
+import vazkii.botania.common.item.record.ItemModRecord;
+
 import com.meteor.extrabotany.ExtraBotany;
 import com.meteor.extrabotany.api.ItemGun;
 import com.meteor.extrabotany.common.entity.EntityLycorisradiata;
@@ -8,6 +10,9 @@ import com.meteor.extrabotany.common.entity.EntityLycorisradiataPurple;
 import com.meteor.extrabotany.common.entity.EntityLycorisradiataRed;
 import com.meteor.extrabotany.common.item.basic.ItemBullet;
 import com.meteor.extrabotany.common.item.basic.ItemMaterial;
+import com.meteor.extrabotany.common.item.basic.ItemRecordA;
+import com.meteor.extrabotany.common.item.basic.ItemRecordB;
+import com.meteor.extrabotany.common.item.basic.ItemRecordC;
 import com.meteor.extrabotany.common.item.equipment.ItemBaubleDog;
 import com.meteor.extrabotany.common.item.relic.ItemGunPhoenixBlaster;
 import com.meteor.extrabotany.common.item.relic.ItemGunSnowballCannon;
@@ -71,8 +76,15 @@ public class ModItems {
 	public static Item gunflintlock;
 	public static Item gunshotgun;
 	public static Item gunpistol;
+	public static Item recordB;
+	public static Item recordA;
+	public static Item recordC;
 	
 	public static void init() {
+		recordA = new ItemRecordA("A", LibItemName.RECORD_A);
+		recordB = new ItemRecordB("B", LibItemName.RECORD_B);
+		recordC = new ItemRecordC("C", LibItemName.RECORD_C);
+		
 		itemtest = new ItemTest("test");
 		
 		gunphoenixblaster = new ItemGunPhoenixBlaster(LibItemName.PHOENIXBLASTER);

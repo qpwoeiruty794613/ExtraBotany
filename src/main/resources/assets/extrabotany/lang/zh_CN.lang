@@ -38,6 +38,14 @@ item.petalgreen.name=绿色彼岸花瓣
 item.petalpurple.name=紫色彼岸花瓣
 item.goldstring.name=注魔金线
 
+# -RECORD
+item.botania:recordA.name=U.N.OWEN的唱片
+item.record.botania:A.desc=いけないボーダーライン
+item.botania:recordB.name=神秘的唱片
+item.record.botania:B.desc=崩壊世界の歌姫
+item.botania:recordC.name=琪露诺的秘密唱片
+item.record.botania:C.desc=チルノのパーフェクトさんすう教室
+
 # -SPAWNCARDS
 item.ExtraBotany.SpawnCardLycorisdiataRed.name=红色彼岸花之卡
 item.ExtraBotany.SpawnLycorisRed.desc=生成一朵红色彼岸花

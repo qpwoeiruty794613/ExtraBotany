@@ -80,6 +80,9 @@ public class ExtraBotanyCreativeTab extends CreativeTabs{
 		addItem(ModItems.gunflintlock);
 		addItem(ModItems.gunpistol);
 		addItem(ModItems.gunshotgun);
+		addItem(ModItems.recordA);
+		addItem(ModItems.recordB);
+		addItem(ModItems.recordC);
 	}
 	
 	private void addItem(Item item) {

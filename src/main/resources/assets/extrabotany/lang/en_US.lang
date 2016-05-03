@@ -38,6 +38,14 @@ item.petalgreen.name=Green Petal of Lycorisradiata
 item.petalpurple.name=Purple Petal of Lycorisradiata
 item.goldstring.name=Golden Infused String
 
+# -RECORD
+item.botania:recordA.name=U.N.OWEN's record
+item.record.botania:A.desc=いけないボーダーライン
+item.botania:recordB.name=Mystery record
+item.record.botania:B.desc=崩壊世界の歌姫
+item.botania:recordC.name=Cirno's scret record
+item.record.botania:C.desc=チルノのパーフェクトさんすう教室
+
 # -SPAWNCARDS
 item.ExtraBotany.SpawnCardLycorisdiataRed.name=Cards of Red Lycorisdiata
 item.ExtraBotany.SpawnLycorisRed.desc=Spawn a Red Lycorisdiata

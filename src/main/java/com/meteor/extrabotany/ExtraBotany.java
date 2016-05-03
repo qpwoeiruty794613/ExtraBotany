@@ -48,9 +48,7 @@ public class ExtraBotany {
 		extraKnowledge = BotaniaAPI.registerKnowledgeType("extra", EnumChatFormatting.DARK_AQUA, false);
 		proxy.preInit(event);
 	}
-	
 
-	
 	@EventHandler
 	public void Init(FMLInitializationEvent event)
 	{

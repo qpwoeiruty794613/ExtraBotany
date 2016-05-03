@@ -47,6 +47,10 @@ public class LibItemName {
 	public static final String PISTOL = "pistol";
 	public static final String SHOTGUN = "shotgun";
 	
+	public static final String RECORD_A = "recordA";
+	public static final String RECORD_B = "recordB";
+	public static final String RECORD_C = "recordC";
+	
 	public static final String[] MATERIAL_NAMES = new String[] {
 		"prismaticshard",//0
 		"blankcard",//1

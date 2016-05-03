@@ -1,5 +1,8 @@
 package com.meteor.extrabotany.common;
 
+import net.minecraft.item.ItemRecord;
+import net.minecraft.world.World;
+
 import com.meteor.extrabotany.common.achievement.ModAchievement;
 import com.meteor.extrabotany.common.block.ModBlocks;
 import com.meteor.extrabotany.common.block.ModMutilBlocks;
@@ -48,4 +51,8 @@ public class CommonProxy {
     {
     	new ModCommands(event);
     }
+    
+    public void playRecordClientSided(World world, int x, int y, int z, ItemRecord record) {
+		// NO-OP
+	}
 }

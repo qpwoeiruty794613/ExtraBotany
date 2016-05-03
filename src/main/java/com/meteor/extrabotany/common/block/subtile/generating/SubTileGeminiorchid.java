@@ -27,6 +27,7 @@ import vazkii.botania.common.lib.LibMisc;
 import am2.AMCore;
 
 import com.meteor.extrabotany.common.handler.ConfigHandler;
+import com.meteor.extrabotany.common.handler.MathHandler;
 import com.meteor.extrabotany.common.lexicon.LexiconModData;
 import com.meteor.extrabotany.common.lib.LibData;
 
@@ -43,8 +44,8 @@ public class SubTileGeminiorchid extends SubTileGenerating{
 					bB = LibData.getBlockTemperture(supertile.getWorldObj().getBlock(supertile.xCoord + 1, supertile.yCoord, supertile.zCoord - 1));
 					bC = LibData.getBlockTemperture(supertile.getWorldObj().getBlock(supertile.xCoord - 1, supertile.yCoord, supertile.zCoord + 1));
 					bD = LibData.getBlockTemperture(supertile.getWorldObj().getBlock(supertile.xCoord - 1, supertile.yCoord, supertile.zCoord - 1));
-					temA = Math.min(Math.min(bA, bB), Math.min(bC, bD));
-					temB = Math.max(Math.max(bA, bB), Math.max(bC, bD));
+					temA = Math.min(MathHandler.min(bA, bB, bC), bD);
+					temB = Math.max(MathHandler.max(bA, bB, bC), bD);
 					mana +=	(int) ((temB - temA)/1000 * ConfigHandler.efficiencyGeminiorchid + supertile.getWorldObj().rand.nextInt(4));
 				}
 		}

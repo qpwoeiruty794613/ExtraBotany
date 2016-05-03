@@ -45,7 +45,7 @@ public class ItemDice20 extends ItemRelicAdv{
 				new ItemStack(ModItems.cronusphantom),//15
 				new ItemStack(ModItems.aphroditegrace),//16
 				new ItemStack(ModItems.hermestravelclothing),//17
-				new ItemStack(ModItems.maxwelldemon),//
+				new ItemStack(ModItems.cthulhueye),//
 				new ItemStack(ModItems.maxwelldemon),
 				new ItemStack(ModItems.material,1,3),//
 
@@ -53,7 +53,7 @@ public class ItemDice20 extends ItemRelicAdv{
 	}
 
 	private static final int[] SIDES_FOR_MOON_PHASES = new int[] {
-		0, 0, 0, 0, 0, 0, 0, 0
+		0, 1, 0, -1, 0, 1, 0, -1
 	};
 	
 	@Override
