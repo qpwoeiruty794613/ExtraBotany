@@ -72,14 +72,16 @@ botaniamisc.uselessDiceRoll=The dice lands on a %s, it seemed to be transfered t
 # -RELIC
 item.botania:excaliber.name=Excaliber
 item.botania:excaliberfake.name=Excaliber
-item.botania:vhandgun_double.name=Handguns of Valkyrie
-item.botania:vpowerbattleaxe.name=Powered Battleaxe of Valkyrie
-item.botania:vrangerboots.name=Ranger Boots of Valkyrie
+item.botania:vhandgun_double.name=Valkyrie Handguns
+item.botania:vpowerbattleaxe.name=Valkyrie Powered Battleaxe
+item.botania:vrangerboots.name=Valkyrie Ranger Boots
 item.botania:hestiachastity.name=Chastity of Hestia
 item.botania:maxwelldemon.name=Maxwell's Demon
 item.botania:athenabless.name=Athena's Bless
 item.botania:aphroditegrace.name=Aphrodite's Grace
 item.botania:cronusphantom.name=Phantom of Cronus
+item.botania:lokighostrick.name=Loki's Ghostrick
+item.botania:olympusguard.name=Guard of Olympus
 item.botania:hermestravelclothing.name=Hermes's Travel Clothing
 item.botania:cthulhueye.name=Eye of Cthulhu
 
@@ -287,17 +289,17 @@ botania.tagline.excaliberfake=Dying Light.
 botania.page.excaliberfake0=
 
 # --VPOWERBATTLEAXE
-botania.entry.vpowerbattleaxe=Powered Battleaxe of Valkyrie
+botania.entry.vpowerbattleaxe=Valkyrie Powered Battleaxe
 botania.tagline.vpowerbattleaxe=The 300!
 botania.page.vpowerbattleaxe0=
 
 # --VRANGERBOOTS
-botania.entry.vrangerboots=Ranger Boots of Valkyrie
+botania.entry.vrangerboots=Valkyrie Ranger Boots
 botania.tagline.vrangerboots=Faster Moving.
 botania.page.vrangerboots0=
 
 # --VHANDGUN
-botania.entry.vhandgun=Handguns of Valkyrie
+botania.entry.vhandgun=Valkyrie Handguns
 botania.tagline.vhandgun=Shoot with mana.
 botania.page.vhandgun0=
 
@@ -377,11 +379,11 @@ achievement.botania:hestiachastity.desc=Be rewarded Chastity of Hestia for a her
 achievement.botania:maxwelldemon=Perpetual Motion Machine of the Second Category!?
 achievement.botania:maxwelldemon.desc=Be rewarded Maxwell's Demon for a heroic feat
 achievement.botania:vpowerbattleaxe=Tell Your World
-achievement.botania:vpowerbattleaxe.desc=Be rewarded Powered Battleaxe of Valkyrie for a heroic feat
+achievement.botania:vpowerbattleaxe.desc=Be rewarded Valkyrie Powered Battleaxe for a heroic feat
 achievement.botania:vrangerboots=悪ノ召使
-achievement.botania:vrangerboots.desc=Be rewarded Ranger Boots of Valkyrie for a heroic feat
+achievement.botania:vrangerboots.desc=Be rewarded Valkyrie Ranger Boots for a heroic feat
 achievement.botania:vhandgun=悪ノ娘
-achievement.botania:vhandgun.desc=Be rewarded Handguns of Valkyrie for a heroic feat
+achievement.botania:vhandgun.desc=Be rewarded Valkyrie Handguns for a heroic feat
 
 #ENCHANTMENT
 enchantment.gaiablessing=Gaia's Blessing

@@ -48,13 +48,11 @@ import vazkii.botania.common.item.relic.ItemRelic;
 import vazkii.botania.common.item.relic.ItemRelicBauble;
 
 public class ItemAthenaBless extends ItemRelicBauble implements IShieldHandler{
-	public static List<String> damageNegations = new ArrayList();
 
 	public ItemAthenaBless(){
 		super(LibItemName.ATHENABLESS);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLCommonHandler.instance().bus().register(this);
-		damageNegations.add(ItemRelic.damageSource().getDamageType());
 	}
 	
 	@Override
@@ -75,22 +73,14 @@ public class ItemAthenaBless extends ItemRelicBauble implements IShieldHandler{
 	}
 	
 	@SubscribeEvent
-	public void onPlayerAttacked(LivingAttackEvent event) {
-		if(event.entityLiving instanceof EntityPlayer) {
-			EntityPlayer player = (EntityPlayer) event.entityLiving;
-			if(getAthenaBless(player) != null)
-				if(ItemRelic.isRightPlayer(player, getAthenaBless(player)) && damageNegations.contains(event.source.damageType))
-				event.setCanceled(true);
-		}
-	}
-	
-	@SubscribeEvent
 	public void onEntityAttacked(LivingAttackEvent event) {
 		if(event.source.getSourceOfDamage() instanceof EntityPlayer){
 			EntityPlayer player = (EntityPlayer) event.source.getSourceOfDamage();
 			if(getAthenaBless(player) != null)
 				if(ItemRelic.isRightPlayer(player, getAthenaBless(player)))
+					if(ItemHermesTravelClothing.hasHermesTravelClothing(player))
 					addShieldAmount(event.ammount/5, player);
+					else addShieldAmount(event.ammount/7, player);
 				}
 	}
 
@@ -107,7 +97,7 @@ public class ItemAthenaBless extends ItemRelicBauble implements IShieldHandler{
 	}
 
 	private static boolean isAthenaBless(ItemStack stack) {
-		return stack != null && (stack.getItem() == ModItems.athenabless);
+		return stack != null && (stack.getItem() == ModItems.athenabless || stack.getItem() == ModItems.olympusguard);
 	}
 
 	@Override

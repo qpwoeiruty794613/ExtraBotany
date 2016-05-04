@@ -2,7 +2,7 @@ package com.meteor.extrabotany.common.entity.bullet;
 
 import vazkii.botania.common.Botania;
 
-import com.meteor.extrabotany.api.ItemGun;
+import com.meteor.extrabotany.common.item.weapon.ItemGun;
 
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.util.DamageSource;

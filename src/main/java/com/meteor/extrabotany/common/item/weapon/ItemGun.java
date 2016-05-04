@@ -1,4 +1,4 @@
-package com.meteor.extrabotany.api;
+package com.meteor.extrabotany.common.item.weapon;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;

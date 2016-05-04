@@ -51,6 +51,8 @@ public class ExtraBotanyCreativeTab extends CreativeTabs{
 		addItem(ModItems.vpowerbattleaxe);
 		addItem(ModItems.athenabless);
 		addItem(ModItems.cronusphantom);
+		addItem(ModItems.lokighostrick);
+		addItem(ModItems.olympusguard);
 		addItem(ModItems.cthulhueye);
 		//Test
 		addItem(ModItems.itemtest);

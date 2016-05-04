@@ -59,7 +59,7 @@ public class ItemCronusPhantom extends ItemRelicBauble{
 	}
 
 	private static boolean isCronusPhantom(ItemStack stack) {
-		return stack != null && (stack.getItem() == ModItems.cronusphantom);
+		return stack != null && (stack.getItem() == ModItems.cronusphantom || stack.getItem() == ModItems.olympusguard);
 	}
 
 }

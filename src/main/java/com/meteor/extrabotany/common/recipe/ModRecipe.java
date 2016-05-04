@@ -30,6 +30,7 @@ public class ModRecipe {
 	public static IRecipe bullet2;
 	public static IRecipe bullet3;
 	public static IRecipe bullet4;
+	public static IRecipe olympus;
 	
 	public static void init(){
 		ModManaInfusionRecipe.init();
@@ -38,7 +39,12 @@ public class ModRecipe {
 		
 		GameRegistry.addShapedRecipe(new ItemStack(ModItems.teleportpearl, 16), 
 				new Object[] {"AAA","ABA","AAA", 'A', new ItemStack(vazkii.botania.common.item.ModItems.manaBottle), 'B', Items.ender_pearl});
-		
+		//Olympus
+		GameRegistry.addShapelessRecipe(new ItemStack(ModItems.olympusguard), new Object[] {
+			new ItemStack(ModItems.athenabless), 
+			new ItemStack(ModItems.cronusphantom), 
+			new ItemStack(ModItems.lokighostrick)});
+		olympus = BotaniaAPI.getLatestAddedRecipe(); 
 		//Bullet
 		GameRegistry.addShapelessRecipe(new ItemStack(ModItems.bullet,8,4), new Object[] {
 			new ItemStack(vazkii.botania.common.item.ModItems.manaResource), 

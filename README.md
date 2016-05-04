@@ -5,9 +5,7 @@ Botania Addon WIP
 2.Changelog
 ###TODO List
  * Items:
-  * Relics(83.3% Finished):
-    * Helios of Hyperion 
-    * Kratos's Barbarity
+  * Relics(Completed):
   * Basics(Completed)
  * Blocks:
   * Flowers(45% Finished):

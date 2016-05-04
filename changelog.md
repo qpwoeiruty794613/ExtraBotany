@@ -1,3 +1,6 @@
+16/5/4<br>
+Add new relics:Guard of Olympus and Loki's Ghostrick.<br>
+
 16/5/3<br>
 Add new records.<br>
 

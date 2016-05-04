@@ -4,7 +4,7 @@ import java.util.List;
 
 import vazkii.botania.common.Botania;
 
-import com.meteor.extrabotany.api.ItemGun;
+import com.meteor.extrabotany.common.item.weapon.ItemGun;
 
 import net.minecraft.block.Block;
 import net.minecraft.entity.Entity;

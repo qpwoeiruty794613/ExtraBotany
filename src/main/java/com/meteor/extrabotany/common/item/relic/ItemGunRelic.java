@@ -19,8 +19,8 @@ import vazkii.botania.api.item.IRelic;
 import vazkii.botania.common.core.helper.ItemNBTHelper;
 import vazkii.botania.common.item.ModItems;
 
-import com.meteor.extrabotany.api.ItemGun;
 import com.meteor.extrabotany.common.entity.EntityItemUnbreakable;
+import com.meteor.extrabotany.common.item.weapon.ItemGun;
 
 public class ItemGunRelic extends ItemGun implements IRelic{
 	

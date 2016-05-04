@@ -3,7 +3,6 @@ package com.meteor.extrabotany.common.item;
 import vazkii.botania.common.item.record.ItemModRecord;
 
 import com.meteor.extrabotany.ExtraBotany;
-import com.meteor.extrabotany.api.ItemGun;
 import com.meteor.extrabotany.common.entity.EntityLycorisradiata;
 import com.meteor.extrabotany.common.entity.EntityLycorisradiataGreen;
 import com.meteor.extrabotany.common.entity.EntityLycorisradiataPurple;
@@ -26,10 +25,13 @@ import com.meteor.extrabotany.common.item.relic.legendary.ItemExcaliber;
 import com.meteor.extrabotany.common.item.relic.legendary.ItemExcaliberFake;
 import com.meteor.extrabotany.common.item.relic.legendary.ItemHermesTravelClothing;
 import com.meteor.extrabotany.common.item.relic.legendary.ItemHestiaChastity;
+import com.meteor.extrabotany.common.item.relic.legendary.ItemLokiGhostrick;
 import com.meteor.extrabotany.common.item.relic.legendary.ItemMaxwellDemon;
+import com.meteor.extrabotany.common.item.relic.legendary.ItemOlympusGuard;
 import com.meteor.extrabotany.common.item.relic.legendary.ItemVHandgun;
 import com.meteor.extrabotany.common.item.relic.legendary.ItemVPowerBattleaxe;
 import com.meteor.extrabotany.common.item.relic.legendary.ItemVRangerBoots;
+import com.meteor.extrabotany.common.item.weapon.ItemGun;
 import com.meteor.extrabotany.common.item.weapon.ItemGunBoomstick;
 import com.meteor.extrabotany.common.item.weapon.ItemGunFlintlock;
 import com.meteor.extrabotany.common.item.weapon.ItemGunPistol;
@@ -57,12 +59,14 @@ public class ModItems {
 	public static Item hestiachastity;
 	public static Item maxwelldemon;
 	public static Item athenabless;
+	public static Item lokighostrick;
 	public static Item aphroditegrace;
 	public static Item cronusphantom;
 	public static Item hermestravelclothing;
 	public static Item cthulhueye;
 	public static Item teleportpearl;
 	public static Item gaianecklacebroken;
+	public static Item olympusguard;
 	public static Item dog;
 	
 	public static Item itemtest;
@@ -101,6 +105,7 @@ public class ModItems {
 				
 		dog = new ItemBaubleDog();
 		
+		lokighostrick = new ItemLokiGhostrick(LibItemName.LOKIGHOSTRICK);
 		cthulhueye = new ItemCthulhuEye();
 		cronusphantom = new ItemCronusPhantom(LibItemName.CRONUSPHANTOM);
 		athenabless = new ItemAthenaBless();
@@ -113,6 +118,7 @@ public class ModItems {
 		dice20 = new ItemDice20();
 		hestiachastity = new ItemHestiaChastity(0, LibItemName.HESTIACHASTITY);
 		aphroditegrace = new ItemAphroditeGrace(2, LibItemName.APHRODITEGRACE);
+		olympusguard = new ItemOlympusGuard(LibItemName.OLYMPUSGUARD);
 		hermestravelclothing = new ItemHermesTravelClothing(1, LibItemName.HERMESTRAVELCLOTHING);
 		
 		gaiatablet = new ItemGaiaTablet();

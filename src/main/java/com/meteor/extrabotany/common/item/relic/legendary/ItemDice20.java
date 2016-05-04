@@ -46,7 +46,7 @@ public class ItemDice20 extends ItemRelicAdv{
 				new ItemStack(ModItems.aphroditegrace),//16
 				new ItemStack(ModItems.hermestravelclothing),//17
 				new ItemStack(ModItems.cthulhueye),//
-				new ItemStack(ModItems.maxwelldemon),
+				new ItemStack(ModItems.lokighostrick),
 				new ItemStack(ModItems.material,1,3),//
 
 		};

@@ -3,8 +3,6 @@ package com.meteor.extrabotany.common.item.weapon;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 
-import com.meteor.extrabotany.api.ItemGun;
-
 public class ItemGunPistol extends ItemGun{
 
 	public ItemGunPistol(String name) {
