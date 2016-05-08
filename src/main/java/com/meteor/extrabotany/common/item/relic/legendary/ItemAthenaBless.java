@@ -1,51 +1,27 @@
 package com.meteor.extrabotany.common.item.relic.legendary;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import org.lwjgl.opengl.GL11;
-
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.renderer.OpenGlHelper;
-import net.minecraft.client.renderer.Tessellator;
-import net.minecraft.client.renderer.texture.TextureMap;
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityLiving;
-import net.minecraft.entity.SharedMonsterAttributes;
-import net.minecraft.entity.ai.attributes.AttributeModifier;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.world.World;
-import net.minecraftforge.client.event.RenderPlayerEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.living.LivingAttackEvent;
+import vazkii.botania.common.item.relic.ItemRelic;
+import vazkii.botania.common.item.relic.ItemRelicBauble;
 import baubles.api.BaubleType;
 import baubles.common.container.InventoryBaubles;
 import baubles.common.lib.PlayerHandler;
 
-import com.google.common.collect.HashMultimap;
-import com.google.common.collect.Multimap;
 import com.meteor.extrabotany.api.IShieldHandler;
 import com.meteor.extrabotany.common.entity.EntityItemUnbreakable;
-import com.meteor.extrabotany.common.event.EventKnowledgeTypeUnlock;
-import com.meteor.extrabotany.common.event.EventShield;
 import com.meteor.extrabotany.common.handler.ConfigHandler;
 import com.meteor.extrabotany.common.handler.ShieldHandler;
 import com.meteor.extrabotany.common.item.ModItems;
 import com.meteor.extrabotany.common.lib.LibItemName;
-import com.meteor.extrabotany.common.lib.LibReference;
 
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
-import vazkii.botania.api.item.IBaubleRender;
-import vazkii.botania.api.item.IBaubleRender.RenderType;
-import vazkii.botania.client.core.helper.ShaderHelper;
-import vazkii.botania.common.item.relic.ItemRelic;
-import vazkii.botania.common.item.relic.ItemRelicBauble;
 
 public class ItemAthenaBless extends ItemRelicBauble implements IShieldHandler{
 

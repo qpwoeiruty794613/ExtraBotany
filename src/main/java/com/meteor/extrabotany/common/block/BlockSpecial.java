@@ -5,14 +5,11 @@ import java.util.List;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
+import vazkii.botania.common.block.BlockSpecialFlower;
+import vazkii.botania.common.item.block.ItemBlockSpecialFlower;
 
 import com.meteor.extrabotany.ExtraBotany;
 import com.meteor.extrabotany.common.lib.LibBlockName;
-
-import vazkii.botania.api.BotaniaAPI;
-import vazkii.botania.common.block.BlockSpecialFlower;
-import vazkii.botania.common.item.block.ItemBlockSpecialFlower;
 
 public class BlockSpecial extends BlockSpecialFlower {
 	static {
@@ -33,6 +30,7 @@ public class BlockSpecial extends BlockSpecialFlower {
 			LibBlockName.NUMERON_BALSAM,
 			LibBlockName.JUDASVOW,
 			LibBlockName.ARTIFACONIA,
+			LibBlockName.VOIDUIM,
 		}));
 	}	
 		

@@ -1,12 +1,12 @@
 package com.meteor.extrabotany.client.render.entity;
 
-import com.meteor.extrabotany.client.model.ModelLycorisradiata;
-import com.meteor.extrabotany.common.entity.EntityLycorisradiataRed;
-
 import net.minecraft.client.renderer.entity.RenderLiving;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.util.ResourceLocation;
+
+import com.meteor.extrabotany.client.model.ModelLycorisradiata;
+import com.meteor.extrabotany.common.entity.EntityLycorisradiataRed;
 
 public class RenderLycorisradiataRed extends RenderLiving{
 	

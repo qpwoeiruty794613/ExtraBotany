@@ -2,9 +2,6 @@ package com.meteor.extrabotany.common.entity;
 
 import java.util.List;
 
-import com.meteor.extrabotany.common.effect.ModPotionEffect;
-
-import vazkii.botania.common.Botania;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.nbt.NBTTagCompound;
@@ -13,6 +10,9 @@ import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.DamageSource;
 import net.minecraft.world.World;
+import vazkii.botania.common.Botania;
+
+import com.meteor.extrabotany.common.effect.ModPotionEffect;
 
 public class EntityMagicLandmineII extends Entity {
 

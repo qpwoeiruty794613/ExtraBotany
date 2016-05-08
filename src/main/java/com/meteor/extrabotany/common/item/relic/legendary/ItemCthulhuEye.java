@@ -1,8 +1,5 @@
 package com.meteor.extrabotany.common.item.relic.legendary;
 
-import com.meteor.extrabotany.common.item.relic.ItemRelicAdv;
-import com.meteor.extrabotany.common.lib.LibItemName;
-
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.FontRenderer;
 import net.minecraft.client.gui.ScaledResolution;
@@ -34,7 +31,10 @@ import vazkii.botania.client.core.helper.IconHelper;
 import vazkii.botania.client.lib.LibResources;
 import vazkii.botania.common.core.helper.ItemNBTHelper;
 import vazkii.botania.common.item.relic.ItemRelic;
-import vazkii.botania.common.lib.LibItemNames;
+
+import com.meteor.extrabotany.common.item.relic.ItemRelicAdv;
+import com.meteor.extrabotany.common.lib.LibItemName;
+
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;

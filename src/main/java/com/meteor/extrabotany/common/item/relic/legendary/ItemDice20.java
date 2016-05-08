@@ -3,23 +3,16 @@ package com.meteor.extrabotany.common.item.relic.legendary;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.meteor.extrabotany.common.item.ModItems;
-import com.meteor.extrabotany.common.item.relic.ItemRelicAdv;
-import com.meteor.extrabotany.common.lib.LibItemName;
-
-import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.entity.player.EntityPlayerMP;
-import net.minecraft.init.Items;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.stats.Achievement;
 import net.minecraft.util.ChatComponentTranslation;
 import net.minecraft.util.ChatStyle;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.world.World;
-import vazkii.botania.api.item.IRelic;
-import vazkii.botania.common.item.relic.ItemRelic;
+
+import com.meteor.extrabotany.common.item.ModItems;
+import com.meteor.extrabotany.common.item.relic.ItemRelicAdv;
+import com.meteor.extrabotany.common.lib.LibItemName;
 
 public class ItemDice20 extends ItemRelicAdv{
 	

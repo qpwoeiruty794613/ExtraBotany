@@ -1,13 +1,12 @@
 package com.meteor.extrabotany.common.item.relic;
 
-import com.meteor.extrabotany.common.entity.EntityItemUnbreakable;
-
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.world.World;
 import vazkii.botania.common.item.relic.ItemRelic;
+
+import com.meteor.extrabotany.common.entity.EntityItemUnbreakable;
 
 public class ItemRelicAdv extends ItemRelic{
 	

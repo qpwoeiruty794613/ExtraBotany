@@ -2,14 +2,9 @@ package com.meteor.extrabotany.common.entity.bullet;
 
 import java.util.List;
 
-import vazkii.botania.common.Botania;
-
-import com.meteor.extrabotany.common.item.weapon.ItemGun;
-
 import net.minecraft.block.Block;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.entity.monster.EntityBlaze;
 import net.minecraft.entity.projectile.EntityThrowable;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.AxisAlignedBB;
@@ -18,6 +13,7 @@ import net.minecraft.util.MathHelper;
 import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.util.Vec3;
 import net.minecraft.world.World;
+import vazkii.botania.common.Botania;
 
 public class EntityBullet extends EntityThrowable
 {		

@@ -2,10 +2,6 @@ package com.meteor.extrabotany.common.block.subtile.generating;
 
 import java.util.List;
 
-import com.meteor.extrabotany.common.handler.ConfigHandler;
-import com.meteor.extrabotany.common.lexicon.LexiconModData;
-import com.meteor.extrabotany.common.lib.LibData;
-
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -15,6 +11,10 @@ import vazkii.botania.api.lexicon.LexiconEntry;
 import vazkii.botania.api.subtile.RadiusDescriptor;
 import vazkii.botania.api.subtile.SubTileGenerating;
 import vazkii.botania.common.block.ModBlocks;
+
+import com.meteor.extrabotany.common.handler.ConfigHandler;
+import com.meteor.extrabotany.common.lexicon.LexiconModData;
+import com.meteor.extrabotany.common.lib.LibData;
 
 public class SubTileCandyflower extends SubTileGenerating{
 	private static final String TAG_BURN_TIME = "burnTime";

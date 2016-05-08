@@ -7,11 +7,8 @@ import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemRecord;
 import net.minecraft.world.World;
-import net.minecraftforge.client.MinecraftForgeClient;
 import net.minecraftforge.common.MinecraftForge;
 
-import com.meteor.extrabotany.api.hugetools.HugeItemIcon;
-import com.meteor.extrabotany.api.hugetools.HugeItemRenderer;
 import com.meteor.extrabotany.client.render.RenderShield;
 import com.meteor.extrabotany.client.render.entity.RenderLycorisradiataGreen;
 import com.meteor.extrabotany.client.render.entity.RenderLycorisradiataPurple;
@@ -37,7 +34,6 @@ import com.meteor.extrabotany.common.entity.bullet.EntityBulletSnowball;
 import com.meteor.extrabotany.common.integration.hugetools.ItemRender;
 import com.meteor.extrabotany.common.item.ModItems;
 
-import cpw.mods.fml.client.FMLClientHandler;
 import cpw.mods.fml.client.registry.ClientRegistry;
 import cpw.mods.fml.client.registry.RenderingRegistry;
 import cpw.mods.fml.common.FMLCommonHandler;

@@ -1,10 +1,11 @@
 package com.meteor.extrabotany.common.event;
 
-import com.meteor.extrabotany.common.effect.ModPotionEffect;
-
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
+
+import com.meteor.extrabotany.common.effect.ModPotionEffect;
+
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 
 

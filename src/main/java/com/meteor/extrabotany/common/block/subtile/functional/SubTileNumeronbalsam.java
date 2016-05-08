@@ -5,28 +5,22 @@ import java.util.List;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockFire;
-import net.minecraft.block.BlockLog;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.AxisAlignedBB;
-import net.minecraft.util.ChatComponentTranslation;
-import net.minecraft.util.ChatStyle;
 import net.minecraft.util.ChunkCoordinates;
 import net.minecraft.util.DamageSource;
-import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.world.World;
-
-import com.meteor.extrabotany.api.IShieldHandler;
-import com.meteor.extrabotany.common.lexicon.LexiconModData;
-
-import cpw.mods.fml.relauncher.ReflectionHelper;
 import vazkii.botania.api.lexicon.LexiconEntry;
 import vazkii.botania.api.subtile.RadiusDescriptor;
 import vazkii.botania.api.subtile.SubTileFunctional;
 import vazkii.botania.common.Botania;
+
+import com.meteor.extrabotany.common.lexicon.LexiconModData;
+
+import cpw.mods.fml.relauncher.ReflectionHelper;
 
 public class SubTileNumeronbalsam extends SubTileFunctional{
 	private static final int RANGE = 11;

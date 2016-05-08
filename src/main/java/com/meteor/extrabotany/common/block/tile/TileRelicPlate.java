@@ -2,10 +2,6 @@ package com.meteor.extrabotany.common.block.tile;
 
 import java.util.List;
 
-import com.meteor.extrabotany.common.block.ModBlocks;
-import com.meteor.extrabotany.common.lib.LibBlockName;
-import com.meteor.extrabotany.common.recipe.ModRelicPlateRecipe;
-
 import net.minecraft.block.Block;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.item.EntityItem;
@@ -21,10 +17,11 @@ import vazkii.botania.api.mana.spark.ISparkAttachable;
 import vazkii.botania.api.mana.spark.ISparkEntity;
 import vazkii.botania.api.mana.spark.SparkHelper;
 import vazkii.botania.common.Botania;
-import vazkii.botania.common.block.BlockSpecialFlower;
 import vazkii.botania.common.block.tile.TileMod;
 import vazkii.botania.common.block.tile.mana.TilePool;
-import vazkii.botania.common.item.ModItems;
+
+import com.meteor.extrabotany.common.block.ModBlocks;
+import com.meteor.extrabotany.common.recipe.ModRelicPlateRecipe;
 
 public class TileRelicPlate extends TileMod implements ISparkAttachable {
 

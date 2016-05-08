@@ -2,28 +2,21 @@ package com.meteor.extrabotany.common.block.subtile.generating;
 
 import java.util.List;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockBookshelf;
-import net.minecraft.block.BlockLog;
 import net.minecraft.entity.item.EntityItem;
-import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.AxisAlignedBB;
-import net.minecraft.util.ChunkCoordinates;
-import net.minecraft.world.World;
 import net.minecraftforge.common.ForgeHooks;
-
-import com.meteor.extrabotany.common.handler.ConfigHandler;
-import com.meteor.extrabotany.common.lexicon.LexiconModData;
-import com.meteor.extrabotany.common.lib.LibData;
-
 import vazkii.botania.api.lexicon.LexiconEntry;
 import vazkii.botania.api.subtile.RadiusDescriptor;
 import vazkii.botania.api.subtile.SubTileGenerating;
 import vazkii.botania.common.Botania;
 import vazkii.botania.common.block.ModBlocks;
+
+import com.meteor.extrabotany.common.handler.ConfigHandler;
+import com.meteor.extrabotany.common.lexicon.LexiconModData;
+import com.meteor.extrabotany.common.lib.LibData;
 
 public class SubTileOmniviolet extends SubTileGenerating{
 	private static final String TAG_BURN_TIME = "burnTime";

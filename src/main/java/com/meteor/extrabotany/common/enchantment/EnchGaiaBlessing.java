@@ -1,24 +1,20 @@
 package com.meteor.extrabotany.common.enchantment;
 
-import vazkii.botania.api.mana.IManaDiscountArmor;
-import vazkii.botania.common.entity.EntityDoppleganger;
-
-import com.meteor.extrabotany.common.handler.ConfigHandler;
-import com.meteor.extrabotany.common.item.relic.legendary.ItemVRangerBoots;
-import com.meteor.extrabotany.common.lib.LibReference;
-
-import cpw.mods.fml.common.FMLCommonHandler;
-import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.enchantment.EnumEnchantmentType;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
-import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
+import vazkii.botania.api.mana.IManaDiscountArmor;
+import vazkii.botania.common.entity.EntityDoppleganger;
+
+import com.meteor.extrabotany.common.handler.ConfigHandler;
+
+import cpw.mods.fml.common.FMLCommonHandler;
+import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 
 public class EnchGaiaBlessing extends Enchantment implements IManaDiscountArmor{
     public EnchGaiaBlessing()

@@ -1,13 +1,18 @@
 package com.meteor.extrabotany.common.lexicon;
 
-import java.util.Random;
-
-import net.minecraft.init.Items;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.StatCollector;
+import vazkii.botania.api.BotaniaAPI;
+import vazkii.botania.api.lexicon.LexiconCategory;
+import vazkii.botania.api.lexicon.LexiconEntry;
+import vazkii.botania.common.item.block.ItemBlockSpecialFlower;
+import vazkii.botania.common.lexicon.BLexiconEntry;
+import vazkii.botania.common.lexicon.DLexiconEntry;
+import vazkii.botania.common.lexicon.page.PageCraftingRecipe;
+import vazkii.botania.common.lexicon.page.PageManaInfusionRecipe;
+import vazkii.botania.common.lexicon.page.PagePetalRecipe;
+import vazkii.botania.common.lexicon.page.PageText;
 
-import com.meteor.extrabotany.common.block.ModBlocks;
 import com.meteor.extrabotany.common.item.ModItems;
 import com.meteor.extrabotany.common.lib.LibBlockName;
 import com.meteor.extrabotany.common.lib.LibLexiconName;
@@ -15,19 +20,6 @@ import com.meteor.extrabotany.common.lib.LibReference;
 import com.meteor.extrabotany.common.recipe.ModManaInfusionRecipe;
 import com.meteor.extrabotany.common.recipe.ModPetalRecipe;
 import com.meteor.extrabotany.common.recipe.ModRecipe;
-
-import vazkii.botania.api.BotaniaAPI;
-import vazkii.botania.api.lexicon.LexiconCategory;
-import vazkii.botania.api.lexicon.LexiconEntry;
-import vazkii.botania.common.crafting.ModPetalRecipes;
-import vazkii.botania.common.item.block.ItemBlockSpecialFlower;
-import vazkii.botania.common.lexicon.ALexiconEntry;
-import vazkii.botania.common.lexicon.BLexiconEntry;
-import vazkii.botania.common.lexicon.DLexiconEntry;
-import vazkii.botania.common.lexicon.page.PageCraftingRecipe;
-import vazkii.botania.common.lexicon.page.PageManaInfusionRecipe;
-import vazkii.botania.common.lexicon.page.PagePetalRecipe;
-import vazkii.botania.common.lexicon.page.PageText;
 
 public class LexiconModData {
 	//Generating 

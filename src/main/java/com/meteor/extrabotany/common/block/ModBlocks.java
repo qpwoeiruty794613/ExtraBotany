@@ -1,5 +1,12 @@
 package com.meteor.extrabotany.common.block;
 
+import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
+import net.minecraft.tileentity.TileEntity;
+import vazkii.botania.api.BotaniaAPI;
+import vazkii.botania.api.subtile.SubTileEntity;
+import vazkii.botania.common.block.decor.slabs.BlockModSlab;
+
 import com.meteor.extrabotany.ExtraBotany;
 import com.meteor.extrabotany.common.block.decor.BlockElvenQuartzSlab;
 import com.meteor.extrabotany.common.block.decor.BlockElvenQuartzStairs;
@@ -11,6 +18,7 @@ import com.meteor.extrabotany.common.block.subtile.functional.SubTileIcebirdium;
 import com.meteor.extrabotany.common.block.subtile.functional.SubTileNecrofluer;
 import com.meteor.extrabotany.common.block.subtile.functional.SubTileNumeronDandelife;
 import com.meteor.extrabotany.common.block.subtile.functional.SubTileNumeronbalsam;
+import com.meteor.extrabotany.common.block.subtile.functional.SubTileVoiduim;
 import com.meteor.extrabotany.common.block.subtile.functional.SubTileVolatilily;
 import com.meteor.extrabotany.common.block.subtile.functional.SubTileWoodienia;
 import com.meteor.extrabotany.common.block.subtile.generating.SubTileBlueenchantress;
@@ -24,12 +32,6 @@ import com.meteor.extrabotany.common.lib.LibBlockName;
 import com.meteor.extrabotany.common.lib.LibReference;
 
 import cpw.mods.fml.common.registry.GameRegistry;
-import vazkii.botania.api.BotaniaAPI;
-import vazkii.botania.client.lib.LibResources;
-import vazkii.botania.common.block.decor.slabs.BlockModSlab;
-import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
-import net.minecraft.tileentity.TileEntity;
 
 public class ModBlocks {
 	
@@ -46,9 +48,11 @@ public class ModBlocks {
 	public static Block elvenquartzstairs;
 	
 	public static Block relicplate;
+	public static Block resonancehouse;
 	
 	public static void init() {
 		relicplate = new BlockRelicPlate();
+		resonancehouse = new BlockResonanceHouse(Material.rock);
 		specialFlower = new BlockSpecial();
 		//Gaia Quartz
 		gaiaquartz = new BlockMods(Material.iron, LibBlockName.GAIAQUARTZ);
@@ -72,26 +76,31 @@ public class ModBlocks {
 	}
 	
 	private static void initTileEntities() {
-		BotaniaAPI.registerSubTile(LibBlockName.ARTIFACONIA, SubTileArtifaconia.class);
-		BotaniaAPI.registerSubTile(LibBlockName.JUDASVOW, SubTileJudasvow.class);
-		BotaniaAPI.registerSubTile(LibBlockName.ICEBIRDIUM, SubTileIcebirdium.class);
-		BotaniaAPI.registerSubTile(LibBlockName.NUMERON_BALSAM, SubTileNumeronbalsam.class);
-		BotaniaAPI.registerSubTile(LibBlockName.VOLATILILY, SubTileVolatilily.class);
-		BotaniaAPI.registerSubTile(LibBlockName.OMNIVIOLET, SubTileOmniviolet.class);
-		BotaniaAPI.registerSubTile(LibBlockName.WOODIENIA, SubTileWoodienia.class);
-		BotaniaAPI.registerSubTile(LibBlockName.NECRO_FLUER, SubTileNecrofluer.class);
-		BotaniaAPI.registerSubTile(LibBlockName.NUMERON_DANDELIFE, SubTileNumeronDandelife.class);
-		BotaniaAPI.registerSubTile(LibBlockName.GEMINIORCHID, SubTileGeminiorchid.class);
-		BotaniaAPI.registerSubTile(LibBlockName.CANDY_FLOWER, SubTileCandyflower.class);
-		BotaniaAPI.registerSubTile(LibBlockName.SUNSHINE_LILY, SubTileSunshinelily.class);
-		BotaniaAPI.registerSubTile(LibBlockName.MOONLIGHT_LILY, SubTileMoonlightlily.class);
+		registerSubTile(LibBlockName.VOIDUIM, SubTileVoiduim.class);
+		registerSubTile(LibBlockName.ARTIFACONIA, SubTileArtifaconia.class);
+		registerSubTile(LibBlockName.JUDASVOW, SubTileJudasvow.class);
+		registerSubTile(LibBlockName.ICEBIRDIUM, SubTileIcebirdium.class);
+		registerSubTile(LibBlockName.NUMERON_BALSAM, SubTileNumeronbalsam.class);
+		registerSubTile(LibBlockName.VOLATILILY, SubTileVolatilily.class);
+		registerSubTile(LibBlockName.OMNIVIOLET, SubTileOmniviolet.class);
+		registerSubTile(LibBlockName.WOODIENIA, SubTileWoodienia.class);
+		registerSubTile(LibBlockName.NECRO_FLUER, SubTileNecrofluer.class);
+		registerSubTile(LibBlockName.NUMERON_DANDELIFE, SubTileNumeronDandelife.class);
+		registerSubTile(LibBlockName.GEMINIORCHID, SubTileGeminiorchid.class);
+		registerSubTile(LibBlockName.CANDY_FLOWER, SubTileCandyflower.class);
+		registerSubTile(LibBlockName.SUNSHINE_LILY, SubTileSunshinelily.class);
+		registerSubTile(LibBlockName.MOONLIGHT_LILY, SubTileMoonlightlily.class);
 		if(ExtraBotany.arsmagicaLoaded = true){
-		BotaniaAPI.registerSubTile(LibBlockName.BLUE_ENCHANTRESS, SubTileBlueenchantress.class);
+		registerSubTile(LibBlockName.BLUE_ENCHANTRESS, SubTileBlueenchantress.class);
 		}		
 		
 	}
 	
 	private static void registerTile(Class<? extends TileEntity> clazz, String key) {
 		GameRegistry.registerTileEntity(clazz, LibReference.PREFIX_MOD + key);
+	}
+	
+	private static void registerSubTile(String key, Class<? extends SubTileEntity> clazz) {
+		BotaniaAPI.registerSubTile(key, clazz);
 	}
 }

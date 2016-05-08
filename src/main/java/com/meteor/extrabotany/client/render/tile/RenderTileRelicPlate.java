@@ -1,12 +1,5 @@
 package com.meteor.extrabotany.client.render.tile;
 
-import org.lwjgl.opengl.GL11;
-
-import com.meteor.extrabotany.common.block.BlockRelicPlate;
-import com.meteor.extrabotany.common.block.tile.TileRelicPlate;
-
-import vazkii.botania.client.core.handler.ClientTickHandler;
-import vazkii.botania.client.core.helper.ShaderHelper;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.OpenGlHelper;
 import net.minecraft.client.renderer.Tessellator;
@@ -14,6 +7,14 @@ import net.minecraft.client.renderer.texture.TextureMap;
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.IIcon;
+
+import org.lwjgl.opengl.GL11;
+
+import vazkii.botania.client.core.handler.ClientTickHandler;
+import vazkii.botania.client.core.helper.ShaderHelper;
+
+import com.meteor.extrabotany.common.block.BlockRelicPlate;
+import com.meteor.extrabotany.common.block.tile.TileRelicPlate;
 
 public class RenderTileRelicPlate extends TileEntitySpecialRenderer {
 

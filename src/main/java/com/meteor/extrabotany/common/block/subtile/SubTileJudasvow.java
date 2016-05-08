@@ -2,35 +2,22 @@ package com.meteor.extrabotany.common.block.subtile;
 
 import java.util.List;
 
-import com.meteor.extrabotany.common.entity.EntitySpear;
-import com.meteor.extrabotany.common.lexicon.LexiconModData;
-
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.entity.monster.IMob;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.entity.projectile.EntityThrowable;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
-import net.minecraft.server.MinecraftServer;
 import net.minecraft.util.AxisAlignedBB;
-import net.minecraft.util.DamageSource;
 import net.minecraft.util.MathHelper;
-import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
-import vazkii.botania.api.internal.IManaBurst;
 import vazkii.botania.api.lexicon.LexiconEntry;
-import vazkii.botania.api.mana.BurstProperties;
-import vazkii.botania.api.mana.ILensEffect;
 import vazkii.botania.api.mana.IManaUsingItem;
 import vazkii.botania.api.mana.ManaItemHandler;
 import vazkii.botania.api.subtile.SubTileFunctional;
 import vazkii.botania.common.Botania;
-import vazkii.botania.common.core.helper.ItemNBTHelper;
-import vazkii.botania.common.core.helper.Vector3;
-import vazkii.botania.common.entity.EntityBabylonWeapon;
-import vazkii.botania.common.entity.EntityManaBurst;
+
+import com.meteor.extrabotany.common.entity.EntitySpear;
+import com.meteor.extrabotany.common.lexicon.LexiconModData;
 
 public class SubTileJudasvow extends SubTileFunctional implements IManaUsingItem{
 
@@ -72,7 +59,7 @@ public class SubTileJudasvow extends SubTileFunctional implements IManaUsingItem
 						weapon.rotationYaw = player.rotationYaw;
 						weapon.setVariety(this.supertile.getWorldObj().rand.nextInt(12));
 						weapon.setDelay(15);
-						weapon.setRotation(MathHelper.wrapAngleTo180_float(-player.rotationYaw + 180));
+						weapon.setRotation(MathHelper.wrapAngleTo180_float(-player.rotationYaw +180));
 						player.worldObj.spawnEntityInWorld(weapon);
 					}						
 				}

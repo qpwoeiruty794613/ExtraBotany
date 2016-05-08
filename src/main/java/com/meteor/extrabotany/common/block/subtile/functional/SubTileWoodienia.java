@@ -1,7 +1,5 @@
 package com.meteor.extrabotany.common.block.subtile.functional;
 
-import com.meteor.extrabotany.common.lexicon.LexiconModData;
-
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockLog;
 import net.minecraft.util.ChunkCoordinates;
@@ -10,6 +8,8 @@ import vazkii.botania.api.lexicon.LexiconEntry;
 import vazkii.botania.api.subtile.RadiusDescriptor;
 import vazkii.botania.api.subtile.SubTileFunctional;
 import vazkii.botania.common.Botania;
+
+import com.meteor.extrabotany.common.lexicon.LexiconModData;
 
 public class SubTileWoodienia extends SubTileFunctional{
 		

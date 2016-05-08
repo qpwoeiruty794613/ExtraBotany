@@ -3,25 +3,19 @@ package com.meteor.extrabotany.common.block.subtile.functional;
 import java.util.List;
 
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockLog;
-import net.minecraft.block.material.Material;
-import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.ChunkCoordinates;
 import net.minecraft.world.World;
-
-import com.meteor.extrabotany.common.lexicon.LexiconModData;
-
 import vazkii.botania.api.lexicon.LexiconEntry;
 import vazkii.botania.api.subtile.RadiusDescriptor;
 import vazkii.botania.api.subtile.SubTileFunctional;
 import vazkii.botania.common.Botania;
-import vazkii.botania.common.item.relic.ItemRelic;
+
+import com.meteor.extrabotany.common.lexicon.LexiconModData;
 
 public class SubTileIcebirdium extends SubTileFunctional{
 	private static final int RANGE = 3;

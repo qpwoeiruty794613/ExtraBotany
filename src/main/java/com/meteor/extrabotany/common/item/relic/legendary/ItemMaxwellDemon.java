@@ -7,6 +7,10 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
+import vazkii.botania.api.mana.IManaUsingItem;
+import vazkii.botania.api.mana.ManaItemHandler;
+import vazkii.botania.client.core.helper.IconHelper;
+import vazkii.botania.common.lib.LibObfuscation;
 
 import com.meteor.extrabotany.common.effect.ModPotionEffect;
 import com.meteor.extrabotany.common.item.relic.ItemRelicAdv;
@@ -15,11 +19,6 @@ import com.meteor.extrabotany.common.lib.LibItemName;
 import cpw.mods.fml.relauncher.ReflectionHelper;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import vazkii.botania.api.mana.IManaUsingItem;
-import vazkii.botania.api.mana.ManaItemHandler;
-import vazkii.botania.client.core.helper.IconHelper;
-import vazkii.botania.common.item.relic.ItemRelic;
-import vazkii.botania.common.lib.LibObfuscation;
 
 public class ItemMaxwellDemon extends ItemRelicAdv implements IManaUsingItem{
 	public static IIcon dasBootIcon;

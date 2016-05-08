@@ -2,20 +2,21 @@ package com.meteor.extrabotany.common.item.basic;
 
 import java.util.List;
 
-import com.meteor.extrabotany.common.item.ItemMods;
-import com.meteor.extrabotany.common.lib.LibItemName;
-
-import vazkii.botania.client.core.helper.IconHelper;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
+import vazkii.botania.client.core.helper.IconHelper;
+
+import com.meteor.extrabotany.common.item.ItemMods;
+import com.meteor.extrabotany.common.lib.LibItemName;
+
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 
 public class ItemMaterial extends ItemMods{
-	final int types = 11;
+	final int types = 13;
 	IIcon[] icons;
 	public ItemMaterial(String name) {
 		super(name);

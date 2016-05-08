@@ -2,12 +2,9 @@ package com.meteor.extrabotany.common.event;
 
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.init.Items;
 import net.minecraftforge.event.entity.living.LivingDeathEvent;
-import net.minecraftforge.event.entity.living.LivingHurtEvent;
 
-import com.meteor.extrabotany.common.effect.ModPotionEffect;
 import com.meteor.extrabotany.common.entity.bullet.EntityBulletGold;
 
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;

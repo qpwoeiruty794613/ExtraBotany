@@ -8,6 +8,10 @@ public class LibItemName {
 	public static final String MATERIAL = "material";
 	public static final String BULLET = "bullet";
 	
+	public static final String BOX = "box";
+	public static final String DUNGEONBOX = "dungeonbox";
+	public static final String PILL = "pill";
+	
 	//Dice
 	public static final String DICE4 = "dice4";
 	public static final String DICE6 = "dice6";
@@ -64,7 +68,9 @@ public class LibItemName {
 		"gaiaquartz",//7
 		"elvenquartz",//8
 		"goldstring",//9
-		"emptydice"//10
+		"emptydice",//10
+		"resonancefragment",//11
+		"key",//12
 	};
 	
 	public static final String[] BULLET_NAMES = new String[] {

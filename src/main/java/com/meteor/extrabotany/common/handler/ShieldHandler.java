@@ -1,13 +1,12 @@
 package com.meteor.extrabotany.common.handler;
 
-import com.meteor.extrabotany.api.IShieldHandler;
-import com.meteor.extrabotany.common.event.EventShield;
-
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.world.World;
 import net.minecraftforge.common.IExtendedEntityProperties;
+
+import com.meteor.extrabotany.api.IShieldHandler;
 
 public class ShieldHandler implements IShieldHandler, IExtendedEntityProperties{
 

@@ -1,9 +1,9 @@
 package com.meteor.extrabotany.common.entity;
 
-import com.meteor.extrabotany.common.item.ModItems;
-
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
+
+import com.meteor.extrabotany.common.item.ModItems;
 
 public class EntityLycorisradiataPurple extends EntityLycorisradiata{
 

@@ -1,16 +1,15 @@
 package com.meteor.extrabotany.common.item.relic.legendary;
 
 import java.util.Collection;
-import java.util.List;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
-import net.minecraft.util.StatCollector;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
+import vazkii.botania.common.item.relic.ItemRelic;
 
 import com.meteor.extrabotany.api.IShieldHandler;
 import com.meteor.extrabotany.common.handler.ConfigHandler;
@@ -20,13 +19,6 @@ import com.meteor.extrabotany.common.lib.LibItemName;
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.relauncher.ReflectionHelper;
-import vazkii.botania.api.item.IAncientWillContainer;
-import vazkii.botania.api.item.IRelic;
-import vazkii.botania.api.mana.ILensEffect;
-import vazkii.botania.api.mana.IManaDiscountArmor;
-import vazkii.botania.api.mana.IManaGivingItem;
-import vazkii.botania.common.entity.EntityManaBurst;
-import vazkii.botania.common.item.relic.ItemRelic;
 
 public class ItemAphroditeGrace extends ItemRelicArmorSet implements IShieldHandler{
 	public ItemAphroditeGrace(int type, String name) {

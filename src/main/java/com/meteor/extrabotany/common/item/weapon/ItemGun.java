@@ -1,28 +1,20 @@
 package com.meteor.extrabotany.common.item.weapon;
 
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Items;
 import net.minecraft.item.EnumAction;
 import net.minecraft.item.ItemStack;
-import net.minecraft.potion.PotionEffect;
 import net.minecraft.world.World;
-import vazkii.botania.api.mana.ManaItemHandler;
-import vazkii.botania.common.item.relic.ItemRelic;
-import vazkii.botania.common.lib.LibObfuscation;
 
-import com.meteor.extrabotany.common.effect.ModPotionEffect;
 import com.meteor.extrabotany.common.entity.bullet.EntityBulletExploding;
 import com.meteor.extrabotany.common.entity.bullet.EntityBulletGold;
 import com.meteor.extrabotany.common.entity.bullet.EntityBulletHighVelocity;
 import com.meteor.extrabotany.common.entity.bullet.EntityBulletMeteor;
 import com.meteor.extrabotany.common.entity.bullet.EntityBulletMusket;
 import com.meteor.extrabotany.common.entity.bullet.EntityBulletSilver;
-import com.meteor.extrabotany.common.entity.bullet.EntityBulletSnowball;
 import com.meteor.extrabotany.common.handler.MathHandler;
 import com.meteor.extrabotany.common.item.ItemMods;
 import com.meteor.extrabotany.common.item.ModItems;
 
-import cpw.mods.fml.relauncher.ReflectionHelper;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 

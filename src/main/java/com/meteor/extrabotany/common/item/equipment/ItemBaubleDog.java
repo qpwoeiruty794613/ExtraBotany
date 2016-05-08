@@ -2,8 +2,6 @@ package com.meteor.extrabotany.common.item.equipment;
 
 import java.util.List;
 
-import org.lwjgl.opengl.GL11;
-
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.ItemRenderer;
 import net.minecraft.client.renderer.Tessellator;
@@ -14,15 +12,15 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
 import net.minecraftforge.client.event.RenderPlayerEvent;
-import baubles.api.BaubleType;
 
-import com.meteor.extrabotany.common.lib.LibItemName;
-import com.meteor.extrabotany.common.lib.LibReference;
+import org.lwjgl.opengl.GL11;
 
-import cpw.mods.fml.relauncher.SideOnly;
 import vazkii.botania.api.item.ICosmeticBauble;
 import vazkii.botania.client.core.helper.IconHelper;
 import vazkii.botania.common.item.equipment.bauble.ItemBauble;
+import baubles.api.BaubleType;
+
+import com.meteor.extrabotany.common.lib.LibItemName;
 
 public class ItemBaubleDog extends ItemBauble implements ICosmeticBauble{
 	private static final int SUBTYPES = 4;

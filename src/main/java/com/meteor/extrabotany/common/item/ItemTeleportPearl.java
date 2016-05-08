@@ -1,15 +1,11 @@
 package com.meteor.extrabotany.common.item;
 
-import vazkii.botania.api.mana.IManaUsingItem;
-import vazkii.botania.api.mana.ManaItemHandler;
-
-import com.meteor.extrabotany.common.entity.EntityTeleportPearl;
-import com.meteor.extrabotany.common.item.relic.legendary.ItemHermesTravelClothing;
-
-import net.minecraft.entity.item.EntityEnderPearl;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
+
+import com.meteor.extrabotany.common.entity.EntityTeleportPearl;
+import com.meteor.extrabotany.common.item.relic.legendary.ItemHermesTravelClothing;
 
 public class ItemTeleportPearl extends ItemMods{
 

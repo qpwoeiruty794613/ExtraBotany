@@ -13,18 +13,16 @@ import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
-
-import com.meteor.extrabotany.common.item.relic.ItemRelicAdv;
-import com.meteor.extrabotany.common.lib.LibItemName;
-
 import vazkii.botania.api.internal.IManaBurst;
-import vazkii.botania.api.item.IRelic;
 import vazkii.botania.api.mana.BurstProperties;
 import vazkii.botania.api.mana.ILensEffect;
 import vazkii.botania.common.core.helper.ItemNBTHelper;
 import vazkii.botania.common.core.helper.Vector3;
 import vazkii.botania.common.entity.EntityManaBurst;
 import vazkii.botania.common.item.relic.ItemRelic;
+
+import com.meteor.extrabotany.common.item.relic.ItemRelicAdv;
+import com.meteor.extrabotany.common.lib.LibItemName;
 
 public class ItemVHandgun extends ItemRelicAdv implements ILensEffect{
 	private static final String TAG_ATTACKER_USERNAME = "attackerUsername";

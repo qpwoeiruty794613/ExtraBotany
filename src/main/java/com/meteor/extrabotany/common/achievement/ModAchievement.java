@@ -1,16 +1,15 @@
 package com.meteor.extrabotany.common.achievement;
 
+import net.minecraft.stats.Achievement;
+import net.minecraftforge.common.AchievementPage;
+import vazkii.botania.common.achievement.AchievementTriggerer;
+import vazkii.botania.common.core.handler.ConfigHandler;
+
 import com.meteor.extrabotany.common.item.ModItems;
 import com.meteor.extrabotany.common.lib.LibAchievementName;
 import com.meteor.extrabotany.common.lib.LibReference;
 
 import cpw.mods.fml.common.FMLCommonHandler;
-import vazkii.botania.common.achievement.AchievementTriggerer;
-import vazkii.botania.common.achievement.ModAchievements;
-import vazkii.botania.common.core.handler.ConfigHandler;
-import vazkii.botania.common.lib.LibMisc;
-import net.minecraft.stats.Achievement;
-import net.minecraftforge.common.AchievementPage;
 
 public class ModAchievement {
 	//Relics

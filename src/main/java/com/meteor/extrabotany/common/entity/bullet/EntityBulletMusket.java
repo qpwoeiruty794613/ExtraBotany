@@ -1,12 +1,6 @@
 package com.meteor.extrabotany.common.entity.bullet;
 
-import vazkii.botania.common.Botania;
-
-import com.meteor.extrabotany.common.item.weapon.ItemGun;
-
 import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.util.DamageSource;
-import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
 
 public class EntityBulletMusket extends EntityBullet{

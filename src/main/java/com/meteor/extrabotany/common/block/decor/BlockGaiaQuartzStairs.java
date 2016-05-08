@@ -1,14 +1,13 @@
 package com.meteor.extrabotany.common.block.decor;
 
-import com.meteor.extrabotany.common.block.ModBlocks;
-
-import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 import vazkii.botania.api.lexicon.LexiconEntry;
 import vazkii.botania.common.block.decor.stairs.BlockModStairs;
 import vazkii.botania.common.lexicon.LexiconData;
+
+import com.meteor.extrabotany.common.block.ModBlocks;
 
 public class BlockGaiaQuartzStairs extends BlockModStairs {
 

@@ -2,13 +2,11 @@ package com.meteor.extrabotany.common.recipe;
 
 import java.util.List;
 
-import vazkii.botania.api.item.IRelic;
-import vazkii.botania.common.item.relic.ItemRelic;
-
-import com.meteor.extrabotany.common.item.ModItems;
-
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.item.ItemStack;
+import vazkii.botania.api.item.IRelic;
+
+import com.meteor.extrabotany.common.item.ModItems;
 
 public class ModRelicPlateRecipe {
 	//Astral Force Recipe

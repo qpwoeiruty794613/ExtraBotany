@@ -1,25 +1,9 @@
 package com.meteor.extrabotany.common.block.subtile.functional;
 
-import java.util.Arrays;
-import java.util.Collection;
 import java.util.List;
 
-import com.meteor.extrabotany.api.IShieldHandler;
-import com.meteor.extrabotany.common.handler.ConfigHandler;
-import com.meteor.extrabotany.common.handler.ShieldHandler;
-import com.meteor.extrabotany.common.lexicon.LexiconModData;
-
-import cpw.mods.fml.relauncher.ReflectionHelper;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityLiving;
-import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.entity.item.EntityItem;
-import net.minecraft.entity.monster.EntityMob;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.potion.Potion;
-import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.ChatComponentTranslation;
 import net.minecraft.util.ChatStyle;
@@ -28,8 +12,11 @@ import net.minecraft.world.World;
 import vazkii.botania.api.lexicon.LexiconEntry;
 import vazkii.botania.api.subtile.RadiusDescriptor;
 import vazkii.botania.api.subtile.SubTileFunctional;
-import vazkii.botania.common.Botania;
-import vazkii.botania.common.core.helper.ItemNBTHelper;
+
+import com.meteor.extrabotany.api.IShieldHandler;
+import com.meteor.extrabotany.common.handler.ConfigHandler;
+import com.meteor.extrabotany.common.handler.ShieldHandler;
+import com.meteor.extrabotany.common.lexicon.LexiconModData;
 
 public class SubTileNumeronDandelife extends SubTileFunctional implements IShieldHandler{
 	private static final int RANGE = 3;

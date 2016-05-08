@@ -1,11 +1,11 @@
 package com.meteor.extrabotany.common.item;
 
+import net.minecraft.item.Item;
+
 import com.meteor.extrabotany.ExtraBotany;
 import com.meteor.extrabotany.common.lib.LibReference;
 
 import cpw.mods.fml.common.registry.GameRegistry;
-import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.item.Item;
 
 public class ItemMods extends Item{
 	private String name;

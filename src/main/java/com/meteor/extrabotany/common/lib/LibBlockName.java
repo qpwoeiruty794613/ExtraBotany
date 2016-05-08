@@ -16,8 +16,10 @@ public class LibBlockName {
 	public static final String ICEBIRDIUM = "icebirdium";
 	public static final String JUDASVOW = "judasvow";
 	public static final String ARTIFACONIA = "artifaconia";
+	public static final String VOIDUIM = "voiduim";
 	
 	public static final String RELICPLATE = "relicplate";
+	public static final String RESONANCEHOUSE = "resonancehouse";
 	
 	public static final String GAIAQUARTZ = "blockgaiaquartz";
 	public static final String ELVENQUARTZ = "blockelvenquartz";

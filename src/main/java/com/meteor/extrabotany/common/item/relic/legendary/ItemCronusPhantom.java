@@ -1,27 +1,17 @@
 package com.meteor.extrabotany.common.item.relic.legendary;
 
-import com.meteor.extrabotany.common.effect.ModPotionEffect;
-import com.meteor.extrabotany.common.entity.EntityItemUnbreakable;
-import com.meteor.extrabotany.common.item.ModItems;
-
-import cpw.mods.fml.common.FMLCommonHandler;
-import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.item.EntityItem;
-import net.minecraft.entity.monster.EntityMob;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
-import net.minecraft.potion.PotionEffect;
 import net.minecraft.world.World;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.entity.living.LivingAttackEvent;
-import net.minecraftforge.event.entity.living.LivingHurtEvent;
+import vazkii.botania.common.item.relic.ItemRelicBauble;
 import baubles.api.BaubleType;
 import baubles.common.container.InventoryBaubles;
 import baubles.common.lib.PlayerHandler;
-import vazkii.botania.common.item.relic.ItemRelic;
-import vazkii.botania.common.item.relic.ItemRelicBauble;
+
+import com.meteor.extrabotany.common.entity.EntityItemUnbreakable;
+import com.meteor.extrabotany.common.item.ModItems;
 
 public class ItemCronusPhantom extends ItemRelicBauble{
 

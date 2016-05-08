@@ -4,11 +4,10 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
+import vazkii.botania.common.item.relic.ItemRelicBauble;
 import baubles.api.BaubleType;
 
 import com.meteor.extrabotany.common.entity.EntityItemUnbreakable;
-
-import vazkii.botania.common.item.relic.ItemRelicBauble;
 
 public class ItemOlympusGuard extends ItemRelicBauble{
 

@@ -2,27 +2,17 @@ package com.meteor.extrabotany.common.item;
 
 import java.util.List;
 
-import vazkii.botania.common.achievement.ModAchievements;
-import vazkii.botania.common.entity.EntityEnderAirBottle;
-import vazkii.botania.common.item.equipment.tool.ToolCommons;
-
-import com.meteor.extrabotany.common.entity.EntityGaiaIII;
-import com.meteor.extrabotany.common.entity.EntityLycorisradiataGreen;
-
-import net.minecraftforge.event.entity.player.PlayerInteractEvent.Action;
-import cpw.mods.fml.common.eventhandler.SubscribeEvent;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Items;
 import net.minecraft.item.EnumAction;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.util.StatCollector;
 import net.minecraft.world.World;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.entity.player.PlayerInteractEvent;
+
+import com.meteor.extrabotany.common.entity.EntityGaiaIII;
+
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 
 public class ItemGaianecklaceBroken extends ItemMods{
 	public ItemGaianecklaceBroken(String name) {

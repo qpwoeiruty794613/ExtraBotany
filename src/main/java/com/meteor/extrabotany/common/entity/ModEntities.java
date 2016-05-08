@@ -2,7 +2,8 @@ package com.meteor.extrabotany.common.entity;
 
 
 
-import vazkii.botania.common.lib.LibEntityNames;
+import net.minecraft.entity.EnumCreatureType;
+import net.minecraft.world.biome.BiomeGenBase;
 
 import com.meteor.extrabotany.ExtraBotany;
 import com.meteor.extrabotany.common.entity.bullet.EntityBulletExploding;
@@ -15,8 +16,6 @@ import com.meteor.extrabotany.common.entity.bullet.EntityBulletSnowball;
 import com.meteor.extrabotany.common.lib.LibEntityName;
 
 import cpw.mods.fml.common.registry.EntityRegistry;
-import net.minecraft.entity.EnumCreatureType;
-import net.minecraft.world.biome.BiomeGenBase;
 
 public class ModEntities {
 	public static void init() {

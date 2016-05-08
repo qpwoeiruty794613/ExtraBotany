@@ -12,7 +12,6 @@ import net.minecraft.util.StatCollector;
 import net.minecraft.world.World;
 
 import com.meteor.extrabotany.ExtraBotany;
-import com.meteor.extrabotany.common.entity.EntityLycorisradiataGreen;
 import com.meteor.extrabotany.common.entity.EntityLycorisradiataRed;
 
 import cpw.mods.fml.common.registry.GameRegistry;

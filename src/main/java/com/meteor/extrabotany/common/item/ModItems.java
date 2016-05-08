@@ -1,12 +1,10 @@
 package com.meteor.extrabotany.common.item;
 
-import vazkii.botania.common.item.record.ItemModRecord;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraftforge.oredict.OreDictionary;
 
-import com.meteor.extrabotany.ExtraBotany;
-import com.meteor.extrabotany.common.entity.EntityLycorisradiata;
-import com.meteor.extrabotany.common.entity.EntityLycorisradiataGreen;
-import com.meteor.extrabotany.common.entity.EntityLycorisradiataPurple;
-import com.meteor.extrabotany.common.entity.EntityLycorisradiataRed;
+import com.meteor.extrabotany.common.item.basic.ItemBox;
 import com.meteor.extrabotany.common.item.basic.ItemBullet;
 import com.meteor.extrabotany.common.item.basic.ItemMaterial;
 import com.meteor.extrabotany.common.item.basic.ItemRecordA;
@@ -31,7 +29,6 @@ import com.meteor.extrabotany.common.item.relic.legendary.ItemOlympusGuard;
 import com.meteor.extrabotany.common.item.relic.legendary.ItemVHandgun;
 import com.meteor.extrabotany.common.item.relic.legendary.ItemVPowerBattleaxe;
 import com.meteor.extrabotany.common.item.relic.legendary.ItemVRangerBoots;
-import com.meteor.extrabotany.common.item.weapon.ItemGun;
 import com.meteor.extrabotany.common.item.weapon.ItemGunBoomstick;
 import com.meteor.extrabotany.common.item.weapon.ItemGunFlintlock;
 import com.meteor.extrabotany.common.item.weapon.ItemGunPistol;
@@ -39,10 +36,6 @@ import com.meteor.extrabotany.common.item.weapon.ItemGunShotgun;
 import com.meteor.extrabotany.common.lib.LibEntityName;
 import com.meteor.extrabotany.common.lib.LibItemName;
 import com.meteor.extrabotany.common.lib.LibOreDictName;
-
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraftforge.oredict.OreDictionary;
 
 public class ModItems {
 	public static Item gaiatablet;
@@ -72,6 +65,8 @@ public class ModItems {
 	public static Item itemtest;
 	public static Item material;
 	public static Item bullet;
+	public static Item dungeonbox;
+	public static Item boxs;
 	
 	public static Item gunphoenixblaster;
 	public static Item guntacticalshotgun;
@@ -90,6 +85,9 @@ public class ModItems {
 		recordC = new ItemRecordC("C", LibItemName.RECORD_C);
 		
 		itemtest = new ItemTest("test");
+		
+		dungeonbox = new ItemDungeonBox(LibItemName.DUNGEONBOX);
+		boxs = new ItemBox(LibItemName.BOX);
 		
 		gunphoenixblaster = new ItemGunPhoenixBlaster(LibItemName.PHOENIXBLASTER);
 		guntacticalshotgun = new ItemGunTacticalShotgun(LibItemName.TACTICALSHOTGUN);

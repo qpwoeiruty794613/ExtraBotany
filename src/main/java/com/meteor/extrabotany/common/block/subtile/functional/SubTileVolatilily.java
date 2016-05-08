@@ -5,22 +5,18 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
-import com.meteor.extrabotany.common.lexicon.LexiconModData;
-
-import net.minecraft.entity.item.EntityFireworkRocket;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.projectile.EntityFishHook;
 import net.minecraft.init.Blocks;
-import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.WeightedRandom;
 import net.minecraft.util.WeightedRandomFishable;
 import net.minecraftforge.common.FishingHooks;
-import vazkii.botania.api.BotaniaAPI;
 import vazkii.botania.api.lexicon.LexiconEntry;
 import vazkii.botania.api.subtile.RadiusDescriptor;
 import vazkii.botania.api.subtile.SubTileFunctional;
-import vazkii.botania.common.Botania;
+
+import com.meteor.extrabotany.common.lexicon.LexiconModData;
 
 public class SubTileVolatilily extends SubTileFunctional{
 

@@ -1,11 +1,11 @@
 package com.meteor.extrabotany.common.recipe;
 
-import com.meteor.extrabotany.common.item.ModItems;
-
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import vazkii.botania.api.BotaniaAPI;
 import vazkii.botania.api.recipe.RecipeManaInfusion;
+
+import com.meteor.extrabotany.common.item.ModItems;
 
 public class ModManaInfusionRecipe {
 	

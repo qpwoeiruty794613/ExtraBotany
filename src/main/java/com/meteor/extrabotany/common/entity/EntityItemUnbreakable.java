@@ -1,11 +1,9 @@
 package com.meteor.extrabotany.common.entity;
 
-import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.DamageSource;
 import net.minecraft.world.World;
-import net.minecraftforge.event.entity.item.ItemExpireEvent;
 
 public class EntityItemUnbreakable extends EntityItem {
 

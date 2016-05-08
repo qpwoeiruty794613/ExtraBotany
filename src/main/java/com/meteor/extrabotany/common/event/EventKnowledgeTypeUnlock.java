@@ -1,15 +1,16 @@
 package com.meteor.extrabotany.common.event;
 
-import com.meteor.extrabotany.ExtraBotany;
-import com.meteor.extrabotany.common.item.ModItems;
-
-import vazkii.botania.api.lexicon.ILexicon;
-import vazkii.botania.api.lexicon.KnowledgeType;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ChatComponentTranslation;
 import net.minecraft.util.ChatStyle;
 import net.minecraft.util.EnumChatFormatting;
+import vazkii.botania.api.lexicon.ILexicon;
+import vazkii.botania.api.lexicon.KnowledgeType;
+
+import com.meteor.extrabotany.ExtraBotany;
+import com.meteor.extrabotany.common.item.ModItems;
+
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.PlayerEvent.ItemPickupEvent;
 

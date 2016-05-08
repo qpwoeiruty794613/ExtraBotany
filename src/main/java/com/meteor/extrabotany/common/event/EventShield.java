@@ -1,12 +1,13 @@
 package com.meteor.extrabotany.common.event;
 
-import org.lwjgl.opengl.GL11;
-
-import vazkii.botania.api.item.IBaubleRender.RenderType;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraftforge.client.event.RenderPlayerEvent;
 import net.minecraftforge.event.entity.EntityEvent.EntityConstructing;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
+
+import org.lwjgl.opengl.GL11;
+
+import vazkii.botania.api.item.IBaubleRender.RenderType;
 
 import com.meteor.extrabotany.api.IShieldHandler;
 import com.meteor.extrabotany.client.render.RenderShield;
@@ -14,7 +15,6 @@ import com.meteor.extrabotany.common.handler.ConfigHandler;
 import com.meteor.extrabotany.common.handler.ShieldHandler;
 
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
-import cpw.mods.fml.common.gameevent.TickEvent;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 

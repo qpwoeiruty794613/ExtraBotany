@@ -1,19 +1,18 @@
 package com.meteor.extrabotany.common.recipe;
 
-import vazkii.botania.api.BotaniaAPI;
-import vazkii.botania.api.recipe.RecipeElvenTrade;
-import vazkii.botania.common.lib.LibOreDict;
-
-import com.meteor.extrabotany.common.block.ModBlocks;
-import com.meteor.extrabotany.common.item.ModItems;
-import com.meteor.extrabotany.common.lib.LibOreDictName;
-
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.CraftingManager;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraftforge.oredict.ShapedOreRecipe;
+import vazkii.botania.api.BotaniaAPI;
+import vazkii.botania.common.lib.LibOreDict;
+
+import com.meteor.extrabotany.common.block.ModBlocks;
+import com.meteor.extrabotany.common.item.ModItems;
+import com.meteor.extrabotany.common.lib.LibOreDictName;
+
 import cpw.mods.fml.common.registry.GameRegistry;
 
 public class ModRecipe {

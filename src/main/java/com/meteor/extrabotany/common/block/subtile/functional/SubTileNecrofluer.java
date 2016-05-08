@@ -1,30 +1,21 @@
 package com.meteor.extrabotany.common.block.subtile.functional;
 
-import java.util.Collection;
 import java.util.List;
 
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.AxisAlignedBB;
-import net.minecraft.util.ChatComponentTranslation;
-import net.minecraft.util.ChatStyle;
-import net.minecraft.util.DamageSource;
-import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.world.World;
 import vazkii.botania.api.lexicon.LexiconEntry;
 import vazkii.botania.api.subtile.RadiusDescriptor;
 import vazkii.botania.api.subtile.SubTileFunctional;
 import vazkii.botania.common.item.relic.ItemRelic;
 
-import com.meteor.extrabotany.api.IShieldHandler;
 import com.meteor.extrabotany.common.lexicon.LexiconModData;
-
-import cpw.mods.fml.relauncher.ReflectionHelper;
 
 public class SubTileNecrofluer extends SubTileFunctional{
 	private static final int RANGE = 1;

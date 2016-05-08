@@ -3,14 +3,6 @@ package com.meteor.extrabotany.common.item;
 import java.awt.Color;
 import java.util.List;
 
-import com.meteor.extrabotany.common.lib.LibItemName;
-
-import vazkii.botania.api.mana.ICreativeManaProvider;
-import vazkii.botania.api.mana.IManaItem;
-import vazkii.botania.api.mana.IManaTooltipDisplay;
-import vazkii.botania.client.core.helper.IconHelper;
-import vazkii.botania.common.core.helper.ItemNBTHelper;
-import vazkii.botania.common.item.ItemMod;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
@@ -20,6 +12,14 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.IIcon;
 import net.minecraft.util.StatCollector;
 import net.minecraft.world.World;
+import vazkii.botania.api.mana.ICreativeManaProvider;
+import vazkii.botania.api.mana.IManaItem;
+import vazkii.botania.api.mana.IManaTooltipDisplay;
+import vazkii.botania.client.core.helper.IconHelper;
+import vazkii.botania.common.core.helper.ItemNBTHelper;
+import vazkii.botania.common.item.ItemMod;
+
+import com.meteor.extrabotany.common.lib.LibItemName;
 
 public class ItemGaiaTablet extends ItemMod implements IManaItem, ICreativeManaProvider, IManaTooltipDisplay {
 	

@@ -1,11 +1,12 @@
 package com.meteor.extrabotany.common.event;
 
-import com.meteor.extrabotany.common.item.ModItems;
-
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.event.world.BlockEvent;
+
+import com.meteor.extrabotany.common.item.ModItems;
+
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 
 public class EventPrismaticShard {

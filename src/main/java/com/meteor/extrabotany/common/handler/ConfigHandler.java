@@ -1,10 +1,11 @@
 package com.meteor.extrabotany.common.handler;
 
+import net.minecraft.util.StatCollector;
+import net.minecraftforge.common.config.Configuration;
+
 import com.meteor.extrabotany.common.lib.LibReference;
 
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
-import net.minecraft.util.StatCollector;
-import net.minecraftforge.common.config.Configuration;
 
 public class ConfigHandler {
 	private static Configuration config;

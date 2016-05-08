@@ -1,15 +1,13 @@
 package com.meteor.extrabotany.common.item.relic;
 
-import com.meteor.extrabotany.common.entity.bullet.EntityBulletExploding;
-import com.meteor.extrabotany.common.entity.bullet.EntityBulletGold;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.ItemStack;
+
 import com.meteor.extrabotany.common.entity.bullet.EntityBulletHighVelocity;
 import com.meteor.extrabotany.common.entity.bullet.EntityBulletMeteor;
 import com.meteor.extrabotany.common.entity.bullet.EntityBulletMusket;
 import com.meteor.extrabotany.common.entity.bullet.EntityBulletSilver;
 import com.meteor.extrabotany.common.item.ModItems;
-
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.ItemStack;
 
 public class ItemGunTacticalShotgun extends ItemGunRelic{
 

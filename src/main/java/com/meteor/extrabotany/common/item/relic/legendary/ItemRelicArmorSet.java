@@ -3,14 +3,6 @@ package com.meteor.extrabotany.common.item.relic.legendary;
 import java.util.List;
 import java.util.UUID;
 
-import org.lwjgl.input.Keyboard;
-
-import com.google.common.collect.HashMultimap;
-import com.google.common.collect.Multimap;
-import com.meteor.extrabotany.client.model.ModelRelicArmor;
-import com.meteor.extrabotany.common.entity.EntityItemUnbreakable;
-import com.meteor.extrabotany.common.lib.LibReference;
-
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.client.model.ModelBiped;
 import net.minecraft.entity.Entity;
@@ -21,25 +13,29 @@ import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.ItemStack;
-import net.minecraft.potion.Potion;
-import net.minecraft.potion.PotionEffect;
 import net.minecraft.stats.Achievement;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.StatCollector;
 import net.minecraft.world.World;
-import cpw.mods.fml.common.eventhandler.SubscribeEvent;
-import cpw.mods.fml.common.gameevent.TickEvent;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 import vazkii.botania.api.BotaniaAPI;
 import vazkii.botania.api.item.IRelic;
-import vazkii.botania.client.model.armor.ModelArmorTerrasteel;
 import vazkii.botania.common.core.handler.ConfigHandler;
 import vazkii.botania.common.core.helper.ItemNBTHelper;
 import vazkii.botania.common.item.ModItems;
 import vazkii.botania.common.item.equipment.armor.manasteel.ItemManasteelArmor;
 import vazkii.botania.common.item.relic.ItemRelic;
+
+import com.google.common.collect.HashMultimap;
+import com.google.common.collect.Multimap;
+import com.meteor.extrabotany.client.model.ModelRelicArmor;
+import com.meteor.extrabotany.common.entity.EntityItemUnbreakable;
+import com.meteor.extrabotany.common.lib.LibReference;
+
+import cpw.mods.fml.common.eventhandler.SubscribeEvent;
+import cpw.mods.fml.common.gameevent.TickEvent;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 
 public class ItemRelicArmorSet extends ItemManasteelArmor implements IRelic{
 	

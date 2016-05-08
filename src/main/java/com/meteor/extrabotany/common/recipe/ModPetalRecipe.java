@@ -1,14 +1,12 @@
 package com.meteor.extrabotany.common.recipe;
 
-import com.meteor.extrabotany.common.item.ModItems;
-import com.meteor.extrabotany.common.lib.LibBlockName;
-import com.meteor.extrabotany.common.lib.LibItemName;
-import com.meteor.extrabotany.common.lib.LibOreDictName;
-
 import vazkii.botania.api.BotaniaAPI;
 import vazkii.botania.api.recipe.RecipePetals;
 import vazkii.botania.common.item.block.ItemBlockSpecialFlower;
 import vazkii.botania.common.lib.LibOreDict;
+
+import com.meteor.extrabotany.common.lib.LibBlockName;
+import com.meteor.extrabotany.common.lib.LibOreDictName;
 
 public class ModPetalRecipe {
 	

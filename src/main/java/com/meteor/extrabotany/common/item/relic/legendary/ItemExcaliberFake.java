@@ -1,27 +1,20 @@
 package com.meteor.extrabotany.common.item.relic.legendary;
 
-import java.util.List;
-
-import com.google.common.collect.HashMultimap;
-import com.google.common.collect.Multimap;
-import com.meteor.extrabotany.common.item.relic.ItemRelicAdv;
-import com.meteor.extrabotany.common.lib.LibItemName;
-
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.attributes.AttributeModifier;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
-import net.minecraft.stats.Achievement;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.EnumHelper;
-import vazkii.botania.api.item.IRelic;
-import vazkii.botania.common.entity.EntityManaBurst;
-import vazkii.botania.common.item.equipment.tool.manasteel.ItemManasteelSword;
 import vazkii.botania.common.item.relic.ItemRelic;
+
+import com.google.common.collect.HashMultimap;
+import com.google.common.collect.Multimap;
+import com.meteor.extrabotany.common.item.relic.ItemRelicAdv;
+import com.meteor.extrabotany.common.lib.LibItemName;
 
 public class ItemExcaliberFake extends ItemRelicAdv{
 	public static ToolMaterial toolMaterial = EnumHelper.addToolMaterial("B_EXCALIBER", 3, -1, 6.2F, 6F, 40);
