@@ -38,6 +38,8 @@ import com.meteor.extrabotany.common.lib.LibItemName;
 import com.meteor.extrabotany.common.lib.LibOreDictName;
 
 public class ModItems {
+	public static Item pill;
+	
 	public static Item gaiatablet;
 	public static Item dice20;
 	public static Item excaliber;
@@ -88,6 +90,7 @@ public class ModItems {
 		
 		dungeonbox = new ItemDungeonBox(LibItemName.DUNGEONBOX);
 		boxs = new ItemBox(LibItemName.BOX);
+		pill = new ItemPill(0,0,false,LibItemName.PILL);
 		
 		gunphoenixblaster = new ItemGunPhoenixBlaster(LibItemName.PHOENIXBLASTER);
 		guntacticalshotgun = new ItemGunTacticalShotgun(LibItemName.TACTICALSHOTGUN);

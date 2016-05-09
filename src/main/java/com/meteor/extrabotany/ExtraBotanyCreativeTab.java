@@ -38,6 +38,7 @@ public class ExtraBotanyCreativeTab extends CreativeTabs{
 		//Mana Using Item
 		addItem(ModItems.gaiatablet);
 		addItem(ModItems.teleportpearl);
+		addBlock(ModBlocks.pylon);
 		//Relics
 		addItem(ModItems.dice20);
 		addItem(ModItems.hestiachastity);
@@ -58,6 +59,9 @@ public class ExtraBotanyCreativeTab extends CreativeTabs{
 		addItem(ModItems.itemtest);
 		//Basic
 		addItem(ModItems.material);
+		addItem(ModItems.boxs);
+		addItem(ModItems.dungeonbox);
+		addItem(ModItems.pill);
 		//Spawn Card
 		addItem(ModItems.lycorisgreen);
 		addItem(ModItems.lycorispurple);

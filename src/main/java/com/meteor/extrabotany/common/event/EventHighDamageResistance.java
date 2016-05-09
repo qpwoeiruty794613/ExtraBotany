@@ -4,7 +4,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 
-import com.meteor.extrabotany.common.effect.ModPotionEffect;
+import com.meteor.extrabotany.common.effect.PotionEffectMods;
 
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 
@@ -16,7 +16,7 @@ public class EventHighDamageResistance {
 	            return;
 	        }
 	        EntityPlayer player = (EntityPlayer) event.entity;
-	        if(player.isPotionActive(ModPotionEffect.slowparticlesorting)){
+	        if(player.isPotionActive(PotionEffectMods.slowparticlesorting)){
 	        	if(event.ammount >= (float) (player.getMaxHealth()*0.2) && event.ammount <= (float)(player.getMaxHealth()*3)){
 	        		event.ammount = (float) (player.getMaxHealth()*0.2);
 	        	}

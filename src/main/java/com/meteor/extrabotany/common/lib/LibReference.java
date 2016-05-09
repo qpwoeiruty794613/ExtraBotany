@@ -21,9 +21,18 @@ public class LibReference {
 	public static final String MODEL_HESTIACHASTITY = "extrabotany:textures/models/armor/armorrelic.png";
 	public static final String MODEL_RELIC = "extrabotany:textures/models/armor/armorrelic0.png";
 	
+	public static final String PYLON = "extrabotany:textures/models/pylon.png";
+	public static final String PYLON_GREEN = "extrabotany:textures/models/pylon1.png";
+	public static final String PYLON_PINK = "extrabotany:textures/models/pylon2.png";
+	
+	public static final String OLD_PYLON = "extrabotany:textures/models/pylonOld.png";
+	public static final String OLD_PYLON_GREEN = "extrabotany:textures/models/pylonOld1.png";
+	public static final String OLD_PYLON_PINK = "extrabotany:textures/models/pylonOld2.png";
+	
 	public static final ResourceLocation POTION_SLOWPARTICLESORTING = new ResourceLocation("extrabotany","textures/icons/slowparticlesorting.png");
 	public static final ResourceLocation POTION_FASTPARTICLESORTING = new ResourceLocation("extrabotany","textures/icons/fastparticlesorting.png");
 	public static final ResourceLocation POTION_RESIDUALPAIN = new ResourceLocation("extrabotany","textures/icons/residualpain.png");
+	public static final ResourceLocation POTION_CURE = new ResourceLocation("extrabotany","textures/icons/cure.png");
 	public static final ResourceLocation MODEL_POOLGAIA = new ResourceLocation("extrabotany","textures/models/poolgaia.png");
 	public static final ResourceLocation BAR_SHIELD = new ResourceLocation("extrabotany","textures/gui/shieldHud.png");
 	public static final ResourceLocation SHIELD = new ResourceLocation("extrabotany","textures/icons/shield.png");

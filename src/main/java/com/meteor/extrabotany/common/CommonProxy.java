@@ -28,13 +28,13 @@ public class CommonProxy {
 	
 	public void preInit(FMLPreInitializationEvent event) {
 		new ConfigHandler(event);
+		PotionEffectMods.init();
 		ModBlocks.init();
 		ModItems.init();
 		ModEnchantment.init();
 		ModEntities.init();
 		ModRecipe.init();
 		ModAchievement.init();
-		PotionEffectMods.init();
 		LexiconModData.init();
 		ModMutilBlocks.init();
 	}

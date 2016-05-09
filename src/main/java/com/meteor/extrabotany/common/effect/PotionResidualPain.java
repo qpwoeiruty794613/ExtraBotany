@@ -27,25 +27,31 @@ public class PotionResidualPain extends PotionEffectMods{
 			this.level = level;
 	}
 	
+	@Override
+	public boolean isReady(int duration, int level)
+	{
+		return true;
+	}
+	
 	public int getLevel(){
 		return level;
 	}
 	
 	@SubscribeEvent
 	 public void EntityHurtEvent(LivingHurtEvent event) { 
-	        if(event.entityLiving.isPotionActive(ModPotionEffect.residualpain)){
+	        if(event.entityLiving.isPotionActive(PotionEffectMods.residualpain)){
 	    		int levelnow = getLevel()+1;
 	        	event.ammount += levelnow;
-	        	event.entityLiving.removePotionEffect(ModPotionEffect.residualpain.getId());
-	        	event.entityLiving.addPotionEffect(new PotionEffect(ModPotionEffect.residualpain.getId(), 100, levelnow));
+	        	event.entityLiving.removePotionEffect(PotionEffectMods.residualpain.getId());
+	        	event.entityLiving.addPotionEffect(new PotionEffect(PotionEffectMods.residualpain.getId(), 100, levelnow));
 	        }
 	        
 	        if(event.source.getSourceOfDamage() instanceof EntityPlayer){
 				EntityPlayer player = (EntityPlayer) event.source.getSourceOfDamage();
 				if(ItemCronusPhantom.getCronusPhantom(player) != null)
 					if(ItemRelic.isRightPlayer(player, ItemCronusPhantom.getCronusPhantom(player))){
-							if(event.entityLiving.isPotionActive(ModPotionEffect.residualpain.getId()) == false){
-								event.entityLiving.addPotionEffect(new PotionEffect(ModPotionEffect.residualpain.getId(), 100, 0));		
+							if(event.entityLiving.isPotionActive(PotionEffectMods.residualpain.getId()) == false){
+								event.entityLiving.addPotionEffect(new PotionEffect(PotionEffectMods.residualpain.getId(), 100, 0));		
 					}
 							
 				}

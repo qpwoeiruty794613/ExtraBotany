@@ -61,7 +61,7 @@ public class ItemDice20 extends ItemRelicAdv{
 					possible.add(world.rand.nextInt(20));
 			
 					relic = possible.get(world.rand.nextInt(possible.size()));
-			world.playSoundAtEntity(player, "random.bow", 0.5F, 0.4F / (world.rand.nextFloat() * 0.4F + 0.8F));
+					world.playSoundAtEntity(player, "random.bow", 0.5F, 0.4F / (world.rand.nextFloat() * 0.4F + 0.8F));
 			
 			if(relic == 5 || relic == 19) {
 				player.addChatMessage(new ChatComponentTranslation("botaniamisc.uselessDiceRoll", relic + 1).setChatStyle(new ChatStyle().setColor(EnumChatFormatting.DARK_GREEN)));
