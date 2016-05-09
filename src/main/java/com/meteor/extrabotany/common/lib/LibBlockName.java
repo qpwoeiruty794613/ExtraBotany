@@ -20,6 +20,7 @@ public class LibBlockName {
 	
 	public static final String RELICPLATE = "relicplate";
 	public static final String RESONANCEHOUSE = "resonancehouse";
+	public static final String ANCIENTPYLON = "ancientpylon";
 	
 	public static final String GAIAQUARTZ = "blockgaiaquartz";
 	public static final String ELVENQUARTZ = "blockelvenquartz";

@@ -101,7 +101,7 @@ public class ModRecipe {
 				'A', new ItemStack(ModBlocks.gaiaquartz));
 		addOreDictRecipe(new ItemStack(ModItems.material, 8, 7),
 				"AAA","ABA","AAA",
-				'A', LibOreDict.QUARTZ[1],
+				'A', new ItemStack(vazkii.botania.common.item.ModItems.quartz,1,1),
 				'B', LibOreDict.ELEMENTIUM);
 		elvenQuartz = BotaniaAPI.getLatestAddedRecipe();
 		addOreDictRecipe(new ItemStack(ModBlocks.elvenquartz, 1),

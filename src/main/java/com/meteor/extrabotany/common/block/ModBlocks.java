@@ -27,6 +27,7 @@ import com.meteor.extrabotany.common.block.subtile.generating.SubTileGeminiorchi
 import com.meteor.extrabotany.common.block.subtile.generating.SubTileMoonlightlily;
 import com.meteor.extrabotany.common.block.subtile.generating.SubTileOmniviolet;
 import com.meteor.extrabotany.common.block.subtile.generating.SubTileSunshinelily;
+import com.meteor.extrabotany.common.block.tile.TileAncientPylon;
 import com.meteor.extrabotany.common.block.tile.TileRelicPlate;
 import com.meteor.extrabotany.common.lib.LibBlockName;
 import com.meteor.extrabotany.common.lib.LibReference;
@@ -49,8 +50,10 @@ public class ModBlocks {
 	
 	public static Block relicplate;
 	public static Block resonancehouse;
+	public static Block pylon;
 	
 	public static void init() {
+		pylon = new BlockAncientPylon(Material.iron);
 		relicplate = new BlockRelicPlate();
 		resonancehouse = new BlockResonanceHouse(Material.rock);
 		specialFlower = new BlockSpecial();
@@ -71,6 +74,7 @@ public class ModBlocks {
 		((BlockModSlab) elvenquartzslab).register();
 		((BlockModSlab) elvenquartzslabfull).register();
 		
+		registerTile(TileAncientPylon.class, LibBlockName.ANCIENTPYLON);
 		registerTile(TileRelicPlate.class, LibBlockName.RELICPLATE);
 		initTileEntities();
 	}

@@ -1,5 +1,6 @@
 package com.meteor.extrabotany.client;
 
+import vazkii.botania.client.render.tile.RenderTilePylon;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.entity.RenderItem;
 import net.minecraft.client.renderer.entity.RenderSnowball;
@@ -10,13 +11,16 @@ import net.minecraft.world.World;
 import net.minecraftforge.common.MinecraftForge;
 
 import com.meteor.extrabotany.client.render.RenderShield;
+import com.meteor.extrabotany.client.render.block.RenderAncientPylon;
 import com.meteor.extrabotany.client.render.entity.RenderLycorisradiataGreen;
 import com.meteor.extrabotany.client.render.entity.RenderLycorisradiataPurple;
 import com.meteor.extrabotany.client.render.entity.RenderLycorisradiataRed;
 import com.meteor.extrabotany.client.render.entity.RenderSpear;
 import com.meteor.extrabotany.client.render.entity.RenderTeleportPearl;
+import com.meteor.extrabotany.client.render.tile.RenderTileAncientPylon;
 import com.meteor.extrabotany.client.render.tile.RenderTileRelicPlate;
 import com.meteor.extrabotany.common.CommonProxy;
+import com.meteor.extrabotany.common.block.tile.TileAncientPylon;
 import com.meteor.extrabotany.common.block.tile.TileRelicPlate;
 import com.meteor.extrabotany.common.entity.EntityItemUnbreakable;
 import com.meteor.extrabotany.common.entity.EntityLycorisradiataGreen;
@@ -62,8 +66,11 @@ public class ClientProxy extends CommonProxy{
 	private void initRenderers() {
 		MinecraftForge.EVENT_BUS.register(new RenderShield());
 	    FMLCommonHandler.instance().bus().register(new RenderShield());	
+	    
+	    RenderingRegistry.registerBlockHandler(new RenderAncientPylon());
+	    
 		ClientRegistry.bindTileEntitySpecialRenderer(TileRelicPlate.class, new RenderTileRelicPlate());
-		
+		ClientRegistry.bindTileEntitySpecialRenderer(TileAncientPylon.class, new RenderTileAncientPylon());
 		RenderingRegistry.registerEntityRenderingHandler(EntityItemUnbreakable.class, new RenderItem());
 		
 		RenderingRegistry.registerEntityRenderingHandler(EntityBulletExploding.class, new RenderSnowball(ModItems.itemtest));
