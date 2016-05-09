@@ -1,4 +1,5 @@
 # KNOWLEDGE
+category.Botania:extra=额外植物学
 botania.knowledge.extra=&3额外&7的知识
 botaniamisc.knowledgeUnlock=白卡闪耀着异样的光芒,你手中的手册被注入了神秘的力量.
 
@@ -37,6 +38,14 @@ item.petalgreen.name=绿色彼岸花瓣
 item.petalpurple.name=紫色彼岸花瓣
 item.goldstring.name=注魔金线
 
+# -RECORD
+item.botania:recordA.name=U.N.OWEN的唱片
+item.record.botania:A.desc=いけないボーダーライン
+item.botania:recordB.name=神秘的唱片
+item.record.botania:B.desc=崩壊世界の歌姫
+item.botania:recordC.name=琪露诺的秘密唱片
+item.record.botania:C.desc=チルノのパーフェクトさんすう教室
+
 # -SPAWNCARDS
 item.ExtraBotany.SpawnCardLycorisdiataRed.name=红色彼岸花之卡
 item.ExtraBotany.SpawnLycorisRed.desc=生成一朵红色彼岸花
@@ -51,7 +60,7 @@ item.ExtraBotany.SpawnLycorisRandom.desc=随机生成一朵彼岸花
 item.botania:gaiaTablet.name=盖亚石板
 item.teleportpearl.name=传送珍珠
 item.botania:dog0.name=波动狗
-item.botania:dog1.name=P90
+item.botania:dog1.name=波动狗
 item.botania:dog2.name=波动狗
 item.botania:dog3.name=波动狗
 
@@ -70,37 +79,138 @@ item.botania:hestiachastity.name=赫斯提亚的贞洁
 item.botania:maxwelldemon.name=麦克斯韦的妖精
 item.botania:athenabless.name=雅典娜的庇佑
 item.botania:aphroditegrace.name=阿佛洛狄忒的恩宠
-item.botania:cronusphantom.name=克洛诺斯的幻影
+item.botania:cronusphantom.name=柯罗诺斯的幻影
+item.botania:lokighostrick.name=洛基的鬼计
+item.botania:olympusguard.name=奥林匹斯的戍卫
 item.botania:hermestravelclothing.name=赫尔墨斯的旅行衣
+item.botania:cthulhueye.name=克苏鲁之眼
+
+# -WEAPON
+item.phoenixblaster.name=凤凰冲击波
+item.tacticalshotgun.name=战术猎枪
+item.boomstick.name=Boomstick
+item.flintlock.name=燧发枪
+item.shotgun.name=猎枪
+item.pistol.name=手枪
+item.botania:snowballlauncher.name=雪球发射器
+
+# —BULLET
+item.bulletexploding.name=高爆弹
+item.bulletgold.name=金弹
+item.bullethighvelocity.name=高速弹
+item.bulletmeteor.name=陨星弹
+item.bulletmusket.name=枪弹
+item.bulletsilver.name=银弹
 
 # -FOR DEVELOPER
 item.test.name=测试道具
 item.test.desc=仅作测试
 
 # LEXICON ENTRIES
+# -BASIC
+# --BLANKCARD
+botania.entry.blankcard=白卡
+botania.tagline.blankcard=
+botania.page.blankcard0=
+botania.page.blankcard1=
+
+# --COSMETIC
+botania.entry.cosmetic=装饰饰品
+botania.tagline.cosmetic=
+botania.page.cosmetic0=
+botania.page.cosmetic1=
+botania.page.cosmetic2=
+botania.page.cosmetic3=
+botania.page.cosmetic4=
+
+# --PRISMATICSHARD
+botania.entry.prismaticshard=彩虹碎片
+botania.tagline.prismaticshard=
+botania.page.prismaticshard0=
+
+# --GOLDSTRING
+botania.entry.goldstring=注魔金线
+botania.tagline.goldstring=
+botania.page.goldstring0=
+botania.page.goldstring1=
+
+# --PETAL
+botania.entry.petal=彼岸花
+botania.tagline.petal=
+botania.page.petal0=
+
+# --QUARTZ
+botania.entry.quartz=源质石英&盖亚石英
+botania.tagline.quartz=
+botania.page.quartz0=
+botania.page.quartz1=
+botania.page.quartz2=
+
+# -WEAPON
+# --BULLET
+botania.entry.bullet=多种弹药
+botania.tagline.bullet=
+botania.page.bullet0=
+botania.page.bullet1=
+botania.page.bullet2=
+botania.page.bullet3=
+botania.page.bullet4=
+botania.page.bullet5=
+
+# --BASICGUN
+botania.entry.gunbase=基础枪械
+botania.tagline.gunbase=
+botania.page.gunbase0=
+botania.page.gunbase1=
+
+# --PHOENIXBLASTER
+botania.entry.phoenixblaster=凤凰冲击波
+botania.tagline.phoenixblaster=
+botania.page.phoenixblaster0=
+
+# --TACTICALSHOTGUN
+botania.entry.tacticalshotgun=战术猎枪
+botania.tagline.tacticalshotgun=
+botania.page.tacticalshotgun0=
+
+# --SNOWBALLCANNON
+botania.entry.snowballcannon=雪球发射器
+botania.tagline.snowballcannon=
+botania.page.snowballcannon0=
+
 # -GENERATING
-# -- CANDYFLOWER
+# --CANDYFLOWER
 botania.entry.candyflower=糖果花
 botania.page.candyflower0=甜品是&1糖果花&0在世界中最 喜欢的东西了 ,它非常乐意 接受你给的&1甜食&0.细细品味 甜品的过程中的那种幸福感 与满足感,能让&1糖果花&0产出 不少的&4魔力&0.而&1饼干&0,&1糖&0, &1蛋糕&0等都是它的最爱.当然 ,例如&4潘马斯婶婶&0所亲手做的 甜品,&1糖果花&0也非常地喜欢 .同时,越丰盛越美味的甜品 ,它产出的&4魔力&0也就越多.
 botania.page.candyflower1=与此同时值得注意的是,它 每吃掉一个甜品,都有很小 几率产出一个&1爱的结晶&0.
 botania.page.candyflower2=泛滥的爱.
 
-# -- BLUEENCHANTRESS
+# --BLUEENCHANTRESS
 botania.entry.blueenchantress=蓝色妖姬
 botania.page.blueenchantress0=&1蓝色妖姬&0类似&1炽玫瑰&0与&1水绣 球&0,能吸收&1液态源质&0并转化 为大量&4魔力&0,并且速度很快 ,而且无须冷却.因此是一 朵效率非常高的产能花,想 必能成为植物魔法师的一个 不错的选择.
 botania.page.blueenchantress1=忧郁的一天.
 
-# -- SUNSHINELILY
+# --SUNSHINELILY
 botania.entry.sunshinelily=日耀百合
 botania.page.sunshinelily0=拥有着和&1太阳花&0一样的能力 ,能将阳光转化为&4魔力&0,但 是比起它有着更高的&4魔力&0产 出.但过程仍然显得十分缓 慢,不过只要几朵就能有可 观的效率了.
 botania.page.sunshinelily1=&1日耀百合&0拥有着更强大的生 命力,因此不会枯萎.作为 对价,它所需要的材料也就 显得更加昂贵,但很值得, 不是吗?但作为被动产能, 它依旧会因为周围的个体而 降低效率.
 botania.page.sunshinelily2=光与热.
 
-# -- MOONLIGHTLILY
+# --MOONLIGHTLILY
 botania.entry.moonlightlily=月光百合
 botania.page.moonlightlily0=它是&1日耀百合&0的另一面,能 够在黑夜中将月光转化为&4魔 力&0.它的效率也不比&1日耀百 合&0低,当然产出&4魔力&0的过程 也十分缓慢.
 botania.page.moonlightlily1=&1月光百合&0也同样拥有着强大 的生命力.作为对价,所需 要的材料也较为昂贵.同时 作为被动产能,它依旧会因 周围的个体而降低效率.
 botania.page.moonlightlily2=愚者的播种.
+
+# --GEMINIORCHID
+botania.entry.geminiorchid=双子兰
+botania.page.geminiorchid0=
+botania.page.geminiorchid1=
+
+# --OMINIVIOLET
+botania.entry.ominiviolet=全知槿
+botania.page.ominiviolet0=
+botania.page.ominiviolet1=
 
 # -FUNCTIONAL
 # --NECROFLEUR
@@ -110,13 +220,33 @@ botania.page.necrofleur1=
 
 # --NUMERONDANDELIFE
 botania.entry.numerondandelife=源命英
-botania.page.numerondandelife0=站在&1源命英&0的旁边,你将会 非常快速地获得&1护盾值&0,并 且它会移除你身上的&1debuff&0. 但也请注意,&1源命英&0必须放 置在&4X轴&0和&4Z轴&0都是&46的倍数&0 的地方,否则它会罢工.
+botania.page.numerondandelife0=站在&1源命英&0的旁边,你将会 非常快速地获得&1护盾值&0. 但也请注意,&1源命英&0必须放 置在&4X轴&0和&4Z轴&0都是&46的倍数&0 的地方,否则它会罢工.
 botania.page.numerondandelife1=请遵循基本法.
 
 # --WOODIENIA
 botania.entry.woodienia=伐木花
 botania.page.woodienia0=即是你给&1伐木花&0非常少量的 &4魔力&0,它也能非常迅速地砍 伐周围的&1原木&0并将它们以掉 落物形式出现.
 botania.page.woodienia1=每天一棵树,烦恼不再有.
+
+# --ICEBIRDIUM
+botania.entry.icebirdium=零鸟姬
+botania.page.icebirdium0=&1零鸟姬&0可以将其附近的&1水方 块&0冷冻成&1冰块&0,而且它所散 发出的寒气能够使周围的生 物变得迟缓.但不幸的是, 它还没聪明到能辨别出你的 地步.
+botania.page.icebirdium1=后天.
+
+# --NUMERONBALSAM
+botania.entry.numeronbalsam=源凤仙
+botania.page.numeronbalsam0=
+botania.page.numeronbalsam1=
+
+# --JUDASVOW
+botania.entry.judasvow=犹大的誓约
+botania.page.judasvow0=
+botania.page.judasvow1=
+
+# --VOLATILILY
+botania.entry.volatilily=波动百合
+botania.page.volatilily0=将它放在水池上方后,&1波动 百合&0就会开始钓鱼.它可以 钓上各种各样的鱼,令人讨 厌的垃圾,神秘的宝藏等等 .提供一个红石信号可以使它 停止工作.
+botania.page.volatilily1=你不能以貌取人.
 
 # -OTHERS
 # --INFINITYMANA
@@ -126,59 +256,55 @@ botania.entry.infinitymana=无限魔力
 # --HESTIACHASTITY
 botania.entry.hestiachastity=赫斯提亚的贞洁
 botania.tagline.hestiachastity=坚毅不屈.
-botania.page.hestiachastity0=&1赫斯提亚的贞洁&0是女灶神&4赫 斯提亚&0,这样一位贞洁无暇 的女子的象征.当装备有&1赫 斯提亚的贞洁&0,受到伤害时 能召唤洁白的魔力风暴, 追踪周围的敌人并向其发动进 攻.
+botania.page.hestiachastity0=
 
 # --MAXWELLDEMON
 botania.entry.maxwelldemon=麦克斯韦的妖精
 botania.tagline.maxwelldemon=第一类永动机!?
-botania.page.maxwelldemon0=&4麦克斯韦&0诙谐的假定一种" 妖",能够按照某种秩序和 规则把作随机热运动的微粒 分配到一定的相格里.而&1麦 克斯韦的妖精&0就是这样一种 饮料.每次食用后,&4慢速粒 子排序&0能为你吸收掉绝大部 分的伤害,而&4快速粒子归类&0 能使你的挖掘效率得到大大 提升.并且当你没有护盾时 能得到一定护盾值.
+botania.page.maxwelldemon0=
 
 # --ATHENABLESS
 botania.entry.athenabless=雅典娜的庇佑
 botania.tagline.athenabless=智慧的祝福.
-botania.page.athenabless0=乌云与雷电的主宰者,智慧 女神&4雅典娜&0的遗物.&1雅典娜 的庇佑&0能帮你承受来自遗物 的惩罚,并且能把你所造成 的伤害按照一定比例转化为 护盾值.
+botania.page.athenabless0=
 
 # --APHRODITEGRACE
 botania.entry.aphroditegrace=阿佛洛狄忒的恩宠
 botania.tagline.aphroditegrace=远离苦痛.
-botania.page.aphroditegrace0=爱与美之神,司管人间一切 爱情的女神的象征.这件从 泡沫中诞生的遗物,能将所 受到的伤害按一定比例转化 为护盾值,并清除自身的负 面状态.但从泡沫中诞生的 遗物啊,最终还将回到泡沫 中.
+botania.page.aphroditegrace0=
 
 # --DICE20
 botania.entry.dice20=D20
 botania.tagline.dice20=命运一掷.
-botania.page.dice200=拥有着二十面的命运骰子, 搭载着18件传说中的遗物, 能将其中的魔力转化为一件 &4遗物&0.
+botania.page.dice200=
 
 # --EXCALIBER
 botania.entry.excaliber=王者圣剑
 botania.tagline.excaliber=胜利与誓约.
-botania.page.excaliber0=&1王者圣剑&0继承了所有原本失 去的能力,并迸发出了更加 强大的新能力.现在的&1王者 圣剑&0除了拥有着挥舞时召唤 魔力光束自动追踪并打击敌 人,持有时能够得到速度加 成,还能右键召唤出巴比伦 武器进行AOE打击.
+botania.page.excaliber0=&
 
 # --EXCALIBERFAKE
 botania.entry.excaliberfake=王者之剑
 botania.tagline.excaliberfake=消失的光芒.
-botania.page.excaliberfake0=&1王者圣剑&0的光芒四散,其光 泽逐渐消褪,最终变成了黯 淡的&1王者之剑&0.但幸运的是 ,其四散的能力被其他一些 遗物所吸收,或许终有一日 &1王者之剑&0还能重现辉煌.
+botania.page.excaliberfake0=
 
 # --VPOWERBATTLEAXE
 botania.entry.vpowerbattleaxe=V制式动力战斧
 botania.tagline.vpowerbattleaxe=The 300!
-botania.page.vpowerbattleaxe0=继承了&1王者圣剑&0的部分能力 ,拥有着超高的打击能力, 右键能召唤出巴比伦武器. 但因为其重量大,持有时速 度会减缓.
+botania.page.vpowerbattleaxe0=
 
 # --VRANGERBOOTS
 botania.entry.vrangerboots=V制式游侠靴
 botania.tagline.vrangerboots=迅捷如风.
-botania.page.vrangerboots0=装备后&1V制式游侠靴&0移动速 度能够大大提升,跳跃力也 有所增加,并且能够免疫来 自掉落的伤害.同时按住&4ctrl&0 时能够进行一次大跳,按住 &4shift&0时能够在空中滑行.
+botania.page.vrangerboots0=
 
 # --VHANDGUN
 botania.entry.vhandgun=V制式手炮
 botania.tagline.vhandgun=魔力射击.
-botania.page.vhandgun0=继承了&1王者圣剑&0的部分能力 ,能够非常快速地射出魔力 光束自动追踪并打击敌人.
+botania.page.vhandgun0=
 
 #FLOWER NAMES
 # -GENERATING
-tile.botania:flower.candyflower.name=糖果花
-tile.botania:flower.candyflower.reference=最甜蜜的爱
-botania.tagline.candyflower=甜食控
-
 tile.botania:flower.blueenchantress.name=蓝色妖姬
 tile.botania:flower.blueenchantress.reference=蓝色爱好者
 botania.tagline.blueenchantress=源自源质的魔力
@@ -197,28 +323,44 @@ botania.tagline.moonlightlily=月亮祭司
 
 tile.botania:flower.omniviolet.name=全知槿
 tile.botania:flower.omniviolet.reference=Need not to know
-botania.tagline.omniviolet=普罗维登斯之眼
+botania.tagline.ominiviolet=普罗维登斯之眼
+
+tile.botania:flower.geminiorchid.name=双子兰
+tile.botania:flower.geminiorchid.reference=Another...?
+botania.tagline.geminiorchid=
 
 # -FUNCTIONAL
 tile.botania:flower.numerondandelife.name=源命英
-tile.botania:flower.numerondandelife.reference=Too young, Too simple, Sometimes naive.
+tile.botania:flower.numerondandelife.reference=Too young, Too simple
 botania.tagline.numerondandelife=I am Angry
 
 tile.botania:flower.necrofleur.name=死之花
 tile.botania:flower.necrofleur.reference=死亡是唯一的解药
-botania.tagline.necrofleur=我的死亡笔记
+botania.tagline.necrofleur=我会为你的死亡哀悼
 
 tile.botania:flower.woodienia.name=伐木花
 tile.botania:flower.woodienia.reference=满月的诅咒
-botania.tagline.woodienia=没有比砍伐更有趣的事情了
+botania.tagline.woodienia=伍迪的幸运铁斧
 
 tile.botania:flower.artifaconia.name=古遗莲
 tile.botania:flower.artifaconia.reference=禁忌的秘密
-botania.tagline.artifaconia=你为什么会这么熟练
+botania.tagline.artifaconia=博物馆奇妙夜
 
 tile.botania:flower.volatilily.name=波动百合
 tile.botania:flower.volatilily.reference=我的内心毫无波动,甚至还想笑
-botania.tagline.volatilily=它非常喜欢钓鱼
+botania.tagline.volatilily=愿者上钩
+
+tile.botania:flower.icebirdium.name=零鸟姬
+tile.botania:flower.icebirdium.reference=你想堆个雪人吗?
+botania.tagline.icebirdium=你为什么会这么熟练啊
+
+tile.botania:flower.numeronbalsam.name=源凤仙
+tile.botania:flower.numeronbalsam.reference=让火焰净化一切
+botania.tagline.numeronbalsam=神圣之火燃烧着我的战锤
+
+tile.botania:flower.judasvow.name=犹大的誓约
+tile.botania:flower.judasvow.reference=我的荣幸
+botania.tagline.judasvow=为了正义
 
 #ACHIEVEMENTS
 # -RELICS
@@ -228,8 +370,8 @@ achievement.botania:dice20=Reroll you destiny
 achievement.botania:dice20.desc=获得D20!
 achievement.botania:athenabless=白金ディスコ
 achievement.botania:athenabless.desc=获得战利品:雅典娜的庇佑
-//achievement.botania:excaliber=圣光照耀众生
-//achievement.botania:excaliber.desc=获得王者圣剑!
+achievement.botania:excaliber=圣光照耀众生
+achievement.botania:excaliber.desc=获得王者圣剑!
 achievement.botania:excaliberfake=信仰圣光吧
 achievement.botania:excaliberfake.desc=获得战利品:王者之剑
 achievement.botania:hestiachastity=破灭之光
@@ -262,6 +404,8 @@ config.ExtraBotany.efficiencySunshinelily.desc=日耀百合的产能效率.
 config.ExtraBotany.efficiencyMoonlightlily.desc=月光百合的产能效率.
 config.ExtraBotany.efficiencyBlueenchantress.desc=蓝色妖姬的产能效率.
 config.ExtraBotany.efficiencyCandyflower.desc=糖果花的产能效率.
+config.ExtraBotany.efficiencyGeminiorchid.desc=双子兰的产能效率.
+config.ExtraBotany.efficiencyOminiviolet.desc=全知槿的产能效率.
 
 # -CLIENT
 config.ExtraBotany.shieldBarHeight.desc=护盾值显示在魔力条下方. 如果你调整了魔力条的位置,你可以修改这个参数.

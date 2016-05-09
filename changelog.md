@@ -1,3 +1,41 @@
+16/5/9<br>
+Add Ancient Pylons.(WIP)<br>
+
+16/5/8<br>
+Massive Cleanup.<br>
+Add new items.<br>
+
+16/5/4<br>
+Add new relics:Guard of Olympus and Loki's Ghostrick.<br>
+
+16/5/3<br>
+Add new records.<br>
+
+16/5/2<br>
+Add new Functional Flower:Artifaconia.<br>
+Add new Relic:Eye of Cthulhu.<br>
+
+16/5/1<br>
+Lexicon Update.<br>
+Relics are now unbreakable.<br>
+
+16/4/30<br>
+Add new Functional Flowers:IceBirdium, Judas' vow and NumeronBalsam.<br>
+
+16/4/29<br>
+Add 6 kinds of Guns.<br>
+
+16/4/26<br>
+Add Snowball Cannon.<br>
+Add bullets.<br>
+Guns are WIP.<br>
+
+16/4/24<br>
+Rename packages names.<br>
+Resort packages.<br>
+Add new Generating Flower:Gemini Orchid.<br>
+New api.<br>
+
 16/4/23<br>
 NEW cosmetic Baubles.<br>
 NEW Generating Flower:Omni Violet.<br>

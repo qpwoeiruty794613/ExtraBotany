@@ -2,23 +2,21 @@ package com.meteor.extrabotany.client.render;
 
 import java.awt.Color;
 
-import org.lwjgl.opengl.GL11;
-
-import vazkii.botania.api.item.IBaubleRender.Helper;
-import vazkii.botania.client.core.helper.RenderHelper;
-import vazkii.botania.client.core.helper.ShaderHelper;
-import vazkii.botania.common.Botania;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.ScaledResolution;
 import net.minecraft.client.renderer.OpenGlHelper;
 import net.minecraft.client.renderer.Tessellator;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.profiler.Profiler;
 import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.event.RenderGameOverlayEvent;
 import net.minecraftforge.client.event.RenderGameOverlayEvent.ElementType;
+
+import org.lwjgl.opengl.GL11;
+
+import vazkii.botania.client.core.helper.RenderHelper;
+import vazkii.botania.client.core.helper.ShaderHelper;
 
 import com.meteor.extrabotany.api.IShieldHandler;
 import com.meteor.extrabotany.common.handler.ConfigHandler;

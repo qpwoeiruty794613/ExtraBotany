@@ -1,0 +1,5 @@
+{
+	"music.A": { "category": "record", "sounds":[{"name": "music/A", "stream": true}] },
+	"music.C": { "category": "record", "sounds":[{"name": "music/C", "stream": true}] },
+	"music.B": { "category": "record", "sounds":[{"name": "music/B", "stream": true}] }
+}

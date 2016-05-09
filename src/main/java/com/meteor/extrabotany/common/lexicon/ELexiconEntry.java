@@ -1,10 +1,9 @@
 package com.meteor.extrabotany.common.lexicon;
 
-import com.meteor.extrabotany.common.ExtraBotany;
-
-import vazkii.botania.api.BotaniaAPI;
 import vazkii.botania.api.lexicon.LexiconCategory;
 import vazkii.botania.common.lexicon.BLexiconEntry;
+
+import com.meteor.extrabotany.ExtraBotany;
 
 public class ELexiconEntry extends BLexiconEntry{
 	

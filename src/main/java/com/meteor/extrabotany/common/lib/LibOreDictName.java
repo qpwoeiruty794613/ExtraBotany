@@ -13,5 +13,5 @@ public class LibOreDictName {
 	public static final String QUARTZ_ELEMENTIUM = "QuartzElementium";
 	public static final String STRING_GOLD = "StringGold";
 	public static final String DICE_EMPTY = "DiceEmpty";
-	
+	public static final String DOG = "dog";
 }

@@ -6,6 +6,11 @@ public class LibItemName {
 	//Basic
 	public static final String LYCORISPLACER = "lycorisradiataplacer";
 	public static final String MATERIAL = "material";
+	public static final String BULLET = "bullet";
+	
+	public static final String BOX = "box";
+	public static final String DUNGEONBOX = "dungeonbox";
+	public static final String PILL = "pill";
 	
 	//Dice
 	public static final String DICE4 = "dice4";
@@ -36,6 +41,21 @@ public class LibItemName {
 	public static final String APHRODITEGRACE = "aphroditegrace";
 	public static final String CRONUSPHANTOM = "cronusphantom";
 	public static final String HERMESTRAVELCLOTHING = "hermestravelclothing";
+	public static final String CTHULHUEYE = "cthulhueye";
+	public static final String LOKIGHOSTRICK = "lokighostrick";
+	public static final String OLYMPUSGUARD = "olympusguard";
+	
+	public static final String SNOWBALLLAUNCHER = "snowballlauncher";
+	public static final String PHOENIXBLASTER = "phoenixblaster";
+	public static final String TACTICALSHOTGUN = "tacticalshotgun";
+	public static final String BOOMSTICK = "boomstick";
+	public static final String FLINTLOCK = "flintlock";
+	public static final String PISTOL = "pistol";
+	public static final String SHOTGUN = "shotgun";
+	
+	public static final String RECORD_A = "recordA";
+	public static final String RECORD_B = "recordB";
+	public static final String RECORD_C = "recordC";
 	
 	public static final String[] MATERIAL_NAMES = new String[] {
 		"prismaticshard",//0
@@ -48,6 +68,17 @@ public class LibItemName {
 		"gaiaquartz",//7
 		"elvenquartz",//8
 		"goldstring",//9
-		"emptydice"//10
+		"emptydice",//10
+		"resonancefragment",//11
+		"key",//12
+	};
+	
+	public static final String[] BULLET_NAMES = new String[] {
+		"bulletexploding",
+		"bulletgold",
+		"bullethighvelocity",
+		"bulletmeteor",
+		"bulletmusket",
+		"bulletsilver",
 	};
 }

@@ -5,20 +5,18 @@ Botania Addon WIP
 2.Changelog
 ###TODO List
  * Items:
-  * Relics(83.3% Finished):
-    * Helios of Hyperion 
-    * Kratos's Barbarity
+  * Relics(Completed):
   * Basics(Completed)
  * Blocks:
-  * Flowers(20% Finished):
+  * Flowers(45% Finished):
     * NecroFleur(Done)
-    * GeminiOrchid
-    * NumeronBalsam
+    * GeminiOrchid(Done)
+    * NumeronBalsam(Done)
     * NumeronDandelife(Done)
     * DiplopBamboo
-    * Judas' Vow
+    * Judas' Vow(Done)
     * Shiny Lilac
-    * OmniViolet
+    * OmniViolet(Done)
   * Basics(60% Finshed)
  * Entities:
   * Boss(0% Finished):

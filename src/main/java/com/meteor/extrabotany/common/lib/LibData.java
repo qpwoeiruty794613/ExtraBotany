@@ -3,8 +3,8 @@ package com.meteor.extrabotany.common.lib;
 import java.util.List;
 
 import com.google.common.collect.Lists;
+import com.meteor.extrabotany.ExtraBotany;
 import com.meteor.extrabotany.api.IDataHandler;
-import com.meteor.extrabotany.common.ExtraBotany;
 import com.valentin4311.candycraftmod.CandyCraft;
 
 import net.minecraft.block.Block;
@@ -17,10 +17,22 @@ import net.minecraft.item.ItemHoe;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
 import net.minecraft.item.ItemTool;
+import net.minecraftforge.fluids.IFluidBlock;
 import cpw.mods.fml.common.IFuelHandler;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 public class LibData {
+	public static int getBlockTemperture(Block block){
+		if(block instanceof IFluidBlock){
+			IFluidBlock fluid = (IFluidBlock) block;
+			return fluid.getFluid().getTemperature();
+		}else if(block == Blocks.lava){
+			return 1300;
+		}else if(block == Blocks.water){
+			return 300;
+		}else
+			return 400;
+	}
 	
     public static int getCandyBurnTime(ItemStack stack){
     	if (stack == null)
