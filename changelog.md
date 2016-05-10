@@ -1,3 +1,7 @@
+16/5/10<br>
+Mystery Box can be used now.<br>
+Add ChestGenHooks.<br>
+
 16/5/9<br>
 Add Ancient Pylons.(WIP)<br>
 

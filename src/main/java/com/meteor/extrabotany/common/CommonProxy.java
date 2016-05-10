@@ -17,6 +17,7 @@ import com.meteor.extrabotany.common.handler.GuiHandler;
 import com.meteor.extrabotany.common.item.ModItems;
 import com.meteor.extrabotany.common.lexicon.LexiconModData;
 import com.meteor.extrabotany.common.recipe.ModRecipe;
+import com.meteor.extrabotany.common.world.ModWorldGen;
 
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
@@ -37,6 +38,7 @@ public class CommonProxy {
 		ModAchievement.init();
 		LexiconModData.init();
 		ModMutilBlocks.init();
+		ModWorldGen.init();
 	}
 	
 	public void init(FMLInitializationEvent event) {

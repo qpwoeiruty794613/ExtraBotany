@@ -24,7 +24,7 @@ public class ItemDungeonBox extends ItemMods{
 				a--;
 			} while(a != 0);
 			
-			return s;
+			return s.copy();
 			
 		}
 		return stack;

@@ -22,6 +22,11 @@ tile.blockgaiaquartz.name=盖亚石英块
 tile.botania:quartzStairsGaia.name=盖亚石英楼梯
 tile.botania:blockgaiaquartz0Slab.name=盖亚石英台阶
 
+# -TILE
+tile.botania:ancientpylon0.name=远古种族的魔力水晶
+tile.botania:ancientpylon1.name=远古种族的自然水晶
+tile.botania:ancientpylon2.name=远古种族的盖亚水晶
+
 #ITEMS
 # -ARMORSET
 botania.armorset.armorrelic.name=古神之力
@@ -37,6 +42,8 @@ item.petalred.name=红色彼岸花瓣
 item.petalgreen.name=绿色彼岸花瓣
 item.petalpurple.name=紫色彼岸花瓣
 item.goldstring.name=注魔金线
+item.resonancefragment.name=祈之共鸣
+item.key.name=钥匙
 
 # -RECORD
 item.botania:recordA.name=U.N.OWEN的唱片
@@ -63,6 +70,9 @@ item.botania:dog0.name=波动狗
 item.botania:dog1.name=波动狗
 item.botania:dog2.name=波动狗
 item.botania:dog3.name=波动狗
+item.box.name=神秘箱子
+item.dungeonbox.name=地牢箱子
+item.pill.name=SCP-500
 
 # -DICE
 item.botania:dice20.name=D20
