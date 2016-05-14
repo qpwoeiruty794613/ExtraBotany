@@ -1,6 +1,7 @@
 package com.meteor.extrabotany.common.item;
 
 import net.minecraft.item.Item;
+import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.OreDictionary;
 
@@ -33,6 +34,8 @@ import com.meteor.extrabotany.common.item.weapon.ItemGunBoomstick;
 import com.meteor.extrabotany.common.item.weapon.ItemGunFlintlock;
 import com.meteor.extrabotany.common.item.weapon.ItemGunPistol;
 import com.meteor.extrabotany.common.item.weapon.ItemGunShotgun;
+import com.meteor.extrabotany.common.item.weapon.ItemScissorBladePurple;
+import com.meteor.extrabotany.common.item.weapon.ItemScissorBladeRed;
 import com.meteor.extrabotany.common.lib.LibEntityName;
 import com.meteor.extrabotany.common.lib.LibItemName;
 import com.meteor.extrabotany.common.lib.LibOreDictName;
@@ -70,6 +73,9 @@ public class ModItems {
 	public static Item dungeonbox;
 	public static Item boxs;
 	
+	public static Item scissorred;
+	public static Item scissorpurple;
+	
 	public static Item gunphoenixblaster;
 	public static Item guntacticalshotgun;
 	public static Item snowballlauncher;
@@ -92,6 +98,8 @@ public class ModItems {
 		boxs = new ItemBox(LibItemName.BOX);
 		pill = new ItemPill(0,0,false,LibItemName.PILL);
 		
+		scissorred = new ItemScissorBladeRed(ToolMaterial.WOOD, LibItemName.SCISSORBLADERED);
+		scissorpurple = new ItemScissorBladePurple(ToolMaterial.WOOD, LibItemName.SCISSORBLADEPURPLE);
 		gunphoenixblaster = new ItemGunPhoenixBlaster(LibItemName.PHOENIXBLASTER);
 		guntacticalshotgun = new ItemGunTacticalShotgun(LibItemName.TACTICALSHOTGUN);
 		snowballlauncher = new ItemGunSnowballCannon(LibItemName.SNOWBALLLAUNCHER);

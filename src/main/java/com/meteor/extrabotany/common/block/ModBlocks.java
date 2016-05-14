@@ -94,10 +94,7 @@ public class ModBlocks {
 		registerSubTile(LibBlockName.CANDY_FLOWER, SubTileCandyflower.class);
 		registerSubTile(LibBlockName.SUNSHINE_LILY, SubTileSunshinelily.class);
 		registerSubTile(LibBlockName.MOONLIGHT_LILY, SubTileMoonlightlily.class);
-		if(ExtraBotany.arsmagicaLoaded = true){
-		registerSubTile(LibBlockName.BLUE_ENCHANTRESS, SubTileBlueenchantress.class);
-		}		
-		
+		registerSubTile(LibBlockName.BLUE_ENCHANTRESS, SubTileBlueenchantress.class);	
 	}
 	
 	private static void registerTile(Class<? extends TileEntity> clazz, String key) {

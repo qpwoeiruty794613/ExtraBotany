@@ -20,7 +20,7 @@ Botania Addon WIP
   * Basics(60% Finshed)
  * Entities:
   * Boss(0% Finished):
-    * Gaia III<br>
+    * Gaia III(50%)<br>
    
 ###Changelog
 [Click Here](https://github.com/ExtraMeteorP/ExtraBotany/blob/master/changelog.md) 

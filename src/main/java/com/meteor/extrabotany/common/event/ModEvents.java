@@ -15,7 +15,7 @@ public class ModEvents {
 	    FMLCommonHandler.instance().bus().register(new EventBulletGold());	
 		MinecraftForge.EVENT_BUS.register(new EventUnbreakable());
 	    FMLCommonHandler.instance().bus().register(new EventUnbreakable());	
-		MinecraftForge.EVENT_BUS.register(new EventPrismaticShard());
-	    FMLCommonHandler.instance().bus().register(new EventPrismaticShard());	
+	    MinecraftForge.EVENT_BUS.register(new EventGaiaIII());
+	    FMLCommonHandler.instance().bus().register(new EventGaiaIII());	
 	}
 }

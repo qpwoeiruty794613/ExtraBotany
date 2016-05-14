@@ -13,6 +13,25 @@ potion.residualpain=痛觉残留
 potion.fastparticlesorting.postfix=快速粒子归类药水
 potion.residualpain.postfix=痛觉残留药水
 
+#ENTITIES
+entity.ExtraBotany.bulletexploding.name=高爆弹
+entity.ExtraBotany.bulletgold.name=金弹
+entity.ExtraBotany.bullethighvelocity.name=高速弹
+entity.ExtraBotany.bulletmeteor.name=陨星弹
+entity.ExtraBotany.bulletmusket.name=枪弹
+entity.ExtraBotany.bulletsilver.name=银弹
+entity.ExtraBotany.bulletsnowball.name=雪球
+entity.ExtraBotany.spear.name=神圣长矛
+entity.ExtraBotany.unbreakableitem.name=直立不动的掉落物
+entity.ExtraBotany.22.name=22娘
+entity.ExtraBotany.tv.name=小电视
+entity.ExtraBotany.magiclandmine2.name=魔法地雷II
+entity.ExtraBotany.gaia3.name=盖亚III
+entity.ExtraBotany.teleportpearl.name=传送珍珠
+entity.ExtraBotany.lycorispurple.name=紫色彼岸花
+entity.ExtraBotany.lycorisred.name=红色彼岸花
+entity.ExtraBotany.lycorisgreen.name=绿色彼岸花
+
 #BLOCKS
 # -BASIC
 tile.blockelvenquartz.name=源质石英块

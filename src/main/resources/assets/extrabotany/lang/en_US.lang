@@ -13,6 +13,25 @@ potion.residualpain=Residual Pain
 potion.fastparticlesorting.postfix=Potion of Fast Particle Sorting 
 potion.residualpain.postfix=Potion of Residual Pain
 
+#ENTITIES
+entity.ExtraBotany.bulletexploding.name=Exploding Bullet
+entity.ExtraBotany.bulletgold.name=Golden Bullet
+entity.ExtraBotany.bullethighvelocity.name=High Velocity Bullet
+entity.ExtraBotany.bulletmeteor.name=Meteor Bullet
+entity.ExtraBotany.bulletmusket.name=Musket Ball
+entity.ExtraBotany.bulletsilver.name=Silver Bullet
+entity.ExtraBotany.bulletsnowball.name=Snowball
+entity.ExtraBotany.spear.name=Holy Spear
+entity.ExtraBotany.unbreakableitem.name=Standing Attention Item
+entity.ExtraBotany.22.name=22
+entity.ExtraBotany.tv.name=TV
+entity.ExtraBotany.magiclandmine2.name=Magic Landmine II
+entity.ExtraBotany.gaia3.name=Gaia III
+entity.ExtraBotany.teleportpearl.name=Teleport Pearl
+entity.ExtraBotany.lycorispurple.name=Purple Lycorisradiata
+entity.ExtraBotany.lycorisred.name=Red Lycorisradiata
+entity.ExtraBotany.lycorisgreen.name=Green Lycorisradiata
+
 #BLOCKS
 # -BASIC
 tile.blockelvenquartz.name=Block of Elementium Quartz

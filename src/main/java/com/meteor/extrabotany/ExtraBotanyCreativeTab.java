@@ -22,7 +22,7 @@ public class ExtraBotanyCreativeTab extends CreativeTabs{
 	
 	@Override
 	public ItemStack getIconItemStack() {
-		return ItemBlockSpecialFlower.ofType(LibBlockName.NUMERON_DANDELIFE);
+		return new ItemStack(Item.getItemFromBlock(ModBlocks.pylon));
 	}
 
 	@Override
@@ -86,6 +86,9 @@ public class ExtraBotanyCreativeTab extends CreativeTabs{
 		addItem(ModItems.gunflintlock);
 		addItem(ModItems.gunpistol);
 		addItem(ModItems.gunshotgun);
+		addItem(ModItems.scissorpurple);
+		addItem(ModItems.scissorred);
+		//Others
 		addItem(ModItems.recordA);
 		addItem(ModItems.recordB);
 		addItem(ModItems.recordC);

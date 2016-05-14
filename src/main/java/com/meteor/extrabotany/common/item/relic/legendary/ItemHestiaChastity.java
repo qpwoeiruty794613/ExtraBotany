@@ -44,6 +44,7 @@ import vazkii.botania.common.entity.EntityManaBurst;
 import vazkii.botania.common.item.equipment.armor.terrasteel.ItemTerrasteelArmor;
 import vazkii.botania.common.item.relic.ItemRelic;
 
+import com.meteor.extrabotany.common.entity.EntityGaiaIII;
 import com.meteor.extrabotany.common.lib.LibItemName;
 
 import cpw.mods.fml.common.FMLCommonHandler;
@@ -54,7 +55,6 @@ import cpw.mods.fml.relauncher.SideOnly;
 public class ItemHestiaChastity extends ItemRelicArmorSet implements IManaDiscountArmor, IAncientWillContainer, IManaGivingItem, ILensEffect{
 	private static final String TAG_ATTACKER_USERNAME = "attackerUsername";
 	private static final String TAG_HOME_ID = "homeID";
-	
 	private static final String TAG_ANCIENT_WILL = "AncientWill";
 	static IIcon willIcon;
 	public ItemHestiaChastity(int type, String name) {
@@ -74,9 +74,10 @@ public class ItemHestiaChastity extends ItemRelicArmorSet implements IManaDiscou
 	
 	@SubscribeEvent
 	public void onPlayerAttacked(LivingHurtEvent event) {
-        if(!(event.entity instanceof EntityPlayerMP)) {
+        if(!(event.entity instanceof EntityPlayerMP || event.entity instanceof EntityGaiaIII)) {
             return;
         }
+        if(event.entity instanceof EntityPlayerMP){
 			EntityPlayer player = (EntityPlayer) event.entityLiving;
 			for(ItemStack stack : player.inventory.armorInventory) {
 	            if(stack != null && stack.getItem() instanceof ItemHestiaChastity) {
@@ -86,6 +87,7 @@ public class ItemHestiaChastity extends ItemRelicArmorSet implements IManaDiscou
 					}
 	            }
 			}
+        }
 	}
 	
 	public EntityManaBurst getBurst(EntityPlayer player, ItemStack stack) {
@@ -153,7 +155,6 @@ public class ItemHestiaChastity extends ItemRelicArmorSet implements IManaDiscou
 					float damage = 4F;
 					if(!burst.isFake() && !entity.worldObj.isRemote) {
 						EntityPlayer player = living.worldObj.getPlayerEntityByName(attacker);
-
 						living.attackEntityFrom(player == null ? DamageSource.magic : DamageSource.causePlayerDamage(player), damage);
 						entity.setDead();
 						break;

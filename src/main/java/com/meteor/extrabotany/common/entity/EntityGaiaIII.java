@@ -3,6 +3,7 @@ package com.meteor.extrabotany.common.entity;
 import java.awt.Rectangle;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.List;
 import java.util.regex.Pattern;
 
@@ -23,15 +24,21 @@ import net.minecraft.entity.monster.EntitySkeleton;
 import net.minecraft.entity.monster.EntityWitch;
 import net.minecraft.entity.monster.EntityZombie;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemRecord;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.potion.Potion;
+import net.minecraft.potion.PotionEffect;
+import net.minecraft.tileentity.TileEntityBeacon;
 import net.minecraft.util.AxisAlignedBB;
+import net.minecraft.util.ChatComponentTranslation;
+import net.minecraft.util.ChatStyle;
 import net.minecraft.util.ChunkCoordinates;
 import net.minecraft.util.DamageSource;
+import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.MathHelper;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.EnumDifficulty;
@@ -44,16 +51,22 @@ import org.lwjgl.opengl.GL12;
 
 import vazkii.botania.api.boss.IBotaniaBossWithShader;
 import vazkii.botania.api.internal.ShaderCallback;
+import vazkii.botania.api.lexicon.multiblock.Multiblock;
+import vazkii.botania.api.lexicon.multiblock.MultiblockSet;
+import vazkii.botania.api.lexicon.multiblock.component.MultiblockComponent;
 import vazkii.botania.client.core.handler.BossBarHandler;
 import vazkii.botania.client.core.helper.ShaderHelper;
 import vazkii.botania.common.Botania;
 import vazkii.botania.common.achievement.ModAchievements;
+import vazkii.botania.common.block.ModBlocks;
 import vazkii.botania.common.core.handler.ConfigHandler;
 import vazkii.botania.common.core.helper.Vector3;
 import vazkii.botania.common.entity.EntityMagicMissile;
 import vazkii.botania.common.entity.EntityPixie;
 import vazkii.botania.common.item.ModItems;
 import vazkii.botania.common.item.relic.ItemRelic;
+import vazkii.botania.common.lib.LibObfuscation;
+import cpw.mods.fml.relauncher.ReflectionHelper;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -61,7 +74,7 @@ public class EntityGaiaIII extends EntityCreature implements IBotaniaBossWithSha
 
 	public static final int SPAWN_TICKS = 160;
 	private static final float RANGE = 12F;
-	private static final float MAX_HP = 800F;
+	private static final float MAX_HP = 1200F;
 
 	public static final int MOB_SPAWN_START_TICKS = 20;
 	public static final int MOB_SPAWN_END_TICKS = 80;
@@ -78,6 +91,13 @@ public class EntityGaiaIII extends EntityCreature implements IBotaniaBossWithSha
 	private static final String TAG_MOB_SPAWN_TICKS = "mobSpawnTicks";
 	private static final String TAG_HARD_MODE = "hardMode";
 	private static final String TAG_PLAYER_COUNT = "playerCount";
+
+	private static final int[][] PYLON_LOCATIONS = new int[][] {
+		{ 4, 1, 4 },
+		{ 4, 1, -4 },
+		{ -4, 1, 4 },
+		{ -4, 1, -4 }
+	};
 
 	private static final List<String> CHEATY_BLOCKS = Arrays.asList(new String[] {
 			"OpenBlocks:beartrap",
@@ -100,6 +120,137 @@ public class EntityGaiaIII extends EntityCreature implements IBotaniaBossWithSha
 		tasks.addTask(1, new EntityAIWatchClosest(this, EntityPlayer.class, Float.MAX_VALUE));
 		isImmuneToFire = true;
 		experienceValue = 825;
+	}
+
+	public static MultiblockSet makeMultiblockSet() {
+		Multiblock mb = new Multiblock();
+
+		for(int[] p : PYLON_LOCATIONS)
+			mb.addComponent(p[0], p[1] + 1, p[2], com.meteor.extrabotany.common.block.ModBlocks.pylon, 2);
+
+		for(int i = 0; i < 3; i++)
+			for(int j = 0; j < 3; j++)
+				mb.addComponent(new BeaconComponent(new ChunkCoordinates(i - 1, 0, j - 1)));
+
+		mb.addComponent(new BeaconBeamComponent(new ChunkCoordinates(0, 1, 0)));
+		mb.setRenderOffset(0, -1, 0);
+
+		return mb.makeSet();
+	}
+
+	public static boolean spawn(EntityPlayer player, ItemStack par1ItemStack, World par3World, int par4, int par5, int par6, boolean hard) {
+		if(par3World.getTileEntity(par4, par5, par6) instanceof TileEntityBeacon && isTruePlayer(player)) {
+			if(par3World.difficultySetting == EnumDifficulty.PEACEFUL) {
+				if(!par3World.isRemote)
+					player.addChatMessage(new ChatComponentTranslation("botaniamisc.peacefulNoob").setChatStyle(new ChatStyle().setColor(EnumChatFormatting.RED)));
+				return false;
+			}
+
+			for(int[] coords : PYLON_LOCATIONS) {
+				int x = par4 + coords[0];
+				int y = par5 + coords[1];
+				int z = par6 + coords[2];
+
+				Block blockat = par3World.getBlock(x, y, z);
+				int meta = par3World.getBlockMetadata(x, y, z);
+				if(blockat != ModBlocks.pylon || meta != 2) {
+					if(!par3World.isRemote)
+						player.addChatMessage(new ChatComponentTranslation("botaniamisc.needsCatalysts").setChatStyle(new ChatStyle().setColor(EnumChatFormatting.RED)));
+					return false;
+				}
+			}
+
+			if(!hasProperArena(par3World, par4, par5, par6)) {
+				for(int i = 0; i < 360; i += 8) {
+					float r = 1F;
+					float g = 0F;
+					float b = 1F;
+					float rad = i * (float) Math.PI / 180F;
+					double x = par4 + 0.5 - Math.cos(rad) * RANGE;
+					double y = par5 + 0.5;
+					double z = par6 + 0.5 - Math.sin(rad) * RANGE;
+
+					Botania.proxy.sparkleFX(par3World, x, y, z, r, g, b, 5F, 120);
+				}
+
+				if(!par3World.isRemote)
+					player.addChatMessage(new ChatComponentTranslation("botaniamisc.badArena").setChatStyle(new ChatStyle().setColor(EnumChatFormatting.RED)));
+				return false;
+			}
+
+			par1ItemStack.stackSize--;
+
+			if(par3World.isRemote)
+				return true;
+
+			EntityGaiaIII e = new EntityGaiaIII(par3World);
+			e.setPosition(par4 + 0.5, par5 + 3, par6 + 0.5);
+			e.setInvulTime(SPAWN_TICKS);
+			e.setHealth(1F);
+			e.setSource(par4, par5, par6);
+			e.setMobSpawnTicks(MOB_SPAWN_TICKS);
+			e.setCurrentItemOrArmor(0, new ItemStack(com.meteor.extrabotany.common.item.ModItems.excaliber));
+			e.setCurrentItemOrArmor(1, new ItemStack(com.meteor.extrabotany.common.item.ModItems.hestiachastity));
+			e.setCurrentItemOrArmor(2, new ItemStack(com.meteor.extrabotany.common.item.ModItems.hermestravelclothing));
+			e.setCurrentItemOrArmor(3, new ItemStack(com.meteor.extrabotany.common.item.ModItems.aphroditegrace));
+			e.setCurrentItemOrArmor(4, new ItemStack(com.meteor.extrabotany.common.item.ModItems.vrangerboots));
+			e.setEquipmentDropChance(0, 0);
+			e.setEquipmentDropChance(1, 0);
+			e.setEquipmentDropChance(2, 0);
+			e.setEquipmentDropChance(3, 0);
+			e.setEquipmentDropChance(4, 0);
+			e.setHardMode(hard);
+
+			List<EntityPlayer> players = e.getPlayersAround();
+			int playerCount = 0;
+			for(EntityPlayer p : players)
+				if(isTruePlayer(p))
+					playerCount++;
+
+			e.setPlayerCount(playerCount);
+			e.getAttributeMap().getAttributeInstance(SharedMonsterAttributes.maxHealth).setBaseValue(MAX_HP * playerCount);
+
+			par3World.playSoundAtEntity(e, "mob.enderdragon.growl", 10F, 0.1F);
+			par3World.spawnEntityInWorld(e);
+			return true;
+		}
+
+		return false;
+	}
+
+	private static boolean hasProperArena(World world, int sx, int sy, int sz) {
+		int heightCheck = 3;
+		int heightMin = 2;
+		int range = (int) Math.ceil(RANGE);
+		for(int i = -range; i < range + 1; i++)
+			for(int j = -range; j < range + 1; j++) {
+				if(Math.abs(i) == 4 && Math.abs(j) == 4 || vazkii.botania.common.core.helper.MathHelper.pointDistancePlane(i, j, 0, 0) > RANGE)
+					continue; // Ignore pylons and out of circle
+
+				int x = sx + i;
+				int z = sz + j;
+				int air = 0;
+
+				yCheck: {
+					for(int k = heightCheck + heightMin + 1; k >= -heightCheck; k--) {
+						int y = sy + k;
+						boolean isAir = world.getBlock(x, y, z).getCollisionBoundingBoxFromPool(world, x, y, z) == null;
+						if(isAir)
+							air++;
+						else {
+							if(k > heightCheck)
+								continue;
+							else if(air > 2)
+								break yCheck;
+							air = 0;
+						}
+					}
+
+					return false;
+				}
+			}
+
+		return true;
 	}
 
 	@Override
@@ -348,6 +499,14 @@ public class EntityGaiaIII extends EntityCreature implements IBotaniaBossWithSha
 		}
 	}
 
+	@Override
+	public void setDead() {
+		ChunkCoordinates source = getSource();
+		Botania.proxy.playRecordClientSided(worldObj, source.posX, source.posY, source.posZ, null);
+		isPlayingMusic = false;
+		super.setDead();
+	}
+
 	public List<EntityPlayer> getPlayersAround() {
 		ChunkCoordinates source = getSource();
 		float range = 15F;
@@ -400,7 +559,7 @@ public class EntityGaiaIII extends EntityCreature implements IBotaniaBossWithSha
 		int playerCount = getPlayerCount();
 
 		if(worldObj.isRemote && !isPlayingMusic && !isDead && !players.isEmpty()) {
-			Botania.proxy.playRecordClientSided(worldObj, source.posX, source.posY, source.posZ, (ItemRecord) (hard ? ModItems.recordGaia2 : ModItems.recordGaia1));
+			Botania.proxy.playRecordClientSided(worldObj, source.posX, source.posY, source.posZ, (ItemRecord) com.meteor.extrabotany.common.item.ModItems.recordA);
 			isPlayingMusic = true;
 		}
 
@@ -420,9 +579,69 @@ public class EntityGaiaIII extends EntityCreature implements IBotaniaBossWithSha
 			Botania.proxy.wispFX(worldObj, x, y, z, r, g, b, 0.5F, (float) (Math.random() - 0.5F) * m, (float) (Math.random() - 0.5F) * mv, (float) (Math.random() - 0.5F) * m);
 		}
 
+		if(players.isEmpty() && !worldObj.playerEntities.isEmpty())
+			setDead();
+		else {
+			for(EntityPlayer player : players) {
+				if(player.inventory.armorInventory[0] != null || player.inventory.armorInventory[1] != null || player.inventory.armorInventory[2] != null || player.inventory.armorInventory[3] != null)
+					anyWithArmor = true;
+
+				List<PotionEffect> remove = new ArrayList();
+				Collection<PotionEffect> active = player.getActivePotionEffects();
+				for(PotionEffect effect : active)
+					if(effect.getDuration() < 200 && effect.getIsAmbient() && !ReflectionHelper.<Boolean, Potion>getPrivateValue(Potion.class, Potion.potionTypes[effect.getPotionID()], LibObfuscation.IS_BAD_EFFECT))
+						remove.add(effect);
+
+				active.removeAll(remove);
+
+				player.capabilities.isFlying = player.capabilities.isFlying && player.capabilities.isCreativeMode;
+
+				if(vazkii.botania.common.core.helper.MathHelper.pointDistanceSpace(player.posX, player.posY, player.posZ, source.posX + 0.5, source.posY + 0.5, source.posZ + 0.5) >= range) {
+					Vector3 sourceVector = new Vector3(source.posX + 0.5, source.posY + 0.5, source.posZ + 0.5);
+					Vector3 playerVector = Vector3.fromEntityCenter(player);
+					Vector3 motion = sourceVector.copy().sub(playerVector).copy().normalize();
+
+					player.motionX = motion.x;
+					player.motionY = 0.2;
+					player.motionZ = motion.z;
+				}
+			}
+		}
+
+		if(isDead)
+			return;
+
 		int invul = getInvulTime();
 		int mobTicks = getMobSpawnTicks();
 		boolean spawnMissiles = hard && ticksExisted % 15 < 4;
+
+		if(invul > 10) {
+			Vector3 pos = Vector3.fromEntityCenter(this).subtract(new Vector3(0, 0.2, 0));
+			for(int i = 0; i < PYLON_LOCATIONS.length; i++) {
+				int[] arr = PYLON_LOCATIONS[i];
+				int x = arr[0];
+				int y = arr[1];
+				int z = arr[2];
+
+				Vector3 pylonPos = new Vector3(source.posX + x, source.posY + y, source.posZ + z);
+				double worldTime = ticksExisted;
+				worldTime /= 5;
+
+				float rad = 0.75F + (float) Math.random() * 0.05F;
+				double xp = pylonPos.x + 0.5 + Math.cos(worldTime) * rad;
+				double zp = pylonPos.z + 0.5 + Math.sin(worldTime) * rad;
+
+				Vector3 partPos = new Vector3(xp, pylonPos.y, zp);
+				Vector3 mot = pos.copy().sub(partPos).multiply(0.04);
+
+				float r = 0.7F + (float) Math.random() * 0.3F;
+				float g = (float) Math.random() * 0.3F;
+				float b = 0.7F + (float) Math.random() * 0.3F;
+
+				Botania.proxy.wispFX(worldObj, partPos.x, partPos.y, partPos.z, r, g, b, 0.25F + (float) Math.random() * 0.1F, -0.075F - (float) Math.random() * 0.015F);
+				Botania.proxy.wispFX(worldObj, partPos.x, partPos.y, partPos.z, r, g, b, 0.4F, (float) mot.x, (float) mot.y, (float) mot.z);
+			}
+		}
 
 		if(invul > 0 && mobTicks == MOB_SPAWN_TICKS) {
 			if(invul < SPAWN_TICKS)  {
@@ -507,7 +726,7 @@ public class EntityGaiaIII extends EntityCreature implements IBotaniaBossWithSha
 						int tries = 0;
 						while(!teleportRandomly() && tries < 50)
 							tries++;
-						if(tries >= 50)
+						if(tries >= 100)
 							teleportTo(source.posX + 0.5, source.posY + 1.6, source.posZ + 0.5);
 
 						if(spawnLandmines) {
@@ -718,5 +937,30 @@ public class EntityGaiaIII extends EntityCreature implements IBotaniaBossWithSha
 		};
 
 		return background ? null : shaderCallback;
+	}
+
+	public static class BeaconComponent extends MultiblockComponent {
+
+		public BeaconComponent(ChunkCoordinates relPos) {
+			super(relPos, Blocks.iron_block, 0);
+		}
+
+		@Override
+		public boolean matches(World world, int x, int y, int z) {
+			return world.getBlock(x, y, z).isBeaconBase(world, x, y, z, x - relPos.posX, y - relPos.posY, z - relPos.posZ);
+		};
+
+	}
+
+	public static class BeaconBeamComponent extends MultiblockComponent {
+
+		public BeaconBeamComponent(ChunkCoordinates relPos) {
+			super(relPos, Blocks.beacon, 0);
+		}
+
+		@Override
+		public boolean matches(World world, int x, int y, int z) {
+			return world.getTileEntity(x, y, z) instanceof TileEntityBeacon;
+		}
 	}
 }

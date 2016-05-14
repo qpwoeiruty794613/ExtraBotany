@@ -1,3 +1,7 @@
+16/5/14<br>
+Add Gaia III.(WIP)<br>
+Add Scissor Blade.<br>
+
 16/5/10<br>
 Mystery Box can be used now.<br>
 Add ChestGenHooks.<br>

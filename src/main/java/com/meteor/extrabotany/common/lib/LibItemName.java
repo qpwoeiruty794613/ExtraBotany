@@ -29,6 +29,9 @@ public class LibItemName {
 	public static final String TELEPORTPEARL = "teleportpearl";
 	public static final String GAIANECKLACEBROKEN = "gaianecklacebroken";
 	
+	public static final String SCISSORBLADERED = "scissorbladered";
+	public static final String SCISSORBLADEPURPLE = "scissorbladepurple";
+	
 	//Relic
 	public static final String EXCALIBER = "excaliber";
 	public static final String EXCALIBERFAKE = "excaliberfake";
