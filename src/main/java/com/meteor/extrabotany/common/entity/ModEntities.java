@@ -24,7 +24,8 @@ public class ModEntities {
 		EntityRegistry.registerModEntity(EntityLycorisradiataGreen.class, LibEntityName.LYCORISGREEN, id++, ExtraBotany.instance, 64, 10, true);
 		EntityRegistry.registerModEntity(EntityLycorisradiataPurple.class, LibEntityName.LYCORISPURPLE, id++, ExtraBotany.instance, 64, 10, true);
 		EntityRegistry.registerModEntity(EntityTeleportPearl.class, LibEntityName.TELEPORTPERAL, id++, ExtraBotany.instance, 64, 10, true);
-		EntityRegistry.registerModEntity(EntityGaiaIII.class, LibEntityName.GAIAIII, id++, ExtraBotany.instance, 64, 3, true);
+		EntityRegistry.registerModEntity(EntityGaiaIII.class, LibEntityName.GAIAIII, id++, ExtraBotany.instance, 256, 3, true);
+		EntityRegistry.registerModEntity(EntityGaiaIIIPhantom.class, LibEntityName.GAIAIIIPHANTOM, id++, ExtraBotany.instance, 256, 3, true);
 		EntityRegistry.registerModEntity(EntityTV.class, LibEntityName.TV, id++, ExtraBotany.instance, 256, 3, true);
 		EntityRegistry.registerModEntity(Entity22.class, LibEntityName.BILIBILI, id++, ExtraBotany.instance, 256, 3, true);
 		

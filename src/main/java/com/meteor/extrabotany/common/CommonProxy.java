@@ -6,7 +6,7 @@ import net.minecraft.world.World;
 import com.meteor.extrabotany.ExtraBotany;
 import com.meteor.extrabotany.common.achievement.ModAchievement;
 import com.meteor.extrabotany.common.block.ModBlocks;
-import com.meteor.extrabotany.common.block.ModMutilBlocks;
+import com.meteor.extrabotany.common.block.ModMultiBlocks;
 import com.meteor.extrabotany.common.command.ModCommands;
 import com.meteor.extrabotany.common.effect.PotionEffectMods;
 import com.meteor.extrabotany.common.enchantment.ModEnchantment;
@@ -36,9 +36,9 @@ public class CommonProxy {
 		ModEntities.init();
 		ModRecipe.init();
 		ModAchievement.init();
-		LexiconModData.init();
-		ModMutilBlocks.init();
+		ModMultiBlocks.init();
 		ModWorldGen.init();
+		LexiconModData.init();
 	}
 	
 	public void init(FMLInitializationEvent event) {

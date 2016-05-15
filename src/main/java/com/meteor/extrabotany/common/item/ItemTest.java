@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.meteor.extrabotany.common.entity.Entity22;
 import com.meteor.extrabotany.common.entity.EntityGaiaIII;
+import com.meteor.extrabotany.common.entity.EntityGaiaIIIPhantom;
 import com.meteor.extrabotany.common.entity.EntityTV;
 
 import net.minecraft.entity.player.EntityPlayer;
@@ -20,6 +21,11 @@ public class ItemTest extends ItemMods{
 	@Override
 	public void addInformation(ItemStack stack, EntityPlayer player, List list, boolean adv) {
 		list.add(StatCollector.translateToLocal("item.test.desc"));
+	}
+	
+	@Override
+	public ItemStack onItemRightClick(ItemStack stack, World world, EntityPlayer player) {
+		return stack;	
 	}
 	
 	@Override

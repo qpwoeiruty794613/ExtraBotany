@@ -153,7 +153,7 @@ public class EntityGaiaIII extends EntityCreature implements IBotaniaBossWithSha
 
 				Block blockat = par3World.getBlock(x, y, z);
 				int meta = par3World.getBlockMetadata(x, y, z);
-				if(blockat != ModBlocks.pylon || meta != 2) {
+				if(blockat != com.meteor.extrabotany.common.block.ModBlocks.pylon || meta != 2) {
 					if(!par3World.isRemote)
 						player.addChatMessage(new ChatComponentTranslation("botaniamisc.needsCatalysts").setChatStyle(new ChatStyle().setColor(EnumChatFormatting.RED)));
 					return false;
@@ -214,7 +214,6 @@ public class EntityGaiaIII extends EntityCreature implements IBotaniaBossWithSha
 			par3World.spawnEntityInWorld(e);
 			return true;
 		}
-
 		return false;
 	}
 
@@ -726,7 +725,7 @@ public class EntityGaiaIII extends EntityCreature implements IBotaniaBossWithSha
 						int tries = 0;
 						while(!teleportRandomly() && tries < 50)
 							tries++;
-						if(tries >= 100)
+						if(tries >= 50)
 							teleportTo(source.posX + 0.5, source.posY + 1.6, source.posZ + 0.5);
 
 						if(spawnLandmines) {
@@ -851,7 +850,11 @@ public class EntityGaiaIII extends EntityCreature implements IBotaniaBossWithSha
 				double d9 = d5 + (posZ - d5) * d6 + (rand.nextDouble() - 0.5D) * width * 2.0D;
 				worldObj.spawnParticle("portal", d7, d8, d9, f, f1, f2);
 			}
-
+			if(!this.worldObj.isRemote){
+				List<EntityGaiaIIIPhantom> livings = this.worldObj.getEntitiesWithinAABB(EntityGaiaIIIPhantom.class, AxisAlignedBB.getBoundingBox(this.posX - RANGE - 12, this.posY - RANGE - 12, this.posZ - RANGE - 12, this.posX + RANGE + 13, this.posY + RANGE + 13, this.posZ + RANGE + 13));
+				if(livings.size() <= 1)
+					EntityGaiaIIIPhantom.spawn(this.worldObj, this.posX, this.posY, this.posZ, this);
+			}
 			worldObj.playSoundEffect(d3, d4, d5, "mob.endermen.portal", 1.0F, 1.0F);
 			playSound("mob.endermen.portal", 1.0F, 1.0F);
 			return true;
@@ -942,7 +945,7 @@ public class EntityGaiaIII extends EntityCreature implements IBotaniaBossWithSha
 	public static class BeaconComponent extends MultiblockComponent {
 
 		public BeaconComponent(ChunkCoordinates relPos) {
-			super(relPos, Blocks.iron_block, 0);
+			super(relPos, com.meteor.extrabotany.common.block.ModBlocks.elvenquartz, 0);
 		}
 
 		@Override

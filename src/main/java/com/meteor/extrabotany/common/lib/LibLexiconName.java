@@ -34,6 +34,8 @@ public class LibLexiconName {
 	public static final String R_TACTICALSHOTGUN = "tacticalshotgun";
 	public static final String R_HERMESTRAVELCLOTHING = "hermestravelclothing";
 	public static final String R_CRONUSPHANTOM = "cronusphantom";
+	
+	public static final String R_GAIAIII = "gaia3";
 	//Bauble
 	public static final String B_COSMETIC = "cosmetic";
 	//Basic

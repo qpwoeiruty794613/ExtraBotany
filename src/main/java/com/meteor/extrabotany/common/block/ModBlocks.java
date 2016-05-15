@@ -59,11 +59,13 @@ public class ModBlocks {
 		specialFlower = new BlockSpecial();
 		//Gaia Quartz
 		gaiaquartz = new BlockMods(Material.iron, LibBlockName.GAIAQUARTZ);
+		((BlockMods)gaiaquartz).setBeaconBase(true);
 		gaiaquartzslab = new BlockGaiaQuartzSlab(false);
 		gaiaquartzslabfull = new BlockGaiaQuartzSlab(true);
 		gaiaquartzstairs = new BlockGaiaQuartzStairs();
 		//Elven Quartz
 		elvenquartz = new BlockMods(Material.iron, LibBlockName.ELVENQUARTZ);
+		((BlockMods)elvenquartz).setBeaconBase(true);
 		elvenquartzslab = new BlockElvenQuartzSlab(false);
 		elvenquartzslabfull = new BlockElvenQuartzSlab(true);
 		elvenquartzstairs = new BlockElvenQuartzStairs();

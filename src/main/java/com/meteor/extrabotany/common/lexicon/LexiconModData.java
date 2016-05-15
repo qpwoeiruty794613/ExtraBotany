@@ -1,5 +1,6 @@
 package com.meteor.extrabotany.common.lexicon;
 
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.StatCollector;
 import vazkii.botania.api.BotaniaAPI;
@@ -10,9 +11,12 @@ import vazkii.botania.common.lexicon.BLexiconEntry;
 import vazkii.botania.common.lexicon.DLexiconEntry;
 import vazkii.botania.common.lexicon.page.PageCraftingRecipe;
 import vazkii.botania.common.lexicon.page.PageManaInfusionRecipe;
+import vazkii.botania.common.lexicon.page.PageMultiblock;
 import vazkii.botania.common.lexicon.page.PagePetalRecipe;
 import vazkii.botania.common.lexicon.page.PageText;
 
+import com.meteor.extrabotany.common.block.ModBlocks;
+import com.meteor.extrabotany.common.block.ModMultiBlocks;
 import com.meteor.extrabotany.common.item.ModItems;
 import com.meteor.extrabotany.common.lib.LibBlockName;
 import com.meteor.extrabotany.common.lib.LibLexiconName;
@@ -55,6 +59,7 @@ public class LexiconModData {
 	public static LexiconEntry phoenixblaster;
 	public static LexiconEntry snowballcannon;
 	public static LexiconEntry tacticalshotgun;
+	public static LexiconEntry gaia3;
 	//Cosmetic
 	public static LexiconEntry cosmetic;
 	//Basic
@@ -236,5 +241,9 @@ public class LexiconModData {
 		vrangerboots = new ELexiconEntry(LibLexiconName.R_VRANGERBOOTS, BotaniaAPI.categoryAlfhomancy);
 		vrangerboots.setIcon(new ItemStack(ModItems.vrangerboots));
 		vrangerboots.setLexiconPages(new PageText("0"));
+		
+		gaia3 = new ELexiconEntry(LibLexiconName.R_GAIAIII, BotaniaAPI.categoryAlfhomancy);
+		gaia3.setIcon(new ItemStack(Item.getItemFromBlock(ModBlocks.pylon), 1, 2));
+		gaia3.setLexiconPages(new PageText("0"), new PageText("1"), new PageMultiblock("3", ModMultiBlocks.gaia), new PageText("2"));
 	}
 }

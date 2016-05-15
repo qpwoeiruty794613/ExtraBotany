@@ -14,6 +14,7 @@ import com.meteor.extrabotany.client.render.RenderShield;
 import com.meteor.extrabotany.client.render.block.RenderAncientPylon;
 import com.meteor.extrabotany.client.render.entity.Render22;
 import com.meteor.extrabotany.client.render.entity.RenderGaiaIII;
+import com.meteor.extrabotany.client.render.entity.RenderGaiaIIIPhantom;
 import com.meteor.extrabotany.client.render.entity.RenderLycorisradiataGreen;
 import com.meteor.extrabotany.client.render.entity.RenderLycorisradiataPurple;
 import com.meteor.extrabotany.client.render.entity.RenderLycorisradiataRed;
@@ -27,6 +28,7 @@ import com.meteor.extrabotany.common.block.tile.TileAncientPylon;
 import com.meteor.extrabotany.common.block.tile.TileRelicPlate;
 import com.meteor.extrabotany.common.entity.Entity22;
 import com.meteor.extrabotany.common.entity.EntityGaiaIII;
+import com.meteor.extrabotany.common.entity.EntityGaiaIIIPhantom;
 import com.meteor.extrabotany.common.entity.EntityItemUnbreakable;
 import com.meteor.extrabotany.common.entity.EntityLycorisradiataGreen;
 import com.meteor.extrabotany.common.entity.EntityLycorisradiataPurple;
@@ -86,6 +88,7 @@ public class ClientProxy extends CommonProxy{
 		RenderingRegistry.registerEntityRenderingHandler(EntityBulletSilver.class, new RenderSnowball(ModItems.itemtest));
 		RenderingRegistry.registerEntityRenderingHandler(EntityBulletMusket.class, new RenderSnowball(ModItems.itemtest));
 		
+		RenderingRegistry.registerEntityRenderingHandler(EntityGaiaIIIPhantom.class, new RenderGaiaIIIPhantom());
 		RenderingRegistry.registerEntityRenderingHandler(EntityGaiaIII.class, new RenderGaiaIII());
 		RenderingRegistry.registerEntityRenderingHandler(Entity22.class, new Render22());
 		RenderingRegistry.registerEntityRenderingHandler(EntityTV.class, new RenderTV());

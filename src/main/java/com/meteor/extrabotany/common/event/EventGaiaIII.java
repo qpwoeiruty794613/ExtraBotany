@@ -28,6 +28,7 @@ import net.minecraft.util.MovingObjectPosition;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 
 import com.meteor.extrabotany.common.entity.EntityGaiaIII;
+import com.meteor.extrabotany.common.entity.EntityGaiaIIIPhantom;
 import com.meteor.extrabotany.common.entity.EntityItemUnbreakable;
 import com.meteor.extrabotany.common.entity.EntitySpear;
 import com.meteor.extrabotany.common.item.relic.legendary.ItemHestiaChastity;

@@ -8,6 +8,7 @@ public class LibEntityName {
 	public static final String TELEPORTPERAL = "teleportpearl";
 	
 	public static final String GAIAIII = "gaia3";
+	public static final String GAIAIIIPHANTOM = "gaia3phantom";
 	public static final String MAGICLANDMINEII = "magiclandmine2";
 	public static final String TV = "tv";
 	public static final String BILIBILI = "22";
