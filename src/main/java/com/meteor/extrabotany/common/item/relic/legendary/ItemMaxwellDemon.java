@@ -12,9 +12,9 @@ import vazkii.botania.api.mana.ManaItemHandler;
 import vazkii.botania.client.core.helper.IconHelper;
 import vazkii.botania.common.lib.LibObfuscation;
 
-import com.meteor.extrabotany.common.effect.PotionEffectMods;
 import com.meteor.extrabotany.common.item.relic.ItemRelicAdv;
 import com.meteor.extrabotany.common.lib.LibItemName;
+import com.meteor.extrabotany.common.potion.PotionEffectMods;
 
 import cpw.mods.fml.relauncher.ReflectionHelper;
 import cpw.mods.fml.relauncher.Side;

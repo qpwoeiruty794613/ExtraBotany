@@ -1,4 +1,4 @@
-package com.meteor.extrabotany.common.effect;
+package com.meteor.extrabotany.common.potion;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;

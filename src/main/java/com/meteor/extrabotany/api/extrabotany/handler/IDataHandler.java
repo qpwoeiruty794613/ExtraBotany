@@ -1,4 +1,4 @@
-package com.meteor.extrabotany.api;
+package com.meteor.extrabotany.api.extrabotany.handler;
 
 import net.minecraft.item.ItemStack;
 

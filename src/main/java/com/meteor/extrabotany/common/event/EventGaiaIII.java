@@ -25,6 +25,7 @@ import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.MathHelper;
 import net.minecraft.util.MovingObjectPosition;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 
 import com.meteor.extrabotany.common.entity.EntityGaiaIII;
@@ -33,6 +34,7 @@ import com.meteor.extrabotany.common.entity.EntityItemUnbreakable;
 import com.meteor.extrabotany.common.entity.EntitySpear;
 import com.meteor.extrabotany.common.item.relic.legendary.ItemHestiaChastity;
 
+import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 
 public class EventGaiaIII{
@@ -41,7 +43,7 @@ public class EventGaiaIII{
 	private static float rankIII = 0.25F;
 
 	@SubscribeEvent
-	 public void GaiaHurtEvent(LivingHurtEvent event) { 
+	public void GaiaHurtEvent(LivingHurtEvent event) { 
 	        if(!(event.entity instanceof EntityGaiaIII)) {
 	            return;
 	        }

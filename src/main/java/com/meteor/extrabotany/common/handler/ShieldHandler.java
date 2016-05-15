@@ -6,7 +6,7 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.world.World;
 import net.minecraftforge.common.IExtendedEntityProperties;
 
-import com.meteor.extrabotany.api.IShieldHandler;
+import com.meteor.extrabotany.api.extrabotany.handler.IShieldHandler;
 
 public class ShieldHandler implements IShieldHandler, IExtendedEntityProperties{
 

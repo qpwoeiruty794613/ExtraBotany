@@ -3,60 +3,43 @@ package com.meteor.extrabotany.common.recipe;
 import java.util.List;
 
 import net.minecraft.entity.item.EntityItem;
+import net.minecraft.inventory.InventoryCrafting;
 import net.minecraft.item.ItemStack;
-import vazkii.botania.api.item.IRelic;
+import net.minecraft.item.crafting.CraftingManager;
+import net.minecraft.item.crafting.IRecipe;
+import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.world.World;
 
 import com.meteor.extrabotany.common.item.ModItems;
 
-public class ModRelicPlateRecipe {
-	//Astral Force Recipe
-	public static boolean craft1(List<EntityItem> items) {
-		if(items.size() != 3)
-			return false;
-
-		ItemStack item1 = null;
-		ItemStack item2 = null;
-		ItemStack item3 = null;
-
-		for(EntityItem item : items) {
-			ItemStack stack = item.getEntityItem();
-			if(stack.stackSize != 1)
-				return false;
-			if(stack == new ItemStack(ModItems.material,1,1))
-				item1 = stack;
-			else if(stack == new ItemStack(ModItems.material,1,7))
-				item2 = stack;
-			else if(stack == new ItemStack(ModItems.material,1,2))
-				item3 = stack;
-			else return false;
-		}
-
-		return item1 != null && item2 != null && item3 != null;
-	}
+public class ModRelicPlateRecipe{
+	public static ItemStack itemA;
+	public static ItemStack itemB;
+	public static ItemStack itemC;
 	
-	//D20 Recipe
-	public static boolean craft2(List<EntityItem> items) {
+	public static ItemStack[] recipeItems;
+	
+	public static boolean Recipe(List<EntityItem> items){
 		if(items.size() != 3)
 			return false;
-
-		ItemStack item1 = null;
-		ItemStack item2 = null;
-		ItemStack item3 = null;
+		
+		itemA = null;
+		itemB = null;
+		itemC = null;
 		
 		for(EntityItem item : items) {
 			ItemStack stack = item.getEntityItem();
 			if(stack.stackSize != 1)
 				return false;
-			if(stack.getItem() instanceof IRelic)
-				item1 = stack;
-			else if(stack == new ItemStack(ModItems.material,1,10))
-				item2 = stack;
-			else if(stack == new ItemStack(ModItems.material,1,2))
-				item3 = stack;
+			if(stack == recipeItems[0])
+				itemA = stack;
+			else if(stack == recipeItems[1])
+				itemB = stack;
+			else if(stack == recipeItems[2])
+				itemC = stack;
 			else return false;
-		}
-
-		return item1 != null && item2 != null && item3 != null;
+		}	
+		return itemA != null && itemB != null && itemC != null;
 	}
-
+	
 }

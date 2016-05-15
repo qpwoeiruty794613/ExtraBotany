@@ -1,4 +1,4 @@
-package com.meteor.extrabotany.common.effect;
+package com.meteor.extrabotany.common.potion;
 
 import java.util.Collection;
 

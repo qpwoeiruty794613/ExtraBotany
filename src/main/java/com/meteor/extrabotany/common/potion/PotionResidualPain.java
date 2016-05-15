@@ -1,4 +1,4 @@
-package com.meteor.extrabotany.common.effect;
+package com.meteor.extrabotany.common.potion;
 
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;

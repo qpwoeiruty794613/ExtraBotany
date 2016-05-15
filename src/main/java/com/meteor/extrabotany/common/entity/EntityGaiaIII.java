@@ -49,6 +49,8 @@ import org.lwjgl.opengl.ARBShaderObjects;
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL12;
 
+import com.meteor.extrabotany.common.lib.LibItemName;
+
 import vazkii.botania.api.boss.IBotaniaBossWithShader;
 import vazkii.botania.api.internal.ShaderCallback;
 import vazkii.botania.api.lexicon.multiblock.Multiblock;
@@ -71,7 +73,7 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 public class EntityGaiaIII extends EntityCreature implements IBotaniaBossWithShader {
-
+	private static com.meteor.extrabotany.common.item.ModItems instance = new com.meteor.extrabotany.common.item.ModItems();
 	public static final int SPAWN_TICKS = 160;
 	private static final float RANGE = 12F;
 	private static final float MAX_HP = 1200F;
@@ -119,7 +121,7 @@ public class EntityGaiaIII extends EntityCreature implements IBotaniaBossWithSha
 		tasks.addTask(0, new EntityAISwimming(this));
 		tasks.addTask(1, new EntityAIWatchClosest(this, EntityPlayer.class, Float.MAX_VALUE));
 		isImmuneToFire = true;
-		experienceValue = 825;
+		experienceValue = 1625;
 	}
 
 	public static MultiblockSet makeMultiblockSet() {
@@ -189,11 +191,22 @@ public class EntityGaiaIII extends EntityCreature implements IBotaniaBossWithSha
 			e.setHealth(1F);
 			e.setSource(par4, par5, par6);
 			e.setMobSpawnTicks(MOB_SPAWN_TICKS);
-			e.setCurrentItemOrArmor(0, new ItemStack(com.meteor.extrabotany.common.item.ModItems.excaliber));
-			e.setCurrentItemOrArmor(1, new ItemStack(com.meteor.extrabotany.common.item.ModItems.hestiachastity));
-			e.setCurrentItemOrArmor(2, new ItemStack(com.meteor.extrabotany.common.item.ModItems.hermestravelclothing));
-			e.setCurrentItemOrArmor(3, new ItemStack(com.meteor.extrabotany.common.item.ModItems.aphroditegrace));
-			e.setCurrentItemOrArmor(4, new ItemStack(com.meteor.extrabotany.common.item.ModItems.vrangerboots));
+			String b = LibItemName.BINDING;
+			ItemStack s1 = new ItemStack(instance.excaliber);
+			ItemRelic.bindToUsernameS(b, s1);
+			ItemStack s2 = new ItemStack(instance.hestiachastity);
+			ItemRelic.bindToUsernameS(b, s2);
+			ItemStack s3 = new ItemStack(instance.hermestravelclothing);
+			ItemRelic.bindToUsernameS(b, s3);
+			ItemStack s4 = new ItemStack(instance.aphroditegrace);
+			ItemRelic.bindToUsernameS(b, s4);
+			ItemStack s5 = new ItemStack(instance.vrangerboots);
+			ItemRelic.bindToUsernameS(b, s5);
+			e.setCurrentItemOrArmor(0, s1);
+			e.setCurrentItemOrArmor(1, s2);
+			e.setCurrentItemOrArmor(2, s3);
+			e.setCurrentItemOrArmor(3, s4);
+			e.setCurrentItemOrArmor(4, s5);
 			e.setEquipmentDropChance(0, 0);
 			e.setEquipmentDropChance(1, 0);
 			e.setEquipmentDropChance(2, 0);
@@ -453,7 +466,6 @@ public class EntityGaiaIII extends EntityCreature implements IBotaniaBossWithSha
 			for(int pl = 0; pl < playersWhoAttacked.size(); pl++) {
 				boolean hard = isHardMode();
 				entityDropItem(new ItemStack(ModItems.manaResource, pl == 0 ? hard ? 16 : 8 : hard ? 10 : 6, 5), 1F);
-				boolean droppedRecord = false;
 
 				if(hard) {
 					entityDropItem(new ItemStack(ModItems.ancientWill, 1, rand.nextInt(6)), 1F);
@@ -461,7 +473,7 @@ public class EntityGaiaIII extends EntityCreature implements IBotaniaBossWithSha
 						ItemStack dice = new ItemStack(ModItems.dice);
 						ItemRelic.bindToUsernameS(playersWhoAttacked.get(pl), dice);
 						entityDropItem(dice, 1F);
-					}
+				}
 
 					if(Math.random() < 0.25)
 						entityDropItem(new ItemStack(ModItems.overgrowthSeed, rand.nextInt(3) + 1), 1F);
@@ -470,30 +482,37 @@ public class EntityGaiaIII extends EntityCreature implements IBotaniaBossWithSha
 						entityDropItem(new ItemStack(ModItems.blackLotus, voidLotus ? 1 : rand.nextInt(3) + 1, voidLotus ? 1 : 0), 1F);
 					}
 					if(Math.random() < 0.9)
-						entityDropItem(new ItemStack(ModItems.manaResource, 16 + rand.nextInt(12)), 1F);
+						entityDropItem(new ItemStack(ModItems.manaResource, 20 + rand.nextInt(12)), 1F);
 					if(Math.random() < 0.7)
-						entityDropItem(new ItemStack(ModItems.manaResource, 8 + rand.nextInt(6), 1), 1F);
+						entityDropItem(new ItemStack(ModItems.manaResource, 12 + rand.nextInt(6), 1), 1F);
 					if(Math.random() < 0.5)
-						entityDropItem(new ItemStack(ModItems.manaResource, 4 + rand.nextInt(3), 2), 1F);
-
-					int runes = rand.nextInt(6) + 1;
-					for(int i = 0; i < runes; i++)
-						if(Math.random() < 0.3)
-							entityDropItem(new ItemStack(ModItems.rune, 2 + rand.nextInt(3), rand.nextInt(16)), 1F);
-
+						entityDropItem(new ItemStack(ModItems.manaResource, 6 + rand.nextInt(3), 2), 1F);
+					if(Math.random() < 0.45)
+						entityDropItem(new ItemStack(instance.boxs), 1F);
+						entityDropItem(new ItemStack(instance.material, rand.nextInt(3), 4), 1F);
+						entityDropItem(new ItemStack(instance.material, rand.nextInt(3), 5), 1F);
+						entityDropItem(new ItemStack(instance.material, rand.nextInt(3), 6), 1F);
+				    if(Math.random() < 0.25)
+				    	entityDropItem(new ItemStack(instance.material, rand.nextInt(3), 12), 1F);
+				    	entityDropItem(new ItemStack(instance.material, rand.nextInt(3), 11), 1F);
 					if(Math.random() < 0.2)
 						entityDropItem(new ItemStack(ModItems.pinkinator), 1F);
+						entityDropItem(new ItemStack(hard ? ModItems.recordGaia2 : ModItems.recordGaia1), 1F);
+					if(Math.random() < 0.12)
+						entityDropItem(new ItemStack(instance.material, 1 + rand.nextInt(2)), 1F);
+						entityDropItem(new ItemStack(instance.material, 1 + rand.nextInt(2), 3), 1F);
 					if(Math.random() < 0.3) {
 						int i = Item.getIdFromItem(Items.record_13);
 						int j = Item.getIdFromItem(Items.record_wait);
 						int k = i + rand.nextInt(j - i + 1);
 						entityDropItem(new ItemStack(Item.getItemById(k)), 1F);
-						droppedRecord = true;
 					}
-				}
 
-				if(!droppedRecord && Math.random() < 0.2)
-					entityDropItem(new ItemStack(hard ? ModItems.recordGaia2 : ModItems.recordGaia1), 1F);
+					int runes = rand.nextInt(6) + 1;
+					for(int i = 0; i < runes; i++)
+						if(Math.random() < 0.3)
+							entityDropItem(new ItemStack(ModItems.rune, 3 + rand.nextInt(3), rand.nextInt(16)), 1F);
+				}
 			}
 		}
 	}

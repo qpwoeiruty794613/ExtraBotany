@@ -2,6 +2,11 @@ package com.meteor.extrabotany.common.entity;
 
 import java.util.List;
 
+import vazkii.botania.common.item.relic.ItemRelic;
+
+import com.meteor.extrabotany.common.item.ModItems;
+import com.meteor.extrabotany.common.lib.LibItemName;
+
 import net.minecraft.block.Block;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
@@ -61,11 +66,22 @@ public class EntityGaiaIIIPhantom extends EntityMob{
 		e.setPosition(posX + 0.5, posY + 3, posZ + 0.5);
 		e.setInvulTime(SPAWN_TICKS);
 		e.setHealth(1F);
-		e.setCurrentItemOrArmor(0, new ItemStack(com.meteor.extrabotany.common.item.ModItems.excaliber));
-		e.setCurrentItemOrArmor(1, new ItemStack(com.meteor.extrabotany.common.item.ModItems.hestiachastity));
-		e.setCurrentItemOrArmor(2, new ItemStack(com.meteor.extrabotany.common.item.ModItems.hermestravelclothing));
-		e.setCurrentItemOrArmor(3, new ItemStack(com.meteor.extrabotany.common.item.ModItems.aphroditegrace));
-		e.setCurrentItemOrArmor(4, new ItemStack(com.meteor.extrabotany.common.item.ModItems.vrangerboots));
+		String b = LibItemName.BINDING;
+		ItemStack s1 = new ItemStack(ModItems.excaliber);
+		ItemRelic.bindToUsernameS(b, s1);
+		ItemStack s2 = new ItemStack(ModItems.hestiachastity);
+		ItemRelic.bindToUsernameS(b, s2);
+		ItemStack s3 = new ItemStack(ModItems.hermestravelclothing);
+		ItemRelic.bindToUsernameS(b, s3);
+		ItemStack s4 = new ItemStack(ModItems.aphroditegrace);
+		ItemRelic.bindToUsernameS(b, s4);
+		ItemStack s5 = new ItemStack(ModItems.vrangerboots);
+		ItemRelic.bindToUsernameS(b, s5);
+		e.setCurrentItemOrArmor(0, s1);
+		e.setCurrentItemOrArmor(1, s2);
+		e.setCurrentItemOrArmor(2, s3);
+		e.setCurrentItemOrArmor(3, s4);
+		e.setCurrentItemOrArmor(4, s5);
 		e.setEquipmentDropChance(0, 0);
 		e.setEquipmentDropChance(1, 0);
 		e.setEquipmentDropChance(2, 0);

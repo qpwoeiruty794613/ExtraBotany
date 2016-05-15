@@ -60,6 +60,8 @@ public class LibItemName {
 	public static final String RECORD_B = "recordB";
 	public static final String RECORD_C = "recordC";
 	
+	public static final String BINDING = "It's Vazkii's Not Yours";
+	
 	public static final String[] MATERIAL_NAMES = new String[] {
 		"prismaticshard",//0
 		"blankcard",//1

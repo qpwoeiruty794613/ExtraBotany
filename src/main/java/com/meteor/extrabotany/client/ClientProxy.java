@@ -43,6 +43,7 @@ import com.meteor.extrabotany.common.entity.bullet.EntityBulletMeteor;
 import com.meteor.extrabotany.common.entity.bullet.EntityBulletMusket;
 import com.meteor.extrabotany.common.entity.bullet.EntityBulletSilver;
 import com.meteor.extrabotany.common.entity.bullet.EntityBulletSnowball;
+import com.meteor.extrabotany.common.integration.Intergration;
 import com.meteor.extrabotany.common.integration.hugetools.ItemRender;
 import com.meteor.extrabotany.common.item.ModItems;
 
@@ -57,18 +58,20 @@ public class ClientProxy extends CommonProxy{
 	@Override
 	public void preInit(FMLPreInitializationEvent event) {
 		super.preInit(event);
+		Intergration.preInitClient(event);
 	}
 	
 	@Override
 	public void init(FMLInitializationEvent event) {
 		super.init(event);
 		initRenderers();
-		ItemRender.initHugeItemRender();
+		Intergration.initClient(event);
 	}
 	
 	@Override
 	public void postInit(FMLPostInitializationEvent event) {
 		super.postInit(event);
+		Intergration.postInitClient(event);
 	}
 	
 	private void initRenderers() {
@@ -98,17 +101,6 @@ public class ClientProxy extends CommonProxy{
 		RenderingRegistry.registerEntityRenderingHandler(EntityLycorisradiataGreen.class, new RenderLycorisradiataGreen());
 		RenderingRegistry.registerEntityRenderingHandler(EntityLycorisradiataPurple.class, new RenderLycorisradiataPurple());
 		RenderingRegistry.registerEntityRenderingHandler(EntityTeleportPearl.class, new RenderTeleportPearl(1.0F));
-	}
-	
-    @Override
-	public void playRecordClientSided(World world, int x, int y, int z, ItemRecord record) {
-		Minecraft mc = Minecraft.getMinecraft();
-		if(record == null)
-			world.playAuxSFXAtEntity(null, 1005, x, y, z, 0);
-		else {
-			world.playAuxSFXAtEntity(null, 1005, x, y, z, Item.getIdFromItem(record));
-			mc.ingameGUI.setRecordPlayingMessage(record.getRecordNameLocal());
-		}
 	}
 
 }
