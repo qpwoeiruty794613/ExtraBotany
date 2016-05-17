@@ -59,11 +59,13 @@ public class ModBlocks {
 		specialFlower = new BlockSpecial();
 		//Gaia Quartz
 		gaiaquartz = new BlockMods(Material.iron, LibBlockName.GAIAQUARTZ);
+		((BlockMods)gaiaquartz).setBeaconBase(true);
 		gaiaquartzslab = new BlockGaiaQuartzSlab(false);
 		gaiaquartzslabfull = new BlockGaiaQuartzSlab(true);
 		gaiaquartzstairs = new BlockGaiaQuartzStairs();
 		//Elven Quartz
 		elvenquartz = new BlockMods(Material.iron, LibBlockName.ELVENQUARTZ);
+		((BlockMods)elvenquartz).setBeaconBase(true);
 		elvenquartzslab = new BlockElvenQuartzSlab(false);
 		elvenquartzslabfull = new BlockElvenQuartzSlab(true);
 		elvenquartzstairs = new BlockElvenQuartzStairs();
@@ -94,10 +96,7 @@ public class ModBlocks {
 		registerSubTile(LibBlockName.CANDY_FLOWER, SubTileCandyflower.class);
 		registerSubTile(LibBlockName.SUNSHINE_LILY, SubTileSunshinelily.class);
 		registerSubTile(LibBlockName.MOONLIGHT_LILY, SubTileMoonlightlily.class);
-		if(ExtraBotany.arsmagicaLoaded = true){
-		registerSubTile(LibBlockName.BLUE_ENCHANTRESS, SubTileBlueenchantress.class);
-		}		
-		
+		registerSubTile(LibBlockName.BLUE_ENCHANTRESS, SubTileBlueenchantress.class);	
 	}
 	
 	private static void registerTile(Class<? extends TileEntity> clazz, String key) {

@@ -18,6 +18,7 @@ import vazkii.botania.api.item.IRelic;
 import vazkii.botania.common.core.helper.ItemNBTHelper;
 import vazkii.botania.common.item.ModItems;
 
+import com.meteor.extrabotany.api.ExtraBotanyAPI;
 import com.meteor.extrabotany.common.entity.EntityItemUnbreakable;
 import com.meteor.extrabotany.common.item.weapon.ItemGun;
 
@@ -25,6 +26,14 @@ public class ItemGunRelic extends ItemGun implements IRelic{
 	
 	private static final String TAG_SOULBIND = "soulbind";
 	Achievement achievement;
+	
+	
+	ItemStack s1 = new ItemStack(ExtraBotanyAPI.ModItems.bullet,1,0);//explo
+	ItemStack s2 = new ItemStack(ExtraBotanyAPI.ModItems.bullet,1,2);//high
+	ItemStack s3 = new ItemStack(ExtraBotanyAPI.ModItems.bullet,1,3);//meteor
+	ItemStack s4 = new ItemStack(ExtraBotanyAPI.ModItems.bullet,1,1);//gold
+	ItemStack s5 = new ItemStack(ExtraBotanyAPI.ModItems.bullet,1,5);//silver
+	ItemStack s6 = new ItemStack(ExtraBotanyAPI.ModItems.bullet,1,4);//musket
 	
 	public ItemGunRelic(String name) {
 		super(name);

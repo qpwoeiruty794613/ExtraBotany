@@ -19,9 +19,9 @@ public class EntityLycorisradiataRed extends EntityLycorisradiata{
 
             for (int k = 0; k < j; ++k)
             {
-                this.dropItem(new ItemStack(ModItems.material, 1, 4).getItem(), this.rand.nextInt(3));
-                this.dropItem(new ItemStack(ModItems.material, 1, 5).getItem(), this.rand.nextInt(2));
-                this.dropItem(new ItemStack(ModItems.material, 1, 6).getItem(), this.rand.nextInt(2));
+            	this.entityDropItem(new ItemStack(ModItems.material, 1, 4), this.rand.nextInt(3));
+                this.entityDropItem(new ItemStack(ModItems.material, 1, 5), this.rand.nextInt(2));
+                this.entityDropItem(new ItemStack(ModItems.material, 1, 6), this.rand.nextInt(2));
             }
         }
     }

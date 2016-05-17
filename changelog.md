@@ -1,3 +1,14 @@
+16/5/15<br>
+Gaia III almost done.<br>
+
+16/5/14<br>
+Add Gaia III.(WIP)<br>
+Add Scissor Blade.<br>
+
+16/5/10<br>
+Mystery Box can be used now.<br>
+Add ChestGenHooks.<br>
+
 16/5/9<br>
 Add Ancient Pylons.(WIP)<br>
 

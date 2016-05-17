@@ -27,7 +27,6 @@ public class ItemGunPhoenixBlaster extends ItemGunRelic{
 			}
 	}
 	
-	@Override
 	public void summonBullet(EntityPlayer player){
 		EntityBulletExploding s1 = new EntityBulletExploding(player.worldObj, player);
 		EntityBulletGold s2 = new EntityBulletGold(player.worldObj, player);
@@ -35,31 +34,31 @@ public class ItemGunPhoenixBlaster extends ItemGunRelic{
 		EntityBulletMeteor s4 = new EntityBulletMeteor(player.worldObj, player);
 		EntityBulletMusket s5 = new EntityBulletMusket(player.worldObj, player);
 		EntityBulletSilver s6 = new EntityBulletSilver(player.worldObj, player);
+		s1.setFire(100);
+		s2.setFire(100);
+		s3.setFire(100);
+		s4.setFire(100);
+		s5.setFire(100);
+		s6.setFire(100);
 		if(!player.worldObj.isRemote){
-			switch(selectBullet(player)){
+			switch(selectBullet(player).getItemDamage()){
+			case 0:
+				player.worldObj.spawnEntityInWorld(s1);
+				break;
 			case 1:
-				s5.setFire(100);
-				player.worldObj.spawnEntityInWorld(s5);
-				break;
-			case 2:
-				s6.setFire(100);
-				player.worldObj.spawnEntityInWorld(s6);
-				break;
-			case 3:
-				s2.setFire(100);
-				player.worldObj.spawnEntityInWorld(s2);
-				break;
-			case 4:
-				s4.setFire(100);
 				player.worldObj.spawnEntityInWorld(s4);
 				break;
-			case 5:
-				s3.setFire(100);
+			case 2:
+				player.worldObj.spawnEntityInWorld(s2);
+				break;
+			case 3:
 				player.worldObj.spawnEntityInWorld(s3);
 				break;
-			case 6:
-				s1.setFire(100);
-				player.worldObj.spawnEntityInWorld(s1);
+			case 4:
+				player.worldObj.spawnEntityInWorld(s6);
+				break;
+			case 5:
+				player.worldObj.spawnEntityInWorld(s5);
 				break;
 			}	
 		}

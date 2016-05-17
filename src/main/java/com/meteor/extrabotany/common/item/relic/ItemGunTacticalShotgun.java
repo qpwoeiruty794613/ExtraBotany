@@ -27,28 +27,16 @@ public class ItemGunTacticalShotgun extends ItemGunRelic{
 	}
 	
 	@Override
-	public int selectBullet(EntityPlayer player){
-		int a = 0;
-		int b = 0;
-		int c = 0;
-		int d = 0;
-		int e = 0;
-		int f = 0;
-		if(player.inventory.hasItemStack(new ItemStack(ModItems.bullet,1,2)))
-			c = 5;//high
-		else c = 0;
-		if(player.inventory.hasItemStack(new ItemStack(ModItems.bullet,1,3)))
-			d = 4;//meteor
-		else d = 0;
-		if(player.inventory.hasItemStack(new ItemStack(ModItems.bullet,1,4)))
-			e = 1;
-		else e = 0;
-		if(player.inventory.hasItemStack(new ItemStack(ModItems.bullet,1,5)))
-			f = 2;	
-		else f = 0;
-		int bullet;
-		bullet = Math.max(Math.max(Math.max(a, b), c), Math.max(Math.max(d, e), f));
-		return bullet;
+	public ItemStack selectBullet(EntityPlayer player){
+		if(player.inventory.hasItemStack(s2))
+			return s2;
+		else if(player.inventory.hasItemStack(s3))
+			return s3;
+		else if(player.inventory.hasItemStack(s5))
+			return s5;
+		else if(player.inventory.hasItemStack(s6))
+			return s6;
+		else return s6;
 	}
 	
 	@Override
@@ -78,8 +66,8 @@ public class ItemGunTacticalShotgun extends ItemGunRelic{
 		EntityBulletSilver s65 = new EntityBulletSilver(player.worldObj, player);
 		EntityBulletSilver s66 = new EntityBulletSilver(player.worldObj, player);
 		if(!player.worldObj.isRemote){
-			switch(selectBullet(player)){
-			case 1:
+			switch(selectBullet(player).getItemDamage()){
+			case 4:
 				s5.setThrowableHeading(s5.motionX, s5.motionY, s5.motionZ, 1.0F, 1.0F);
 				player.worldObj.spawnEntityInWorld(s5);
 				s52.setThrowableHeading(s52.motionX + player.worldObj.rand.nextInt(5)/100, s52.motionY + player.worldObj.rand.nextInt(5)/100, s52.motionZ, 1.0F, 1.0F);
@@ -93,7 +81,7 @@ public class ItemGunTacticalShotgun extends ItemGunRelic{
 				s56.setThrowableHeading(s56.motionX + player.worldObj.rand.nextInt(5)/100, s56.motionY + player.worldObj.rand.nextInt(5)/100, s56.motionZ, 1.0F, 1.0F);
 				player.worldObj.spawnEntityInWorld(s56);
 				break;
-			case 2:
+			case 5:
 				s6.setThrowableHeading(s6.motionX, s6.motionY, s6.motionZ, 1.0F, 1.0F);
 				player.worldObj.spawnEntityInWorld(s6);
 				s62.setThrowableHeading(s62.motionX + player.worldObj.rand.nextInt(5)/100, s62.motionY + player.worldObj.rand.nextInt(5)/100, s62.motionZ, 1.0F, 1.0F);
@@ -107,7 +95,7 @@ public class ItemGunTacticalShotgun extends ItemGunRelic{
 				s66.setThrowableHeading(s66.motionX + player.worldObj.rand.nextInt(5)/100, s66.motionY + player.worldObj.rand.nextInt(5)/100, s66.motionZ, 1.0F, 1.0F);
 				player.worldObj.spawnEntityInWorld(s66);
 				break;
-			case 4:
+			case 3:
 				s4.setThrowableHeading(s4.motionX, s4.motionY, s4.motionZ, 1.0F, 1.0F);
 				player.worldObj.spawnEntityInWorld(s4);
 				s42.setThrowableHeading(s42.motionX + player.worldObj.rand.nextInt(5)/100, s42.motionY + player.worldObj.rand.nextInt(5)/100, s42.motionZ, 1.0F, 1.0F);
@@ -121,7 +109,7 @@ public class ItemGunTacticalShotgun extends ItemGunRelic{
 				s46.setThrowableHeading(s46.motionX + player.worldObj.rand.nextInt(5)/100, s46.motionY + player.worldObj.rand.nextInt(5)/100, s46.motionZ, 1.0F, 1.0F);
 				player.worldObj.spawnEntityInWorld(s46);
 				break;
-			case 5:
+			case 2:
 				s3.setThrowableHeading(s3.motionX, s3.motionY, s3.motionZ, 1.0F, 1.0F);
 				player.worldObj.spawnEntityInWorld(s3);
 				s32.setThrowableHeading(s32.motionX + player.worldObj.rand.nextInt(5)/100, s32.motionY + player.worldObj.rand.nextInt(5)/100, s32.motionZ, 1.0F, 1.0F);

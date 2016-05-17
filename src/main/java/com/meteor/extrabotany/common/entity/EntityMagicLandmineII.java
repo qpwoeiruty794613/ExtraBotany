@@ -12,7 +12,7 @@ import net.minecraft.util.DamageSource;
 import net.minecraft.world.World;
 import vazkii.botania.common.Botania;
 
-import com.meteor.extrabotany.common.effect.PotionEffectMods;
+import com.meteor.extrabotany.common.potion.PotionEffectMods;
 
 public class EntityMagicLandmineII extends Entity {
 
@@ -51,11 +51,10 @@ public class EntityMagicLandmineII extends Entity {
 			if(!worldObj.isRemote) {
 				List<EntityPlayer> players = worldObj.getEntitiesWithinAABB(EntityPlayer.class, AxisAlignedBB.getBoundingBox(posX - range, posY - range, posZ - range, posX + range, posY + range, posZ + range));
 				for(EntityPlayer player : players) {
-					player.attackEntityFrom(summoner == null ? DamageSource.generic : DamageSource.causeMobDamage(summoner), 10);
+					player.attackEntityFrom(summoner == null ? DamageSource.generic : DamageSource.causeMobDamage(summoner), 6);
 					player.addPotionEffect(new PotionEffect(Potion.blindness.id, 20, 0));
 					player.addPotionEffect(new PotionEffect(Potion.weakness.id, 20, 0));
-					player.addPotionEffect(new PotionEffect(PotionEffectMods.residualpain.getId(), 60, 0));
-					PotionEffect wither = new PotionEffect(Potion.wither.id, 50, 3);
+					PotionEffect wither = new PotionEffect(Potion.wither.id, 50, 1);
 					wither.getCurativeItems().clear();
 					player.addPotionEffect(wither);
 				}

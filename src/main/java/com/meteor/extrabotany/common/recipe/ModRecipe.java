@@ -1,18 +1,23 @@
 package com.meteor.extrabotany.common.recipe;
 
+import org.apache.logging.log4j.Level;
+
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.CraftingManager;
 import net.minecraft.item.crafting.IRecipe;
+import net.minecraft.util.StatCollector;
 import net.minecraftforge.oredict.ShapedOreRecipe;
 import vazkii.botania.api.BotaniaAPI;
 import vazkii.botania.common.lib.LibOreDict;
 
 import com.meteor.extrabotany.common.block.ModBlocks;
+import com.meteor.extrabotany.common.handler.CraftingHandler;
 import com.meteor.extrabotany.common.item.ModItems;
 import com.meteor.extrabotany.common.lib.LibOreDictName;
 
+import cpw.mods.fml.common.FMLLog;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 public class ModRecipe {
@@ -32,6 +37,7 @@ public class ModRecipe {
 	public static IRecipe olympus;
 	
 	public static void init(){
+		remove();
 		ModManaInfusionRecipe.init();
 		ModPetalRecipe.init();
 		int recipeListSize = CraftingManager.getInstance().getRecipeList().size();
@@ -99,7 +105,7 @@ public class ModRecipe {
 		addOreDictRecipe(new ItemStack(ModBlocks.gaiaquartzslab, 6),
 				"AAA",
 				'A', new ItemStack(ModBlocks.gaiaquartz));
-		addOreDictRecipe(new ItemStack(ModItems.material, 8, 7),
+		addOreDictRecipe(new ItemStack(ModItems.material, 8, 8),
 				"AAA","ABA","AAA",
 				'A', new ItemStack(vazkii.botania.common.item.ModItems.quartz,1,1),
 				'B', LibOreDict.ELEMENTIUM);
@@ -139,7 +145,20 @@ public class ModRecipe {
 		baubleDog3 = BotaniaAPI.getLatestAddedRecipe();
 	}
 	
+	private static void remove(){	
+		FMLLog.log(Level.INFO, "Removed %d crafting recipes in ALL", CraftingHandler.countCrafting);
+		FMLLog.log(Level.INFO, "Removed %d furnace recipes in ALL", CraftingHandler.countFurnace);
+	}
+	
 	private static void addOreDictRecipe(ItemStack output, Object... recipe) {
 		CraftingManager.getInstance().getRecipeList().add(new ShapedOreRecipe(output, recipe));
+	}
+	
+	private static void removeCrafting(ItemStack s){
+		CraftingHandler.RemoveCrafting(s.getItem());
+	}
+	
+	private static void removeFurnace(ItemStack s){
+		CraftingHandler.RemoveFurnace(s);
 	}
 }

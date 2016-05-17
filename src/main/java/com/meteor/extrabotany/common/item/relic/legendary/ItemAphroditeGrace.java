@@ -11,7 +11,7 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import vazkii.botania.common.item.relic.ItemRelic;
 
-import com.meteor.extrabotany.api.IShieldHandler;
+import com.meteor.extrabotany.api.extrabotany.handler.IShieldHandler;
 import com.meteor.extrabotany.common.handler.ConfigHandler;
 import com.meteor.extrabotany.common.handler.ShieldHandler;
 import com.meteor.extrabotany.common.lib.LibItemName;

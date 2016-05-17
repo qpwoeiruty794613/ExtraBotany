@@ -12,6 +12,7 @@ import vazkii.botania.api.subtile.SubTileFunctional;
 
 import com.meteor.extrabotany.common.entity.EntityItemUnbreakable;
 import com.meteor.extrabotany.common.item.ModItems;
+import com.meteor.extrabotany.common.lib.LibItemName;
 
 public class SubTileArtifaconia extends SubTileFunctional{
 	
@@ -37,8 +38,9 @@ public class SubTileArtifaconia extends SubTileFunctional{
 									}
 									item.setDead();
 								}else if(redstoneSignal == 0 && r.getSoulbindUsername(item.getEntityItem()) != player.getDisplayName()){
-									r.bindToUsername(player.getDisplayName(), item.getEntityItem());
-									mana-=getMaxMana();
+									if(((IRelic)item).getSoulbindUsername(item.getEntityItem()) != LibItemName.BINDING)
+										r.bindToUsername(player.getDisplayName(), item.getEntityItem());
+										mana-=getMaxMana();
 							}
 					}
 				}

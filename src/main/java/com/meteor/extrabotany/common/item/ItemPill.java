@@ -6,8 +6,8 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.world.World;
 
-import com.meteor.extrabotany.common.effect.PotionEffectMods;
 import com.meteor.extrabotany.common.lib.LibReference;
+import com.meteor.extrabotany.common.potion.PotionEffectMods;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 

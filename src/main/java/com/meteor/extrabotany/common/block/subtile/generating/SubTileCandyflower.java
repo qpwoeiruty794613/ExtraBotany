@@ -12,7 +12,9 @@ import vazkii.botania.api.subtile.RadiusDescriptor;
 import vazkii.botania.api.subtile.SubTileGenerating;
 import vazkii.botania.common.block.ModBlocks;
 
+import com.meteor.extrabotany.common.entity.EntityItemUnbreakable;
 import com.meteor.extrabotany.common.handler.ConfigHandler;
+import com.meteor.extrabotany.common.item.ModItems;
 import com.meteor.extrabotany.common.lexicon.LexiconModData;
 import com.meteor.extrabotany.common.lib.LibData;
 
@@ -47,6 +49,11 @@ public class SubTileCandyflower extends SubTileGenerating{
 
 								if(!supertile.getWorldObj().isRemote) {
 									stack.stackSize--;
+									int i = supertile.getWorldObj().rand.nextInt(1000);
+									if(i == 300){
+										EntityItem bitem = new EntityItemUnbreakable(supertile.getWorldObj(), supertile.xCoord, supertile.yCoord, supertile.zCoord, new ItemStack(ModItems.boxs));
+										supertile.getWorldObj().spawnEntityInWorld(bitem);
+									}
 									supertile.getWorldObj().playSoundEffect(supertile.xCoord, supertile.yCoord, supertile.zCoord, "botania:endoflame", 0.2F, 1F);
 
 									if(stack.stackSize == 0)

@@ -29,6 +29,9 @@ public class LibItemName {
 	public static final String TELEPORTPEARL = "teleportpearl";
 	public static final String GAIANECKLACEBROKEN = "gaianecklacebroken";
 	
+	public static final String SCISSORBLADERED = "scissorbladered";
+	public static final String SCISSORBLADEPURPLE = "scissorbladepurple";
+	
 	//Relic
 	public static final String EXCALIBER = "excaliber";
 	public static final String EXCALIBERFAKE = "excaliberfake";
@@ -56,6 +59,8 @@ public class LibItemName {
 	public static final String RECORD_A = "recordA";
 	public static final String RECORD_B = "recordB";
 	public static final String RECORD_C = "recordC";
+	
+	public static final String BINDING = "It's Vazkii's Not Yours";
 	
 	public static final String[] MATERIAL_NAMES = new String[] {
 		"prismaticshard",//0

@@ -9,7 +9,7 @@ import org.lwjgl.opengl.GL11;
 
 import vazkii.botania.api.item.IBaubleRender.RenderType;
 
-import com.meteor.extrabotany.api.IShieldHandler;
+import com.meteor.extrabotany.api.extrabotany.handler.IShieldHandler;
 import com.meteor.extrabotany.client.render.RenderShield;
 import com.meteor.extrabotany.common.handler.ConfigHandler;
 import com.meteor.extrabotany.common.handler.ShieldHandler;

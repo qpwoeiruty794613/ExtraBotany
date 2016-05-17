@@ -58,7 +58,7 @@ public class TileRelicPlate extends TileMod implements ISparkAttachable {
 
 		if(hasValidPlatform()) {
 			List<EntityItem> items = getItems();
-			if(ModRelicPlateRecipe.craft1(items) || ModRelicPlateRecipe.craft2(items)) {
+			if(ModRelicPlateRecipe.Recipe(items)) {
 				removeMana = false;
 				ISparkEntity spark = getAttachedSpark();
 				if(spark != null) {
@@ -79,8 +79,7 @@ public class TileRelicPlate extends TileMod implements ISparkAttachable {
 					for(EntityItem otherItem : items)
 						if(otherItem != item)
 							otherItem.setDead();
-						else if(ModRelicPlateRecipe.craft1(items))item.setEntityItemStack(new ItemStack(com.meteor.extrabotany.common.item.ModItems.material,1,3));
-						else if(ModRelicPlateRecipe.craft2(items))item.setEntityItemStack(new ItemStack(com.meteor.extrabotany.common.item.ModItems.dice20));
+						else if(ModRelicPlateRecipe.Recipe(items))item.setEntityItemStack(new ItemStack(com.meteor.extrabotany.common.item.ModItems.material,1,3));
 					item.worldObj.playSoundAtEntity(item, "botania:terrasteelCraft", 1F, 1F);
 					mana = 0;
 					worldObj.func_147453_f(xCoord, yCoord, zCoord, worldObj.getBlock(xCoord, yCoord, zCoord));
@@ -128,21 +127,17 @@ public class TileRelicPlate extends TileMod implements ISparkAttachable {
 	@Override
 	public boolean canRecieveManaFromBursts() {
 		List<EntityItem> items = getItems();
-		if(ModRelicPlateRecipe.craft1(items) == true)
-			return ModRelicPlateRecipe.craft1(getItems());
-		else if(ModRelicPlateRecipe.craft2(items) == true)
-			return ModRelicPlateRecipe.craft2(getItems());
-		else return ModRelicPlateRecipe.craft1(getItems());
+		if(ModRelicPlateRecipe.Recipe(items) == true)
+			return ModRelicPlateRecipe.Recipe(getItems());
+		else return ModRelicPlateRecipe.Recipe(getItems());
 	}
 	
 	@Override
 	public boolean areIncomingTranfersDone() {
 		List<EntityItem> items = getItems();
-		if(ModRelicPlateRecipe.craft1(items) == true)
-			return !ModRelicPlateRecipe.craft1(getItems());
-		else if(ModRelicPlateRecipe.craft2(items) == true)
-			return !ModRelicPlateRecipe.craft2(getItems());
-		else return !ModRelicPlateRecipe.craft1(getItems());
+		if(ModRelicPlateRecipe.Recipe(items) == true)
+			return !ModRelicPlateRecipe.Recipe(getItems());
+		else return !ModRelicPlateRecipe.Recipe(getItems());
 	}
 
 	List<EntityItem> getItems() {

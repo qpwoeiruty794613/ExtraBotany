@@ -18,7 +18,7 @@ import org.lwjgl.opengl.GL11;
 import vazkii.botania.client.core.helper.RenderHelper;
 import vazkii.botania.client.core.helper.ShaderHelper;
 
-import com.meteor.extrabotany.api.IShieldHandler;
+import com.meteor.extrabotany.api.extrabotany.handler.IShieldHandler;
 import com.meteor.extrabotany.common.handler.ConfigHandler;
 import com.meteor.extrabotany.common.handler.ShieldHandler;
 import com.meteor.extrabotany.common.lib.LibReference;
