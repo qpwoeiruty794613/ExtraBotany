@@ -19,8 +19,8 @@ Botania Addon WIP
     * OmniViolet(Done)
   * Basics(60% Finshed)
  * Entities:
-  * Boss(0% Finished):
-    * Gaia III(50%)<br>
+  * Boss(Done):
+    * Gaia III(Done)<br>
    
 ###Changelog
 [Click Here](https://github.com/ExtraMeteorP/ExtraBotany/blob/master/changelog.md) 

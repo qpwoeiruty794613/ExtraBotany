@@ -5,9 +5,11 @@ import java.util.List;
 import vazkii.botania.common.item.relic.ItemRelic;
 
 import com.meteor.extrabotany.common.entity.Entity22;
-import com.meteor.extrabotany.common.entity.EntityGaiaIII;
-import com.meteor.extrabotany.common.entity.EntityGaiaIIIPhantom;
 import com.meteor.extrabotany.common.entity.EntityTV;
+import com.meteor.extrabotany.common.entity.gaia.EntityGaiaIII;
+import com.meteor.extrabotany.common.entity.gaia.EntityGaiaIIIPhantom;
+import com.meteor.extrabotany.common.entity.gaia.EntityMagicCycloneAqua;
+import com.meteor.extrabotany.common.entity.gaia.EntityMagicCycloneIgnis;
 
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.EntityLivingBase;
@@ -52,6 +54,9 @@ public class ItemTest extends ItemMods{
 	
 	@Override
 	public ItemStack onItemRightClick(ItemStack stack, World world, EntityPlayer player) {
+		if(!world.isRemote){
+			EntityMagicCycloneAqua.spawn(world, player.posX, player.posY, player.posZ, 1.0F, 1.0F);
+		}
 		return stack;	
 	}
 	

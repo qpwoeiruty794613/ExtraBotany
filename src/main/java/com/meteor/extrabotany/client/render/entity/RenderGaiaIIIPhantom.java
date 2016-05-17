@@ -12,8 +12,8 @@ import vazkii.botania.api.internal.ShaderCallback;
 import vazkii.botania.client.core.handler.BossBarHandler;
 import vazkii.botania.client.core.helper.ShaderHelper;
 
-import com.meteor.extrabotany.common.entity.EntityGaiaIII;
-import com.meteor.extrabotany.common.entity.EntityGaiaIIIPhantom;
+import com.meteor.extrabotany.common.entity.gaia.EntityGaiaIII;
+import com.meteor.extrabotany.common.entity.gaia.EntityGaiaIIIPhantom;
 
 public class RenderGaiaIIIPhantom extends RenderBiped {
 

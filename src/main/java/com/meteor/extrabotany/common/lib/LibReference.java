@@ -33,9 +33,12 @@ public class LibReference {
 	public static final ResourceLocation POTION_FASTPARTICLESORTING = new ResourceLocation("extrabotany","textures/icons/fastparticlesorting.png");
 	public static final ResourceLocation POTION_RESIDUALPAIN = new ResourceLocation("extrabotany","textures/icons/residualpain.png");
 	public static final ResourceLocation POTION_CURE = new ResourceLocation("extrabotany","textures/icons/cure.png");
+	public static final ResourceLocation POTION_DURANCE = new ResourceLocation("extrabotany","textures/icons/durance.png");
 	public static final ResourceLocation MODEL_POOLGAIA = new ResourceLocation("extrabotany","textures/models/poolgaia.png");
 	public static final ResourceLocation BAR_SHIELD = new ResourceLocation("extrabotany","textures/gui/shieldHud.png");
+	public static final ResourceLocation BAR_BOSS = new ResourceLocation("extrabotany","textures/gui/bossBar.png");
 	public static final ResourceLocation SHIELD = new ResourceLocation("extrabotany","textures/icons/shield.png");
+	public static final ResourceLocation DURANCE = new ResourceLocation("extrabotany","textures/icons/durance.png");
 	public static final ResourceLocation ATHENA = new ResourceLocation("extrabotany","textures/icons/athena.png");
 	public static final ResourceLocation EXTRA = new ResourceLocation("extrabotany","textures/icons/extra.png");
 }

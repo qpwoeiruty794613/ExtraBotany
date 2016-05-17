@@ -28,10 +28,10 @@ import net.minecraft.util.MovingObjectPosition;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 
-import com.meteor.extrabotany.common.entity.EntityGaiaIII;
-import com.meteor.extrabotany.common.entity.EntityGaiaIIIPhantom;
 import com.meteor.extrabotany.common.entity.EntityItemUnbreakable;
 import com.meteor.extrabotany.common.entity.EntitySpear;
+import com.meteor.extrabotany.common.entity.gaia.EntityGaiaIII;
+import com.meteor.extrabotany.common.entity.gaia.EntityGaiaIIIPhantom;
 import com.meteor.extrabotany.common.item.relic.legendary.ItemHestiaChastity;
 
 import cpw.mods.fml.common.FMLCommonHandler;
@@ -69,6 +69,10 @@ public class EventGaiaIII{
 	        if(event.ammount >= gaia.getMaxHealth() * 0.02){
 	        	event.ammount = (float) (gaia.getMaxHealth() * 0.02);
 	        }
+	        if(gaia.getHealth() <= gaia.getMaxHealth()*rankII){
+	        	if(gaia.worldObj.rand.nextInt(3) == 2)
+	        		event.setCanceled(true);
+		    }
 	}
 	
 	@SubscribeEvent

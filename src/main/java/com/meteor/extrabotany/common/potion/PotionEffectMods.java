@@ -8,6 +8,7 @@ import com.meteor.extrabotany.common.lib.LibReference;
 
 import net.minecraft.client.renderer.Tessellator;
 import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.ResourceLocation;
@@ -20,6 +21,7 @@ public class PotionEffectMods extends Potion{
 	public static PotionFastParticleSorting fastparticlesorting;
 	public static PotionResidualPain residualpain;
 	public static PotionCure cure;
+	public static PotionDurance durance;
 	
 	public static void init() {
 			try {
@@ -44,7 +46,7 @@ public class PotionEffectMods extends Potion{
 			fastparticlesorting = new PotionFastParticleSorting(LibPotionEffectName.FASTPARTICLESORTING,LibReference.POTION_FASTPARTICLESORTING);
 			cure = new PotionCure(LibPotionEffectName.CURE, LibReference.POTION_CURE);
 			residualpain = new PotionResidualPain(LibPotionEffectName.RESIDUALPAIN, LibReference.POTION_RESIDUALPAIN);
-			
+			durance = (PotionDurance) new PotionDurance(LibPotionEffectName.DURANCE, LibReference.POTION_DURANCE).func_111184_a(SharedMonsterAttributes.movementSpeed, "7107DE5E-7CE8-4030-940E-514C1F160890", -1.0D, 2);
 	}
 	
 	public PotionEffectMods(String name, Boolean isbadEffect, ResourceLocation icon) {

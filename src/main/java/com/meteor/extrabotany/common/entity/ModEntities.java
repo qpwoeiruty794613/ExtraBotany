@@ -13,6 +13,12 @@ import com.meteor.extrabotany.common.entity.bullet.EntityBulletMeteor;
 import com.meteor.extrabotany.common.entity.bullet.EntityBulletMusket;
 import com.meteor.extrabotany.common.entity.bullet.EntityBulletSilver;
 import com.meteor.extrabotany.common.entity.bullet.EntityBulletSnowball;
+import com.meteor.extrabotany.common.entity.gaia.EntityGaiaIII;
+import com.meteor.extrabotany.common.entity.gaia.EntityGaiaIIIPhantom;
+import com.meteor.extrabotany.common.entity.gaia.EntityMagicCycloneAqua;
+import com.meteor.extrabotany.common.entity.gaia.EntityMagicCycloneIgnis;
+import com.meteor.extrabotany.common.entity.gaia.EntityMagicLandmineII;
+import com.meteor.extrabotany.common.entity.gaia.EntityMagicMissileII;
 import com.meteor.extrabotany.common.lib.LibEntityName;
 
 import cpw.mods.fml.common.registry.EntityRegistry;
@@ -40,7 +46,10 @@ public class ModEntities {
 		EntityRegistry.registerModEntity(EntityBulletSnowball.class, LibEntityName.BULLETSNOWBALL, id++, ExtraBotany.instance, 256, 3, true);
 		
 		EntityRegistry.registerModEntity(EntitySpear.class, LibEntityName.SPEAR, id++, ExtraBotany.instance, 256, 3, true);
+		EntityRegistry.registerModEntity(EntityMagicCycloneAqua.class, LibEntityName.MAGICCYCLONEAQUA, id++, ExtraBotany.instance, 256, 3, true);
+		EntityRegistry.registerModEntity(EntityMagicCycloneIgnis.class, LibEntityName.MAGICCYCLONEIGNIS, id++, ExtraBotany.instance, 256, 3, true);
 		EntityRegistry.registerModEntity(EntityMagicLandmineII.class, LibEntityName.MAGICLANDMINEII, id++, ExtraBotany.instance, 128, 40, false);
+		EntityRegistry.registerModEntity(EntityMagicMissileII.class, LibEntityName.MAGICMISSILEII, id++, ExtraBotany.instance, 128, 40, false);
 		EntityRegistry.addSpawn(EntityLycorisradiataRed.class, 30, 1, 3, EnumCreatureType.monster, BiomeGenBase.forest);
 		EntityRegistry.addSpawn(EntityLycorisradiataGreen.class, 30, 1, 3, EnumCreatureType.monster, BiomeGenBase.plains);
 		EntityRegistry.addSpawn(EntityLycorisradiataPurple.class, 30, 1, 3, EnumCreatureType.monster, BiomeGenBase.desert);
