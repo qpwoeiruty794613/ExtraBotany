@@ -2,25 +2,18 @@ package com.meteor.extrabotany.common.item;
 
 import java.util.List;
 
-import vazkii.botania.common.item.relic.ItemRelic;
-
-import com.meteor.extrabotany.common.entity.Entity22;
-import com.meteor.extrabotany.common.entity.EntityTV;
-import com.meteor.extrabotany.common.entity.gaia.EntityGaiaIII;
-import com.meteor.extrabotany.common.entity.gaia.EntityGaiaIIIPhantom;
-import com.meteor.extrabotany.common.entity.gaia.EntityMagicCycloneAqua;
-import com.meteor.extrabotany.common.entity.gaia.EntityMagicCycloneIgnis;
-
-import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.monster.EntityMob;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
-import net.minecraft.potion.Potion;
-import net.minecraft.potion.PotionEffect;
+import net.minecraft.util.DamageSource;
 import net.minecraft.util.StatCollector;
 import net.minecraft.world.World;
+
+import com.meteor.extrabotany.common.entity.gaia.EntityGaiaIII;
+import com.meteor.extrabotany.common.entity.gaia.EntityMagicCycloneAqua;
+import com.meteor.extrabotany.common.entity.gaia.EntityMagicCycloneChaos;
 
 public class ItemTest extends ItemMods{
 
@@ -49,13 +42,14 @@ public class ItemTest extends ItemMods{
 			((EntityMob)target).setCurrentItemOrArmor(0, null);
 			((EntityMob)target).setAttackTarget(player);
 		}
+		target.attackEntityFrom(DamageSource.magic, 999F);
         return true;
     }
 	
 	@Override
 	public ItemStack onItemRightClick(ItemStack stack, World world, EntityPlayer player) {
 		if(!world.isRemote){
-			EntityMagicCycloneAqua.spawn(world, player.posX, player.posY, player.posZ, 1.0F, 1.0F);
+			EntityMagicCycloneChaos.spawn(world, player.posX, player.posY, player.posZ, 1.0F, 1.0F);
 		}
 		return stack;	
 	}

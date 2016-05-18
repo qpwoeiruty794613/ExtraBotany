@@ -54,7 +54,7 @@ public class EntityMagicCycloneIgnis extends Entity{
 		motionY = 0;
 		motionZ = 0;
 		super.onUpdate();
-		if(this.ticksExisted >= 240)
+		if(this.ticksExisted >= 440)
 			this.setDead();
 		
 		float range = 1.5F;

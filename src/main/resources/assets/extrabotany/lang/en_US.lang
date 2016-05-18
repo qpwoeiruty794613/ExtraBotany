@@ -65,12 +65,12 @@ item.resonancefragment.name=Resonance Fragment
 item.key.name=Key
 
 # -RECORD
-item.botania:recordA.name=U.N.OWEN's record
+item.botania:recordA.name=Cirno's scret record
 item.record.botania:A.desc=いけないボーダーライン
 item.botania:recordB.name=Mystery record
 item.record.botania:B.desc=崩壊世界の歌姫
-item.botania:recordC.name=Cirno's scret record
-item.record.botania:C.desc=チルノのパーフェクトさんすう教室
+item.botania:recordC.name=U.N.OWEN's record
+item.record.botania:C.desc=U.N.オーエンは彼女なのか
 
 # -SPAWNCARDS
 item.ExtraBotany.SpawnCardLycorisdiataRed.name=Cards of Red Lycorisdiata

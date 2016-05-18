@@ -24,6 +24,20 @@ public class ModAchievement {
 	public static Achievement Relic_vpowerbattleaxe;
 	public static Achievement Relic_vrangerboots;
 	
+	public static Achievement Relic_cronusphantom;
+	public static Achievement Relic_hermestravelclothing;
+	public static Achievement Relic_phoenixblaster;
+	public static Achievement Relic_snowballcannon;
+	public static Achievement Relic_tacticalshotgun;
+	public static Achievement Relic_olympusguard;
+	public static Achievement Relic_cthulhueye;
+	
+	//Gaia
+	public static Achievement Gaia_gaia3Kill;
+	public static Achievement Gaia_gaia3NoArmor;
+	public static Achievement Gaia_gaia3DarkKill;
+	public static Achievement Gaia_gaia3DarkNoArmor;
+	
 	public static void init(){
 		if(ConfigHandler.relicsEnabled) {
 			Relic_aphroditegrace = new AchievementMod(LibAchievementName.RELIC_APHRODITEGRACE, -9, 12, ModItems.aphroditegrace, null);

@@ -30,4 +30,5 @@ public class EntityHandler {
         target.attackedAtYaw = (float)(Math.atan2(d0, d1) * 180.0D / Math.PI) - target.rotationYaw;
         target.knockBack(attacker, knockback, d1, d0);
 	}
+	
 }

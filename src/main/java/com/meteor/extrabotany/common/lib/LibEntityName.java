@@ -9,7 +9,9 @@ public class LibEntityName {
 	
 	public static final String MAGICCYCLONEIGNIS = "magiccycloneignis";
 	public static final String MAGICCYCLONEAQUA = "magiccycloneaqua";
+	public static final String MAGICCYCLONECHAOS = "magiccyclonechaos";
 	public static final String GAIAIII = "gaia3";
+	public static final String GAIAIIIDARK = "gaia3dark";
 	public static final String GAIAIIIPHANTOM = "gaia3phantom";
 	public static final String MAGICLANDMINEII = "magiclandmine2";
 	public static final String MAGICMISSILEII = "magicmissile2";

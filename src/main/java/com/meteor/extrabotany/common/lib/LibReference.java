@@ -36,6 +36,7 @@ public class LibReference {
 	public static final ResourceLocation POTION_DURANCE = new ResourceLocation("extrabotany","textures/icons/durance.png");
 	public static final ResourceLocation MODEL_POOLGAIA = new ResourceLocation("extrabotany","textures/models/poolgaia.png");
 	public static final ResourceLocation BAR_SHIELD = new ResourceLocation("extrabotany","textures/gui/shieldHud.png");
+	public static final ResourceLocation BAR_BOSSB = new ResourceLocation("extrabotany","textures/gui/bossBarB.png");
 	public static final ResourceLocation BAR_BOSS = new ResourceLocation("extrabotany","textures/gui/bossBar.png");
 	public static final ResourceLocation SHIELD = new ResourceLocation("extrabotany","textures/icons/shield.png");
 	public static final ResourceLocation DURANCE = new ResourceLocation("extrabotany","textures/icons/durance.png");
