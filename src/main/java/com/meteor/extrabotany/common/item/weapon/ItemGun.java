@@ -32,33 +32,58 @@ public class ItemGun extends ItemMods implements IGun{
 		return 72000;
 	}
 	
-	ItemStack s1 = new ItemStack(ModItems.bullet,1,0);//explo
-	ItemStack s2 = new ItemStack(ModItems.bullet,1,2);//high
-	ItemStack s3 = new ItemStack(ModItems.bullet,1,3);//meteor
-	ItemStack s4 = new ItemStack(ModItems.bullet,1,1);//gold
-	ItemStack s5 = new ItemStack(ModItems.bullet,1,5);//silver
-	ItemStack s6 = new ItemStack(ModItems.bullet,1,4);//musket
-	
-	@Override
-	public ItemStack selectBullet(EntityPlayer player){
-		if(player.inventory.hasItemStack(s1))
-			return s1;
-		else if(player.inventory.hasItemStack(s2))
-			return s2;
-		else if(player.inventory.hasItemStack(s3))
-			return s3;
-		else if(player.inventory.hasItemStack(s4))
-			return s4;
-		else if(player.inventory.hasItemStack(s5))
-			return s5;
-		else if(player.inventory.hasItemStack(s6))
-			return s6;
-		else return s6;
+	public int selectBullet(EntityPlayer player){
+		int a = 0;
+		int b = 0;
+		int c = 0;
+		int d = 0;
+		int e = 0;
+		int f = 0;
+		if(player.inventory.hasItemStack(new ItemStack(ModItems.bullet,1,0)))
+			a = 6;//explo
+		else a = 0;
+		if(player.inventory.hasItemStack(new ItemStack(ModItems.bullet,1,1)))
+			b = 3;//gold
+		else b = 0;
+		if(player.inventory.hasItemStack(new ItemStack(ModItems.bullet,1,2)))
+			c = 5;//high
+		else c = 0;
+		if(player.inventory.hasItemStack(new ItemStack(ModItems.bullet,1,3)))
+			d = 4;//meteor
+		else d = 0;
+		if(player.inventory.hasItemStack(new ItemStack(ModItems.bullet,1,4)))
+			e = 1;
+		else e = 0;
+		if(player.inventory.hasItemStack(new ItemStack(ModItems.bullet,1,5)))
+			f = 2;	
+		else f = 0;
+		int bullet;
+		bullet = Math.max(MathHandler.max(a, b, c), MathHandler.max(d, e, f));
+		return bullet;
 	}
 	
 	public void consumeBullet(EntityPlayer player){
 		if(!player.worldObj.isRemote){
-			player.inventory.consumeInventoryItem(selectBullet(player).getItem());
+		switch(selectBullet(player)){
+		case 1:
+			player.inventory.consumeInventoryItem(new ItemStack(ModItems.bullet, 1, 4).getItem());
+			break;
+		case 2:
+			player.inventory.consumeInventoryItem(new ItemStack(ModItems.bullet, 1, 5).getItem());
+			break;
+		case 3:
+			player.inventory.consumeInventoryItem(new ItemStack(ModItems.bullet, 1, 1).getItem());
+			break;
+		case 4:
+			player.inventory.consumeInventoryItem(new ItemStack(ModItems.bullet, 1, 3).getItem());
+			break;
+		case 5:
+			player.inventory.consumeInventoryItem(new ItemStack(ModItems.bullet, 1, 2).getItem());
+			break;
+		case 6:
+			player.inventory.consumeInventoryItem(new ItemStack(ModItems.bullet, 1, 0).getItem());
+			break;
+			}	
 		}
 	}
 	
@@ -70,24 +95,24 @@ public class ItemGun extends ItemMods implements IGun{
 		EntityBulletMusket s5 = new EntityBulletMusket(player.worldObj, player);
 		EntityBulletSilver s6 = new EntityBulletSilver(player.worldObj, player);
 		if(!player.worldObj.isRemote){
-			switch(selectBullet(player).getItemDamage()){
-			case 0:
-				player.worldObj.spawnEntityInWorld(s1);
-				break;
+			switch(selectBullet(player)){
 			case 1:
-				player.worldObj.spawnEntityInWorld(s4);
+				player.worldObj.spawnEntityInWorld(s5);
 				break;
 			case 2:
-				player.worldObj.spawnEntityInWorld(s2);
-				break;
-			case 3:
-				player.worldObj.spawnEntityInWorld(s3);
-				break;
-			case 4:
 				player.worldObj.spawnEntityInWorld(s6);
 				break;
+			case 3:
+				player.worldObj.spawnEntityInWorld(s2);
+				break;
+			case 4:
+				player.worldObj.spawnEntityInWorld(s4);
+				break;
 			case 5:
-				player.worldObj.spawnEntityInWorld(s5);
+				player.worldObj.spawnEntityInWorld(s3);
+				break;
+			case 6:
+				player.worldObj.spawnEntityInWorld(s1);
 				break;
 			}	
 		}
