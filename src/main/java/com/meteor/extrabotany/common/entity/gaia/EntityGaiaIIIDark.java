@@ -77,7 +77,7 @@ public class EntityGaiaIIIDark extends EntityCreature implements IBotaniaBossWit
 	private static com.meteor.extrabotany.common.item.ModItems instance = new com.meteor.extrabotany.common.item.ModItems();
 	public static final int SPAWN_TICKS = 200;
 	private static final float RANGE = 12F;
-	private static final float MAX_HP = 10F;
+	private static final float MAX_HP = 12F;
 
 	public static final int MOB_SPAWN_START_TICKS = 20;
 	public static final int MOB_SPAWN_END_TICKS = 80;
@@ -304,9 +304,7 @@ public class EntityGaiaIIIDark extends EntityCreature implements IBotaniaBossWit
 				EntityPlayer p = (EntityPlayer) e;
 				crit = p.fallDistance > 0.0F && !p.onGround && !p.isOnLadder() && !p.isInWater() && !p.isPotionActive(Potion.blindness) && p.ridingEntity == null;
 			}
-
-			int cap = crit ? 60 : 40;
-			return super.attackEntityFrom(par1DamageSource, Math.min(cap, dmg) * (isHardMode() ? 0.6F : 1F));
+			return super.attackEntityFrom(par1DamageSource, 1F);
 		}
 		return false;
 	}
@@ -381,7 +379,7 @@ public class EntityGaiaIIIDark extends EntityCreature implements IBotaniaBossWit
 				if(hard) {
 					entityDropItem(new ItemStack(ModItems.ancientWill, 1, rand.nextInt(6)), 1F);
 					if(ConfigHandler.relicsEnabled) {
-						ItemStack dice = new ItemStack(ModItems.dice);
+						ItemStack dice = new ItemStack(instance.dice20);
 						ItemRelic.bindToUsernameS(playersWhoAttacked.get(pl), dice);
 						entityDropItem(dice, 1F);
 				}
@@ -393,11 +391,18 @@ public class EntityGaiaIIIDark extends EntityCreature implements IBotaniaBossWit
 						entityDropItem(new ItemStack(ModItems.blackLotus, voidLotus ? 1 : rand.nextInt(3) + 1, voidLotus ? 1 : 0), 1F);
 					}
 					if(Math.random() < 0.9)
-						entityDropItem(new ItemStack(ModItems.manaResource, 20 + rand.nextInt(12)), 1F);
+						entityDropItem(new ItemStack(ModItems.manaResource, 24 + rand.nextInt(12)), 1F);
+						entityDropItem(new ItemStack(instance.recordC), 1F);
 					if(Math.random() < 0.7)
-						entityDropItem(new ItemStack(ModItems.manaResource, 12 + rand.nextInt(6), 1), 1F);
+						entityDropItem(new ItemStack(ModItems.manaResource, 14 + rand.nextInt(6), 1), 1F);
 					if(Math.random() < 0.5)
-						entityDropItem(new ItemStack(ModItems.manaResource, 6 + rand.nextInt(3), 2), 1F);
+						entityDropItem(new ItemStack(ModItems.manaResource, 8 + rand.nextInt(3), 2), 1F);
+					if(Math.random() < 0.34)
+						entityDropItem(new ItemStack(ModItems.manaResource, 8 + rand.nextInt(5), 7), 1F);
+					if(Math.random() < 0.32)
+						entityDropItem(new ItemStack(ModItems.manaResource, 4 + rand.nextInt(3), 8), 1F);
+					if(Math.random() < 0.28)
+						entityDropItem(new ItemStack(ModItems.manaResource, 2 + rand.nextInt(3), 9), 1F);
 					if(Math.random() < 0.45)
 						entityDropItem(new ItemStack(instance.boxs), 1F);
 						entityDropItem(new ItemStack(instance.material, rand.nextInt(3), 4), 1F);
@@ -408,10 +413,11 @@ public class EntityGaiaIIIDark extends EntityCreature implements IBotaniaBossWit
 				    	entityDropItem(new ItemStack(instance.material, rand.nextInt(3), 11), 1F);
 					if(Math.random() < 0.2)
 						entityDropItem(new ItemStack(ModItems.pinkinator), 1F);
-						entityDropItem(new ItemStack(hard ? ModItems.recordGaia2 : ModItems.recordGaia1), 1F);
+						entityDropItem(new ItemStack(instance.recordA), 1F);
 					if(Math.random() < 0.12)
 						entityDropItem(new ItemStack(instance.material, 1 + rand.nextInt(2)), 1F);
 						entityDropItem(new ItemStack(instance.material, 1 + rand.nextInt(2), 3), 1F);
+						entityDropItem(new ItemStack(instance.recordB), 1F);
 					if(Math.random() < 0.3) {
 						int i = Item.getIdFromItem(Items.record_13);
 						int j = Item.getIdFromItem(Items.record_wait);
@@ -607,6 +613,16 @@ public class EntityGaiaIIIDark extends EntityCreature implements IBotaniaBossWit
 								switch(worldObj.rand.nextInt(2)) {
 								case 0 : {
 									entity = new EntityZombie(worldObj);
+									((EntityZombie) entity).setCurrentItemOrArmor(0, new ItemStack(ModItems.terraSword));
+									((EntityZombie) entity).setCurrentItemOrArmor(1, new ItemStack(ModItems.terrasteelHelm));
+									((EntityZombie) entity).setCurrentItemOrArmor(2, new ItemStack(ModItems.terrasteelChest));
+									((EntityZombie) entity).setCurrentItemOrArmor(3, new ItemStack(ModItems.terrasteelLegs));
+									((EntityZombie) entity).setCurrentItemOrArmor(4, new ItemStack(ModItems.terrasteelBoots));
+									((EntityZombie) entity).setEquipmentDropChance(0, 0);
+									((EntityZombie) entity).setEquipmentDropChance(1, 0);
+									((EntityZombie) entity).setEquipmentDropChance(2, 0);
+									((EntityZombie) entity).setEquipmentDropChance(3, 0);
+									((EntityZombie) entity).setEquipmentDropChance(4, 0);
 									if(worldObj.rand.nextInt(hard ? 3 : 12) == 0)
 										entity = new EntityWitch(worldObj);
 
@@ -615,7 +631,16 @@ public class EntityGaiaIIIDark extends EntityCreature implements IBotaniaBossWit
 								case 1 : {
 									entity = new EntitySkeleton(worldObj);
 									((EntitySkeleton) entity).setCurrentItemOrArmor(0, new ItemStack(Items.bow));
-									if(worldObj.rand.nextInt(8) == 0) {
+									((EntitySkeleton) entity).setCurrentItemOrArmor(1, new ItemStack(ModItems.elementiumHelm));
+									((EntitySkeleton) entity).setCurrentItemOrArmor(2, new ItemStack(ModItems.elementiumChest));
+									((EntitySkeleton) entity).setCurrentItemOrArmor(3, new ItemStack(ModItems.elementiumLegs));
+									((EntitySkeleton) entity).setCurrentItemOrArmor(4, new ItemStack(ModItems.elementiumBoots));
+									((EntitySkeleton) entity).setEquipmentDropChance(0, 0);
+									((EntitySkeleton) entity).setEquipmentDropChance(1, 0);
+									((EntitySkeleton) entity).setEquipmentDropChance(2, 0);
+									((EntitySkeleton) entity).setEquipmentDropChance(3, 0);
+									((EntitySkeleton) entity).setEquipmentDropChance(4, 0);
+									if(worldObj.rand.nextInt(4) == 0) {
 										((EntitySkeleton) entity).setSkeletonType(1);
 										((EntitySkeleton) entity).setCurrentItemOrArmor(0, new ItemStack(hard ? ModItems.elementiumSword : Items.stone_sword));
 									}
@@ -669,7 +694,7 @@ public class EntityGaiaIIIDark extends EntityCreature implements IBotaniaBossWit
 									worldObj.spawnEntityInWorld(pixie);
 								}
 
-						setTPDelay(10);
+						setTPDelay(35);
 						spawnPixies = false;
 					}
 				}

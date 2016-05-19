@@ -35,7 +35,7 @@ public class ItemVPowerBattleaxe extends ItemRelicAdv implements IManaUsingItem{
 	@Override
 	public Multimap getItemAttributeModifiers() {
 		Multimap multimap = HashMultimap.create();
-		multimap.put(SharedMonsterAttributes.attackDamage.getAttributeUnlocalizedName(), new AttributeModifier(field_111210_e, "Weapon modifier", 16, 0));
+		multimap.put(SharedMonsterAttributes.attackDamage.getAttributeUnlocalizedName(), new AttributeModifier(field_111210_e, "Weapon modifier", 18, 0));
 		multimap.put(SharedMonsterAttributes.movementSpeed.getAttributeUnlocalizedName(), new AttributeModifier(field_111210_e, "Weapon modifier", -0.2, 1));
 		return multimap;
 	}

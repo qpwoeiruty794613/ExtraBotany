@@ -67,13 +67,6 @@ public class EventGaiaIII{
 	        	if(event.source == ItemRelic.damageSource())
 	        		event.ammount = 0;
 		    }
-	        if(event.ammount >= gaia.getMaxHealth() * 0.02){
-	        	event.ammount = (float) (gaia.getMaxHealth() * 0.02);
-	        }
-	        if(gaia.getHealth() <= gaia.getMaxHealth()*rankII){
-	        	if(gaia.worldObj.rand.nextInt(3) == 2)
-	        		event.setCanceled(true);
-		    }
 	}
 	
 	@SubscribeEvent

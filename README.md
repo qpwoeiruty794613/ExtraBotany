@@ -11,7 +11,7 @@ Botania Addon WIP
   * Ulitilies(0% Finished)
 	* Resonance House
  * Lexicon(20% Finished)
- * Rebalance(0% Fnished)
+ * Rebalance(5% Fnished)
    
 ###Changelog
 [Click Here](https://github.com/ExtraMeteorP/ExtraBotany/blob/master/changelog.md) 
