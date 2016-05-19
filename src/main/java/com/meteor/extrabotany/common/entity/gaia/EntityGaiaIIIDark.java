@@ -24,7 +24,6 @@ import net.minecraft.entity.monster.EntitySkeleton;
 import net.minecraft.entity.monster.EntityWitch;
 import net.minecraft.entity.monster.EntityZombie;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemRecord;
@@ -32,13 +31,9 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
-import net.minecraft.tileentity.TileEntityBeacon;
 import net.minecraft.util.AxisAlignedBB;
-import net.minecraft.util.ChatComponentTranslation;
-import net.minecraft.util.ChatStyle;
 import net.minecraft.util.ChunkCoordinates;
 import net.minecraft.util.DamageSource;
-import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.MathHelper;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.EnumDifficulty;
@@ -51,12 +46,8 @@ import org.lwjgl.opengl.GL12;
 
 import vazkii.botania.api.boss.IBotaniaBossWithShader;
 import vazkii.botania.api.internal.ShaderCallback;
-import vazkii.botania.api.lexicon.multiblock.Multiblock;
-import vazkii.botania.api.lexicon.multiblock.MultiblockSet;
-import vazkii.botania.api.lexicon.multiblock.component.MultiblockComponent;
 import vazkii.botania.client.core.helper.ShaderHelper;
 import vazkii.botania.common.Botania;
-import vazkii.botania.common.achievement.ModAchievements;
 import vazkii.botania.common.core.handler.ConfigHandler;
 import vazkii.botania.common.core.helper.Vector3;
 import vazkii.botania.common.entity.EntityPixie;
@@ -64,8 +55,7 @@ import vazkii.botania.common.item.ModItems;
 import vazkii.botania.common.item.relic.ItemRelic;
 import vazkii.botania.common.lib.LibObfuscation;
 
-import com.meteor.extrabotany.common.entity.gaia.EntityGaiaIII.BeaconBeamComponent;
-import com.meteor.extrabotany.common.entity.gaia.EntityGaiaIII.BeaconComponent;
+import com.meteor.extrabotany.common.achievement.ModAchievement;
 import com.meteor.extrabotany.common.lib.LibItemName;
 import com.meteor.extrabotany.common.lib.LibReference;
 
@@ -347,9 +337,9 @@ public class EntityGaiaIIIDark extends EntityCreature implements IBotaniaBossWit
 		super.onDeath(p_70645_1_);
 		EntityLivingBase entitylivingbase = func_94060_bK();
 		if(entitylivingbase instanceof EntityPlayer) {
-			((EntityPlayer) entitylivingbase).addStat(ModAchievements.gaiaGuardianKill, 1);
+			((EntityPlayer) entitylivingbase).addStat(ModAchievement.Gaia_gaia3DarkKill, 1);
 			if(!anyWithArmor)
-				((EntityPlayer) entitylivingbase).addStat(ModAchievements.gaiaGuardianNoArmor, 1);
+				((EntityPlayer) entitylivingbase).addStat(ModAchievement.Gaia_gaia3DarkNoArmor, 1);
 		}
 
 		worldObj.playSoundAtEntity(this, "random.explode", 20F, (1F + (worldObj.rand.nextFloat() - worldObj.rand.nextFloat()) * 0.2F) * 0.7F);

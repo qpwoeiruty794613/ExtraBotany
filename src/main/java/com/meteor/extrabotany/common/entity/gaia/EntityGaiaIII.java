@@ -26,7 +26,6 @@ import net.minecraft.entity.monster.EntityZombie;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemRecord;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
@@ -49,26 +48,24 @@ import org.lwjgl.opengl.ARBShaderObjects;
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL12;
 
-import com.meteor.extrabotany.common.lib.LibItemName;
-import com.meteor.extrabotany.common.lib.LibReference;
-
 import vazkii.botania.api.boss.IBotaniaBossWithShader;
 import vazkii.botania.api.internal.ShaderCallback;
 import vazkii.botania.api.lexicon.multiblock.Multiblock;
 import vazkii.botania.api.lexicon.multiblock.MultiblockSet;
 import vazkii.botania.api.lexicon.multiblock.component.MultiblockComponent;
-import vazkii.botania.client.core.handler.BossBarHandler;
 import vazkii.botania.client.core.helper.ShaderHelper;
 import vazkii.botania.common.Botania;
-import vazkii.botania.common.achievement.ModAchievements;
-import vazkii.botania.common.block.ModBlocks;
 import vazkii.botania.common.core.handler.ConfigHandler;
 import vazkii.botania.common.core.helper.Vector3;
-import vazkii.botania.common.entity.EntityMagicMissile;
 import vazkii.botania.common.entity.EntityPixie;
 import vazkii.botania.common.item.ModItems;
 import vazkii.botania.common.item.relic.ItemRelic;
 import vazkii.botania.common.lib.LibObfuscation;
+
+import com.meteor.extrabotany.common.achievement.ModAchievement;
+import com.meteor.extrabotany.common.lib.LibItemName;
+import com.meteor.extrabotany.common.lib.LibReference;
+
 import cpw.mods.fml.relauncher.ReflectionHelper;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -439,9 +436,9 @@ public class EntityGaiaIII extends EntityCreature implements IBotaniaBossWithSha
 		super.onDeath(p_70645_1_);
 		EntityLivingBase entitylivingbase = func_94060_bK();
 		if(entitylivingbase instanceof EntityPlayer) {
-			((EntityPlayer) entitylivingbase).addStat(ModAchievements.gaiaGuardianKill, 1);
+			((EntityPlayer) entitylivingbase).addStat(ModAchievement.Gaia_gaia3Kill, 1);
 			if(!anyWithArmor)
-				((EntityPlayer) entitylivingbase).addStat(ModAchievements.gaiaGuardianNoArmor, 1);
+				((EntityPlayer) entitylivingbase).addStat(ModAchievement.Gaia_gaia3NoArmor, 1);
 		}
 		
 		EntityGaiaIIIDark.spawn(this.worldObj, getSource().posX,getSource().posY,getSource().posZ, true, this);
