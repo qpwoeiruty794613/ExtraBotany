@@ -1,7 +1,11 @@
 # KNOWLEDGE
 category.Botania:extra=Extra Botany
 botania.knowledge.extra=&3Extra&7 Knowledge
+
+# MISC
 botaniamisc.knowledgeUnlock=The Blank Card is unusually shining, the Lexicon which you are holding is injected with a mystery energy.
+botaniamisc.uselessDiceRoll=The dice lands on a %s, it seemed to be transfered to a strange item afterward.
+botaniamisc.openChest=You should get a key before opening the chest.
 
 #ITEMGROUP
 itemGroup.ExtraBotany=ExtraBotany
@@ -98,7 +102,6 @@ item.pill.name=SCP-500
 # -DICE
 item.botania:dice20.name=D20
 item.emptydice.name=Empty Dice
-botaniamisc.uselessDiceRoll=The dice lands on a %s, it seemed to be transfered to a strange item afterward.
 
 # -RELIC
 item.botania:excaliber.name=Excaliber
@@ -123,7 +126,7 @@ item.boomstick.name=Boomstick
 item.flintlock.name=Flintlock
 item.shotgun.name=Shotgun
 item.pistol.name=Pistol
-item.botania:snowballlauncher.name=Snowball Cannon
+item.snowballlauncher.name=Snowball Cannon
 
 # —BULLET
 item.bulletexploding.name=Exploding Bullet
@@ -141,9 +144,9 @@ item.test.desc=ONLY FOR DEVELOPER
 # -BASIC
 # --BLANKCARD
 botania.entry.blankcard=Blank Card
-botania.tagline.blankcard=
-botania.page.blankcard0=
-botania.page.blankcard1=
+botania.tagline.blankcard=No Game No Life
+botania.page.blankcard0=Although nothing is written on it, the &1Blank Card &0 is shining with silver sparks. Perhaps something strange will happen if you pick it up while holding a &1Lexica Botania&0 in your hand.
+botania.page.blankcard1=It's a secret.
 
 # --COSMETIC
 botania.entry.cosmetic=Cosmetic Baubles
@@ -161,14 +164,14 @@ botania.page.prismaticshard0=
 
 # --GOLDSTRING
 botania.entry.goldstring=Golden Infused String
-botania.tagline.goldstring=
+botania.tagline.goldstring=Which is more important, Wealth or Health?
 botania.page.goldstring0=
 botania.page.goldstring1=
 
 # --PETAL
 botania.entry.petal=Lycorisdiata
-botania.tagline.petal=
-botania.page.petal0=
+botania.tagline.petal=HEART BURNING!
+botania.page.petal0=Probably the Lycorisradiata is the most rare flower in minecraft. It will only appear at night and die when the sun rises. There are 3 kinds of Lycorisradiata: red, green and purple. It goes without saying that its petals are very valuable. If you try to discover one, I wish you good luck.
 
 # --QUARTZ
 botania.entry.quartz=Elementium Quartz & Gaia Quartz
@@ -286,22 +289,22 @@ botania.entry.infinitymana=Infinite Mana
 # -RELICS
 # --HESTIACHASTITY
 botania.entry.hestiachastity=Chastity of Hestia
-botania.tagline.hestiachastity=Adamant and Indomitable
+botania.tagline.hestiachastity=
 botania.page.hestiachastity0=
 
 # --MAXWELLDEMON
 botania.entry.maxwelldemon=Maxwell's Demon
-botania.tagline.maxwelldemon=Perpetual Motion Machine!?
+botania.tagline.maxwelldemon=
 botania.page.maxwelldemon0=
 
 # --ATHENABLESS
 botania.entry.athenabless=Athena's Bless
-botania.tagline.athenabless=A Blessing of Wisdom.
+botania.tagline.athenabless=
 botania.page.athenabless0=
 
 # --APHRODITEGRACE
 botania.entry.aphroditegrace=Aphrodite's Grace
-botania.tagline.aphroditegrace=Escape from Agony.
+botania.tagline.aphroditegrace=
 botania.page.aphroditegrace0=
 
 # --DICE20
@@ -326,12 +329,12 @@ botania.page.vpowerbattleaxe0=
 
 # --VRANGERBOOTS
 botania.entry.vrangerboots=Valkyrie Ranger Boots
-botania.tagline.vrangerboots=Faster Moving.
+botania.tagline.vrangerboots=
 botania.page.vrangerboots0=
 
 # --VHANDGUN
 botania.entry.vhandgun=Valkyrie Handguns
-botania.tagline.vhandgun=Shoot with mana.
+botania.tagline.vhandgun=
 botania.page.vhandgun0=
 
 #FLOWER NAMES

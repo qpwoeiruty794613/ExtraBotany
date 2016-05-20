@@ -1,7 +1,11 @@
 # KNOWLEDGE
 category.Botania:extra=额外植物学
 botania.knowledge.extra=&3额外&7的知识
+
+# MISC
 botaniamisc.knowledgeUnlock=白卡闪耀着异样的光芒,你手中的手册被注入了神秘的力量.
+botaniamisc.uselessDiceRoll=骰子停在了%s上,接着变成了奇怪的东西.
+botaniamisc.openChest=在开箱子前你得先拥有一把钥匙.
 
 #ITEMGROUP
 itemGroup.ExtraBotany=额外植物学
@@ -98,7 +102,6 @@ item.pill.name=SCP-500
 # -DICE
 item.botania:dice20.name=D20
 item.emptydice.name=空骰子
-botaniamisc.uselessDiceRoll=骰子停在了%s上,接着变成了奇怪的东西.
 
 # -RELIC
 item.botania:excaliber.name=王者圣剑
@@ -123,7 +126,7 @@ item.boomstick.name=Boomstick
 item.flintlock.name=燧发枪
 item.shotgun.name=猎枪
 item.pistol.name=手枪
-item.botania:snowballlauncher.name=雪球发射器
+item.snowballlauncher.name=雪球发射器
 
 # —BULLET
 item.bulletexploding.name=高爆弹
@@ -141,9 +144,9 @@ item.test.desc=仅作测试
 # -BASIC
 # --BLANKCARD
 botania.entry.blankcard=白卡
-botania.tagline.blankcard=
-botania.page.blankcard0=
-botania.page.blankcard1=
+botania.tagline.blankcard=游戏人生
+botania.page.blankcard0=尽管没有任何东西写在上面, &1白卡&0却闪耀着银色的火花 .也许拿着本&1植物魔法手册&0的 时候捡起&1白卡&0会发生些奇怪 的事情.
+botania.page.blankcard1=这是一个秘密.
 
 # --COSMETIC
 botania.entry.cosmetic=装饰饰品
@@ -161,14 +164,14 @@ botania.page.prismaticshard0=
 
 # --GOLDSTRING
 botania.entry.goldstring=注魔金线
-botania.tagline.goldstring=
+botania.tagline.goldstring=财富或健康,哪个更重要?
 botania.page.goldstring0=
 botania.page.goldstring1=
 
 # --PETAL
 botania.entry.petal=彼岸花
-botania.tagline.petal=
-botania.page.petal0=
+botania.tagline.petal=炽灼的心!
+botania.page.petal0=也许&1彼岸花&0是世界上最稀有 的花,它只会出现在晚上, 并且太阳升起的瞬间就会凋 零,昙花一现的生命.一共 有3种&1彼岸花&0,分别是红色, 绿色和紫色.不言而喻,它 的花瓣非常有价值.如果你 想试着去找到一朵,我只能 祝你好运.
 
 # --QUARTZ
 botania.entry.quartz=源质石英&盖亚石英
@@ -286,22 +289,22 @@ botania.entry.infinitymana=无限魔力
 # -RELICS
 # --HESTIACHASTITY
 botania.entry.hestiachastity=赫斯提亚的贞洁
-botania.tagline.hestiachastity=坚毅不屈.
+botania.tagline.hestiachastity=
 botania.page.hestiachastity0=
 
 # --MAXWELLDEMON
 botania.entry.maxwelldemon=麦克斯韦的妖精
-botania.tagline.maxwelldemon=第一类永动机!?
+botania.tagline.maxwelldemon=
 botania.page.maxwelldemon0=
 
 # --ATHENABLESS
 botania.entry.athenabless=雅典娜的庇佑
-botania.tagline.athenabless=智慧的祝福.
+botania.tagline.athenabless=
 botania.page.athenabless0=
 
 # --APHRODITEGRACE
 botania.entry.aphroditegrace=阿佛洛狄忒的恩宠
-botania.tagline.aphroditegrace=远离苦痛.
+botania.tagline.aphroditegrace=
 botania.page.aphroditegrace0=
 
 # --DICE20
@@ -326,12 +329,12 @@ botania.page.vpowerbattleaxe0=
 
 # --VRANGERBOOTS
 botania.entry.vrangerboots=V制式游侠靴
-botania.tagline.vrangerboots=迅捷如风.
+botania.tagline.vrangerboots=
 botania.page.vrangerboots0=
 
 # --VHANDGUN
 botania.entry.vhandgun=V制式手炮
-botania.tagline.vhandgun=魔力射击.
+botania.tagline.vhandgun=
 botania.page.vhandgun0=
 
 #FLOWER NAMES

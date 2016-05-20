@@ -1,3 +1,6 @@
+16/5/20<br>
+Fix render of guns.<br>
+
 16/5/19<br>
 Add achievements.<br>
 Rebalance Gaia III.<br>

@@ -5,6 +5,9 @@ import java.util.List;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.ChatComponentTranslation;
+import net.minecraft.util.ChatStyle;
+import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.world.World;
 
 import com.meteor.extrabotany.common.item.ItemMods;
@@ -38,6 +41,8 @@ public class ItemBox extends ItemMods{
 					world.playSoundAtEntity(player, "random.bow", 0.5F, 0.4F / (world.rand.nextFloat() * 0.4F + 0.8F));
 					player.inventory.consumeInventoryItem(new ItemStack(ModItems.material,1,12).getItem());
 					return stacks[i].copy();
+		}else{
+			player.addChatMessage(new ChatComponentTranslation("botaniamisc.openChest").setChatStyle(new ChatStyle().setColor(EnumChatFormatting.DARK_GREEN)));
 		}
 
 		return stack;
