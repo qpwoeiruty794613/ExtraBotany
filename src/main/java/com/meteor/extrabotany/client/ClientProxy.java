@@ -61,6 +61,7 @@ public class ClientProxy extends CommonProxy{
 	public void init(FMLInitializationEvent event) {
 		super.init(event);
 		initRenderers();
+		initEntities();
 		Intergration.initClient(event);
 	}
 	
@@ -69,24 +70,14 @@ public class ClientProxy extends CommonProxy{
 		super.postInit(event);
 		Intergration.postInitClient(event);
 	}
-	
-	private void initRenderers() {
-		MinecraftForge.EVENT_BUS.register(new RenderShield());
-	    FMLCommonHandler.instance().bus().register(new RenderShield());	
-	    
-	    RenderingRegistry.registerBlockHandler(new RenderAncientPylon());
-	    
-		ClientRegistry.bindTileEntitySpecialRenderer(TileRelicPlate.class, new RenderTileRelicPlate());
-		ClientRegistry.bindTileEntitySpecialRenderer(TileAncientPylon.class, new RenderTileAncientPylon());
-		RenderingRegistry.registerEntityRenderingHandler(EntityItemUnbreakable.class, new RenderItem());
-		
+	private void initEntities(){
+		RenderingRegistry.registerEntityRenderingHandler(EntityItemUnbreakable.class, new RenderItem());	
 		RenderingRegistry.registerEntityRenderingHandler(EntityBulletExploding.class, new RenderSnowball(ModItems.itemtest));
 		RenderingRegistry.registerEntityRenderingHandler(EntityBulletGold.class, new RenderSnowball(ModItems.itemtest));
 		RenderingRegistry.registerEntityRenderingHandler(EntityBulletHighVelocity.class, new RenderSnowball(ModItems.itemtest));
 		RenderingRegistry.registerEntityRenderingHandler(EntityBulletMeteor.class, new RenderSnowball(ModItems.itemtest));
 		RenderingRegistry.registerEntityRenderingHandler(EntityBulletSilver.class, new RenderSnowball(ModItems.itemtest));
 		RenderingRegistry.registerEntityRenderingHandler(EntityBulletMusket.class, new RenderSnowball(ModItems.itemtest));
-		
 		RenderingRegistry.registerEntityRenderingHandler(EntityGaiaIIIPhantom.class, new RenderGaiaIIIPhantom());
 		RenderingRegistry.registerEntityRenderingHandler(EntityGaiaIIIDark.class, new RenderGaiaIIIDark());
 		RenderingRegistry.registerEntityRenderingHandler(EntityGaiaIII.class, new RenderGaiaIII());
@@ -98,6 +89,16 @@ public class ClientProxy extends CommonProxy{
 		RenderingRegistry.registerEntityRenderingHandler(EntityLycorisradiataGreen.class, new RenderLycorisradiataGreen());
 		RenderingRegistry.registerEntityRenderingHandler(EntityLycorisradiataPurple.class, new RenderLycorisradiataPurple());
 		RenderingRegistry.registerEntityRenderingHandler(EntityTeleportPearl.class, new RenderTeleportPearl(1.0F));
+	}
+	
+	private void initRenderers() {
+		MinecraftForge.EVENT_BUS.register(new RenderShield());
+	    FMLCommonHandler.instance().bus().register(new RenderShield());	
+	    
+	    RenderingRegistry.registerBlockHandler(new RenderAncientPylon());
+	    
+		ClientRegistry.bindTileEntitySpecialRenderer(TileRelicPlate.class, new RenderTileRelicPlate());
+		ClientRegistry.bindTileEntitySpecialRenderer(TileAncientPylon.class, new RenderTileAncientPylon());
 	}
 
 }

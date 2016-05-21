@@ -10,4 +10,5 @@ public interface IGun {
 	public void consumeBullet(EntityPlayer player);
 	
 	public void summonBullet(EntityPlayer player);
+	
 }

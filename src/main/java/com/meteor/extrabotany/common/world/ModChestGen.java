@@ -18,17 +18,18 @@ public class ModChestGen {
 	}
 	
 	public static void addAll(ItemStack itemstack, int min, int max, int stacksize, boolean lib){
-		ChestGenHooks.addItem(ChestGenHooks.BONUS_CHEST, new WeightedRandomChestContent(itemstack, min, max, stacksize));
-		ChestGenHooks.addItem(ChestGenHooks.DUNGEON_CHEST, new WeightedRandomChestContent(itemstack, min, max, stacksize));
-		ChestGenHooks.addItem(ChestGenHooks.MINESHAFT_CORRIDOR, new WeightedRandomChestContent(itemstack, min, max, stacksize));
-		ChestGenHooks.addItem(ChestGenHooks.PYRAMID_DESERT_CHEST, new WeightedRandomChestContent(itemstack, min, max, stacksize));
-		ChestGenHooks.addItem(ChestGenHooks.PYRAMID_JUNGLE_CHEST, new WeightedRandomChestContent(itemstack, min, max, stacksize));
-		ChestGenHooks.addItem(ChestGenHooks.PYRAMID_JUNGLE_DISPENSER, new WeightedRandomChestContent(itemstack, min, max, stacksize));
-		ChestGenHooks.addItem(ChestGenHooks.STRONGHOLD_CORRIDOR, new WeightedRandomChestContent(itemstack, min, max, stacksize));
-		ChestGenHooks.addItem(ChestGenHooks.STRONGHOLD_CORRIDOR, new WeightedRandomChestContent(itemstack, min, max, stacksize));
-		ChestGenHooks.addItem(ChestGenHooks.STRONGHOLD_CROSSING, new WeightedRandomChestContent(itemstack, min, max, stacksize));
-		ChestGenHooks.addItem(ChestGenHooks.VILLAGE_BLACKSMITH, new WeightedRandomChestContent(itemstack, min, max, stacksize));
+		WeightedRandomChestContent rand = new WeightedRandomChestContent(itemstack, min, max, stacksize);
+		ChestGenHooks.addItem(ChestGenHooks.BONUS_CHEST, rand);
+		ChestGenHooks.addItem(ChestGenHooks.DUNGEON_CHEST, rand);
+		ChestGenHooks.addItem(ChestGenHooks.MINESHAFT_CORRIDOR, rand);
+		ChestGenHooks.addItem(ChestGenHooks.PYRAMID_DESERT_CHEST, rand);
+		ChestGenHooks.addItem(ChestGenHooks.PYRAMID_JUNGLE_CHEST, rand);
+		ChestGenHooks.addItem(ChestGenHooks.PYRAMID_JUNGLE_DISPENSER, rand);
+		ChestGenHooks.addItem(ChestGenHooks.STRONGHOLD_CORRIDOR, rand);
+		ChestGenHooks.addItem(ChestGenHooks.STRONGHOLD_CORRIDOR, rand);
+		ChestGenHooks.addItem(ChestGenHooks.STRONGHOLD_CROSSING, rand);
+		ChestGenHooks.addItem(ChestGenHooks.VILLAGE_BLACKSMITH, rand);
 		if(lib)
-			ChestGenHooks.addItem(ChestGenHooks.STRONGHOLD_LIBRARY, new WeightedRandomChestContent(itemstack, min, max, stacksize));
+			ChestGenHooks.addItem(ChestGenHooks.STRONGHOLD_LIBRARY, rand);
 	}
 }

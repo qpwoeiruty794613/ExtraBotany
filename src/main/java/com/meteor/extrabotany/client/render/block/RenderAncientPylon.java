@@ -19,7 +19,7 @@ import cpw.mods.fml.client.registry.ISimpleBlockRenderingHandler;
 public class RenderAncientPylon implements ISimpleBlockRenderingHandler {
 
 	@Override
-	public void renderInventoryBlock(Block block, int metadata, int modelID, RenderBlocks renderer) {
+	public void renderInventoryBlock(Block block, int metadata, int modelID, RenderBlocks renderer){
 		GL11.glPushMatrix();
 		GL11.glTranslatef(-0.5F, -0.7F, -0.5F);
 		RenderTileAncientPylon.green = metadata == 1;

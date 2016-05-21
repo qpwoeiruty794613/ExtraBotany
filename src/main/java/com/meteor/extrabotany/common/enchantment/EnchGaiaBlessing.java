@@ -45,6 +45,7 @@ public class EnchGaiaBlessing extends Enchantment implements IManaDiscountArmor{
     }
     
     ItemStack itemstack;
+    
     @SubscribeEvent
     public void PlayerHurt(LivingHurtEvent event)
     {

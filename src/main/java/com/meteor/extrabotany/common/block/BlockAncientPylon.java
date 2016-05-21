@@ -23,11 +23,9 @@ import vazkii.botania.api.lexicon.LexiconEntry;
 import vazkii.botania.api.mana.ILens;
 import vazkii.botania.api.wand.IWandHUD;
 import vazkii.botania.api.wand.IWandable;
-import vazkii.botania.client.lib.LibRenderIDs;
 import vazkii.botania.common.block.ModBlocks;
 import vazkii.botania.common.item.ModItems;
 import vazkii.botania.common.item.block.ItemBlockWithMetadataAndName;
-import vazkii.botania.common.lib.LibBlockNames;
 
 import com.meteor.extrabotany.client.lib.LibRenderID;
 import com.meteor.extrabotany.common.block.tile.TileAncientPylon;

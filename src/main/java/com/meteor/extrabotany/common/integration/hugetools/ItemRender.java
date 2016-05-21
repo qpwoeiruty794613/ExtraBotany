@@ -3,7 +3,6 @@ package com.meteor.extrabotany.common.integration.hugetools;
 import net.minecraft.client.Minecraft;
 import net.minecraftforge.client.MinecraftForgeClient;
 
-import com.meteor.extrabotany.api.hugetools.HugeItemIcon;
 import com.meteor.extrabotany.api.hugetools.HugeItemRenderer;
 import com.meteor.extrabotany.client.render.item.GunRenderer;
 import com.meteor.extrabotany.client.render.item.ItemIcon;
