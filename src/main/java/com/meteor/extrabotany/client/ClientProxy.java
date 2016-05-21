@@ -1,19 +1,15 @@
 package com.meteor.extrabotany.client;
 
-import vazkii.botania.client.render.tile.RenderTilePylon;
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.entity.RenderItem;
 import net.minecraft.client.renderer.entity.RenderSnowball;
 import net.minecraft.init.Items;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemRecord;
-import net.minecraft.world.World;
 import net.minecraftforge.common.MinecraftForge;
 
 import com.meteor.extrabotany.client.render.RenderShield;
 import com.meteor.extrabotany.client.render.block.RenderAncientPylon;
 import com.meteor.extrabotany.client.render.entity.Render22;
 import com.meteor.extrabotany.client.render.entity.RenderGaiaIII;
+import com.meteor.extrabotany.client.render.entity.RenderGaiaIIIDark;
 import com.meteor.extrabotany.client.render.entity.RenderGaiaIIIPhantom;
 import com.meteor.extrabotany.client.render.entity.RenderLycorisradiataGreen;
 import com.meteor.extrabotany.client.render.entity.RenderLycorisradiataPurple;
@@ -27,8 +23,6 @@ import com.meteor.extrabotany.common.CommonProxy;
 import com.meteor.extrabotany.common.block.tile.TileAncientPylon;
 import com.meteor.extrabotany.common.block.tile.TileRelicPlate;
 import com.meteor.extrabotany.common.entity.Entity22;
-import com.meteor.extrabotany.common.entity.EntityGaiaIII;
-import com.meteor.extrabotany.common.entity.EntityGaiaIIIPhantom;
 import com.meteor.extrabotany.common.entity.EntityItemUnbreakable;
 import com.meteor.extrabotany.common.entity.EntityLycorisradiataGreen;
 import com.meteor.extrabotany.common.entity.EntityLycorisradiataPurple;
@@ -43,8 +37,10 @@ import com.meteor.extrabotany.common.entity.bullet.EntityBulletMeteor;
 import com.meteor.extrabotany.common.entity.bullet.EntityBulletMusket;
 import com.meteor.extrabotany.common.entity.bullet.EntityBulletSilver;
 import com.meteor.extrabotany.common.entity.bullet.EntityBulletSnowball;
+import com.meteor.extrabotany.common.entity.gaia.EntityGaiaIII;
+import com.meteor.extrabotany.common.entity.gaia.EntityGaiaIIIDark;
+import com.meteor.extrabotany.common.entity.gaia.EntityGaiaIIIPhantom;
 import com.meteor.extrabotany.common.integration.Intergration;
-import com.meteor.extrabotany.common.integration.hugetools.ItemRender;
 import com.meteor.extrabotany.common.item.ModItems;
 
 import cpw.mods.fml.client.registry.ClientRegistry;
@@ -65,6 +61,7 @@ public class ClientProxy extends CommonProxy{
 	public void init(FMLInitializationEvent event) {
 		super.init(event);
 		initRenderers();
+		initEntities();
 		Intergration.initClient(event);
 	}
 	
@@ -72,6 +69,26 @@ public class ClientProxy extends CommonProxy{
 	public void postInit(FMLPostInitializationEvent event) {
 		super.postInit(event);
 		Intergration.postInitClient(event);
+	}
+	private void initEntities(){
+		RenderingRegistry.registerEntityRenderingHandler(EntityItemUnbreakable.class, new RenderItem());	
+		RenderingRegistry.registerEntityRenderingHandler(EntityBulletExploding.class, new RenderSnowball(ModItems.itemtest));
+		RenderingRegistry.registerEntityRenderingHandler(EntityBulletGold.class, new RenderSnowball(ModItems.itemtest));
+		RenderingRegistry.registerEntityRenderingHandler(EntityBulletHighVelocity.class, new RenderSnowball(ModItems.itemtest));
+		RenderingRegistry.registerEntityRenderingHandler(EntityBulletMeteor.class, new RenderSnowball(ModItems.itemtest));
+		RenderingRegistry.registerEntityRenderingHandler(EntityBulletSilver.class, new RenderSnowball(ModItems.itemtest));
+		RenderingRegistry.registerEntityRenderingHandler(EntityBulletMusket.class, new RenderSnowball(ModItems.itemtest));
+		RenderingRegistry.registerEntityRenderingHandler(EntityGaiaIIIPhantom.class, new RenderGaiaIIIPhantom());
+		RenderingRegistry.registerEntityRenderingHandler(EntityGaiaIIIDark.class, new RenderGaiaIIIDark());
+		RenderingRegistry.registerEntityRenderingHandler(EntityGaiaIII.class, new RenderGaiaIII());
+		RenderingRegistry.registerEntityRenderingHandler(Entity22.class, new Render22());
+		RenderingRegistry.registerEntityRenderingHandler(EntityTV.class, new RenderTV());
+		RenderingRegistry.registerEntityRenderingHandler(EntitySpear.class, new RenderSpear());
+		RenderingRegistry.registerEntityRenderingHandler(EntityBulletSnowball.class, new RenderSnowball(Items.snowball));
+		RenderingRegistry.registerEntityRenderingHandler(EntityLycorisradiataRed.class, new RenderLycorisradiataRed());
+		RenderingRegistry.registerEntityRenderingHandler(EntityLycorisradiataGreen.class, new RenderLycorisradiataGreen());
+		RenderingRegistry.registerEntityRenderingHandler(EntityLycorisradiataPurple.class, new RenderLycorisradiataPurple());
+		RenderingRegistry.registerEntityRenderingHandler(EntityTeleportPearl.class, new RenderTeleportPearl(1.0F));
 	}
 	
 	private void initRenderers() {
@@ -82,25 +99,6 @@ public class ClientProxy extends CommonProxy{
 	    
 		ClientRegistry.bindTileEntitySpecialRenderer(TileRelicPlate.class, new RenderTileRelicPlate());
 		ClientRegistry.bindTileEntitySpecialRenderer(TileAncientPylon.class, new RenderTileAncientPylon());
-		RenderingRegistry.registerEntityRenderingHandler(EntityItemUnbreakable.class, new RenderItem());
-		
-		RenderingRegistry.registerEntityRenderingHandler(EntityBulletExploding.class, new RenderSnowball(ModItems.itemtest));
-		RenderingRegistry.registerEntityRenderingHandler(EntityBulletGold.class, new RenderSnowball(ModItems.itemtest));
-		RenderingRegistry.registerEntityRenderingHandler(EntityBulletHighVelocity.class, new RenderSnowball(ModItems.itemtest));
-		RenderingRegistry.registerEntityRenderingHandler(EntityBulletMeteor.class, new RenderSnowball(ModItems.itemtest));
-		RenderingRegistry.registerEntityRenderingHandler(EntityBulletSilver.class, new RenderSnowball(ModItems.itemtest));
-		RenderingRegistry.registerEntityRenderingHandler(EntityBulletMusket.class, new RenderSnowball(ModItems.itemtest));
-		
-		RenderingRegistry.registerEntityRenderingHandler(EntityGaiaIIIPhantom.class, new RenderGaiaIIIPhantom());
-		RenderingRegistry.registerEntityRenderingHandler(EntityGaiaIII.class, new RenderGaiaIII());
-		RenderingRegistry.registerEntityRenderingHandler(Entity22.class, new Render22());
-		RenderingRegistry.registerEntityRenderingHandler(EntityTV.class, new RenderTV());
-		RenderingRegistry.registerEntityRenderingHandler(EntitySpear.class, new RenderSpear());
-		RenderingRegistry.registerEntityRenderingHandler(EntityBulletSnowball.class, new RenderSnowball(Items.snowball));
-		RenderingRegistry.registerEntityRenderingHandler(EntityLycorisradiataRed.class, new RenderLycorisradiataRed());
-		RenderingRegistry.registerEntityRenderingHandler(EntityLycorisradiataGreen.class, new RenderLycorisradiataGreen());
-		RenderingRegistry.registerEntityRenderingHandler(EntityLycorisradiataPurple.class, new RenderLycorisradiataPurple());
-		RenderingRegistry.registerEntityRenderingHandler(EntityTeleportPearl.class, new RenderTeleportPearl(1.0F));
 	}
 
 }

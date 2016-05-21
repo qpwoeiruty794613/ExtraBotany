@@ -26,16 +26,28 @@ public class ItemGunShotgun extends ItemGun{
 	}
 	
 	@Override
-	public ItemStack selectBullet(EntityPlayer player){
-		if(player.inventory.hasItemStack(s2))
-			return s2;
-		else if(player.inventory.hasItemStack(s3))
-			return s3;
-		else if(player.inventory.hasItemStack(s5))
-			return s5;
-		else if(player.inventory.hasItemStack(s6))
-			return s6;
-		else return s6;
+	public int selectBullet(EntityPlayer player){
+		int a = 0;
+		int b = 0;
+		int c = 0;
+		int d = 0;
+		int e = 0;
+		int f = 0;
+		if(player.inventory.hasItemStack(new ItemStack(ModItems.bullet,1,2)))
+			c = 5;//high
+		else c = 0;
+		if(player.inventory.hasItemStack(new ItemStack(ModItems.bullet,1,3)))
+			d = 4;//meteor
+		else d = 0;
+		if(player.inventory.hasItemStack(new ItemStack(ModItems.bullet,1,4)))
+			e = 1;
+		else e = 0;
+		if(player.inventory.hasItemStack(new ItemStack(ModItems.bullet,1,5)))
+			f = 2;	
+		else f = 0;
+		int bullet;
+		bullet = Math.max(Math.max(Math.max(a, b), c), Math.max(Math.max(d, e), f));
+		return bullet;
 	}
 	
 	@Override
@@ -57,8 +69,8 @@ public class ItemGunShotgun extends ItemGun{
 		EntityBulletSilver s63 = new EntityBulletSilver(player.worldObj, player);
 		EntityBulletSilver s64 = new EntityBulletSilver(player.worldObj, player);
 		if(!player.worldObj.isRemote){
-			switch(selectBullet(player).getMaxDamage()){
-			case 4:
+			switch(selectBullet(player)){
+			case 1:
 				s5.setThrowableHeading(s5.motionX, s5.motionY, s5.motionZ, 1.0F, 1.0F);
 				player.worldObj.spawnEntityInWorld(s5);
 				s52.setThrowableHeading(s52.motionX + player.worldObj.rand.nextInt(5)/100, s52.motionY + player.worldObj.rand.nextInt(5)/100, s52.motionZ, 1.0F, 1.0F);
@@ -68,7 +80,7 @@ public class ItemGunShotgun extends ItemGun{
 				s54.setThrowableHeading(s54.motionX + player.worldObj.rand.nextInt(5)/100, s54.motionY + player.worldObj.rand.nextInt(5)/100, s54.motionZ, 1.0F, 1.0F);
 				player.worldObj.spawnEntityInWorld(s54);
 				break;
-			case 5:
+			case 2:
 				s6.setThrowableHeading(s6.motionX, s6.motionY, s6.motionZ, 1.0F, 1.0F);
 				player.worldObj.spawnEntityInWorld(s6);
 				s62.setThrowableHeading(s62.motionX + player.worldObj.rand.nextInt(5)/100, s62.motionY + player.worldObj.rand.nextInt(5)/100, s62.motionZ, 1.0F, 1.0F);
@@ -78,7 +90,7 @@ public class ItemGunShotgun extends ItemGun{
 				s64.setThrowableHeading(s64.motionX + player.worldObj.rand.nextInt(5)/100, s64.motionY + player.worldObj.rand.nextInt(5)/100, s64.motionZ, 1.0F, 1.0F);
 				player.worldObj.spawnEntityInWorld(s64);
 				break;
-			case 3:
+			case 4:
 				s4.setThrowableHeading(s4.motionX, s4.motionY, s4.motionZ, 1.0F, 1.0F);
 				player.worldObj.spawnEntityInWorld(s4);
 				s42.setThrowableHeading(s42.motionX + player.worldObj.rand.nextInt(5)/100, s42.motionY + player.worldObj.rand.nextInt(5)/100, s42.motionZ, 1.0F, 1.0F);
@@ -88,7 +100,7 @@ public class ItemGunShotgun extends ItemGun{
 				s44.setThrowableHeading(s44.motionX + player.worldObj.rand.nextInt(5)/100, s44.motionY + player.worldObj.rand.nextInt(5)/100, s44.motionZ, 1.0F, 1.0F);
 				player.worldObj.spawnEntityInWorld(s44);
 				break;
-			case 2:
+			case 5:
 				s3.setThrowableHeading(s3.motionX, s3.motionY, s3.motionZ, 1.0F, 1.0F);
 				player.worldObj.spawnEntityInWorld(s3);
 				s32.setThrowableHeading(s32.motionX + player.worldObj.rand.nextInt(5)/100, s32.motionY + player.worldObj.rand.nextInt(5)/100, s32.motionZ, 1.0F, 1.0F);

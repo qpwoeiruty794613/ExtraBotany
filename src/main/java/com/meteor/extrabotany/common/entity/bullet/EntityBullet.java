@@ -18,36 +18,30 @@ import vazkii.botania.common.Botania;
 public class EntityBullet extends EntityThrowable
 {		
 
-    public EntityBullet(World world)
-    {
+    public EntityBullet(World world){
         super(world);
     }
 
-    public EntityBullet(World world, EntityLivingBase entity)
-    {
+    public EntityBullet(World world, EntityLivingBase entity){
         super(world, entity);
     }
 
-    public EntityBullet(World world, double x, double y, double z)
-    {
+    public EntityBullet(World world, double x, double y, double z){
         super(world, x, y, z);
     }
 	
-    public void setDamage(float p_70239_1_)
-    {
+    public void setDamage(float p_70239_1_){
         this.damage = p_70239_1_;
     }
 
-    public float getDamage()
-    {
+    public float getDamage(){
         return this.damage;
     }
     
     public static float damage = 6;
     
     @Override
-    protected float getGravityVelocity()
-    {
+    protected float getGravityVelocity(){
         return 0;
     }
     
@@ -69,22 +63,17 @@ public class EntityBullet extends EntityThrowable
           this.lastTickPosZ = this.posZ;
           super.onUpdate();
           
-          if (this.throwableShake > 0)
-          {
+          if (this.throwableShake > 0){
               --this.throwableShake;
           }
 
-          if (this.inGround)
-          {
-              if (this.worldObj.getBlock(this.field_145788_c, this.field_145786_d, this.field_145787_e) == this.field_145785_f)
-              {
+          if (this.inGround){
+              if (this.worldObj.getBlock(this.field_145788_c, this.field_145786_d, this.field_145787_e) == this.field_145785_f){
                   ++this.ticksInGround;
 
-                  if (this.ticksInGround == 1200)
-                  {
+                  if (this.ticksInGround == 1200){
                       this.setDead();
                   }
-
                   return;
               }
 
@@ -95,8 +84,7 @@ public class EntityBullet extends EntityThrowable
               this.ticksInGround = 0;
               this.ticksInAir = 0;
           }
-          else
-          {
+          else{
               ++this.ticksInAir;
           }
           

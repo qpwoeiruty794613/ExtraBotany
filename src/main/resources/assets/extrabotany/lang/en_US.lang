@@ -1,7 +1,11 @@
 # KNOWLEDGE
 category.Botania:extra=Extra Botany
 botania.knowledge.extra=&3Extra&7 Knowledge
+
+# MISC
 botaniamisc.knowledgeUnlock=The Blank Card is unusually shining, the Lexicon which you are holding is injected with a mystery energy.
+botaniamisc.uselessDiceRoll=The dice lands on a %s, it seemed to be transfered to a strange item afterward.
+botaniamisc.openChest=You should get a key before opening the chest.
 
 #ITEMGROUP
 itemGroup.ExtraBotany=ExtraBotany
@@ -26,7 +30,9 @@ entity.ExtraBotany.unbreakableitem.name=Standing Attention Item
 entity.ExtraBotany.22.name=22
 entity.ExtraBotany.tv.name=TV
 entity.ExtraBotany.magiclandmine2.name=Magic Landmine II
-entity.ExtraBotany.gaia3.name=Gaia III
+entity.ExtraBotany.gaia3.name=Gaia Guardian III
+entity.ExtraBotany.gaia3dark.name=Dark Gaia Guardian III
+entity.ExtraBotany.gaia3phantom.name=Phantom of Gaia Guardian III
 entity.ExtraBotany.teleportpearl.name=Teleport Pearl
 entity.ExtraBotany.lycorispurple.name=Purple Lycorisradiata
 entity.ExtraBotany.lycorisred.name=Red Lycorisradiata
@@ -65,12 +71,12 @@ item.resonancefragment.name=Resonance Fragment
 item.key.name=Key
 
 # -RECORD
-item.botania:recordA.name=U.N.OWEN's record
+item.botania:recordA.name=Cirno's scret record
 item.record.botania:A.desc=いけないボーダーライン
 item.botania:recordB.name=Mystery record
 item.record.botania:B.desc=崩壊世界の歌姫
-item.botania:recordC.name=Cirno's scret record
-item.record.botania:C.desc=チルノのパーフェクトさんすう教室
+item.botania:recordC.name=U.N.OWEN's record
+item.record.botania:C.desc=U.N.オーエンは彼女なのか
 
 # -SPAWNCARDS
 item.ExtraBotany.SpawnCardLycorisdiataRed.name=Cards of Red Lycorisdiata
@@ -96,7 +102,6 @@ item.pill.name=SCP-500
 # -DICE
 item.botania:dice20.name=D20
 item.emptydice.name=Empty Dice
-botaniamisc.uselessDiceRoll=The dice lands on a %s, it seemed to be transfered to a strange item afterward.
 
 # -RELIC
 item.botania:excaliber.name=Excaliber
@@ -121,7 +126,7 @@ item.boomstick.name=Boomstick
 item.flintlock.name=Flintlock
 item.shotgun.name=Shotgun
 item.pistol.name=Pistol
-item.botania:snowballlauncher.name=Snowball Cannon
+item.snowballlauncher.name=Snowball Cannon
 
 # —BULLET
 item.bulletexploding.name=Exploding Bullet
@@ -139,9 +144,9 @@ item.test.desc=ONLY FOR DEVELOPER
 # -BASIC
 # --BLANKCARD
 botania.entry.blankcard=Blank Card
-botania.tagline.blankcard=
-botania.page.blankcard0=
-botania.page.blankcard1=
+botania.tagline.blankcard=No Game No Life
+botania.page.blankcard0=Although nothing is written on it, the &1Blank Card &0 is shining with silver sparks. Perhaps something strange will happen if you pick it up while holding a &1Lexica Botania&0 in your hand.
+botania.page.blankcard1=It's a secret.
 
 # --COSMETIC
 botania.entry.cosmetic=Cosmetic Baubles
@@ -159,14 +164,14 @@ botania.page.prismaticshard0=
 
 # --GOLDSTRING
 botania.entry.goldstring=Golden Infused String
-botania.tagline.goldstring=
+botania.tagline.goldstring=Which is more important, Wealth or Health?
 botania.page.goldstring0=
 botania.page.goldstring1=
 
 # --PETAL
 botania.entry.petal=Lycorisdiata
-botania.tagline.petal=
-botania.page.petal0=
+botania.tagline.petal=HEART BURNING!
+botania.page.petal0=Probably the Lycorisradiata is the most rare flower in minecraft. It will only appear at night and die when the sun rises. There are 3 kinds of Lycorisradiata: red, green and purple. It goes without saying that its petals are very valuable. If you try to discover one, I wish you good luck.
 
 # --QUARTZ
 botania.entry.quartz=Elementium Quartz & Gaia Quartz
@@ -284,22 +289,22 @@ botania.entry.infinitymana=Infinite Mana
 # -RELICS
 # --HESTIACHASTITY
 botania.entry.hestiachastity=Chastity of Hestia
-botania.tagline.hestiachastity=Adamant and Indomitable
+botania.tagline.hestiachastity=
 botania.page.hestiachastity0=
 
 # --MAXWELLDEMON
 botania.entry.maxwelldemon=Maxwell's Demon
-botania.tagline.maxwelldemon=Perpetual Motion Machine!?
+botania.tagline.maxwelldemon=
 botania.page.maxwelldemon0=
 
 # --ATHENABLESS
 botania.entry.athenabless=Athena's Bless
-botania.tagline.athenabless=A Blessing of Wisdom.
+botania.tagline.athenabless=
 botania.page.athenabless0=
 
 # --APHRODITEGRACE
 botania.entry.aphroditegrace=Aphrodite's Grace
-botania.tagline.aphroditegrace=Escape from Agony.
+botania.tagline.aphroditegrace=
 botania.page.aphroditegrace0=
 
 # --DICE20
@@ -324,12 +329,12 @@ botania.page.vpowerbattleaxe0=
 
 # --VRANGERBOOTS
 botania.entry.vrangerboots=Valkyrie Ranger Boots
-botania.tagline.vrangerboots=Faster Moving.
+botania.tagline.vrangerboots=
 botania.page.vrangerboots0=
 
 # --VHANDGUN
 botania.entry.vhandgun=Valkyrie Handguns
-botania.tagline.vhandgun=Shoot with mana.
+botania.tagline.vhandgun=
 botania.page.vhandgun0=
 
 #FLOWER NAMES
@@ -393,26 +398,50 @@ botania.tagline.judasvow=For justice
 
 #ACHIEVEMENTS
 # -RELICS
-achievement.botania:aphroditegrace=Love & Peace
-achievement.botania:aphroditegrace.desc=Be rewarded the Aphrodite's Grace for a heroic feat
-achievement.botania:dice20=Reroll you destiny
-achievement.botania:dice20.desc=Get the D20!
-achievement.botania:athenabless=白金ディスコ
-achievement.botania:athenabless.desc=Be rewarded the Athena's Bless for a heroic feat
-//achievement.botania:excaliber=The Light does not Discriminate
-//achievement.botania:excaliber.desc=Get the Excaliber!
-achievement.botania:excaliberfake=Put Your Faith in the Light
-achievement.botania:excaliberfake.desc=Be rewarded Excaliber for a heroic feat
-achievement.botania:hestiachastity=Light of Ruin
-achievement.botania:hestiachastity.desc=Be rewarded Chastity of Hestia for a heroic feat
-achievement.botania:maxwelldemon=Perpetual Motion Machine of the Second Category!?
-achievement.botania:maxwelldemon.desc=Be rewarded Maxwell's Demon for a heroic feat
-achievement.botania:vpowerbattleaxe=Tell Your World
-achievement.botania:vpowerbattleaxe.desc=Be rewarded Valkyrie Powered Battleaxe for a heroic feat
-achievement.botania:vrangerboots=悪ノ召使
-achievement.botania:vrangerboots.desc=Be rewarded Valkyrie Ranger Boots for a heroic feat
-achievement.botania:vhandgun=悪ノ娘
-achievement.botania:vhandgun.desc=Be rewarded Valkyrie Handguns for a heroic feat
+achievement.extrabotany:aphroditegrace=Love & Peace
+achievement.extrabotany:aphroditegrace.desc=Be rewarded the Aphrodite's Grace for a heroic feat
+achievement.extrabotany:dice20=Reroll you destiny
+achievement.extrabotany:dice20.desc=Get the D20!
+achievement.extrabotany:athenabless=白金ディスコ
+achievement.extrabotany:athenabless.desc=Be rewarded the Athena's Bless for a heroic feat
+achievement.extrabotany:excaliber=The Light does not Discriminate
+achievement.extrabotany:excaliber.desc=Get the Excaliber!
+achievement.extrabotany:excaliberfake=Put Your Faith in the Light
+achievement.extrabotany:excaliberfake.desc=Be rewarded Excaliber for a heroic feat
+achievement.extrabotany:hestiachastity=Light of Ruin
+achievement.extrabotany:hestiachastity.desc=Be rewarded Chastity of Hestia for a heroic feat
+achievement.extrabotany:maxwelldemon=Perpetual Motion Machine of the Second Category!?
+achievement.extrabotany:maxwelldemon.desc=Be rewarded Maxwell's Demon for a heroic feat
+achievement.extrabotany:vpowerbattleaxe=Tell Your World
+achievement.extrabotany:vpowerbattleaxe.desc=Be rewarded Valkyrie Powered Battleaxe for a heroic feat
+achievement.extrabotany:vrangerboots=悪ノ召使
+achievement.extrabotany:vrangerboots.desc=Be rewarded Valkyrie Ranger Boots for a heroic feat
+achievement.extrabotany:vhandgun=悪ノ娘
+achievement.extrabotany:vhandgun.desc=Be rewarded Valkyrie Handguns for a heroic feat
+achievement.extrabotany:cronusphantom=
+achievement.extrabotany:cronusphantom.desc=Be rewarded Phantom of Cronus for a heroic feat
+achievement.extrabotany:hermestravelclothing=
+achievement.extrabotany:hermestravelclothing.desc=Be rewarded Hermes Travel Clothing for a heroic feat
+achievement.extrabotany:phoenixblaster=
+achievement.extrabotany:phoenixblaster.desc=Get Phoenix Blaster
+achievement.extrabotany:snowballlauncher=
+achievement.extrabotany:snowballlauncher.desc=Get Snowball Cannon
+achievement.extrabotany:tacticalshotgun=
+achievement.extrabotany:tacticalshotgun.desc=Get Tactical Shotgun
+achievement.extrabotany:olympusguard=
+achievement.extrabotany:olympusguard.desc=Get Guard of Olympus
+achievement.extrabotany:cthulhueye=
+achievement.extrabotany:cthulhueye.desc=Be rewarded Eye of Cthulhu for a heroic feat
+
+# -GAIA
+achievement.extrabotany:gaia_kill=
+achievement.extrabotany:gaia_kill.desc=Defeat Gaia Guardian III!
+achievement.extrabotany:gaia_noarmor=
+achievement.extrabotany:gaia_noarmor.desc=Slay Gaia Guardian III without wearing any armor at any point during the fight
+achievement.extrabotany:gaia_dark=
+achievement.extrabotany:gaia_dark.desc=Defeat Dark Gaia Guardian III!
+achievement.extrabotany:gaia_darknoarmor=
+achievement.extrabotany:gaia_darknoarmor.desc=Slay Dark Gaia Guardian III without wearing any armor at any point during the fight
 
 #ENCHANTMENT
 enchantment.gaiablessing=Gaia's Blessing

@@ -14,7 +14,7 @@ public class AchievementMod extends Achievement {
 	public static List<Achievement> achievements = new ArrayList();
 
 	public AchievementMod(String name, int x, int y, ItemStack icon, Achievement parent) {
-		super("achievement.botania:" + name, "botania:" + name, x, y, icon, parent);
+		super("achievement.extrabotany:" + name, "extrabotany:" + name, x, y, icon, parent);
 		achievements.add(this);
 		registerStat();
 

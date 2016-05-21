@@ -5,9 +5,10 @@ import net.minecraft.item.ItemStack;
 
 public interface IGun {
 	
-	public ItemStack selectBullet(EntityPlayer player);
+	public int selectBullet(EntityPlayer player);
 	
 	public void consumeBullet(EntityPlayer player);
 	
 	public void summonBullet(EntityPlayer player);
+	
 }

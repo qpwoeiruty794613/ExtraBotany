@@ -26,8 +26,7 @@ public class PotionCure extends PotionEffectMods{
 			if (ReflectionHelper.getPrivateValue(Potion.class, Potion.potionTypes[id], new String[]{"isBadEffect", "field_76418_K", "J"})) {
 				entity.removePotionEffect(id);
 				flag = true;
-			}
-			
+			}	
 			break;
 		}
 	}

@@ -7,7 +7,6 @@ import vazkii.botania.api.BotaniaAPI;
 import vazkii.botania.api.subtile.SubTileEntity;
 import vazkii.botania.common.block.decor.slabs.BlockModSlab;
 
-import com.meteor.extrabotany.ExtraBotany;
 import com.meteor.extrabotany.common.block.decor.BlockElvenQuartzSlab;
 import com.meteor.extrabotany.common.block.decor.BlockElvenQuartzStairs;
 import com.meteor.extrabotany.common.block.decor.BlockGaiaQuartzSlab;

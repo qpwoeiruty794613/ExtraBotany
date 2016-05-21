@@ -1,7 +1,11 @@
 # KNOWLEDGE
 category.Botania:extra=额外植物学
 botania.knowledge.extra=&3额外&7的知识
+
+# MISC
 botaniamisc.knowledgeUnlock=白卡闪耀着异样的光芒,你手中的手册被注入了神秘的力量.
+botaniamisc.uselessDiceRoll=骰子停在了%s上,接着变成了奇怪的东西.
+botaniamisc.openChest=在开箱子前你得先拥有一把钥匙.
 
 #ITEMGROUP
 itemGroup.ExtraBotany=额外植物学
@@ -26,7 +30,9 @@ entity.ExtraBotany.unbreakableitem.name=直立不动的掉落物
 entity.ExtraBotany.22.name=22娘
 entity.ExtraBotany.tv.name=小电视
 entity.ExtraBotany.magiclandmine2.name=魔法地雷II
-entity.ExtraBotany.gaia3.name=盖亚III
+entity.ExtraBotany.gaia3.name=盖亚守护者III
+entity.ExtraBotany.gaia3dark.name=黑暗盖亚守护者III
+entity.ExtraBotany.gaia3phantom.name=盖亚守护者III的幻影
 entity.ExtraBotany.teleportpearl.name=传送珍珠
 entity.ExtraBotany.lycorispurple.name=紫色彼岸花
 entity.ExtraBotany.lycorisred.name=红色彼岸花
@@ -65,12 +71,12 @@ item.resonancefragment.name=祈之共鸣
 item.key.name=钥匙
 
 # -RECORD
-item.botania:recordA.name=U.N.OWEN的唱片
+item.botania:recordA.name=琪露诺的秘密唱片
 item.record.botania:A.desc=いけないボーダーライン
 item.botania:recordB.name=神秘的唱片
 item.record.botania:B.desc=崩壊世界の歌姫
-item.botania:recordC.name=琪露诺的秘密唱片
-item.record.botania:C.desc=チルノのパーフェクトさんすう教室
+item.botania:recordC.name=U.N.OWEN的唱片
+item.record.botania:C.desc=U.N.オーエンは彼女なのか
 
 # -SPAWNCARDS
 item.ExtraBotany.SpawnCardLycorisdiataRed.name=红色彼岸花之卡
@@ -96,7 +102,6 @@ item.pill.name=SCP-500
 # -DICE
 item.botania:dice20.name=D20
 item.emptydice.name=空骰子
-botaniamisc.uselessDiceRoll=骰子停在了%s上,接着变成了奇怪的东西.
 
 # -RELIC
 item.botania:excaliber.name=王者圣剑
@@ -121,7 +126,7 @@ item.boomstick.name=Boomstick
 item.flintlock.name=燧发枪
 item.shotgun.name=猎枪
 item.pistol.name=手枪
-item.botania:snowballlauncher.name=雪球发射器
+item.snowballlauncher.name=雪球发射器
 
 # —BULLET
 item.bulletexploding.name=高爆弹
@@ -139,9 +144,9 @@ item.test.desc=仅作测试
 # -BASIC
 # --BLANKCARD
 botania.entry.blankcard=白卡
-botania.tagline.blankcard=
-botania.page.blankcard0=
-botania.page.blankcard1=
+botania.tagline.blankcard=游戏人生
+botania.page.blankcard0=尽管没有任何东西写在上面, &1白卡&0却闪耀着银色的火花 .也许拿着本&1植物魔法手册&0的 时候捡起&1白卡&0会发生些奇怪 的事情.
+botania.page.blankcard1=这是一个秘密.
 
 # --COSMETIC
 botania.entry.cosmetic=装饰饰品
@@ -159,14 +164,14 @@ botania.page.prismaticshard0=
 
 # --GOLDSTRING
 botania.entry.goldstring=注魔金线
-botania.tagline.goldstring=
+botania.tagline.goldstring=财富或健康,哪个更重要?
 botania.page.goldstring0=
 botania.page.goldstring1=
 
 # --PETAL
 botania.entry.petal=彼岸花
-botania.tagline.petal=
-botania.page.petal0=
+botania.tagline.petal=炽灼的心!
+botania.page.petal0=也许&1彼岸花&0是世界上最稀有 的花,它只会出现在晚上, 并且太阳升起的瞬间就会凋 零,昙花一现的生命.一共 有3种&1彼岸花&0,分别是红色, 绿色和紫色.不言而喻,它 的花瓣非常有价值.如果你 想试着去找到一朵,我只能 祝你好运.
 
 # --QUARTZ
 botania.entry.quartz=源质石英&盖亚石英
@@ -284,22 +289,22 @@ botania.entry.infinitymana=无限魔力
 # -RELICS
 # --HESTIACHASTITY
 botania.entry.hestiachastity=赫斯提亚的贞洁
-botania.tagline.hestiachastity=坚毅不屈.
+botania.tagline.hestiachastity=
 botania.page.hestiachastity0=
 
 # --MAXWELLDEMON
 botania.entry.maxwelldemon=麦克斯韦的妖精
-botania.tagline.maxwelldemon=第一类永动机!?
+botania.tagline.maxwelldemon=
 botania.page.maxwelldemon0=
 
 # --ATHENABLESS
 botania.entry.athenabless=雅典娜的庇佑
-botania.tagline.athenabless=智慧的祝福.
+botania.tagline.athenabless=
 botania.page.athenabless0=
 
 # --APHRODITEGRACE
 botania.entry.aphroditegrace=阿佛洛狄忒的恩宠
-botania.tagline.aphroditegrace=远离苦痛.
+botania.tagline.aphroditegrace=
 botania.page.aphroditegrace0=
 
 # --DICE20
@@ -324,12 +329,12 @@ botania.page.vpowerbattleaxe0=
 
 # --VRANGERBOOTS
 botania.entry.vrangerboots=V制式游侠靴
-botania.tagline.vrangerboots=迅捷如风.
+botania.tagline.vrangerboots=
 botania.page.vrangerboots0=
 
 # --VHANDGUN
 botania.entry.vhandgun=V制式手炮
-botania.tagline.vhandgun=魔力射击.
+botania.tagline.vhandgun=
 botania.page.vhandgun0=
 
 #FLOWER NAMES
@@ -393,26 +398,50 @@ botania.tagline.judasvow=为了正义
 
 #ACHIEVEMENTS
 # -RELICS
-achievement.botania:aphroditegrace=Love & Peace
-achievement.botania:aphroditegrace.desc=获得战利品:阿佛洛狄忒的恩宠
-achievement.botania:dice20=Reroll you destiny
-achievement.botania:dice20.desc=获得D20!
-achievement.botania:athenabless=白金ディスコ
-achievement.botania:athenabless.desc=获得战利品:雅典娜的庇佑
-achievement.botania:excaliber=圣光照耀众生
-achievement.botania:excaliber.desc=获得王者圣剑!
-achievement.botania:excaliberfake=信仰圣光吧
-achievement.botania:excaliberfake.desc=获得战利品:王者之剑
-achievement.botania:hestiachastity=破灭之光
-achievement.botania:hestiachastity.desc=获得战利品:赫斯提亚的贞洁
-achievement.botania:maxwelldemon=第二类永动机!?
-achievement.botania:maxwelldemon.desc=获得战利品:麦克斯韦的妖精
-achievement.botania:vpowerbattleaxe=Tell Your World
-achievement.botania:vpowerbattleaxe.desc=获得战利品:V制式动力战斧
-achievement.botania:vrangerboots=悪ノ召使
-achievement.botania:vrangerboots.desc=获得战利品:V制式游侠靴
-achievement.botania:vhandgun=悪ノ娘
-achievement.botania:vhandgun.desc=获得战利品:V制式手炮
+achievement.extrabotany:aphroditegrace=Love & Peace
+achievement.extrabotany:aphroditegrace.desc=获得战利品:阿佛洛狄忒的恩宠
+achievement.extrabotany:dice20=Reroll you destiny
+achievement.extrabotany:dice20.desc=获得D20!
+achievement.extrabotany:athenabless=白金ディスコ
+achievement.extrabotany:athenabless.desc=获得战利品:雅典娜的庇佑
+achievement.extrabotany:excaliber=圣光照耀众生
+achievement.extrabotany:excaliber.desc=获得王者圣剑!
+achievement.extrabotany:excaliberfake=信仰圣光吧
+achievement.extrabotany:excaliberfake.desc=获得战利品:王者之剑
+achievement.extrabotany:hestiachastity=破灭之光
+achievement.extrabotany:hestiachastity.desc=获得战利品:赫斯提亚的贞洁
+achievement.extrabotany:maxwelldemon=第二类永动机!?
+achievement.extrabotany:maxwelldemon.desc=获得战利品:麦克斯韦的妖精
+achievement.extrabotany:vpowerbattleaxe=Tell Your World
+achievement.extrabotany:vpowerbattleaxe.desc=获得战利品:V制式动力战斧
+achievement.extrabotany:vrangerboots=悪ノ召使
+achievement.extrabotany:vrangerboots.desc=获得战利品:V制式游侠靴
+achievement.extrabotany:vhandgun_double=悪ノ娘
+achievement.extrabotany:vhandgun_double.desc=获得战利品:V制式手炮
+achievement.extrabotany:cronusphantom=
+achievement.extrabotany:cronusphantom.desc=获得战利品:柯罗诺斯的幻影
+achievement.extrabotany:hermestravelclothing=
+achievement.extrabotany:hermestravelclothing.desc=获得战利品:赫尔墨斯的旅行衣
+achievement.extrabotany:phoenixblaster=
+achievement.extrabotany:phoenixblaster.desc=获得凤凰冲击波
+achievement.extrabotany:snowballlauncher=
+achievement.extrabotany:snowballlauncher.desc=获得雪球发射器
+achievement.extrabotany:tacticalshotgun=
+achievement.extrabotany:tacticalshotgun.desc=获得战术猎枪
+achievement.extrabotany:olympusguard=
+achievement.extrabotany:olympusguard.desc=获得奥斯匹林的戍卫
+achievement.extrabotany:cthulhueye=
+achievement.extrabotany:cthulhueye.desc=获得战利品:克苏鲁之眼
+
+# -GAIA
+achievement.extrabotany:gaia_kill=
+achievement.extrabotany:gaia_kill.desc=击败盖亚守护者III!
+achievement.extrabotany:gaia_noarmor=
+achievement.extrabotany:gaia_noarmor.desc=战斗从头至尾不穿任何护甲击杀盖亚守护者III
+achievement.extrabotany:gaia_dark=
+achievement.extrabotany:gaia_dark.desc=击败黑暗盖亚守护者III!
+achievement.extrabotany:gaia_darknoarmor=
+achievement.extrabotany:gaia_darknoarmor.desc=战斗从头至尾不穿任何护甲击杀黑暗盖亚守护者III
 
 #ENCHANTMENT
 enchantment.gaiablessing=盖亚祝福

@@ -42,7 +42,7 @@ public class ItemExcaliber extends ItemManasteelSword implements IRelic, ILensEf
 	//copied
 	private static final String TAG_ATTACKER_USERNAME = "attackerUsername";
 	private static final String TAG_HOME_ID = "homeID";
-	public static ToolMaterial toolMaterial = EnumHelper.addToolMaterial("B_EXCALIBER", 3, -1, 6.2F, 6F, 40);
+	public static ToolMaterial toolMaterial = EnumHelper.addToolMaterial("B_EXCALIBER", 3, -1, 6.2F, 14F, 40);
 	Achievement achievement;
 	public ItemExcaliber() {
 		super(toolMaterial, LibItemName.EXCALIBER);

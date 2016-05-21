@@ -10,11 +10,9 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.util.ChatComponentTranslation;
 
-import com.meteor.extrabotany.api.extrabotany.handler.IShieldHandler;
-import com.meteor.extrabotany.common.handler.ConfigHandler;
 import com.meteor.extrabotany.common.handler.ShieldHandler;
 
-public class CommandGetShieldAmount extends CommandBase implements IShieldHandler{
+public class CommandGetShieldAmount extends CommandBase{
 	@Override
 	public String getCommandName() {
 		return "getShieldAmount";
@@ -30,7 +28,7 @@ public class CommandGetShieldAmount extends CommandBase implements IShieldHandle
         {
             EntityPlayer player = args.length > 0 ? CommandBase.getPlayer(sender, args[0])
                     : CommandBase.getCommandSenderAsPlayer(sender);
-            sender.addChatMessage(new ChatComponentTranslation("commands.ExtraBotany.getShieldAmount.success", player.getDisplayName(), getShieldAmount((player))));
+            sender.addChatMessage(new ChatComponentTranslation("commands.ExtraBotany.getShieldAmount.success", player.getDisplayName(), ShieldHandler.getShieldAmount((player))));
         }
 	}
 	
@@ -49,32 +47,4 @@ public class CommandGetShieldAmount extends CommandBase implements IShieldHandle
         }
         return null;
     }
-	
-	@Override
-	public float setShieldAmount(float shield, EntityPlayer player) {
-		if(shield <= getMaxShieldAmount(player))
-			ShieldHandler.currentShield = shield;
-		else if(shield > getMaxShieldAmount(player))
-			ShieldHandler.currentShield = getMaxShieldAmount(player);
-		return shield;
-	}
-
-	@Override
-	public float getShieldAmount(EntityPlayer player) {
-		return ShieldHandler.currentShield;
-	}
-	
-	@Override
-	public float addShieldAmount(float shield, EntityPlayer player) {
-		if(getShieldAmount(player) + shield <= getMaxShieldAmount(player))
-			ShieldHandler.currentShield = getShieldAmount(player) + shield;
-		else if(getShieldAmount(player) + shield > getMaxShieldAmount(player))
-			ShieldHandler.currentShield = getMaxShieldAmount(player);
-		return shield;
-	}
-
-	@Override
-	public float getMaxShieldAmount(EntityPlayer player) {
-		return player.getMaxHealth() + ConfigHandler.extraShieldAmount;
-	}
 }

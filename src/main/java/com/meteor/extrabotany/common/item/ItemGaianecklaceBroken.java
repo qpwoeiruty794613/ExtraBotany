@@ -9,7 +9,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.StatCollector;
 import net.minecraft.world.World;
 
-import com.meteor.extrabotany.common.entity.EntityGaiaIII;
+import com.meteor.extrabotany.common.entity.gaia.EntityGaiaIII;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;

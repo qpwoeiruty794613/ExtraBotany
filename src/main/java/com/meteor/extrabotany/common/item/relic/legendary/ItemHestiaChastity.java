@@ -44,7 +44,7 @@ import vazkii.botania.common.entity.EntityManaBurst;
 import vazkii.botania.common.item.equipment.armor.terrasteel.ItemTerrasteelArmor;
 import vazkii.botania.common.item.relic.ItemRelic;
 
-import com.meteor.extrabotany.common.entity.EntityGaiaIII;
+import com.meteor.extrabotany.common.entity.gaia.EntityGaiaIII;
 import com.meteor.extrabotany.common.lib.LibItemName;
 
 import cpw.mods.fml.common.FMLCommonHandler;

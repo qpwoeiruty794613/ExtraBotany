@@ -2,6 +2,9 @@ package com.meteor.extrabotany.common.item;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.ChatComponentTranslation;
+import net.minecraft.util.ChatStyle;
+import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.world.World;
 import net.minecraftforge.common.ChestGenHooks;
 
@@ -26,6 +29,8 @@ public class ItemDungeonBox extends ItemMods{
 			
 			return s.copy();
 			
+		}else{
+			player.addChatMessage(new ChatComponentTranslation("botaniamisc.openChest").setChatStyle(new ChatStyle().setColor(EnumChatFormatting.DARK_GREEN)));
 		}
 		return stack;
 	}

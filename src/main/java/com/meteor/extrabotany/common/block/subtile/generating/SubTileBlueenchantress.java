@@ -1,12 +1,6 @@
 package com.meteor.extrabotany.common.block.subtile.generating;
 
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
-
 import net.minecraft.block.Block;
-import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.ChunkCoordinates;
 import net.minecraft.world.World;
@@ -14,7 +8,6 @@ import net.minecraftforge.common.util.ForgeDirection;
 import vazkii.botania.api.lexicon.LexiconEntry;
 import vazkii.botania.common.Botania;
 import vazkii.botania.common.block.subtile.generating.SubTilePassiveGenerating;
-import vazkii.botania.common.core.helper.ItemNBTHelper;
 import vazkii.botania.common.lib.LibMisc;
 import am2.AMCore;
 

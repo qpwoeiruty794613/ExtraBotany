@@ -4,23 +4,14 @@ Botania Addon WIP
 1.TODO List<br>
 2.Changelog
 ###TODO List
- * Items:
-  * Relics(Completed):
-  * Basics(Completed)
  * Blocks:
-  * Flowers(45% Finished):
-    * NecroFleur(Done)
-    * GeminiOrchid(Done)
-    * NumeronBalsam(Done)
-    * NumeronDandelife(Done)
+  * Flowers(65% Finished):
     * DiplopBamboo
-    * Judas' Vow(Done)
     * Shiny Lilac
-    * OmniViolet(Done)
-  * Basics(60% Finshed)
- * Entities:
-  * Boss(0% Finished):
-    * Gaia III(50%)<br>
+  * Ulitilies(0% Finished)
+	* Resonance House
+ * Lexicon(20% Finished)
+ * Rebalance(5% Fnished)
    
 ###Changelog
 [Click Here](https://github.com/ExtraMeteorP/ExtraBotany/blob/master/changelog.md) 

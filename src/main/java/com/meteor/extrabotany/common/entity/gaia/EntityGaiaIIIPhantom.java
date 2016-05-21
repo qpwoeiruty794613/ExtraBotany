@@ -1,4 +1,4 @@
-package com.meteor.extrabotany.common.entity;
+package com.meteor.extrabotany.common.entity.gaia;
 
 import java.util.List;
 
@@ -149,7 +149,7 @@ public class EntityGaiaIIIPhantom extends EntityMob{
 	@Override
 	public boolean attackEntityAsMob(Entity entity)
     {
-		return entity.attackEntityFrom(DamageSource.causeMobDamage(this), 4F);
+		return entity.attackEntityFrom(DamageSource.causeMobDamage(this), 6F);
     }
 	
 	@Override

@@ -7,35 +7,46 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
+import net.minecraft.item.EnumAction;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 import vazkii.botania.common.item.relic.ItemRelic;
 
-public class ItemGunSnowballCannon extends ItemRelicAdv{
+public class ItemGunSnowballCannon extends ItemGunRelic{
 
 	public ItemGunSnowballCannon(String name) {
 		super(name);
 	}
 	
-	@SideOnly(Side.CLIENT)
-	public boolean isFull3D()
-	{
-	    return true;
+	int shootspeed = 7;
+	
+	@Override
+	public int selectBullet(EntityPlayer player){
+		if(player.inventory.hasItem(Items.snowball))
+		return 1;
+		else return 0;
 	}
 	
 	@Override
-	public ItemStack onItemRightClick(ItemStack stack, World world, EntityPlayer player) {
-		EntityBulletSnowball snowball = new EntityBulletSnowball(world, player);
-		if(ItemRelic.isRightPlayer(player, stack)){
-				 if(player.inventory.hasItem(Items.snowball)) {
-					 	player.inventory.consumeInventoryItem(Items.snowball);
-					 	world.playSoundAtEntity(player, "random.bow", 0.5F, 0.4F / (itemRand.nextFloat() * 0.4F + 0.8F));			 	
-					 	if(!world.isRemote){
-					 		world.spawnEntityInWorld(snowball);
-					 	}
-		      }
-		}
-		return stack;
+	public void consumeBullet(EntityPlayer player){
+		if(selectBullet(player) == 1)
+			player.inventory.consumeInventoryItem(Items.snowball);
+	}
+	
+	@Override
+	public void summonBullet(EntityPlayer player){
+		EntityBulletSnowball snowball = new EntityBulletSnowball(player.worldObj, player);
+		if(selectBullet(player) == 1)
+			player.worldObj.spawnEntityInWorld(snowball);
+	}
+	
+	@Override
+	public void onUsingTick(ItemStack stack, EntityPlayer player, int count) {
+		super.onUsingTick(stack, player, count);
+			if(count <= this.getMaxItemUseDuration(stack)- shootspeed && count % shootspeed == 0){
+				if(ItemGunRelic.isRightPlayer(player, stack))	
+					shoot(player);
+			}
 	}
 
 }

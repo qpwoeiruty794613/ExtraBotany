@@ -18,7 +18,6 @@ import org.lwjgl.opengl.GL11;
 import vazkii.botania.client.core.helper.RenderHelper;
 import vazkii.botania.client.core.helper.ShaderHelper;
 
-import com.meteor.extrabotany.api.extrabotany.handler.IShieldHandler;
 import com.meteor.extrabotany.common.handler.ConfigHandler;
 import com.meteor.extrabotany.common.handler.ShieldHandler;
 import com.meteor.extrabotany.common.lib.LibReference;
@@ -27,7 +26,7 @@ import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class RenderShield implements IShieldHandler{
+public class RenderShield{
 	public static final ResourceLocation shieldBar = LibReference.BAR_SHIELD;
 	private static ResourceLocation textureShield = LibReference.SHIELD;
 	
@@ -41,7 +40,7 @@ public class RenderShield implements IShieldHandler{
 
 			profiler.startSection("shieldBar");
 			EntityPlayer player = mc.thePlayer;
-			int shield = (int) this.getShieldAmount(player);
+			int shield = (int) ShieldHandler.getShieldAmount(player);
 			int maxShield = (int) player.getMaxHealth();
 			boolean creative = false;
 			renderManaInvBar(event.resolution, creative, shield, maxShield);
@@ -111,34 +110,6 @@ public class RenderShield implements IShieldHandler{
 		GL11.glEnable(GL11.GL_LIGHTING);
 		GL11.glShadeModel(GL11.GL_FLAT);
 		GL11.glEnable(GL11.GL_CULL_FACE);
-	}
-	
-	@Override
-	public float setShieldAmount(float shield, EntityPlayer player) {
-		if(shield <= getMaxShieldAmount(player))
-			ShieldHandler.currentShield = shield;
-		else if(shield > getMaxShieldAmount(player))
-			ShieldHandler.currentShield = getMaxShieldAmount(player);
-		return shield;
-	}
-
-	@Override
-	public float getShieldAmount(EntityPlayer player) {
-		return ShieldHandler.currentShield;
-	}
-	
-	@Override
-	public float addShieldAmount(float shield, EntityPlayer player) {
-		if(getShieldAmount(player) + shield <= getMaxShieldAmount(player))
-			ShieldHandler.currentShield = getShieldAmount(player) + shield;
-		else if(getShieldAmount(player) + shield > getMaxShieldAmount(player))
-			ShieldHandler.currentShield = getMaxShieldAmount(player);
-		return shield;
-	}
-
-	@Override
-	public float getMaxShieldAmount(EntityPlayer player) {
-		return player.getMaxHealth() + ConfigHandler.extraShieldAmount;
 	}
 
 }

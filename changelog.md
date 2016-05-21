@@ -1,3 +1,19 @@
+16/5/21
+Less code for Shield System.<br>
+
+16/5/20<br>
+Fix render of guns.<br>
+
+16/5/19<br>
+Add achievements.<br>
+Rebalance Gaia III.<br>
+
+16/5/18<br>
+Gaia III now has its dark side.<br>
+
+16/5/17<br>
+Gaia III is done, I think.<br>
+
 16/5/15<br>
 Gaia III almost done.<br>
 
