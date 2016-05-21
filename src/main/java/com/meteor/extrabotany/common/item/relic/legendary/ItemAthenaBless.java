@@ -13,9 +13,7 @@ import baubles.api.BaubleType;
 import baubles.common.container.InventoryBaubles;
 import baubles.common.lib.PlayerHandler;
 
-import com.meteor.extrabotany.api.extrabotany.handler.IShieldHandler;
 import com.meteor.extrabotany.common.entity.EntityItemUnbreakable;
-import com.meteor.extrabotany.common.handler.ConfigHandler;
 import com.meteor.extrabotany.common.handler.ShieldHandler;
 import com.meteor.extrabotany.common.item.ModItems;
 import com.meteor.extrabotany.common.lib.LibItemName;
@@ -23,7 +21,7 @@ import com.meteor.extrabotany.common.lib.LibItemName;
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 
-public class ItemAthenaBless extends ItemRelicBauble implements IShieldHandler{
+public class ItemAthenaBless extends ItemRelicBauble{
 
 	public ItemAthenaBless(){
 		super(LibItemName.ATHENABLESS);
@@ -55,8 +53,8 @@ public class ItemAthenaBless extends ItemRelicBauble implements IShieldHandler{
 			if(getAthenaBless(player) != null)
 				if(ItemRelic.isRightPlayer(player, getAthenaBless(player)))
 					if(ItemHermesTravelClothing.hasHermesTravelClothing(player))
-					addShieldAmount(event.ammount/5, player);
-					else addShieldAmount(event.ammount/7, player);
+					ShieldHandler.addShieldAmount(event.ammount/5, player);
+					else ShieldHandler.addShieldAmount(event.ammount/7, player);
 				}
 	}
 
@@ -74,33 +72,5 @@ public class ItemAthenaBless extends ItemRelicBauble implements IShieldHandler{
 
 	private static boolean isAthenaBless(ItemStack stack) {
 		return stack != null && (stack.getItem() == ModItems.athenabless || stack.getItem() == ModItems.olympusguard);
-	}
-
-	@Override
-	public float setShieldAmount(float shield, EntityPlayer player) {
-		if(shield <= getMaxShieldAmount(player))
-			ShieldHandler.currentShield = shield;
-		else if(shield > getMaxShieldAmount(player))
-			ShieldHandler.currentShield = getMaxShieldAmount(player);
-		return shield;
-	}
-
-	@Override
-	public float getShieldAmount(EntityPlayer player) {
-		return ShieldHandler.currentShield;
-	}
-	
-	@Override
-	public float addShieldAmount(float shield, EntityPlayer player) {
-		if(getShieldAmount(player) + shield <= getMaxShieldAmount(player))
-			ShieldHandler.currentShield = getShieldAmount(player) + shield;
-		else if(getShieldAmount(player) + shield > getMaxShieldAmount(player))
-			ShieldHandler.currentShield = getMaxShieldAmount(player);
-		return shield;
-	}
-
-	@Override
-	public float getMaxShieldAmount(EntityPlayer player) {
-		return player.getMaxHealth() + ConfigHandler.extraShieldAmount;
 	}
 }

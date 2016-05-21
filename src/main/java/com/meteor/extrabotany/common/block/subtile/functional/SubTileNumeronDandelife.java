@@ -13,12 +13,11 @@ import vazkii.botania.api.lexicon.LexiconEntry;
 import vazkii.botania.api.subtile.RadiusDescriptor;
 import vazkii.botania.api.subtile.SubTileFunctional;
 
-import com.meteor.extrabotany.api.extrabotany.handler.IShieldHandler;
 import com.meteor.extrabotany.common.handler.ConfigHandler;
 import com.meteor.extrabotany.common.handler.ShieldHandler;
 import com.meteor.extrabotany.common.lexicon.LexiconModData;
 
-public class SubTileNumeronDandelife extends SubTileFunctional implements IShieldHandler{
+public class SubTileNumeronDandelife extends SubTileFunctional{
 	private static final int RANGE = 3;
 	private static int isEnable = 0;
 	private static final String TAG_ISENABLE = "enable";
@@ -54,16 +53,13 @@ public class SubTileNumeronDandelife extends SubTileFunctional implements IShiel
 		
 		List<EntityPlayer> players = supertile.getWorldObj().getEntitiesWithinAABB(EntityPlayer.class, AxisAlignedBB.getBoundingBox(supertile.xCoord - RANGE, supertile.yCoord - RANGE, supertile.zCoord - RANGE, supertile.xCoord + RANGE + 1, supertile.yCoord + RANGE + 1, supertile.zCoord + RANGE + 1));
 		for(EntityPlayer player : players) {
-			
-				if(mana > 1 && getShieldAmount(player) < getMaxShieldAmount(player)){
-					if(ticksExisted % DELAY == 0){
-						mana -= 20;
-						addShieldAmount(3F, player);
-						}
-					}
-
+			if(mana > 1 && ShieldHandler.getShieldAmount(player) < ShieldHandler.getMaxShieldAmount(player)){
+				if(ticksExisted % DELAY == 0){
+					mana -= 20;
+					ShieldHandler.addShieldAmount(3F, player);
+				}
 			}
-		
+		}	
 	}
 	
 	@Override
@@ -93,31 +89,4 @@ public class SubTileNumeronDandelife extends SubTileFunctional implements IShiel
 		return new RadiusDescriptor.Square(toChunkCoordinates(), RANGE);
 	}
 
-	@Override
-	public float setShieldAmount(float shield, EntityPlayer player) {
-		if(shield <= getMaxShieldAmount(player))
-			ShieldHandler.currentShield = shield;
-		else if(shield > getMaxShieldAmount(player))
-			ShieldHandler.currentShield = getMaxShieldAmount(player);
-		return shield;
-	}
-
-	@Override
-	public float getShieldAmount(EntityPlayer player) {
-		return ShieldHandler.currentShield;
-	}
-	
-	@Override
-	public float addShieldAmount(float shield, EntityPlayer player) {
-		if(getShieldAmount(player) + shield <= getMaxShieldAmount(player))
-			ShieldHandler.currentShield = getShieldAmount(player) + shield;
-		else if(getShieldAmount(player) + shield > getMaxShieldAmount(player))
-			ShieldHandler.currentShield = getMaxShieldAmount(player);
-		return shield;
-	}
-
-	@Override
-	public float getMaxShieldAmount(EntityPlayer player) {
-		return player.getMaxHealth() + ConfigHandler.extraShieldAmount;
-	}
 }

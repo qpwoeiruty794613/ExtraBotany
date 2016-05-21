@@ -1,3 +1,6 @@
+16/5/21
+Less code for Shield System.<br>
+
 16/5/20<br>
 Fix render of guns.<br>
 
