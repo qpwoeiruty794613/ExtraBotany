@@ -17,7 +17,7 @@ import com.meteor.extrabotany.common.handler.ConfigHandler;
 import com.meteor.extrabotany.common.handler.ShieldHandler;
 import com.meteor.extrabotany.common.lexicon.LexiconModData;
 
-public class SubTileNumeronDandelife extends SubTileFunctional{
+public class SubTileNumerondandelife extends SubTileFunctional{
 	private static final int RANGE = 3;
 	private static int isEnable = 0;
 	private static final String TAG_ISENABLE = "enable";

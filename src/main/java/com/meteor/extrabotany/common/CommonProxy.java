@@ -1,8 +1,5 @@
 package com.meteor.extrabotany.common;
 
-import net.minecraft.item.ItemRecord;
-import net.minecraft.world.World;
-
 import com.meteor.extrabotany.ExtraBotany;
 import com.meteor.extrabotany.common.achievement.ModAchievement;
 import com.meteor.extrabotany.common.block.ModBlocks;

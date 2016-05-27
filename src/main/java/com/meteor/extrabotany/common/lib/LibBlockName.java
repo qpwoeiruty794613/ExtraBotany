@@ -17,6 +17,7 @@ public class LibBlockName {
 	public static final String JUDASVOW = "judasvow";
 	public static final String ARTIFACONIA = "artifaconia";
 	public static final String VOIDUIM = "voiduim";
+	public static final String DIPLOPBAMBOO = "diplopbamboo";
 	
 	public static final String RELICPLATE = "relicplate";
 	public static final String RESONANCEHOUSE = "resonancehouse";

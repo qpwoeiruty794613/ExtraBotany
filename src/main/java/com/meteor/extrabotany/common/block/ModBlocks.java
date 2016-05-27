@@ -13,9 +13,10 @@ import com.meteor.extrabotany.common.block.decor.BlockGaiaQuartzSlab;
 import com.meteor.extrabotany.common.block.decor.BlockGaiaQuartzStairs;
 import com.meteor.extrabotany.common.block.subtile.SubTileJudasvow;
 import com.meteor.extrabotany.common.block.subtile.functional.SubTileArtifaconia;
+import com.meteor.extrabotany.common.block.subtile.functional.SubTileDiplopbamboo;
 import com.meteor.extrabotany.common.block.subtile.functional.SubTileIcebirdium;
 import com.meteor.extrabotany.common.block.subtile.functional.SubTileNecrofluer;
-import com.meteor.extrabotany.common.block.subtile.functional.SubTileNumeronDandelife;
+import com.meteor.extrabotany.common.block.subtile.functional.SubTileNumerondandelife;
 import com.meteor.extrabotany.common.block.subtile.functional.SubTileNumeronbalsam;
 import com.meteor.extrabotany.common.block.subtile.functional.SubTileVoiduim;
 import com.meteor.extrabotany.common.block.subtile.functional.SubTileVolatilily;
@@ -81,6 +82,7 @@ public class ModBlocks {
 	}
 	
 	private static void initTileEntities() {
+		registerSubTile(LibBlockName.DIPLOPBAMBOO, SubTileDiplopbamboo.class);
 		registerSubTile(LibBlockName.VOIDUIM, SubTileVoiduim.class);
 		registerSubTile(LibBlockName.ARTIFACONIA, SubTileArtifaconia.class);
 		registerSubTile(LibBlockName.JUDASVOW, SubTileJudasvow.class);
@@ -90,7 +92,7 @@ public class ModBlocks {
 		registerSubTile(LibBlockName.OMNIVIOLET, SubTileOmniviolet.class);
 		registerSubTile(LibBlockName.WOODIENIA, SubTileWoodienia.class);
 		registerSubTile(LibBlockName.NECRO_FLUER, SubTileNecrofluer.class);
-		registerSubTile(LibBlockName.NUMERON_DANDELIFE, SubTileNumeronDandelife.class);
+		registerSubTile(LibBlockName.NUMERON_DANDELIFE, SubTileNumerondandelife.class);
 		registerSubTile(LibBlockName.GEMINIORCHID, SubTileGeminiorchid.class);
 		registerSubTile(LibBlockName.CANDY_FLOWER, SubTileCandyflower.class);
 		registerSubTile(LibBlockName.SUNSHINE_LILY, SubTileSunshinelily.class);
