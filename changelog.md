@@ -1,4 +1,8 @@
-16/5/21
+16/5/27<br>
+Add Elven Minion.(WIP)<br>
+Add Diplop Bamboo.<br>
+
+16/5/21<br>
 Less code for Shield System.<br>
 
 16/5/20<br>
