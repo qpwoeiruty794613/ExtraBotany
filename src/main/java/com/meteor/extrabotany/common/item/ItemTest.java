@@ -11,9 +11,8 @@ import net.minecraft.util.DamageSource;
 import net.minecraft.util.StatCollector;
 import net.minecraft.world.World;
 
+import com.meteor.extrabotany.common.entity.EntityElven;
 import com.meteor.extrabotany.common.entity.gaia.EntityGaiaIII;
-import com.meteor.extrabotany.common.entity.gaia.EntityMagicCycloneAqua;
-import com.meteor.extrabotany.common.entity.gaia.EntityMagicCycloneChaos;
 
 public class ItemTest extends ItemMods{
 
@@ -49,7 +48,7 @@ public class ItemTest extends ItemMods{
 	@Override
 	public ItemStack onItemRightClick(ItemStack stack, World world, EntityPlayer player) {
 		if(!world.isRemote){
-			EntityMagicCycloneChaos.spawn(world, player.posX, player.posY, player.posZ, 1.0F, 1.0F);
+			EntityElven.spawn(player, player.posX, player.posY, player.posZ);
 		}
 		return stack;	
 	}

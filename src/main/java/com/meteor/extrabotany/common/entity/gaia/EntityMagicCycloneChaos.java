@@ -94,6 +94,8 @@ public class EntityMagicCycloneChaos extends Entity{
 					player.attackEntityFrom(DamageSource.magic, 7F);
 				else if(ticksExisted % 24 == 0)
 					player.attackEntityFrom(ItemRelic.damageSource(), 7F);
+				if(players.size() > 0)
+					worldObj.playSoundAtEntity(this, "botania:attack.shadow", 0.6F, 0.8F + (float) Math.random() * 0.2F);
 			}
 		}
 	}

@@ -73,6 +73,8 @@ public class EntityMagicCycloneIgnis extends Entity{
 					player.setFire(5);
 					player.attackEntityFrom(DamageSource.magic, 5.5F);
 					player.attackEntityFrom(ItemRelic.damageSource(), 4.5F);
+					if(players.size() > 0)
+						worldObj.playSoundAtEntity(this, "botania:attack.fire", 0.6F, 0.8F + (float) Math.random() * 0.2F);
 			}
 		}
 	}
