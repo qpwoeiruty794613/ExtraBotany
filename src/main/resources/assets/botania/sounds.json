@@ -1,4 +1,11 @@
 {
+	"omniviolet": { "category": "block", "sounds":["omni_violet"] },
+	"summon": { "category": "block", "sounds":["summon"] },
+	"attack.lightning": { "category": "block", "sounds":["attack_lightning"] },
+	"attack.shadow": { "category": "block", "sounds":["attack_shadow"] },
+	"attack.frost": { "category": "block", "sounds":["attack_frost"] },
+	"attack.spear": { "category": "block", "sounds":["attack_spear"] },
+	"attack.fire": { "category": "block", "sounds":["attack_fire"] },
 	"music.A": { "category": "record", "sounds":[{"name": "music/A", "stream": true}] },
 	"music.C": { "category": "record", "sounds":[{"name": "music/C", "stream": true}] },
 	"music.B": { "category": "record", "sounds":[{"name": "music/B", "stream": true}] }
