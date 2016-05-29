@@ -20,7 +20,6 @@ public class ExtraBotanyAPI {
 	public static ClientProxy proxy = new ClientProxy();
 	
 	public static Set<Item> diplopbambooBlacklist = new LinkedHashSet<Item>();
-	public static Set<String> diplopbambooBlacklist2 = new LinkedHashSet<String>();
 	
 	public static void addShield(float shield, EntityPlayer player){
 		ShieldHandler.addShieldAmount(shield, player);
@@ -45,12 +44,5 @@ public class ExtraBotanyAPI {
 	public static boolean isItemBlacklistedFromDiplopBamboo(Item item){
 		return diplopbambooBlacklist.contains(item);
 	}
-	
-	public static void blacklistSubTileFromDiplopBamboo(String name){
-		diplopbambooBlacklist2.add(name);
-	}
-	
-	public static boolean isSubTileBlacklistedFromDiplopBamboo(String name){
-		return diplopbambooBlacklist2.contains(name);
-	}
+
 }

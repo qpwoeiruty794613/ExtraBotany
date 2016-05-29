@@ -30,31 +30,39 @@ import com.meteor.extrabotany.common.handler.ConfigHandler;
 import com.meteor.extrabotany.common.handler.ShieldHandler;
 import com.meteor.extrabotany.common.lib.LibReference;
 
+import cpw.mods.fml.common.eventhandler.EventPriority;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
+@SideOnly(Side.CLIENT)
 public class RenderShield{
 	public static final ResourceLocation shieldBar = LibReference.BAR_SHIELD;
 	private static ResourceLocation textureShield = LibReference.SHIELD;
+	
+	@SubscribeEvent(priority = EventPriority.HIGHEST)
+	public void onDrawScreenPre(RenderGameOverlayEvent.Pre event) {
+		Minecraft mc = Minecraft.getMinecraft();
+		Profiler profiler = mc.mcProfiler;
+
+		if(event.type == ElementType.HEALTH) {
+			profiler.startSection("shieldBar");
+			profiler.endSection();
+		}
+	}
 	
 	@SubscribeEvent
 	public void onDrawScreenPost(RenderGameOverlayEvent.Post event) {
 		Minecraft mc = Minecraft.getMinecraft();
 		Profiler profiler = mc.mcProfiler;
-		if(event.type == ElementType.HEALTH) {
-			profiler.startSection("botania-hud");
-			MovingObjectPosition pos = mc.objectMouseOver;
-
+		if(event.type == ElementType.ALL) {
 			profiler.startSection("shieldBar");
-			EntityPlayer player = mc.thePlayer;
-			int shield = 1;
-			int maxShield = 1;
 			boolean creative = false;
 			renderShield(event.resolution, creative);
 			profiler.endSection();
 			GL11.glColor4f(1F, 1F, 1F, 1F);
 		}
+		GameSettings gs = Minecraft.getMinecraft().gameSettings;
 	}
 	
 	/*
@@ -112,12 +120,12 @@ public class RenderShield{
         	if(s1 > 0){
                 for(int i = 0; i < Math.min(ss1 - ra, 10); i++){
     	        	if(s1 > 1 + ra * 2)
-    	        		this.drawTexturedModalRect(xBasePos + 8 * Math.min(ss1 % 1 == 0 ? i : ss1 > 10 + ra ? i : Math.max(i-1, 0), 9), yBasePos - ra, 0, 0, 9, 9);
+    	        		this.drawTexturedModalRect(xBasePos + 8 * Math.min(ss1 % 1 == 0 ? i : ss1 > 10 + ra ? i : Math.max(i-1, 0), 9), yBasePos - ra, 0, highlight ? 9 : 0, 9, 9);
     	        	if(ss1 % 1 != 0 && ss1 <= 10 + ra)
-    	        		this.drawTexturedModalRect(xBasePos + 8 * Math.min(i , 9), yBasePos - ra, 9, 0, 9, 9);
+    	        		this.drawTexturedModalRect(xBasePos + 8 * Math.min(i , 9), yBasePos - ra, 9, highlight ? 9 : 0, 9, 9);
     	        }
             }
-        }    
+        }  
         
         /*
         Ugly code

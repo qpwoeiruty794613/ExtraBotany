@@ -21,5 +21,9 @@ public class ModEvents {
 	    FMLCommonHandler.instance().bus().register(new EventGaiaIII());	
 	    MinecraftForge.EVENT_BUS.register(new EventElven());
 	    FMLCommonHandler.instance().bus().register(new EventElven());	
+	    MinecraftForge.EVENT_BUS.register(new EventAchievement());
+	    FMLCommonHandler.instance().bus().register(new EventAchievement());
+	    MinecraftForge.EVENT_BUS.register(new EventMobDrop());
+	    FMLCommonHandler.instance().bus().register(new EventMobDrop());	
 	}
 }

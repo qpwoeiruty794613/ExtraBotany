@@ -76,6 +76,9 @@ public class LibItemName {
 		"emptydice",//10
 		"resonancefragment",//11
 		"key",//12
+		"heart",//13
+		"shield",//14
+		"mana",//15
 	};
 	
 	public static final String[] BULLET_NAMES = new String[] {

@@ -1,6 +1,8 @@
-16/5/29
+16/5/29<br>
 new Shield Render.<br>
 Fix some bugs.<br>
+Fix a render bug.<br>
+Add new items:mana, heart and shield.<br>
 
 16/5/27<br>
 Add Elven Minion.(WIP)<br>
