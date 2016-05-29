@@ -1,3 +1,7 @@
+16/5/29
+new Shield Render.<br>
+Fix some bugs.<br>
+
 16/5/27<br>
 Add Elven Minion.(WIP)<br>
 Add Diplop Bamboo.<br>

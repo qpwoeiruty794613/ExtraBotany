@@ -4,9 +4,11 @@ import java.util.List;
 
 import com.meteor.extrabotany.common.entity.gaia.EntityMagicCycloneIgnis;
 import com.meteor.extrabotany.common.entity.gaia.EntityMagicMissileII;
+import com.meteor.extrabotany.common.handler.ElvenHandler;
 
 import vazkii.botania.common.Botania;
 import vazkii.botania.common.core.helper.MathHelper;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityAgeable;
 import net.minecraft.entity.EntityCreature;
 import net.minecraft.entity.EntityLivingBase;
@@ -18,17 +20,21 @@ import net.minecraft.entity.item.EntityXPOrb;
 import net.minecraft.entity.monster.EntityMob;
 import net.minecraft.entity.passive.EntityTameable;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Items;
+import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.pathfinding.PathEntity;
 import net.minecraft.server.management.PreYggdrasilConverter;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.world.World;
 
 public class EntityElven extends EntityTameable{
+
+	ElvenHandler eh = new ElvenHandler(this);
 	
 	public static final int affinity = 0;
-	public static final float ATK = 0F;
-	public static final float ASPD = 0F;
-	public static final int lifetime = 0;
+	public static final float ATK = 3F;
+	public static final float ASPD = 40F;
 	public static final int level = 0;
 	public static final float color_r = 2.3F;
 	public static final float color_g = 2.3F;
@@ -43,7 +49,7 @@ public class EntityElven extends EntityTameable{
 	private static final String TAG_AFFINITY = "affinity";
 	private static final String TAG_ATTACK = "ATK";
 	private static final String TAG_ATTACKSPEED = "ASPD";
-	private static final String TAG_LIFETIME = "lifetime";
+	private static final String TAG_SITTING = "isSitting";
 	private static final String TAG_LEVEL = "level";
 	private static final String TAG_COLOR_R = "r";
 	private static final String TAG_COLOR_G = "g";
@@ -61,7 +67,7 @@ public class EntityElven extends EntityTameable{
 	public EntityElven(World world) {
 		super(world);
 		this.setSize(0F, 0F);
-		this.experienceValue = 0;
+		this.experienceValue = 3000;
 		this.setTamed(false);
 		this.getNavigator().setAvoidsWater(true);
 		tasks.addTask(0, new EntityAISwimming(this));
@@ -77,8 +83,8 @@ public class EntityElven extends EntityTameable{
 			e.setEXP(exp);
 			e.setATK(ATK);
 			e.setASPD(ASPD);
-			e.setLevel(20);
-			e.setLifetime(lifetime);
+			e.setLevel(0);
+			e.setSitting(false);
 			e.setRGBS(color_r, color_g, color_b, size);
 			e.setTamed(true);
 			e.setOwnerName(player.getUniqueID().toString());
@@ -97,7 +103,7 @@ public class EntityElven extends EntityTameable{
 		dataWatcher.addObject(18, 0);//affinity
 		dataWatcher.addObject(19, 0F);//ATK
 		dataWatcher.addObject(20, 0F);//ASPD
-		dataWatcher.addObject(21, 0);//lifetime
+		dataWatcher.addObject(21, (byte) 0);//isSitting
 		dataWatcher.addObject(22, 0);//level
 		dataWatcher.addObject(23, 0F);//r
 		dataWatcher.addObject(24, 0F);//g
@@ -122,8 +128,8 @@ public class EntityElven extends EntityTameable{
 		return dataWatcher.getWatchableObjectFloat(20);
 	}
 	
-	public int getLifetime(){
-		return dataWatcher.getWatchableObjectInt(21);
+	public boolean isSitting(){
+		return dataWatcher.getWatchableObjectByte(21) == 1;
 	}
 	
 	public int getLevel(){
@@ -182,8 +188,8 @@ public class EntityElven extends EntityTameable{
 		dataWatcher.updateObject(20, aspd);
 	}
 	
-	public void setLifetime(int lifetime){
-		dataWatcher.updateObject(21, lifetime);
+	public void setSitting(boolean b){
+		dataWatcher.updateObject(21, (byte) (b ? 1 : 0));
 	}
 	
 	public void setLevel(int level){
@@ -227,7 +233,7 @@ public class EntityElven extends EntityTameable{
 		nbt.setInteger(TAG_AFFINITY, getAffinity());
 		nbt.setFloat(TAG_ATTACK, getATK());
 		nbt.setFloat(TAG_ATTACKSPEED, getASPD());
-		nbt.setInteger(TAG_LIFETIME, getLifetime());
+		nbt.setBoolean(TAG_SITTING, isSitting());
 		nbt.setInteger(TAG_LEVEL, getLevel());
 		nbt.setFloat(TAG_COLOR_R, getR());
 		nbt.setFloat(TAG_COLOR_G, getG());
@@ -246,7 +252,7 @@ public class EntityElven extends EntityTameable{
 		setAffinity(nbt.getInteger(TAG_AFFINITY));
 		setATK(nbt.getFloat(TAG_ATTACK));
 		setASPD(nbt.getFloat(TAG_ATTACKSPEED));
-		setLifetime(nbt.getInteger(TAG_LIFETIME));
+		setSitting(nbt.getBoolean(TAG_SITTING));
 		setLevel(nbt.getInteger(TAG_LEVEL));
 		setRGBS(nbt.getFloat(TAG_COLOR_R), nbt.getFloat(TAG_COLOR_G), nbt.getFloat(TAG_COLOR_B), nbt.getFloat(TAG_SIZE));  
 		setRange(nbt.getFloat(TAG_RANGE));
@@ -275,17 +281,7 @@ public class EntityElven extends EntityTameable{
 	
 	@Override
 	public void onUpdate(){
-		super.onUpdate();
-		//gain level
-		if(getLevel() < 100)
-			if(getLevel() < 20)
-				if(getEXP() >= 100)
-					setEXP(getEXP() - 100);
-					setLevel(getLevel() + 1);
-			if(getLevel() >= 20)
-				if(getEXP() >= Math.pow(getLevel(), 2)/Math.min(3, getLevel()/10))
-					setEXP((int) (getEXP() - Math.pow(getLevel(), 2)/Math.min(3, getLevel()/10)));
-					setLevel(getLevel() + 1);	
+		super.onUpdate();	
 					
 	}
 	
@@ -293,76 +289,102 @@ public class EntityElven extends EntityTameable{
 	public void onLivingUpdate() {
 		super.onLivingUpdate();
 		
+		this.motionX = 0;
+		this.motionY = 0;
+		this.motionZ = 0;
+		
 		if(this.getOwner() != null){
-			this.posX = this.getOwner().posX;
-			this.posY = this.getOwner().posY + 1F;
-			this.posZ = this.getOwner().posZ;
+			
+			if(!isSitting()){
+				this.posX = this.getOwner().posX;
+				this.posY = this.getOwner().posY + 0.74F;
+				this.posZ = this.getOwner().posZ;
+			}else{
+				this.posX = eh.getLastPosX();
+				this.posY = eh.getLastPosY() + 0.74F;
+				this.posZ = eh.getLastPosZ();
+			}
 		}else{
-			this.motionX = 0;
-			this.motionY = 0;
-			this.motionZ = 0;
+			this.posX = eh.getLastPosX();
+			this.posY = eh.getLastPosY() + 0.74F;
+			this.posZ = eh.getLastPosZ();
 		}
+		
+		float ATK = getATK() + eh.getExtraATK();
+		float RANGE = getRange() + eh.getExtraRange();
+		float ASPD = getASPD() + eh.getExtraRange();
 		
 		//gain xp
-		List<EntityXPOrb> xps = this.worldObj.getEntitiesWithinAABB(EntityXPOrb.class, AxisAlignedBB.getBoundingBox(this.posX - getRange(), this.posY - getRange(), this.posZ - getRange(), this.posX + getRange() + 1, this.posY + getRange() + 1, this.posZ + getRange() + 1));
+		List<EntityXPOrb> xps = this.worldObj.getEntitiesWithinAABB(EntityXPOrb.class, AxisAlignedBB.getBoundingBox(this.posX - RANGE, this.posY - RANGE, this.posZ - RANGE, this.posX + RANGE + 1, this.posY + RANGE + 1, this.posZ + RANGE + 1));
 		for(EntityXPOrb xp : xps){
 			if(getLevel() < 100)
-				xp.xpValue -=1;
-				setEXP(getEXP() + 1);
+				setEXP(getEXP() + xp.xpValue);
+				xp.setDead();
 		}
 		
-		List<EntityPlayer> players = this.worldObj.getEntitiesWithinAABB(EntityPlayer.class, AxisAlignedBB.getBoundingBox(this.posX - getRange(), this.posY - getRange(), this.posZ - getRange(), this.posX + getRange() + 1, this.posY + getRange() + 1, this.posZ + getRange() + 1));
+		List<EntityPlayer> players = this.worldObj.getEntitiesWithinAABB(EntityPlayer.class, AxisAlignedBB.getBoundingBox(this.posX - RANGE, this.posY - RANGE, this.posZ - RANGE, this.posX + RANGE + 1, this.posY + RANGE + 1, this.posZ + RANGE + 1));
 		
 		//sparkle
 		Botania.proxy.sparkleFX(this.worldObj, this.posX, this.posY, this.posZ, getR(), getG(), getB(), getSize(), 6);
 		Botania.proxy.sparkleFX(this.worldObj, this.posX, this.posY, this.posZ, getR(), getG(), getB(), getSize()/10, 2);
 		
-		//gain lifetime
-		if(ticksExisted % 20 == 0)
-			setLifetime(getLifetime() + 1);
-		
-		//gain affinity
-		if(getLifetime() % 180 == 0)
+		//gain affinity automatically
+		if(ticksExisted % 3600 == 0)
 			if(Math.random() > 0.7)
 				if(getAffinity() < 30)
 					setAffinity(getAffinity() + 1);
 		
+		//get mobs around
 		List<EntityMob> mobs = this.worldObj.getEntitiesWithinAABB(EntityMob.class, AxisAlignedBB.getBoundingBox(this.posX - getRange(), this.posY - getRange(), this.posZ - getRange(), this.posX + getRange() + 1, this.posY + getRange() + 1, this.posZ + getRange() + 1));
 		int s = mobs.size();
 		
+		//cool down
 		if(getDelay() > 0)
 			setDelay(getDelay() - 1);
 		
 		//attack
-		if(!this.worldObj.isRemote){
-			if(ticksExisted % (getASPD() + 20 ) == 0){
-				//gain abilities
-				setATK((float)(Math.min(Math.max(0, getLevel() - 4)/8, 6 * (1 + getAffinity()/100))));
-				setASPD((float)(Math.max(40 - getLevel()/3, 25  * (1 - getAffinity()/400))));
-				setRange((float)(Math.min(getRange() + getLevel()/5, 16F)));
+		if(!this.worldObj.isRemote && !isSitting()){
+			if(ticksExisted % (ASPD + 20 ) == 0){
 				
 				do{
 				
-					setDelay((int)(getASPD() + 10));
+					setDelay((int)(ASPD + 10));
 				
 					for(int i = 0; i < s + 1; i++){
-						spawnMissile();
+						EntityMagicMissileII missile = new EntityMagicMissileII(this, false);
+						missile.setPosition(this.posX + (Math.random() - 0.5 * 0.1), this.posY + 0.68F + (Math.random() - 0.5 * 0.1), this.posZ + (Math.random() - 0.5 * 0.1));
+						missile.setATK(ATK);
+						if(missile.getTarget()) {
+							worldObj.playSoundAtEntity(this, "botania:missile", 0.6F, 0.8F + (float) Math.random() * 0.2F);
+							worldObj.spawnEntityInWorld(missile);
+						}
 					}
 				
-				}while(s > 0 && getDelay() == 0 && getATK() > 0 && getASPD() > 0);
+				}while(s > 0 && getDelay() == 0 && ATK > 0 && ASPD > 0);
 			}
 		}
 	}
 	
-	void spawnMissile() {
-				EntityMagicMissileII missile = new EntityMagicMissileII(this, false);
-				missile.setPosition(posX + (Math.random() - 0.5 * 0.1), posY + (Math.random() - 0.5 * 0.1), posZ + (Math.random() - 0.5 * 0.1));
-				missile.setATK(getATK());
-				if(missile.getTarget()) {
-					worldObj.playSoundAtEntity(this, "botania:missile", 0.6F, 0.8F + (float) Math.random() * 0.2F);
-					worldObj.spawnEntityInWorld(missile);
-			}
-	}
+	public boolean interact(EntityPlayer player)
+    {
+        ItemStack itemstack = player.inventory.getCurrentItem();
+
+        if (this.isTamed())
+        {
+        	if(player == this.getOwner()){
+        		if(!worldObj.isRemote)
+        			eh.setLastPos(player.posX, player.posY, player.posZ);
+        			setSitting(!isSitting());
+        			this.isJumping = false;
+        			this.setPathToEntity((PathEntity)null);
+        			this.setTarget((Entity)null);
+        			this.setAttackTarget((EntityLivingBase)null);
+        			return true;
+        	}
+        }
+        
+        return super.interact(player);
+    }
 
 	@Override
 	public EntityAgeable createChild(EntityAgeable p_90011_1_) {

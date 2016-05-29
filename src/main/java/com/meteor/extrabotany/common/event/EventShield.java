@@ -25,7 +25,7 @@ public class EventShield{
 			EntityPlayer player = (EntityPlayer) event.entity;
 			if(ShieldHandler.getShieldAmount(player) > 0F){
 				float dam = event.ammount - ShieldHandler.getShieldAmount(player);
-				float cur = Math.abs(dam);
+				float cur = ShieldHandler.getShieldAmount(player) - event.ammount;
 				event.ammount = Math.max(0, dam);
 				ShieldHandler.setShieldAmount(Math.max(0, cur), player);
 			}

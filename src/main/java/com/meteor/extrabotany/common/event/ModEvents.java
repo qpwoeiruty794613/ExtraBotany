@@ -19,5 +19,7 @@ public class ModEvents {
 	    FMLCommonHandler.instance().bus().register(new EventUnbreakable());	
 	    MinecraftForge.EVENT_BUS.register(new EventGaiaIII());
 	    FMLCommonHandler.instance().bus().register(new EventGaiaIII());	
+	    MinecraftForge.EVENT_BUS.register(new EventElven());
+	    FMLCommonHandler.instance().bus().register(new EventElven());	
 	}
 }

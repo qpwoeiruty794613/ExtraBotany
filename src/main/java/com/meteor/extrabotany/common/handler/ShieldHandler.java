@@ -8,23 +8,25 @@ import net.minecraftforge.common.IExtendedEntityProperties;
 
 public class ShieldHandler implements IExtendedEntityProperties{
 
-	public static float setShieldAmount(float shield, EntityPlayer player) {
-		currentShield = Math.min(shield, getMaxShieldAmount(player));
-		return shield;
+	public static void setShieldAmount(float shield, EntityPlayer player) {
+		ShieldHandler sh = ShieldHandler.get(player);
+		sh.currentShield = Math.min(shield, getMaxShieldAmount(player));
 	}
 
 	public static float getShieldAmount(EntityPlayer player) {
-		return currentShield;
+		ShieldHandler sh = ShieldHandler.get(player);
+		return sh.currentShield;
 	}
 
-	public static float addShieldAmount(float shield, EntityPlayer player) {
-		currentShield = Math.min(getShieldAmount(player) + shield, getMaxShieldAmount(player));
-		return shield;
+	public static void addShieldAmount(float shield, EntityPlayer player) {
+		ShieldHandler sh = ShieldHandler.get(player);
+		sh.currentShield = Math.min(getShieldAmount(player) + shield, getMaxShieldAmount(player));
 	}
 
 	public static float getMaxShieldAmount(EntityPlayer player) {
-		maxShield = player.getMaxHealth() + ConfigHandler.extraShieldAmount;
-		return maxShield;
+		ShieldHandler sh = ShieldHandler.get(player);
+		sh.maxShield = Math.min(player.getMaxHealth() + ConfigHandler.extraShieldAmount, 100F);
+		return sh.maxShield;
 	}
 
 	public final static String EXT_PROP_NAME = "Shield";
