@@ -33,6 +33,7 @@ public class SubTileVoiduim extends SubTileFunctional{
 				Random rand = supertile.getWorldObj().rand;
 				int bound = RANGE + 1;
 				EntityItem entity = new EntityItem(supertile.getWorldObj(), supertile.xCoord - RANGE + rand.nextInt(bound) , supertile.yCoord + 1, supertile.zCoord - RANGE + rand.nextInt(bound), stack);
+				
 				entity.motionX = 0;
 				entity.motionY = 0;
 				entity.motionZ = 0;

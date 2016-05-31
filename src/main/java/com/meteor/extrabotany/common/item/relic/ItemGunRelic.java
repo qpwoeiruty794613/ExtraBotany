@@ -28,12 +28,12 @@ public class ItemGunRelic extends ItemGun implements IRelic{
 	Achievement achievement;
 	
 	
-	ItemStack s1 = new ItemStack(ExtraBotanyAPI.Items.bullet,1,0);//explo
-	ItemStack s2 = new ItemStack(ExtraBotanyAPI.Items.bullet,1,2);//high
-	ItemStack s3 = new ItemStack(ExtraBotanyAPI.Items.bullet,1,3);//meteor
-	ItemStack s4 = new ItemStack(ExtraBotanyAPI.Items.bullet,1,1);//gold
-	ItemStack s5 = new ItemStack(ExtraBotanyAPI.Items.bullet,1,5);//silver
-	ItemStack s6 = new ItemStack(ExtraBotanyAPI.Items.bullet,1,4);//musket
+	ItemStack s1 = new ItemStack(ExtraBotanyAPI.ModItems.bullet,1,0);//explo
+	ItemStack s2 = new ItemStack(ExtraBotanyAPI.ModItems.bullet,1,2);//high
+	ItemStack s3 = new ItemStack(ExtraBotanyAPI.ModItems.bullet,1,3);//meteor
+	ItemStack s4 = new ItemStack(ExtraBotanyAPI.ModItems.bullet,1,1);//gold
+	ItemStack s5 = new ItemStack(ExtraBotanyAPI.ModItems.bullet,1,5);//silver
+	ItemStack s6 = new ItemStack(ExtraBotanyAPI.ModItems.bullet,1,4);//musket
 	
 	public ItemGunRelic(String name) {
 		super(name);

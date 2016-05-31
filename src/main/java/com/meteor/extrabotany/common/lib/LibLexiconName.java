@@ -1,6 +1,12 @@
 package com.meteor.extrabotany.common.lib;
 
 public class LibLexiconName {
+	//Other
+	public static final String O_PICKUP = "pickup";
+	public static final String O_COMMAND = "command";
+	public static final String O_SHIELD = "shield";
+	//Mana
+	public static final String M_PYLON = "ancientpylon";
 	//Generating
 	public static final String GFLOWER_CANDYFLOWER = "candyflower";
 	public static final String GFLOWER_BLUEENCHANTRESS = "blueenchantress";
@@ -16,6 +22,8 @@ public class LibLexiconName {
 	public static final String FFLOWER_NUMERONBALSAM = "numeronbalsam";
 	public static final String FFLOWER_VOLATILILY = "volatilily";
 	public static final String FFLOWER_JUDASVOW = "judasvow";
+	public static final String FFLOWER_DIPLOPBAMBOO = "diplopbamboo";
+	public static final String FFLOWER_VOIDUIM = "voiduim";
 	//Fun
 	public static final String D_INFINITYMANA = "infinitymana";
 	//Relics
@@ -45,6 +53,7 @@ public class LibLexiconName {
 	public static final String BA_ASTRALFORCE = "astralforce";
 	public static final String BA_QUARTZ = "quartz";
 	public static final String BA_GOLDSTRING = "goldstring";
+	public static final String BA_TELEPORTPEARL = "teleportpearl";
 	//Gun
 	public static final String G_GUNBASE = "gunbase";
 	public static final String G_GUNTACTICALSHOTGUN = "tacticalshotgun";

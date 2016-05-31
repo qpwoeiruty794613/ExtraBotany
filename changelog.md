@@ -1,3 +1,10 @@
+16/5/31<br>
+Add new generating flower:Pysch-O-Bloom.<br>
+Add new textures.<br>
+
+16/5/30<br>
+Add new generating flower:Stonesia.<br>
+
 16/5/29<br>
 new Shield Render.<br>
 Fix some bugs.<br>
