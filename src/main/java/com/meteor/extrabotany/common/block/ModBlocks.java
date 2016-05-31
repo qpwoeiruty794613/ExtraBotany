@@ -26,6 +26,8 @@ import com.meteor.extrabotany.common.block.subtile.generating.SubTileCandyflower
 import com.meteor.extrabotany.common.block.subtile.generating.SubTileGeminiorchid;
 import com.meteor.extrabotany.common.block.subtile.generating.SubTileMoonlightlily;
 import com.meteor.extrabotany.common.block.subtile.generating.SubTileOmniviolet;
+import com.meteor.extrabotany.common.block.subtile.generating.SubTilePyschobloom;
+import com.meteor.extrabotany.common.block.subtile.generating.SubTileStonesia;
 import com.meteor.extrabotany.common.block.subtile.generating.SubTileSunshinelily;
 import com.meteor.extrabotany.common.block.tile.TileAncientPylon;
 import com.meteor.extrabotany.common.block.tile.TileRelicPlate;
@@ -78,10 +80,13 @@ public class ModBlocks {
 		
 		registerTile(TileAncientPylon.class, LibBlockName.ANCIENTPYLON);
 		registerTile(TileRelicPlate.class, LibBlockName.RELICPLATE);
+		
 		initTileEntities();
 	}
 	
 	private static void initTileEntities() {
+		registerSubTile(LibBlockName.PYSCHOBLOOM, SubTilePyschobloom.class);
+		registerSubTile(LibBlockName.STONESIA, SubTileStonesia.class);
 		registerSubTile(LibBlockName.DIPLOPBAMBOO, SubTileDiplopbamboo.class);
 		registerSubTile(LibBlockName.VOIDUIM, SubTileVoiduim.class);
 		registerSubTile(LibBlockName.ARTIFACONIA, SubTileArtifaconia.class);

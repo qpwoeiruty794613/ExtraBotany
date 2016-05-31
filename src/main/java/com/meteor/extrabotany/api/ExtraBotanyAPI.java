@@ -1,11 +1,13 @@
 package com.meteor.extrabotany.api;
 
+import java.util.HashMap;
 import java.util.LinkedHashSet;
+import java.util.Map;
 import java.util.Set;
 
-import vazkii.botania.api.subtile.SubTileEntity;
 import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 
 import com.meteor.extrabotany.client.ClientProxy;
@@ -15,8 +17,8 @@ import com.meteor.extrabotany.common.item.ModItems;
 
 public class ExtraBotanyAPI {
 	
-	public static ModItems Items = new ModItems();
-	public static ModBlocks Blocks = new ModBlocks();
+	public static ModItems ModItems = new ModItems();
+	public static ModBlocks ModBlocks = new ModBlocks();
 	public static ClientProxy proxy = new ClientProxy();
 	
 	public static Set<Item> diplopbambooBlacklist = new LinkedHashSet<Item>();
