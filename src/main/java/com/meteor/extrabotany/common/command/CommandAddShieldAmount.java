@@ -10,7 +10,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.util.ChatComponentTranslation;
 
-import com.meteor.extrabotany.common.handler.ShieldHandler;
+import com.meteor.extrabotany.common.handler.PropertyHandler;
 
 public class CommandAddShieldAmount extends CommandBase{
     public int getRequiredPermissionLevel()
@@ -45,8 +45,8 @@ public class CommandAddShieldAmount extends CommandBase{
             String s = args[1];
             int i = parseInt(sender, s);
             
-            ShieldHandler.addShieldAmount(i, player);
-            sender.addChatMessage(new ChatComponentTranslation("commands.ExtraBotany.addShieldAmount.success", player.getDisplayName(), ShieldHandler.getShieldAmount((player))));
+            PropertyHandler.addShieldAmount(i, player);
+            sender.addChatMessage(new ChatComponentTranslation("commands.ExtraBotany.addShieldAmount.success", player.getDisplayName(), PropertyHandler.getShieldAmount((player))));
         }
 	}
 	

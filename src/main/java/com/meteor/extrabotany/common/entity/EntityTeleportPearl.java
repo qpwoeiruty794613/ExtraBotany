@@ -30,6 +30,11 @@ public class EntityTeleportPearl extends EntityThrowable
         super(world, posX, posY, posZ);
     }
     
+    @Override
+    protected float getGravityVelocity(){
+        return 0.0015F;
+    }
+    
     protected void onImpact(MovingObjectPosition object)
     {
         if (object.entityHit != null)
@@ -58,7 +63,7 @@ public class EntityTeleportPearl extends EntityThrowable
                         this.getThrower().mountEntity((Entity)null);
                     }
 
-                    this.getThrower().setPositionAndUpdate(event.targetX, event.targetY, event.targetZ);
+                    	this.getThrower().setPositionAndUpdate(event.targetX, event.targetY, event.targetZ);
                     }
                 }
             }

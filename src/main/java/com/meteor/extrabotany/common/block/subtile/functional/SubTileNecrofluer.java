@@ -19,7 +19,6 @@ import com.meteor.extrabotany.common.lexicon.LexiconModData;
 
 public class SubTileNecrofluer extends SubTileFunctional{
 	private static final int RANGE = 1;
-	private static String placerName;
 	private static final int DELAY = 20;
 	
 	@Override
@@ -33,15 +32,6 @@ public class SubTileNecrofluer extends SubTileFunctional{
 	}
 	
 	@Override
-	public void onBlockPlacedBy(World world, int x, int y, int z, EntityLivingBase entity, ItemStack stack) {
-		super.onBlockPlacedBy(world, x, y, z, entity, stack);
-		if(entity instanceof EntityPlayer){
-			EntityPlayer player = (EntityPlayer) entity;
-			this.placerName = player.getDisplayName();
-		}		
-	}
-	
-	@Override
 	public void onUpdate() {
 		super.onUpdate();		
 		if(redstoneSignal > 0)
@@ -51,12 +41,6 @@ public class SubTileNecrofluer extends SubTileFunctional{
 		for(EntityLivingBase living : livings) {
 			if(mana < 50)
 				return;
-			
-				if(living instanceof EntityPlayer){
-					EntityPlayer player = (EntityPlayer) living;
-					if(player.getDisplayName() == this.placerName)
-						return;
-				}
 				
 				if(living instanceof EntityLiving){
 					if(ticksExisted % DELAY == 0){
@@ -64,7 +48,7 @@ public class SubTileNecrofluer extends SubTileFunctional{
 							l.attackEntityFrom(ItemRelic.damageSource(), 5F);
 							l.addPotionEffect(new PotionEffect(Potion.moveSlowdown.id, 40 , 2));
 							l.addPotionEffect(new PotionEffect(Potion.blindness.id, 40 , 2));
-							mana -= 40;
+							mana -= 25;
 						}
 					}
 			}

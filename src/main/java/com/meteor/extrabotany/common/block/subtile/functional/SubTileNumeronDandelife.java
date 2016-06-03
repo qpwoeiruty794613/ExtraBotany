@@ -14,10 +14,10 @@ import vazkii.botania.api.subtile.RadiusDescriptor;
 import vazkii.botania.api.subtile.SubTileFunctional;
 
 import com.meteor.extrabotany.common.handler.ConfigHandler;
-import com.meteor.extrabotany.common.handler.ShieldHandler;
+import com.meteor.extrabotany.common.handler.PropertyHandler;
 import com.meteor.extrabotany.common.lexicon.LexiconModData;
 
-public class SubTileNumeronDandelife extends SubTileFunctional{
+public class SubTileNumerondandelife extends SubTileFunctional{
 	private static final int RANGE = 3;
 	private static int isEnable = 0;
 	private static final String TAG_ISENABLE = "enable";
@@ -53,10 +53,10 @@ public class SubTileNumeronDandelife extends SubTileFunctional{
 		
 		List<EntityPlayer> players = supertile.getWorldObj().getEntitiesWithinAABB(EntityPlayer.class, AxisAlignedBB.getBoundingBox(supertile.xCoord - RANGE, supertile.yCoord - RANGE, supertile.zCoord - RANGE, supertile.xCoord + RANGE + 1, supertile.yCoord + RANGE + 1, supertile.zCoord + RANGE + 1));
 		for(EntityPlayer player : players) {
-			if(mana > 1 && ShieldHandler.getShieldAmount(player) < ShieldHandler.getMaxShieldAmount(player)){
+			if(mana > 1 && PropertyHandler.getShieldAmount(player) < PropertyHandler.getMaxShieldAmount(player)){
 				if(ticksExisted % DELAY == 0){
 					mana -= 20;
-					ShieldHandler.addShieldAmount(3F, player);
+					PropertyHandler.addShieldAmount(3F, player);
 				}
 			}
 		}	

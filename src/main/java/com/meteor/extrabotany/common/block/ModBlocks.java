@@ -13,9 +13,10 @@ import com.meteor.extrabotany.common.block.decor.BlockGaiaQuartzSlab;
 import com.meteor.extrabotany.common.block.decor.BlockGaiaQuartzStairs;
 import com.meteor.extrabotany.common.block.subtile.SubTileJudasvow;
 import com.meteor.extrabotany.common.block.subtile.functional.SubTileArtifaconia;
+import com.meteor.extrabotany.common.block.subtile.functional.SubTileDiplopbamboo;
 import com.meteor.extrabotany.common.block.subtile.functional.SubTileIcebirdium;
 import com.meteor.extrabotany.common.block.subtile.functional.SubTileNecrofluer;
-import com.meteor.extrabotany.common.block.subtile.functional.SubTileNumeronDandelife;
+import com.meteor.extrabotany.common.block.subtile.functional.SubTileNumerondandelife;
 import com.meteor.extrabotany.common.block.subtile.functional.SubTileNumeronbalsam;
 import com.meteor.extrabotany.common.block.subtile.functional.SubTileVoiduim;
 import com.meteor.extrabotany.common.block.subtile.functional.SubTileVolatilily;
@@ -25,6 +26,8 @@ import com.meteor.extrabotany.common.block.subtile.generating.SubTileCandyflower
 import com.meteor.extrabotany.common.block.subtile.generating.SubTileGeminiorchid;
 import com.meteor.extrabotany.common.block.subtile.generating.SubTileMoonlightlily;
 import com.meteor.extrabotany.common.block.subtile.generating.SubTileOmniviolet;
+import com.meteor.extrabotany.common.block.subtile.generating.SubTilePyschobloom;
+import com.meteor.extrabotany.common.block.subtile.generating.SubTileStonesia;
 import com.meteor.extrabotany.common.block.subtile.generating.SubTileSunshinelily;
 import com.meteor.extrabotany.common.block.tile.TileAncientPylon;
 import com.meteor.extrabotany.common.block.tile.TileRelicPlate;
@@ -77,10 +80,14 @@ public class ModBlocks {
 		
 		registerTile(TileAncientPylon.class, LibBlockName.ANCIENTPYLON);
 		registerTile(TileRelicPlate.class, LibBlockName.RELICPLATE);
+		
 		initTileEntities();
 	}
 	
 	private static void initTileEntities() {
+		registerSubTile(LibBlockName.PYSCHOBLOOM, SubTilePyschobloom.class);
+		registerSubTile(LibBlockName.STONESIA, SubTileStonesia.class);
+		registerSubTile(LibBlockName.DIPLOPBAMBOO, SubTileDiplopbamboo.class);
 		registerSubTile(LibBlockName.VOIDUIM, SubTileVoiduim.class);
 		registerSubTile(LibBlockName.ARTIFACONIA, SubTileArtifaconia.class);
 		registerSubTile(LibBlockName.JUDASVOW, SubTileJudasvow.class);
@@ -90,7 +97,7 @@ public class ModBlocks {
 		registerSubTile(LibBlockName.OMNIVIOLET, SubTileOmniviolet.class);
 		registerSubTile(LibBlockName.WOODIENIA, SubTileWoodienia.class);
 		registerSubTile(LibBlockName.NECRO_FLUER, SubTileNecrofluer.class);
-		registerSubTile(LibBlockName.NUMERON_DANDELIFE, SubTileNumeronDandelife.class);
+		registerSubTile(LibBlockName.NUMERON_DANDELIFE, SubTileNumerondandelife.class);
 		registerSubTile(LibBlockName.GEMINIORCHID, SubTileGeminiorchid.class);
 		registerSubTile(LibBlockName.CANDY_FLOWER, SubTileCandyflower.class);
 		registerSubTile(LibBlockName.SUNSHINE_LILY, SubTileSunshinelily.class);

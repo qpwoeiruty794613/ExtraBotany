@@ -28,6 +28,7 @@ public class ItemBaubleDog extends ItemBauble implements ICosmeticBauble{
 	public ItemBaubleDog() {
 		super(LibItemName.BAUBLEDOG);
 		setHasSubtypes(true);
+		this.setMaxStackSize(1);
 	}
 	
 	@Override

@@ -78,6 +78,8 @@ public class EntityMagicCycloneAqua extends Entity{
 					player.attackEntityFrom(DamageSource.magic, 1.5F);
 					player.attackEntityFrom(ItemRelic.damageSource(), 1.5F);
 					EntityHandler.knockBack(player, this, 10F, 8F);
+					if(players.size() > 0)
+						worldObj.playSoundAtEntity(this, "botania:attack.frost", 0.6F, 0.8F + (float) Math.random() * 0.2F);
 			}
 		}
 	}

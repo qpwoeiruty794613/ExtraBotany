@@ -55,6 +55,7 @@ public class ExtraBotanyCreativeTab extends CreativeTabs{
 		addItem(ModItems.lokighostrick);
 		addItem(ModItems.olympusguard);
 		addItem(ModItems.cthulhueye);
+		addItem(ModItems.hermeswand);
 		//Test
 		addItem(ModItems.itemtest);
 		//Basic
@@ -76,6 +77,7 @@ public class ExtraBotanyCreativeTab extends CreativeTabs{
 		addBlock(ModBlocks.elvenquartzslab);
 		//Baubles
 		addItem(ModItems.dog);
+		addItem(ModItems.gaiawise);
 		//Bullets
 		addItem(ModItems.bullet);
 		//Weapons

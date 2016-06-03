@@ -25,7 +25,7 @@ public class Intergration {
 	}
 	
 	public static void init(FMLInitializationEvent event) {
-
+		
 	}
 	
 	public static void postInit(FMLPostInitializationEvent event) {

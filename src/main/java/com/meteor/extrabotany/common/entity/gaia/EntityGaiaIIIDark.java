@@ -372,7 +372,10 @@ public class EntityGaiaIIIDark extends EntityCreature implements IBotaniaBossWit
 						ItemStack dice = new ItemStack(instance.dice20);
 						ItemRelic.bindToUsernameS(playersWhoAttacked.get(pl), dice);
 						entityDropItem(dice, 1F);
-				}
+				}	
+					entityDropItem(new ItemStack(instance.material, 1, 13), rand.nextInt(14) + 8);
+					entityDropItem(new ItemStack(instance.material, 1, 14), rand.nextInt(14) + 8);
+					entityDropItem(new ItemStack(instance.material, 1, 15), rand.nextInt(30) + 22);
 
 					if(Math.random() < 0.25)
 						entityDropItem(new ItemStack(ModItems.overgrowthSeed, rand.nextInt(3) + 1), 1F);

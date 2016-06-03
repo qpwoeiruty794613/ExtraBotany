@@ -9,7 +9,6 @@ import vazkii.botania.api.lexicon.LexiconEntry;
 import vazkii.botania.common.Botania;
 import vazkii.botania.common.block.subtile.generating.SubTilePassiveGenerating;
 import vazkii.botania.common.lib.LibMisc;
-import am2.AMCore;
 
 import com.meteor.extrabotany.common.handler.ConfigHandler;
 import com.meteor.extrabotany.common.lexicon.LexiconModData;
@@ -67,7 +66,6 @@ public class SubTileBlueenchantress extends SubTilePassiveGenerating{
 	}
 	
 	public int getBurnTime(Block block){
-		if(block == AMCore.proxy.blocks.liquidEssence) return 400;
 		if(block == CandyCraft.GrenadineStatic) return 80;
 		else return 0;
 	}

@@ -1,12 +1,16 @@
 package com.meteor.extrabotany.common;
 
-import net.minecraft.item.ItemRecord;
-import net.minecraft.world.World;
+import java.util.HashMap;
+import java.util.Map;
+
+import net.minecraft.nbt.NBTTagCompound;
 
 import com.meteor.extrabotany.ExtraBotany;
+import com.meteor.extrabotany.api.ExtraBotanyAPI;
 import com.meteor.extrabotany.common.achievement.ModAchievement;
 import com.meteor.extrabotany.common.block.ModBlocks;
 import com.meteor.extrabotany.common.block.ModMultiBlocks;
+import com.meteor.extrabotany.common.block.subtile.generating.SubTileStonesia;
 import com.meteor.extrabotany.common.command.ModCommands;
 import com.meteor.extrabotany.common.enchantment.ModEnchantment;
 import com.meteor.extrabotany.common.entity.ModEntities;
@@ -57,4 +61,17 @@ public class CommonProxy {
     {
     	new ModCommands(event);
     }
+    
+    private static final Map<String, NBTTagCompound> extendedEntityData = new HashMap<String, NBTTagCompound>();
+    
+    public static void storeEntityData(String name, NBTTagCompound compound)
+    {
+    	extendedEntityData.put(name, compound);
+    }
+
+    public static NBTTagCompound getEntityData(String name)
+    {
+    	return extendedEntityData.remove(name);
+    }
+    
 }

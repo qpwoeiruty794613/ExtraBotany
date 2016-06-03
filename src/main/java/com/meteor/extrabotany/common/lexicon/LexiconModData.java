@@ -10,6 +10,7 @@ import vazkii.botania.common.item.block.ItemBlockSpecialFlower;
 import vazkii.botania.common.lexicon.BLexiconEntry;
 import vazkii.botania.common.lexicon.DLexiconEntry;
 import vazkii.botania.common.lexicon.page.PageCraftingRecipe;
+import vazkii.botania.common.lexicon.page.PageImage;
 import vazkii.botania.common.lexicon.page.PageManaInfusionRecipe;
 import vazkii.botania.common.lexicon.page.PageMultiblock;
 import vazkii.botania.common.lexicon.page.PagePetalRecipe;
@@ -26,6 +27,10 @@ import com.meteor.extrabotany.common.recipe.ModPetalRecipe;
 import com.meteor.extrabotany.common.recipe.ModRecipe;
 
 public class LexiconModData {
+	//Other
+	public static LexiconEntry pickup;
+	public static LexiconEntry command;
+	public static LexiconEntry shield;
 	//Generating 
 	public static LexiconEntry candyflower;
 	public static LexiconEntry blueenchantress;
@@ -33,6 +38,8 @@ public class LexiconModData {
 	public static LexiconEntry moonlightlily;
 	public static LexiconEntry geminiorchid;
 	public static LexiconEntry ominiviolet;
+	public static LexiconEntry pyschobloom;
+	public static LexiconEntry stonesia;
 	//Functional
 	public static LexiconEntry necrofleur;
 	public static LexiconEntry numerondandelife;
@@ -41,6 +48,9 @@ public class LexiconModData {
 	public static LexiconEntry numeronbalsam;
 	public static LexiconEntry volatilily;
 	public static LexiconEntry judasvow;
+	public static LexiconEntry diplopbamboo;
+	public static LexiconEntry voiduim;
+	public static LexiconEntry artifaconia;
 	//Fun
 	public static LexiconEntry infinitymana;
 	//Relics
@@ -69,6 +79,7 @@ public class LexiconModData {
 	public static LexiconEntry goldstring;
 	public static LexiconEntry astralforce;
 	public static LexiconEntry quartz;
+	public static LexiconEntry teleportpearl;
 	//Gun
 	public static LexiconEntry gunbase;
 	public static LexiconEntry gunphoenixblaster;
@@ -83,40 +94,65 @@ public class LexiconModData {
 		categoryExtra.setIcon(LibReference.EXTRA);
 		categoryExtra.setPriority(0);
 		BotaniaAPI.addCategory(categoryExtra);	
+		//Other
+		pickup = new ELexiconEntry(LibLexiconName.O_PICKUP, categoryExtra);
+		pickup.setLexiconPages(new PageText("0"));
+		pickup.setIcon(new ItemStack(ModItems.material, 1, 15));
+		
+		command = new ELexiconEntry(LibLexiconName.O_COMMAND, categoryExtra);
+		command.setLexiconPages(new PageText("0"));
+		command.setIcon(new ItemStack(vazkii.botania.common.item.ModItems.cosmetic, 1, 31));
+		
+		shield = new ELexiconEntry(LibLexiconName.O_SHIELD, categoryExtra);
+		shield.setLexiconPages(new PageText("0"), new PageText("1"), new PageImage("2", ""));
+		shield.setIcon(new ItemStack(ModItems.material, 1, 14));
 		//Basic
 		blankcard = new BLexiconEntry(LibLexiconName.BA_BLANKCARD, categoryExtra);
 		blankcard.setLexiconPages(new PageText("0"), 
 				new PageManaInfusionRecipe("1", ModManaInfusionRecipe.blankCardRecipe));
 		blankcard.setIcon(new ItemStack(ModItems.material, 1, 1));
+		
 		shard = new BLexiconEntry(LibLexiconName.BA_PRISMATICSHARD, categoryExtra);
 		shard.setLexiconPages(new PageText("0"));
 		shard.setIcon(new ItemStack(ModItems.material));
+		
 		petal = new BLexiconEntry(LibLexiconName.BA_PETAL, categoryExtra);
 		petal.setLexiconPages(new PageText("0"));
 		petal.setIcon(new ItemStack(ModItems.lycorisrandom));
+		
 		goldstring = new ELexiconEntry(LibLexiconName.BA_GOLDSTRING, categoryExtra);
 		goldstring.setLexiconPages(new PageText("0"), 
 				new PageCraftingRecipe("1", ModRecipe.goldString));
 		goldstring.setIcon(new ItemStack(ModItems.material,1,9));
+		
 		quartz = new ELexiconEntry(LibLexiconName.BA_QUARTZ, categoryExtra);
 		quartz.setLexiconPages(new PageText("0"), 
 				new PageCraftingRecipe("1", ModRecipe.elvenQuartz), 
 				new PageCraftingRecipe("2", ModRecipe.gaiaQuartz));
 		quartz.setIcon(new ItemStack(ModItems.material,1,7));
+		
+		teleportpearl = new ELexiconEntry(LibLexiconName.BA_TELEPORTPEARL, categoryExtra);
+		teleportpearl.setLexiconPages(new PageText("0"), new PageCraftingRecipe("1", ModRecipe.teleportpearl));
+		teleportpearl.setIcon(new ItemStack(ModItems.teleportpearl));
+		
 		//Gun
 		gunbase = new BLexiconEntry(LibLexiconName.G_GUNBASE, categoryExtra);
 		gunbase.setLexiconPages(new PageText("0"),
 				new PageText("1"));
 		gunbase.setIcon(new ItemStack(ModItems.gunboomstick));
+		
 		gunphoenixblaster = new ELexiconEntry(LibLexiconName.G_GUNPHOENIXBLASTER, categoryExtra);
 		gunphoenixblaster.setLexiconPages(new PageText("0"));
 		gunphoenixblaster.setIcon(new ItemStack(ModItems.gunphoenixblaster));
+		
 		gunsnowballcannon = new ELexiconEntry(LibLexiconName.G_GUNSNOWBALLCANNON, categoryExtra);
 		gunsnowballcannon.setLexiconPages(new PageText("0"));
 		gunsnowballcannon.setIcon(new ItemStack(ModItems.snowballlauncher));
+		
 		guntacticalshotgun = new ELexiconEntry(LibLexiconName.G_GUNTACTICALSHOTGUN, categoryExtra);
 		guntacticalshotgun.setLexiconPages(new PageText("0"));
 		guntacticalshotgun.setIcon(new ItemStack(ModItems.guntacticalshotgun));
+		
 		gunbullet = new BLexiconEntry(LibLexiconName.G_GUNBULLET, categoryExtra);
 		gunbullet.setLexiconPages(new PageText("0"),
 				new PageCraftingRecipe("1", ModRecipe.bullet0),
@@ -163,6 +199,16 @@ public class LexiconModData {
 		geminiorchid.setLexiconPages(new PageText("0"),
 				new PagePetalRecipe("1", ModPetalRecipe.geminiorchidRecipe));
 		geminiorchid.setIcon(ItemBlockSpecialFlower.ofType(LibBlockName.GEMINIORCHID));
+		
+		stonesia = new ELexiconEntry(LibLexiconName.GFLOWER_STONESIA, BotaniaAPI.categoryGenerationFlowers);
+		stonesia.setLexiconPages(new PageText("0"),
+				new PagePetalRecipe("1", ModPetalRecipe.stonesiaRecipe));
+		stonesia.setIcon(ItemBlockSpecialFlower.ofType(LibBlockName.STONESIA));
+		
+		pyschobloom = new ELexiconEntry(LibLexiconName.GFLOWER_PYSCHOBLOOM, BotaniaAPI.categoryGenerationFlowers);
+		pyschobloom.setLexiconPages(new PageText("0"),
+				new PagePetalRecipe("1", ModPetalRecipe.pyschobloomRecipe));
+		pyschobloom.setIcon(ItemBlockSpecialFlower.ofType(LibBlockName.PYSCHOBLOOM));
 		//Functional
 		necrofleur = new ELexiconEntry(LibLexiconName.FFLOWER_NECROFLEUR, BotaniaAPI.categoryFunctionalFlowers);
 		necrofleur.setLexiconPages(new PageText("0"),
@@ -194,10 +240,25 @@ public class LexiconModData {
 				new PagePetalRecipe("1", ModPetalRecipe.numeronbalsamRecipe));
 		numeronbalsam.setIcon(ItemBlockSpecialFlower.ofType(LibBlockName.NUMERON_BALSAM));
 		
+		diplopbamboo = new ELexiconEntry(LibLexiconName.FFLOWER_DIPLOPBAMBOO, BotaniaAPI.categoryFunctionalFlowers);
+		diplopbamboo.setLexiconPages(new PageText("0"),
+				new PagePetalRecipe("1", ModPetalRecipe.numeronbalsamRecipe));
+		diplopbamboo.setIcon(ItemBlockSpecialFlower.ofType(LibBlockName.DIPLOPBAMBOO));
+		
+		voiduim = new ELexiconEntry(LibLexiconName.FFLOWER_VOIDUIM, BotaniaAPI.categoryFunctionalFlowers);
+		voiduim.setLexiconPages(new PageText("0"),
+				new PagePetalRecipe("1", ModPetalRecipe.numeronbalsamRecipe));
+		voiduim.setIcon(ItemBlockSpecialFlower.ofType(LibBlockName.VOIDUIM));
+		
 		woodienia = new ELexiconEntry(LibLexiconName.FFLOWER_WOODIENIA, BotaniaAPI.categoryFunctionalFlowers);
 		woodienia.setLexiconPages(new PageText("0"),
 				new PagePetalRecipe("1", ModPetalRecipe.woodieniaRecipe));
 		woodienia.setIcon(ItemBlockSpecialFlower.ofType(LibBlockName.WOODIENIA));
+		
+		artifaconia = new ELexiconEntry(LibLexiconName.FFLOWER_ARTIFACONIA, BotaniaAPI.categoryFunctionalFlowers);
+		artifaconia.setLexiconPages(new PageText("0"),
+				new PagePetalRecipe("1", ModPetalRecipe.artifaconiaRecipe));
+		artifaconia.setIcon(ItemBlockSpecialFlower.ofType(LibBlockName.ARTIFACONIA));
 		//For Fun
 		infinitymana = new DLexiconEntry(LibLexiconName.D_INFINITYMANA, categoryExtra);
 		infinitymana.setIcon(new ItemStack(vazkii.botania.common.block.ModBlocks.pool));

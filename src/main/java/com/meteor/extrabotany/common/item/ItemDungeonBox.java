@@ -18,19 +18,21 @@ public class ItemDungeonBox extends ItemMods{
 	@Override
 	public ItemStack onItemRightClick(ItemStack stack, World world, EntityPlayer player) {
 		ItemStack s = ChestGenHooks.getOneItem(ChestGenHooks.DUNGEON_CHEST, player.worldObj.rand);
-		if(player.inventory.hasItemStack(new ItemStack(ModItems.material,1,12)) && !player.worldObj.isRemote){	
-			int a = player.worldObj.rand.nextInt(2) + 1;
-			do{
-				player.inventory.consumeInventoryItem(new ItemStack(ModItems.material,1,12).getItem());
-				ItemStack s1 = ChestGenHooks.getOneItem(ChestGenHooks.DUNGEON_CHEST, player.worldObj.rand);
-				player.inventory.addItemStackToInventory(s1);
-				a--;
-			} while(a != 0);
-			
-			return s.copy();
-			
-		}else{
-			player.addChatMessage(new ChatComponentTranslation("botaniamisc.openChest").setChatStyle(new ChatStyle().setColor(EnumChatFormatting.DARK_GREEN)));
+		if(!player.worldObj.isRemote){
+			if(player.inventory.hasItemStack(new ItemStack(ModItems.material,1,12))){	
+				int a = player.worldObj.rand.nextInt(2) + 1;
+				do{
+					player.inventory.consumeInventoryItem(new ItemStack(ModItems.material,1,12).getItem());
+					ItemStack s1 = ChestGenHooks.getOneItem(ChestGenHooks.DUNGEON_CHEST, player.worldObj.rand);
+					player.inventory.addItemStackToInventory(s1);
+					a--;
+				} while(a != 0);
+				
+				return s.copy();
+				
+			}else if(!player.inventory.hasItemStack(new ItemStack(ModItems.material,1,12))){
+				player.addChatMessage(new ChatComponentTranslation("botaniamisc.openChest").setChatStyle(new ChatStyle().setColor(EnumChatFormatting.DARK_GREEN)));
+			}
 		}
 		return stack;
 	}

@@ -10,7 +10,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.util.ChatComponentTranslation;
 
-import com.meteor.extrabotany.common.handler.ShieldHandler;
+import com.meteor.extrabotany.common.handler.PropertyHandler;
 
 public class CommandGetShieldAmount extends CommandBase{
 	@Override
@@ -28,7 +28,7 @@ public class CommandGetShieldAmount extends CommandBase{
         {
             EntityPlayer player = args.length > 0 ? CommandBase.getPlayer(sender, args[0])
                     : CommandBase.getCommandSenderAsPlayer(sender);
-            sender.addChatMessage(new ChatComponentTranslation("commands.ExtraBotany.getShieldAmount.success", player.getDisplayName(), ShieldHandler.getShieldAmount((player))));
+            sender.addChatMessage(new ChatComponentTranslation("commands.ExtraBotany.getShieldAmount.success", player.getDisplayName(), PropertyHandler.getShieldAmount((player))));
         }
 	}
 	

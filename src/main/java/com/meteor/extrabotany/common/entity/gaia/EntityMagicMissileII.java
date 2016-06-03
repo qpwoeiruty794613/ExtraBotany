@@ -4,6 +4,7 @@ import java.util.List;
 
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.DamageSource;
@@ -15,6 +16,7 @@ import vazkii.botania.common.entity.EntityMagicMissile;
 public class EntityMagicMissileII extends EntityMagicMissile{
 	int time = 0;
 	double lockX, lockY = -1, lockZ;
+	private static final String TAG_ATK = "ATK";
 	public EntityMagicMissileII(EntityLivingBase thrower, boolean evil) {
 		super(thrower, evil);
 	}
@@ -23,6 +25,33 @@ public class EntityMagicMissileII extends EntityMagicMissile{
 		super(world);
 		setSize(0F, 0F);
 	}
+	
+	@Override
+	protected void entityInit() {
+		super.entityInit();
+		dataWatcher.addObject(27, 0F);
+	}
+	
+	public float getATK(){
+		return dataWatcher.getWatchableObjectFloat(27);
+	}
+	
+	public void setATK(float atk){
+		dataWatcher.updateObject(27, atk);
+	}
+	
+	@Override
+	public void writeEntityToNBT(NBTTagCompound cmp) {
+		super.writeEntityToNBT(cmp);
+		cmp.setFloat(TAG_ATK, getATK());
+	}
+
+	@Override
+	public void readEntityFromNBT(NBTTagCompound cmp) {
+		super.readEntityFromNBT(cmp);
+		setATK(cmp.getFloat(TAG_ATK));
+	}
+
 	
 	@Override
 	public void onUpdate() {
@@ -47,9 +76,10 @@ public class EntityMagicMissileII extends EntityMagicMissile{
 
 		Botania.proxy.setSparkleFXCorrupt(evil);
 		for(int i = 0; i < steps; i++) {
-			Botania.proxy.sparkleFX(worldObj, particlePos.x, particlePos.y, particlePos.z, 1.99F, 0.97F, 0.20F, 0.95F, 2);
+			Botania.proxy.sparkleFX(worldObj, particlePos.x, particlePos.y, particlePos.z, 1F, evil ? 0F : 0.4F, 1F, 0.8F, 2);
 			if(worldObj.rand.nextInt(steps) <= 1)
-				Botania.proxy.sparkleFX(worldObj, particlePos.x + (Math.random() - 0.5) * 0.4, particlePos.y + (Math.random() - 0.5) * 0.4, particlePos.z + (Math.random() - 0.5) * 0.4, 1.99F, 0.97F, 0.20F, 0.95F, 2);
+				Botania.proxy.sparkleFX(worldObj, particlePos.x + (Math.random() - 0.5) * 0.4, particlePos.y + (Math.random() - 0.5) * 0.4, particlePos.z + (Math.random() - 0.5) * 0.4, 1F, evil ? 0F : 0.4F, 1F, 0.8F, 2);
+
 			particlePos.add(step);
 		}
 		Botania.proxy.setSparkleFXCorrupt(false);
@@ -76,9 +106,9 @@ public class EntityMagicMissileII extends EntityMagicMissile{
 				EntityLivingBase thrower = getThrower();
 				if(thrower != null) {
 					EntityPlayer player = thrower instanceof EntityPlayer ? (EntityPlayer) thrower : null;
-					target.attackEntityFrom(player == null ? DamageSource.causeMobDamage(thrower) : DamageSource.causePlayerDamage(player), evil ? 12 : 7);
+					target.attackEntityFrom(player == null ? DamageSource.causeMobDamage(thrower) : DamageSource.causePlayerDamage(player), getATK());
 				} else {
-					target.attackEntityFrom(DamageSource.generic, evil ? 12 : 7);
+					target.attackEntityFrom(DamageSource.generic, getATK());
 				}
 				
 				setDead();

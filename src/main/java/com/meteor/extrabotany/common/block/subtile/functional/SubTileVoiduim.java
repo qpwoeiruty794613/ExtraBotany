@@ -6,6 +6,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Random;
 
+import com.meteor.extrabotany.common.lexicon.LexiconModData;
+
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
@@ -13,12 +15,18 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.WeightedRandom;
 import net.minecraftforge.oredict.OreDictionary;
 import vazkii.botania.api.BotaniaAPI;
+import vazkii.botania.api.lexicon.LexiconEntry;
 import vazkii.botania.api.subtile.SubTileFunctional;
 
 public class SubTileVoiduim extends SubTileFunctional{
 	
 	private static final int DELAY = 200;
 	private static final int RANGE = 3;
+	
+	@Override
+	public LexiconEntry getEntry() {
+		return LexiconModData.voiduim;
+	}
 	
 	@Override
 	public void onUpdate() {
@@ -33,6 +41,7 @@ public class SubTileVoiduim extends SubTileFunctional{
 				Random rand = supertile.getWorldObj().rand;
 				int bound = RANGE + 1;
 				EntityItem entity = new EntityItem(supertile.getWorldObj(), supertile.xCoord - RANGE + rand.nextInt(bound) , supertile.yCoord + 1, supertile.zCoord - RANGE + rand.nextInt(bound), stack);
+				
 				entity.motionX = 0;
 				entity.motionY = 0;
 				entity.motionZ = 0;

@@ -69,6 +69,9 @@ item.petalpurple.name=Purple Petal of Lycorisradiata
 item.goldstring.name=Golden Infused String
 item.resonancefragment.name=Resonance Fragment
 item.key.name=Key
+item.heart.name=Heart Crystal
+item.mana.name=Mana Crystal
+item.shield.name=Shield Point
 
 # -RECORD
 item.botania:recordA.name=Cirno's scret record
@@ -95,6 +98,7 @@ item.botania:dog0.name=Annoying Dog
 item.botania:dog1.name=Annoying Dog
 item.botania:dog2.name=Annoying Dog
 item.botania:dog3.name=Annoying Dog
+item.botania:gaiawise.name=Gaia's Wisdom
 item.box.name=Mystery Box
 item.dungeonbox.name=Dungeon Box
 item.pill.name=SCP-500
@@ -118,6 +122,7 @@ item.botania:lokighostrick.name=Loki's Ghostrick
 item.botania:olympusguard.name=Guard of Olympus
 item.botania:hermestravelclothing.name=Hermes's Travel Clothing
 item.botania:cthulhueye.name=Eye of Cthulhu
+item.botania:hermeswand.name=Hermes's Travel Wand
 
 # -WEAPON
 item.phoenixblaster.name=Phoenix Blaster
@@ -127,6 +132,8 @@ item.flintlock.name=Flintlock
 item.shotgun.name=Shotgun
 item.pistol.name=Pistol
 item.snowballlauncher.name=Snowball Cannon
+item.scissorbladepurple.name=Purple Scissor Blade
+item.scissorbladered.name=Red Scissor Blade
 
 # —BULLET
 item.bulletexploding.name=Exploding Bullet
@@ -142,6 +149,11 @@ item.test.desc=ONLY FOR DEVELOPER
 
 # LEXICON ENTRIES
 # -BASIC
+# --TELEPORTPEARL
+botania.entry.teleportpearl=Teleport Pearl
+botania.page.teleportpearl0=
+botania.page.teleportpearl1=
+
 # --BLANKCARD
 botania.entry.blankcard=Blank Card
 botania.tagline.blankcard=No Game No Life
@@ -164,7 +176,7 @@ botania.page.prismaticshard0=
 
 # --GOLDSTRING
 botania.entry.goldstring=Golden Infused String
-botania.tagline.goldstring=Which is more important, Wealth or Health?
+botania.tagline.goldstring=
 botania.page.goldstring0=
 botania.page.goldstring1=
 
@@ -246,6 +258,16 @@ botania.entry.ominiviolet=Omini Violet
 botania.page.ominiviolet0=
 botania.page.ominiviolet1=
 
+# --STONESIA
+botania.entry.stonesia=Stonesia
+botania.page.stonesia0=
+botania.page.stonesia1=
+
+# --PYSCHOBLOOM
+botania.entry.pyschobloom=Pysch-O-Bloom
+botania.page.pyschobloom0=
+botania.page.pyschobloom1=
+
 # -FUNCTIONAL
 # --NECROFLEUR
 botania.entry.necrofleur=Necrofleur
@@ -282,9 +304,38 @@ botania.entry.volatilily=Volatilily
 botania.page.volatilily0=By placing it above the pool, Volatilily will start to fish. Its products can be different kinds of fishes, awful rubbishes, mystery treasures and so on. Provide a redstone signal can stop it from working.
 botania.page.volatilily1=You can't judge a book by its cover.
 
+# --DIPLOPBAMBOO
+botania.entry.diplopbamboo=Diplop Bamboo
+botania.page.diplopbamboo0=
+botania.page.diplopbamboo1=
+
+# --VOIDUIM
+botania.entry.voiduim=Voiduim
+botania.page.voiduim0=
+botania.page.voiduim1=
+
+# --ARTIFACONIA
+botania.entry.artifaconia=Artifaconia
+botania.page.artifaconia0=
+botania.page.artifaconia1=
+
 # -OTHERS
 # --INFINITYMANA
 botania.entry.infinitymana=Infinite Mana
+
+# --COMMANDS
+botania.entry.command=Commands
+botania.page.command0=
+
+# --PICKUP
+botania.entry.pickup=Drops
+botania.page.pickup0=
+
+# --SHIELD
+botania.entry.shield=Shield
+botania.page.shield0=
+botania.page.shield1=
+botania.page.shield2=
 
 # -RELICS
 # --HESTIACHASTITY
@@ -337,6 +388,13 @@ botania.entry.vhandgun=Valkyrie Handguns
 botania.tagline.vhandgun=
 botania.page.vhandgun0=
 
+# --GAIA
+botania.entry.gaia3=Gaia Guardian III
+botania.page.gaia30=
+botania.page.gaia31=
+botania.page.gaia32=
+botania.page.gaia33=
+
 #FLOWER NAMES
 # -GENERATING
 tile.botania:flower.candyflower.name=Candy Flower
@@ -362,6 +420,14 @@ botania.tagline.ominiviolet=Eye of Providence
 tile.botania:flower.geminiorchid.name=Gemini Orchid
 tile.botania:flower.geminiorchid.reference=Another...?
 botania.tagline.geminiorchid=
+
+tile.botania:flower.pyschobloom.name=Pysch-O-Bloom
+tile.botania:flower.pyschobloom.reference=
+botania.tagline.pyschobloom=
+
+tile.botania:flower.stonesia.name=Stonesia
+tile.botania:flower.stonesia.reference=
+botania.tagline.stonesia=
 
 # -FUNCTIONAL
 tile.botania:flower.numerondandelife.name=Numeron Dandelife
@@ -395,6 +461,14 @@ botania.tagline.numeronbalsam=My hammer burns with holy fire
 tile.botania:flower.judasvow.name=Judas' Vow
 tile.botania:flower.judasvow.reference=My pleasure
 botania.tagline.judasvow=For justice
+
+tile.botania:flower.voiduim.name=Voiduim
+tile.botania:flower.voiduim.reference=
+botania.tagline.voiduim=
+
+tile.botania:flower.diplopbamboo.name=Diplop Bamboo
+tile.botania:flower.diplopbamboo.reference=
+botania.tagline.diplopbamboo=
 
 #ACHIEVEMENTS
 # -RELICS
@@ -462,6 +536,9 @@ config.ExtraBotany.efficiencySunshinelily.desc=The efficiency of Sunshine Lily.
 config.ExtraBotany.efficiencyMoonlightlily.desc=The efficiency of Moonlight Lily.
 config.ExtraBotany.efficiencyBlueenchantress.desc=The efficiency of Blue Enchantress.
 config.ExtraBotany.efficiencyCandyflower.desc=The efficiency of Candy Flower.
-
-# -CLIENT
-config.ExtraBotany.shieldBarHeight.desc=The height of the shield display bar is under the mana display bar. You can change this if you have changed where the mana display bar is.
+config.ExtraBotany.efficiencyGeminiorchid.desc=The efficiency of Gemini Orchid.
+config.ExtraBotany.efficiencyOminiviolet.desc=The efficiency of Omni Violet.
+config.ExtraBotany.efficiencyPyschobloom.desc=The efficiency of Pysch-O-Bloom.
+config.ExtraBotany.efficiencyStonesia.desc=The efficiency of Stonesia.
+config.ExtraBotany.pyschobloomMax.desc=The maximum efficiency of Pysch-O-Bloom.
+config.ExtraBotany.disableShieldRender.desc=Whether to disable special effect of Shield Render. Set true to disable.

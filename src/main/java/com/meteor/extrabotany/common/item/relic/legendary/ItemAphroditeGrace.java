@@ -12,7 +12,7 @@ import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import vazkii.botania.common.item.relic.ItemRelic;
 
 import com.meteor.extrabotany.common.handler.ConfigHandler;
-import com.meteor.extrabotany.common.handler.ShieldHandler;
+import com.meteor.extrabotany.common.handler.PropertyHandler;
 import com.meteor.extrabotany.common.lib.LibItemName;
 
 import cpw.mods.fml.common.FMLCommonHandler;
@@ -38,7 +38,7 @@ public class ItemAphroditeGrace extends ItemRelicArmorSet{
 	            	if(ItemRelic.isRightPlayer(player, stack))
 	            	if(event.ammount >= 6.0F){
 	            		
-	            		ShieldHandler.addShieldAmount(event.ammount/2, player);
+	            		PropertyHandler.addShieldAmount(event.ammount/2, player);
 
 	            		Collection<PotionEffect> potions = player.getActivePotionEffects();
 	            		

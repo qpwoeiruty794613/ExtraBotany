@@ -14,7 +14,7 @@ import baubles.common.container.InventoryBaubles;
 import baubles.common.lib.PlayerHandler;
 
 import com.meteor.extrabotany.common.entity.EntityItemUnbreakable;
-import com.meteor.extrabotany.common.handler.ShieldHandler;
+import com.meteor.extrabotany.common.handler.PropertyHandler;
 import com.meteor.extrabotany.common.item.ModItems;
 import com.meteor.extrabotany.common.lib.LibItemName;
 
@@ -53,8 +53,8 @@ public class ItemAthenaBless extends ItemRelicBauble{
 			if(getAthenaBless(player) != null)
 				if(ItemRelic.isRightPlayer(player, getAthenaBless(player)))
 					if(ItemHermesTravelClothing.hasHermesTravelClothing(player))
-					ShieldHandler.addShieldAmount(event.ammount/5, player);
-					else ShieldHandler.addShieldAmount(event.ammount/7, player);
+					PropertyHandler.addShieldAmount(event.ammount/5, player);
+					else PropertyHandler.addShieldAmount(event.ammount/7, player);
 				}
 	}
 

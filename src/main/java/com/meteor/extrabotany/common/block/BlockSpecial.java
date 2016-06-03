@@ -21,6 +21,8 @@ public class BlockSpecial extends BlockSpecialFlower {
 			LibBlockName.MOONLIGHT_LILY,
 			LibBlockName.OMNIVIOLET,
 			LibBlockName.GEMINIORCHID,
+			LibBlockName.STONESIA,
+			LibBlockName.PYSCHOBLOOM,
 			//Functional
 			LibBlockName.NUMERON_DANDELIFE,
 			LibBlockName.NECRO_FLUER,
@@ -31,6 +33,7 @@ public class BlockSpecial extends BlockSpecialFlower {
 			LibBlockName.JUDASVOW,
 			LibBlockName.ARTIFACONIA,
 			LibBlockName.VOIDUIM,
+			LibBlockName.DIPLOPBAMBOO,
 		}));
 	}	
 		

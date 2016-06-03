@@ -12,9 +12,11 @@ import com.meteor.extrabotany.common.item.basic.ItemRecordA;
 import com.meteor.extrabotany.common.item.basic.ItemRecordB;
 import com.meteor.extrabotany.common.item.basic.ItemRecordC;
 import com.meteor.extrabotany.common.item.equipment.ItemBaubleDog;
+import com.meteor.extrabotany.common.item.equipment.ItemGaiaWise;
 import com.meteor.extrabotany.common.item.relic.ItemGunPhoenixBlaster;
 import com.meteor.extrabotany.common.item.relic.ItemGunSnowballCannon;
 import com.meteor.extrabotany.common.item.relic.ItemGunTacticalShotgun;
+import com.meteor.extrabotany.common.item.relic.ItemHermesWand;
 import com.meteor.extrabotany.common.item.relic.legendary.ItemAphroditeGrace;
 import com.meteor.extrabotany.common.item.relic.legendary.ItemAthenaBless;
 import com.meteor.extrabotany.common.item.relic.legendary.ItemCronusPhantom;
@@ -66,6 +68,9 @@ public class ModItems {
 	public static Item gaianecklacebroken;
 	public static Item olympusguard;
 	public static Item dog;
+	public static Item hermeswand;
+	
+	public static Item gaiawise;
 	
 	public static Item itemtest;
 	public static Item material;
@@ -110,9 +115,9 @@ public class ModItems {
 
 		material = new ItemMaterial(LibItemName.MATERIAL);
 		bullet = new ItemBullet(LibItemName.BULLET);
-		gaianecklacebroken = new ItemMods(LibItemName.GAIANECKLACEBROKEN);
 				
 		dog = new ItemBaubleDog();
+		gaiawise = new ItemGaiaWise(LibItemName.GAIAWISE);
 		
 		lokighostrick = new ItemLokiGhostrick(LibItemName.LOKIGHOSTRICK);
 		cthulhueye = new ItemCthulhuEye();
@@ -129,6 +134,7 @@ public class ModItems {
 		aphroditegrace = new ItemAphroditeGrace(2, LibItemName.APHRODITEGRACE);
 		olympusguard = new ItemOlympusGuard(LibItemName.OLYMPUSGUARD);
 		hermestravelclothing = new ItemHermesTravelClothing(1, LibItemName.HERMESTRAVELCLOTHING);
+		hermeswand = new ItemHermesWand(LibItemName.HERMESWAND);
 		
 		gaiatablet = new ItemGaiaTablet();
 		teleportpearl = new ItemTeleportPearl(LibItemName.TELEPORTPEARL);

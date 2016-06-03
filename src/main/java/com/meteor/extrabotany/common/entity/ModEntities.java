@@ -38,6 +38,8 @@ public class ModEntities {
 		EntityRegistry.registerModEntity(EntityTV.class, LibEntityName.TV, id++, ExtraBotany.instance, 256, 3, true);
 		EntityRegistry.registerModEntity(Entity22.class, LibEntityName.BILIBILI, id++, ExtraBotany.instance, 256, 3, true);
 		
+		EntityRegistry.registerModEntity(EntityElven.class, "magicelven", id++, ExtraBotany.instance, 256, 3, true);
+		
 		EntityRegistry.registerModEntity(EntityItemUnbreakable.class, LibEntityName.UNBREAKABLEITEM, id++, ExtraBotany.instance, 256, 3, true);
 		
 		EntityRegistry.registerModEntity(EntityBulletExploding.class, LibEntityName.BULLETEXPLODING, id++, ExtraBotany.instance, 256, 3, true);
