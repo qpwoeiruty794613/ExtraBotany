@@ -35,6 +35,10 @@ public class ModRecipe {
 	public static IRecipe bullet3;
 	public static IRecipe bullet4;
 	public static IRecipe olympus;
+	public static IRecipe teleportpearl;
+	public static IRecipe gaiawise;
+	public static IRecipe bladered;
+	public static IRecipe bladepurple;
 	
 	public static void init(){
 		remove();
@@ -42,8 +46,33 @@ public class ModRecipe {
 		ModPetalRecipe.init();
 		int recipeListSize = CraftingManager.getInstance().getRecipeList().size();
 		
+		//scissor blade red
+		addOreDictRecipe(new ItemStack(ModItems.scissorred),
+				"  A","BA ","CB ",
+				'A', LibOreDict.ELEMENTIUM,
+				'B', LibOreDict.ELEMENTIUM_NUGGET,
+				'C', LibOreDictName.LYCORIS_RED);
+		bladered = BotaniaAPI.getLatestAddedRecipe();
+		
+		//scissor blade purple
+		addOreDictRecipe(new ItemStack(ModItems.scissorpurple),
+				"  A","BA ","CB ",
+				'A', LibOreDict.ELEMENTIUM,
+				'B', LibOreDict.ELEMENTIUM_NUGGET,
+				'C', LibOreDictName.LYCORIS_RED);
+		bladepurple = BotaniaAPI.getLatestAddedRecipe();
+		
+		//gaia wise
+		addOreDictRecipe(new ItemStack(ModItems.gaiawise),
+				"A A","BCB","BBB",
+				'A', LibOreDict.GAIA_INGOT,
+				'B', LibOreDict.TERRASTEEL_NUGGET,
+				'C', LibOreDict.ELEMENTIUM);
+		gaiawise = BotaniaAPI.getLatestAddedRecipe();
+		
 		GameRegistry.addShapedRecipe(new ItemStack(ModItems.teleportpearl, 16), 
 				new Object[] {"AAA","ABA","AAA", 'A', new ItemStack(vazkii.botania.common.item.ModItems.manaBottle), 'B', Items.ender_pearl});
+		teleportpearl = BotaniaAPI.getLatestAddedRecipe();
 		//Olympus
 		GameRegistry.addShapelessRecipe(new ItemStack(ModItems.olympusguard), new Object[] {
 			new ItemStack(ModItems.athenabless), 
