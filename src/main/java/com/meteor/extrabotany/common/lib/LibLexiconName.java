@@ -14,6 +14,8 @@ public class LibLexiconName {
 	public static final String GFLOWER_MOONLIGHTLILY = "moonlightlily";
 	public static final String GFLOWER_GEMINIORCHID = "geminiorchid";
 	public static final String GFLOWER_OMINIVIOLET = "ominiviolet";
+	public static final String GFLOWER_STONESIA = "stonesia";
+	public static final String GFLOWER_PYSCHOBLOOM = "pyschobloom";
 	//Functional
 	public static final String FFLOWER_NECROFLEUR = "necrofleur";
 	public static final String FFLOWER_NUMERONDANDELIFE = "numerondandelife";
@@ -24,6 +26,7 @@ public class LibLexiconName {
 	public static final String FFLOWER_JUDASVOW = "judasvow";
 	public static final String FFLOWER_DIPLOPBAMBOO = "diplopbamboo";
 	public static final String FFLOWER_VOIDUIM = "voiduim";
+	public static final String FFLOWER_ARTIFACONIA = "artifaconia";
 	//Fun
 	public static final String D_INFINITYMANA = "infinitymana";
 	//Relics

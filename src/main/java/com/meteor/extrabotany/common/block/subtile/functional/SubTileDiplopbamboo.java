@@ -10,6 +10,7 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.ChunkCoordinates;
 import net.minecraft.world.World;
+import vazkii.botania.api.lexicon.LexiconEntry;
 import vazkii.botania.api.subtile.RadiusDescriptor;
 import vazkii.botania.api.subtile.SubTileFunctional;
 import vazkii.botania.common.block.BlockFloatingSpecialFlower;
@@ -20,6 +21,7 @@ import vazkii.botania.common.lib.LibMisc;
 
 import com.meteor.extrabotany.ExtraBotany;
 import com.meteor.extrabotany.api.ExtraBotanyAPI;
+import com.meteor.extrabotany.common.lexicon.LexiconModData;
 import com.meteor.extrabotany.common.lib.LibBlockName;
 import com.meteor.extrabotany.common.lib.LibReference;
 
@@ -28,6 +30,11 @@ import cpw.mods.fml.common.registry.GameRegistry;
 public class SubTileDiplopbamboo extends SubTileFunctional{
 	
 	private static final int RANGE = 1;
+	
+	@Override
+	public LexiconEntry getEntry() {
+		return LexiconModData.diplopbamboo;
+	}
 	
 	@Override
 	public void onUpdate() {

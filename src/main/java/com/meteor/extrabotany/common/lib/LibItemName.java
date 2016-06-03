@@ -48,6 +48,7 @@ public class LibItemName {
 	public static final String LOKIGHOSTRICK = "lokighostrick";
 	public static final String OLYMPUSGUARD = "olympusguard";
 	
+	public static final String HERMESWAND = "hermeswand";
 	public static final String SNOWBALLLAUNCHER = "snowballlauncher";
 	public static final String PHOENIXBLASTER = "phoenixblaster";
 	public static final String TACTICALSHOTGUN = "tacticalshotgun";
@@ -60,7 +61,9 @@ public class LibItemName {
 	public static final String RECORD_B = "recordB";
 	public static final String RECORD_C = "recordC";
 	
-	public static final String BINDING = "It's Vazkii's Not Yours";
+	public static final String GAIAWISE = "gaiawise";
+	
+	public static final String BINDING = "Made by Vazkii";
 	
 	public static final String[] MATERIAL_NAMES = new String[] {
 		"prismaticshard",//0

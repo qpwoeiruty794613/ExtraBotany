@@ -9,17 +9,24 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.ChunkCoordinates;
 import net.minecraft.world.World;
 import net.minecraftforge.oredict.OreDictionary;
+import vazkii.botania.api.lexicon.LexiconEntry;
 import vazkii.botania.api.subtile.RadiusDescriptor;
 import vazkii.botania.api.subtile.SubTileGenerating;
 import vazkii.botania.common.Botania;
 
 import com.meteor.extrabotany.api.ExtraBotanyAPI;
 import com.meteor.extrabotany.common.handler.ConfigHandler;
+import com.meteor.extrabotany.common.lexicon.LexiconModData;
 
 public class SubTileStonesia extends SubTileGenerating{
 	
 	private static final int RANGE = 3;
 	private static final int DELAY = 40;
+	
+	@Override
+	public LexiconEntry getEntry() {
+		return LexiconModData.stonesia;
+	}
 	
 	int burnTime = 0;
 	private static final String TAG_BURN_TIME = "burnTime";
@@ -78,7 +85,7 @@ public class SubTileStonesia extends SubTileGenerating{
 	
 	@Override
 	public int getValueForPassiveGeneration() {
-		return 8;
+		return ConfigHandler.efficiencyStonesia;
 	}
 	
 	@Override

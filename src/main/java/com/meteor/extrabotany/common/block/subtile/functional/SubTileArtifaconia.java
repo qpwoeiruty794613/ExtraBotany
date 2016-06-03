@@ -7,17 +7,24 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.AxisAlignedBB;
 import vazkii.botania.api.item.IRelic;
+import vazkii.botania.api.lexicon.LexiconEntry;
 import vazkii.botania.api.subtile.RadiusDescriptor;
 import vazkii.botania.api.subtile.SubTileFunctional;
 
 import com.meteor.extrabotany.common.entity.EntityItemUnbreakable;
 import com.meteor.extrabotany.common.item.ModItems;
+import com.meteor.extrabotany.common.lexicon.LexiconModData;
 import com.meteor.extrabotany.common.lib.LibItemName;
 
 public class SubTileArtifaconia extends SubTileFunctional{
 	
 	private static final int RANGE = 4;
-	
+
+ 	@Override
+  	public LexiconEntry getEntry() {
+  		return LexiconModData.artifaconia;
+  	}
+ 	
 	@Override
 	public void onUpdate() {
 		super.onUpdate();

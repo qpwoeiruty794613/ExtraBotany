@@ -8,6 +8,7 @@ public class LibReference {
 	public static final String PREFIX_MOD = "extrabotany:";
 	public static final String BUILD = "GRADLE:BUILD";
 	public static final String VERSION = "GRADLE:VERSION-" + BUILD;
+	public static final int VER = 7;
 	public static final String DEPENDENCIES = "required-after:Botania;after:Baubles";
 	
 	public static final String PROXY_COMMON = "com.meteor.extrabotany.common.CommonProxy";

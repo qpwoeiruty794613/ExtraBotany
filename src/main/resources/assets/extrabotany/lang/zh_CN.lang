@@ -69,6 +69,9 @@ item.petalpurple.name=紫色彼岸花瓣
 item.goldstring.name=注魔金线
 item.resonancefragment.name=祈之共鸣
 item.key.name=钥匙
+item.heart.name=生命结晶
+item.mana.name=魔力结晶
+item.shield.name=护盾值
 
 # -RECORD
 item.botania:recordA.name=琪露诺的秘密唱片
@@ -95,6 +98,7 @@ item.botania:dog0.name=波动狗
 item.botania:dog1.name=波动狗
 item.botania:dog2.name=波动狗
 item.botania:dog3.name=波动狗
+item.botania:gaiawise.name=盖亚的神智
 item.box.name=神秘箱子
 item.dungeonbox.name=地牢箱子
 item.pill.name=SCP-500
@@ -118,6 +122,7 @@ item.botania:lokighostrick.name=洛基的鬼计
 item.botania:olympusguard.name=奥林匹斯的戍卫
 item.botania:hermestravelclothing.name=赫尔墨斯的旅行衣
 item.botania:cthulhueye.name=克苏鲁之眼
+item.botania:hermeswand.name=赫尔墨斯的旅行手杖
 
 # -WEAPON
 item.phoenixblaster.name=凤凰冲击波
@@ -127,6 +132,8 @@ item.flintlock.name=燧发枪
 item.shotgun.name=猎枪
 item.pistol.name=手枪
 item.snowballlauncher.name=雪球发射器
+item.scissorbladepurple.name=太刀剪「紫」
+item.scissorbladered.name=太刀剪「红」
 
 # —BULLET
 item.bulletexploding.name=高爆弹
@@ -142,6 +149,11 @@ item.test.desc=仅作测试
 
 # LEXICON ENTRIES
 # -BASIC
+# --TELEPORTPEARL
+botania.entry.teleportpearl=传送珍珠
+botania.page.teleportpearl0=
+botania.page.teleportpearl1=
+
 # --BLANKCARD
 botania.entry.blankcard=白卡
 botania.tagline.blankcard=游戏人生
@@ -164,7 +176,7 @@ botania.page.prismaticshard0=
 
 # --GOLDSTRING
 botania.entry.goldstring=注魔金线
-botania.tagline.goldstring=财富或健康,哪个更重要?
+botania.tagline.goldstring=
 botania.page.goldstring0=
 botania.page.goldstring1=
 
@@ -246,6 +258,16 @@ botania.entry.ominiviolet=全知槿
 botania.page.ominiviolet0=
 botania.page.ominiviolet1=
 
+# --STONESIA
+botania.entry.stonesia=石中姬
+botania.page.stonesia0=
+botania.page.stonesia1=
+
+# --PYSCHOBLOOM
+botania.entry.pyschobloom=闹闹花
+botania.page.pyschobloom0=
+botania.page.pyschobloom1=
+
 # -FUNCTIONAL
 # --NECROFLEUR
 botania.entry.necrofleur=死之花
@@ -282,9 +304,38 @@ botania.entry.volatilily=波动百合
 botania.page.volatilily0=将它放在水池上方后,&1波动 百合&0就会开始钓鱼.它可以 钓上各种各样的鱼,令人讨 厌的垃圾,神秘的宝藏等等 .提供一个红石信号可以使它 停止工作.
 botania.page.volatilily1=你不能以貌取人.
 
+# --DIPLOPBAMBOO
+botania.entry.diplopbamboo=复视笋
+botania.page.diplopbamboo0=
+botania.page.diplopbamboo1=
+
+# --VOIDUIM
+botania.entry.voiduim=虚空花
+botania.page.voiduim0=
+botania.page.voiduim1=
+
+# --ARTIFACONIA
+botania.entry.artifaconia=古遗莲
+botania.page.artifaconia0=
+botania.page.artifaconia1=
+
 # -OTHERS
 # --INFINITYMANA
 botania.entry.infinitymana=无限魔力
+
+# --COMMANDS
+botania.entry.command=指令
+botania.page.command0=
+
+# --PICKUP
+botania.entry.pickup=掉落物
+botania.page.pickup0=
+
+# --SHIELD
+botania.entry.shield=护盾
+botania.page.shield0=
+botania.page.shield1=
+botania.page.shield2=
 
 # -RELICS
 # --HESTIACHASTITY
@@ -337,6 +388,13 @@ botania.entry.vhandgun=V制式手炮
 botania.tagline.vhandgun=
 botania.page.vhandgun0=
 
+# --GAIA
+botania.entry.gaia3=盖亚守护者III
+botania.page.gaia30=
+botania.page.gaia31=
+botania.page.gaia32=
+botania.page.gaia33=
+
 #FLOWER NAMES
 # -GENERATING
 tile.botania:flower.blueenchantress.name=蓝色妖姬
@@ -362,6 +420,14 @@ botania.tagline.ominiviolet=普罗维登斯之眼
 tile.botania:flower.geminiorchid.name=双子兰
 tile.botania:flower.geminiorchid.reference=Another...?
 botania.tagline.geminiorchid=
+
+tile.botania:flower.pyschobloom.name=闹闹花
+tile.botania:flower.pyschobloom.reference=
+botania.tagline.pyschobloom=
+
+tile.botania:flower.stonesia.name=石中姬
+tile.botania:flower.stonesia.reference=
+botania.tagline.stonesia=
 
 # -FUNCTIONAL
 tile.botania:flower.numerondandelife.name=源命英
@@ -395,6 +461,14 @@ botania.tagline.numeronbalsam=神圣之火燃烧着我的战锤
 tile.botania:flower.judasvow.name=犹大的誓约
 tile.botania:flower.judasvow.reference=我的荣幸
 botania.tagline.judasvow=为了正义
+
+tile.botania:flower.voiduim.name=虚空花
+tile.botania:flower.voiduim.reference=
+botania.tagline.voiduim=
+
+tile.botania:flower.diplopbamboo.name=复视笋
+tile.botania:flower.diplopbamboo.reference=
+botania.tagline.diplopbamboo=
 
 #ACHIEVEMENTS
 # -RELICS
@@ -464,6 +538,7 @@ config.ExtraBotany.efficiencyBlueenchantress.desc=蓝色妖姬的产能效率.
 config.ExtraBotany.efficiencyCandyflower.desc=糖果花的产能效率.
 config.ExtraBotany.efficiencyGeminiorchid.desc=双子兰的产能效率.
 config.ExtraBotany.efficiencyOminiviolet.desc=全知槿的产能效率.
-
-# -CLIENT
-config.ExtraBotany.shieldBarHeight.desc=护盾值显示在魔力条下方. 如果你调整了魔力条的位置,你可以修改这个参数.
+config.ExtraBotany.efficiencyPyschobloom.desc=闹闹花的产能效率.
+config.ExtraBotany.efficiencyStonesia.desc=石中姬的产能效率.
+config.ExtraBotany.pyschobloomMax.desc=闹闹花的最大产能效率.
+config.ExtraBotany.disableShieldRender.desc=是否取消护盾特效渲染,设置为True来取消.
