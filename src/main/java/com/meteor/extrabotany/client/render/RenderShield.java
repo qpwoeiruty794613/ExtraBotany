@@ -27,7 +27,7 @@ import vazkii.botania.client.core.helper.RenderHelper;
 import vazkii.botania.client.core.helper.ShaderHelper;
 
 import com.meteor.extrabotany.common.handler.ConfigHandler;
-import com.meteor.extrabotany.common.handler.ShieldHandler;
+import com.meteor.extrabotany.common.handler.PropertyHandler;
 import com.meteor.extrabotany.common.lib.LibReference;
 
 import cpw.mods.fml.common.eventhandler.EventPriority;
@@ -112,7 +112,7 @@ public class RenderShield{
         
         mc.getTextureManager().bindTexture(shieldBar);
         
-        float s1 = ShieldHandler.getShieldAmount(mc.thePlayer);
+        float s1 = PropertyHandler.getShieldAmount(mc.thePlayer);
         float ss1 = s1/2;
         
         for(int r = 0; r < s1/20; r++){

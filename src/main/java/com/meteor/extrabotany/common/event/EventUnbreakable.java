@@ -13,9 +13,9 @@ import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 public class EventUnbreakable {
 	
 	 @SubscribeEvent
-	    public void onExpire(ItemExpireEvent event) {
-	      if(event.entityItem instanceof EntityItemUnbreakable) {
-	        event.setCanceled(true);
-	      }
-	    }
+	 public void onExpire(ItemExpireEvent event) {
+		 if(event.entityItem instanceof EntityItemUnbreakable) {
+			 event.setCanceled(true);
+	     }
+	 }
 }
