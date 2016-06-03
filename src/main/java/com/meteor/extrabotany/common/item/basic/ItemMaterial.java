@@ -13,7 +13,7 @@ import net.minecraft.world.World;
 import vazkii.botania.api.mana.ManaItemHandler;
 import vazkii.botania.client.core.helper.IconHelper;
 
-import com.meteor.extrabotany.common.handler.ShieldHandler;
+import com.meteor.extrabotany.common.handler.PropertyHandler;
 import com.meteor.extrabotany.common.item.ItemMods;
 import com.meteor.extrabotany.common.item.ModItems;
 import com.meteor.extrabotany.common.lib.LibItemName;
@@ -37,7 +37,7 @@ public class ItemMaterial extends ItemMods{
 				player.setHealth(Math.min(player.getHealth() + 1F * stack.stackSize, player.getMaxHealth()));
 				player.inventory.clearInventory(ModItems.material, 13);
 			if(stack.getItemDamage() == 14)
-				ShieldHandler.addShieldAmount(1F * stack.stackSize, player);
+				PropertyHandler.addShieldAmount(1F * stack.stackSize, player);
 				player.inventory.clearInventory(ModItems.material, 14);
 			if(stack.getItemDamage() == 15)
 				ManaItemHandler.dispatchMana(stack, player, 200 * stack.stackSize, true);

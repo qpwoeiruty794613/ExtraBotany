@@ -1,3 +1,12 @@
+16/6/3<br>
+改说中文.<br>
+更新Config,更改config的位置到/config/extrameteorp.<br>
+增加赫尔墨斯的旅行手杖和盖亚的神智.<br>
+更新手册内容.<br>
+修复护盾值同步问题.(多人兼容性未知)<br>
+更新本地化文本.<br>
+添加合成.<br>
+
 16/5/31<br>
 Add new generating flower:Pysch-O-Bloom.<br>
 Add new textures.<br>
