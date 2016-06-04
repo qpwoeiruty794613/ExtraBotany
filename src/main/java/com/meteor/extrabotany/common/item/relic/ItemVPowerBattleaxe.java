@@ -1,4 +1,4 @@
-package com.meteor.extrabotany.common.item.relic.legendary;
+package com.meteor.extrabotany.common.item.relic;
 
 import java.util.Random;
 
@@ -19,7 +19,6 @@ import vazkii.botania.common.item.relic.ItemRelic;
 
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
-import com.meteor.extrabotany.common.item.relic.ItemRelicAdv;
 import com.meteor.extrabotany.common.lib.LibItemName;
 
 public class ItemVPowerBattleaxe extends ItemRelicAdv implements IManaUsingItem{

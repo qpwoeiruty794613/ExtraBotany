@@ -47,8 +47,9 @@ public class LibItemName {
 	public static final String CTHULHUEYE = "cthulhueye";
 	public static final String LOKIGHOSTRICK = "lokighostrick";
 	public static final String OLYMPUSGUARD = "olympusguard";
-	
 	public static final String HERMESWAND = "hermeswand";
+	public static final String THESEUSSHIP = "theseusship";
+	
 	public static final String SNOWBALLLAUNCHER = "snowballlauncher";
 	public static final String PHOENIXBLASTER = "phoenixblaster";
 	public static final String TACTICALSHOTGUN = "tacticalshotgun";

@@ -21,8 +21,8 @@ public class ItemDice20 extends ItemRelicAdv{
 	public ItemDice20() {
 		super(LibItemName.DICE20);
 		relicStacks = new ItemStack[] {
-				new ItemStack(ModItems.vhandgun),//1
-				new ItemStack(ModItems.vpowerbattleaxe),//2
+				new ItemStack(ModItems.theseusship),//1
+				new ItemStack(ModItems.hermeswand),//2
 				new ItemStack(vazkii.botania.common.item.ModItems.infiniteFruit),//3
 				new ItemStack(ModItems.excaliberfake),//4
 				new ItemStack(vazkii.botania.common.item.ModItems.kingKey),//5
@@ -38,9 +38,9 @@ public class ItemDice20 extends ItemRelicAdv{
 				new ItemStack(ModItems.cronusphantom),//15
 				new ItemStack(ModItems.aphroditegrace),//16
 				new ItemStack(ModItems.hermestravelclothing),//17
-				new ItemStack(ModItems.cthulhueye),//
-				new ItemStack(ModItems.lokighostrick),
-				new ItemStack(ModItems.material,1,3),//
+				new ItemStack(ModItems.cthulhueye),//18
+				new ItemStack(ModItems.lokighostrick),//19
+				new ItemStack(ModItems.material,1,3),//20
 
 		};
 	}

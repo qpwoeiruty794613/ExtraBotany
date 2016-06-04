@@ -60,6 +60,8 @@ public class GunRenderer implements IItemRenderer {
             	GL11.glTranslatef(0.03F, -0.1F, 0);
             else if(item.getItem() == ModItems.snowballlauncher)
             	GL11.glTranslatef(0.12F, -0.2F, 0);
+            else if(item.getItem() == ModItems.theseusship)
+            	GL11.glTranslatef(0.12F, -0.08F, 0);
 
             IIcon iicon = ((EntityLivingBase) data[1]).getItemIcon(item, 0);
             renderItemEquipped(iicon, item);
@@ -83,6 +85,8 @@ public class GunRenderer implements IItemRenderer {
             	GL11.glTranslatef(0.03F, -0.1F, 0);
             else if(item.getItem() == ModItems.snowballlauncher)
             	GL11.glTranslatef(0.12F, -0.2F, 0);
+            else if(item.getItem() == ModItems.theseusship)
+            	GL11.glTranslatef(0.12F, -0.38F, 0);
 
             IIcon iicon = ((EntityLivingBase) data[1]).getItemIcon(item, 0);
             renderItemEquipped(iicon, item);

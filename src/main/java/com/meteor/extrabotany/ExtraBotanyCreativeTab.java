@@ -56,6 +56,7 @@ public class ExtraBotanyCreativeTab extends CreativeTabs{
 		addItem(ModItems.olympusguard);
 		addItem(ModItems.cthulhueye);
 		addItem(ModItems.hermeswand);
+		addItem(ModItems.theseusship);
 		//Test
 		addItem(ModItems.itemtest);
 		//Basic

@@ -6,6 +6,14 @@ botania.knowledge.extra=&3Extra&7 Knowledge
 botaniamisc.knowledgeUnlock=The Blank Card is unusually shining, the Lexicon which you are holding is injected with a mystery energy.
 botaniamisc.uselessDiceRoll=The dice lands on a %s, it seemed to be transfered to a strange item afterward.
 botaniamisc.openChest=You should get a key before opening the chest.
+botaniamisc.theseusmode0.desc=Attack Mode
+botaniamisc.theseusmode1.desc=Repair Mode
+botaniamisc.theseusmode2.desc=Heal Mode
+botaniamisc.theseusmode3.desc=Assist Mode
+botaniamisc.theseussetMode0=You switched it to Attack Mode.
+botaniamisc.theseussetMode1=You switched it to Repair Mode.
+botaniamisc.theseussetMode2=You switched it to Heal Mode.
+botaniamisc.theseussetMode3=You switched it to Assist Mode.
 
 #ITEMGROUP
 itemGroup.ExtraBotany=ExtraBotany
@@ -110,8 +118,6 @@ item.emptydice.name=Empty Dice
 # -RELIC
 item.botania:excaliber.name=Excaliber
 item.botania:excaliberfake.name=Excaliber
-item.botania:vhandgun_double.name=Valkyrie Handguns
-item.botania:vpowerbattleaxe.name=Valkyrie Powered Battleaxe
 item.botania:vrangerboots.name=Valkyrie Ranger Boots
 item.botania:hestiachastity.name=Chastity of Hestia
 item.botania:maxwelldemon.name=Maxwell's Demon
@@ -123,6 +129,7 @@ item.botania:olympusguard.name=Guard of Olympus
 item.botania:hermestravelclothing.name=Hermes's Travel Clothing
 item.botania:cthulhueye.name=Eye of Cthulhu
 item.botania:hermeswand.name=Hermes's Travel Wand
+item.botania:theseusship.name=Ship of Theseus
 
 # -WEAPON
 item.phoenixblaster.name=Phoenix Blaster
@@ -134,6 +141,8 @@ item.pistol.name=Pistol
 item.snowballlauncher.name=Snowball Cannon
 item.scissorbladepurple.name=Purple Scissor Blade
 item.scissorbladered.name=Red Scissor Blade
+item.botania:vhandgun_double.name=Valkyrie Handguns
+item.botania:vpowerbattleaxe.name=Valkyrie Powered Battleaxe
 
 # —BULLET
 item.bulletexploding.name=Exploding Bullet
