@@ -5,10 +5,10 @@ Botania Addon WIP
 2.Changelog
 ###TODO List
  * Blocks:
-  * Flowers(70% Finished):
+  * Flowers(73% Finished):
     * Shiny Lilac 耀丁香
-	* Stonesia 石中姬
-	* Pysch-O-Bloom 闹闹花
+	* Stonesia 石中姬(60% Finished)
+	* Pysch-O-Bloom 闹闹花(Done)
 	* Infernoidisy 狱火菊
 	* Halaalis 真主花(???)
 	* OrechidShade 影矿兰

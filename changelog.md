@@ -1,3 +1,6 @@
+16/6/4<br>
+完成犹大的誓约.<br>
+
 16/6/3<br>
 改说中文.<br>
 更新Config,更改config的位置到/config/extrameteorp.<br>

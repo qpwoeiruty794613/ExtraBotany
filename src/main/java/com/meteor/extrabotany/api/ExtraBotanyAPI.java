@@ -9,6 +9,7 @@ import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
+import net.minecraft.util.DamageSource;
 
 import com.meteor.extrabotany.client.ClientProxy;
 import com.meteor.extrabotany.common.block.ModBlocks;
@@ -22,6 +23,24 @@ public class ExtraBotanyAPI {
 	public static ClientProxy proxy = new ClientProxy();
 	
 	public static Set<Item> diplopbambooBlacklist = new LinkedHashSet<Item>();
+	
+	public static DamageSource[] damageSource = {
+		new DamageSource("realDamage"),
+		new DamageSource("realDamageHoly"),
+		new DamageSource("realDamageCursed"),
+		new DamageSource("realDamageGaia"),
+		new DamageSource("magicDamage"),
+		new DamageSource("magicDamageMissile"),
+		new DamageSource("magicDamageLandmine"),
+	};
+	
+	public static boolean isRealDamage(DamageSource s){
+		return s.toString().startsWith("realDamage");
+	}
+	
+	public static boolean isMagicDamage(DamageSource s){
+		return s.toString().startsWith("magicDamage");
+	}
 	
 	public static void addShield(float shield, EntityPlayer player){
 		PropertyHandler.addShieldAmount(shield, player);
