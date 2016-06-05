@@ -16,6 +16,8 @@ import com.meteor.extrabotany.common.block.ModBlocks;
 import com.meteor.extrabotany.common.handler.CraftingHandler;
 import com.meteor.extrabotany.common.item.ModItems;
 import com.meteor.extrabotany.common.lib.LibOreDictName;
+import com.meteor.extrabotany.common.recipe.subtile.ModInfernoidisyRecipe;
+import com.meteor.extrabotany.common.recipe.subtile.ModStonesiaRecipe;
 
 import cpw.mods.fml.common.FMLLog;
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -44,6 +46,8 @@ public class ModRecipe {
 		remove();
 		ModManaInfusionRecipe.init();
 		ModPetalRecipe.init();
+		ModStonesiaRecipe.init();
+		ModInfernoidisyRecipe.init();
 		int recipeListSize = CraftingManager.getInstance().getRecipeList().size();
 		
 		//scissor blade red

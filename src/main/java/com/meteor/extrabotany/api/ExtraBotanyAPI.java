@@ -1,16 +1,17 @@
 package com.meteor.extrabotany.api;
 
-import java.util.HashMap;
+import java.util.ArrayList;
 import java.util.LinkedHashSet;
-import java.util.Map;
+import java.util.List;
 import java.util.Set;
 
 import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.util.DamageSource;
 
+import com.meteor.extrabotany.api.extrabotany.recipe.RecipeInfernoidisy;
+import com.meteor.extrabotany.api.extrabotany.recipe.RecipeStonesia;
 import com.meteor.extrabotany.client.ClientProxy;
 import com.meteor.extrabotany.common.block.ModBlocks;
 import com.meteor.extrabotany.common.handler.PropertyHandler;
@@ -23,6 +24,9 @@ public class ExtraBotanyAPI {
 	public static ClientProxy proxy = new ClientProxy();
 	
 	public static Set<Item> diplopbambooBlacklist = new LinkedHashSet<Item>();
+	
+	public static List<RecipeInfernoidisy> infernoidisyRecipes = new ArrayList<RecipeInfernoidisy>();
+	public static List<RecipeStonesia> stonesiaRecipes = new ArrayList<RecipeStonesia>();
 	
 	public static DamageSource[] damageSource = {
 		new DamageSource("realDamage"),
@@ -64,6 +68,30 @@ public class ExtraBotanyAPI {
 	
 	public static boolean isItemBlacklistedFromDiplopBamboo(Item item){
 		return diplopbambooBlacklist.contains(item);
+	}
+	
+	public static RecipeInfernoidisy registerInfernoidisyRecipe(Object input, Block output, int outputMeta) {
+		RecipeInfernoidisy recipe = new RecipeInfernoidisy(input, output, outputMeta);
+		infernoidisyRecipes.add(recipe);
+		return recipe;
+	}
+	
+	public static RecipeStonesia registerStonesiaRecipe(Object input, int mana, int outputMeta) {
+		RecipeStonesia recipe = new RecipeStonesia(input, mana, outputMeta);
+		stonesiaRecipes.add(recipe);
+		return recipe;
+	}
+	
+	public static RecipeInfernoidisy removeInfernoidisyRecipe(Object input, Block output, int outputMeta) {
+		RecipeInfernoidisy recipe = new RecipeInfernoidisy(input, output, outputMeta);
+		infernoidisyRecipes.remove(recipe);
+		return recipe;
+	}
+	
+	public static RecipeStonesia removeStonesiaRecipe(Object input, int mana, int outputMeta) {
+		RecipeStonesia recipe = new RecipeStonesia(input, mana, outputMeta);
+		stonesiaRecipes.remove(recipe);
+		return recipe;
 	}
 
 }

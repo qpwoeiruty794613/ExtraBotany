@@ -44,7 +44,7 @@ public class SubTileDiplopbamboo extends SubTileFunctional{
 			if(items.size() == 1)
 				for(EntityItem item:items){
 					if(item.getEntityItem().stackSize == 1){
-							if(item.age >= (59 + slowdown) && !item.isDead){
+							if(item.age >= (59 + slowdown) && !item.isDead && !supertile.getWorldObj().isRemote){
 									supertile.getWorldObj().func_147480_a(supertile.xCoord, supertile.yCoord, supertile.zCoord, false);
 									EntityItem i = new EntityItem(supertile.getWorldObj(), supertile.xCoord, supertile.yCoord, supertile.zCoord, item.getEntityItem().copy());
 									supertile.getWorldObj().spawnEntityInWorld(i);
