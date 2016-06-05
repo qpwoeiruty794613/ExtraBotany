@@ -34,6 +34,8 @@ public class BlockSpecial extends BlockSpecialFlower {
 			LibBlockName.ARTIFACONIA,
 			LibBlockName.VOIDUIM,
 			LibBlockName.DIPLOPBAMBOO,
+			LibBlockName.INFERNOIDISY,
+			LibBlockName.LAUNCHISH,
 		}));
 	}	
 		

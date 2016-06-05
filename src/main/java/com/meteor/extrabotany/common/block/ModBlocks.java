@@ -11,10 +11,12 @@ import com.meteor.extrabotany.common.block.decor.BlockElvenQuartzSlab;
 import com.meteor.extrabotany.common.block.decor.BlockElvenQuartzStairs;
 import com.meteor.extrabotany.common.block.decor.BlockGaiaQuartzSlab;
 import com.meteor.extrabotany.common.block.decor.BlockGaiaQuartzStairs;
+import com.meteor.extrabotany.common.block.subtile.SubTileInfernoidisy;
 import com.meteor.extrabotany.common.block.subtile.SubTileJudasvow;
 import com.meteor.extrabotany.common.block.subtile.functional.SubTileArtifaconia;
 import com.meteor.extrabotany.common.block.subtile.functional.SubTileDiplopbamboo;
 import com.meteor.extrabotany.common.block.subtile.functional.SubTileIcebirdium;
+import com.meteor.extrabotany.common.block.subtile.functional.SubTileLaunchish;
 import com.meteor.extrabotany.common.block.subtile.functional.SubTileNecrofluer;
 import com.meteor.extrabotany.common.block.subtile.functional.SubTileNumerondandelife;
 import com.meteor.extrabotany.common.block.subtile.functional.SubTileNumeronbalsam;
@@ -85,6 +87,8 @@ public class ModBlocks {
 	}
 	
 	private static void initTileEntities() {
+		registerSubTile(LibBlockName.LAUNCHISH, SubTileLaunchish.class);
+		registerSubTile(LibBlockName.INFERNOIDISY, SubTileInfernoidisy.class);
 		registerSubTile(LibBlockName.PYSCHOBLOOM, SubTilePyschobloom.class);
 		registerSubTile(LibBlockName.STONESIA, SubTileStonesia.class);
 		registerSubTile(LibBlockName.DIPLOPBAMBOO, SubTileDiplopbamboo.class);
