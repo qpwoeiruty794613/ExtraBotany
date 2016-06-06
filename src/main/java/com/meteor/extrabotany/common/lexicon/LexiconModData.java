@@ -51,6 +51,8 @@ public class LexiconModData {
 	public static LexiconEntry diplopbamboo;
 	public static LexiconEntry voiduim;
 	public static LexiconEntry artifaconia;
+	public static LexiconEntry infernoidisy;
+	public static LexiconEntry launchish;
 	//Fun
 	public static LexiconEntry infinitymana;
 	//Relics
@@ -259,6 +261,16 @@ public class LexiconModData {
 		artifaconia.setLexiconPages(new PageText("0"),
 				new PagePetalRecipe("1", ModPetalRecipe.artifaconiaRecipe));
 		artifaconia.setIcon(ItemBlockSpecialFlower.ofType(LibBlockName.ARTIFACONIA));
+		
+		infernoidisy = new ELexiconEntry(LibLexiconName.FFLOWER_INFERNOIDISY, BotaniaAPI.categoryFunctionalFlowers);
+		infernoidisy.setLexiconPages(new PageText("0"),
+				new PagePetalRecipe("1", ModPetalRecipe.artifaconiaRecipe));
+		infernoidisy.setIcon(ItemBlockSpecialFlower.ofType(LibBlockName.INFERNOIDISY));
+		
+		launchish = new ELexiconEntry(LibLexiconName.FFLOWER_LAUNCHISH, BotaniaAPI.categoryFunctionalFlowers);
+		launchish.setLexiconPages(new PageText("0"),
+				new PagePetalRecipe("1", ModPetalRecipe.artifaconiaRecipe));
+		launchish.setIcon(ItemBlockSpecialFlower.ofType(LibBlockName.LAUNCHISH));
 		//For Fun
 		infinitymana = new DLexiconEntry(LibLexiconName.D_INFINITYMANA, categoryExtra);
 		infinitymana.setIcon(new ItemStack(vazkii.botania.common.block.ModBlocks.pool));

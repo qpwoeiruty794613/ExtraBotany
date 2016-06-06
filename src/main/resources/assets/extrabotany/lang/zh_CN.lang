@@ -328,6 +328,16 @@ botania.entry.artifaconia=古遗莲
 botania.page.artifaconia0=
 botania.page.artifaconia1=
 
+# --INFERNOIDISY
+botania.entry.infernoidisy=狱火菊
+botania.page.infernoidisy0=
+botania.page.infernoidisy1=
+
+# --LAUNCHISH
+botania.entry.launchish=弹射草
+botania.page.launchish0=
+botania.page.launchish1=
+
 # -OTHERS
 # --INFINITYMANA
 botania.entry.infinitymana=无限魔力
@@ -478,6 +488,14 @@ botania.tagline.voiduim=
 tile.botania:flower.diplopbamboo.name=复视笋
 tile.botania:flower.diplopbamboo.reference=
 botania.tagline.diplopbamboo=
+
+tile.botania:flower.infernoidisy.name=狱火菊
+tile.botania:flower.infernoidisy.reference=我想变成红色
+botania.tagline.infernoidisy=
+
+tile.botania:flower.launchish.name=弹射草
+tile.botania:flower.launchish.reference=
+botania.tagline.launchish=
 
 #ACHIEVEMENTS
 # -RELICS

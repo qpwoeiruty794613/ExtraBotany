@@ -73,6 +73,7 @@ public class ItemTheseusShip extends ItemRelicAdv implements ILensEffect, IManaU
 	@Override
 	public void onUsingTick(ItemStack stack, EntityPlayer player, int count) {
 		super.onUsingTick(stack, player, count);
+		int m = getMode(stack);
 		if(!player.worldObj.isRemote){
 			if(player.isSneaking()){
 				if(count <= this.getMaxItemUseDuration(stack) - 40 && getDelay(stack) == 0){
@@ -81,9 +82,9 @@ public class ItemTheseusShip extends ItemRelicAdv implements ILensEffect, IManaU
 					setDelay(stack, 20);
 					player.addChatMessage(new ChatComponentTranslation("botaniamisc.theseussetMode" + getMode(stack)).setChatStyle(new ChatStyle().setColor(EnumChatFormatting.DARK_GREEN)));
 				}
-			}else if(count % 5 == 0 && !player.isSneaking()){
+			}else if(count % 9 == 0 && !player.isSneaking()){
 					if(ItemRelic.isRightPlayer(player, stack)){
-						if(ManaItemHandler.requestManaExact(stack, player, 18, true)){
+						if(ManaItemHandler.requestManaExact(stack, player, m == 3 ? 20 : m == 2 ? 16 : m == 1 ? 120 : 12, true)){
 							player.worldObj.spawnEntityInWorld(getBurst(player, stack));
 						}
 					}		

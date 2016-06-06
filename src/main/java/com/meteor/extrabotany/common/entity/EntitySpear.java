@@ -2,6 +2,8 @@ package com.meteor.extrabotany.common.entity;
 
 import java.util.List;
 
+import com.meteor.extrabotany.common.handler.WorldHandler;
+
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.projectile.EntityThrowable;
@@ -62,10 +64,10 @@ public class EntitySpear extends EntityThrowable {
 
 				if(living.hurtTime == 0) {
 					if(player != null){
-						living.attackEntityFrom(DamageSource.causePlayerDamage(player), 8F);
+						living.attackEntityFrom(DamageSource.causePlayerDamage(player), 12F);
 						living.addPotionEffect(new PotionEffect(Potion.moveSlowdown.getId(), 40, 8));
 					}else {
-						living.attackEntityFrom(DamageSource.generic, 8F);
+						living.attackEntityFrom(DamageSource.generic, 12F);
 					}
 					onImpact(new MovingObjectPosition(living));
 					return;
@@ -89,7 +91,7 @@ public class EntitySpear extends EntityThrowable {
 	protected void onImpact(MovingObjectPosition pos) {
 		EntityLivingBase thrower = getThrower();
 		if(pos.entityHit == null || pos.entityHit != thrower) {
-			worldObj.createExplosion(this, posX, posY, posZ, 1F, false);
+			WorldHandler.createMagicExplosion(this, posX, posY, posZ, 2F, false);
 			setDead();
 		}
 	}

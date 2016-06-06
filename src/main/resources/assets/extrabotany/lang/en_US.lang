@@ -318,6 +318,16 @@ botania.entry.diplopbamboo=Diplop Bamboo
 botania.page.diplopbamboo0=
 botania.page.diplopbamboo1=
 
+# --INFERNOIDISY
+botania.entry.infernoidisy=Infernoidisy
+botania.page.infernoidisy0=
+botania.page.infernoidisy1=
+
+# --LAUNCHISH
+botania.entry.launchish=Launchish
+botania.page.launchish0=
+botania.page.launchish1=
+
 # --VOIDUIM
 botania.entry.voiduim=Voiduim
 botania.page.voiduim0=
@@ -478,6 +488,14 @@ botania.tagline.voiduim=
 tile.botania:flower.diplopbamboo.name=Diplop Bamboo
 tile.botania:flower.diplopbamboo.reference=
 botania.tagline.diplopbamboo=
+
+tile.botania:flower.infernoidisy.name=Infernoidisy
+tile.botania:flower.infernoidisy.reference=I want to be Red.
+botania.tagline.infernoidisy=
+
+tile.botania:flower.launchish.name=Launchish
+tile.botania:flower.launchish.reference=
+botania.tagline.launchish=
 
 #ACHIEVEMENTS
 # -RELICS
