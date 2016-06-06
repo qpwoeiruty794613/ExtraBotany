@@ -87,12 +87,12 @@ public class SubTileNumeronbalsam extends SubTileFunctional{
 						world.setBlockToAir(chunkx, chunky, chunkz);
 						Botania.proxy.sparkleFX(world, chunkx + 0.5F, chunky, chunkz + 0.5F, 2.5F, 0.87F, 0.87F, 4F, 10);
 						return;
+						}
+						chunky++;
 					}
-					chunky++;
 				}
 			}
-		}
-		}
+	}
 	
 	@Override
 	public int getMaxMana() {
