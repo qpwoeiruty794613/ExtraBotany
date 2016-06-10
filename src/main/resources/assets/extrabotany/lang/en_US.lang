@@ -1,9 +1,17 @@
 # KNOWLEDGE
 category.Botania:extra=Extra Botany
 botania.knowledge.extra=&3Extra&7 Knowledge
+botania.knowledge.legendary=&eLegendary&7 Knowledge
 
 # MISC
 botaniamisc.knowledgeUnlock=The Blank Card is unusually shining, the Lexicon which you are holding is injected with a mystery energy.
+botaniamisc.knowledgeUnlock2=Congratulations! You've beaten Gaia Guardian III and unlocked Legendary Knowledge.
+botaniamisc.bullet=Out of bullets.
+botaniamisc.reload=Reloading Successfully.
+botaniamisc.gunfalse=Normal Mode
+botaniamisc.guntrue=Fire Mode
+botaniamisc.eternalmodefalse=Eternal Mode
+botaniamisc.eternalmodetrue=Slient Mode
 botaniamisc.uselessDiceRoll=The dice lands on a %s, it seemed to be transfered to a strange item afterward.
 botaniamisc.openChest=You should get a key before opening the chest.
 botaniamisc.theseusmode0.desc=Attack Mode
@@ -130,6 +138,8 @@ item.botania:hermestravelclothing.name=Hermes's Travel Clothing
 item.botania:cthulhueye.name=Eye of Cthulhu
 item.botania:hermeswand.name=Hermes's Travel Wand
 item.botania:theseusship.name=Ship of Theseus
+item.botania:eternalslience.name=Eternal Slience
+item.botania:valkyriecombatsuit.name=Valkyrie Combat Suit
 
 # -WEAPON
 item.phoenixblaster.name=Phoenix Blaster

@@ -195,7 +195,7 @@ public class ItemEternalSlience extends ItemRelicAdv implements IManaItem, IMana
 	}
 
 	public static void addBindInfo(List list, ItemStack stack, EntityPlayer player) {
-		addStringToTooltip(StatCollector.translateToLocal("botaniamisc.eternalmode" + isMode(stack)), list);
+		addStringToTooltip(EnumChatFormatting.BLUE + StatCollector.translateToLocal("botaniamisc.eternalmode" + isMode(stack)), list);
 		if(GuiScreen.isShiftKeyDown()) {
 			String bind = getSoulbindUsernameS(stack);
 			if(bind.isEmpty())

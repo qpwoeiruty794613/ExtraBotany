@@ -18,6 +18,7 @@ import net.minecraft.entity.monster.EntityMob;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.DamageSource;
 import net.minecraft.world.EnumDifficulty;
 import net.minecraft.world.World;
@@ -164,7 +165,8 @@ public class EntityGaiaIIIPhantom extends EntityMob{
 				setInvulTime(invul - 1);
 			}
 		}
-		List<EntityPlayer> players = summoner.getPlayersAround();
+		int range = 11;
+		List<EntityPlayer> players = worldObj.getEntitiesWithinAABB(EntityPlayer.class, AxisAlignedBB.getBoundingBox(this.posX + 0.5 - range, this.posY + 0.5 - range, this.posZ + 0.5 - range, this.posX + 0.5 + range, this.posY + 0.5 + range, this.posZ + 0.5 + range));
 		if(players.isEmpty() && !worldObj.playerEntities.isEmpty())
 			setDead();
 		boolean peaceful = worldObj.difficultySetting == EnumDifficulty.PEACEFUL;
