@@ -1,8 +1,6 @@
 package com.meteor.extrabotany.common.enchantment;
 
-import vazkii.botania.api.item.IRelic;
 import net.minecraft.enchantment.Enchantment;
-import net.minecraft.item.Item;
 
 public class ModEnchantment {
 	

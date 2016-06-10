@@ -1,7 +1,7 @@
 package com.meteor.extrabotany.common.recipe.subtile;
 
-import vazkii.botania.common.block.ModBlocks;
 import net.minecraft.init.Blocks;
+import vazkii.botania.common.block.ModBlocks;
 
 import com.meteor.extrabotany.api.ExtraBotanyAPI;
 

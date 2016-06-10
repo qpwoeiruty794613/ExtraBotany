@@ -2,11 +2,11 @@ package com.meteor.extrabotany.common.potion;
 
 import java.util.Collection;
 
-import cpw.mods.fml.relauncher.ReflectionHelper;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.ResourceLocation;
+import cpw.mods.fml.relauncher.ReflectionHelper;
 
 public class PotionCure extends PotionEffectMods{
 	

@@ -2,14 +2,14 @@ package com.meteor.extrabotany.common.entity.gaia;
 
 import java.util.List;
 
-import vazkii.botania.common.Botania;
-import vazkii.botania.common.item.relic.ItemRelic;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.DamageSource;
 import net.minecraft.world.World;
+import vazkii.botania.common.Botania;
+import vazkii.botania.common.item.relic.ItemRelic;
 
 public class EntityMagicCycloneIgnis extends Entity{
 	private static float X = 1F;

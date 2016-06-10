@@ -6,8 +6,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Random;
 
-import com.meteor.extrabotany.common.lexicon.LexiconModData;
-
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
@@ -17,6 +15,8 @@ import net.minecraftforge.oredict.OreDictionary;
 import vazkii.botania.api.BotaniaAPI;
 import vazkii.botania.api.lexicon.LexiconEntry;
 import vazkii.botania.api.subtile.SubTileFunctional;
+
+import com.meteor.extrabotany.common.lexicon.LexiconModData;
 
 public class SubTileVoiduim extends SubTileFunctional{
 	

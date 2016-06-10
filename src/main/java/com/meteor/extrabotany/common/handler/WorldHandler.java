@@ -1,7 +1,6 @@
 package com.meteor.extrabotany.common.handler;
 
 import net.minecraft.entity.Entity;
-import net.minecraft.world.Explosion;
 
 import com.meteor.extrabotany.common.world.ExplosionMagic;
 

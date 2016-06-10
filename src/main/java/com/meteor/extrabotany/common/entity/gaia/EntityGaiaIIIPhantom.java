@@ -2,12 +2,6 @@ package com.meteor.extrabotany.common.entity.gaia;
 
 import java.util.List;
 
-import vazkii.botania.common.item.relic.ItemRelic;
-
-import com.meteor.extrabotany.common.item.ModItems;
-import com.meteor.extrabotany.common.lib.LibItemName;
-
-import net.minecraft.block.Block;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.SharedMonsterAttributes;
@@ -24,12 +18,13 @@ import net.minecraft.entity.monster.EntityMob;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.util.AxisAlignedBB;
-import net.minecraft.util.ChunkCoordinates;
 import net.minecraft.util.DamageSource;
-import net.minecraft.util.MathHelper;
 import net.minecraft.world.EnumDifficulty;
 import net.minecraft.world.World;
+import vazkii.botania.common.item.relic.ItemRelic;
+
+import com.meteor.extrabotany.common.item.ModItems;
+import com.meteor.extrabotany.common.lib.LibItemName;
 
 public class EntityGaiaIIIPhantom extends EntityMob{
 	EntityGaiaIII summoner;

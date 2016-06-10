@@ -11,16 +11,15 @@ import net.minecraft.util.ResourceLocation;
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL12;
 
-import com.meteor.extrabotany.common.lib.LibReference;
-
 import vazkii.botania.client.core.handler.ClientTickHandler;
 import vazkii.botania.client.core.handler.MultiblockRenderHandler;
 import vazkii.botania.client.core.helper.ShaderHelper;
-import vazkii.botania.client.lib.LibResources;
 import vazkii.botania.client.model.IPylonModel;
 import vazkii.botania.client.model.ModelPylon;
 import vazkii.botania.client.model.ModelPylonOld;
 import vazkii.botania.common.core.handler.ConfigHandler;
+
+import com.meteor.extrabotany.common.lib.LibReference;
 
 public class RenderTileAncientPylon extends TileEntitySpecialRenderer {
 

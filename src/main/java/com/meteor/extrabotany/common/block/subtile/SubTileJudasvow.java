@@ -1,8 +1,6 @@
 package com.meteor.extrabotany.common.block.subtile;
 
 import java.util.List;
-import java.util.logging.LogManager;
-import java.util.logging.Logger;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
@@ -18,7 +16,6 @@ import vazkii.botania.api.subtile.SubTileEntity;
 
 import com.meteor.extrabotany.common.entity.EntitySpear;
 import com.meteor.extrabotany.common.lexicon.LexiconModData;
-import com.meteor.extrabotany.common.lib.LibReference;
 
 public class SubTileJudasvow extends SubTileEntity implements IManaUsingItem{
 

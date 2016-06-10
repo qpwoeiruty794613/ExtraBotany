@@ -1,8 +1,5 @@
 package com.meteor.extrabotany.common.block.subtile;
 
-import com.meteor.extrabotany.api.ExtraBotanyAPI;
-import com.meteor.extrabotany.api.extrabotany.recipe.RecipeInfernoidisy;
-
 import net.minecraft.block.Block;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.ChunkCoordinates;
@@ -11,6 +8,9 @@ import vazkii.botania.api.subtile.RadiusDescriptor;
 import vazkii.botania.api.subtile.SubTileEntity;
 import vazkii.botania.common.Botania;
 import vazkii.botania.common.core.handler.ConfigHandler;
+
+import com.meteor.extrabotany.api.ExtraBotanyAPI;
+import com.meteor.extrabotany.api.extrabotany.recipe.RecipeInfernoidisy;
 
 public class SubTileInfernoidisy extends SubTileEntity {
 
