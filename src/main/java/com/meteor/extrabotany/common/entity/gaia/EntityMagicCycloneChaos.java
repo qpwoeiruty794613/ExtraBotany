@@ -25,6 +25,8 @@ import vazkii.botania.common.Botania;
 import vazkii.botania.common.item.relic.ItemRelic;
 
 import com.meteor.extrabotany.common.handler.EntityHandler;
+import com.meteor.extrabotany.common.util.Sound;
+import com.meteor.extrabotany.common.util.SoundHelper;
 
 public class EntityMagicCycloneChaos extends Entity{
 	private static float X = 1F;
@@ -95,7 +97,7 @@ public class EntityMagicCycloneChaos extends Entity{
 				else if(ticksExisted % 24 == 0)
 					player.attackEntityFrom(ItemRelic.damageSource(), 7F);
 				if(players.size() > 0)
-					worldObj.playSoundAtEntity(this, "botania:attack.shadow", 0.6F, 0.8F + (float) Math.random() * 0.2F);
+					SoundHelper.playSoundAtEntity(worldObj, Sound.ATTACK_SHADOW, this, 0.8F + (float) Math.random() * 0.2F);
 			}
 		}
 	}

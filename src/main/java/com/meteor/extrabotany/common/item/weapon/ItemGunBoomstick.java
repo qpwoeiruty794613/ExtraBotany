@@ -15,14 +15,9 @@ public class ItemGunBoomstick extends ItemGun{
 		super(name);
 	}
 	
-	int shootspeed = 31;
-	
 	@Override
-	public void onUsingTick(ItemStack stack, EntityPlayer player, int count) {
-		super.onUsingTick(stack, player, count);
-			if(count <= this.getMaxItemUseDuration(stack)- shootspeed && count % shootspeed == 0){
-					shoot(player);
-			}
+	public int getReloadSpeed(){
+		return 42;
 	}
 	
 	@Override

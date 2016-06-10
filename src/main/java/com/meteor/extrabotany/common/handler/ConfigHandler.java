@@ -24,6 +24,8 @@ public class ConfigHandler {
 	public static int pyschobloomMax;
 	
 	public static int enchGaiaBlessing;
+	public static int enchDivineFavor;
+	public static int enchDivineMark;
 	
 	public static int extraShieldAmount;
 	
@@ -40,6 +42,8 @@ public class ConfigHandler {
 	private static void registerConfig()
 	{		
 		enchGaiaBlessing = config.get(LibReference.CATEGORY_ID, "enchGaiaBlessing", 203, StatCollector.translateToLocal(LibReference.PREFIX_CONFIG + "ench.desc")).getInt();
+		enchDivineFavor = config.get(LibReference.CATEGORY_ID, "enchDivineFavor", 204, StatCollector.translateToLocal(LibReference.PREFIX_CONFIG + "ench.desc")).getInt();
+		enchDivineMark = config.get(LibReference.CATEGORY_ID, "enchDivineMark", 205, StatCollector.translateToLocal(LibReference.PREFIX_CONFIG + "ench.desc")).getInt();
 		
 		extraShieldAmount = config.get(LibReference.CATEGORY_COMMON, "extraShieldAmount", 0, StatCollector.translateToLocal(LibReference.PREFIX_CONFIG + "extraShieldAmount.desc")).getInt();
 		

@@ -3,6 +3,8 @@ package com.meteor.extrabotany.common.entity.gaia;
 import java.util.List;
 
 import com.meteor.extrabotany.common.handler.EntityHandler;
+import com.meteor.extrabotany.common.util.Sound;
+import com.meteor.extrabotany.common.util.SoundHelper;
 
 import vazkii.botania.common.Botania;
 import vazkii.botania.common.core.helper.Vector3;
@@ -79,7 +81,7 @@ public class EntityMagicCycloneAqua extends Entity{
 					player.attackEntityFrom(ItemRelic.damageSource(), 1.5F);
 					EntityHandler.knockBack(player, this, 10F, 8F);
 					if(players.size() > 0)
-						worldObj.playSoundAtEntity(this, "botania:attack.frost", 0.6F, 0.8F + (float) Math.random() * 0.2F);
+						SoundHelper.playSoundAtEntity(worldObj, Sound.ATTACK_FROST, this, 0.8F + (float) Math.random() * 0.2F);
 			}
 		}
 	}

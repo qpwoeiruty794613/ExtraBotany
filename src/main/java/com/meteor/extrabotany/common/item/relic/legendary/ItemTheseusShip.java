@@ -37,9 +37,11 @@ import vazkii.botania.common.entity.EntityManaBurst;
 import vazkii.botania.common.item.ModItems;
 import vazkii.botania.common.item.relic.ItemRelic;
 
+import com.meteor.extrabotany.common.enchantment.ModEnchantment;
 import com.meteor.extrabotany.common.entity.FakePlayer;
 import com.meteor.extrabotany.common.handler.PropertyHandler;
 import com.meteor.extrabotany.common.item.relic.ItemRelicAdv;
+import com.meteor.extrabotany.common.util.EnchHelper;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -82,9 +84,10 @@ public class ItemTheseusShip extends ItemRelicAdv implements ILensEffect, IManaU
 					setDelay(stack, 20);
 					player.addChatMessage(new ChatComponentTranslation("botaniamisc.theseussetMode" + getMode(stack)).setChatStyle(new ChatStyle().setColor(EnumChatFormatting.DARK_GREEN)));
 				}
-			}else if(count % 9 == 0 && !player.isSneaking()){
+			}else if(count % 1 == 0 && !player.isSneaking()){
 					if(ItemRelic.isRightPlayer(player, stack)){
-						if(ManaItemHandler.requestManaExact(stack, player, m == 3 ? 20 : m == 2 ? 16 : m == 1 ? 120 : 12, true)){
+						int cost = (int) ((m == 3 ? 1 : m == 2 ? 2 : m == 1 ? 5 : 2) * EnchHelper.getDivineFavorBuff(stack) * EnchHelper.getDivineMarkBuff(stack));
+						if(ManaItemHandler.requestManaExact(stack, player, cost, true)){
 							player.worldObj.spawnEntityInWorld(getBurst(player, stack));
 						}
 					}		
@@ -94,7 +97,7 @@ public class ItemTheseusShip extends ItemRelicAdv implements ILensEffect, IManaU
 	
 	public EntityManaBurst getBurst(EntityPlayer player, ItemStack stack) {
 		EntityManaBurst burst = new EntityManaBurst(player);
-		float motionModifier = 4F;
+		float motionModifier = 5F;
 		int mode = getMode(stack);
 		burst.setColor(mode == 3 ? 0xF3812B : mode == 2 ? 0x6DDC41 : mode == 1 ? 0x3786E6 : 0xDD40C3);
 		burst.setMana(1);
@@ -137,7 +140,7 @@ public class ItemTheseusShip extends ItemRelicAdv implements ILensEffect, IManaU
 		AxisAlignedBB axisbig = AxisAlignedBB.getBoundingBox(entity.posX - 0.2F, entity.posY - 0.2F, entity.posZ - 0.2F, entity.lastTickPosX + 0.2F, entity.lastTickPosY + 0.2F, entity.lastTickPosZ + 0.2F).expand(1, 1, 1);
 		String attacker = ItemNBTHelper.getString(burst.getSourceLens(), TAG_ATTACKER_USERNAME, "");
 		
-		if(entity.ticksExisted > 8)
+		if(entity.ticksExisted > 1)
 			entity.setDead();
 		
 		if(getMode(stack) == 0){
@@ -149,7 +152,7 @@ public class ItemTheseusShip extends ItemRelicAdv implements ILensEffect, IManaU
 					int mana = burst.getMana();
 					if(mana >= cost) {
 						burst.setMana(mana - cost);
-						float damage = 3F;
+						float damage = 3F * EnchHelper.getDivineFavorBuff(stack);
 						if(!burst.isFake() && !entity.worldObj.isRemote) {
 							EntityPlayer player = m.worldObj.getPlayerEntityByName(attacker);
 							m.attackEntityFrom(player == null ? DamageSource.magic : DamageSource.causePlayerDamage(player), damage);
@@ -168,7 +171,7 @@ public class ItemTheseusShip extends ItemRelicAdv implements ILensEffect, IManaU
 					ItemStack s = item.getEntityItem();
 					if(s.getItemDamage() > 0){
 						if(!burst.isFake() && !entity.worldObj.isRemote){
-							s.setItemDamage(s.getItemDamage() - 1);
+							s.setItemDamage(Math.max(0, (int) (s.getItemDamage() - 1 * EnchHelper.getDivineFavorBuff(stack))));
 							entity.setDead();
 							break;
 						}
@@ -181,7 +184,7 @@ public class ItemTheseusShip extends ItemRelicAdv implements ILensEffect, IManaU
 			List<EntityLiving> livings = entity.worldObj.getEntitiesWithinAABB(EntityLiving.class, axis);
 			for(EntityLiving l : livings){
 				if(!(l instanceof IMob)){
-					l.heal(3F);
+					l.heal(3F * EnchHelper.getDivineFavorBuff(stack));
 				}
 			}
 		}
@@ -189,11 +192,11 @@ public class ItemTheseusShip extends ItemRelicAdv implements ILensEffect, IManaU
 		if(getMode(stack) == 3){
 			List<EntityLivingBase> livings = entity.worldObj.getEntitiesWithinAABB(EntityLivingBase.class, axis);
 			for(EntityLivingBase l : livings){
-				if(!(l instanceof IMob)){
+				if(!(l instanceof IMob) && (l != entity.getThrower())){
 					l.addPotionEffect(new PotionEffect(Potion.moveSpeed.getId(), 1, 50));
 					l.addPotionEffect(new PotionEffect(Potion.damageBoost.getId(), 1, 50));
 					if(l instanceof EntityPlayer)
-						PropertyHandler.addShieldAmount(0.2F, ((EntityPlayer)l));
+						PropertyHandler.addShieldAmount(0.2F * EnchHelper.getDivineFavorBuff(stack), ((EntityPlayer)l));
 				}
 			}
 		}
@@ -231,16 +234,6 @@ public class ItemTheseusShip extends ItemRelicAdv implements ILensEffect, IManaU
 				addStringToTooltip(String.format(StatCollector.translateToLocal("botaniamisc.relicSoulbound"), bind), list);
 				if(!isRightPlayer(player, stack))
 					addStringToTooltip(String.format(StatCollector.translateToLocal("botaniamisc.notYourSagittarius"), bind), list);
-			}
-
-			if(stack.getItem() == ModItems.aesirRing)
-				addStringToTooltip(StatCollector.translateToLocal("botaniamisc.dropIkea"), list);
-
-			if(stack.getItem() == ModItems.dice) {
-				addStringToTooltip("", list);
-				String name = stack.getUnlocalizedName() + ".poem";
-				for(int i = 0; i < 4; i++)
-					addStringToTooltip(EnumChatFormatting.ITALIC + StatCollector.translateToLocal(name + i), list);
 			}
 		} else addStringToTooltip(StatCollector.translateToLocal("botaniamisc.shiftinfo"), list);
 	}

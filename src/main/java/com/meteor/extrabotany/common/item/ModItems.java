@@ -23,6 +23,7 @@ import com.meteor.extrabotany.common.item.relic.legendary.ItemAthenaBless;
 import com.meteor.extrabotany.common.item.relic.legendary.ItemCronusPhantom;
 import com.meteor.extrabotany.common.item.relic.legendary.ItemCthulhuEye;
 import com.meteor.extrabotany.common.item.relic.legendary.ItemDice20;
+import com.meteor.extrabotany.common.item.relic.legendary.ItemEternalSlience;
 import com.meteor.extrabotany.common.item.relic.legendary.ItemExcaliber;
 import com.meteor.extrabotany.common.item.relic.legendary.ItemExcaliberFake;
 import com.meteor.extrabotany.common.item.relic.legendary.ItemHermesTravelClothing;
@@ -33,6 +34,7 @@ import com.meteor.extrabotany.common.item.relic.legendary.ItemMaxwellDemon;
 import com.meteor.extrabotany.common.item.relic.legendary.ItemOlympusGuard;
 import com.meteor.extrabotany.common.item.relic.legendary.ItemTheseusShip;
 import com.meteor.extrabotany.common.item.relic.legendary.ItemVRangerBoots;
+import com.meteor.extrabotany.common.item.relic.legendary.ItemValkyrieCombatUniform;
 import com.meteor.extrabotany.common.item.weapon.ItemGunBoomstick;
 import com.meteor.extrabotany.common.item.weapon.ItemGunFlintlock;
 import com.meteor.extrabotany.common.item.weapon.ItemGunPistol;
@@ -71,6 +73,8 @@ public class ModItems {
 	public static Item dog;
 	public static Item hermeswand;
 	public static Item theseusship;
+	public static Item eternalslience;
+	public static Item valkyriecombatuniform;
 	
 	public static Item gaiawise;
 	
@@ -138,6 +142,8 @@ public class ModItems {
 		hermestravelclothing = new ItemHermesTravelClothing(1, LibItemName.HERMESTRAVELCLOTHING);
 		hermeswand = new ItemHermesWand(LibItemName.HERMESWAND);
 		theseusship = new ItemTheseusShip(LibItemName.THESEUSSHIP);
+		eternalslience = new ItemEternalSlience(LibItemName.ETERNALSLIENCE);
+		valkyriecombatuniform = new ItemValkyrieCombatUniform(LibItemName.VALKYRIECOMBATUNIFORM);
 		
 		gaiatablet = new ItemGaiaTablet();
 		teleportpearl = new ItemTeleportPearl(LibItemName.TELEPORTPEARL);

@@ -20,9 +20,9 @@ public class ItemDungeonBox extends ItemMods{
 		ItemStack s = ChestGenHooks.getOneItem(ChestGenHooks.DUNGEON_CHEST, player.worldObj.rand);
 		if(!player.worldObj.isRemote){
 			if(player.inventory.hasItemStack(new ItemStack(ModItems.material,1,12))){	
+				player.inventory.consumeInventoryItem(new ItemStack(ModItems.material,1,12).getItem());
 				int a = player.worldObj.rand.nextInt(2) + 1;
 				do{
-					player.inventory.consumeInventoryItem(new ItemStack(ModItems.material,1,12).getItem());
 					ItemStack s1 = ChestGenHooks.getOneItem(ChestGenHooks.DUNGEON_CHEST, player.worldObj.rand);
 					player.inventory.addItemStackToInventory(s1);
 					a--;

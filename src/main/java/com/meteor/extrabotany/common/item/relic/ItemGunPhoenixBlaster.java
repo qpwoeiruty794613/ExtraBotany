@@ -16,15 +16,14 @@ public class ItemGunPhoenixBlaster extends ItemGunRelic{
 		super(name);
 	}
 	
-	int shootspeed = 12;
+	@Override
+	public int getReloadSpeed(){
+		return 12;
+	}
 	
 	@Override
-	public void onUsingTick(ItemStack stack, EntityPlayer player, int count) {
-		super.onUsingTick(stack, player, count);
-			if(count <= this.getMaxItemUseDuration(stack)- shootspeed && count % shootspeed == 0){
-				if(ItemGunRelic.isRightPlayer(player, stack))	
-					shoot(player);
-			}
+	public int getReloadAmount(){
+		return 6;
 	}
 	
 	@Override

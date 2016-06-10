@@ -28,6 +28,7 @@ import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.ChunkCoordinates;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.MathHelper;
+import net.minecraft.world.EnumDifficulty;
 import net.minecraft.world.World;
 
 public class EntityGaiaIIIPhantom extends EntityMob{
@@ -168,7 +169,12 @@ public class EntityGaiaIIIPhantom extends EntityMob{
 				setInvulTime(invul - 1);
 			}
 		}
-		
+		List<EntityPlayer> players = summoner.getPlayersAround();
+		if(players.isEmpty() && !worldObj.playerEntities.isEmpty())
+			setDead();
+		boolean peaceful = worldObj.difficultySetting == EnumDifficulty.PEACEFUL;
+		if(!worldObj.isRemote && peaceful)
+			setDead();
 	}
 
 }

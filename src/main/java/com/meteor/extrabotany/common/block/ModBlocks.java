@@ -74,7 +74,6 @@ public class ModBlocks {
 		elvenquartzslabfull = new BlockElvenQuartzSlab(true);
 		elvenquartzstairs = new BlockElvenQuartzStairs();
 		
-		
 		((BlockModSlab) gaiaquartzslab).register();
 		((BlockModSlab) gaiaquartzslabfull).register();
 		((BlockModSlab) elvenquartzslab).register();
