@@ -143,15 +143,15 @@ public class LexiconModData {
 				new PageText("1"));
 		gunbase.setIcon(new ItemStack(ModItems.gunboomstick));
 		
-		gunphoenixblaster = new ELexiconEntry(LibLexiconName.G_GUNPHOENIXBLASTER, categoryExtra);
+		gunphoenixblaster = new LLexiconEntry(LibLexiconName.G_GUNPHOENIXBLASTER, categoryExtra);
 		gunphoenixblaster.setLexiconPages(new PageText("0"));
 		gunphoenixblaster.setIcon(new ItemStack(ModItems.gunphoenixblaster));
 		
-		gunsnowballcannon = new ELexiconEntry(LibLexiconName.G_GUNSNOWBALLCANNON, categoryExtra);
+		gunsnowballcannon = new LLexiconEntry(LibLexiconName.G_GUNSNOWBALLCANNON, categoryExtra);
 		gunsnowballcannon.setLexiconPages(new PageText("0"));
 		gunsnowballcannon.setIcon(new ItemStack(ModItems.snowballlauncher));
 		
-		guntacticalshotgun = new ELexiconEntry(LibLexiconName.G_GUNTACTICALSHOTGUN, categoryExtra);
+		guntacticalshotgun = new LLexiconEntry(LibLexiconName.G_GUNTACTICALSHOTGUN, categoryExtra);
 		guntacticalshotgun.setLexiconPages(new PageText("0"));
 		guntacticalshotgun.setIcon(new ItemStack(ModItems.guntacticalshotgun));
 		
@@ -275,31 +275,31 @@ public class LexiconModData {
 		infinitymana = new DLexiconEntry(LibLexiconName.D_INFINITYMANA, categoryExtra);
 		infinitymana.setIcon(new ItemStack(vazkii.botania.common.block.ModBlocks.pool));
 		//Relics
-		hestiachastity = new ELexiconEntry(LibLexiconName.R_HESTIACHASTITY, BotaniaAPI.categoryAlfhomancy);
+		hestiachastity = new LLexiconEntry(LibLexiconName.R_HESTIACHASTITY, BotaniaAPI.categoryAlfhomancy);
 		hestiachastity.setIcon(new ItemStack(ModItems.hestiachastity));
 		hestiachastity.setLexiconPages(new PageText("0"));
 		
-		maxwelldemon = new ELexiconEntry(LibLexiconName.R_MAXWELLDEMON, BotaniaAPI.categoryAlfhomancy);
+		maxwelldemon = new LLexiconEntry(LibLexiconName.R_MAXWELLDEMON, BotaniaAPI.categoryAlfhomancy);
 		maxwelldemon.setIcon(new ItemStack(ModItems.maxwelldemon));
 		maxwelldemon.setLexiconPages(new PageText("0"));
 		
-		athenabless = new ELexiconEntry(LibLexiconName.R_ATHENABLESS, BotaniaAPI.categoryAlfhomancy);
+		athenabless = new LLexiconEntry(LibLexiconName.R_ATHENABLESS, BotaniaAPI.categoryAlfhomancy);
 		athenabless.setIcon(new ItemStack(ModItems.athenabless));
 		athenabless.setLexiconPages(new PageText("0"));
 		
-		aphroditegrace = new ELexiconEntry(LibLexiconName.R_APHRODITEGRACE, BotaniaAPI.categoryAlfhomancy);
+		aphroditegrace = new LLexiconEntry(LibLexiconName.R_APHRODITEGRACE, BotaniaAPI.categoryAlfhomancy);
 		aphroditegrace.setIcon(new ItemStack(ModItems.aphroditegrace));
 		aphroditegrace.setLexiconPages(new PageText("0"));
 		
-		dice20 = new ELexiconEntry(LibLexiconName.R_DICE20, BotaniaAPI.categoryAlfhomancy);
+		dice20 = new LLexiconEntry(LibLexiconName.R_DICE20, BotaniaAPI.categoryAlfhomancy);
 		dice20.setIcon(new ItemStack(ModItems.dice20));
 		dice20.setLexiconPages(new PageText("0"));
 		
-		excaliber = new ELexiconEntry(LibLexiconName.R_EXCALIBER, BotaniaAPI.categoryAlfhomancy);
+		excaliber = new LLexiconEntry(LibLexiconName.R_EXCALIBER, BotaniaAPI.categoryAlfhomancy);
 		excaliber.setIcon(new ItemStack(ModItems.excaliber));
 		excaliber.setLexiconPages(new PageText("0"));
 		
-		excaliberfake = new ELexiconEntry(LibLexiconName.R_EXCALIBERFAKE, BotaniaAPI.categoryAlfhomancy);
+		excaliberfake = new LLexiconEntry(LibLexiconName.R_EXCALIBERFAKE, BotaniaAPI.categoryAlfhomancy);
 		excaliberfake.setIcon(new ItemStack(ModItems.excaliberfake));
 		excaliberfake.setLexiconPages(new PageText("0"));
 		
@@ -311,7 +311,7 @@ public class LexiconModData {
 		vhandgun.setIcon(new ItemStack(ModItems.vhandgun));
 		vhandgun.setLexiconPages(new PageText("0"));
 		
-		vrangerboots = new ELexiconEntry(LibLexiconName.R_VRANGERBOOTS, BotaniaAPI.categoryAlfhomancy);
+		vrangerboots = new LLexiconEntry(LibLexiconName.R_VRANGERBOOTS, BotaniaAPI.categoryAlfhomancy);
 		vrangerboots.setIcon(new ItemStack(ModItems.vrangerboots));
 		vrangerboots.setLexiconPages(new PageText("0"));
 		
