@@ -36,6 +36,7 @@ public class ExtraBotany {
 	public static boolean candycraftLoaded = false;
 	
 	public static KnowledgeType extraKnowledge;
+	public static KnowledgeType legendaryKnowledge;
 	
 	public static final ExtraBotanyCreativeTab tabExtraBotany = new ExtraBotanyCreativeTab(); 
 	public static Set<String> subtilesForCreativeMenu = new LinkedHashSet();
@@ -50,6 +51,7 @@ public class ExtraBotany {
 		arsmagicaLoaded = Loader.isModLoaded("Ars Magica 2");
 		candycraftLoaded = Loader.isModLoaded("CandyCraft");
 		extraKnowledge = BotaniaAPI.registerKnowledgeType("extra", EnumChatFormatting.DARK_AQUA, false);
+		legendaryKnowledge = BotaniaAPI.registerKnowledgeType("legendary", EnumChatFormatting.GOLD, false);
 		proxy.preInit(event);
 	}
 

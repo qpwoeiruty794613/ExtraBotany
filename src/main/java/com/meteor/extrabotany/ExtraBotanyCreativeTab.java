@@ -30,6 +30,8 @@ public class ExtraBotanyCreativeTab extends CreativeTabs{
 		return getIconItemStack().getItem();
 	}
 	
+	ItemStack ship = new ItemStack(ModItems.theseusship);
+	
 	@Override
 	public void displayAllReleventItems(List list) {
 		this.list = list;
@@ -57,6 +59,7 @@ public class ExtraBotanyCreativeTab extends CreativeTabs{
 		addItem(ModItems.cthulhueye);
 		addItem(ModItems.hermeswand);
 		addItem(ModItems.theseusship);
+		addItem(ModItems.eternalslience);
 		//Test
 		addItem(ModItems.itemtest);
 		//Basic
