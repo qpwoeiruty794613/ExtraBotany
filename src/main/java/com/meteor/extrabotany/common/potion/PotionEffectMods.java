@@ -3,15 +3,15 @@ package com.meteor.extrabotany.common.potion;
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
 
-import com.meteor.extrabotany.common.lib.LibPotionEffectName;
-import com.meteor.extrabotany.common.lib.LibReference;
-
 import net.minecraft.client.renderer.Tessellator;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.ResourceLocation;
+
+import com.meteor.extrabotany.common.lib.LibPotionEffectName;
+import com.meteor.extrabotany.common.lib.LibReference;
 
 public class PotionEffectMods extends Potion{
 	private static int nextID = 32;

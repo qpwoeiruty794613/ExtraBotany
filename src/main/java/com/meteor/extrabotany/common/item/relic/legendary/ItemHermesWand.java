@@ -1,11 +1,11 @@
-package com.meteor.extrabotany.common.item.relic;
+package com.meteor.extrabotany.common.item.relic.legendary;
 
 import vazkii.botania.api.mana.IManaUsingItem;
 import vazkii.botania.api.mana.ManaItemHandler;
 
 import com.meteor.extrabotany.common.entity.EntityTeleportPearl;
 import com.meteor.extrabotany.common.handler.EntityHandler;
-import com.meteor.extrabotany.common.item.relic.legendary.ItemHermesTravelClothing;
+import com.meteor.extrabotany.common.item.relic.ItemRelicAdv;
 
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;

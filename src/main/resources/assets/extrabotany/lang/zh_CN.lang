@@ -1,11 +1,27 @@
 # KNOWLEDGE
 category.Botania:extra=额外植物学
 botania.knowledge.extra=&3额外&7的知识
+botania.knowledge.legendary=&e传说&7的知识
 
 # MISC
 botaniamisc.knowledgeUnlock=白卡闪耀着异样的光芒,你手中的手册被注入了神秘的力量.
+botaniamisc.knowledgeUnlock2=恭喜你!你成功地击败了盖亚守护者III并解锁了传说的知识.
+botaniamisc.bullet=弹药已用尽.
+botaniamisc.reload=上弹完毕.
+botaniamisc.gunfalse=普通模式
+botaniamisc.guntrue=连发模式
+botaniamisc.eternalmodefalse=永恒模式
+botaniamisc.eternalmodetrue=静籁模式
 botaniamisc.uselessDiceRoll=骰子停在了%s上,接着变成了奇怪的东西.
 botaniamisc.openChest=在开箱子前你得先拥有一把钥匙.
+botaniamisc.theseusmode0.desc=攻击模式
+botaniamisc.theseusmode1.desc=修复模式
+botaniamisc.theseusmode2.desc=治疗模式
+botaniamisc.theseusmode3.desc=激励模式
+botaniamisc.theseussetMode0=你已将其设置为攻击模式.
+botaniamisc.theseussetMode1=你已将其设置为修复模式.
+botaniamisc.theseussetMode2=你已将其设置为治疗模式.
+botaniamisc.theseussetMode3=你已将其设置为激励模式.
 
 #ITEMGROUP
 itemGroup.ExtraBotany=额外植物学
@@ -110,8 +126,6 @@ item.emptydice.name=空骰子
 # -RELIC
 item.botania:excaliber.name=王者圣剑
 item.botania:excaliberfake.name=王者之剑
-item.botania:vhandgun_double.name=V制式手炮
-item.botania:vpowerbattleaxe.name=V制式动力战斧
 item.botania:vrangerboots.name=V制式游侠靴
 item.botania:hestiachastity.name=赫斯提亚的贞洁
 item.botania:maxwelldemon.name=麦克斯韦的妖精
@@ -123,6 +137,9 @@ item.botania:olympusguard.name=奥林匹斯的戍卫
 item.botania:hermestravelclothing.name=赫尔墨斯的旅行衣
 item.botania:cthulhueye.name=克苏鲁之眼
 item.botania:hermeswand.name=赫尔墨斯的旅行手杖
+item.botania:theseusship.name=特修斯之船
+item.botania:eternalslience.name=静籁永恒
+item.botania:valkyriecombatsuit.name=女武神作战服
 
 # -WEAPON
 item.phoenixblaster.name=凤凰冲击波
@@ -134,6 +151,8 @@ item.pistol.name=手枪
 item.snowballlauncher.name=雪球发射器
 item.scissorbladepurple.name=太刀剪「紫」
 item.scissorbladered.name=太刀剪「红」
+item.botania:vhandgun_double.name=V制式手炮
+item.botania:vpowerbattleaxe.name=V制式动力战斧
 
 # —BULLET
 item.bulletexploding.name=高爆弹
@@ -319,6 +338,16 @@ botania.entry.artifaconia=古遗莲
 botania.page.artifaconia0=
 botania.page.artifaconia1=
 
+# --INFERNOIDISY
+botania.entry.infernoidisy=狱火菊
+botania.page.infernoidisy0=
+botania.page.infernoidisy1=
+
+# --LAUNCHISH
+botania.entry.launchish=弹射草
+botania.page.launchish0=
+botania.page.launchish1=
+
 # -OTHERS
 # --INFINITYMANA
 botania.entry.infinitymana=无限魔力
@@ -469,6 +498,14 @@ botania.tagline.voiduim=
 tile.botania:flower.diplopbamboo.name=复视笋
 tile.botania:flower.diplopbamboo.reference=
 botania.tagline.diplopbamboo=
+
+tile.botania:flower.infernoidisy.name=狱火菊
+tile.botania:flower.infernoidisy.reference=我想变成红色
+botania.tagline.infernoidisy=
+
+tile.botania:flower.launchish.name=弹射草
+tile.botania:flower.launchish.reference=
+botania.tagline.launchish=
 
 #ACHIEVEMENTS
 # -RELICS

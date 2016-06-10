@@ -12,8 +12,6 @@ import net.minecraft.util.DamageSource;
 import net.minecraft.world.World;
 import vazkii.botania.common.Botania;
 
-import com.meteor.extrabotany.common.potion.PotionEffectMods;
-
 public class EntityMagicLandmineII extends Entity {
 
 	public EntityGaiaIII summoner;

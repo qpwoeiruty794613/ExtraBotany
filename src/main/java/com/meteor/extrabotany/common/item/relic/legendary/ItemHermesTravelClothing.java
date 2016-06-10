@@ -29,18 +29,11 @@ import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.TickEvent;
 
-public class ItemHermesTravelClothing extends ItemRelicArmorSet implements IManaUsingItem, IRunicArmor{
+public class ItemHermesTravelClothing extends ItemRelicArmorSet implements IManaUsingItem{
 	public ItemHermesTravelClothing(int type, String name) {
 		super(1, LibItemName.HERMESTRAVELCLOTHING);
 		MinecraftForge.EVENT_BUS.register(this);
 	    FMLCommonHandler.instance().bus().register(this);
-	}
-	
-	@Override
-	public Multimap getItemAttributeModifiers() {
-		Multimap multimap = HashMultimap.create();
-		multimap.put(SharedMonsterAttributes.movementSpeed.getAttributeUnlocalizedName(), new AttributeModifier(field_111210_e, "Armor modifier", 0.15, 1));
-		return multimap;
 	}
 	
 	public static boolean hasHermesTravelClothing(EntityPlayer player){
@@ -89,14 +82,11 @@ public class ItemHermesTravelClothing extends ItemRelicArmorSet implements IMana
     @SubscribeEvent
     public void TickEvent(TickEvent.PlayerTickEvent event) {
     	 EntityPlayer player = (EntityPlayer) event.player;
-	        for(ItemStack stack : player.inventory.armorInventory) {
-	            if(stack != null && stack.getItem() instanceof ItemHermesTravelClothing) {
-	            	if (Keyboard.isKeyDown(Keyboard.KEY_M)) {
-	            		if(ItemRelic.isRightPlayer(player, stack))
-	            		player.addPotionEffect(new PotionEffect(Potion.invisibility.getId(), 10, 0));
-	            	}
+	        if(hasHermesTravelClothing(player)){
+	            if (Keyboard.isKeyDown(Keyboard.KEY_M)) {
+	            	player.addPotionEffect(new PotionEffect(Potion.invisibility.getId(), 10, 0));
 	            }
-	        }
+	       }
     }
     
 	@SubscribeEvent
@@ -117,10 +107,5 @@ public class ItemHermesTravelClothing extends ItemRelicArmorSet implements IMana
 	public boolean usesMana(ItemStack stack) {
 		return true;
 	}
-	
-	@Override
-	public int getRunicCharge(ItemStack itemstack){
-		return 15;
-	};
 
 }

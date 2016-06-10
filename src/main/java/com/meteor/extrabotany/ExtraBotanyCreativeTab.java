@@ -6,11 +6,9 @@ import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import vazkii.botania.common.item.block.ItemBlockSpecialFlower;
 
 import com.meteor.extrabotany.common.block.ModBlocks;
 import com.meteor.extrabotany.common.item.ModItems;
-import com.meteor.extrabotany.common.lib.LibBlockName;
 import com.meteor.extrabotany.common.lib.LibReference;
 
 public class ExtraBotanyCreativeTab extends CreativeTabs{
@@ -29,6 +27,8 @@ public class ExtraBotanyCreativeTab extends CreativeTabs{
 	public Item getTabIconItem() {
 		return getIconItemStack().getItem();
 	}
+	
+	ItemStack ship = new ItemStack(ModItems.theseusship);
 	
 	@Override
 	public void displayAllReleventItems(List list) {
@@ -56,6 +56,8 @@ public class ExtraBotanyCreativeTab extends CreativeTabs{
 		addItem(ModItems.olympusguard);
 		addItem(ModItems.cthulhueye);
 		addItem(ModItems.hermeswand);
+		addItem(ModItems.theseusship);
+		addItem(ModItems.eternalslience);
 		//Test
 		addItem(ModItems.itemtest);
 		//Basic

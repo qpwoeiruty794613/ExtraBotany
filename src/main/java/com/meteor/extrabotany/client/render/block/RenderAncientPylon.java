@@ -7,9 +7,6 @@ import net.minecraft.world.IBlockAccess;
 
 import org.lwjgl.opengl.GL11;
 
-import vazkii.botania.client.lib.LibRenderIDs;
-import vazkii.botania.common.block.tile.TilePylon;
-
 import com.meteor.extrabotany.client.lib.LibRenderID;
 import com.meteor.extrabotany.client.render.tile.RenderTileAncientPylon;
 import com.meteor.extrabotany.common.block.tile.TileAncientPylon;

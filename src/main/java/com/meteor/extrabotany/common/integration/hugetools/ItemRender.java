@@ -33,5 +33,7 @@ public class ItemRender {
 		new ItemIcon(ModItems.guntacticalshotgun.getIconFromDamage(0), 1.2F, 0.6F);
 		MinecraftForgeClient.registerItemRenderer(ModItems.snowballlauncher, gunRenderer);
 		new ItemIcon(ModItems.snowballlauncher.getIconFromDamage(0), 1.2F, 0.6F);
+		MinecraftForgeClient.registerItemRenderer(ModItems.theseusship, gunRenderer);
+		new ItemIcon(ModItems.theseusship.getIconFromDamage(0), 1.2F, 0.6F);
 	}
 }

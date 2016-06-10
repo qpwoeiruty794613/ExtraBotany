@@ -3,14 +3,11 @@ package com.meteor.extrabotany;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
-import net.minecraft.item.Item;
 import net.minecraft.util.EnumChatFormatting;
 import vazkii.botania.api.BotaniaAPI;
 import vazkii.botania.api.lexicon.KnowledgeType;
 
-import com.meteor.extrabotany.api.ExtraBotanyAPI;
 import com.meteor.extrabotany.common.CommonProxy;
-import com.meteor.extrabotany.common.handler.ConfigHandler;
 import com.meteor.extrabotany.common.lib.LibReference;
 
 import cpw.mods.fml.common.Loader;
@@ -22,7 +19,6 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.event.FMLServerStartingEvent;
-import cpw.mods.fml.common.registry.GameRegistry;
 
 @Mod(modid = LibReference.MOD_ID, name = LibReference.MOD_NAME, version = LibReference.VERSION, dependencies = LibReference.DEPENDENCIES)
 public class ExtraBotany {
@@ -36,6 +32,7 @@ public class ExtraBotany {
 	public static boolean candycraftLoaded = false;
 	
 	public static KnowledgeType extraKnowledge;
+	public static KnowledgeType legendaryKnowledge;
 	
 	public static final ExtraBotanyCreativeTab tabExtraBotany = new ExtraBotanyCreativeTab(); 
 	public static Set<String> subtilesForCreativeMenu = new LinkedHashSet();
@@ -50,6 +47,7 @@ public class ExtraBotany {
 		arsmagicaLoaded = Loader.isModLoaded("Ars Magica 2");
 		candycraftLoaded = Loader.isModLoaded("CandyCraft");
 		extraKnowledge = BotaniaAPI.registerKnowledgeType("extra", EnumChatFormatting.DARK_AQUA, false);
+		legendaryKnowledge = BotaniaAPI.registerKnowledgeType("legendary", EnumChatFormatting.GOLD, false);
 		proxy.preInit(event);
 	}
 

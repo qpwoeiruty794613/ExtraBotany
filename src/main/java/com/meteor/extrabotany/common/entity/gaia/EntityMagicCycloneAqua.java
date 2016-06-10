@@ -2,18 +2,18 @@ package com.meteor.extrabotany.common.entity.gaia;
 
 import java.util.List;
 
-import com.meteor.extrabotany.common.handler.EntityHandler;
-
-import vazkii.botania.common.Botania;
-import vazkii.botania.common.core.helper.Vector3;
-import vazkii.botania.common.item.relic.ItemRelic;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.DamageSource;
-import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
+import vazkii.botania.common.Botania;
+import vazkii.botania.common.item.relic.ItemRelic;
+
+import com.meteor.extrabotany.common.handler.EntityHandler;
+import com.meteor.extrabotany.common.util.Sound;
+import com.meteor.extrabotany.common.util.SoundHelper;
 
 public class EntityMagicCycloneAqua extends Entity{
 	private static float X = 1F;
@@ -79,7 +79,7 @@ public class EntityMagicCycloneAqua extends Entity{
 					player.attackEntityFrom(ItemRelic.damageSource(), 1.5F);
 					EntityHandler.knockBack(player, this, 10F, 8F);
 					if(players.size() > 0)
-						worldObj.playSoundAtEntity(this, "botania:attack.frost", 0.6F, 0.8F + (float) Math.random() * 0.2F);
+						SoundHelper.playSoundAtEntity(worldObj, Sound.ATTACK_FROST, this, 0.8F + (float) Math.random() * 0.2F);
 			}
 		}
 	}

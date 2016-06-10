@@ -13,6 +13,7 @@ import com.meteor.extrabotany.common.block.ModMultiBlocks;
 import com.meteor.extrabotany.common.block.subtile.generating.SubTileStonesia;
 import com.meteor.extrabotany.common.command.ModCommands;
 import com.meteor.extrabotany.common.enchantment.ModEnchantment;
+import com.meteor.extrabotany.common.entity.FakePlayer;
 import com.meteor.extrabotany.common.entity.ModEntities;
 import com.meteor.extrabotany.common.event.ModEvents;
 import com.meteor.extrabotany.common.handler.ConfigHandler;
@@ -49,6 +50,7 @@ public class CommonProxy {
 	
 	public void init(FMLInitializationEvent event) {
 		ModEvents.init();
+		new FakePlayer();
 		Intergration.init(event);
 		NetworkRegistry.INSTANCE.registerGuiHandler(ExtraBotany.instance, new GuiHandler());
 	}

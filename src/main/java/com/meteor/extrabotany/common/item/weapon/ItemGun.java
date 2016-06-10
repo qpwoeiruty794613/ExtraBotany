@@ -1,9 +1,16 @@
 package com.meteor.extrabotany.common.item.weapon;
 
+import java.util.List;
+
+import vazkii.botania.common.core.helper.ItemNBTHelper;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumAction;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.ChatComponentTranslation;
+import net.minecraft.util.ChatStyle;
+import net.minecraft.util.EnumChatFormatting;
+import net.minecraft.util.StatCollector;
 import net.minecraft.world.World;
 
 import com.meteor.extrabotany.api.extrabotany.item.IGun;
@@ -124,11 +131,6 @@ public class ItemGun extends ItemMods implements IGun{
 		summonBullet(player);
 	}
 	
-	@Override
-	public EnumAction getItemUseAction(ItemStack stack) {
-		return EnumAction.bow;
-	}
-	
 	@SideOnly(Side.CLIENT)
 	public boolean isFull3D()
 	{
@@ -139,6 +141,105 @@ public class ItemGun extends ItemMods implements IGun{
 	public ItemStack onItemRightClick(ItemStack stack, World world, EntityPlayer player) {
 		player.setItemInUse(stack, getMaxItemUseDuration(stack));
 		return stack;
+	}
+	
+	public static final String TAG_MODE = "mode";
+	public static final String TAG_RELOAD = "isReloading";
+	public static final String TAG_AMOUNT = "reloadamount";
+	
+	@Override
+	public void onUsingTick(ItemStack stack, EntityPlayer player, int count) {
+		super.onUsingTick(stack, player, count);
+		if(!player.worldObj.isRemote){
+			if(!player.isSneaking()){
+				if(isReload(stack) == false){
+					if(selectBullet(player) == 0){
+						player.addChatMessage(new ChatComponentTranslation("botaniamisc.bullet").setChatStyle(new ChatStyle().setColor(EnumChatFormatting.DARK_GREEN)));
+						player.stopUsingItem();
+					}else{
+						if(count <= this.getMaxItemUseDuration(stack) - getReloadSpeed()){
+							setReload(stack, true);
+							setAmount(stack, getReloadAmount());
+							player.stopUsingItem();
+							player.addChatMessage(new ChatComponentTranslation("botaniamisc.reload").setChatStyle(new ChatStyle().setColor(EnumChatFormatting.DARK_GREEN)));
+						}
+					}
+				}else if(count <= this.getMaxItemUseDuration(stack) - getShootSpeed() && isReload(stack) == true && getAmount(stack) > 0){
+					if(isMode(stack) == false){
+						shoot(player);
+						setAmount(stack, getAmount(stack)-1);
+						if(getAmount(stack) == 0){
+							setReload(stack, false);
+						}
+					}else{
+						for(int i = 0; i < getAmount(stack); i++){
+							shoot(player);
+						}
+						setAmount(stack, 0);
+						setReload(stack, false);
+					}
+					player.stopUsingItem();
+				}
+			}else if(count <= this.getMaxItemUseDuration(stack) - getReloadSpeed() && canMode()){
+				setMode(stack, !isMode(stack));
+				player.stopUsingItem();
+			}
+		}
+	}
+	
+	@Override
+	public EnumAction getItemUseAction(ItemStack stack) {
+		return isReload(stack) ? EnumAction.bow : EnumAction.block;
+	}
+	
+	public int getShootSpeed(){
+		return 10;
+	}
+	
+	public int getReloadSpeed(){
+		return 20;
+	}
+	
+	public int getReloadAmount(){
+		return 1;
+	}
+	
+	public boolean canMode(){
+		return false;
+	}
+	
+	public static boolean isReload(ItemStack stack){
+		return ItemNBTHelper.getBoolean(stack, TAG_RELOAD, false);
+	}
+	
+	public static void setReload(ItemStack stack, boolean b){
+		ItemNBTHelper.setBoolean(stack, TAG_RELOAD, b);
+	}
+	
+	public static int getAmount(ItemStack stack){
+		return ItemNBTHelper.getInt(stack, TAG_AMOUNT, 0);
+	}
+	
+	public static void setAmount(ItemStack stack, int i){
+		ItemNBTHelper.setInt(stack, TAG_AMOUNT, i);
+	}
+	
+	public static boolean isMode(ItemStack stack){
+		return ItemNBTHelper.getBoolean(stack, TAG_MODE, false);
+	}
+	
+	public static void setMode(ItemStack stack, boolean b){
+		ItemNBTHelper.setBoolean(stack, TAG_MODE, b);
+	}
+	
+	@Override
+	public void addInformation(ItemStack stack, EntityPlayer p_77624_2_, List list, boolean p_77624_4_) {
+		if(canMode())
+			addStringToTooltip(EnumChatFormatting.BLUE + StatCollector.translateToLocal("botaniamisc.gun" + isMode(stack) + ".desc"), list);
+	}
+	
+	static void addStringToTooltip(String s, List<String> tooltip) {
+		tooltip.add(s.replaceAll("&", "\u00a7"));
 	}
 
 }

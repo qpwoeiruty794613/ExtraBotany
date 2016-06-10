@@ -4,27 +4,17 @@ import java.awt.Color;
 import java.util.List;
 
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityCreature;
-import net.minecraft.entity.ai.EntityAIAttackOnCollide;
-import net.minecraft.entity.ai.EntityAIHurtByTarget;
-import net.minecraft.entity.ai.EntityAILookIdle;
-import net.minecraft.entity.ai.EntityAIMoveThroughVillage;
-import net.minecraft.entity.ai.EntityAIMoveTowardsRestriction;
-import net.minecraft.entity.ai.EntityAINearestAttackableTarget;
-import net.minecraft.entity.ai.EntityAISwimming;
-import net.minecraft.entity.ai.EntityAIWander;
-import net.minecraft.entity.ai.EntityAIWatchClosest;
-import net.minecraft.entity.ai.RandomPositionGenerator;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.DamageSource;
-import net.minecraft.util.Vec3;
 import net.minecraft.world.World;
 import vazkii.botania.common.Botania;
 import vazkii.botania.common.item.relic.ItemRelic;
 
 import com.meteor.extrabotany.common.handler.EntityHandler;
+import com.meteor.extrabotany.common.util.Sound;
+import com.meteor.extrabotany.common.util.SoundHelper;
 
 public class EntityMagicCycloneChaos extends Entity{
 	private static float X = 1F;
@@ -95,7 +85,7 @@ public class EntityMagicCycloneChaos extends Entity{
 				else if(ticksExisted % 24 == 0)
 					player.attackEntityFrom(ItemRelic.damageSource(), 7F);
 				if(players.size() > 0)
-					worldObj.playSoundAtEntity(this, "botania:attack.shadow", 0.6F, 0.8F + (float) Math.random() * 0.2F);
+					SoundHelper.playSoundAtEntity(worldObj, Sound.ATTACK_SHADOW, this, 0.8F + (float) Math.random() * 0.2F);
 			}
 		}
 	}

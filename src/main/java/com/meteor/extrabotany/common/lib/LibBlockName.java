@@ -35,4 +35,7 @@ public class LibBlockName {
 	public static final String GAIAQUARTZ = "blockgaiaquartz";
 	public static final String ELVENQUARTZ = "blockelvenquartz";
 	
+	public static final String QUICKICE = "quickice";
+	public static final String QUICKLAVA = "quicklava";
+	
 }

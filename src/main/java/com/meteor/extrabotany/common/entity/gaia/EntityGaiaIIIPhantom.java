@@ -2,12 +2,6 @@ package com.meteor.extrabotany.common.entity.gaia;
 
 import java.util.List;
 
-import vazkii.botania.common.item.relic.ItemRelic;
-
-import com.meteor.extrabotany.common.item.ModItems;
-import com.meteor.extrabotany.common.lib.LibItemName;
-
-import net.minecraft.block.Block;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.SharedMonsterAttributes;
@@ -25,10 +19,13 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.AxisAlignedBB;
-import net.minecraft.util.ChunkCoordinates;
 import net.minecraft.util.DamageSource;
-import net.minecraft.util.MathHelper;
+import net.minecraft.world.EnumDifficulty;
 import net.minecraft.world.World;
+import vazkii.botania.common.item.relic.ItemRelic;
+
+import com.meteor.extrabotany.common.item.ModItems;
+import com.meteor.extrabotany.common.lib.LibItemName;
 
 public class EntityGaiaIIIPhantom extends EntityMob{
 	EntityGaiaIII summoner;
@@ -168,7 +165,13 @@ public class EntityGaiaIIIPhantom extends EntityMob{
 				setInvulTime(invul - 1);
 			}
 		}
-		
+		int range = 11;
+		List<EntityPlayer> players = worldObj.getEntitiesWithinAABB(EntityPlayer.class, AxisAlignedBB.getBoundingBox(this.posX + 0.5 - range, this.posY + 0.5 - range, this.posZ + 0.5 - range, this.posX + 0.5 + range, this.posY + 0.5 + range, this.posZ + 0.5 + range));
+		if(players.isEmpty() && !worldObj.playerEntities.isEmpty())
+			setDead();
+		boolean peaceful = worldObj.difficultySetting == EnumDifficulty.PEACEFUL;
+		if(!worldObj.isRemote && peaceful)
+			setDead();
 	}
 
 }

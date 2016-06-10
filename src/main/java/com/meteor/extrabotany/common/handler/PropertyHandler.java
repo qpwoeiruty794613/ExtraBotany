@@ -7,7 +7,6 @@ import net.minecraft.world.World;
 import net.minecraftforge.common.IExtendedEntityProperties;
 
 import com.meteor.extrabotany.common.CommonProxy;
-import com.meteor.extrabotany.common.lib.LibReference;
 
 public class PropertyHandler implements IExtendedEntityProperties{
 	

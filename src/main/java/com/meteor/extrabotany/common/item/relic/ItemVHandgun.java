@@ -1,4 +1,4 @@
-package com.meteor.extrabotany.common.item.relic.legendary;
+package com.meteor.extrabotany.common.item.relic;
 
 import java.util.List;
 
@@ -21,7 +21,6 @@ import vazkii.botania.common.core.helper.Vector3;
 import vazkii.botania.common.entity.EntityManaBurst;
 import vazkii.botania.common.item.relic.ItemRelic;
 
-import com.meteor.extrabotany.common.item.relic.ItemRelicAdv;
 import com.meteor.extrabotany.common.lib.LibItemName;
 
 public class ItemVHandgun extends ItemRelicAdv implements ILensEffect{

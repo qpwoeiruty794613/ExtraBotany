@@ -18,6 +18,7 @@ import net.minecraft.util.DamageSource;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.StatCollector;
 import net.minecraft.world.World;
+import net.minecraftforge.common.MinecraftForge;
 import vazkii.botania.api.BotaniaAPI;
 import vazkii.botania.api.item.IRelic;
 import vazkii.botania.common.core.handler.ConfigHandler;
@@ -32,6 +33,7 @@ import com.meteor.extrabotany.client.model.ModelRelicArmor;
 import com.meteor.extrabotany.common.entity.EntityItemUnbreakable;
 import com.meteor.extrabotany.common.lib.LibReference;
 
+import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.TickEvent;
 import cpw.mods.fml.relauncher.Side;
@@ -62,6 +64,8 @@ public class ItemRelicArmorSet extends ItemManasteelArmor implements IRelic{
 	
 	public ItemRelicArmorSet(int type, String name) {
 		super(type, name, BotaniaAPI.terrasteelArmorMaterial);
+		MinecraftForge.EVENT_BUS.register(this);
+	    FMLCommonHandler.instance().bus().register(this);
 	}
 
 	@Override
@@ -185,11 +189,11 @@ public class ItemRelicArmorSet extends ItemManasteelArmor implements IRelic{
     public void TickEvent(TickEvent.PlayerTickEvent event) {
     	 EntityPlayer player = (EntityPlayer) event.player;
 	        for(ItemStack stack : player.inventory.armorInventory) {
-	            if(stack != null && stack.getItem() instanceof ItemRelicArmorSet) {
+	            if(stack != null && stack.getItem() instanceof IRelic) {
 	            	if(!ItemRelic.isRightPlayer(player, stack))
 	            		player.attackEntityFrom(damageSource(), 2);
 	            }
-	        }
+	    }
     }
 
 	public static void updateRelic(ItemStack stack, EntityPlayer player) {
