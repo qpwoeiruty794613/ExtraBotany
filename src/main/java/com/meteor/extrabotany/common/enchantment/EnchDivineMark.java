@@ -11,4 +11,10 @@ public class EnchDivineMark extends Enchantment{
 		super(ConfigHandler.enchDivineMark, 2, EnumHelper.addEnchantmentType("relic"));
 		this.setName("divinemark");
 	}
+	
+	@Override
+    public int getMaxLevel()
+    {
+        return 3;
+    }
 }

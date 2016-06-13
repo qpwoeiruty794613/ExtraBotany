@@ -40,7 +40,7 @@ public class ItemMaterial extends ItemMods{
 				PropertyHandler.addShieldAmount(1F * stack.stackSize, player);
 				player.inventory.clearInventory(ModItems.material, 14);
 			if(stack.getItemDamage() == 15)
-				ManaItemHandler.dispatchMana(stack, player, 200 * stack.stackSize, true);
+				ManaItemHandler.dispatchMana(stack, player, 100 * stack.stackSize, true);
 				player.inventory.clearInventory(ModItems.material, 15);
 		}
 	}

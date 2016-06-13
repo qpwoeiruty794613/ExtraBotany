@@ -556,6 +556,8 @@ achievement.extrabotany:gaia_darknoarmor.desc=战斗从头至尾不穿任何护�
 
 #ENCHANTMENT
 enchantment.gaiablessing=盖亚祝福
+enchantment.divinefavor=神恩
+enchantment.divinemark=神刻
 
 #COMMANDS
 commands.ExtraBotany.getShieldAmount.desc=/getShieldAmount [玩家]
@@ -578,4 +580,4 @@ config.ExtraBotany.efficiencyOminiviolet.desc=全知槿的产能效率.
 config.ExtraBotany.efficiencyPyschobloom.desc=闹闹花的产能效率.
 config.ExtraBotany.efficiencyStonesia.desc=石中姬的产能效率.
 config.ExtraBotany.pyschobloomMax.desc=闹闹花的最大产能效率.
-config.ExtraBotany.disableShieldRender.desc=是否取消护盾特效渲染,设置为True来取消.
+config.ExtraBotany.disableShieldRender.desc=是否取消护盾特效渲染,设置为true来取消.

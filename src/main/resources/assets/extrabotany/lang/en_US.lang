@@ -556,13 +556,15 @@ achievement.extrabotany:gaia_darknoarmor.desc=Slay Dark Gaia Guardian III withou
 
 #ENCHANTMENT
 enchantment.gaiablessing=Gaia's Blessing
+enchantment.divinefavor=Divine Favor
+enchantment.divinemark=Divine Mark
 
 #COMMANDS
 commands.ExtraBotany.getShieldAmount.desc=/getShieldAmount [player]
 commands.ExtraBotany.getShieldAmount.success=Player %1$s now has shield %2$s .
-commands.ExtraBotany.setShieldAmount.desc=/setShieldAmount [玩家] [数值]
+commands.ExtraBotany.setShieldAmount.desc=/setShieldAmount [player] [amount]
 commands.ExtraBotany.setShieldAmount.success=Successful! Player %1$s now has shield %2$s .
-commands.ExtraBotany.addShieldAmount.desc=/addShieldAmount [玩家] [数值]
+commands.ExtraBotany.addShieldAmount.desc=/addShieldAmount [player] [amount]
 commands.ExtraBotany.addShieldAmount.success=Successful! Player %1$s now has shield %2$s .
 
 #CONFIG
@@ -578,4 +580,4 @@ config.ExtraBotany.efficiencyOminiviolet.desc=The efficiency of Omni Violet.
 config.ExtraBotany.efficiencyPyschobloom.desc=The efficiency of Pysch-O-Bloom.
 config.ExtraBotany.efficiencyStonesia.desc=The efficiency of Stonesia.
 config.ExtraBotany.pyschobloomMax.desc=The maximum efficiency of Pysch-O-Bloom.
-config.ExtraBotany.disableShieldRender.desc=Whether to disable special effect of Shield Render. Set true to disable.
+config.ExtraBotany.disableShieldRender.desc=Whether to disable special effect of Shield Render. Set to true to disable.

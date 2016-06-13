@@ -11,6 +11,7 @@ public class LibBlockName {
 	public static final String STONESIA = "stonesia";
 	public static final String PYSCHOBLOOM = "pyschobloom";
 	
+	public static final String ANNOYOBLOOM = "annoyobloom";
 	public static final String NUMERON_DANDELIFE =  "numerondandelife";
 	public static final String NECRO_FLUER = "necrofleur";
 	public static final String WOODIENIA = "woodienia";
@@ -35,7 +36,6 @@ public class LibBlockName {
 	public static final String GAIAQUARTZ = "blockgaiaquartz";
 	public static final String ELVENQUARTZ = "blockelvenquartz";
 	
-	public static final String QUICKICE = "quickice";
-	public static final String QUICKLAVA = "quicklava";
+	public static final String MANATINYPOTATO = "manatinypotato";
 	
 }

@@ -1,5 +1,6 @@
 package com.meteor.extrabotany.common.lexicon;
 
+import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.StatCollector;
@@ -19,6 +20,7 @@ import vazkii.botania.common.lexicon.page.PageText;
 import com.meteor.extrabotany.common.block.ModBlocks;
 import com.meteor.extrabotany.common.block.ModMultiBlocks;
 import com.meteor.extrabotany.common.item.ModItems;
+import com.meteor.extrabotany.common.lexicon.page.PageDisplay;
 import com.meteor.extrabotany.common.lib.LibBlockName;
 import com.meteor.extrabotany.common.lib.LibLexiconName;
 import com.meteor.extrabotany.common.lib.LibReference;
@@ -144,15 +146,15 @@ public class LexiconModData {
 		gunbase.setIcon(new ItemStack(ModItems.gunboomstick));
 		
 		gunphoenixblaster = new LLexiconEntry(LibLexiconName.G_GUNPHOENIXBLASTER, categoryExtra);
-		gunphoenixblaster.setLexiconPages(new PageText("0"));
+		gunphoenixblaster.setLexiconPages(new PageText("0"), new PageDisplay("1", new ItemStack(ModItems.gunphoenixblaster)));
 		gunphoenixblaster.setIcon(new ItemStack(ModItems.gunphoenixblaster));
 		
 		gunsnowballcannon = new LLexiconEntry(LibLexiconName.G_GUNSNOWBALLCANNON, categoryExtra);
-		gunsnowballcannon.setLexiconPages(new PageText("0"));
+		gunsnowballcannon.setLexiconPages(new PageText("0"), new PageDisplay("1", new ItemStack(ModItems.snowballlauncher)));
 		gunsnowballcannon.setIcon(new ItemStack(ModItems.snowballlauncher));
 		
 		guntacticalshotgun = new LLexiconEntry(LibLexiconName.G_GUNTACTICALSHOTGUN, categoryExtra);
-		guntacticalshotgun.setLexiconPages(new PageText("0"));
+		guntacticalshotgun.setLexiconPages(new PageText("0"), new PageDisplay("1", new ItemStack(ModItems.guntacticalshotgun)));
 		guntacticalshotgun.setIcon(new ItemStack(ModItems.guntacticalshotgun));
 		
 		gunbullet = new BLexiconEntry(LibLexiconName.G_GUNBULLET, categoryExtra);

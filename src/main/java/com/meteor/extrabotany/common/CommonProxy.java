@@ -6,11 +6,9 @@ import java.util.Map;
 import net.minecraft.nbt.NBTTagCompound;
 
 import com.meteor.extrabotany.ExtraBotany;
-import com.meteor.extrabotany.api.ExtraBotanyAPI;
 import com.meteor.extrabotany.common.achievement.ModAchievement;
 import com.meteor.extrabotany.common.block.ModBlocks;
 import com.meteor.extrabotany.common.block.ModMultiBlocks;
-import com.meteor.extrabotany.common.block.subtile.generating.SubTileStonesia;
 import com.meteor.extrabotany.common.command.ModCommands;
 import com.meteor.extrabotany.common.enchantment.ModEnchantment;
 import com.meteor.extrabotany.common.entity.FakePlayer;

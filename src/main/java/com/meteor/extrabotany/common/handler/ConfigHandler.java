@@ -30,6 +30,7 @@ public class ConfigHandler {
 	public static int extraShieldAmount;
 	
 	public static boolean disableShieldRender;
+	public static boolean disableEasterEgg;
 
 	public ConfigHandler(FMLPreInitializationEvent event)
 	{
@@ -59,5 +60,6 @@ public class ConfigHandler {
 		pyschobloomMax = config.get(LibReference.CATEGORY_COMMON, "pyschobloomMax", 9, StatCollector.translateToLocal(LibReference.PREFIX_CONFIG + "pyschobloomMax.desc")).getInt();
 		
 		disableShieldRender = config.get(LibReference.CATEGORY_CLIENT, "disableShieldRender", false, StatCollector.translateToLocal(LibReference.PREFIX_CONFIG + "disableShieldRender.desc")).getBoolean();
+		disableEasterEgg = config.get(LibReference.CATEGORY_CLIENT, "disableShieldRender", false, StatCollector.translateToLocal(LibReference.PREFIX_CONFIG + "disableEasterEgg.desc")).getBoolean();
 	}
 }
