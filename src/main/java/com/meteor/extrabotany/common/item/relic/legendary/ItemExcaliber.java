@@ -37,12 +37,13 @@ import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
 import com.meteor.extrabotany.common.entity.EntityItemUnbreakable;
 import com.meteor.extrabotany.common.lib.LibItemName;
+import com.meteor.extrabotany.common.util.EnchHelper;
 
 public class ItemExcaliber extends ItemManasteelSword implements IRelic, ILensEffect, IManaUsingItem {
 	//copied
 	private static final String TAG_ATTACKER_USERNAME = "attackerUsername";
 	private static final String TAG_HOME_ID = "homeID";
-	public static ToolMaterial toolMaterial = EnumHelper.addToolMaterial("B_EXCALIBER", 3, -1, 6.2F, 14F, 40);
+	public static ToolMaterial toolMaterial = EnumHelper.addToolMaterial("B_EXCALIBER", 3, -1, 6.2F, 20F, 40);
 	Achievement achievement;
 	public ItemExcaliber() {
 		super(toolMaterial, LibItemName.EXCALIBER);
@@ -118,8 +119,8 @@ public class ItemExcaliber extends ItemManasteelSword implements IRelic, ILensEf
 	@Override
 	public Multimap getItemAttributeModifiers() {
 		Multimap multimap = HashMultimap.create();
-		multimap.put(SharedMonsterAttributes.attackDamage.getAttributeUnlocalizedName(), new AttributeModifier(field_111210_e, "Weapon modifier", 10, 0));
-		multimap.put(SharedMonsterAttributes.movementSpeed.getAttributeUnlocalizedName(), new AttributeModifier(field_111210_e, "Weapon modifier", 0.3, 1));
+		multimap.put(SharedMonsterAttributes.attackDamage.getAttributeUnlocalizedName(), new AttributeModifier(field_111210_e, "Weapon modifier", 16, 0));
+		multimap.put(SharedMonsterAttributes.movementSpeed.getAttributeUnlocalizedName(), new AttributeModifier(field_111210_e, "Weapon modifier", 0.4, 1));
 		return multimap;
 	}
 	public EntityManaBurst getBurst(EntityPlayer player, ItemStack stack) {
@@ -183,7 +184,7 @@ public class ItemExcaliber extends ItemManasteelSword implements IRelic, ILensEf
 				int mana = burst.getMana();
 				if(mana >= cost) {
 					burst.setMana(mana - cost);
-					float damage = 6F + toolMaterial.getDamageVsEntity();
+					float damage = 6F * EnchHelper.getDivineFavorBuff(stack) * (1/EnchHelper.getDivineMarkBuff(stack)) + toolMaterial.getDamageVsEntity();
 					if(!burst.isFake() && !entity.worldObj.isRemote) {
 						EntityPlayer player = living.worldObj.getPlayerEntityByName(attacker);
 						living.attackEntityFrom(player == null ? DamageSource.magic : DamageSource.causePlayerDamage(player), damage);

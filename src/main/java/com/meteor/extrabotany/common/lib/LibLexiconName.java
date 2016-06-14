@@ -45,8 +45,16 @@ public class LibLexiconName {
 	public static final String R_PHOENIXBLASTER = "phoenixblaster";
 	public static final String R_SNOWBALLCANNON = "snowballcannon";
 	public static final String R_TACTICALSHOTGUN = "tacticalshotgun";
+	
 	public static final String R_HERMESTRAVELCLOTHING = "hermestravelclothing";
 	public static final String R_CRONUSPHANTOM = "cronusphantom";
+	public static final String R_ETERNALSLIENCE = "eternalslience";
+	public static final String R_HERMESTRAVELWAND = "hermestravelwand";
+	public static final String R_LOKIGHOSTRICK = "lokighostrick";
+	public static final String R_OLYMPUSGUARD = "olympusguard";
+	public static final String R_THESEUSSHIP = "theseusship";
+	public static final String R_VALKYRIECOMBATSUIT = "valkyriecombatsuit";
+	public static final String R_CTHULHUEYE = "cthulhueye";
 	
 	public static final String R_GAIAIII = "gaia3";
 	//Bauble

@@ -27,11 +27,12 @@ botaniamisc.theseussetMode3=你已将其设置为激励模式.
 itemGroup.ExtraBotany=额外植物学
 
 #POTIONEFFECTS
-potion.fastparticlesorting=快速粒子归类
-potion.slowparticlesorting=慢速粒子排序
-potion.residualpain=痛觉残留
-potion.fastparticlesorting.postfix=快速粒子归类药水
-potion.residualpain.postfix=痛觉残留药水
+extrabotany.potion.fastparticlesorting=快速粒子归类
+extrabotany.potion.slowparticlesorting=慢速粒子排序
+extrabotany.potion.residualpain=痛觉残留
+extrabotany.potion.durance=禁锢
+extrabotany.potion.cure=治愈
+
 
 #ENTITIES
 entity.ExtraBotany.bulletexploding.name=高爆弹
@@ -108,6 +109,8 @@ item.ExtraBotany.SpawnCardLycorisdiataRandom.name=随机彼岸花之卡
 item.ExtraBotany.SpawnLycorisRandom.desc=随机生成一朵彼岸花
 
 # -ADVANCED
+item.angelwand.name=天使魔杖
+item.manapotato.name=魔力土豆
 item.botania:gaiaTablet.name=盖亚石板
 item.teleportpearl.name=传送珍珠
 item.botania:dog0.name=波动狗
@@ -348,6 +351,11 @@ botania.entry.launchish=弹射草
 botania.page.launchish0=
 botania.page.launchish1=
 
+# --ANNOYOBLOOM
+botania.entry.annoyobloom=吵吵花
+botania.page.annoyobloom0=
+botania.page.annoyobloom1=
+
 # -OTHERS
 # --INFINITYMANA
 botania.entry.infinitymana=无限魔力
@@ -395,7 +403,7 @@ botania.page.dice200=
 # --EXCALIBER
 botania.entry.excaliber=王者圣剑
 botania.tagline.excaliber=胜利与誓约.
-botania.page.excaliber0=&
+botania.page.excaliber0=
 
 # --EXCALIBERFAKE
 botania.entry.excaliberfake=王者之剑
@@ -416,6 +424,51 @@ botania.page.vrangerboots0=
 botania.entry.vhandgun=V制式手炮
 botania.tagline.vhandgun=
 botania.page.vhandgun0=
+
+# --CRONUSPHANTOM
+botania.entry.cronusphantom=柯罗诺斯的幻影
+botania.tagline.cronusphantom=
+botania.page.cronusphantom0=
+
+# --CTHULHUEYE
+botania.entry.cthulhueye=克苏鲁之眼
+botania.tagline.cthulhueye=
+botania.page.cthulhueye0=
+
+# --ETERNALSLIENCE
+botania.entry.eternalslience=静籁永恒
+botania.tagline.eternalslience=
+botania.page.eternalslience0=
+
+# --HERMESTRAVELCLOTHING
+botania.entry.hermestravelclothing=赫尔墨斯的旅行衣
+botania.tagline.hermestravelclothing=
+botania.page.hermestravelclothing0=
+
+# --HERMESWAND
+botania.entry.hermestravelwand=赫尔墨斯的旅行手杖
+botania.tagline.hermestravelwand=
+botania.page.hermestravelwand0=
+
+# --LOKIGHOSTRICK
+botania.entry.lokighostrick=洛基的鬼计
+botania.tagline.lokighostrick=
+botania.page.lokighostrick0=
+
+# --OLYMPUSGUARD
+botania.entry.olympusguard=奥林匹斯的戍卫
+botania.tagline.olympusguard=
+botania.page.olympusguard0=
+
+# --THESEUSSHIP
+botania.entry.theseusship=特修斯之船
+botania.tagline.theseusship=
+botania.page.theseusship0=
+
+# --VALKYRIECOMBATUNIFORM
+botania.entry.valkyriecombatsuit=女武神作战服
+botania.tagline.valkyriecombatsuit=
+botania.page.valkyriecombatsuit0=
 
 # --GAIA
 botania.entry.gaia3=盖亚守护者III
@@ -506,6 +559,10 @@ botania.tagline.infernoidisy=
 tile.botania:flower.launchish.name=弹射草
 tile.botania:flower.launchish.reference=
 botania.tagline.launchish=
+
+tile.botania:flower.annoyobloom.name=吵吵花
+tile.botania:flower.annoyobloom.reference=
+botania.tagline.annoyobloom=
 
 #ACHIEVEMENTS
 # -RELICS

@@ -27,11 +27,11 @@ botaniamisc.theseussetMode3=You switched it to Assist Mode.
 itemGroup.ExtraBotany=ExtraBotany
 
 #POTIONEFFECTS
-potion.fastparticlesorting=Fast Particle Sorting
-potion.slowparticlesorting=Slow Particle Sorting
-potion.residualpain=Residual Pain
-potion.fastparticlesorting.postfix=Potion of Fast Particle Sorting 
-potion.residualpain.postfix=Potion of Residual Pain
+extrabotany.potion.fastparticlesorting=Fast Particle Sorting
+extrabotany.potion.slowparticlesorting=Slow Particle Sorting
+extrabotany.potion.residualpain=Residual Pain
+extrabotany.potion.durance=Durance
+extrabotany.potion.cure=Cure
 
 #ENTITIES
 entity.ExtraBotany.bulletexploding.name=Exploding Bullet
@@ -108,6 +108,8 @@ item.ExtraBotany.SpawnCardLycorisdiataRandom.name=Cards of Random Lycorisdiata
 item.ExtraBotany.SpawnLycorisRandom.desc=Spawn a Random Lycorisdiata
 
 # -ADVANCED
+item.angelwand.name=Angel Wand
+item.manapotato.name=Mana Potato
 item.botania:gaiaTablet.name=Gaia Tablet
 item.teleportpearl.name=Teleport Pearl
 item.botania:dog0.name=Annoying Dog
@@ -134,9 +136,9 @@ item.botania:aphroditegrace.name=Aphrodite's Grace
 item.botania:cronusphantom.name=Phantom of Cronus
 item.botania:lokighostrick.name=Loki's Ghostrick
 item.botania:olympusguard.name=Guard of Olympus
-item.botania:hermestravelclothing.name=Hermes's Travel Clothing
+item.botania:hermestravelclothing.name=Hermes' Travel Clothing
 item.botania:cthulhueye.name=Eye of Cthulhu
-item.botania:hermeswand.name=Hermes's Travel Wand
+item.botania:hermeswand.name=Hermes' Travel Wand
 item.botania:theseusship.name=Ship of Theseus
 item.botania:eternalslience.name=Eternal Slience
 item.botania:valkyriecombatsuit.name=Valkyrie Combat Suit
@@ -338,6 +340,11 @@ botania.entry.launchish=Launchish
 botania.page.launchish0=
 botania.page.launchish1=
 
+# --ANNOYOBLOOM
+botania.entry.annoyobloom=Annoy-O-Bloom
+botania.page.annoyobloom0=
+botania.page.annoyobloom1=
+
 # --VOIDUIM
 botania.entry.voiduim=Voiduim
 botania.page.voiduim0=
@@ -416,6 +423,51 @@ botania.page.vrangerboots0=
 botania.entry.vhandgun=Valkyrie Handguns
 botania.tagline.vhandgun=
 botania.page.vhandgun0=
+
+# --CRONUSPHANTOM
+botania.entry.cronusphantom=Phantom of Cronus
+botania.tagline.cronusphantom=
+botania.page.cronusphantom0=
+
+# --CTHULHUEYE
+botania.entry.cthulhueye=Eye of Cthulhu
+botania.tagline.cthulhueye=
+botania.page.cthulhueye0=
+
+# --ETERNALSLIENCE
+botania.entry.eternalslience=Eternal Slience
+botania.tagline.eternalslience=
+botania.page.eternalslience0=
+
+# --HERMESTRAVELCLOTHING
+botania.entry.hermestravelclothing=Hermes' Travel Clothing
+botania.tagline.hermestravelclothing=
+botania.page.hermestravelclothing0=
+
+# --HERMESWAND
+botania.entry.hermestravelwand=Hermes' Travel Wand
+botania.tagline.hermestravelwand=
+botania.page.hermestravelwand0=
+
+# --LOKIGHOSTRICK
+botania.entry.lokighostrick=Loki's Ghostrick
+botania.tagline.lokighostrick=
+botania.page.lokighostrick0=
+
+# --OLYMPUSGUARD
+botania.entry.olympusguard=Guard of Olympus
+botania.tagline.olympusguard=
+botania.page.olympusguard0=
+
+# --THESEUSSHIP
+botania.entry.theseusship=Ship of Theseus
+botania.tagline.theseusship=
+botania.page.theseusship0=
+
+# --VALKYRIECOMBATUNIFORM
+botania.entry.valkyriecombatsuit=Valkyrie Combat Uniform
+botania.tagline.valkyriecombatsuit=
+botania.page.valkyriecombatsuit0=
 
 # --GAIA
 botania.entry.gaia3=Gaia Guardian III
@@ -506,6 +558,10 @@ botania.tagline.infernoidisy=
 tile.botania:flower.launchish.name=Launchish
 tile.botania:flower.launchish.reference=
 botania.tagline.launchish=
+
+tile.botania:flower.annoyobloom.name=Annoy-O-Bloom
+tile.botania:flower.annoyobloom.reference=
+botania.tagline.annoyobloom=
 
 #ACHIEVEMENTS
 # -RELICS
