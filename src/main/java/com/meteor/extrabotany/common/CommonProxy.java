@@ -19,7 +19,7 @@ import com.meteor.extrabotany.common.handler.GuiHandler;
 import com.meteor.extrabotany.common.integration.Intergration;
 import com.meteor.extrabotany.common.item.ModItems;
 import com.meteor.extrabotany.common.lexicon.LexiconModData;
-import com.meteor.extrabotany.common.potion.PotionEffectMods;
+import com.meteor.extrabotany.common.potion.ModPotions;
 import com.meteor.extrabotany.common.recipe.ModRecipe;
 import com.meteor.extrabotany.common.world.ModWorldGen;
 
@@ -33,7 +33,7 @@ public class CommonProxy {
 	
 	public void preInit(FMLPreInitializationEvent event) {
 		new ConfigHandler(event);
-		PotionEffectMods.init();
+		ModPotions.init();
 		ModBlocks.init();
 		ModItems.init();
 		ModEnchantment.init();

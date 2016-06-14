@@ -2,38 +2,42 @@ package com.meteor.extrabotany.common.potion;
 
 import java.util.Collection;
 
+import com.meteor.extrabotany.common.handler.ConfigHandler;
+import com.meteor.extrabotany.common.lib.LibPotionEffectName;
+
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.entity.living.LivingEvent;
+import net.minecraftforge.event.entity.living.LivingHurtEvent;
+import cpw.mods.fml.common.FMLCommonHandler;
+import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.relauncher.ReflectionHelper;
 
-public class PotionCure extends PotionEffectMods{
+public class PotionCure extends PotionMods{
 	
-	public PotionCure(String name, ResourceLocation icon) {
-		super(name, false, icon);
+	public PotionCure() {
+		super(ConfigHandler.idPotionC, LibPotionEffectName.CURE, false, 0xF39716, 4);
+		MinecraftForge.EVENT_BUS.register(this);
+	    FMLCommonHandler.instance().bus().register(this);
 	}
 	
-	@Override
-	public void performEffect(EntityLivingBase entity, int level) { 
-		
-		boolean flag = false;
-
-		Collection<PotionEffect> potions = entity.getActivePotionEffects();
-		
-		for (PotionEffect potion : potions) {
-			int id = potion.getPotionID();
-			if (ReflectionHelper.getPrivateValue(Potion.class, Potion.potionTypes[id], new String[]{"isBadEffect", "field_76418_K", "J"})) {
-				entity.removePotionEffect(id);
-				flag = true;
-			}	
-			break;
+	@SubscribeEvent
+	public void LivingEvent(LivingEvent.LivingUpdateEvent event) { 
+		if(event.entityLiving.isPotionActive(ModPotions.cure)){
+			Collection<PotionEffect> potions = event.entityLiving.getActivePotionEffects();
+			boolean flag = false;
+			for (PotionEffect potion : potions) {
+				int id = potion.getPotionID();
+				if (ReflectionHelper.getPrivateValue(Potion.class, Potion.potionTypes[id], new String[]{"isBadEffect", "field_76418_K", "J"})) {
+					event.entityLiving.removePotionEffect(id);
+					flag = true;
+				}
+				break;
+			}
 		}
 	}
-
-	@Override
-	public boolean isReady(int duration, int level)
-	{
-		return true;
-	}
+	
 }

@@ -78,6 +78,7 @@ public class ModItems {
 	public static Item valkyriecombatuniform;
 	
 	public static Item gaiawise;
+	public static Item angelwand;
 	
 	public static Item itemtest;
 	public static Item material;
@@ -125,6 +126,7 @@ public class ModItems {
 				
 		dog = new ItemBaubleDog();
 		gaiawise = new ItemGaiaWise(LibItemName.GAIAWISE);
+		angelwand = new ItemAngelWand(LibItemName.ANGELWAND);
 		
 		lokighostrick = new ItemLokiGhostrick(LibItemName.LOKIGHOSTRICK);
 		cthulhueye = new ItemCthulhuEye();

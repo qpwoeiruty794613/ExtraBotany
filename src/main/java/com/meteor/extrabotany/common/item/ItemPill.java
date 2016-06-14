@@ -7,7 +7,7 @@ import net.minecraft.potion.PotionEffect;
 import net.minecraft.world.World;
 
 import com.meteor.extrabotany.common.lib.LibReference;
-import com.meteor.extrabotany.common.potion.PotionEffectMods;
+import com.meteor.extrabotany.common.potion.ModPotions;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 
@@ -24,7 +24,8 @@ public class ItemPill extends ItemFood{
 	public void onFoodEaten(ItemStack stack, World world, EntityPlayer player)
     {
 		if(!player.worldObj.isRemote)
-			player.addPotionEffect(new PotionEffect(PotionEffectMods.cure.getId(), 200, 0));
+			player.addPotionEffect(new PotionEffect(ModPotions.cure.getId(), 200, 0));
+			player.addPotionEffect(new PotionEffect(ModPotions.durance.getId(), 200, 0));
         	player.setHealth(player.getMaxHealth());
     }
 	
