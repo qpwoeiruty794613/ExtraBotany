@@ -30,6 +30,7 @@ public class LibReference {
 	public static final String OLD_PYLON_GREEN = "extrabotany:textures/models/pylonOld1.png";
 	public static final String OLD_PYLON_PINK = "extrabotany:textures/models/pylonOld2.png";
 	
+	public static final String GUI_RECIPE_OVERLAY = "extrabotany:textures/gui/generatingOverlay.png";
 	public static final ResourceLocation POTION_GUI = new ResourceLocation("extrabotany","textures/icons/potions.png");
 	public static final ResourceLocation POTION_SLOWPARTICLESORTING = new ResourceLocation("extrabotany","textures/icons/slowparticlesorting.png");
 	public static final ResourceLocation POTION_FASTPARTICLESORTING = new ResourceLocation("extrabotany","textures/icons/fastparticlesorting.png");

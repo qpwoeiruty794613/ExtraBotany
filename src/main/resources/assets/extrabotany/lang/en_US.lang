@@ -141,7 +141,7 @@ item.botania:cthulhueye.name=Eye of Cthulhu
 item.botania:hermeswand.name=Hermes' Travel Wand
 item.botania:theseusship.name=Ship of Theseus
 item.botania:eternalslience.name=Eternal Slience
-item.botania:valkyriecombatsuit.name=Valkyrie Combat Suit
+item.botania:valkyriecombatuniform.name=Valkyrie Combat Suit
 
 # -WEAPON
 item.phoenixblaster.name=Phoenix Blaster
@@ -639,3 +639,6 @@ config.ExtraBotany.pyschobloomMax.desc=The maximum efficiency of Pysch-O-Bloom.
 config.ExtraBotany.disableShieldRender.desc=Whether to disable special effect of Shield Render. Set to true to disable.
 config.ExtraBotany.disableEasterEgg.desc=Whether to disable easter eggs. Set to true to disable.
 config.ExtraBotany.potion.desc=ID of potion.
+
+#NEI SUPPORT
+extrabotany.nei.infernoidisy=Infernoidisy

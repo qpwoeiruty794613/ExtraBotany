@@ -43,6 +43,8 @@ public class ModRecipe {
 	public static IRecipe gaiawise;
 	public static IRecipe bladered;
 	public static IRecipe bladepurple;
+	public static IRecipe angelwand;
+	public static IRecipe manapotato;
 	
 	public static void initSubtile(){
 		ModStonesiaRecipe.init();
@@ -56,6 +58,23 @@ public class ModRecipe {
 		ModPetalRecipe.init();
 		initSubtile();
 		int recipeListSize = CraftingManager.getInstance().getRecipeList().size();
+		
+		//mana potato
+		GameRegistry.addShapelessRecipe(new ItemStack(ModItems.manapotato), new Object[] {
+			new ItemStack(Items.potato),
+			new ItemStack(Items.redstone),
+			new ItemStack(vazkii.botania.common.item.ModItems.manaResource, 1, 17)
+		});
+		manapotato = BotaniaAPI.getLatestAddedRecipe();
+		
+		//angel wand
+		addOreDictRecipe(new ItemStack(ModItems.angelwand),
+				" AB", " CA", "AD ",
+				'A', LibOreDict.DREAMWOOD_TWIG,
+				'B', LibOreDict.DRAGONSTONE,
+				'C', new ItemStack(ModItems.teleportpearl),
+				'D', new ItemStack(ModItems.manapotato));
+		angelwand = BotaniaAPI.getLatestAddedRecipe();
 		
 		//scissor blade red
 		addOreDictRecipe(new ItemStack(ModItems.scissorred),

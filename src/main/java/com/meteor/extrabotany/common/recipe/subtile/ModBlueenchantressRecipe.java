@@ -5,6 +5,6 @@ import com.valentin4311.candycraftmod.CandyCraft;
 
 public class ModBlueenchantressRecipe {
 	public static void init() {
-
+		
 	}
 }

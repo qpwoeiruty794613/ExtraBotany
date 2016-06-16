@@ -142,7 +142,7 @@ item.botania:cthulhueye.name=克苏鲁之眼
 item.botania:hermeswand.name=赫尔墨斯的旅行手杖
 item.botania:theseusship.name=特修斯之船
 item.botania:eternalslience.name=静籁永恒
-item.botania:valkyriecombatsuit.name=女武神作战服
+item.botania:valkyriecombatuniform.name=女武神作战服
 
 # -WEAPON
 item.phoenixblaster.name=凤凰冲击波
@@ -640,3 +640,6 @@ config.ExtraBotany.pyschobloomMax.desc=闹闹花的最大产能效率.
 config.ExtraBotany.disableShieldRender.desc=是否取消护盾特效渲染,设置为true来取消.
 config.ExtraBotany.disableEasterEgg.desc=是否取消彩蛋,设置为true来取消.
 config.ExtraBotany.potion.desc=药水ID.
+
+#NEI SUPPORT
+extrabotany.nei.infernoidisy=狱火菊
