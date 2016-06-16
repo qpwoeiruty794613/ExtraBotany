@@ -250,7 +250,7 @@ botania.page.snowballcannon0=
 # --CANDYFLOWER
 botania.entry.candyflower=糖果花
 botania.page.candyflower0=甜品是&1糖果花&0在世界中最 喜欢的东西了 ,它非常乐意 接受你给的&1甜食&0.细细品味 甜品的过程中的那种幸福感 与满足感,能让&1糖果花&0产出 不少的&4魔力&0.而&1饼干&0,&1糖&0, &1蛋糕&0等都是它的最爱.当然 ,例如&4潘马斯婶婶&0所亲手做的 甜品,&1糖果花&0也非常地喜欢 .同时,越丰盛越美味的甜品 ,它产出的&4魔力&0也就越多.
-botania.page.candyflower1=与此同时值得注意的是,它 每吃掉一个甜品,都有很小 几率产出一个&1爱的结晶&0.
+botania.page.candyflower1=与此同时值得注意的是,它 每吃掉一个甜品,都有很小 几率产出一个&1神秘箱子&0.
 botania.page.candyflower2=泛滥的爱.
 
 # --BLUEENCHANTRESS
@@ -272,29 +272,29 @@ botania.page.moonlightlily2=愚者的播种.
 
 # --GEMINIORCHID
 botania.entry.geminiorchid=双子兰
-botania.page.geminiorchid0=
-botania.page.geminiorchid1=
+botania.page.geminiorchid0=&1双子兰&0就像是一台温差发电 机.如果你在斜对角倒上一 桶岩浆,然后在另一个斜对 角倒上一桶水,它就会开始 产出魔力.两个方块的温度 差值越大,魔力产出也就越 快.
+botania.page.geminiorchid1=我就是力量的化身!
 
 # --OMINIVIOLET
 botania.entry.ominiviolet=全知槿
-botania.page.ominiviolet0=
-botania.page.ominiviolet1=
+botania.page.ominiviolet0=常言道,知识就是力量,因 此&1全知槿&0热爱读书.并且每 本它读过的书都会被转化为 &4魔力&0.顺带,如果你在它周 围摆放些&4书架&0,产出的&4魔力&0 将会更加可观.
+botania.page.ominiviolet1=我知万物.
 
 # --STONESIA
 botania.entry.stonesia=石中姬
-botania.page.stonesia0=
-botania.page.stonesia1=
+botania.page.stonesia0=&1石中姬&0可以将&4石头&0或&4圆石&0转 化为&4魔力&0的形式.如果你希 望它能变得更加效率,你可 以尝试把它种在地底下或者 是把石头换成矿石.矿石越 稀有,&4魔力&0产出越多.
+botania.page.stonesia1=不是石中剑.
 
 # --PYSCHOBLOOM
 botania.entry.pyschobloom=闹闹花
-botania.page.pyschobloom0=
-botania.page.pyschobloom1=
+botania.page.pyschobloom0=噪音是&1闹闹花&0所最喜欢的, 它可以将噪音转化为魔力. 因此它周围的生物越多,它 所产出的魔力也会越多.但 太多的噪音会使它癫狂.
+botania.page.pyschobloom1=没人可以通过这里.
 
 # -FUNCTIONAL
 # --NECROFLEUR
 botania.entry.necrofleur=死之花
-botania.page.necrofleur0=
-botania.page.necrofleur1=
+botania.page.necrofleur0=&1死之花&0是死神的象征.它会 对周围的生物,除了玩家, 造成大量的伤害.此外,它 也会给它们增加一些负面 效果.
+botania.page.necrofleur1=午时已到.
 
 # --NUMERONDANDELIFE
 botania.entry.numerondandelife=源命英
@@ -318,8 +318,8 @@ botania.page.numeronbalsam1=
 
 # --JUDASVOW
 botania.entry.judasvow=犹大的誓约
-botania.page.judasvow0=
-botania.page.judasvow1=
+botania.page.judasvow0=一朵美丽的花.当&1犹大的 誓约&0被放置后,它会自动召 唤神圣长矛攻击周围的怪物 .神圣长矛会在接触时引发 一场爆炸并使目标缓慢下来 .但是它的花期十分短暂, 因此几秒过后它就会凋零并 重新变回物品形式.
+botania.page.judasvow1=我可没时间陪你玩游戏.
 
 # --VOLATILILY
 botania.entry.volatilily=波动百合
@@ -638,3 +638,5 @@ config.ExtraBotany.efficiencyPyschobloom.desc=闹闹花的产能效率.
 config.ExtraBotany.efficiencyStonesia.desc=石中姬的产能效率.
 config.ExtraBotany.pyschobloomMax.desc=闹闹花的最大产能效率.
 config.ExtraBotany.disableShieldRender.desc=是否取消护盾特效渲染,设置为true来取消.
+config.ExtraBotany.disableEasterEgg.desc=是否取消彩蛋,设置为true来取消.
+config.ExtraBotany.potion.desc=药水ID.

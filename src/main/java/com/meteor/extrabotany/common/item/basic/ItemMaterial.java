@@ -22,8 +22,10 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 public class ItemMaterial extends ItemMods{
+	
 	final int types = 16;
 	IIcon[] icons;
+	
 	public ItemMaterial(String name) {
 		super(name);
 		setHasSubtypes(true);

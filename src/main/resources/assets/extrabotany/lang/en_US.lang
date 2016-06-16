@@ -249,7 +249,7 @@ botania.page.snowballcannon0=
 # --CANDYFLOWER
 botania.entry.candyflower=Candy Flower
 botania.page.candyflower0=Desserts are things &1Candy Flower&0 loves best in the world! It will be pleased if you give sweets to it. Because of the happiness and satisfaction from the process of tasting them, the &1Candy Flower&0 can produce quite a little &4Mana&0. &1Biscuits&0, &1sugar&0, &1cakes&0 are its favourite. And of course, it loves food made by &4Aunt Pam&0 as well. The more delicious food is, the more &4Mana&0 the &1Candy Flower&0 will produce.
-botania.page.candyflower1=And it's important to note that when it eats up a dessert, it has a small chance to produce a &1Crystal of Love&0.
+botania.page.candyflower1=And it's important to note that when it eats up a dessert, it has a small chance to produce a &1Mystery Box&0.
 botania.page.candyflower2=Overflowing love.
 
 # --BLUEENCHANTRESS
@@ -271,29 +271,29 @@ botania.page.moonlightlily2=Sowing of the Fool.
 
 # --GEMINIORCHID
 botania.entry.geminiorchid=Gemini Orchid
-botania.page.geminiorchid0=
-botania.page.geminiorchid1=
+botania.page.geminiorchid0=A &1Gemini Orchid&0 is like a thermoelectric generator. If you place a block of lava in the corner diagonally opposite, and then place a block of water in another corner diagonally opposite, it will begin to produce mana. The higher the difference between two blocks' temperatures, the quicker mana will be generated.
+botania.page.geminiorchid1=I am power incarnate!
 
 # --OMINIVIOLET
 botania.entry.ominiviolet=Omini Violet
-botania.page.ominiviolet0=
-botania.page.ominiviolet1=
+botania.page.ominiviolet0=As a saying goes that knowledge is power, &1Omini Violet&0 is keen on reading. And every book it has read will be turned into &4mana&0. In addition, it will produce much more &4mana&0 if you place some &4bookshelves&0 near it.
+botania.page.ominiviolet1=I know everything.
 
 # --STONESIA
 botania.entry.stonesia=Stonesia
-botania.page.stonesia0=
-botania.page.stonesia1=
+botania.page.stonesia0=&1Stonesia&0 can transfer &4stones&0 and &4cobblestones&0 into the form of &4mana&0. If you want it to become more efficient, you can try to plant it underground or use ores instead of stones. The rarer ores are, the more &4mana&0 will be produced.
+botania.page.stonesia1=Not the Sword in the stone.
 
 # --PYSCHOBLOOM
 botania.entry.pyschobloom=Pysch-O-Bloom
-botania.page.pyschobloom0=
-botania.page.pyschobloom1=
+botania.page.pyschobloom0=Noise is &1Pysch-O-Bloom&0's favourite. It will transfer noise into mana. So the more close-by living things, the more mana it produces. However, too much noise will make it crazy.
+botania.page.pyschobloom1=None shall pass.
 
 # -FUNCTIONAL
 # --NECROFLEUR
 botania.entry.necrofleur=Necrofleur
-botania.page.necrofleur0=
-botania.page.necrofleur1=
+botania.page.necrofleur0=&1Necrofleur&0 is the symbol of the Azrael. It will deal large amounts of damage to ALL the entities nearby, except the players. What's more, it will also give them some debuff.
+botania.page.necrofleur1=It's high noon.
 
 # --NUMERONDANDELIFE
 botania.entry.numerondandelife=Numeron Dandelife
@@ -317,12 +317,12 @@ botania.page.numeronbalsam1=
 
 # --JUDASVOW
 botania.entry.judasvow=Judas' Vow
-botania.page.judasvow0=
-botania.page.judasvow1=
+botania.page.judasvow0=A beautiful flower. As soon as you plant &1Judas' Vow&0, it starts to summon divine spears to attack nearby mobs. A divine spear will cause an explosion and make target slow down. But its life span is short, so a few seconds later, it will wither away and drop as a item.
+botania.page.judasvow1=I have no time for games.
 
 # --VOLATILILY
 botania.entry.volatilily=Volatilily
-botania.page.volatilily0=By placing it above the pool, Volatilily will start to fish. Its products can be different kinds of fishes, awful rubbishes, mystery treasures and so on. Provide a redstone signal can stop it from working.
+botania.page.volatilily0=By placing it above the pool, &1Volatilily&0 will start to fish. Its products can be different kinds of fishes, awful rubbishes, mystery treasures and so on. Provide a redstone signal can stop it from working.
 botania.page.volatilily1=You can't judge a book by its cover.
 
 # --DIPLOPBAMBOO
@@ -637,3 +637,5 @@ config.ExtraBotany.efficiencyPyschobloom.desc=The efficiency of Pysch-O-Bloom.
 config.ExtraBotany.efficiencyStonesia.desc=The efficiency of Stonesia.
 config.ExtraBotany.pyschobloomMax.desc=The maximum efficiency of Pysch-O-Bloom.
 config.ExtraBotany.disableShieldRender.desc=Whether to disable special effect of Shield Render. Set to true to disable.
+config.ExtraBotany.disableEasterEgg.desc=Whether to disable easter eggs. Set to true to disable.
+config.ExtraBotany.potion.desc=ID of potion.

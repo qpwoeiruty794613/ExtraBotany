@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.regex.Pattern;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockAir;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.ScaledResolution;
 import net.minecraft.client.renderer.entity.RenderItem;
@@ -226,6 +227,27 @@ public class EntityGaiaIII extends EntityCreature implements IBotaniaBossWithSha
 			return true;
 		}
 		return false;
+	}
+	
+	private static boolean hasEnoughSpace(World world, int sx, int sy, int sz){
+		int air = 0;
+		for(int x = (int) -RANGE; x < RANGE + 1; x++){
+			for(int z = (int) -RANGE; z < RANGE + 1; x++){
+				for(int y = (int) (-RANGE/2); y < RANGE/2 + 1; y++){
+					int rx = sx + x;
+					int rz = sz + z;
+					int ry = sy + y;
+
+					if(world.getBlock(rx, ry, rz).getCollisionBoundingBoxFromPool(world, rx, ry, rz) == null)
+						air++;
+				}
+			}
+		}
+		
+		if(air < 16000)
+			return false;
+
+		return true;	
 	}
 
 	private static boolean hasProperArena(World world, int sx, int sy, int sz) {
@@ -779,7 +801,7 @@ public class EntityGaiaIII extends EntityCreature implements IBotaniaBossWithSha
 	
 		Botania.proxy.sparkleFX(this.worldObj, this.posX, this.posY, this.posZ, 1.99F, 0.97F, 0.20F, 2F + this.hurtTime * 3F * (this.getHealth()/this.getMaxHealth()) * Math.max(0, this.worldObj.rand.nextInt(4)- 2), 6);
 		
-		if(ticksExisted % 80 == 0 && rankII){
+		if(ticksExisted % 80 == 0 && rankII && onGround){
 			spawnCyclone();
 		}
 	}
