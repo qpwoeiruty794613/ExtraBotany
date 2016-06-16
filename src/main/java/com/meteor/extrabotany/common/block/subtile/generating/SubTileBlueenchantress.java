@@ -10,6 +10,9 @@ import vazkii.botania.common.Botania;
 import vazkii.botania.common.block.subtile.generating.SubTilePassiveGenerating;
 import vazkii.botania.common.lib.LibMisc;
 
+import com.meteor.extrabotany.api.ExtraBotanyAPI;
+import com.meteor.extrabotany.api.extrabotany.recipe.RecipeBlueenchantress;
+import com.meteor.extrabotany.api.extrabotany.recipe.RecipeStonesia;
 import com.meteor.extrabotany.common.handler.ConfigHandler;
 import com.meteor.extrabotany.common.lexicon.LexiconModData;
 import com.valentin4311.candycraftmod.CandyCraft;
@@ -36,20 +39,31 @@ public class SubTileBlueenchantress extends SubTilePassiveGenerating{
 							if(chunky != supertile.yCoord) break;
 							Block block = world.getBlock(chunkx, chunky, chunkz);
 							int meta = world.getBlockMetadata(chunkx, chunky, chunkz);
-							if(getBurnTime(block) > 0 && meta == 0){
-								int waterAround = 0;
-								for(ForgeDirection dir : LibMisc.CARDINAL_DIRECTIONS)
-									if(supertile.getWorldObj().getBlock(chunkx + dir.offsetX, supertile.yCoord, chunkz + dir.offsetZ) == getBlock(block))
-										waterAround++;
-
-									if(waterAround < 2)
-										supertile.getWorldObj().setBlockToAir(chunkx, supertile.yCoord, chunkz);
-								
-								burnTime += getBurnTime(block);
-								supertile.getWorldObj().setBlockToAir(chunkx, chunky, chunkz);
-								sync();
-								playSound();
-								return;
+							RecipeBlueenchantress recipe = null;
+							for(RecipeBlueenchantress recipe_ : ExtraBotanyAPI.blueenchantressRecipes)
+								if(recipe_.matches(world, chunkx, chunky, chunkz, this, block, meta)) {
+									recipe = recipe_;
+									break;
+								}
+				
+							if(recipe != null) {
+								if(recipe.getMana() > 0 && meta == 0){
+									int waterAround = 0;
+									for(ForgeDirection dir : LibMisc.CARDINAL_DIRECTIONS)
+										if(supertile.getWorldObj().getBlock(chunkx + dir.offsetX, supertile.yCoord, chunkz + dir.offsetZ) == recipe.getInput())
+											waterAround++;
+	
+										if(waterAround < 2)
+											world.setBlockToAir(chunkx, supertile.yCoord, chunkz);
+									
+									if(recipe.set(world, chunkx, chunky, chunkz, this)){
+										burnTime += recipe.getMana();
+										supertile.getWorldObj().setBlockToAir(chunkx, chunky, chunkz);
+										sync();
+										playSound();
+										return;
+									}
+								}
 							}
 							chunky++;
 						}
@@ -63,18 +77,6 @@ public class SubTileBlueenchantress extends SubTilePassiveGenerating{
 				burnTime--;
 			}
 		}
-	}
-	
-	public int getBurnTime(Block block){
-		if(block == CandyCraft.GrenadineStatic) return 80;
-		else return 0;
-	}
-	
-	public Block getBlock(Block block){
-		if(getBurnTime(block) > 0){
-		return block;
-		}
-		return null;
 	}
 	
 	@Override

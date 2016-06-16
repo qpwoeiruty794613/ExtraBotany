@@ -4,10 +4,12 @@ import java.util.List;
 
 import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
 import com.meteor.extrabotany.common.block.ModBlocks;
+import com.meteor.extrabotany.common.enchantment.ModEnchantment;
 import com.meteor.extrabotany.common.item.ModItems;
 import com.meteor.extrabotany.common.lib.LibReference;
 
@@ -28,16 +30,16 @@ public class ExtraBotanyCreativeTab extends CreativeTabs{
 		return getIconItemStack().getItem();
 	}
 	
-	ItemStack ship = new ItemStack(ModItems.theseusship);
-	
 	@Override
 	public void displayAllReleventItems(List list) {
 		this.list = list;
 		//Flowers
 		addBlock(ModBlocks.specialFlower);
 		//Mana Using Item
+		addItem(ModItems.manapotato);
 		addItem(ModItems.gaiatablet);
 		addItem(ModItems.teleportpearl);
+		addItem(ModItems.angelwand);
 		addBlock(ModBlocks.pylon);
 		//Relics
 		addItem(ModItems.dice20);
@@ -58,6 +60,7 @@ public class ExtraBotanyCreativeTab extends CreativeTabs{
 		addItem(ModItems.hermeswand);
 		addItem(ModItems.theseusship);
 		addItem(ModItems.eternalslience);
+		addItem(ModItems.valkyriecombatuniform);
 		//Test
 		addItem(ModItems.itemtest);
 		//Basic

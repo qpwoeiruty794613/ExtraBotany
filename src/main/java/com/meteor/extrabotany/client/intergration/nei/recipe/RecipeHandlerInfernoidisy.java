@@ -25,13 +25,13 @@ import com.meteor.extrabotany.common.lib.LibBlockName;
 
 public class RecipeHandlerInfernoidisy extends TemplateRecipeHandler {
 
-	public class CachedPureDaisyRecipe extends CachedRecipe {
+	public class CachedInfernoidisyRecipe extends CachedRecipe {
 
 		public List<PositionedStack> inputs = new ArrayList<PositionedStack>();
 		public PositionedStack output;
 		public List<PositionedStack> otherStacks = new ArrayList<PositionedStack>();
 
-		public CachedPureDaisyRecipe(RecipeInfernoidisy recipe) {
+		public CachedInfernoidisyRecipe(RecipeInfernoidisy recipe) {
 			if(recipe == null)
 				return;
 			inputs.add(new PositionedStack(ItemBlockSpecialFlower.ofType(LibBlockName.INFERNOIDISY), 71, 23));
@@ -107,7 +107,7 @@ public class RecipeHandlerInfernoidisy extends TemplateRecipeHandler {
 				if(recipe == null)
 					continue;
 
-				arecipes.add(new CachedPureDaisyRecipe(recipe));
+				arecipes.add(new CachedInfernoidisyRecipe(recipe));
 			}
 		} else super.loadCraftingRecipes(outputId, results);
 	}
@@ -119,7 +119,7 @@ public class RecipeHandlerInfernoidisy extends TemplateRecipeHandler {
 				continue;
 
 			if(NEIServerUtils.areStacksSameTypeCrafting(new ItemStack(recipe.getOutput()), result))
-				arecipes.add(new CachedPureDaisyRecipe(recipe));
+				arecipes.add(new CachedInfernoidisyRecipe(recipe));
 		}
 	}
 
@@ -129,7 +129,7 @@ public class RecipeHandlerInfernoidisy extends TemplateRecipeHandler {
 			if(recipe == null)
 				continue;
 
-			CachedPureDaisyRecipe crecipe = new CachedPureDaisyRecipe(recipe);
+			CachedInfernoidisyRecipe crecipe = new CachedInfernoidisyRecipe(recipe);
 			if(crecipe.contains(crecipe.getIngredients(), ingredient) || crecipe.contains(crecipe.getOtherStacks(), ingredient))
 				arecipes.add(crecipe);
 		}

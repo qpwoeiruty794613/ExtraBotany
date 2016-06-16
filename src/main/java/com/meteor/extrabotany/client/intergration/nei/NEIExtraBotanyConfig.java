@@ -4,6 +4,7 @@ import codechicken.nei.api.API;
 import codechicken.nei.api.IConfigureNEI;
 
 import com.meteor.extrabotany.client.intergration.nei.recipe.RecipeHandlerInfernoidisy;
+import com.meteor.extrabotany.client.intergration.nei.recipe.RecipeHandlerStonesia;
 import com.meteor.extrabotany.common.lib.LibReference;
 
 public class NEIExtraBotanyConfig implements IConfigureNEI{
@@ -22,6 +23,8 @@ public class NEIExtraBotanyConfig implements IConfigureNEI{
 	public void loadConfig() {
 		API.registerRecipeHandler(new RecipeHandlerInfernoidisy());
 		API.registerUsageHandler(new RecipeHandlerInfernoidisy());
+		API.registerRecipeHandler(new RecipeHandlerStonesia());
+		API.registerUsageHandler(new RecipeHandlerStonesia());
 	}
 
 }

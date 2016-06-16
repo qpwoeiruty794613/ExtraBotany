@@ -5,6 +5,7 @@ import vazkii.botania.api.recipe.RecipePetals;
 import vazkii.botania.common.item.block.ItemBlockSpecialFlower;
 import vazkii.botania.common.lib.LibOreDict;
 
+import com.meteor.extrabotany.common.handler.ConfigHandler;
 import com.meteor.extrabotany.common.lib.LibBlockName;
 import com.meteor.extrabotany.common.lib.LibOreDictName;
 
@@ -45,6 +46,9 @@ public class ModPetalRecipe {
 	public static RecipePetals voiduimRecipe;
     public static RecipePetals diplopbambooRecipe;
     public static RecipePetals artifaconiaRecipe;
+    public static RecipePetals infernoidisyRecipe;
+    public static RecipePetals launchishRecipe;
+    public static RecipePetals annoyobloomRecipe;
 	
 	public static void init() {
 		blueenchantressRecipe = BotaniaAPI.registerPetalRecipe(ItemBlockSpecialFlower.ofType(LibBlockName.BLUE_ENCHANTRESS), blue, blue, blue, blue, cyan, gaiaEssence, manaPowder, runeWater);
@@ -64,7 +68,11 @@ public class ModPetalRecipe {
 		volatililyRecipe = BotaniaAPI.registerPetalRecipe(ItemBlockSpecialFlower.ofType(LibBlockName.VOLATILILY), white, white, black, black, redstoneRoot, dog, runeWater);
 		judasvowRecipe = BotaniaAPI.registerPetalRecipe(ItemBlockSpecialFlower.ofType(LibBlockName.JUDASVOW), red, red, orange, yellow, yellow, blankCard, runeAutumn, runeMana, shard);
 		voiduimRecipe = BotaniaAPI.registerPetalRecipe(ItemBlockSpecialFlower.ofType(LibBlockName.VOIDUIM), lightGray, gray, gray, gaiaEssence, gaiaSpirit, shard, runeWrath, runeGreed);
-		diplopbambooRecipe = BotaniaAPI.registerPetalRecipe(ItemBlockSpecialFlower.ofType(LibBlockName.DIPLOPBAMBOO), petalRed, petalGreen, petalPurple, brown, brown, brown, gaiaEssence, manaPowder);
+		if(ConfigHandler.enableDiplopbamboo)
+			diplopbambooRecipe = BotaniaAPI.registerPetalRecipe(ItemBlockSpecialFlower.ofType(LibBlockName.DIPLOPBAMBOO), petalRed, petalGreen, petalPurple, brown, brown, brown, gaiaEssence, manaPowder);
 		artifaconiaRecipe = BotaniaAPI.registerPetalRecipe(ItemBlockSpecialFlower.ofType(LibBlockName.ARTIFACONIA), brown, brown, lightBlue, lightBlue, runeMana, runeEnvy, runeSloth, gaiaEssence);
+		infernoidisyRecipe = BotaniaAPI.registerPetalRecipe(ItemBlockSpecialFlower.ofType(LibBlockName.INFERNOIDISY), red, red, red, red, red, manaPowder);
+		launchishRecipe = BotaniaAPI.registerPetalRecipe(ItemBlockSpecialFlower.ofType(LibBlockName.LAUNCHISH), green, green, green, green, green, manaPowder);
+		annoyobloomRecipe = BotaniaAPI.registerPetalRecipe(ItemBlockSpecialFlower.ofType(LibBlockName.ANNOYOBLOOM), yellow, yellow, yellow, yellow, orange, manaPowder);
 	}
 }

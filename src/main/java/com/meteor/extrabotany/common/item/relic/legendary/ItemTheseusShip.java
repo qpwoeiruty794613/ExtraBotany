@@ -84,7 +84,7 @@ public class ItemTheseusShip extends ItemRelicAdv implements ILensEffect, IManaU
 					setDelay(stack, 20);
 					player.addChatMessage(new ChatComponentTranslation("botaniamisc.theseussetMode" + getMode(stack)).setChatStyle(new ChatStyle().setColor(EnumChatFormatting.DARK_GREEN)));
 				}
-			}else if(count % 1 == 0 && !player.isSneaking()){
+			}else if(count % 3 == 0 && !player.isSneaking()){
 					if(ItemRelic.isRightPlayer(player, stack)){
 						int cost = (int) ((m == 3 ? 1 : m == 2 ? 2 : m == 1 ? 5 : 2) * EnchHelper.getDivineFavorBuff(stack) * EnchHelper.getDivineMarkBuff(stack));
 						if(ManaItemHandler.requestManaExact(stack, player, cost, true)){
@@ -97,7 +97,7 @@ public class ItemTheseusShip extends ItemRelicAdv implements ILensEffect, IManaU
 	
 	public EntityManaBurst getBurst(EntityPlayer player, ItemStack stack) {
 		EntityManaBurst burst = new EntityManaBurst(player);
-		float motionModifier = 5F;
+		float motionModifier = 7F;
 		int mode = getMode(stack);
 		burst.setColor(mode == 3 ? 0xF3812B : mode == 2 ? 0x6DDC41 : mode == 1 ? 0x3786E6 : 0xDD40C3);
 		burst.setMana(1);
@@ -140,7 +140,7 @@ public class ItemTheseusShip extends ItemRelicAdv implements ILensEffect, IManaU
 		AxisAlignedBB axisbig = AxisAlignedBB.getBoundingBox(entity.posX - 0.2F, entity.posY - 0.2F, entity.posZ - 0.2F, entity.lastTickPosX + 0.2F, entity.lastTickPosY + 0.2F, entity.lastTickPosZ + 0.2F).expand(1, 1, 1);
 		String attacker = ItemNBTHelper.getString(burst.getSourceLens(), TAG_ATTACKER_USERNAME, "");
 		
-		if(entity.ticksExisted > 1)
+		if(entity.ticksExisted > 3)
 			entity.setDead();
 		
 		if(getMode(stack) == 0){

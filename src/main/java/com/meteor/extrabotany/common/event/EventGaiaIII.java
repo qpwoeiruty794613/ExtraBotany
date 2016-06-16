@@ -70,25 +70,6 @@ public class EventGaiaIII{
 	}
 	
 	@SubscribeEvent
-	 public void PlayerHurtEvent(LivingHurtEvent event) { 
-	        if(!(event.entity instanceof EntityPlayer)) {
-	            return;
-	        }
-	        EntityPlayer player = (EntityPlayer)event.entity;
-	        if(event.source.getSourceOfDamage() instanceof EntityGaiaIII){
-	        	EntityGaiaIII gaia = (EntityGaiaIII) event.source.getSourceOfDamage();
-	        	if(gaia.getHealth() <= gaia.getMaxHealth() * rankII){
-	        		ItemStack stack = player.getHeldItem();
-	        		if(stack.getItem() instanceof IRelic){
-		        		if(player.worldObj.rand.nextInt(5) == 4){
-		        			player.dropOneItem(true);
-	        			}
-	        		}
-	        	}
-	        }	
-	}
-	
-	@SubscribeEvent
 	public void GaiaDarkHurtEvent(LivingHurtEvent event) { 
 	        if(!(event.entity instanceof EntityGaiaIIIDark)) {
 	            return;

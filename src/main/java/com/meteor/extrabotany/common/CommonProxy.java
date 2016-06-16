@@ -6,11 +6,9 @@ import java.util.Map;
 import net.minecraft.nbt.NBTTagCompound;
 
 import com.meteor.extrabotany.ExtraBotany;
-import com.meteor.extrabotany.api.ExtraBotanyAPI;
 import com.meteor.extrabotany.common.achievement.ModAchievement;
 import com.meteor.extrabotany.common.block.ModBlocks;
 import com.meteor.extrabotany.common.block.ModMultiBlocks;
-import com.meteor.extrabotany.common.block.subtile.generating.SubTileStonesia;
 import com.meteor.extrabotany.common.command.ModCommands;
 import com.meteor.extrabotany.common.enchantment.ModEnchantment;
 import com.meteor.extrabotany.common.entity.FakePlayer;
@@ -21,7 +19,7 @@ import com.meteor.extrabotany.common.handler.GuiHandler;
 import com.meteor.extrabotany.common.integration.Intergration;
 import com.meteor.extrabotany.common.item.ModItems;
 import com.meteor.extrabotany.common.lexicon.LexiconModData;
-import com.meteor.extrabotany.common.potion.PotionEffectMods;
+import com.meteor.extrabotany.common.potion.ModPotions;
 import com.meteor.extrabotany.common.recipe.ModRecipe;
 import com.meteor.extrabotany.common.world.ModWorldGen;
 
@@ -35,7 +33,7 @@ public class CommonProxy {
 	
 	public void preInit(FMLPreInitializationEvent event) {
 		new ConfigHandler(event);
-		PotionEffectMods.init();
+		ModPotions.init();
 		ModBlocks.init();
 		ModItems.init();
 		ModEnchantment.init();

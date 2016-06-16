@@ -4,9 +4,12 @@ import net.minecraft.client.renderer.entity.RenderItem;
 import net.minecraft.client.renderer.entity.RenderSnowball;
 import net.minecraft.init.Items;
 import net.minecraftforge.common.MinecraftForge;
+import vazkii.botania.client.render.tile.RenderTileTinyPotato;
 
+import com.meteor.extrabotany.client.gui.GuiDrop;
 import com.meteor.extrabotany.client.render.RenderShield;
 import com.meteor.extrabotany.client.render.block.RenderAncientPylon;
+import com.meteor.extrabotany.client.render.block.RenderManaTinyPotato;
 import com.meteor.extrabotany.client.render.entity.Render22;
 import com.meteor.extrabotany.client.render.entity.RenderGaiaIII;
 import com.meteor.extrabotany.client.render.entity.RenderGaiaIIIDark;
@@ -21,6 +24,7 @@ import com.meteor.extrabotany.client.render.tile.RenderTileAncientPylon;
 import com.meteor.extrabotany.client.render.tile.RenderTileRelicPlate;
 import com.meteor.extrabotany.common.CommonProxy;
 import com.meteor.extrabotany.common.block.tile.TileAncientPylon;
+import com.meteor.extrabotany.common.block.tile.TileManaTinyPotato;
 import com.meteor.extrabotany.common.block.tile.TileRelicPlate;
 import com.meteor.extrabotany.common.entity.Entity22;
 import com.meteor.extrabotany.common.entity.EntityItemUnbreakable;
@@ -40,6 +44,7 @@ import com.meteor.extrabotany.common.entity.bullet.EntityBulletSnowball;
 import com.meteor.extrabotany.common.entity.gaia.EntityGaiaIII;
 import com.meteor.extrabotany.common.entity.gaia.EntityGaiaIIIDark;
 import com.meteor.extrabotany.common.entity.gaia.EntityGaiaIIIPhantom;
+import com.meteor.extrabotany.common.handler.ConfigHandler;
 import com.meteor.extrabotany.common.integration.Intergration;
 import com.meteor.extrabotany.common.item.ModItems;
 
@@ -51,6 +56,7 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 
 public class ClientProxy extends CommonProxy{
+	
 	@Override
 	public void preInit(FMLPreInitializationEvent event) {
 		super.preInit(event);
@@ -94,6 +100,10 @@ public class ClientProxy extends CommonProxy{
 	private void initRenderers() {
 		MinecraftForge.EVENT_BUS.register(new RenderShield());
 	    FMLCommonHandler.instance().bus().register(new RenderShield());	
+	    if(ConfigHandler.disableEasterEgg == false){
+	    	MinecraftForge.EVENT_BUS.register(new GuiDrop());
+	    	FMLCommonHandler.instance().bus().register(new GuiDrop());
+	    }
 	    
 	    RenderingRegistry.registerBlockHandler(new RenderAncientPylon());
 	    

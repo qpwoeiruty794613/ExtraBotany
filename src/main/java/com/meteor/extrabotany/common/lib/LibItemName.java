@@ -25,6 +25,8 @@ public class LibItemName {
 	public static final String BAUBLEDOG = "dog";
 	
 	//Advanced
+	public static final String ANGELWAND = "angelwand";
+	public static final String MANAPOTATO = "manapotato";
 	public static final String GAIATABLET = "gaiaTablet";
 	public static final String TELEPORTPEARL = "teleportpearl";
 	public static final String GAIANECKLACEBROKEN = "gaianecklacebroken";

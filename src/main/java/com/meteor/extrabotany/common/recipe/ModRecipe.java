@@ -14,8 +14,10 @@ import vazkii.botania.common.lib.LibOreDict;
 
 import com.meteor.extrabotany.common.block.ModBlocks;
 import com.meteor.extrabotany.common.handler.CraftingHandler;
+import com.meteor.extrabotany.common.item.ItemManaPotato;
 import com.meteor.extrabotany.common.item.ModItems;
 import com.meteor.extrabotany.common.lib.LibOreDictName;
+import com.meteor.extrabotany.common.recipe.subtile.ModBlueenchantressRecipe;
 import com.meteor.extrabotany.common.recipe.subtile.ModInfernoidisyRecipe;
 import com.meteor.extrabotany.common.recipe.subtile.ModStonesiaRecipe;
 
@@ -41,29 +43,55 @@ public class ModRecipe {
 	public static IRecipe gaiawise;
 	public static IRecipe bladered;
 	public static IRecipe bladepurple;
+	public static IRecipe angelwand;
+	public static IRecipe manapotato;
+	
+	public static void initSubtile(){
+		ModStonesiaRecipe.init();
+		ModInfernoidisyRecipe.init();
+		ModBlueenchantressRecipe.init();
+	}
 	
 	public static void init(){
 		remove();
 		ModManaInfusionRecipe.init();
 		ModPetalRecipe.init();
-		ModStonesiaRecipe.init();
-		ModInfernoidisyRecipe.init();
+		initSubtile();
 		int recipeListSize = CraftingManager.getInstance().getRecipeList().size();
+		
+		//mana potato
+		GameRegistry.addShapelessRecipe(new ItemStack(ModItems.manapotato), new Object[] {
+			new ItemStack(Items.potato),
+			new ItemStack(Items.redstone),
+			new ItemStack(vazkii.botania.common.item.ModItems.manaResource, 1, 17)
+		});
+		manapotato = BotaniaAPI.getLatestAddedRecipe();
+		
+		//angel wand
+		addOreDictRecipe(new ItemStack(ModItems.angelwand),
+				" AB", " CA", "AD ",
+				'A', LibOreDict.DREAMWOOD_TWIG,
+				'B', LibOreDict.DRAGONSTONE,
+				'C', new ItemStack(ModItems.teleportpearl),
+				'D', new ItemStack(ModItems.manapotato));
+		angelwand = BotaniaAPI.getLatestAddedRecipe();
 		
 		//scissor blade red
 		addOreDictRecipe(new ItemStack(ModItems.scissorred),
-				"  A","BA ","CB ",
+				"  A","BA ","CBD",
 				'A', LibOreDict.ELEMENTIUM,
 				'B', LibOreDict.ELEMENTIUM_NUGGET,
-				'C', LibOreDictName.LYCORIS_RED);
+				'C', LibOreDictName.LYCORIS_RED,
+				'D', new ItemStack(ModItems.manapotato, 1));
 		bladered = BotaniaAPI.getLatestAddedRecipe();
 		
 		//scissor blade purple
 		addOreDictRecipe(new ItemStack(ModItems.scissorpurple),
-				"  A","BA ","CB ",
+				"  A","BA ","CBD",
 				'A', LibOreDict.ELEMENTIUM,
 				'B', LibOreDict.ELEMENTIUM_NUGGET,
-				'C', LibOreDictName.LYCORIS_RED);
+				'C', LibOreDictName.LYCORIS_PURPLE,
+				'D', new ItemStack(ModItems.manapotato, 1));
 		bladepurple = BotaniaAPI.getLatestAddedRecipe();
 		
 		//gaia wise

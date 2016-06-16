@@ -27,9 +27,17 @@ public class ConfigHandler {
 	public static int enchDivineFavor;
 	public static int enchDivineMark;
 	
+	public static int idPotionFPS;
+	public static int idPotionSPS;
+	public static int idPotionRP;
+	public static int idPotionC;
+	public static int idPotionD;
+	
 	public static int extraShieldAmount;
 	
 	public static boolean disableShieldRender;
+	public static boolean disableEasterEgg;
+	public static boolean enableDiplopbamboo;
 
 	public ConfigHandler(FMLPreInitializationEvent event)
 	{
@@ -41,6 +49,13 @@ public class ConfigHandler {
 
 	private static void registerConfig()
 	{		
+		idPotionFPS = config.get(LibReference.CATEGORY_ID, "potionFPS", 100, StatCollector.translateToLocal(LibReference.PREFIX_CONFIG + "potion.desc")).getInt();
+		idPotionSPS = config.get(LibReference.CATEGORY_ID, "potionSPS", 101, StatCollector.translateToLocal(LibReference.PREFIX_CONFIG + "potion.desc")).getInt();
+		idPotionRP = config.get(LibReference.CATEGORY_ID, "potionRP", 102, StatCollector.translateToLocal(LibReference.PREFIX_CONFIG + "potion.desc")).getInt();
+		idPotionC = config.get(LibReference.CATEGORY_ID, "potionC", 103, StatCollector.translateToLocal(LibReference.PREFIX_CONFIG + "potion.desc")).getInt();
+		idPotionD = config.get(LibReference.CATEGORY_ID, "potionD", 104, StatCollector.translateToLocal(LibReference.PREFIX_CONFIG + "potion.desc")).getInt();
+		
+		
 		enchGaiaBlessing = config.get(LibReference.CATEGORY_ID, "enchGaiaBlessing", 203, StatCollector.translateToLocal(LibReference.PREFIX_CONFIG + "ench.desc")).getInt();
 		enchDivineFavor = config.get(LibReference.CATEGORY_ID, "enchDivineFavor", 204, StatCollector.translateToLocal(LibReference.PREFIX_CONFIG + "ench.desc")).getInt();
 		enchDivineMark = config.get(LibReference.CATEGORY_ID, "enchDivineMark", 205, StatCollector.translateToLocal(LibReference.PREFIX_CONFIG + "ench.desc")).getInt();
@@ -59,5 +74,7 @@ public class ConfigHandler {
 		pyschobloomMax = config.get(LibReference.CATEGORY_COMMON, "pyschobloomMax", 9, StatCollector.translateToLocal(LibReference.PREFIX_CONFIG + "pyschobloomMax.desc")).getInt();
 		
 		disableShieldRender = config.get(LibReference.CATEGORY_CLIENT, "disableShieldRender", false, StatCollector.translateToLocal(LibReference.PREFIX_CONFIG + "disableShieldRender.desc")).getBoolean();
+		disableEasterEgg = config.get(LibReference.CATEGORY_CLIENT, "disableShieldRender", false, StatCollector.translateToLocal(LibReference.PREFIX_CONFIG + "disableEasterEgg.desc")).getBoolean();
+		enableDiplopbamboo = config.get(LibReference.CATEGORY_COMMON, "enableDiplopbamboo", false, StatCollector.translateToLocal(LibReference.PREFIX_CONFIG + "enableDiplopbamboo.desc")).getBoolean();
 	}
 }

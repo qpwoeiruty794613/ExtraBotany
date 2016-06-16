@@ -48,6 +48,7 @@ import com.meteor.extrabotany.common.lib.LibOreDictName;
 public class ModItems {
 	public static Item pill;
 	
+	public static Item manapotato;
 	public static Item gaiatablet;
 	public static Item dice20;
 	public static Item excaliber;
@@ -77,6 +78,7 @@ public class ModItems {
 	public static Item valkyriecombatuniform;
 	
 	public static Item gaiawise;
+	public static Item angelwand;
 	
 	public static Item itemtest;
 	public static Item material;
@@ -124,6 +126,7 @@ public class ModItems {
 				
 		dog = new ItemBaubleDog();
 		gaiawise = new ItemGaiaWise(LibItemName.GAIAWISE);
+		angelwand = new ItemAngelWand(LibItemName.ANGELWAND);
 		
 		lokighostrick = new ItemLokiGhostrick(LibItemName.LOKIGHOSTRICK);
 		cthulhueye = new ItemCthulhuEye();
@@ -145,6 +148,7 @@ public class ModItems {
 		eternalslience = new ItemEternalSlience(LibItemName.ETERNALSLIENCE);
 		valkyriecombatuniform = new ItemValkyrieCombatUniform(LibItemName.VALKYRIECOMBATUNIFORM);
 		
+		manapotato = new ItemManaPotato(LibItemName.MANAPOTATO);
 		gaiatablet = new ItemGaiaTablet();
 		teleportpearl = new ItemTeleportPearl(LibItemName.TELEPORTPEARL);
 		

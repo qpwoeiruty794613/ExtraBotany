@@ -1,5 +1,6 @@
 package com.meteor.extrabotany.common.lexicon;
 
+import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.StatCollector;
@@ -19,6 +20,7 @@ import vazkii.botania.common.lexicon.page.PageText;
 import com.meteor.extrabotany.common.block.ModBlocks;
 import com.meteor.extrabotany.common.block.ModMultiBlocks;
 import com.meteor.extrabotany.common.item.ModItems;
+import com.meteor.extrabotany.common.lexicon.page.PageDisplay;
 import com.meteor.extrabotany.common.lib.LibBlockName;
 import com.meteor.extrabotany.common.lib.LibLexiconName;
 import com.meteor.extrabotany.common.lib.LibReference;
@@ -66,12 +68,21 @@ public class LexiconModData {
 	public static LexiconEntry vpowerbattleaxe;
 	public static LexiconEntry vhandgun;
 	public static LexiconEntry vrangerboots;
-	public static LexiconEntry cronusphantom;
-	public static LexiconEntry hermestravelclothing;
 	public static LexiconEntry phoenixblaster;
 	public static LexiconEntry snowballcannon;
 	public static LexiconEntry tacticalshotgun;
 	public static LexiconEntry gaia3;
+	
+	public static LexiconEntry cronusphantom;
+	public static LexiconEntry hermestravelclothing;
+	public static LexiconEntry cthulhueye;
+	public static LexiconEntry eternalslience;
+	public static LexiconEntry hermestravelwand;
+	public static LexiconEntry lokighostrick;
+	public static LexiconEntry olympusguard;
+	public static LexiconEntry theseusship;
+	public static LexiconEntry valkyriecombatsuit;
+	
 	//Cosmetic
 	public static LexiconEntry cosmetic;
 	//Basic
@@ -91,7 +102,7 @@ public class LexiconModData {
 	//Category
 	public static LexiconCategory categoryExtra;
 	
-	public static void init() {
+	public static void init() {	
 		categoryExtra = new LexiconCategory(StatCollector.translateToLocal("category.Botania:extra"));
 		categoryExtra.setIcon(LibReference.EXTRA);
 		categoryExtra.setPriority(0);
@@ -144,15 +155,15 @@ public class LexiconModData {
 		gunbase.setIcon(new ItemStack(ModItems.gunboomstick));
 		
 		gunphoenixblaster = new LLexiconEntry(LibLexiconName.G_GUNPHOENIXBLASTER, categoryExtra);
-		gunphoenixblaster.setLexiconPages(new PageText("0"));
+		gunphoenixblaster.setLexiconPages(new PageText("0"), new PageDisplay("1", new ItemStack(ModItems.gunphoenixblaster)));
 		gunphoenixblaster.setIcon(new ItemStack(ModItems.gunphoenixblaster));
 		
 		gunsnowballcannon = new LLexiconEntry(LibLexiconName.G_GUNSNOWBALLCANNON, categoryExtra);
-		gunsnowballcannon.setLexiconPages(new PageText("0"));
+		gunsnowballcannon.setLexiconPages(new PageText("0"), new PageDisplay("1", new ItemStack(ModItems.snowballlauncher)));
 		gunsnowballcannon.setIcon(new ItemStack(ModItems.snowballlauncher));
 		
 		guntacticalshotgun = new LLexiconEntry(LibLexiconName.G_GUNTACTICALSHOTGUN, categoryExtra);
-		guntacticalshotgun.setLexiconPages(new PageText("0"));
+		guntacticalshotgun.setLexiconPages(new PageText("0"), new PageDisplay("1", new ItemStack(ModItems.guntacticalshotgun)));
 		guntacticalshotgun.setIcon(new ItemStack(ModItems.guntacticalshotgun));
 		
 		gunbullet = new BLexiconEntry(LibLexiconName.G_GUNBULLET, categoryExtra);
@@ -275,48 +286,85 @@ public class LexiconModData {
 		infinitymana = new DLexiconEntry(LibLexiconName.D_INFINITYMANA, categoryExtra);
 		infinitymana.setIcon(new ItemStack(vazkii.botania.common.block.ModBlocks.pool));
 		//Relics
-		hestiachastity = new LLexiconEntry(LibLexiconName.R_HESTIACHASTITY, BotaniaAPI.categoryAlfhomancy);
+		hestiachastity = new LLexiconEntry(LibLexiconName.R_HESTIACHASTITY, categoryExtra);
 		hestiachastity.setIcon(new ItemStack(ModItems.hestiachastity));
 		hestiachastity.setLexiconPages(new PageText("0"));
 		
-		maxwelldemon = new LLexiconEntry(LibLexiconName.R_MAXWELLDEMON, BotaniaAPI.categoryAlfhomancy);
+		maxwelldemon = new LLexiconEntry(LibLexiconName.R_MAXWELLDEMON, categoryExtra);
 		maxwelldemon.setIcon(new ItemStack(ModItems.maxwelldemon));
 		maxwelldemon.setLexiconPages(new PageText("0"));
 		
-		athenabless = new LLexiconEntry(LibLexiconName.R_ATHENABLESS, BotaniaAPI.categoryAlfhomancy);
+		athenabless = new LLexiconEntry(LibLexiconName.R_ATHENABLESS, categoryExtra);
 		athenabless.setIcon(new ItemStack(ModItems.athenabless));
 		athenabless.setLexiconPages(new PageText("0"));
 		
-		aphroditegrace = new LLexiconEntry(LibLexiconName.R_APHRODITEGRACE, BotaniaAPI.categoryAlfhomancy);
+		aphroditegrace = new LLexiconEntry(LibLexiconName.R_APHRODITEGRACE, categoryExtra);
 		aphroditegrace.setIcon(new ItemStack(ModItems.aphroditegrace));
 		aphroditegrace.setLexiconPages(new PageText("0"));
 		
-		dice20 = new LLexiconEntry(LibLexiconName.R_DICE20, BotaniaAPI.categoryAlfhomancy);
+		dice20 = new LLexiconEntry(LibLexiconName.R_DICE20, categoryExtra);
 		dice20.setIcon(new ItemStack(ModItems.dice20));
 		dice20.setLexiconPages(new PageText("0"));
 		
-		excaliber = new LLexiconEntry(LibLexiconName.R_EXCALIBER, BotaniaAPI.categoryAlfhomancy);
+		excaliber = new LLexiconEntry(LibLexiconName.R_EXCALIBER, categoryExtra);
 		excaliber.setIcon(new ItemStack(ModItems.excaliber));
 		excaliber.setLexiconPages(new PageText("0"));
 		
-		excaliberfake = new LLexiconEntry(LibLexiconName.R_EXCALIBERFAKE, BotaniaAPI.categoryAlfhomancy);
+		excaliberfake = new LLexiconEntry(LibLexiconName.R_EXCALIBERFAKE, categoryExtra);
 		excaliberfake.setIcon(new ItemStack(ModItems.excaliberfake));
 		excaliberfake.setLexiconPages(new PageText("0"));
 		
-		vpowerbattleaxe = new ELexiconEntry(LibLexiconName.R_VPOWERBATTLEAXE, BotaniaAPI.categoryAlfhomancy);
+		vpowerbattleaxe = new ELexiconEntry(LibLexiconName.R_VPOWERBATTLEAXE, categoryExtra);
 		vpowerbattleaxe.setIcon(new ItemStack(ModItems.vpowerbattleaxe));
 		vpowerbattleaxe.setLexiconPages(new PageText("0"));
 		
-		vhandgun = new ELexiconEntry(LibLexiconName.R_VHANDGUN, BotaniaAPI.categoryAlfhomancy);
+		vhandgun = new ELexiconEntry(LibLexiconName.R_VHANDGUN, categoryExtra);
 		vhandgun.setIcon(new ItemStack(ModItems.vhandgun));
 		vhandgun.setLexiconPages(new PageText("0"));
 		
-		vrangerboots = new LLexiconEntry(LibLexiconName.R_VRANGERBOOTS, BotaniaAPI.categoryAlfhomancy);
+		vrangerboots = new LLexiconEntry(LibLexiconName.R_VRANGERBOOTS, categoryExtra);
 		vrangerboots.setIcon(new ItemStack(ModItems.vrangerboots));
 		vrangerboots.setLexiconPages(new PageText("0"));
 		
-		gaia3 = new ELexiconEntry(LibLexiconName.R_GAIAIII, BotaniaAPI.categoryAlfhomancy);
+		cronusphantom = new LLexiconEntry(LibLexiconName.R_CRONUSPHANTOM, categoryExtra);
+		cronusphantom.setIcon(new ItemStack(ModItems.cronusphantom));
+		cronusphantom.setLexiconPages(new PageText("0"));
+		
+		hermestravelclothing = new LLexiconEntry(LibLexiconName.R_HERMESTRAVELCLOTHING, categoryExtra);
+		hermestravelclothing.setIcon(new ItemStack(ModItems.hermestravelclothing));
+		hermestravelclothing.setLexiconPages(new PageText("0"));
+		
+		cthulhueye = new LLexiconEntry(LibLexiconName.R_CTHULHUEYE, categoryExtra);
+		cthulhueye.setIcon(new ItemStack(ModItems.cthulhueye));
+		cthulhueye.setLexiconPages(new PageText("0"));
+		
+		eternalslience = new LLexiconEntry(LibLexiconName.R_ETERNALSLIENCE, categoryExtra);
+		eternalslience.setIcon(new ItemStack(ModItems.eternalslience));
+		eternalslience.setLexiconPages(new PageText("0"));
+		
+		hermestravelwand = new LLexiconEntry(LibLexiconName.R_HERMESTRAVELWAND, categoryExtra);
+		hermestravelwand.setIcon(new ItemStack(ModItems.hermeswand));
+		hermestravelwand.setLexiconPages(new PageText("0"));
+		
+		lokighostrick = new LLexiconEntry(LibLexiconName.R_LOKIGHOSTRICK, categoryExtra);
+		lokighostrick.setIcon(new ItemStack(ModItems.lokighostrick));
+		lokighostrick.setLexiconPages(new PageText("0"));
+		
+		olympusguard = new LLexiconEntry(LibLexiconName.R_OLYMPUSGUARD, categoryExtra);
+		olympusguard.setIcon(new ItemStack(ModItems.olympusguard));
+		olympusguard.setLexiconPages(new PageText("0"));
+		
+		theseusship = new LLexiconEntry(LibLexiconName.R_THESEUSSHIP, categoryExtra);
+		theseusship.setIcon(new ItemStack(ModItems.theseusship));
+		theseusship.setLexiconPages(new PageText("0"));
+		
+		valkyriecombatsuit = new LLexiconEntry(LibLexiconName.R_VALKYRIECOMBATSUIT, categoryExtra);
+		valkyriecombatsuit.setIcon(new ItemStack(ModItems.valkyriecombatuniform));
+		valkyriecombatsuit.setLexiconPages(new PageText("0"));
+		
+		gaia3 = new ELexiconEntry(LibLexiconName.R_GAIAIII, categoryExtra);
 		gaia3.setIcon(new ItemStack(Item.getItemFromBlock(ModBlocks.pylon), 1, 2));
 		gaia3.setLexiconPages(new PageText("0"), new PageText("1"), new PageMultiblock("3", ModMultiBlocks.gaia), new PageText("2"));
+		gaia3.setPriority();
 	}
 }

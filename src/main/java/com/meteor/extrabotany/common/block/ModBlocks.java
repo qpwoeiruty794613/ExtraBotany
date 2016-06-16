@@ -13,6 +13,7 @@ import com.meteor.extrabotany.common.block.decor.BlockGaiaQuartzSlab;
 import com.meteor.extrabotany.common.block.decor.BlockGaiaQuartzStairs;
 import com.meteor.extrabotany.common.block.subtile.SubTileInfernoidisy;
 import com.meteor.extrabotany.common.block.subtile.SubTileJudasvow;
+import com.meteor.extrabotany.common.block.subtile.functional.SubTileAnnoyobloom;
 import com.meteor.extrabotany.common.block.subtile.functional.SubTileArtifaconia;
 import com.meteor.extrabotany.common.block.subtile.functional.SubTileDiplopbamboo;
 import com.meteor.extrabotany.common.block.subtile.functional.SubTileIcebirdium;
@@ -32,6 +33,7 @@ import com.meteor.extrabotany.common.block.subtile.generating.SubTilePyschobloom
 import com.meteor.extrabotany.common.block.subtile.generating.SubTileStonesia;
 import com.meteor.extrabotany.common.block.subtile.generating.SubTileSunshinelily;
 import com.meteor.extrabotany.common.block.tile.TileAncientPylon;
+import com.meteor.extrabotany.common.block.tile.TileManaTinyPotato;
 import com.meteor.extrabotany.common.block.tile.TileRelicPlate;
 import com.meteor.extrabotany.common.lib.LibBlockName;
 import com.meteor.extrabotany.common.lib.LibReference;
@@ -55,9 +57,11 @@ public class ModBlocks {
 	public static Block relicplate;
 	public static Block resonancehouse;
 	public static Block pylon;
+	public static Block manatinypotato;
 	
 	public static void init() {
 		pylon = new BlockAncientPylon(Material.iron);
+		manatinypotato = new BlockManaTinyPotato();
 		relicplate = new BlockRelicPlate();
 		resonancehouse = new BlockResonanceHouse(Material.rock);
 		specialFlower = new BlockSpecial();
@@ -79,6 +83,7 @@ public class ModBlocks {
 		((BlockModSlab) elvenquartzslab).register();
 		((BlockModSlab) elvenquartzslabfull).register();
 		
+		registerTile(TileManaTinyPotato.class, LibBlockName.MANATINYPOTATO);
 		registerTile(TileAncientPylon.class, LibBlockName.ANCIENTPYLON);
 		registerTile(TileRelicPlate.class, LibBlockName.RELICPLATE);
 		
@@ -86,6 +91,7 @@ public class ModBlocks {
 	}
 	
 	private static void initTileEntities() {
+		registerSubTile(LibBlockName.ANNOYOBLOOM, SubTileAnnoyobloom.class);
 		registerSubTile(LibBlockName.LAUNCHISH, SubTileLaunchish.class);
 		registerSubTile(LibBlockName.INFERNOIDISY, SubTileInfernoidisy.class);
 		registerSubTile(LibBlockName.PYSCHOBLOOM, SubTilePyschobloom.class);

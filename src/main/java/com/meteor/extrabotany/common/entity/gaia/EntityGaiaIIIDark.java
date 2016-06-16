@@ -728,7 +728,7 @@ public class EntityGaiaIIIDark extends EntityCreature implements IBotaniaBossWit
 	
 		Botania.proxy.sparkleFX(this.worldObj, this.posX, this.posY, this.posZ, 2.11F, 0.29F, 0.29F, 2F + this.hurtTime * 3F * (this.getHealth()/this.getMaxHealth()) * Math.max(0, this.worldObj.rand.nextInt(4)- 2), 6);
 		
-		if(ticksExisted % 35 == 0){
+		if(ticksExisted % 35 == 0 && onGround){
 			spawnCyclone();
 		}
 	}

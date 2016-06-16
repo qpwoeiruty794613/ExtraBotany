@@ -18,7 +18,7 @@ import com.meteor.extrabotany.common.lib.LibItemName;
 
 public class SubTileArtifaconia extends SubTileFunctional{
 	
-	private static final int RANGE = 4;
+	private static final int RANGE = 2;
 
  	@Override
   	public LexiconEntry getEntry() {

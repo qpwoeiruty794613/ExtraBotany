@@ -25,7 +25,5 @@ public class ModEvents {
 	    FMLCommonHandler.instance().bus().register(new EventAchievement());
 	    MinecraftForge.EVENT_BUS.register(new EventMobDrop());
 	    FMLCommonHandler.instance().bus().register(new EventMobDrop());	
-	    MinecraftForge.EVENT_BUS.register(new EventUpdateReward());
-	    FMLCommonHandler.instance().bus().register(new EventUpdateReward());	
 	}
 }
