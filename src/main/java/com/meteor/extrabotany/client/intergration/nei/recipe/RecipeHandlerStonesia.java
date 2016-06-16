@@ -6,41 +6,47 @@ import java.util.Collection;
 import java.util.List;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockFire;
+import net.minecraft.init.Blocks;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.StatCollector;
 import net.minecraftforge.oredict.OreDictionary;
 
 import org.lwjgl.opengl.GL11;
 
+import vazkii.botania.client.core.handler.HUDHandler;
 import vazkii.botania.client.lib.LibResources;
+import vazkii.botania.common.block.tile.mana.TilePool;
 import vazkii.botania.common.item.block.ItemBlockSpecialFlower;
 import codechicken.lib.gui.GuiDraw;
-import codechicken.nei.NEIServerUtils;
 import codechicken.nei.PositionedStack;
 import codechicken.nei.recipe.TemplateRecipeHandler;
 
 import com.meteor.extrabotany.api.ExtraBotanyAPI;
-import com.meteor.extrabotany.api.extrabotany.recipe.RecipeInfernoidisy;
+import com.meteor.extrabotany.api.extrabotany.recipe.RecipeStonesia;
+import com.meteor.extrabotany.common.handler.ConfigHandler;
 import com.meteor.extrabotany.common.lib.LibBlockName;
+import com.meteor.extrabotany.common.lib.LibReference;
 
-public class RecipeHandlerInfernoidisy extends TemplateRecipeHandler {
+public class RecipeHandlerStonesia extends TemplateRecipeHandler {
 
-	public class CachedInfernoidisyRecipe extends CachedRecipe {
+	public class CachedStonesiaRecipe extends CachedRecipe {
 
 		public List<PositionedStack> inputs = new ArrayList<PositionedStack>();
 		public PositionedStack output;
-		public List<PositionedStack> otherStacks = new ArrayList<PositionedStack>();
+		public int manaOutput;
 
-		public CachedInfernoidisyRecipe(RecipeInfernoidisy recipe) {
+		public CachedStonesiaRecipe(RecipeStonesia recipe) {
 			if(recipe == null)
 				return;
-			inputs.add(new PositionedStack(ItemBlockSpecialFlower.ofType(LibBlockName.INFERNOIDISY), 71, 23));
+			inputs.add(new PositionedStack(ItemBlockSpecialFlower.ofType(LibBlockName.STONESIA), 71, 23));
 
 			if(recipe.getInput() instanceof String)
 				inputs.add(new PositionedStack(OreDictionary.getOres((String) recipe.getInput()), 42, 23));
 			else inputs.add(new PositionedStack(new ItemStack((Block) recipe.getInput()), 42, 23));
-
-			output = new PositionedStack(new ItemStack(recipe.getOutput()), 101, 23);
+			
+			manaOutput = recipe.getMana() * ConfigHandler.efficiencyStonesia;
 		}
 
 		@Override
@@ -51,11 +57,6 @@ public class RecipeHandlerInfernoidisy extends TemplateRecipeHandler {
 		@Override
 		public PositionedStack getResult() {
 			return output;
-		}
-
-		@Override
-		public List<PositionedStack> getOtherStacks() {
-			return otherStacks;
 		}
 
 		@Override
@@ -73,7 +74,7 @@ public class RecipeHandlerInfernoidisy extends TemplateRecipeHandler {
 
 	@Override
 	public String getRecipeName() {
-		return StatCollector.translateToLocal("extrabotany.nei.infernoidisy");
+		return StatCollector.translateToLocal("extrabotany.nei.stonesia");
 	}
 
 	@Override
@@ -88,7 +89,7 @@ public class RecipeHandlerInfernoidisy extends TemplateRecipeHandler {
 
 	@Override
 	public void loadTransferRects() {
-		transferRects.add(new RecipeTransferRect(new Rectangle(70, 22, 18, 18), "botania.infernoidisy"));
+		transferRects.add(new RecipeTransferRect(new Rectangle(70, 22, 18, 18), "botania.stonesia"));
 	}
 
 	@Override
@@ -96,40 +97,40 @@ public class RecipeHandlerInfernoidisy extends TemplateRecipeHandler {
 		super.drawBackground(recipe);
 		GL11.glEnable(GL11.GL_BLEND);
 		GL11.glColor4f(1.0F, 1.0F, 1.0F, 0.5F);
-		GuiDraw.changeTexture(LibResources.GUI_PURE_DAISY_OVERLAY);
+		GuiDraw.changeTexture(LibReference.GUI_RECIPE_OVERLAY);
 		GuiDraw.drawTexturedModalRect(45, 10, 0, 0, 65, 44);
+		HUDHandler.renderManaBar(32, 45, 0x0000FF, 0.75F, ((CachedStonesiaRecipe) arecipes.get(recipe)).manaOutput, TilePool.MAX_MANA / 10);
 	}
 
 	@Override
 	public void loadCraftingRecipes(String outputId, Object... results) {
-		if(outputId.equals("botania.infernoidisy")) {
-			for(RecipeInfernoidisy recipe : ExtraBotanyAPI.infernoidisyRecipes) {
+		if(outputId.equals("botania.stonesia")) {
+			for(RecipeStonesia recipe : ExtraBotanyAPI.stonesiaRecipes) {
 				if(recipe == null)
 					continue;
 
-				arecipes.add(new CachedInfernoidisyRecipe(recipe));
+				arecipes.add(new CachedStonesiaRecipe(recipe));
 			}
 		} else super.loadCraftingRecipes(outputId, results);
 	}
 
 	@Override
 	public void loadCraftingRecipes(ItemStack result) {
-		for(RecipeInfernoidisy recipe : ExtraBotanyAPI.infernoidisyRecipes) {
+		for(RecipeStonesia recipe : ExtraBotanyAPI.stonesiaRecipes) {
 			if(recipe == null)
 				continue;
 
-			if(NEIServerUtils.areStacksSameTypeCrafting(new ItemStack(recipe.getOutput()), result))
-				arecipes.add(new CachedInfernoidisyRecipe(recipe));
+			arecipes.add(new CachedStonesiaRecipe(recipe));
 		}
 	}
 
 	@Override
 	public void loadUsageRecipes(ItemStack ingredient) {
-		for(RecipeInfernoidisy recipe : ExtraBotanyAPI.infernoidisyRecipes) {
+		for(RecipeStonesia recipe : ExtraBotanyAPI.stonesiaRecipes) {
 			if(recipe == null)
 				continue;
 
-			CachedInfernoidisyRecipe crecipe = new CachedInfernoidisyRecipe(recipe);
+			CachedStonesiaRecipe crecipe = new CachedStonesiaRecipe(recipe);
 			if(crecipe.contains(crecipe.getIngredients(), ingredient) || crecipe.contains(crecipe.getOtherStacks(), ingredient))
 				arecipes.add(crecipe);
 		}
