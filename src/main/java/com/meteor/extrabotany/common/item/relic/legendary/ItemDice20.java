@@ -2,6 +2,7 @@ package com.meteor.extrabotany.common.item.relic.legendary;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
@@ -16,72 +17,73 @@ import com.meteor.extrabotany.common.lib.LibItemName;
 
 public class ItemDice20 extends ItemRelicAdv{
 	
-	public static ItemStack[] relicStacks;
-	
 	public ItemDice20() {
 		super(LibItemName.DICE20);
-		relicStacks = new ItemStack[] {
-				new ItemStack(ModItems.theseusship),//1
-				new ItemStack(ModItems.hermeswand),//2
-				new ItemStack(vazkii.botania.common.item.ModItems.infiniteFruit),//3
-				new ItemStack(ModItems.excaliberfake),//4
-				new ItemStack(vazkii.botania.common.item.ModItems.kingKey),//5
-				new ItemStack(ModItems.material,1,3),//6
-				new ItemStack(vazkii.botania.common.item.ModItems.flugelEye),//7
-				new ItemStack(vazkii.botania.common.item.ModItems.thorRing),//8
-				new ItemStack(vazkii.botania.common.item.ModItems.lokiRing),//9
-				new ItemStack(vazkii.botania.common.item.ModItems.odinRing),//10
-				new ItemStack(ModItems.athenabless),//11
-				new ItemStack(ModItems.hestiachastity),//12
-				new ItemStack(ModItems.maxwelldemon),//13
-				new ItemStack(ModItems.vrangerboots),//14
-				new ItemStack(ModItems.cronusphantom),//15
-				new ItemStack(ModItems.aphroditegrace),//16
-				new ItemStack(ModItems.hermestravelclothing),//17
-				new ItemStack(ModItems.cthulhueye),//18
-				new ItemStack(ModItems.lokighostrick),//19
-				new ItemStack(ModItems.material,1,3),//20
-
-		};
 	}
 
 	private static final int[] SIDES_FOR_MOON_PHASES = new int[] {
-		0, 1, 0, -1, 0, 1, 0, -1
+		1,2,3,4,0,-1,-2,-3
 	};
 	
 	@Override
 	public ItemStack onItemRightClick(ItemStack stack, World world, EntityPlayer player) {
 		if(isRightPlayer(player, stack) && !player.worldObj.isRemote) {
+			Random rand = new Random();
 			int moonPhase = world.provider.getMoonPhase(world.getWorldTime());
 			int side = SIDES_FOR_MOON_PHASES[moonPhase];
-			int relic = side;
-				List<Integer> possible = new ArrayList();
-
-				for(int i = 0; i < 20; i++)
-					possible.add(world.rand.nextInt(20));
+			int r = (int) (rand.nextInt(10) + world.rand.nextInt(11) + side - Math.min(player.motionX + player.motionY + player.motionZ, 3) - (player.onGround ? 1:0) + (player.isBurning() ? 1:0));
+			int relic = Math.min(Math.max(r, 0), 19);
 			
-					relic = possible.get(world.rand.nextInt(possible.size()));
 					world.playSoundAtEntity(player, "random.bow", 0.5F, 0.4F / (world.rand.nextFloat() * 0.4F + 0.8F));
-			
-			if(relic == 5 || relic == 19) {
-				player.addChatMessage(new ChatComponentTranslation("botaniamisc.uselessDiceRoll", relic + 1).setChatStyle(new ChatStyle().setColor(EnumChatFormatting.DARK_GREEN)));
-				return relicStacks[relic].copy();
-			}else if(relic == 11){
-				player.addChatMessage(new ChatComponentTranslation("botaniamisc.diceRoll", relic + 1).setChatStyle(new ChatStyle().setColor(EnumChatFormatting.DARK_GREEN)));
-				return new ItemStack(ModItems.hestiachastity);
-			}else if(relic == 15){
-				player.addChatMessage(new ChatComponentTranslation("botaniamisc.diceRoll", relic + 1).setChatStyle(new ChatStyle().setColor(EnumChatFormatting.DARK_GREEN)));
-				return new ItemStack(ModItems.aphroditegrace);
-			} else if(relic == 16){
-				player.addChatMessage(new ChatComponentTranslation("botaniamisc.diceRoll", relic + 1).setChatStyle(new ChatStyle().setColor(EnumChatFormatting.DARK_GREEN)));
-				return new ItemStack(ModItems.hermestravelclothing);
-			} 
-			else
-			{	
-				player.addChatMessage(new ChatComponentTranslation("botaniamisc.diceRoll", relic + 1).setChatStyle(new ChatStyle().setColor(EnumChatFormatting.DARK_GREEN)));
-				return relicStacks[relic].copy();
+					
+					if(relic == 5 || relic == 19) 
+						player.addChatMessage(new ChatComponentTranslation("botaniamisc.uselessDiceRoll", relic + 1).setChatStyle(new ChatStyle().setColor(EnumChatFormatting.DARK_GREEN)));
+					else player.addChatMessage(new ChatComponentTranslation("botaniamisc.diceRoll", relic + 1).setChatStyle(new ChatStyle().setColor(EnumChatFormatting.DARK_GREEN)));
+					
+					switch(relic){
+						case 0 :
+							return new ItemStack(ModItems.theseusship);
+						case 1:
+							return new ItemStack(ModItems.hermeswand);
+						case 2:
+							return new ItemStack(vazkii.botania.common.item.ModItems.infiniteFruit);
+						case 3:
+							return new ItemStack(ModItems.excaliberfake);
+						case 4:
+							return new ItemStack(vazkii.botania.common.item.ModItems.kingKey);
+						case 5:
+							return new ItemStack(ModItems.material,1,3);
+						case 6:
+							return new ItemStack(vazkii.botania.common.item.ModItems.flugelEye);
+						case 7:
+							return new ItemStack(vazkii.botania.common.item.ModItems.thorRing);
+						case 8:
+							return new ItemStack(vazkii.botania.common.item.ModItems.lokiRing);
+						case 9:
+							return new ItemStack(vazkii.botania.common.item.ModItems.odinRing);
+						case 10:
+							return new ItemStack(ModItems.athenabless);
+						case 11:
+							return new ItemStack(ModItems.hestiachastity);
+						case 12:
+							return new ItemStack(ModItems.maxwelldemon);
+						case 13:
+							return new ItemStack(ModItems.vrangerboots);
+						case 14:
+							return new ItemStack(ModItems.cronusphantom);
+						case 15:
+							return new ItemStack(ModItems.aphroditegrace);
+						case 16:
+							return new ItemStack(ModItems.hermestravelclothing);
+						case 17:
+							return new ItemStack(ModItems.cthulhueye);
+						case 18:
+							return new ItemStack(ModItems.lokighostrick);
+						case 19:
+							return new ItemStack(ModItems.material,1,3);
+					}
+					
 			}
-		}
 
 		return stack;
 	}

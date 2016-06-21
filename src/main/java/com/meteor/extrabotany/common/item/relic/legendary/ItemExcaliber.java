@@ -37,7 +37,10 @@ import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
 import com.meteor.extrabotany.common.entity.EntityItemUnbreakable;
 import com.meteor.extrabotany.common.lib.LibItemName;
+import com.meteor.extrabotany.common.lib.LibReference;
 import com.meteor.extrabotany.common.util.EnchHelper;
+
+import cpw.mods.fml.common.registry.GameRegistry;
 
 public class ItemExcaliber extends ItemManasteelSword implements IRelic, ILensEffect, IManaUsingItem {
 	//copied

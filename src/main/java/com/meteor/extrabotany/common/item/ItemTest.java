@@ -55,7 +55,7 @@ public class ItemTest extends ItemMods{
 			((EntityMob)target).setCurrentItemOrArmor(0, null);
 			((EntityMob)target).setAttackTarget(player);
 		}
-		target.attackEntityFrom(DamageSource.magic, 999F);
+		target.setHealth(1F);
         return true;
     }
 	

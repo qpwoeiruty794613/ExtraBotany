@@ -35,8 +35,6 @@ public class ModEntities {
 		EntityRegistry.registerModEntity(EntityGaiaIII.class, LibEntityName.GAIAIII, id++, ExtraBotany.instance, 256, 3, true);
 		EntityRegistry.registerModEntity(EntityGaiaIIIDark.class, LibEntityName.GAIAIIIDARK, id++, ExtraBotany.instance, 256, 3, true);
 		EntityRegistry.registerModEntity(EntityGaiaIIIPhantom.class, LibEntityName.GAIAIIIPHANTOM, id++, ExtraBotany.instance, 256, 3, true);
-		EntityRegistry.registerModEntity(EntityTV.class, LibEntityName.TV, id++, ExtraBotany.instance, 256, 3, true);
-		EntityRegistry.registerModEntity(Entity22.class, LibEntityName.BILIBILI, id++, ExtraBotany.instance, 256, 3, true);
 		
 		EntityRegistry.registerModEntity(EntityElven.class, "magicelven", id++, ExtraBotany.instance, 256, 3, true);
 		
@@ -59,5 +57,7 @@ public class ModEntities {
 		EntityRegistry.addSpawn(EntityLycorisradiataRed.class, 10, 1, 2, EnumCreatureType.monster, BiomeGenBase.forest);
 		EntityRegistry.addSpawn(EntityLycorisradiataGreen.class, 10, 1, 2, EnumCreatureType.monster, BiomeGenBase.plains);
 		EntityRegistry.addSpawn(EntityLycorisradiataPurple.class, 10, 1, 2, EnumCreatureType.monster, BiomeGenBase.desert);
+		
+		EntityRegistry.registerModEntity(EntityGaiaQuickened.class, "gaiaquickened", id++, ExtraBotany.instance, 256, 3, true);
 	}
 }
