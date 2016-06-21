@@ -11,6 +11,11 @@ public class SubTileLaunchish extends SubTileFunctional{
 	private static final int RANGE = 0;
 	
 	@Override
+	public int getColor() {
+		return 0x22BF27;
+	}
+	
+	@Override
 	public void onUpdate(){
 		super.onUpdate();
 		

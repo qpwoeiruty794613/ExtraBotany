@@ -13,6 +13,7 @@ import com.meteor.extrabotany.common.block.decor.BlockGaiaQuartzSlab;
 import com.meteor.extrabotany.common.block.decor.BlockGaiaQuartzStairs;
 import com.meteor.extrabotany.common.block.subtile.SubTileInfernoidisy;
 import com.meteor.extrabotany.common.block.subtile.SubTileJudasvow;
+import com.meteor.extrabotany.common.block.subtile.SubTileManalinkuim;
 import com.meteor.extrabotany.common.block.subtile.functional.SubTileAnnoyobloom;
 import com.meteor.extrabotany.common.block.subtile.functional.SubTileArtifaconia;
 import com.meteor.extrabotany.common.block.subtile.functional.SubTileDiplopbamboo;
@@ -33,6 +34,7 @@ import com.meteor.extrabotany.common.block.subtile.generating.SubTilePyschobloom
 import com.meteor.extrabotany.common.block.subtile.generating.SubTileStonesia;
 import com.meteor.extrabotany.common.block.subtile.generating.SubTileSunshinelily;
 import com.meteor.extrabotany.common.block.tile.TileAncientPylon;
+import com.meteor.extrabotany.common.block.tile.TileGaiaChest;
 import com.meteor.extrabotany.common.block.tile.TileManaTinyPotato;
 import com.meteor.extrabotany.common.block.tile.TileRelicPlate;
 import com.meteor.extrabotany.common.lib.LibBlockName;
@@ -59,6 +61,8 @@ public class ModBlocks {
 	public static Block pylon;
 	public static Block manatinypotato;
 	
+	public static Block gaiachest;
+	
 	public static void init() {
 		pylon = new BlockAncientPylon(Material.iron);
 		manatinypotato = new BlockManaTinyPotato();
@@ -78,11 +82,14 @@ public class ModBlocks {
 		elvenquartzslabfull = new BlockElvenQuartzSlab(true);
 		elvenquartzstairs = new BlockElvenQuartzStairs();
 		
+		gaiachest = new BlockGaiaChest(-1);
+		
 		((BlockModSlab) gaiaquartzslab).register();
 		((BlockModSlab) gaiaquartzslabfull).register();
 		((BlockModSlab) elvenquartzslab).register();
 		((BlockModSlab) elvenquartzslabfull).register();
 		
+		registerTile(TileGaiaChest.class, "gaiachest");
 		registerTile(TileManaTinyPotato.class, LibBlockName.MANATINYPOTATO);
 		registerTile(TileAncientPylon.class, LibBlockName.ANCIENTPYLON);
 		registerTile(TileRelicPlate.class, LibBlockName.RELICPLATE);
@@ -91,6 +98,7 @@ public class ModBlocks {
 	}
 	
 	private static void initTileEntities() {
+		registerSubTile(LibBlockName.MANALINKUIM, SubTileManalinkuim.class);
 		registerSubTile(LibBlockName.ANNOYOBLOOM, SubTileAnnoyobloom.class);
 		registerSubTile(LibBlockName.LAUNCHISH, SubTileLaunchish.class);
 		registerSubTile(LibBlockName.INFERNOIDISY, SubTileInfernoidisy.class);

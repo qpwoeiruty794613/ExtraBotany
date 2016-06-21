@@ -11,7 +11,8 @@ import vazkii.botania.common.item.block.ItemBlockSpecialFlower;
 import com.meteor.extrabotany.ExtraBotany;
 import com.meteor.extrabotany.common.lib.LibBlockName;
 
-public class BlockSpecial extends BlockSpecialFlower {
+public class BlockSpecial extends BlockSpecialFlower{
+
 	static {
 		ExtraBotany.subtilesForCreativeMenu.addAll(Arrays.asList(new String[] {			
 			// Generating
@@ -37,6 +38,7 @@ public class BlockSpecial extends BlockSpecialFlower {
 			LibBlockName.INFERNOIDISY,
 			LibBlockName.LAUNCHISH,
 			LibBlockName.ANNOYOBLOOM,
+			LibBlockName.MANALINKUIM,
 		}));
 	}	
 		
@@ -46,4 +48,5 @@ public class BlockSpecial extends BlockSpecialFlower {
 			par3List.add(ItemBlockSpecialFlower.ofType(s));
 		}
 	}
+
 }
