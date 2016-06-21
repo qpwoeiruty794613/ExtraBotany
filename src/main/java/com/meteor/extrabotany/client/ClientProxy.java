@@ -4,11 +4,13 @@ import net.minecraft.client.renderer.entity.RenderItem;
 import net.minecraft.client.renderer.entity.RenderSnowball;
 import net.minecraft.init.Items;
 import net.minecraftforge.common.MinecraftForge;
+import vazkii.botania.client.render.tile.RenderTileTinyPotato;
 
 import com.meteor.extrabotany.client.gui.GuiDrop;
 import com.meteor.extrabotany.client.render.RenderShield;
 import com.meteor.extrabotany.client.render.block.RenderAncientPylon;
-import com.meteor.extrabotany.client.render.block.RenderGaiaChest;
+import com.meteor.extrabotany.client.render.block.RenderManaTinyPotato;
+import com.meteor.extrabotany.client.render.entity.Render22;
 import com.meteor.extrabotany.client.render.entity.RenderGaiaIII;
 import com.meteor.extrabotany.client.render.entity.RenderGaiaIIIDark;
 import com.meteor.extrabotany.client.render.entity.RenderGaiaIIIPhantom;
@@ -16,19 +18,21 @@ import com.meteor.extrabotany.client.render.entity.RenderLycorisradiataGreen;
 import com.meteor.extrabotany.client.render.entity.RenderLycorisradiataPurple;
 import com.meteor.extrabotany.client.render.entity.RenderLycorisradiataRed;
 import com.meteor.extrabotany.client.render.entity.RenderSpear;
+import com.meteor.extrabotany.client.render.entity.RenderTV;
 import com.meteor.extrabotany.client.render.entity.RenderTeleportPearl;
 import com.meteor.extrabotany.client.render.tile.RenderTileAncientPylon;
-import com.meteor.extrabotany.client.render.tile.RenderTileGaiaChest;
 import com.meteor.extrabotany.client.render.tile.RenderTileRelicPlate;
 import com.meteor.extrabotany.common.CommonProxy;
 import com.meteor.extrabotany.common.block.tile.TileAncientPylon;
-import com.meteor.extrabotany.common.block.tile.TileGaiaChest;
+import com.meteor.extrabotany.common.block.tile.TileManaTinyPotato;
 import com.meteor.extrabotany.common.block.tile.TileRelicPlate;
+import com.meteor.extrabotany.common.entity.Entity22;
 import com.meteor.extrabotany.common.entity.EntityItemUnbreakable;
 import com.meteor.extrabotany.common.entity.EntityLycorisradiataGreen;
 import com.meteor.extrabotany.common.entity.EntityLycorisradiataPurple;
 import com.meteor.extrabotany.common.entity.EntityLycorisradiataRed;
 import com.meteor.extrabotany.common.entity.EntitySpear;
+import com.meteor.extrabotany.common.entity.EntityTV;
 import com.meteor.extrabotany.common.entity.EntityTeleportPearl;
 import com.meteor.extrabotany.common.entity.bullet.EntityBulletExploding;
 import com.meteor.extrabotany.common.entity.bullet.EntityBulletGold;
@@ -83,6 +87,8 @@ public class ClientProxy extends CommonProxy{
 		RenderingRegistry.registerEntityRenderingHandler(EntityGaiaIIIPhantom.class, new RenderGaiaIIIPhantom());
 		RenderingRegistry.registerEntityRenderingHandler(EntityGaiaIIIDark.class, new RenderGaiaIIIDark());
 		RenderingRegistry.registerEntityRenderingHandler(EntityGaiaIII.class, new RenderGaiaIII());
+		RenderingRegistry.registerEntityRenderingHandler(Entity22.class, new Render22());
+		RenderingRegistry.registerEntityRenderingHandler(EntityTV.class, new RenderTV());
 		RenderingRegistry.registerEntityRenderingHandler(EntitySpear.class, new RenderSpear());
 		RenderingRegistry.registerEntityRenderingHandler(EntityBulletSnowball.class, new RenderSnowball(Items.snowball));
 		RenderingRegistry.registerEntityRenderingHandler(EntityLycorisradiataRed.class, new RenderLycorisradiataRed());
@@ -100,9 +106,7 @@ public class ClientProxy extends CommonProxy{
 	    }
 	    
 	    RenderingRegistry.registerBlockHandler(new RenderAncientPylon());
-	    RenderingRegistry.registerBlockHandler(new RenderGaiaChest());
 	    
-	    ClientRegistry.bindTileEntitySpecialRenderer(TileGaiaChest.class, new RenderTileGaiaChest());
 		ClientRegistry.bindTileEntitySpecialRenderer(TileRelicPlate.class, new RenderTileRelicPlate());
 		ClientRegistry.bindTileEntitySpecialRenderer(TileAncientPylon.class, new RenderTileAncientPylon());
 	}
