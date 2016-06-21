@@ -67,6 +67,7 @@ tile.botania:blockgaiaquartz0Slab.name=Gaia Quartz Slab
 tile.botania:ancientpylon0.name=Ancients' Mana Pylon
 tile.botania:ancientpylon1.name=Ancients' Nature Pylon
 tile.botania:ancientpylon2.name=Ancients' Gaia Pylon
+tile.gaiachest.name=Gaia's Chest
 
 #ITEMS
 # -ARMORSET
@@ -108,6 +109,7 @@ item.ExtraBotany.SpawnCardLycorisdiataRandom.name=Cards of Random Lycorisdiata
 item.ExtraBotany.SpawnLycorisRandom.desc=Spawn a Random Lycorisdiata
 
 # -ADVANCED
+item.coronaclaymore.name=Corona Claymore
 item.angelwand.name=Angel Wand
 item.manapotato.name=Mana Potato
 item.botania:gaiaTablet.name=Gaia Tablet
@@ -312,8 +314,8 @@ botania.page.icebirdium1=The day after tomorrow.
 
 # --NUMERONBALSAM
 botania.entry.numeronbalsam=Numeron Balsam
-botania.page.numeronbalsam0=
-botania.page.numeronbalsam1=
+botania.page.numeronbalsam0=A Flower burning like a flame. &1Numeron Balsam&0 can flame close-by entities by using mana currents. But for players, it will give them fire protection buffs and clean debuffs which affect them.
+botania.page.numeronbalsam1=後悔なんて、あるわけない
 
 # --JUDASVOW
 botania.entry.judasvow=Judas' Vow
@@ -327,33 +329,38 @@ botania.page.volatilily1=You can't judge a book by its cover.
 
 # --DIPLOPBAMBOO
 botania.entry.diplopbamboo=Diplop Bamboo
-botania.page.diplopbamboo0=
-botania.page.diplopbamboo1=
+botania.page.diplopbamboo0=Just a secret.
+botania.page.diplopbamboo1=もう谁にも頼らない
 
 # --INFERNOIDISY
 botania.entry.infernoidisy=Infernoidisy
-botania.page.infernoidisy0=
-botania.page.infernoidisy1=
+botania.page.infernoidisy0=&1Infernoidisy&0 is exactly different from &1Pure Daisy&0. For example, a &1Pure Daisy&0 can turn a nether rack into a cobblestone, but a &1Infernoidisy&0 can turn a cobblestone into a nether rack.
+botania.page.infernoidisy1=流る血潮
 
 # --LAUNCHISH
 botania.entry.launchish=Launchish
-botania.page.launchish0=
-botania.page.launchish1=
+botania.page.launchish0=&1Launchish&0 can use mana to fire entities above into the sky. This flower seems not to have another ability.
+botania.page.launchish1=Fire in the hole.
 
 # --ANNOYOBLOOM
 botania.entry.annoyobloom=Annoy-O-Bloom
-botania.page.annoyobloom0=
-botania.page.annoyobloom1=
+botania.page.annoyobloom0=&1Annoy-O-Bloom&0 can create firework rockets with mana currents and then launch them, so just look forword to the fireworks cover all the sky!(PS:Remember not to disturb your neighbours.)
+botania.page.annoyobloom1=Move or die!
 
 # --VOIDUIM
 botania.entry.voiduim=Voiduim
 botania.page.voiduim0=
-botania.page.voiduim1=
+botania.page.voiduim1=Re:Life in a different world from zero
 
 # --ARTIFACONIA
 botania.entry.artifaconia=Artifaconia
 botania.page.artifaconia0=
-botania.page.artifaconia1=
+botania.page.artifaconia1=こんなの绝対おかしいよ
+
+# --MANALINKUIM
+botania.entry.manalinkuim=Manalinkuim
+botania.page.manalinkuim0=
+botania.page.manalinkuim1=集う光.
 
 # -OTHERS
 # --INFINITYMANA
@@ -563,6 +570,10 @@ tile.botania:flower.annoyobloom.name=Annoy-O-Bloom
 tile.botania:flower.annoyobloom.reference=
 botania.tagline.annoyobloom=
 
+tile.botania:flower.manalinkuim.name=Manalinkuim
+tile.botania:flower.manalinkuim.reference=
+botania.tagline.manalinkuim=
+
 #ACHIEVEMENTS
 # -RELICS
 achievement.extrabotany:aphroditegrace=Love & Peace
@@ -599,6 +610,21 @@ achievement.extrabotany:olympusguard=
 achievement.extrabotany:olympusguard.desc=Get Guard of Olympus
 achievement.extrabotany:cthulhueye=
 achievement.extrabotany:cthulhueye.desc=Be rewarded Eye of Cthulhu for a heroic feat
+achievement.extrabotany:hermeswand=
+achievement.extrabotany:hermeswand.desc=
+achievement.extrabotany:theseusship=
+achievement.extrabotany:theseusship.desc=
+achievement.extrabotany:valkyriecombatuniform=
+achievement.extrabotany:valkyriecombatuniform.desc=
+achievement.extrabotany:coronaclaymore=
+achievement.extrabotany:coronaclaymore.desc=
+achievement.extrabotany:eternalslience=
+achievement.extrabotany:eternalslience.desc=
+achievement.extrabotany:lokighostrick=
+achievement.extrabotany:lokighostrick.desc=
+achievement.extrabotany:angelwand=
+achievement.extrabotany:angelwand.desc=
+
 
 # -GAIA
 achievement.extrabotany:gaia_kill=
@@ -609,6 +635,56 @@ achievement.extrabotany:gaia_dark=
 achievement.extrabotany:gaia_dark.desc=Defeat Dark Gaia Guardian III!
 achievement.extrabotany:gaia_darknoarmor=
 achievement.extrabotany:gaia_darknoarmor.desc=Slay Dark Gaia Guardian III without wearing any armor at any point during the fight
+
+# -FLOWERS
+achievement.extrabotany:annoybloom=
+achievement.extrabotany:annoybloom.desc=
+achievement.extrabotany:artifaconia=
+achievement.extrabotany:artifaconia.desc=
+achievement.extrabotany:diplopbamboo=
+achievement.extrabotany:diplopbamboo.desc=
+achievement.extrabotany:icebirdium=
+achievement.extrabotany:icebirdium.desc=
+achievement.extrabotany:launchish=
+achievement.extrabotany:launchish.desc=
+achievement.extrabotany:necrofleur=
+achievement.extrabotany:necrofleur.desc=
+achievement.extrabotany:numeronbalsam=
+achievement.extrabotany:numeronbalsam.desc=
+achievement.extrabotany:numerondandelife=
+achievement.extrabotany:numerondandelife.desc=
+achievement.extrabotany:voiduim=
+achievement.extrabotany:voiduim.desc=
+achievement.extrabotany:volatilily=
+achievement.extrabotany:volatilily.desc=
+achievement.extrabotany:woodienia=
+achievement.extrabotany:woodienia.desc=
+achievement.extrabotany:blueenchantress=
+achievement.extrabotany:blueenchantress.desc=
+achievement.extrabotany:candyflower=
+achievement.extrabotany:candyflower.desc=
+achievement.extrabotany:geminiorchid=
+achievement.extrabotany:geminiorchid.desc=
+achievement.extrabotany:moonlightlily=
+achievement.extrabotany:moonlightlily.desc=
+achievement.extrabotany:omniviolet=
+achievement.extrabotany:ominiviolet.desc=
+achievement.extrabotany:pyschobloom=
+achievement.extrabotany:pyschobloom.desc=
+achievement.extrabotany:stonesia=
+achievement.extrabotany:stonesia.desc=
+achievement.extrabotany:sunshinelily=
+achievement.extrabotany:sunshinelily.desc=
+achievement.extrabotany:infernoidisy=
+achievement.extrabotany:infernoidisy.desc=
+achievement.extrabotany:judasvow=
+achievement.extrabotany:judasvow.desc=
+achievement.extrabotany:manalinkuim=
+achievement.extrabotany:manalinkuim.desc=
+
+# -OTHERS
+achievement.extrabotany:blankcard=
+achievement.extrabotany:blankcard.desc=
 
 #ENCHANTMENT
 enchantment.gaiablessing=Gaia's Blessing
@@ -642,3 +718,4 @@ config.ExtraBotany.potion.desc=ID of potion.
 
 #NEI SUPPORT
 extrabotany.nei.infernoidisy=Infernoidisy
+extrabotany.nei.stonesia=Stonesia

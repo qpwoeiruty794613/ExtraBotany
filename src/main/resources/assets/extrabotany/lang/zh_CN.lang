@@ -68,6 +68,7 @@ tile.botania:blockgaiaquartz0Slab.name=盖亚石英台阶
 tile.botania:ancientpylon0.name=远古种族的魔力水晶
 tile.botania:ancientpylon1.name=远古种族的自然水晶
 tile.botania:ancientpylon2.name=远古种族的盖亚水晶
+tile.gaiachest.name=盖亚的宝箱
 
 #ITEMS
 # -ARMORSET
@@ -109,6 +110,7 @@ item.ExtraBotany.SpawnCardLycorisdiataRandom.name=随机彼岸花之卡
 item.ExtraBotany.SpawnLycorisRandom.desc=随机生成一朵彼岸花
 
 # -ADVANCED
+item.coronaclaymore.name=日冕重剑
 item.angelwand.name=天使魔杖
 item.manapotato.name=魔力土豆
 item.botania:gaiaTablet.name=盖亚石板
@@ -313,8 +315,8 @@ botania.page.icebirdium1=后天.
 
 # --NUMERONBALSAM
 botania.entry.numeronbalsam=源凤仙
-botania.page.numeronbalsam0=
-botania.page.numeronbalsam1=
+botania.page.numeronbalsam0=如火般燃烧的花朵.&1源凤仙&0 可以通过魔力流灼烧其周围 的生, 而对于玩家则会给 予防火效果并清除他们的负 面状态.
+botania.page.numeronbalsam1=怎么可能会后悔.
 
 # --JUDASVOW
 botania.entry.judasvow=犹大的誓约
@@ -328,33 +330,38 @@ botania.page.volatilily1=你不能以貌取人.
 
 # --DIPLOPBAMBOO
 botania.entry.diplopbamboo=复视笋
-botania.page.diplopbamboo0=
-botania.page.diplopbamboo1=
+botania.page.diplopbamboo0=仅仅只是一个秘密.
+botania.page.diplopbamboo1=不会再依靠任何人.
+
+# --INFERNOIDISY
+botania.entry.infernoidisy=狱火菊
+botania.page.infernoidisy0=&1狱火菊&0的能力与&1白雏菊&0恰恰 相反.举个例子,&1白雏菊&0能 够将地狱岩转化为圆石,而 &1狱火菊&0则能把圆石转化为地 狱岩.
+botania.page.infernoidisy1=奔流的热血.
+
+# --LAUNCHISH
+botania.entry.launchish=弹射草
+botania.page.launchish0=&1弹射草&0可以利用魔力将上方 的生物向上发射出去.这朵 花似乎没有其他的作用了.
+botania.page.launchish1=Fire in the hole.
+
+# --ANNOYOBLOOM
+botania.entry.annoyobloom=吵吵花
+botania.page.annoyobloom0=&1吵吵花&0可以运用魔力流来制 造出烟花火箭并将它们发射 出去,期待着漫天的烟花吧 !(PS:注意别吵到邻居.)
+botania.page.annoyobloom1=移动或死亡!
 
 # --VOIDUIM
 botania.entry.voiduim=虚空花
 botania.page.voiduim0=
-botania.page.voiduim1=
+botania.page.voiduim1=Re:从零开始的异世界生活.
 
 # --ARTIFACONIA
 botania.entry.artifaconia=古遗莲
 botania.page.artifaconia0=
-botania.page.artifaconia1=
+botania.page.artifaconia1=这种事绝对很奇怪啊.
 
-# --INFERNOIDISY
-botania.entry.infernoidisy=狱火菊
-botania.page.infernoidisy0=
-botania.page.infernoidisy1=
-
-# --LAUNCHISH
-botania.entry.launchish=弹射草
-botania.page.launchish0=
-botania.page.launchish1=
-
-# --ANNOYOBLOOM
-botania.entry.annoyobloom=吵吵花
-botania.page.annoyobloom0=
-botania.page.annoyobloom1=
+# --MANALINKUIM
+botania.entry.manalinkuim=魔链花
+botania.page.manalinkuim0=
+botania.page.manalinkuim1=汇集的光芒.
 
 # -OTHERS
 # --INFINITYMANA
@@ -500,7 +507,7 @@ tile.botania:flower.omniviolet.reference=Need not to know
 botania.tagline.ominiviolet=普罗维登斯之眼
 
 tile.botania:flower.geminiorchid.name=双子兰
-tile.botania:flower.geminiorchid.reference=Another...?
+tile.botania:flower.geminiorchid.reference=Another
 botania.tagline.geminiorchid=
 
 tile.botania:flower.pyschobloom.name=闹闹花
@@ -564,6 +571,10 @@ tile.botania:flower.annoyobloom.name=吵吵花
 tile.botania:flower.annoyobloom.reference=
 botania.tagline.annoyobloom=
 
+tile.botania:flower.manalinkuim.name=魔链花
+tile.botania:flower.manalinkuim.reference=
+botania.tagline.manalinkuim=
+
 #ACHIEVEMENTS
 # -RELICS
 achievement.extrabotany:aphroditegrace=Love & Peace
@@ -600,6 +611,20 @@ achievement.extrabotany:olympusguard=
 achievement.extrabotany:olympusguard.desc=获得奥斯匹林的戍卫
 achievement.extrabotany:cthulhueye=
 achievement.extrabotany:cthulhueye.desc=获得战利品:克苏鲁之眼
+achievement.extrabotany:hermeswand=
+achievement.extrabotany:hermeswand.desc=
+achievement.extrabotany:theseusship=
+achievement.extrabotany:theseusship.desc=
+achievement.extrabotany:valkyriecombatuniform=
+achievement.extrabotany:valkyriecombatuniform.desc=
+achievement.extrabotany:coronaclaymore=
+achievement.extrabotany:coronaclaymore.desc=
+achievement.extrabotany:eternalslience=
+achievement.extrabotany:eternalslience.desc=
+achievement.extrabotany:lokighostrick=
+achievement.extrabotany:lokighostrick.desc=
+achievement.extrabotany:angelwand=
+achievement.extrabotany:angelwand.desc=
 
 # -GAIA
 achievement.extrabotany:gaia_kill=
@@ -610,6 +635,56 @@ achievement.extrabotany:gaia_dark=
 achievement.extrabotany:gaia_dark.desc=击败黑暗盖亚守护者III!
 achievement.extrabotany:gaia_darknoarmor=
 achievement.extrabotany:gaia_darknoarmor.desc=战斗从头至尾不穿任何护甲击杀黑暗盖亚守护者III
+
+# -FLOWERS
+achievement.extrabotany:annoybloom=
+achievement.extrabotany:annoybloom.desc=
+achievement.extrabotany:artifaconia=
+achievement.extrabotany:artifaconia.desc=
+achievement.extrabotany:diplopbamboo=
+achievement.extrabotany:diplopbamboo.desc=
+achievement.extrabotany:icebirdium=
+achievement.extrabotany:icebirdium.desc=
+achievement.extrabotany:launchish=
+achievement.extrabotany:launchish.desc=
+achievement.extrabotany:necrofleur=
+achievement.extrabotany:necrofleur.desc=
+achievement.extrabotany:numeronbalsam=
+achievement.extrabotany:numeronbalsam.desc=
+achievement.extrabotany:numerondandelife=
+achievement.extrabotany:numerondandelife.desc=
+achievement.extrabotany:voiduim=
+achievement.extrabotany:voiduim.desc=
+achievement.extrabotany:volatilily=
+achievement.extrabotany:volatilily.desc=
+achievement.extrabotany:woodienia=
+achievement.extrabotany:woodienia.desc=
+achievement.extrabotany:blueenchantress=
+achievement.extrabotany:blueenchantress.desc=
+achievement.extrabotany:candyflower=
+achievement.extrabotany:candyflower.desc=
+achievement.extrabotany:geminiorchid=
+achievement.extrabotany:geminiorchid.desc=
+achievement.extrabotany:moonlightlily=
+achievement.extrabotany:moonlightlily.desc=
+achievement.extrabotany:omniviolet=
+achievement.extrabotany:ominiviolet.desc=
+achievement.extrabotany:pyschobloom=
+achievement.extrabotany:pyschobloom.desc=
+achievement.extrabotany:stonesia=
+achievement.extrabotany:stonesia.desc=
+achievement.extrabotany:sunshinelily=
+achievement.extrabotany:sunshinelily.desc=
+achievement.extrabotany:infernoidisy=
+achievement.extrabotany:infernoidisy.desc=
+achievement.extrabotany:judasvow=
+achievement.extrabotany:judasvow.desc=
+achievement.extrabotany:manalinkuim=
+achievement.extrabotany:manalinkuim.desc=
+
+# -OTHERS
+achievement.extrabotany:blankcard=
+achievement.extrabotany:blankcard.desc=
 
 #ENCHANTMENT
 enchantment.gaiablessing=盖亚祝福
@@ -643,3 +718,4 @@ config.ExtraBotany.potion.desc=药水ID.
 
 #NEI SUPPORT
 extrabotany.nei.infernoidisy=狱火菊
+extrabotany.nei.stonesia=石中姬
