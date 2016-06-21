@@ -79,6 +79,7 @@ public class ModItems {
 	
 	public static Item gaiawise;
 	public static Item angelwand;
+	public static Item heliacalclaymore;
 	
 	public static Item itemtest;
 	public static Item material;
@@ -124,6 +125,7 @@ public class ModItems {
 		material = new ItemMaterial(LibItemName.MATERIAL);
 		bullet = new ItemBullet(LibItemName.BULLET);
 				
+		heliacalclaymore = new ItemHeliacalClaymore();
 		dog = new ItemBaubleDog();
 		gaiawise = new ItemGaiaWise(LibItemName.GAIAWISE);
 		angelwand = new ItemAngelWand(LibItemName.ANGELWAND);

@@ -22,6 +22,11 @@ public class SubTilePyschobloom extends SubTileGenerating{
 	}
 	
 	@Override
+	public int getColor() {
+		return 0xF54DAF;
+	}
+	
+	@Override
 	public void onUpdate() {
 		super.onUpdate();
 		List<EntityLivingBase> livings = supertile.getWorldObj().getEntitiesWithinAABB(EntityLivingBase.class, AxisAlignedBB.getBoundingBox(supertile.xCoord - RANGE, supertile.yCoord - RANGE, supertile.zCoord - RANGE, supertile.xCoord + RANGE + 1, supertile.yCoord + RANGE + 1, supertile.zCoord + RANGE + 1));

@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
+import java.util.Random;
 import java.util.regex.Pattern;
 
 import net.minecraft.block.Block;
@@ -24,6 +25,7 @@ import net.minecraft.entity.monster.EntitySkeleton;
 import net.minecraft.entity.monster.EntityWitch;
 import net.minecraft.entity.monster.EntityZombie;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemRecord;
@@ -31,6 +33,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
+import net.minecraft.tileentity.TileEntityChest;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.ChatComponentTranslation;
 import net.minecraft.util.ChatStyle;
@@ -61,6 +64,9 @@ import vazkii.botania.common.lib.LibObfuscation;
 
 import com.meteor.extrabotany.ExtraBotany;
 import com.meteor.extrabotany.common.achievement.ModAchievement;
+import com.meteor.extrabotany.common.block.ModBlocks;
+import com.meteor.extrabotany.common.block.tile.TileGaiaChest;
+import com.meteor.extrabotany.common.entity.EntityGaiaQuickened;
 import com.meteor.extrabotany.common.lib.LibItemName;
 import com.meteor.extrabotany.common.lib.LibReference;
 
@@ -354,7 +360,9 @@ public class EntityGaiaIIIDark extends EntityCreature implements IBotaniaBossWit
 			if(!anyWithArmor)
 				((EntityPlayer) entitylivingbase).addStat(ModAchievement.Gaia_gaia3DarkNoArmor, 1);
 		}
-
+		for(int pl = 0; pl < playersWhoAttacked.size(); pl++) {
+			generate(worldObj, worldObj.rand, getSource().posX, getSource().posY+1+pl, getSource().posZ, pl);
+		}
 		worldObj.playSoundAtEntity(this, "random.explode", 20F, (1F + (worldObj.rand.nextFloat() - worldObj.rand.nextFloat()) * 0.2F) * 0.7F);
 		worldObj.spawnParticle("hugeexplosion", posX, posY, posZ, 1D, 0D, 0D);
 	}
@@ -370,74 +378,6 @@ public class EntityGaiaIIIDark extends EntityCreature implements IBotaniaBossWit
 	@Override
 	protected boolean canDespawn() {
 		return false;
-	}
-
-	@Override
-	protected void dropFewItems(boolean par1, int par2) {
-		if(par1) {
-			for(int pl = 0; pl < playersWhoAttacked.size(); pl++) {
-				boolean hard = isHardMode();
-				entityDropItem(new ItemStack(ModItems.manaResource, pl == 0 ? hard ? 16 : 8 : hard ? 10 : 6, 5), 1F);
-
-				if(hard) {
-					entityDropItem(new ItemStack(ModItems.ancientWill, 1, rand.nextInt(6)), 1F);
-					if(ConfigHandler.relicsEnabled) {
-						ItemStack dice = new ItemStack(instance.dice20);
-						ItemRelic.bindToUsernameS(playersWhoAttacked.get(pl), dice);
-						entityDropItem(dice, 1F);
-				}	
-					entityDropItem(new ItemStack(instance.material, 1, 13), rand.nextInt(14) + 8);
-					entityDropItem(new ItemStack(instance.material, 1, 14), rand.nextInt(14) + 8);
-					entityDropItem(new ItemStack(instance.material, 1, 15), rand.nextInt(30) + 22);
-
-					if(Math.random() < 0.25)
-						entityDropItem(new ItemStack(ModItems.overgrowthSeed, rand.nextInt(3) + 1), 1F);
-					if(Math.random() < 0.5) {
-						boolean voidLotus = Math.random() < 0.3F;
-						entityDropItem(new ItemStack(ModItems.blackLotus, voidLotus ? 1 : rand.nextInt(3) + 1, voidLotus ? 1 : 0), 1F);
-					}
-					if(Math.random() < 0.9)
-						entityDropItem(new ItemStack(ModItems.manaResource, 24 + rand.nextInt(12)), 1F);
-						entityDropItem(new ItemStack(instance.recordC), 1F);
-					if(Math.random() < 0.7)
-						entityDropItem(new ItemStack(ModItems.manaResource, 14 + rand.nextInt(6), 1), 1F);
-					if(Math.random() < 0.5)
-						entityDropItem(new ItemStack(ModItems.manaResource, 8 + rand.nextInt(3), 2), 1F);
-					if(Math.random() < 0.34)
-						entityDropItem(new ItemStack(ModItems.manaResource, 8 + rand.nextInt(5), 7), 1F);
-					if(Math.random() < 0.32)
-						entityDropItem(new ItemStack(ModItems.manaResource, 4 + rand.nextInt(3), 8), 1F);
-					if(Math.random() < 0.28)
-						entityDropItem(new ItemStack(ModItems.manaResource, 2 + rand.nextInt(3), 9), 1F);
-					if(Math.random() < 0.45)
-						entityDropItem(new ItemStack(instance.boxs), 1F);
-						entityDropItem(new ItemStack(instance.material, rand.nextInt(3), 4), 1F);
-						entityDropItem(new ItemStack(instance.material, rand.nextInt(3), 5), 1F);
-						entityDropItem(new ItemStack(instance.material, rand.nextInt(3), 6), 1F);
-				    if(Math.random() < 0.25)
-				    	entityDropItem(new ItemStack(instance.material, rand.nextInt(3), 12), 1F);
-				    	entityDropItem(new ItemStack(instance.material, rand.nextInt(3), 11), 1F);
-					if(Math.random() < 0.2)
-						entityDropItem(new ItemStack(ModItems.pinkinator), 1F);
-						entityDropItem(new ItemStack(instance.recordA), 1F);
-					if(Math.random() < 0.12)
-						entityDropItem(new ItemStack(instance.material, 1 + rand.nextInt(2)), 1F);
-						entityDropItem(new ItemStack(instance.material, 1 + rand.nextInt(2), 3), 1F);
-						entityDropItem(new ItemStack(instance.recordB), 1F);
-					if(Math.random() < 0.3) {
-						int i = Item.getIdFromItem(Items.record_13);
-						int j = Item.getIdFromItem(Items.record_wait);
-						int k = i + rand.nextInt(j - i + 1);
-						entityDropItem(new ItemStack(Item.getItemById(k)), 1F);
-					}
-
-					int runes = rand.nextInt(6) + 1;
-					for(int i = 0; i < runes; i++)
-						if(Math.random() < 0.3)
-							entityDropItem(new ItemStack(ModItems.rune, 3 + rand.nextInt(3), rand.nextInt(16)), 1F);
-				}
-			}
-		}
 	}
 
 	@Override
@@ -731,6 +671,12 @@ public class EntityGaiaIIIDark extends EntityCreature implements IBotaniaBossWit
 		if(ticksExisted % 35 == 0 && onGround){
 			spawnCyclone();
 		}
+		
+		if(onGround && ticksExisted % 140 == 0 && Math.random() > 0.55){
+			EntityGaiaQuickened g = new EntityGaiaQuickened(this, true, 24F);
+			g.setPosition(posX, posY, posZ);
+			worldObj.spawnEntityInWorld(g);
+		}
 	}
 
 	void spawnMissile() {
@@ -832,6 +778,124 @@ public class EntityGaiaIIIDark extends EntityCreature implements IBotaniaBossWit
 			return true;
 		}
 	}
+	
+	@Override
+	protected void dropFewItems(boolean par1, int par2) {
+		
+	}
+	
+	public boolean generate(World world, Random rand, int cx, int cy, int cz, int p){
+		return generate(world, rand, cx, cy, cz, ModBlocks.gaiachest, p);
+	}
+
+	public boolean generate(World world, Random rand, int cx, int cy, int cz, Block chestBlock, int p){
+
+		world.rand.setSeed(world.getSeed() * cx + cy ^ cz);
+
+	    world.setBlock(cx, cy, cz, chestBlock, 0, 2);
+	    
+	  
+	    	addItemToChest(world, rand, cx, cy, cz, new ItemStack(ModItems.manaResource, p == 0 ? 16 : 8, 5));
+	    	
+		    addItemToChest(world, rand, cx, cy, cz, new ItemStack(ModItems.ancientWill, 1, rand.nextInt(6)));
+		    
+		    if(ConfigHandler.relicsEnabled) {
+				ItemStack dice = new ItemStack(instance.dice20);
+				ItemRelic.bindToUsernameS(playersWhoAttacked.get(p), dice);
+				addItemToChest(world, rand, cx, cy, cz, dice);
+		    }	
+		    
+		    addItemToChest(world, rand, cx, cy, cz, new ItemStack(instance.material, rand.nextInt(14) + 8, 13));
+		    addItemToChest(world, rand, cx, cy, cz, new ItemStack(instance.material, rand.nextInt(14) + 8, 14));
+		    addItemToChest(world, rand, cx, cy, cz, new ItemStack(instance.material, rand.nextInt(30) + 22, 15));
+
+		    addItemToChest(world, rand, cx, cy, cz, new ItemStack(ModItems.overgrowthSeed, rand.nextInt(3) + 1));
+			boolean voidLotus = Math.random() < 0.3F;
+			addItemToChest(world, rand, cx, cy, cz, new ItemStack(ModItems.blackLotus, voidLotus ? 1 : rand.nextInt(3) + 1, voidLotus ? 1 : 0));
+			addItemToChest(world, rand, cx, cy, cz, new ItemStack(ModItems.manaResource, 24 + rand.nextInt(12)));
+			addItemToChest(world, rand, cx, cy, cz, new ItemStack(instance.recordC));
+			addItemToChest(world, rand, cx, cy, cz, new ItemStack(ModItems.manaResource, 14 + rand.nextInt(6), 1));
+			addItemToChest(world, rand, cx, cy, cz, new ItemStack(ModItems.manaResource, 8 + rand.nextInt(3), 2));
+			addItemToChest(world, rand, cx, cy, cz, new ItemStack(ModItems.manaResource, 8 + rand.nextInt(5), 7));
+			addItemToChest(world, rand, cx, cy, cz, new ItemStack(ModItems.manaResource, 4 + rand.nextInt(3), 8));
+			addItemToChest(world, rand, cx, cy, cz, new ItemStack(ModItems.manaResource, 2 + rand.nextInt(3), 9));
+			addItemToChest(world, rand, cx, cy, cz, new ItemStack(instance.boxs));
+			addItemToChest(world, rand, cx, cy, cz, new ItemStack(instance.material, rand.nextInt(3), 4));
+			addItemToChest(world, rand, cx, cy, cz, new ItemStack(instance.material, rand.nextInt(3), 5));
+			addItemToChest(world, rand, cx, cy, cz, new ItemStack(instance.material, rand.nextInt(3), 6));
+			addItemToChest(world, rand, cx, cy, cz, new ItemStack(instance.material, 4+rand.nextInt(10), 1));
+			addItemToChest(world, rand, cx, cy, cz, new ItemStack(instance.material, 1+rand.nextInt(3), 2));
+			addItemToChest(world, rand, cx, cy, cz, new ItemStack(instance.material, 9+rand.nextInt(6), 8));
+			addItemToChest(world, rand, cx, cy, cz, new ItemStack(vazkii.botania.common.block.ModBlocks.livingrock, 14+rand.nextInt(22), 0));
+			addItemToChest(world, rand, cx, cy, cz, new ItemStack(vazkii.botania.common.block.ModBlocks.livingwood, 14+rand.nextInt(22), 0));
+			if(Math.random() < 0.43){
+				addItemToChest(world, rand, cx, cy, cz, new ItemStack(Items.emerald, 2+rand.nextInt(5), 0));
+				addItemToChest(world, rand, cx, cy, cz, new ItemStack(Items.fish, 1+rand.nextInt(4), 3));
+				addItemToChest(world, rand, cx, cy, cz, new ItemStack(ModItems.gaiaHead));
+			}
+			if(Math.random() < 0.26){
+				addItemToChest(world, rand, cx, cy, cz, new ItemStack(instance.material, 1, 0));
+				addItemToChest(world, rand, cx, cy, cz, new ItemStack(instance.material, 2+rand.nextInt(16), 7));
+				addItemToChest(world, rand, cx, cy, cz, new ItemStack(instance.material, 3+rand.nextInt(5), 9));
+			}
+			if(Math.random() < 0.88){
+				addItemToChest(world, rand, cx, cy, cz, new ItemStack(vazkii.botania.common.block.ModBlocks.dreamwood, 7+rand.nextInt(11), 0));
+				addItemToChest(world, rand, cx, cy, cz, new ItemStack(ModItems.manaCookie, 4+rand.nextInt(8), 0));
+				addItemToChest(world, rand, cx, cy, cz, new ItemStack(ModItems.manaResource, 18+rand.nextInt(5), 23));
+			}
+		    if(Math.random() < 0.82){
+		    	addItemToChest(world, rand, cx, cy, cz, new ItemStack(instance.material, rand.nextInt(3), 12));
+		    	addItemToChest(world, rand, cx, cy, cz, new ItemStack(instance.material, rand.nextInt(3), 11));
+		    }
+			if(Math.random() < 0.72){
+				addItemToChest(world, rand, cx, cy, cz, new ItemStack(ModItems.pinkinator));
+				addItemToChest(world, rand, cx, cy, cz, new ItemStack(instance.recordA));
+			}
+			if(Math.random() < 0.63){
+				addItemToChest(world, rand, cx, cy, cz, new ItemStack(instance.material, 1 + rand.nextInt(2), 3));
+				addItemToChest(world, rand, cx, cy, cz, new ItemStack(instance.recordB));
+			}
+			if(Math.random() < 0.57) {
+				int i = Item.getIdFromItem(Items.record_13);
+				int j = Item.getIdFromItem(Items.record_wait);
+				int k = i + rand.nextInt(j - i + 1);
+				addItemToChest(world, rand, cx, cy, cz, new ItemStack(Item.getItemById(k)));
+			}
+			if(Math.random() < 0.41)
+				addItemToChest(world, rand, cx, cy, cz, new ItemStack(instance.heliacalclaymore));
+
+			int runes = rand.nextInt(6) + 1;
+			for(int i = 0; i < runes; i++)
+				addItemToChest(world, rand, cx, cy, cz, new ItemStack(ModItems.rune, 3 + rand.nextInt(3), rand.nextInt(16)));
+	    
+	    return true;
+	}
+	
+	protected boolean addItemToChest(World world, Random rand, int cx, int cy, int cz, ItemStack itemStack){
+		
+		TileGaiaChest chest = (TileGaiaChest)world.getTileEntity(cx, cy, cz);
+
+		if (chest != null) {
+			int slot = findRandomInventorySlot(chest, rand);
+
+			if (slot != -1) {
+				chest.setInventorySlotContents(slot, itemStack);
+				return true;
+			}
+	    }
+			return false;
+	}
+	
+	 protected int findRandomInventorySlot(TileGaiaChest chest, Random rand){
+		 for (int i = 0; i < 100; i++) {
+			 int slot = rand.nextInt(chest.getSizeInventory());
+			 if (chest.getStackInSlot(slot) == null) {
+				 return slot;
+			 }
+
+		}
+		 return -1;
+	 }
 
 	@Override
 	@SideOnly(Side.CLIENT)

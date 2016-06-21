@@ -20,6 +20,7 @@ import vazkii.botania.client.lib.LibResources;
 import vazkii.botania.common.block.tile.mana.TilePool;
 import vazkii.botania.common.item.block.ItemBlockSpecialFlower;
 import codechicken.lib.gui.GuiDraw;
+import codechicken.nei.NEIServerUtils;
 import codechicken.nei.PositionedStack;
 import codechicken.nei.recipe.TemplateRecipeHandler;
 
@@ -99,7 +100,7 @@ public class RecipeHandlerStonesia extends TemplateRecipeHandler {
 		GL11.glColor4f(1.0F, 1.0F, 1.0F, 0.5F);
 		GuiDraw.changeTexture(LibReference.GUI_RECIPE_OVERLAY);
 		GuiDraw.drawTexturedModalRect(45, 10, 0, 0, 65, 44);
-		HUDHandler.renderManaBar(32, 45, 0x0000FF, 0.75F, ((CachedStonesiaRecipe) arecipes.get(recipe)).manaOutput, TilePool.MAX_MANA / 10);
+		HUDHandler.renderManaBar(32, 45, 0x0000FF, 0.75F, ((CachedStonesiaRecipe) arecipes.get(recipe)).manaOutput, TilePool.MAX_MANA/10);
 	}
 
 	@Override
@@ -119,8 +120,8 @@ public class RecipeHandlerStonesia extends TemplateRecipeHandler {
 		for(RecipeStonesia recipe : ExtraBotanyAPI.stonesiaRecipes) {
 			if(recipe == null)
 				continue;
-
-			arecipes.add(new CachedStonesiaRecipe(recipe));
+			if(NEIServerUtils.areStacksSameTypeCrafting(ItemBlockSpecialFlower.ofType(LibBlockName.STONESIA), result))
+				arecipes.add(new CachedStonesiaRecipe(recipe));
 		}
 	}
 

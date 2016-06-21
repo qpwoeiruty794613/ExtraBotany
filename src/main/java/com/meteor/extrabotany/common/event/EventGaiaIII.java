@@ -60,7 +60,7 @@ public class EventGaiaIII{
 					}
 			}	
 	        if(gaia.getHealth() <= gaia.getMaxHealth()*rankI){
-	        	if(gaia.worldObj.rand.nextInt(3) == 1)
+	        	if(gaia.worldObj.rand.nextInt(4) == 1)
 	        		event.ammount = 0;
 		    }
 	        if(gaia.getHealth() <= gaia.getMaxHealth()*rankIII){

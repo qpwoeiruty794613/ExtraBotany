@@ -20,6 +20,11 @@ public class SubTileAnnoyobloom extends SubTileFunctional{
 	private static final int DELAY = 35;
 	
 	@Override
+	public int getColor() {
+		return 0xEEE31B;
+	}
+	
+	@Override
 	public void onUpdate() {
 		super.onUpdate();	
 		World world = this.supertile.getWorldObj();

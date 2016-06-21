@@ -40,6 +40,7 @@ public class ExtraBotanyCreativeTab extends CreativeTabs{
 		addItem(ModItems.gaiatablet);
 		addItem(ModItems.teleportpearl);
 		addItem(ModItems.angelwand);
+		addItem(ModItems.heliacalclaymore);
 		addBlock(ModBlocks.pylon);
 		//Relics
 		addItem(ModItems.dice20);
@@ -80,6 +81,7 @@ public class ExtraBotanyCreativeTab extends CreativeTabs{
 		addBlock(ModBlocks.elvenquartz);
 		addBlock(ModBlocks.elvenquartzstairs);
 		addBlock(ModBlocks.elvenquartzslab);
+		addBlock(ModBlocks.gaiachest);
 		//Baubles
 		addItem(ModItems.dog);
 		addItem(ModItems.gaiawise);

@@ -18,8 +18,6 @@ public class ItemGunSnowballCannon extends ItemGunRelic{
 		super(name);
 	}
 	
-	int shootspeed = 7;
-	
 	@Override
 	public int selectBullet(EntityPlayer player){
 		if(player.inventory.hasItem(Items.snowball))
@@ -41,12 +39,13 @@ public class ItemGunSnowballCannon extends ItemGunRelic{
 	}
 	
 	@Override
-	public void onUsingTick(ItemStack stack, EntityPlayer player, int count) {
-		super.onUsingTick(stack, player, count);
-			if(count <= this.getMaxItemUseDuration(stack)- shootspeed && count % shootspeed == 0){
-				if(ItemGunRelic.isRightPlayer(player, stack))	
-					shoot(player);
-			}
+	public int getReloadSpeed(){
+		return 16;
+	}
+	
+	@Override
+	public int getReloadAmount(){
+		return 16;
 	}
 
 }

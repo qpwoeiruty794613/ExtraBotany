@@ -33,7 +33,7 @@ public class LibItemName {
 	
 	public static final String SCISSORBLADERED = "scissorbladered";
 	public static final String SCISSORBLADEPURPLE = "scissorbladepurple";
-	
+	public static final String HELIACALCLAYMORE = "coronaclaymore";
 	//Relic
 	public static final String EXCALIBER = "excaliber";
 	public static final String EXCALIBERFAKE = "excaliberfake";

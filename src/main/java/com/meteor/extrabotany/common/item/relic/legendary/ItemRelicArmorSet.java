@@ -18,6 +18,7 @@ import net.minecraft.util.DamageSource;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.StatCollector;
 import net.minecraft.world.World;
+import net.minecraftforge.common.ISpecialArmor;
 import net.minecraftforge.common.MinecraftForge;
 import vazkii.botania.api.BotaniaAPI;
 import vazkii.botania.api.item.IRelic;
@@ -39,7 +40,7 @@ import cpw.mods.fml.common.gameevent.TickEvent;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class ItemRelicArmorSet extends ItemManasteelArmor implements IRelic{
+public class ItemRelicArmorSet extends ItemManasteelArmor implements IRelic,ISpecialArmor{
 	
 	private static final String TAG_SOULBIND = "soulbind";
 

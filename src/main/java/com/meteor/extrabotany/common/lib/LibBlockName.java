@@ -25,6 +25,7 @@ public class LibBlockName {
 	public static final String LAUNCHISH = "launchish";
 	public static final String HALAALIS = "halaalis";
 	public static final String ORECHIDSHADOW = "orechidshadow";
+	public static final String MANALINKUIM = "manalinkuim";
 	
 	public static final String JUDASVOW = "judasvow";
 	public static final String INFERNOIDISY = "infernoidisy";
